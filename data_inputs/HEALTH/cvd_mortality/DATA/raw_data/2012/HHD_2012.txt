@@ -1,0 +1,77 @@
+"Notes"	"Ten-Year Age Groups"	"Ten-Year Age Groups Code"	"Gender"	"Gender Code"	Deaths	Population	Crude Rate	Crude Rate Lower 95% Confidence Interval	Crude Rate Upper 95% Confidence Interval	Crude Rate Standard Error
+	"25-34 years"	"25-34"	"Female"	"F"	91	20970529	0.43	0.35	0.53	0.05
+	"25-34 years"	"25-34"	"Male"	"M"	286	21338792	1.34	1.18	1.50	0.08
+"Total"	"25-34 years"	"25-34"			377	42309321	0.89	0.80	0.98	0.05
+	"35-44 years"	"35-44"	"Female"	"F"	461	20342813	2.27	2.06	2.47	0.11
+	"35-44 years"	"35-44"	"Male"	"M"	1047	20173607	5.19	4.88	5.50	0.16
+"Total"	"35-44 years"	"35-44"			1508	40516420	3.72	3.53	3.91	0.10
+	"45-54 years"	"45-54"	"Female"	"F"	1280	22461868	5.70	5.39	6.01	0.16
+	"45-54 years"	"45-54"	"Male"	"M"	2757	21806870	12.64	12.17	13.11	0.24
+"Total"	"45-54 years"	"45-54"			4037	44268738	9.12	8.84	9.40	0.14
+	"55-64 years"	"55-64"	"Female"	"F"	1972	19983308	9.87	9.43	10.30	0.22
+	"55-64 years"	"55-64"	"Male"	"M"	4253	18602894	22.86	22.17	23.55	0.35
+"Total"	"55-64 years"	"55-64"			6225	38586202	16.13	15.73	16.53	0.20
+	"65-74 years"	"65-74"	"Female"	"F"	1911	12782530	14.95	14.28	15.62	0.34
+	"65-74 years"	"65-74"	"Male"	"M"	2952	11202862	26.35	25.40	27.30	0.48
+"Total"	"65-74 years"	"65-74"			4863	23985392	20.27	19.70	20.84	0.29
+	"75-84 years"	"75-84"	"Female"	"F"	3322	7624484	43.57	42.09	45.05	0.76
+	"75-84 years"	"75-84"	"Male"	"M"	2864	5648150	50.71	48.85	52.56	0.95
+"Total"	"75-84 years"	"75-84"			6186	13272634	46.61	45.45	47.77	0.59
+	"85+ years"	"85+"	"Female"	"F"	8513	3923297	216.99	212.38	221.60	2.35
+	"85+ years"	"85+"	"Male"	"M"	3310	1964033	168.53	162.79	174.27	2.93
+"Total"	"85+ years"	"85+"			11823	5887330	200.82	197.20	204.44	1.85
+"Total"					35019	208826037	16.77	16.59	16.95	0.09
+"---"
+"Dataset: Underlying Cause of Death, 1999-2020"
+"Query Parameters:"
+"Title: HHD_2012"
+"ICD-10 Codes: I11.0 (Hypertensive heart disease with (congestive) heart failure); I11.9 (Hypertensive heart disease without"
+"(congestive) heart failure)"
+"Ten-Year Age Groups: 25-34 years; 35-44 years; 45-54 years; 55-64 years; 65-74 years; 75-84 years; 85+ years"
+"Year/Month: 2012"
+"Group By: Ten-Year Age Groups; Gender"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Feb 20, 2023 3:33:24 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files,"
+"1999-2020, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/ucd-icd10.html on Feb 20, 2023 3:33:24 PM"
+"---"
+Caveats:
+"1. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"2. The method used to calculate 95% confidence intervals is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Confidence-Intervals."
+"3. The method used to calculate standard errors is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Standard-Errors."
+"4. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"5. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#ICD-10 Changes."

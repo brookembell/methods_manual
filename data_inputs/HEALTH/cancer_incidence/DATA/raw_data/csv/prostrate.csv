@@ -1,0 +1,73 @@
+RaceandoriginrecodeNHWNHBNHOHis,Sex,Age_recode_10yr,prostate,prostate_advance,Crude_Rate,Standard_Error,Lower_Confidence_Interval,Upper_Confidence_Interval,Count,Population
+Non-Hispanic White,Male and female,25-34 years,Prostate,advanced,0.02,0.02,0,0.1,1,5800816
+Non-Hispanic White,Male and female,35-44 years,Prostate,advanced,0.21,0.06,0.1,0.37,11,5344399
+Non-Hispanic White,Male and female,45-54 years,Prostate,advanced,8.12,0.37,7.41,8.89,476,5859292
+Non-Hispanic White,Male and female,55-64 years,Prostate,advanced,34.66,0.72,33.25,36.1,2299,6633946
+Non-Hispanic White,Male and female,65-74 years,Prostate,advanced,64.91,1.13,62.7,67.17,3277,5048890
+Non-Hispanic White,Male and female,75+ years,Prostate,advanced,18.35,0.2,17.95,18.75,8171,44535467
+Non-Hispanic White,Male,25-34 years,Prostate,advanced,0.03,0.03,0,0.19,1,2973485
+Non-Hispanic White,Male,35-44 years,Prostate,advanced,0.41,0.12,0.2,0.73,11,2710870
+Non-Hispanic White,Male,45-54 years,Prostate,advanced,16.21,0.74,14.79,17.73,476,2936612
+Non-Hispanic White,Male,55-64 years,Prostate,advanced,70.47,1.47,67.62,73.41,2299,3262450
+Non-Hispanic White,Male,65-74 years,Prostate,advanced,136.63,2.39,131.99,141.39,3277,2398481
+Non-Hispanic White,Male,75+ years,Prostate,advanced,37.02,0.41,36.22,37.83,8171,22070429
+Non-Hispanic White,Female,25-34 years,Prostate,advanced,0,,0,0.13,0,2827331
+Non-Hispanic White,Female,35-44 years,Prostate,advanced,0,,0,0.14,0,2633529
+Non-Hispanic White,Female,45-54 years,Prostate,advanced,0,,0,0.13,0,2922680
+Non-Hispanic White,Female,55-64 years,Prostate,advanced,0,,0,0.11,0,3371496
+Non-Hispanic White,Female,65-74 years,Prostate,advanced,0,,0,0.14,0,2650409
+Non-Hispanic White,Female,75+ years,Prostate,advanced,0,,0,0.02,0,22465038
+Non-Hispanic Black,Male and female,25-34 years,Prostate,advanced,0,,0,0.24,0,1556892
+Non-Hispanic Black,Male and female,35-44 years,Prostate,advanced,0.78,0.25,0.38,1.44,10,1278752
+Non-Hispanic Black,Male and female,45-54 years,Prostate,advanced,14.53,1.08,12.49,16.8,182,1252683
+Non-Hispanic Black,Male and female,55-64 years,Prostate,advanced,57.4,2.23,53.12,61.94,665,1158493
+Non-Hispanic Black,Male and female,65-74 years,Prostate,advanced,78.51,3.39,72.01,85.44,537,683968
+Non-Hispanic Black,Male and female,75+ years,Prostate,advanced,16.37,0.41,15.58,17.18,1626,9934931
+Non-Hispanic Black,Male,25-34 years,Prostate,advanced,0,,0,0.47,0,780654
+Non-Hispanic Black,Male,35-44 years,Prostate,advanced,1.64,0.52,0.79,3.01,10,610690
+Non-Hispanic Black,Male,45-54 years,Prostate,advanced,30.74,2.28,26.44,35.55,182,592009
+Non-Hispanic Black,Male,55-64 years,Prostate,advanced,123.97,4.81,114.72,133.76,665,536427
+Non-Hispanic Black,Male,65-74 years,Prostate,advanced,182.31,7.87,167.22,198.41,537,294547
+Non-Hispanic Black,Male,75+ years,Prostate,advanced,33.93,0.84,32.3,35.62,1626,4792305
+Non-Hispanic Black,Female,25-34 years,Prostate,advanced,0,,0,0.48,0,776238
+Non-Hispanic Black,Female,35-44 years,Prostate,advanced,0,,0,0.55,0,668062
+Non-Hispanic Black,Female,45-54 years,Prostate,advanced,0,,0,0.56,0,660674
+Non-Hispanic Black,Female,55-64 years,Prostate,advanced,0,,0,0.59,0,622066
+Non-Hispanic Black,Female,65-74 years,Prostate,advanced,0,,0,0.95,0,389421
+Non-Hispanic Black,Female,75+ years,Prostate,advanced,0,,0,0.07,0,5142626
+Hispanic (All Races),Male and female,25-34 years,Prostate,advanced,0.03,0.03,0,0.16,1,3474967
+Hispanic (All Races),Male and female,35-44 years,Prostate,advanced,0.26,0.09,0.11,0.51,8,3063538
+Hispanic (All Races),Male and female,45-54 years,Prostate,advanced,5.07,0.44,4.24,6.02,130,2564390
+Hispanic (All Races),Male and female,55-64 years,Prostate,advanced,25.55,1.19,23.27,28,461,1804131
+Hispanic (All Races),Male and female,65-74 years,Prostate,advanced,50.82,2.31,46.4,55.54,486,956390
+Hispanic (All Races),Male and female,75+ years,Prostate,advanced,6.47,0.17,6.13,6.82,1397,21595355
+Hispanic (All Races),Male,25-34 years,Prostate,advanced,0.06,0.06,0,0.31,1,1816781
+Hispanic (All Races),Male,35-44 years,Prostate,advanced,0.51,0.18,0.22,1,8,1571106
+Hispanic (All Races),Male,45-54 years,Prostate,advanced,10.04,0.88,8.39,11.92,130,1295262
+Hispanic (All Races),Male,55-64 years,Prostate,advanced,52.36,2.44,47.69,57.36,461,880512
+Hispanic (All Races),Male,65-74 years,Prostate,advanced,110.76,5.02,101.13,121.06,486,438777
+Hispanic (All Races),Male,75+ years,Prostate,advanced,12.82,0.34,12.16,13.51,1397,10896533
+Hispanic (All Races),Female,25-34 years,Prostate,advanced,0,,0,0.22,0,1658186
+Hispanic (All Races),Female,35-44 years,Prostate,advanced,0,,0,0.25,0,1492432
+Hispanic (All Races),Female,45-54 years,Prostate,advanced,0,,0,0.29,0,1269128
+Hispanic (All Races),Female,55-64 years,Prostate,advanced,0,,0,0.4,0,923619
+Hispanic (All Races),Female,65-74 years,Prostate,advanced,0,,0,0.71,0,517613
+Hispanic (All Races),Female,75+ years,Prostate,advanced,0,,0,0.03,0,10698822
+OTHER,Male and female,25-34 years,Prostate,advanced,0,,0,0.21,0,1734372
+OTHER,Male and female,35-44 years,Prostate,advanced,0.13,0.09,0.02,0.45,2,1598909
+OTHER,Male and female,45-54 years,Prostate,advanced,2.66,0.43,1.88,3.65,38,1427341
+OTHER,Male and female,55-64 years,Prostate,advanced,19.16,1.25,16.79,21.77,236,1231743
+OTHER,Male and female,65-74 years,Prostate,advanced,46.26,2.33,41.81,51.05,395,853891
+OTHER,Male and female,75+ years,Prostate,advanced,8.7,0.29,8.15,9.28,925,10631096
+OTHER,Male,25-34 years,Prostate,advanced,0,,0,0.43,0,859629
+OTHER,Male,35-44 years,Prostate,advanced,0.27,0.19,0.03,0.96,2,754329
+OTHER,Male,45-54 years,Prostate,advanced,5.7,0.92,4.03,7.82,38,667025
+OTHER,Male,55-64 years,Prostate,advanced,41.92,2.73,36.74,47.62,236,562975
+OTHER,Male,65-74 years,Prostate,advanced,104.24,5.24,94.21,115.04,395,378941
+OTHER,Male,75+ years,Prostate,advanced,18.14,0.6,16.99,19.35,925,5099353
+OTHER,Female,25-34 years,Prostate,advanced,0,,0,0.42,0,874743
+OTHER,Female,35-44 years,Prostate,advanced,0,,0,0.44,0,844580
+OTHER,Female,45-54 years,Prostate,advanced,0,,0,0.49,0,760316
+OTHER,Female,55-64 years,Prostate,advanced,0,,0,0.55,0,668768
+OTHER,Female,65-74 years,Prostate,advanced,0,,0,0.78,0,474950
+OTHER,Female,75+ years,Prostate,advanced,0,,0,0.07,0,5531743

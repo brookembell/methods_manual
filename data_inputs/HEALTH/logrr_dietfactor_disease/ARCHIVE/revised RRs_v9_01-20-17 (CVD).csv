@@ -1,0 +1,23 @@
+risk.factor,outcome,event.age,RR.unit,RR,CI.lower,CI.upper,logRR,logCI.lower,logCI.upper,source,notes
+fruit,IHD,60.2,100 g/d,0.94,0.91,0.98,-0.058117796,-0.093969692,-0.022265899,Gan 2015,risk factor name matches the TMRED
+fruit,ISTK,59.1,100 g/d,0.88,0.83,0.93,-0.127833372,-0.186329578,-0.072570693,de novo_MRao,
+fruit,HSTK,61.5,100 g/d,0.73,0.62,0.87,-0.314710745,-0.478035801,-0.139262067,de novo_MRao,
+veg,IHD,55.4,100 g/d,0.95,0.92,0.98,-0.049612735,-0.078528877,-0.020696593,Gan 2015,includes legumes (primary definition)
+veg,ISTK,60,100 g/d,0.83,0.75,0.93,-0.181521877,-0.291690094,-0.070422464,de novo_MR,"includes legumes (primary definition)
+Revised 20-Jan-2017 (RR including MORGEN)"
+veg,HSTK,64.2,100 g/d,0.83,0.72,0.96,-0.186329578,-0.328504067,-0.040821995,de novo_MR,includes legumes (primary definition)
+nuts,IHD-FTL,65.15,1 serving/wk,0.93,0.91,0.96,-0.068609211,-0.093197998,-0.044020425,Afshin 2014,age at event represents the simple average of FTL and nFTL (see notes tab)- add a footnote to the relevant Table(s)
+nuts,DIAB,59.5,1 serving/wk,0.97,0.95,0.98,-0.034815517,-0.05342122,-0.016209813,Afshin 2014,
+wg,CVD,61.1,1 serving/d,0.91,0.86,0.97,-0.093212382,-0.15431736,-0.032523192,Mellen 2008,apply to both ISTK & HSTK
+wg,IHD,63.4,1 serving/d,0.97,0.94,0.99,-0.034219775,-0.061379357,-0.007060265,Mellen 2008,
+wg,DIAB,58,1 serving/d,0.88,0.83,0.93,-0.12855416,-0.184221851,-0.07288647,Aune 2013,
+rmeat,DIAB,59.6,1 serving/d,1.19,1.04,1.37,0.173953307,0.039220713,0.31481074,Pan 2011,
+pmeat,IHD,64.9,1 serving/d,1.37,1.11,1.69,0.31481074,0.104360015,0.524728529,Micha 2010,
+pmeat,DIAB,60.2,1 serving/d,1.51,1.25,1.83,0.412109651,0.223143551,0.604315967,Pan 2011,
+ssb,IHD.adiposity.adj,67,1 serving/d,1.17,1.1,1.24,0.157003749,0.09531018,0.21511138,Xi 2015,direct SSB effects on IHD
+ssb,DIAB.adiposity.adj,53.8,1 serving/d,1.27,1.1,1.46,0.2390169,0.09531018,0.378436436,Imamura 2015,direct SSB effects on DIAB
+ssb,DIAB.adiposity.unadj,54.3,1 serving/d,1.42,1.19,1.69,0.350656872,0.173953307,0.524728529,Imamura 2015,total - use in sensivity analyses
+sfat,IHD,56.9,5% E,1.1,1.04,1.15,0.094310679,0.040821995,0.139262067,Farvid 2014,
+pufa_c,IHD,56.8,5% E,0.9,0.85,0.94,-0.105360516,-0.162518929,-0.061875404,Farvid 2014,
+pufa_s,IHD,56.9,5% E,0.91,0.87,0.96,-0.094310679,-0.139262067,-0.040821995,Farvid 2014,
+om3,IHD-FTL,62.1,100 mg/d,0.85,0.79,0.92,-0.162518929,-0.235722334,-0.083381609,Mozaffarian 2006,

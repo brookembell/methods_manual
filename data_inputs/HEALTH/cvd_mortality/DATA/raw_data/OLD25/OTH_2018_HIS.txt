@@ -1,0 +1,141 @@
+"Notes"	"Ten-Year Age Groups"	"Ten-Year Age Groups Code"	"Gender"	"Gender Code"	"Hispanic Origin"	"Hispanic Origin Code"	Deaths	Population	Crude Rate	Crude Rate Lower 95% Confidence Interval	Crude Rate Upper 95% Confidence Interval	Crude Rate Standard Error
+	"25-34 years"	"25-34"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	25	4488709	0.56	0.36	0.82	0.11
+"Total"	"25-34 years"	"25-34"	"Female"	"F"			25	4488709	0.56	0.36	0.82	0.11
+	"25-34 years"	"25-34"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	25	4940457	0.51	0.33	0.75	0.10
+"Total"	"25-34 years"	"25-34"	"Male"	"M"			25	4940457	0.51	0.33	0.75	0.10
+"Total"	"25-34 years"	"25-34"					50	9429166	0.53	0.39	0.70	0.07
+	"35-44 years"	"35-44"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	46	4169801	1.10	0.81	1.47	0.16
+"Total"	"35-44 years"	"35-44"	"Female"	"F"			46	4169801	1.10	0.81	1.47	0.16
+	"35-44 years"	"35-44"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	75	4417311	1.70	1.34	2.13	0.20
+"Total"	"35-44 years"	"35-44"	"Male"	"M"			75	4417311	1.70	1.34	2.13	0.20
+"Total"	"35-44 years"	"35-44"					121	8587112	1.41	1.16	1.66	0.13
+	"45-54 years"	"45-54"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	77	3484917	2.21	1.74	2.76	0.25
+"Total"	"45-54 years"	"45-54"	"Female"	"F"			77	3484917	2.21	1.74	2.76	0.25
+	"45-54 years"	"45-54"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	113	3540648	3.19	2.60	3.78	0.30
+"Total"	"45-54 years"	"45-54"	"Male"	"M"			113	3540648	3.19	2.60	3.78	0.30
+"Total"	"45-54 years"	"45-54"					190	7025565	2.70	2.32	3.09	0.20
+	"55-64 years"	"55-64"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	123	2510751	4.90	4.03	5.76	0.44
+"Total"	"55-64 years"	"55-64"	"Female"	"F"			123	2510751	4.90	4.03	5.76	0.44
+	"55-64 years"	"55-64"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	168	2379682	7.06	5.99	8.13	0.54
+"Total"	"55-64 years"	"55-64"	"Male"	"M"			168	2379682	7.06	5.99	8.13	0.54
+"Total"	"55-64 years"	"55-64"					291	4890433	5.95	5.27	6.63	0.35
+	"65-74 years"	"65-74"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	212	1458288	14.54	12.58	16.49	1.00
+"Total"	"65-74 years"	"65-74"	"Female"	"F"			212	1458288	14.54	12.58	16.49	1.00
+	"65-74 years"	"65-74"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	161	1224396	13.15	11.12	15.18	1.04
+"Total"	"65-74 years"	"65-74"	"Male"	"M"			161	1224396	13.15	11.12	15.18	1.04
+"Total"	"65-74 years"	"65-74"					373	2682684	13.90	12.49	15.32	0.72
+	"75-84 years"	"75-84"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	283	721560	39.22	34.65	43.79	2.33
+"Total"	"75-84 years"	"75-84"	"Female"	"F"			283	721560	39.22	34.65	43.79	2.33
+	"75-84 years"	"75-84"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	197	514814	38.27	32.92	43.61	2.73
+"Total"	"75-84 years"	"75-84"	"Male"	"M"			197	514814	38.27	32.92	43.61	2.73
+"Total"	"75-84 years"	"75-84"					480	1236374	38.82	35.35	42.30	1.77
+	"85+ years"	"85+"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	380	317260	119.78	107.73	131.82	6.14
+"Total"	"85+ years"	"85+"	"Female"	"F"			380	317260	119.78	107.73	131.82	6.14
+	"85+ years"	"85+"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	198	181768	108.93	93.76	124.10	7.74
+"Total"	"85+ years"	"85+"	"Male"	"M"			198	181768	108.93	93.76	124.10	7.74
+"Total"	"85+ years"	"85+"					578	499028	115.83	106.38	125.27	4.82
+"Total"							2083	34350362	6.06	5.80	6.32	0.13
+"---"
+"Dataset: Underlying Cause of Death, 1999-2020"
+"Query Parameters:"
+"Title: OTH_2018_HIS"
+"Hispanic Origin: Hispanic or Latino"
+"ICD-10 Codes: I00 (Rheumatic fever without mention of heart involvement); I02.9 (Rheumatic chorea without heart involvement);"
+"I27.0 (Primary pulmonary hypertension); I27.2 (Other secondary pulmonary hypertension); I27.8 (Other specified pulmonary heart"
+"diseases); I27.9 (Pulmonary heart disease, unspecified); I28.0 (Arteriovenous fistula of pulmonary vessels); I28.1 (Aneurysm of"
+"pulmonary artery); I28.8 (Other specified diseases of pulmonary vessels); I28.9 (Disease of pulmonary vessels, unspecified);"
+"I30.0 (Acute nonspecific idiopathic pericarditis); I30.1 (Infective pericarditis); I30.8 (Other forms of acute pericarditis);"
+"I30.9 (Acute pericarditis, unspecified); I31.0 (Chronic adhesive pericarditis); I31.1 (Chronic constrictive pericarditis); I31.8"
+"(Other specified diseases of pericardium); I31.9 (Disease of pericardium, unspecified); I34.0 (Mitral (valve) insufficiency);"
+"I34.1 (Mitral (valve) prolapse); I34.2 (Nonrheumatic mitral (valve) stenosis); I34.8 (Other nonrheumatic mitral valve"
+"disorders); I34.9 (Nonrheumatic mitral valve disorder, unspecified); I35.0 (Aortic (valve) stenosis); I35.1 (Aortic (valve)"
+"insufficiency); I35.2 (Aortic (valve) stenosis with insufficiency); I35.8 (Other aortic valve disorders); I35.9 (Aortic valve"
+"disorder, unspecified); I36.0 (Nonrheumatic tricuspid (valve) stenosis); I36.1 (Nonrheumatic tricuspid (valve) insufficiency);"
+"I36.2 (Nonrheumatic tricuspid (valve) stenosis with insufficiency); I36.8 (Other nonrheumatic tricuspid valve disorders); I36.9"
+"(Nonrheumatic tricuspid valve disorder, unspecified); I37.0 (Pulmonary valve stenosis); I37.1 (Pulmonary valve insufficiency);"
+"I37.2 (Pulmonary valve stenosis with insufficiency); I37.8 (Other pulmonary valve disorders); I37.9 (Pulmonary valve disorder,"
+"unspecified); I38 (Endocarditis, valve unspecified); I47.0 (Re-entry ventricular arrhythmia); I47.1 (Supraventricular"
+"tachycardia); I47.2 (Ventricular tachycardia); I47.9 (Paroxysmal tachycardia, unspecified); I70.8 (Atherosclerosis of other"
+"arteries); I72.0 (Aneurysm of carotid artery); I72.1 (Aneurysm of artery of upper extremity); I72.2 (Aneurysm of renal artery);"
+"I72.3 (Aneurysm of iliac artery); I72.4 (Aneurysm of artery of lower extremity); I72.5 (Aneurysm and dissection of other"
+"precerebral arteries); I72.8 (Aneurysm of other specified arteries); I72.9 (Aneurysm of unspecified site); I77.0 (Arteriovenous"
+"fistula, acquired); I77.1 (Stricture of artery); I77.2 (Rupture of artery); I77.3 (Arterial fibromuscular dysplasia); I77.4"
+"(Coeliac artery compression syndrome); I77.5 (Necrosis of artery); I77.6 (Arteritis, unspecified); I77.8 (Other specified"
+"disorders of arteries and arterioles); I77.9 (Disorder of arteries and arterioles, unspecified); I78.0 (Hereditary haemorrhagic"
+"telangiectasia); I78.1 (Naevus, non-neoplastic); I78.8 (Other diseases of capillaries); I78.9 (Disease of capillaries,"
+"unspecified); I80.0 (Phlebitis and thrombophlebitis of superficial vessels of lower extremities); I80.1 (Phlebitis and"
+"thrombophlebitis of femoral vein); I80.2 (Phlebitis and thrombophlebitis of other deep vessels of lower extremities); I80.3"
+"(Phlebitis and thrombophlebitis of lower extremities, unspecified); I80.8 (Phlebitis and thrombophlebitis of other sites); I80.9"
+"(Phlebitis and thrombophlebitis of unspecified site); I82.0 (Budd-Chiari syndrome); I82.1 (Thrombophlebitis migrans); I82.2"
+"(Embolism and thrombosis of vena cava); I82.3 (Embolism and thrombosis of renal vein); I82.8 (Embolism and thrombosis of other"
+"specified veins); I82.9 (Embolism and thrombosis of unspecified vein); I83.0 (Varicose veins of lower extremities with ulcer);"
+"I83.1 (Varicose veins of lower extremities with inflammation); I83.2 (Varicose veins of lower extremities with both ulcer and"
+"inflammation); I83.9 (Varicose veins of lower extremities without ulcer or inflammation); I84.0 (Internal thrombosed"
+"haemorrhoids); I84.1 (Internal haemorrhoids with other complications); I84.2 (Internal haemorrhoids without complication); I84.3"
+"(External thrombosed haemorrhoids); I84.4 (External haemorrhoids with other complications); I84.5 (External haemorrhoids without"
+"complication); I84.6 (Residual haemorrhoidal skin tags); I84.7 (Unspecified thrombosed haemorrhoids); I84.8 (Unspecified"
+"haemorrhoids with other complications); I84.9 (Unspecified haemorrhoids without complication); I86.0 (Sublingual varices); I86.1"
+"(Scrotal varices); I86.2 (Pelvic varices); I86.3 (Vulval varices); I86.4 (Gastric varices); I86.8 (Varicose veins of other"
+"specified sites); I87.0 (Postphlebitic syndrome); I87.1 (Compression of vein); I87.2 (Venous insufficiency"
+"(chronic)(peripheral)); I87.8 (Other specified disorders of veins); I87.9 (Disorder of vein, unspecified); I88.0 (Nonspecific"
+"mesenteric lymphadenitis); I88.1 (Chronic lymphadenitis, except mesenteric); I88.8 (Other nonspecific lymphadenitis); I88.9"
+"(Nonspecific lymphadenitis, unspecified); I89.0 (Lymphoedema, not elsewhere classified); I89.1 (Lymphangitis); I89.8 (Other"
+"specified noninfective disorders of lymphatic vessels and lymph nodes); I89.9 (Noninfective disorder of lymphatic vessels and"
+"lymph nodes, unspecified); I95.0 (Idiopathic hypotension); I95.1 (Orthostatic hypotension); I95.2 (Hypotension due to drugs);"
+"I95.8 (Other hypotension); I95.9 (Hypotension, unspecified)"
+"Ten-Year Age Groups: 25-34 years; 35-44 years; 45-54 years; 55-64 years; 65-74 years; 75-84 years; 85+ years"
+"Year/Month: 2018"
+"Group By: Ten-Year Age Groups; Gender; Hispanic Origin"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Apr 10, 2023 9:20:56 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files,"
+"1999-2020, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/ucd-icd10.html on Apr 10, 2023 9:20:56 PM"
+"---"
+Caveats:
+"1. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"2. Deaths of persons with Hispanic origin ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among"
+"Hispanic Origin groups, so are not included in the Hispanic Origin specific counts and rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"3. Information included on the death certificate about the race and Hispanic ethnicity of the decedent is reported by the"
+"funeral director as provided by an informant, often the surviving next of kin, or, in the absence of an informant, on the basis"
+"of observation. Race and ethnicity information from the census is by self-report. To the extent that race and Hispanic origin"
+"are inconsistent between these two data sources, death rates will be biased. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Racial Differences."
+"4. The method used to calculate 95% confidence intervals is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Confidence-Intervals."
+"5. The method used to calculate standard errors is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Standard-Errors."
+"6. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"7. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#ICD-10 Changes."

@@ -1,0 +1,673 @@
+subgroup_id,type,CancerSites,year,Sex,age_gp,race_gp,count,population,crude_rate,crude_SE
+1,Incidence,Esophagus,2013,Female,Age_2044,Non-hispanic White,31,12700000,0.245,0.062
+2,Incidence,Esophagus,2013,Male,Age_2044,Non-hispanic White,179,12100000,1.481,0.155
+3,Incidence,Esophagus,2013,Female,Age_2044,Non-hispanic Black,0,3270273,0,0
+4,Incidence,Esophagus,2013,Male,Age_2044,Non-hispanic Black,0,3226343,0,0
+5,Incidence,Esophagus,2013,Female,Age_2044,Hispanic,0,4838552,0,0
+6,Incidence,Esophagus,2013,Male,Age_2044,Hispanic,0,5113576,0,0
+7,Incidence,Esophagus,2013,Female,Age_2044,Other,0,2560333,0,0
+8,Incidence,Esophagus,2013,Male,Age_2044,Other,0,2480441,0,0
+9,Incidence,Esophagus,2013,Female,Age_4554,Non-hispanic White,217,14700000,1.473,0.14
+10,Incidence,Esophagus,2013,Male,Age_4554,Non-hispanic White,1103,14500000,7.587,0.32
+11,Incidence,Esophagus,2013,Female,Age_4554,Non-hispanic Black,88,2885488,3.05,0.458
+12,Incidence,Esophagus,2013,Male,Age_4554,Non-hispanic Black,155,2549908,6.079,0.689
+13,Incidence,Esophagus,2013,Female,Age_4554,Hispanic,0,216594,0,0
+14,Incidence,Esophagus,2013,Male,Age_4554,Hispanic,75,2889681,2.595,0.44
+15,Incidence,Esophagus,2013,Female,Age_4554,Other,0,87248,0,0
+16,Incidence,Esophagus,2013,Male,Age_4554,Other,34,1109784,3.064,0.745
+17,Incidence,Esophagus,2013,Female,Age_5564,Non-hispanic White,602,14700000,4.106,0.238
+18,Incidence,Esophagus,2013,Male,Age_5564,Non-hispanic White,2952,14000000,21.11,0.554
+19,Incidence,Esophagus,2013,Female,Age_5564,Non-hispanic Black,143,2394848,5.971,0.713
+20,Incidence,Esophagus,2013,Male,Age_5564,Non-hispanic Black,394,2000803,19.692,1.423
+21,Incidence,Esophagus,2013,Female,Age_5564,Hispanic,19,901355,2.108,0.521
+22,Incidence,Esophagus,2013,Male,Age_5564,Hispanic,176,1713053,10.274,1.13
+23,Incidence,Esophagus,2013,Female,Age_5564,Other,0,0,0,0
+24,Incidence,Esophagus,2013,Male,Age_5564,Other,61,852728,7.154,1.311
+25,Incidence,Esophagus,2013,Female,Age_over65,Non-hispanic White,1814,19500000,9.283,0.502
+26,Incidence,Esophagus,2013,Male,Age_over65,Non-hispanic White,6312,15600000,40.55,1.166
+27,Incidence,Esophagus,2013,Female,Age_over65,Non-hispanic Black,221,2329909,9.485,1.476
+28,Incidence,Esophagus,2013,Male,Age_over65,Non-hispanic Black,501,1542829,32.473,3.231
+29,Incidence,Esophagus,2013,Female,Age_over65,Hispanic,80,1603518,4.989,1.238
+30,Incidence,Esophagus,2013,Male,Age_over65,Hispanic,319,1354832,23.545,3.091
+31,Incidence,Esophagus,2013,Female,Age_over65,Other,0,22029,0,0
+32,Incidence,Esophagus,2013,Male,Age_over65,Other,130,785711,16.546,3.475
+1,Incidence,Lung and Bronchus,2013,Female,Age_2044,Non-hispanic White,975,30600000,3.191,0.227
+2,Incidence,Lung and Bronchus,2013,Male,Age_2044,Non-hispanic White,839,24600000,3.412,0.234
+3,Incidence,Lung and Bronchus,2013,Female,Age_2044,Non-hispanic Black,175,4213789,4.153,0.546
+4,Incidence,Lung and Bronchus,2013,Male,Age_2044,Non-hispanic Black,162,3782094,4.283,0.586
+5,Incidence,Lung and Bronchus,2013,Female,Age_2044,Hispanic,102,5938136,1.718,0.317
+6,Incidence,Lung and Bronchus,2013,Male,Age_2044,Hispanic,95,4307444,2.205,0.352
+7,Incidence,Lung and Bronchus,2013,Female,Age_2044,Other,78,1626777,4.795,0.796
+8,Incidence,Lung and Bronchus,2013,Male,Age_2044,Other,44,879151,5.005,0.866
+9,Incidence,Lung and Bronchus,2013,Female,Age_4554,Non-hispanic White,6366,14700000,43.217,0.757
+10,Incidence,Lung and Bronchus,2013,Male,Age_4554,Non-hispanic White,6037,14500000,41.526,0.746
+11,Incidence,Lung and Bronchus,2013,Female,Age_4554,Non-hispanic Black,1186,2885488,41.102,1.682
+12,Incidence,Lung and Bronchus,2013,Male,Age_4554,Non-hispanic Black,1268,2549908,49.727,1.971
+13,Incidence,Lung and Bronchus,2013,Female,Age_4554,Hispanic,375,2783977,13.47,1.372
+14,Incidence,Lung and Bronchus,2013,Male,Age_4554,Hispanic,341,2769496,12.313,0.962
+15,Incidence,Lung and Bronchus,2013,Female,Age_4554,Other,302,1439250,20.983,2.738
+16,Incidence,Lung and Bronchus,2013,Male,Age_4554,Other,281,1195835,23.498,2.737
+17,Incidence,Lung and Bronchus,2013,Female,Age_5564,Non-hispanic White,16465,14700000,112.301,1.244
+18,Incidence,Lung and Bronchus,2013,Male,Age_5564,Non-hispanic White,19489,14000000,139.365,1.422
+19,Incidence,Lung and Bronchus,2013,Female,Age_5564,Non-hispanic Black,2649,2394848,110.612,3.068
+20,Incidence,Lung and Bronchus,2013,Male,Age_5564,Non-hispanic Black,3704,2000803,185.126,4.359
+21,Incidence,Lung and Bronchus,2013,Female,Age_5564,Hispanic,849,1889308,44.937,3.22
+22,Incidence,Lung and Bronchus,2013,Male,Age_5564,Hispanic,1056,1746075,60.479,3.932
+23,Incidence,Lung and Bronchus,2013,Female,Age_5564,Other,641,1178370,54.397,4.957
+24,Incidence,Lung and Bronchus,2013,Male,Age_5564,Other,782,987955,79.153,6.223
+25,Incidence,Lung and Bronchus,2013,Female,Age_over65,Non-hispanic White,57763,19500000,295.612,2.798
+26,Incidence,Lung and Bronchus,2013,Male,Age_over65,Non-hispanic White,62487,15600000,401.433,3.734
+27,Incidence,Lung and Bronchus,2013,Female,Age_over65,Non-hispanic Black,5633,2329909,241.769,7.297
+28,Incidence,Lung and Bronchus,2013,Male,Age_over65,Non-hispanic Black,6554,1542829,424.804,12.095
+29,Incidence,Lung and Bronchus,2013,Female,Age_over65,Hispanic,2567,1814268,141.49,7.982
+30,Incidence,Lung and Bronchus,2013,Male,Age_over65,Hispanic,3241,1372344,236.165,13.406
+31,Incidence,Lung and Bronchus,2013,Female,Age_over65,Other,1862,1154945,161.22,13.424
+32,Incidence,Lung and Bronchus,2013,Male,Age_over65,Other,2302,891473,258.224,19.915
+1,Incidence,Colon and Rectum,2013,Female,Age_2044,Non-hispanic White,2234,30600000,7.313,0.346
+2,Incidence,Colon and Rectum,2013,Male,Age_2044,Non-hispanic White,2421,31200000,7.764,0.355
+3,Incidence,Colon and Rectum,2013,Female,Age_2044,Non-hispanic Black,524,7484062,7.002,0.704
+4,Incidence,Colon and Rectum,2013,Male,Age_2044,Non-hispanic Black,504,5220310,9.655,0.876
+5,Incidence,Colon and Rectum,2013,Female,Age_2044,Hispanic,434,7460428,5.817,0.581
+6,Incidence,Colon and Rectum,2013,Male,Age_2044,Hispanic,508,10300000,4.919,0.518
+7,Incidence,Colon and Rectum,2013,Female,Age_2044,Other,170,2313673,7.348,0.981
+8,Incidence,Colon and Rectum,2013,Male,Age_2044,Other,190,2771290,6.856,1.003
+9,Incidence,Colon and Rectum,2013,Female,Age_4554,Non-hispanic White,5547,14700000,37.657,0.709
+10,Incidence,Colon and Rectum,2013,Male,Age_4554,Non-hispanic White,7162,14500000,49.265,0.816
+11,Incidence,Colon and Rectum,2013,Female,Age_4554,Non-hispanic Black,1446,2885488,50.113,1.86
+12,Incidence,Colon and Rectum,2013,Male,Age_4554,Non-hispanic Black,1511,2549908,59.257,2.153
+13,Incidence,Colon and Rectum,2013,Female,Age_4554,Hispanic,895,2783977,32.148,1.862
+14,Incidence,Colon and Rectum,2013,Male,Age_4554,Hispanic,967,2829508,34.176,1.901
+15,Incidence,Colon and Rectum,2013,Female,Age_4554,Other,439,1439250,30.502,3.138
+16,Incidence,Colon and Rectum,2013,Male,Age_4554,Other,563,1277639,44.066,3.777
+17,Incidence,Colon and Rectum,2013,Female,Age_5564,Non-hispanic White,8473,14700000,57.791,0.891
+18,Incidence,Colon and Rectum,2013,Male,Age_5564,Non-hispanic White,11785,14000000,84.274,1.103
+19,Incidence,Colon and Rectum,2013,Female,Age_5564,Non-hispanic Black,2029,2394848,84.724,2.675
+20,Incidence,Colon and Rectum,2013,Male,Age_5564,Non-hispanic Black,2439,2000803,121.901,3.524
+21,Incidence,Colon and Rectum,2013,Female,Age_5564,Hispanic,1020,1850134,55.131,2.847
+22,Incidence,Colon and Rectum,2013,Male,Age_5564,Hispanic,1468,1698932,86.407,3.826
+23,Incidence,Colon and Rectum,2013,Female,Age_5564,Other,606,1178370,51.427,4.453
+24,Incidence,Colon and Rectum,2013,Male,Age_5564,Other,800,987955,80.975,5.906
+25,Incidence,Colon and Rectum,2013,Female,Age_over65,Non-hispanic White,31237,19500000,159.861,2.112
+26,Incidence,Colon and Rectum,2013,Male,Age_over65,Non-hispanic White,30471,15600000,195.754,2.663
+27,Incidence,Colon and Rectum,2013,Female,Age_over65,Non-hispanic Black,3921,2329909,168.29,6.237
+28,Incidence,Colon and Rectum,2013,Male,Age_over65,Non-hispanic Black,3568,1542829,231.264,9.124
+29,Incidence,Colon and Rectum,2013,Female,Age_over65,Hispanic,2305,1776878,129.722,7.021
+30,Incidence,Colon and Rectum,2013,Male,Age_over65,Hispanic,2606,1320113,197.407,9.069
+31,Incidence,Colon and Rectum,2013,Female,Age_over65,Other,1326,1154945,114.811,11.406
+32,Incidence,Colon and Rectum,2013,Male,Age_over65,Other,1405,881859,159.323,14.279
+1,Incidence,Female Breast,2013,Female,Age_2044,Non-hispanic White,13757,30600000,45.031,0.858
+2,Incidence,Female Breast,2013,Male,Age_2044,Non-hispanic White,0,0,0,0
+3,Incidence,Female Breast,2013,Female,Age_2044,Non-hispanic Black,3297,7484062,44.054,1.772
+4,Incidence,Female Breast,2013,Male,Age_2044,Non-hispanic Black,0,0,0,0
+5,Incidence,Female Breast,2013,Female,Age_2044,Hispanic,3068,9562112,32.085,1.697
+6,Incidence,Female Breast,2013,Male,Age_2044,Hispanic,0,0,0,0
+7,Incidence,Female Breast,2013,Female,Age_2044,Other,1630,3323973,49.038,3.361
+8,Incidence,Female Breast,2013,Male,Age_2044,Other,0,0,0,0
+9,Incidence,Female Breast,2013,Female,Age_4554,Non-hispanic White,30658,14700000,208.129,1.677
+10,Incidence,Female Breast,2013,Male,Age_4554,Non-hispanic White,0,0,0,0
+11,Incidence,Female Breast,2013,Female,Age_4554,Non-hispanic Black,5856,2885488,202.947,3.747
+12,Incidence,Female Breast,2013,Male,Age_4554,Non-hispanic Black,0,0,0,0
+13,Incidence,Female Breast,2013,Female,Age_4554,Hispanic,4405,2908240,151.466,4.945
+14,Incidence,Female Breast,2013,Male,Age_4554,Hispanic,0,0,0,0
+15,Incidence,Female Breast,2013,Female,Age_4554,Other,2527,1439250,175.578,6.795
+16,Incidence,Female Breast,2013,Male,Age_4554,Other,0,0,0,0
+17,Incidence,Female Breast,2013,Female,Age_5564,Non-hispanic White,43320,14700000,295.467,2.015
+18,Incidence,Female Breast,2013,Male,Age_5564,Non-hispanic White,0,0,0,0
+19,Incidence,Female Breast,2013,Female,Age_5564,Non-hispanic Black,6939,2394848,289.747,4.945
+20,Incidence,Female Breast,2013,Male,Age_5564,Non-hispanic Black,0,0,0,0
+21,Incidence,Female Breast,2013,Female,Age_5564,Hispanic,4178,1905282,219.285,6.906
+22,Incidence,Female Breast,2013,Male,Age_5564,Hispanic,0,0,0,0
+23,Incidence,Female Breast,2013,Female,Age_5564,Other,2523,1178370,214.109,8.593
+24,Incidence,Female Breast,2013,Male,Age_5564,Other,0,0,0,0
+25,Incidence,Female Breast,2013,Female,Age_over65,Non-hispanic White,82675,19500000,423.103,3.276
+26,Incidence,Female Breast,2013,Male,Age_over65,Non-hispanic White,0,0,0,0
+27,Incidence,Female Breast,2013,Female,Age_over65,Non-hispanic Black,9118,2329909,391.346,9.104
+28,Incidence,Female Breast,2013,Male,Age_over65,Non-hispanic Black,0,0,0,0
+29,Incidence,Female Breast,2013,Female,Age_over65,Hispanic,5559,1831297,303.555,11.967
+30,Incidence,Female Breast,2013,Male,Age_over65,Hispanic,0,0,0,0
+31,Incidence,Female Breast,2013,Female,Age_over65,Other,3058,1154945,264.775,15.671
+32,Incidence,Female Breast,2013,Male,Age_over65,Other,0,0,0,0
+1,Incidence,Gallbladder,2013,Female,Age_2044,Non-hispanic White,0,12500000,0,0
+2,Incidence,Gallbladder,2013,Male,Age_2044,Non-hispanic White,0,6593248,0,0
+3,Incidence,Gallbladder,2013,Female,Age_2044,Non-hispanic Black,0,1763629,0,0
+4,Incidence,Gallbladder,2013,Male,Age_2044,Non-hispanic Black,0,3226343,0,0
+5,Incidence,Gallbladder,2013,Female,Age_2044,Hispanic,0,2786739,0,0
+6,Incidence,Gallbladder,2013,Male,Age_2044,Hispanic,0,3270031,0,0
+7,Incidence,Gallbladder,2013,Female,Age_2044,Other,0,1043574,0,0
+8,Incidence,Gallbladder,2013,Male,Age_2044,Other,0,1775294,0,0
+9,Incidence,Gallbladder,2013,Female,Age_4554,Non-hispanic White,74,14700000,0.502,0.081
+10,Incidence,Gallbladder,2013,Male,Age_4554,Non-hispanic White,53,14500000,0.365,0.07
+11,Incidence,Gallbladder,2013,Female,Age_4554,Non-hispanic Black,55,2885488,1.906,0.363
+12,Incidence,Gallbladder,2013,Male,Age_4554,Non-hispanic Black,0,0,0,0
+13,Incidence,Gallbladder,2013,Female,Age_4554,Hispanic,31,1478597,2.097,0.408
+14,Incidence,Gallbladder,2013,Male,Age_4554,Hispanic,20,1513427,1.322,0.324
+15,Incidence,Gallbladder,2013,Female,Age_4554,Other,0,87248,0,0
+16,Incidence,Gallbladder,2013,Male,Age_4554,Other,0,81804,0,0
+17,Incidence,Gallbladder,2013,Female,Age_5564,Non-hispanic White,276,14700000,1.882,0.161
+18,Incidence,Gallbladder,2013,Male,Age_5564,Non-hispanic White,148,14000000,1.058,0.124
+19,Incidence,Gallbladder,2013,Female,Age_5564,Non-hispanic Black,117,2394848,4.885,0.638
+20,Incidence,Gallbladder,2013,Male,Age_5564,Non-hispanic Black,20,867525,2.305,0.516
+21,Incidence,Gallbladder,2013,Female,Age_5564,Hispanic,98,1879153,5.215,0.768
+22,Incidence,Gallbladder,2013,Male,Age_5564,Hispanic,20,826633,2.419,0.588
+23,Incidence,Gallbladder,2013,Female,Age_5564,Other,18,471508,3.818,0.9
+24,Incidence,Gallbladder,2013,Male,Age_5564,Other,0,0,0,0
+25,Incidence,Gallbladder,2013,Female,Age_over65,Non-hispanic White,1207,19500000,6.177,0.414
+26,Incidence,Gallbladder,2013,Male,Age_over65,Non-hispanic White,607,15600000,3.9,0.378
+27,Incidence,Gallbladder,2013,Female,Age_over65,Non-hispanic Black,229,2329909,9.829,1.516
+28,Incidence,Gallbladder,2013,Male,Age_over65,Non-hispanic Black,102,1417145,7.198,1.554
+29,Incidence,Gallbladder,2013,Female,Age_over65,Hispanic,231,1809776,12.764,1.968
+30,Incidence,Gallbladder,2013,Male,Age_over65,Hispanic,65,1135714,5.723,1.32
+31,Incidence,Gallbladder,2013,Female,Age_over65,Other,55,772945,7.116,1.696
+32,Incidence,Gallbladder,2013,Male,Age_over65,Other,0,0,0,0
+1,Incidence,Stomach,2013,Female,Age_2044,Non-hispanic White,205,24200000,0.846,0.118
+2,Incidence,Stomach,2013,Male,Age_2044,Non-hispanic White,267,24600000,1.086,0.133
+3,Incidence,Stomach,2013,Female,Age_2044,Non-hispanic Black,89,4213789,2.112,0.388
+4,Incidence,Stomach,2013,Male,Age_2044,Non-hispanic Black,90,3782094,2.38,0.437
+5,Incidence,Stomach,2013,Female,Age_2044,Hispanic,154,5955693,2.586,0.388
+6,Incidence,Stomach,2013,Male,Age_2044,Hispanic,181,6227792,2.906,0.402
+7,Incidence,Stomach,2013,Female,Age_2044,Other,53,2388813,2.219,0.541
+8,Incidence,Stomach,2013,Male,Age_2044,Other,34,1558271,2.182,0.572
+9,Incidence,Stomach,2013,Female,Age_4554,Non-hispanic White,459,14700000,3.116,0.204
+10,Incidence,Stomach,2013,Male,Age_4554,Non-hispanic White,932,14500000,6.411,0.295
+11,Incidence,Stomach,2013,Female,Age_4554,Non-hispanic Black,166,2885488,5.753,0.631
+12,Incidence,Stomach,2013,Male,Age_4554,Non-hispanic Black,300,2549908,11.765,0.959
+13,Incidence,Stomach,2013,Female,Age_4554,Hispanic,202,2853959,7.078,0.727
+14,Incidence,Stomach,2013,Male,Age_4554,Hispanic,258,2814960,9.165,0.821
+15,Incidence,Stomach,2013,Female,Age_4554,Other,89,1258082,7.074,1.064
+16,Incidence,Stomach,2013,Male,Age_4554,Other,100,1109784,9.011,1.282
+17,Incidence,Stomach,2013,Female,Age_5564,Non-hispanic White,894,14700000,6.098,0.29
+18,Incidence,Stomach,2013,Male,Age_5564,Non-hispanic White,2058,14000000,14.717,0.462
+19,Incidence,Stomach,2013,Female,Age_5564,Non-hispanic Black,319,2394848,13.32,1.066
+20,Incidence,Stomach,2013,Male,Age_5564,Non-hispanic Black,542,2000803,27.089,1.661
+21,Incidence,Stomach,2013,Female,Age_5564,Hispanic,221,1819255,12.148,1.18
+22,Incidence,Stomach,2013,Male,Age_5564,Hispanic,383,1687920,22.691,1.673
+23,Incidence,Stomach,2013,Female,Age_5564,Other,132,1026844,12.855,1.584
+24,Incidence,Stomach,2013,Male,Age_5564,Other,207,852728,24.275,2.409
+25,Incidence,Stomach,2013,Female,Age_over65,Non-hispanic White,3324,19500000,17.011,0.686
+26,Incidence,Stomach,2013,Male,Age_over65,Non-hispanic White,5979,15600000,38.411,1.175
+27,Incidence,Stomach,2013,Female,Age_over65,Non-hispanic Black,817,2329909,35.066,2.905
+28,Incidence,Stomach,2013,Male,Age_over65,Non-hispanic Black,1021,1542829,66.177,4.979
+29,Incidence,Stomach,2013,Female,Age_over65,Hispanic,675,1797266,37.557,3.46
+30,Incidence,Stomach,2013,Male,Age_over65,Hispanic,757,1351039,56.031,4.934
+31,Incidence,Stomach,2013,Female,Age_over65,Other,405,1023756,39.56,4.773
+32,Incidence,Stomach,2013,Male,Age_over65,Other,570,785711,72.546,7.426
+1,Incidence,Pancreas,2013,Female,Age_2044,Non-hispanic White,328,30600000,1.074,0.132
+2,Incidence,Pancreas,2013,Male,Age_2044,Non-hispanic White,293,18300000,1.603,0.161
+3,Incidence,Pancreas,2013,Female,Age_2044,Non-hispanic Black,53,2747328,1.929,0.375
+4,Incidence,Pancreas,2013,Male,Age_2044,Non-hispanic Black,70,2444886,2.863,0.483
+5,Incidence,Pancreas,2013,Female,Age_2044,Hispanic,57,4366824,1.305,0.278
+6,Incidence,Pancreas,2013,Male,Age_2044,Hispanic,48,4493404,1.068,0.246
+7,Incidence,Pancreas,2013,Female,Age_2044,Other,0,207056,0,0
+8,Incidence,Pancreas,2013,Male,Age_2044,Other,19,957117,1.985,0.545
+9,Incidence,Pancreas,2013,Female,Age_4554,Non-hispanic White,1105,14700000,7.502,0.316
+10,Incidence,Pancreas,2013,Male,Age_4554,Non-hispanic White,1543,14500000,10.614,0.379
+11,Incidence,Pancreas,2013,Female,Age_4554,Non-hispanic Black,305,2885488,10.57,0.854
+12,Incidence,Pancreas,2013,Male,Age_4554,Non-hispanic Black,358,2549908,14.04,1.048
+13,Incidence,Pancreas,2013,Female,Age_4554,Hispanic,144,2819825,5.107,0.623
+14,Incidence,Pancreas,2013,Male,Age_4554,Hispanic,240,2838689,8.455,0.793
+15,Incidence,Pancreas,2013,Female,Age_4554,Other,33,606670,5.44,0.947
+16,Incidence,Pancreas,2013,Male,Age_4554,Other,72,1109784,6.488,1.086
+17,Incidence,Pancreas,2013,Female,Age_5564,Non-hispanic White,2960,14700000,20.189,0.528
+18,Incidence,Pancreas,2013,Male,Age_5564,Non-hispanic White,4098,14000000,29.305,0.652
+19,Incidence,Pancreas,2013,Female,Age_5564,Non-hispanic Black,686,2394848,28.645,1.562
+20,Incidence,Pancreas,2013,Male,Age_5564,Non-hispanic Black,779,2000803,38.934,1.989
+21,Incidence,Pancreas,2013,Female,Age_5564,Hispanic,342,1867830,18.31,1.463
+22,Incidence,Pancreas,2013,Male,Age_5564,Hispanic,380,1665910,22.81,1.686
+23,Incidence,Pancreas,2013,Female,Age_5564,Other,159,1093574,14.539,2.199
+24,Incidence,Pancreas,2013,Male,Age_5564,Other,181,928390,19.496,2.577
+25,Incidence,Pancreas,2013,Female,Age_over65,Non-hispanic White,11405,19500000,58.367,1.268
+26,Incidence,Pancreas,2013,Male,Age_over65,Non-hispanic White,11322,15600000,72.736,1.613
+27,Incidence,Pancreas,2013,Female,Age_over65,Non-hispanic Black,1678,2329909,72.02,4.153
+28,Incidence,Pancreas,2013,Male,Age_over65,Non-hispanic Black,1207,1542829,78.233,5.31
+29,Incidence,Pancreas,2013,Female,Age_over65,Hispanic,1011,1779060,56.828,4.281
+30,Incidence,Pancreas,2013,Male,Age_over65,Hispanic,855,1334251,64.081,5.165
+31,Incidence,Pancreas,2013,Female,Age_over65,Other,485,1023756,47.375,5.208
+32,Incidence,Pancreas,2013,Male,Age_over65,Other,424,829168,51.136,6.626
+1,Incidence,Kidney and Renal Pelvis,2013,Female,Age_2044,Non-hispanic White,1104,30600000,3.614,0.244
+2,Incidence,Kidney and Renal Pelvis,2013,Male,Age_2044,Non-hispanic White,1609,31200000,5.16,0.289
+3,Incidence,Kidney and Renal Pelvis,2013,Female,Age_2044,Non-hispanic Black,219,5720433,3.828,0.522
+4,Incidence,Kidney and Renal Pelvis,2013,Male,Age_2044,Non-hispanic Black,375,5220310,7.183,0.756
+5,Incidence,Kidney and Renal Pelvis,2013,Female,Age_2044,Hispanic,299,9645322,3.1,0.423
+6,Incidence,Kidney and Renal Pelvis,2013,Male,Age_2044,Hispanic,375,8104530,4.627,0.504
+7,Incidence,Kidney and Renal Pelvis,2013,Female,Age_2044,Other,21,866900,2.422,0.566
+8,Incidence,Kidney and Renal Pelvis,2013,Male,Age_2044,Other,71,1423074,4.989,1.435
+9,Incidence,Kidney and Renal Pelvis,2013,Female,Age_4554,Non-hispanic White,1956,14700000,13.279,0.423
+10,Incidence,Kidney and Renal Pelvis,2013,Male,Age_4554,Non-hispanic White,3775,14500000,25.967,0.594
+11,Incidence,Kidney and Renal Pelvis,2013,Female,Age_4554,Non-hispanic Black,398,2885488,13.793,0.977
+12,Incidence,Kidney and Renal Pelvis,2013,Male,Age_4554,Non-hispanic Black,771,2549908,30.236,1.539
+13,Incidence,Kidney and Renal Pelvis,2013,Female,Age_4554,Hispanic,365,2737390,13.334,0.997
+14,Incidence,Kidney and Renal Pelvis,2013,Male,Age_4554,Hispanic,623,2824684,22.056,1.271
+15,Incidence,Kidney and Renal Pelvis,2013,Female,Age_4554,Other,96,1352002,7.101,1.594
+16,Incidence,Kidney and Renal Pelvis,2013,Male,Age_4554,Other,209,1277639,16.358,2.955
+17,Incidence,Kidney and Renal Pelvis,2013,Female,Age_5564,Non-hispanic White,3564,14700000,24.309,0.578
+18,Incidence,Kidney and Renal Pelvis,2013,Male,Age_5564,Non-hispanic White,7206,14000000,51.53,0.862
+19,Incidence,Kidney and Renal Pelvis,2013,Female,Age_5564,Non-hispanic Black,705,2394848,29.438,1.58
+20,Incidence,Kidney and Renal Pelvis,2013,Male,Age_5564,Non-hispanic Black,1260,2000803,62.975,2.532
+21,Incidence,Kidney and Renal Pelvis,2013,Female,Age_5564,Hispanic,506,1796973,28.159,1.796
+22,Incidence,Kidney and Renal Pelvis,2013,Male,Age_5564,Hispanic,835,1665910,50.123,2.486
+23,Incidence,Kidney and Renal Pelvis,2013,Female,Age_5564,Other,159,1178370,13.493,2.77
+24,Incidence,Kidney and Renal Pelvis,2013,Male,Age_5564,Other,316,987955,31.985,4.295
+25,Incidence,Kidney and Renal Pelvis,2013,Female,Age_over65,Non-hispanic White,8310,19500000,42.528,1.05
+26,Incidence,Kidney and Renal Pelvis,2013,Male,Age_over65,Non-hispanic White,13781,15600000,88.533,1.693
+27,Incidence,Kidney and Renal Pelvis,2013,Female,Age_over65,Non-hispanic Black,1137,2329909,48.8,3.191
+28,Incidence,Kidney and Renal Pelvis,2013,Male,Age_over65,Non-hispanic Black,1484,1542829,96.187,5.375
+29,Incidence,Kidney and Renal Pelvis,2013,Female,Age_over65,Hispanic,857,1786156,47.98,3.719
+30,Incidence,Kidney and Renal Pelvis,2013,Male,Age_over65,Hispanic,1216,1334198,91.141,5.857
+31,Incidence,Kidney and Renal Pelvis,2013,Female,Age_over65,Other,227,1094504,20.74,4.522
+32,Incidence,Kidney and Renal Pelvis,2013,Male,Age_over65,Other,458,874690,52.361,8.168
+1,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_2044,Non-hispanic White,129,18100000,0.714,0.108
+2,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_2044,Non-hispanic White,153,24600000,0.622,0.101
+3,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_2044,Non-hispanic Black,19,1407370,1.35,0.31
+4,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_2044,Non-hispanic Black,65,2444886,2.659,0.466
+5,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_2044,Hispanic,21,2646931,0.793,0.219
+6,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_2044,Hispanic,44,2567271,1.714,0.316
+7,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_2044,Other,0,377180,0,0
+8,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_2044,Other,66,2241853,2.944,0.663
+9,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_4554,Non-hispanic White,457,14700000,3.102,0.203
+10,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_4554,Non-hispanic White,1483,14500000,10.201,0.369
+11,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_4554,Non-hispanic Black,148,2885488,5.129,0.594
+12,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_4554,Non-hispanic Black,380,2549908,14.903,1.079
+13,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_4554,Hispanic,136,2789996,4.875,0.609
+14,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_4554,Hispanic,529,2793225,18.939,1.197
+15,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_4554,Other,42,1258082,3.338,0.73
+16,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_4554,Other,228,1195835,19.066,2.315
+17,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_5564,Non-hispanic White,1326,14700000,9.044,0.353
+18,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_5564,Non-hispanic White,5285,14000000,37.793,0.738
+19,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_5564,Non-hispanic Black,458,2394848,19.124,1.27
+20,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_5564,Non-hispanic Black,1638,2000803,81.867,2.906
+21,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_5564,Hispanic,304,1856871,16.372,1.359
+22,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_5564,Hispanic,1071,1665910,64.289,2.806
+23,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_5564,Other,147,1111640,13.224,2.077
+24,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_5564,Other,522,987955,52.836,4.847
+25,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_over65,Non-hispanic White,3054,19500000,15.629,0.647
+26,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_over65,Non-hispanic White,5945,15600000,38.192,1.122
+27,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_over65,Non-hispanic Black,463,2329909,19.872,2.091
+28,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_over65,Non-hispanic Black,935,1542829,60.603,4.111
+29,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_over65,Hispanic,698,1778787,39.24,3.452
+30,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_over65,Hispanic,1104,1331044,82.942,5.594
+31,Incidence,Liver and Intrahepatic Bile Duct,2013,Female,Age_over65,Other,404,1072475,37.67,4.781
+32,Incidence,Liver and Intrahepatic Bile Duct,2013,Male,Age_over65,Other,717,857420,83.623,8.263
+1,Incidence,Thyroid,2013,Female,Age_2044,Non-hispanic White,8514,30600000,27.869,0.678
+2,Incidence,Thyroid,2013,Male,Age_2044,Non-hispanic White,2026,31200000,6.497,0.325
+3,Incidence,Thyroid,2013,Female,Age_2044,Non-hispanic Black,901,7484062,12.039,0.915
+4,Incidence,Thyroid,2013,Male,Age_2044,Non-hispanic Black,141,5220310,2.701,0.461
+5,Incidence,Thyroid,2013,Female,Age_2044,Hispanic,1834,9242684,19.843,1.06
+6,Incidence,Thyroid,2013,Male,Age_2044,Hispanic,356,10300000,3.446,0.427
+7,Incidence,Thyroid,2013,Female,Age_2044,Other,952,3996478,23.821,2.2
+8,Incidence,Thyroid,2013,Male,Age_2044,Other,216,3458680,6.245,0.955
+9,Incidence,Thyroid,2013,Female,Age_4554,Non-hispanic White,5696,14700000,38.669,0.724
+10,Incidence,Thyroid,2013,Male,Age_4554,Non-hispanic White,1888,14500000,12.987,0.423
+11,Incidence,Thyroid,2013,Female,Age_4554,Non-hispanic Black,667,2885488,23.116,1.265
+12,Incidence,Thyroid,2013,Male,Age_4554,Non-hispanic Black,147,2549908,5.765,0.672
+13,Incidence,Thyroid,2013,Female,Age_4554,Hispanic,1001,2838636,35.263,1.855
+14,Incidence,Thyroid,2013,Male,Age_4554,Hispanic,229,2918234,7.847,0.756
+15,Incidence,Thyroid,2013,Female,Age_4554,Other,536,1439250,37.242,3.019
+16,Incidence,Thyroid,2013,Male,Age_4554,Other,106,1109784,9.551,1.315
+17,Incidence,Thyroid,2013,Female,Age_5564,Non-hispanic White,5117,14700000,34.901,0.689
+18,Incidence,Thyroid,2013,Male,Age_5564,Non-hispanic White,2176,14000000,15.561,0.472
+19,Incidence,Thyroid,2013,Female,Age_5564,Non-hispanic Black,679,2394848,28.353,1.545
+20,Incidence,Thyroid,2013,Male,Age_5564,Non-hispanic Black,154,2000803,7.697,0.886
+21,Incidence,Thyroid,2013,Female,Age_5564,Hispanic,646,1796973,35.949,2.005
+22,Incidence,Thyroid,2013,Male,Age_5564,Hispanic,208,1724055,12.065,1.203
+23,Incidence,Thyroid,2013,Female,Age_5564,Other,388,1178370,32.927,3.188
+24,Incidence,Thyroid,2013,Male,Age_5564,Other,123,852728,14.424,1.846
+25,Incidence,Thyroid,2013,Female,Age_over65,Non-hispanic White,5052,19500000,25.854,0.781
+26,Incidence,Thyroid,2013,Male,Age_over65,Non-hispanic White,2815,15600000,18.084,0.731
+27,Incidence,Thyroid,2013,Female,Age_over65,Non-hispanic Black,597,2329909,25.623,2.208
+28,Incidence,Thyroid,2013,Male,Age_over65,Non-hispanic Black,170,1417145,11.996,1.779
+29,Incidence,Thyroid,2013,Female,Age_over65,Hispanic,573,1789085,32.028,2.859
+30,Incidence,Thyroid,2013,Male,Age_over65,Hispanic,172,1098494,15.658,2.09
+31,Incidence,Thyroid,2013,Female,Age_over65,Other,352,1072475,32.821,4.175
+32,Incidence,Thyroid,2013,Male,Age_over65,Other,130,721703,18.013,3.191
+1,Incidence,Ovary,2013,Female,Age_2044,Non-hispanic White,1226,30600000,4.013,0.256
+2,Incidence,Ovary,2013,Male,Age_2044,Non-hispanic White,0,0,0,0
+3,Incidence,Ovary,2013,Female,Age_2044,Non-hispanic Black,220,7484062,2.94,0.453
+4,Incidence,Ovary,2013,Male,Age_2044,Non-hispanic Black,0,0,0,0
+5,Incidence,Ovary,2013,Female,Age_2044,Hispanic,335,9420680,3.556,0.451
+6,Incidence,Ovary,2013,Male,Age_2044,Hispanic,0,0,0,0
+7,Incidence,Ovary,2013,Female,Age_2044,Other,124,2313673,5.359,0.837
+8,Incidence,Ovary,2013,Male,Age_2044,Other,0,0,0,0
+9,Incidence,Ovary,2013,Female,Age_4554,Non-hispanic White,2475,14700000,16.802,0.475
+10,Incidence,Ovary,2013,Male,Age_4554,Non-hispanic White,0,0,0,0
+11,Incidence,Ovary,2013,Female,Age_4554,Non-hispanic Black,364,2885488,12.615,0.934
+12,Incidence,Ovary,2013,Male,Age_4554,Non-hispanic Black,0,0,0,0
+13,Incidence,Ovary,2013,Female,Age_4554,Hispanic,387,2765758,13.993,1.017
+14,Incidence,Ovary,2013,Male,Age_4554,Hispanic,0,0,0,0
+15,Incidence,Ovary,2013,Female,Age_4554,Other,256,1439250,17.787,2.237
+16,Incidence,Ovary,2013,Male,Age_4554,Other,0,0,0,0
+17,Incidence,Ovary,2013,Female,Age_5564,Non-hispanic White,3730,14700000,25.441,0.591
+18,Incidence,Ovary,2013,Male,Age_5564,Non-hispanic White,0,0,0,0
+19,Incidence,Ovary,2013,Female,Age_5564,Non-hispanic Black,479,2394848,20.001,1.3
+20,Incidence,Ovary,2013,Male,Age_5564,Non-hispanic Black,0,0,0,0
+21,Incidence,Ovary,2013,Female,Age_5564,Hispanic,412,1829574,22.519,1.585
+22,Incidence,Ovary,2013,Male,Age_5564,Hispanic,0,0,0,0
+23,Incidence,Ovary,2013,Female,Age_5564,Other,224,1093574,20.483,2.475
+24,Incidence,Ovary,2013,Male,Age_5564,Other,0,0,0,0
+25,Incidence,Ovary,2013,Female,Age_over65,Non-hispanic White,8024,19500000,41.064,1.037
+26,Incidence,Ovary,2013,Male,Age_over65,Non-hispanic White,0,0,0,0
+27,Incidence,Ovary,2013,Female,Age_over65,Non-hispanic Black,762,2329909,32.705,2.705
+28,Incidence,Ovary,2013,Male,Age_over65,Non-hispanic Black,0,0,0,0
+29,Incidence,Ovary,2013,Female,Age_over65,Hispanic,566,1788285,31.65,3.043
+30,Incidence,Ovary,2013,Male,Age_over65,Hispanic,0,0,0,0
+31,Incidence,Ovary,2013,Female,Age_over65,Other,265,1072475,24.709,3.892
+32,Incidence,Ovary,2013,Male,Age_over65,Other,0,0,0,0
+1,Incidence,Corpus Uteri,2013,Female,Age_2044,Non-hispanic White,1747,30600000,5.718,0.306
+2,Incidence,Corpus Uteri,2013,Male,Age_2044,Non-hispanic White,0,0,0,0
+3,Incidence,Corpus Uteri,2013,Female,Age_2044,Non-hispanic Black,308,5720433,5.384,0.619
+4,Incidence,Corpus Uteri,2013,Male,Age_2044,Non-hispanic Black,0,0,0,0
+5,Incidence,Corpus Uteri,2013,Female,Age_2044,Hispanic,583,7435046,7.841,0.674
+6,Incidence,Corpus Uteri,2013,Male,Age_2044,Hispanic,0,0,0,0
+7,Incidence,Corpus Uteri,2013,Female,Age_2044,Other,257,3153849,8.149,1.396
+8,Incidence,Corpus Uteri,2013,Male,Age_2044,Other,0,0,0,0
+9,Incidence,Corpus Uteri,2013,Female,Age_4554,Non-hispanic White,5247,14700000,35.621,0.688
+10,Incidence,Corpus Uteri,2013,Male,Age_4554,Non-hispanic White,0,0,0,0
+11,Incidence,Corpus Uteri,2013,Female,Age_4554,Non-hispanic Black,594,2885488,20.586,1.192
+12,Incidence,Corpus Uteri,2013,Male,Age_4554,Non-hispanic Black,0,0,0,0
+13,Incidence,Corpus Uteri,2013,Female,Age_4554,Hispanic,843,2716476,31.033,1.527
+14,Incidence,Corpus Uteri,2013,Male,Age_4554,Hispanic,0,0,0,0
+15,Incidence,Corpus Uteri,2013,Female,Age_4554,Other,462,1439250,32.1,2.969
+16,Incidence,Corpus Uteri,2013,Male,Age_4554,Other,0,0,0,0
+17,Incidence,Corpus Uteri,2013,Female,Age_5564,Non-hispanic White,12692,14700000,86.567,1.09
+18,Incidence,Corpus Uteri,2013,Male,Age_5564,Non-hispanic White,0,0,0,0
+19,Incidence,Corpus Uteri,2013,Female,Age_5564,Non-hispanic Black,1818,2394848,75.913,2.555
+20,Incidence,Corpus Uteri,2013,Male,Age_5564,Non-hispanic Black,0,0,0,0
+21,Incidence,Corpus Uteri,2013,Female,Age_5564,Hispanic,1270,1889308,67.22,3.804
+22,Incidence,Corpus Uteri,2013,Male,Age_5564,Hispanic,0,0,0,0
+23,Incidence,Corpus Uteri,2013,Female,Age_5564,Other,695,1178370,58.98,4.566
+24,Incidence,Corpus Uteri,2013,Male,Age_5564,Other,0,0,0,0
+25,Incidence,Corpus Uteri,2013,Female,Age_over65,Non-hispanic White,16489,19500000,84.385,1.428
+26,Incidence,Corpus Uteri,2013,Male,Age_over65,Non-hispanic White,0,0,0,0
+27,Incidence,Corpus Uteri,2013,Female,Age_over65,Non-hispanic Black,2159,2329909,92.665,4.309
+28,Incidence,Corpus Uteri,2013,Male,Age_over65,Non-hispanic Black,0,0,0,0
+29,Incidence,Corpus Uteri,2013,Female,Age_over65,Hispanic,1277,1805087,70.745,4.626
+30,Incidence,Corpus Uteri,2013,Male,Age_over65,Hispanic,0,0,0,0
+31,Incidence,Corpus Uteri,2013,Female,Age_over65,Other,554,1105246,50.125,5.755
+32,Incidence,Corpus Uteri,2013,Male,Age_over65,Other,0,0,0,0
+1,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_2044,Non-hispanic White,23,36482609,0.0630459,0.0417448
+2,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_2044,Non-hispanic White,175,37342837,0.4686394,0.1145513
+3,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_2044,Non-hispanic Black,1,9307531,0.0107455,0.0533927
+4,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_2044,Non-hispanic Black,1,8711528,0.0114777,0.0574841
+5,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_2044,Hispanic,2,13578194,0.0147296,0.0463263
+6,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_2044,Hispanic,12,14674104,0.0817776,0.1080803
+7,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_2044,Other,1,5853976,0.0170822,0.0670397
+8,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_2044,Other,2,5451523,0.0366867,0.1055198
+9,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_4554,Non-hispanic White,134,17662722,0.7586421,0.1279846
+10,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_4554,Non-hispanic White,957,17472903,5.477056,0.3445766
+11,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_4554,Non-hispanic Black,2,3600738,0.0555393,0.1210522
+12,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_4554,Non-hispanic Black,32,3184952,1.004705,0.4015239
+13,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_4554,Hispanic,1,4045659,0.0247196,0.070821
+14,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_4554,Hispanic,52,4115864,1.263393,0.3639716
+15,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_4554,Other,0,2055706,0,0
+16,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_4554,Other,4,1818452,0.2199654,0.2739583
+17,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_5564,Non-hispanic White,336,17548091,1.914708,0.2034572
+18,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_5564,Non-hispanic White,2473,16759644,14.75571,0.5883471
+19,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_5564,Non-hispanic Black,5,2982009,0.167667,0.2419696
+20,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_5564,Non-hispanic Black,82,2493419,3.288662,0.7483896
+21,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_5564,Hispanic,6,2647517,0.2266366,0.2638293
+22,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_5564,Hispanic,131,2453141,5.340107,1.103699
+23,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_5564,Other,5,1699593,0.2941881,0.7786145
+24,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_5564,Other,11,1421186,0.7739992,1.44188
+25,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_over65,Non-hispanic White,959,23310298,4.114054,0.4312265
+26,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_over65,Non-hispanic White,5288,18558474,28.49373,1.251221
+27,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_over65,Non-hispanic Black,4,2891576,0.1383277,0.3240781
+28,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_over65,Non-hispanic Black,86,1919228,4.48097,1.503973
+29,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_over65,Hispanic,25,2510902,0.9956583,0.9190088
+30,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_over65,Hispanic,207,1887534,10.96669,2.443704
+31,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Female,Age_over65,Other,2,1690385,0.1183126,0.6836123
+32,Incidence,Esophagus: Adenomas and adenocarcinomas,2013,Male,Age_over65,Other,18,1298968,1.385712,2.64625
+1,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_2044,Non-hispanic White,2,36482609,0.0054817,0.0189879
+2,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_2044,Non-hispanic White,2,37342837,0.0053575,0.0191569
+3,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_2044,Non-hispanic Black,1,9307531,0.0107432,0.0554595
+4,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_2044,Non-hispanic Black,2,8711528,0.0229596,0.084569
+5,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_2044,Hispanic,1,13578194,0.0073665,0.0331634
+6,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_2044,Hispanic,3,14674104,0.0204467,0.0548918
+7,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_2044,Other,1,5853976,0.0170824,0.2725936
+8,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_2044,Other,1,5451523,0.0183408,0.0740657
+9,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_4554,Non-hispanic White,109,17662722,0.6171034,0.119638
+10,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_4554,Non-hispanic White,201,17472903,1.150339,0.1585387
+11,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_4554,Non-hispanic Black,87,3600738,2.416148,0.4888991
+12,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_4554,Non-hispanic Black,142,3184952,4.458459,0.7561755
+13,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_4554,Hispanic,2,4045659,0.0494426,0.0967698
+14,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_4554,Hispanic,28,4115864,0.6803076,0.4473052
+15,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_4554,Other,1,2055706,0.0486471,0.1218886
+16,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_4554,Other,12,1818452,0.6598996,0.6651441
+17,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_5564,Non-hispanic White,316,17548091,1.800771,0.2030864
+18,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_5564,Non-hispanic White,602,16759644,3.591949,0.3008521
+19,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_5564,Non-hispanic Black,157,2982009,5.26491,0.8602343
+20,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_5564,Non-hispanic Black,369,2493419,14.79895,1.579496
+21,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_5564,Hispanic,9,2647517,0.3399527,1.0281
+22,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_5564,Hispanic,79,2453141,3.220339,0.7671549
+23,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_5564,Other,10,1699593,0.5883833,0.7007256
+24,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_5564,Other,47,1421186,3.307108,1.378711
+25,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_over65,Non-hispanic White,941,23310298,4.03682,0.4302709
+26,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_over65,Non-hispanic White,1275,18558474,6.870172,0.6238654
+27,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_over65,Non-hispanic Black,227,2891576,7.850368,1.737173
+28,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_over65,Non-hispanic Black,446,1919228,23.23851,3.417029
+29,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_over65,Hispanic,15,2510902,0.5973963,0.7046359
+30,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_over65,Hispanic,132,1887534,6.993267,1.990511
+31,Incidence,Esophagus: Squamous cell neoplasm,2013,Female,Age_over65,Other,25,1690385,1.478953,1.368762
+32,Incidence,Esophagus: Squamous cell neoplasm,2013,Male,Age_over65,Other,102,1298968,7.852383,3.094805
+1,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_2044,Non-hispanic White,31,36482609,0.0823021,0.0605003
+2,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_2044,Non-hispanic White,150,37342837,0.4080007,0.105479
+3,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_2044,Non-hispanic Black,2,9307531,0.0198543,0.079708
+4,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_2044,Non-hispanic Black,1,8711528,0.0113806,0.0584309
+5,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_2044,Hispanic,4,13578194,0.0301568,0.0669245
+6,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_2044,Hispanic,32,14674104,0.2199391,0.1484256
+7,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_2044,Other,1,5853976,0.0194779,0.0764421
+8,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_2044,Other,7,5451523,0.1295504,0.3471458
+9,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_4554,Non-hispanic White,161,17662722,0.9051616,0.1461561
+10,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_4554,Non-hispanic White,646,17472903,3.687808,0.3082906
+11,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_4554,Non-hispanic Black,2,3600738,0.0627815,0.1372385
+12,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_4554,Non-hispanic Black,60,3184952,1.877614,0.4815989
+13,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_4554,Hispanic,6,4045659,0.1471185,0.1829019
+14,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_4554,Hispanic,79,4115864,1.90925,0.564932
+15,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_4554,Other,1,2055706,0.0486432,0.4242335
+16,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_4554,Other,6,1818452,0.3303229,0.5796929
+17,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_5564,Non-hispanic White,299,17548091,1.664505,0.1931195
+18,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_5564,Non-hispanic White,1541,16759644,9.19877,0.4588393
+19,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_5564,Non-hispanic Black,60,2982009,1.99462,0.4828694
+20,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_5564,Non-hispanic Black,107,2493419,4.278168,0.8401003
+21,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_5564,Hispanic,32,2647517,1.205278,0.715191
+22,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_5564,Hispanic,117,2453141,4.772662,1.410551
+23,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_5564,Other,11,1699593,0.6341774,0.8901665
+24,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_5564,Other,50,1421186,3.537225,1.416277
+25,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_over65,Non-hispanic White,1012,23310298,4.345941,0.439009
+26,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_over65,Non-hispanic White,3704,18558474,19.95578,1.077455
+27,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_over65,Non-hispanic Black,74,2891576,2.562049,1.027485
+28,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_over65,Non-hispanic Black,178,1919228,9.281658,2.324623
+29,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_over65,Hispanic,66,2510902,2.617583,1.779002
+30,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_over65,Hispanic,225,1887534,11.92225,3.951648
+31,Incidence,"Stomach: Cardia, NOS",2013,Female,Age_over65,Other,24,1690385,1.411082,1.894218
+32,Incidence,"Stomach: Cardia, NOS",2013,Male,Age_over65,Other,140,1298968,10.77268,4.08846
+1,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_2044,Non-hispanic White,104,36482609,0.2850579,0.0946799
+2,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_2044,Non-hispanic White,168,37342837,0.4499141,0.1141535
+3,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_2044,Non-hispanic Black,112,9307531,1.203326,0.3813514
+4,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_2044,Non-hispanic Black,95,8711528,1.090565,0.3876471
+5,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_2044,Hispanic,29,13578194,0.2135742,0.1476672
+6,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_2044,Hispanic,47,14674104,0.3202757,0.1790115
+7,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_2044,Other,4,5853976,0.0682913,0.1352613
+8,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_2044,Other,3,5451523,0.0550213,0.1278336
+9,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_4554,Non-hispanic White,562,17662722,3.181902,0.2662118
+10,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_4554,Non-hispanic White,840,17472903,4.807604,0.3319828
+11,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_4554,Non-hispanic Black,347,3600738,9.636946,1.047662
+12,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_4554,Non-hispanic Black,349,3184952,10.95789,1.167076
+13,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_4554,Hispanic,146,4045659,3.608928,0.7964351
+14,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_4554,Hispanic,175,4115864,4.252046,0.790253
+15,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_4554,Other,18,2055706,0.8755653,0.8801195
+16,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_4554,Other,59,1818452,3.244634,1.057227
+17,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_5564,Non-hispanic White,1426,17548091,8.126022,0.4369568
+18,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_5564,Non-hispanic White,2035,16759644,12.14227,0.546377
+19,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_5564,Non-hispanic Black,704,2982009,23.60811,1.829833
+20,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_5564,Non-hispanic Black,777,2493419,31.16206,2.324326
+21,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_5564,Hispanic,206,2647517,7.78079,1.37809
+22,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_5564,Hispanic,307,2453141,12.51464,1.905409
+23,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_5564,Other,97,1699593,5.707417,1.614761
+24,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_5564,Other,86,1421186,6.051243,1.627434
+25,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_over65,Non-hispanic White,4793,23310298,20.56158,0.972665
+26,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_over65,Non-hispanic White,6315,18558474,34.0276,1.470381
+27,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_over65,Non-hispanic Black,1462,2891576,50.56056,4.338728
+28,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_over65,Non-hispanic Black,1360,1919228,70.86163,6.448545
+29,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_over65,Hispanic,528,2510902,21.02828,4.229125
+30,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_over65,Hispanic,619,1887534,32.79401,6.019363
+31,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Female,Age_over65,Other,215,1690385,12.71905,4.478915
+32,Incidence,Myeloma: Multiple myeloma/plasma-cell leuk,2013,Male,Age_over65,Other,255,1298968,19.63092,5.916738
+1,Incidence,meningiomas: meningiomas,2013,Female,Age_2044,Non-hispanic White,0,36482609,0,0
+2,Incidence,meningiomas: meningiomas,2013,Male,Age_2044,Non-hispanic White,0,37342837,0,0
+3,Incidence,meningiomas: meningiomas,2013,Female,Age_2044,Non-hispanic Black,0,9307531,0,0
+4,Incidence,meningiomas: meningiomas,2013,Male,Age_2044,Non-hispanic Black,0,8711528,0,0
+5,Incidence,meningiomas: meningiomas,2013,Female,Age_2044,Hispanic,0,13578194,0,0
+6,Incidence,meningiomas: meningiomas,2013,Male,Age_2044,Hispanic,0,14674104,0,0
+7,Incidence,meningiomas: meningiomas,2013,Female,Age_2044,Other,0,5853976,0,0
+8,Incidence,meningiomas: meningiomas,2013,Male,Age_2044,Other,0,5451523,0,0
+9,Incidence,meningiomas: meningiomas,2013,Female,Age_4554,Non-hispanic White,0,17662722,0,0
+10,Incidence,meningiomas: meningiomas,2013,Male,Age_4554,Non-hispanic White,0,17472903,0,0
+11,Incidence,meningiomas: meningiomas,2013,Female,Age_4554,Non-hispanic Black,0,3600738,0,0
+12,Incidence,meningiomas: meningiomas,2013,Male,Age_4554,Non-hispanic Black,0,3184952,0,0
+13,Incidence,meningiomas: meningiomas,2013,Female,Age_4554,Hispanic,0,4045659,0,0
+14,Incidence,meningiomas: meningiomas,2013,Male,Age_4554,Hispanic,0,4115864,0,0
+15,Incidence,meningiomas: meningiomas,2013,Female,Age_4554,Other,0,2055706,0,0
+16,Incidence,meningiomas: meningiomas,2013,Male,Age_4554,Other,0,1818452,0,0
+17,Incidence,meningiomas: meningiomas,2013,Female,Age_5564,Non-hispanic White,18,17548091,0.1027144,0.0370585
+18,Incidence,meningiomas: meningiomas,2013,Male,Age_5564,Non-hispanic White,0,16759644,0,0
+19,Incidence,meningiomas: meningiomas,2013,Female,Age_5564,Non-hispanic Black,0,2982009,0,0
+20,Incidence,meningiomas: meningiomas,2013,Male,Age_5564,Non-hispanic Black,0,2493419,0,0
+21,Incidence,meningiomas: meningiomas,2013,Female,Age_5564,Hispanic,0,2647517,0,0
+22,Incidence,meningiomas: meningiomas,2013,Male,Age_5564,Hispanic,0,2453141,0,0
+23,Incidence,meningiomas: meningiomas,2013,Female,Age_5564,Other,0,1699593,0,0
+24,Incidence,meningiomas: meningiomas,2013,Male,Age_5564,Other,0,1421186,0,0
+25,Incidence,meningiomas: meningiomas,2013,Female,Age_over65,Non-hispanic White,53,23310298,0.2274549,0.0752692
+26,Incidence,meningiomas: meningiomas,2013,Male,Age_over65,Non-hispanic White,0,18558474,0,0
+27,Incidence,meningiomas: meningiomas,2013,Female,Age_over65,Non-hispanic Black,0,2891576,0,0
+28,Incidence,meningiomas: meningiomas,2013,Male,Age_over65,Non-hispanic Black,0,1919228,0,0
+29,Incidence,meningiomas: meningiomas,2013,Female,Age_over65,Hispanic,0,2510902,0,0
+30,Incidence,meningiomas: meningiomas,2013,Male,Age_over65,Hispanic,0,1887534,0,0
+31,Incidence,meningiomas: meningiomas,2013,Female,Age_over65,Other,0,1690385,0,0
+32,Incidence,meningiomas: meningiomas,2013,Male,Age_over65,Other,0,1298968,0,0
+1,Incidence,Oral Cavity and Pharynx,2013,Female,Age_2044,Non-hispanic White,567,30550277,1.855942,0.174563
+2,Incidence,Oral Cavity and Pharynx,2013,Male,Age_2044,Non-hispanic White,1052,31183864,3.373556,0.2328299
+3,Incidence,Oral Cavity and Pharynx,2013,Female,Age_2044,Non-hispanic Black,92,7484062,1.229288,0.2971802
+4,Incidence,Oral Cavity and Pharynx,2013,Male,Age_2044,Non-hispanic Black,138,7008437,1.969057,0.3977933
+5,Incidence,Oral Cavity and Pharynx,2013,Female,Age_2044,Hispanic,84,10080086,0.8333183,0.2188365
+6,Incidence,Oral Cavity and Pharynx,2013,Male,Age_2044,Hispanic,133,10901784,1.219979,0.2608427
+7,Incidence,Oral Cavity and Pharynx,2013,Female,Age_2044,Other,66,4197423,1.572407,0.4524619
+8,Incidence,Oral Cavity and Pharynx,2013,Male,Age_2044,Other,108,3915593,2.758203,0.6413034
+9,Incidence,Oral Cavity and Pharynx,2013,Female,Age_4554,Non-hispanic White,1380,14730259,9.368498,0.3533949
+10,Incidence,Oral Cavity and Pharynx,2013,Male,Age_4554,Non-hispanic White,4218,14537841,29.01391,0.6268194
+11,Incidence,Oral Cavity and Pharynx,2013,Female,Age_4554,Non-hispanic Black,232,2885488,8.040236,0.7450517
+12,Incidence,Oral Cavity and Pharynx,2013,Male,Age_4554,Non-hispanic Black,531,2549908,20.82425,1.276794
+13,Incidence,Oral Cavity and Pharynx,2013,Female,Age_4554,Hispanic,111,3000571,3.699302,0.526665
+14,Incidence,Oral Cavity and Pharynx,2013,Male,Age_4554,Hispanic,300,3044817,9.852812,0.853371
+15,Incidence,Oral Cavity and Pharynx,2013,Female,Age_4554,Other,93,1439250,6.461724,1.011646
+16,Incidence,Oral Cavity and Pharynx,2013,Male,Age_4554,Other,216,1277639,16.90615,2.215253
+17,Incidence,Oral Cavity and Pharynx,2013,Female,Age_5564,Non-hispanic White,2328,14661527,15.8783,0.466646
+18,Incidence,Oral Cavity and Pharynx,2013,Male,Age_5564,Non-hispanic White,7978,13984098,57.0505,0.9051237
+19,Incidence,Oral Cavity and Pharynx,2013,Female,Age_5564,Non-hispanic Black,321,2394848,13.40379,1.063552
+20,Incidence,Oral Cavity and Pharynx,2013,Male,Age_5564,Non-hispanic Black,894,2000803,44.6821,2.129421
+21,Incidence,Oral Cavity and Pharynx,2013,Female,Age_5564,Hispanic,157,1971488,7.963547,0.9570101
+22,Incidence,Oral Cavity and Pharynx,2013,Male,Age_5564,Hispanic,463,1826230,25.35277,1.754317
+23,Incidence,Oral Cavity and Pharynx,2013,Female,Age_5564,Other,111,1178370,9.419766,1.363553
+24,Incidence,Oral Cavity and Pharynx,2013,Male,Age_5564,Other,307,987955,31.07427,3.877597
+25,Incidence,Oral Cavity and Pharynx,2013,Female,Age_over65,Non-hispanic White,4962,19540158,25.39386,0.8203679
+26,Incidence,Oral Cavity and Pharynx,2013,Male,Age_over65,Non-hispanic White,10425,15565987,66.97296,1.455084
+27,Incidence,Oral Cavity and Pharynx,2013,Female,Age_over65,Non-hispanic Black,365,2329909,15.66584,1.861387
+28,Incidence,Oral Cavity and Pharynx,2013,Male,Age_over65,Non-hispanic Black,750,1542829,48.61198,3.781147
+29,Incidence,Oral Cavity and Pharynx,2013,Female,Age_over65,Hispanic,293,1892809,15.47961,2.123385
+30,Incidence,Oral Cavity and Pharynx,2013,Male,Age_over65,Hispanic,553,1423816,38.83928,3.934606
+31,Incidence,Oral Cavity and Pharynx,2013,Female,Age_over65,Other,171,1154945,14.80591,2.784052
+32,Incidence,Oral Cavity and Pharynx,2013,Male,Age_over65,Other,313,891473,35.11041,5.312473
+1,Incidence,Larynx,2013,Female,Age_2044,Non-hispanic White,31,30550277,0.1014807,0.0399723
+2,Incidence,Larynx,2013,Female,Age_2044,Non-hispanic Black,0,7484062,0,0
+3,Incidence,Larynx,2013,Female,Age_2044,Hispanic,0,10080086,0,0
+4,Incidence,Larynx,2013,Female,Age_2044,Other,0,4197423,0,0
+5,Incidence,Larynx,2013,Male,Age_2044,Non-hispanic White,114,31183864,0.3655813,0.07667
+6,Incidence,Larynx,2013,Male,Age_2044,Non-hispanic Black,21,7008437,0.2996473,0.1548403
+7,Incidence,Larynx,2013,Male,Age_2044,Hispanic,0,10901784,0,0
+8,Incidence,Larynx,2013,Male,Age_2044,Other,0,3915593,0,0
+9,Incidence,Larynx,2013,Female,Age_4554,Non-hispanic White,352,14730259,2.389659,0.1781007
+10,Incidence,Larynx,2013,Female,Age_4554,Non-hispanic Black,59,2885488,2.044726,0.3757848
+11,Incidence,Larynx,2013,Female,Age_4554,Hispanic,16,3000571,0.5332209,0.2055833
+12,Incidence,Larynx,2013,Female,Age_4554,Other,0,1439250,0,0
+13,Incidence,Larynx,2013,Male,Age_4554,Non-hispanic White,1056,14537841,7.263831,0.3129053
+14,Incidence,Larynx,2013,Male,Age_4554,Non-hispanic Black,190,2549908,7.451284,0.76302
+15,Incidence,Larynx,2013,Male,Age_4554,Hispanic,101,3044817,3.317124,0.5022628
+16,Incidence,Larynx,2013,Male,Age_4554,Other,18,1277639,1.408857,0.5145607
+17,Incidence,Larynx,2013,Female,Age_5564,Non-hispanic White,573,14661527,3.908194,0.2307788
+18,Incidence,Larynx,2013,Female,Age_5564,Non-hispanic Black,132,2394848,5.511842,0.6807149
+19,Incidence,Larynx,2013,Female,Age_5564,Hispanic,16,1971488,0.8115762,0.2821269
+20,Incidence,Larynx,2013,Female,Age_5564,Other,0,1178370,0,0
+21,Incidence,Larynx,2013,Male,Age_5564,Non-hispanic White,2320,13984098,16.59027,0.4894837
+22,Incidence,Larynx,2013,Male,Age_5564,Non-hispanic Black,492,2000803,24.59015,1.589952
+23,Incidence,Larynx,2013,Male,Age_5564,Hispanic,168,1826230,9.199302,1.083833
+24,Incidence,Larynx,2013,Male,Age_5564,Other,25,987955,2.530488,0.734459
+25,Incidence,Larynx,2013,Female,Age_over65,Non-hispanic White,977,19540158,4.999934,0.3503821
+26,Incidence,Larynx,2013,Female,Age_over65,Non-hispanic Black,110,2329909,4.721219,0.9014441
+27,Incidence,Larynx,2013,Female,Age_over65,Hispanic,17,1892809,0.8981478,0.3922204
+28,Incidence,Larynx,2013,Female,Age_over65,Other,0,1154945,0,0
+29,Incidence,Larynx,2013,Male,Age_over65,Non-hispanic White,3975,15565987,25.53646,0.906991
+30,Incidence,Larynx,2013,Male,Age_over65,Non-hispanic Black,547,1542829,35.45434,3.374537
+31,Incidence,Larynx,2013,Male,Age_over65,Hispanic,343,1423816,24.0902,3.087893
+32,Incidence,Larynx,2013,Male,Age_over65,Other,58,891473,6.506106,1.80955
+1,Incidence,Prostate,2013,Female,Age_2044,Non-hispanic White,0,0,0,0
+2,Incidence,Prostate,2013,Female,Age_2044,Non-hispanic Black,0,0,0,0
+3,Incidence,Prostate,2013,Female,Age_2044,Hispanic,0,0,0,0
+4,Incidence,Prostate,2013,Female,Age_2044,Other,0,0,0,0
+5,Incidence,Prostate,2013,Male,Age_2044,Non-hispanic White,83,24590616,0.335737828,0.181976616
+6,Incidence,Prostate,2013,Male,Age_2044,Non-hispanic Black,43,5220310,0.818342206,0.641165137
+7,Incidence,Prostate,2013,Male,Age_2044,Hispanic,13,8486895,0.150820765,0.234399423
+8,Incidence,Prostate,2013,Male,Age_2044,Other,0,3112684,0,0
+9,Incidence,Prostate,2013,Female,Age_4554,Non-hispanic White,0,0,0,0
+10,Incidence,Prostate,2013,Female,Age_4554,Non-hispanic Black,0,0,0,0
+11,Incidence,Prostate,2013,Female,Age_4554,Hispanic,0,0,0,0
+12,Incidence,Prostate,2013,Female,Age_4554,Other,0,0,0,0
+13,Incidence,Prostate,2013,Male,Age_4554,Non-hispanic White,1562,14537841,10.7416225,0.945290446
+14,Incidence,Prostate,2013,Male,Age_4554,Non-hispanic Black,579,2549908,22.714545,3.330152512
+15,Incidence,Prostate,2013,Male,Age_4554,Hispanic,212,3044817,6.973161277,2.606676579
+16,Incidence,Prostate,2013,Male,Age_4554,Other,51,1277639,3.982345561,3.370711327
+17,Incidence,Prostate,2013,Female,Age_5564,Non-hispanic White,0,0,0,0
+18,Incidence,Prostate,2013,Female,Age_5564,Non-hispanic Black,0,0,0,0
+19,Incidence,Prostate,2013,Female,Age_5564,Hispanic,0,0,0,0
+20,Incidence,Prostate,2013,Female,Age_5564,Other,0,0,0,0
+21,Incidence,Prostate,2013,Male,Age_5564,Non-hispanic White,6256,13984098,44.73652859,2.016696215
+22,Incidence,Prostate,2013,Male,Age_5564,Non-hispanic Black,1670,2000803,83.44649623,7.331933975
+23,Incidence,Prostate,2013,Male,Age_5564,Hispanic,620,1826230,33.94972156,7.176245689
+24,Incidence,Prostate,2013,Male,Age_5564,Other,211,987955,21.36129682,7.966174126
+25,Incidence,Prostate,2013,Female,Age_over65,Non-hispanic White,0,0,0,0
+26,Incidence,Prostate,2013,Female,Age_over65,Non-hispanic Black,0,0,0,0
+27,Incidence,Prostate,2013,Female,Age_over65,Hispanic,0,0,0,0
+28,Incidence,Prostate,2013,Female,Age_over65,Other,0,0,0,0
+29,Incidence,Prostate,2013,Male,Age_over65,Non-hispanic White,11812,15565987,75.88545461,3.747937679
+30,Incidence,Prostate,2013,Male,Age_over65,Non-hispanic Black,1931,1542829,125.1622831,15.0124073
+31,Incidence,Prostate,2013,Male,Age_over65,Hispanic,1120,1423816,78.66184956,16.20096207
+32,Incidence,Prostate,2013,Male,Age_over65,Other,449,891473,50.41543603,19.17938614
+1,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_2044,Non-hispanic White,45934,30550277,150.3554,1.570703
+2,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_2044,Non-hispanic White,26136,31183864,83.81258,1.16307
+3,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_2044,Non-hispanic Black,8461,7484062,113.0536,2.820399
+4,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_2044,Non-hispanic Black,4335,7008437,61.85403,2.179037
+5,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_2044,Hispanic,10129,10080086,100.4853,3.223777
+6,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_2044,Hispanic,5516,10901784,50.59723,1.926054
+7,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_2044,Other,4592,4197423,109.4005,5.322167
+8,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_2044,Other,2029,3915593,51.81846,3.981421
+9,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_4554,Non-hispanic White,79051,14730259,536.6572,2.68568
+10,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_4554,Non-hispanic White,59479,14537841,409.1323,2.351029
+11,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_4554,Non-hispanic Black,14212,2885488,492.5337,5.834854
+12,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_4554,Non-hispanic Black,11897,2549908,466.5659,6.039968
+13,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_4554,Hispanic,11368,3000571,378.8613,7.991186
+14,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_4554,Hispanic,7323,3044817,240.5071,6.093561
+15,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_4554,Other,5739,1439250,398.7494,10.72018
+16,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_4554,Other,3005,1277639,235.1994,9.323429
+17,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_5564,Non-hispanic White,130496,14661527,890.0574,3.496775
+18,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_5564,Non-hispanic White,145383,13984098,1039.631,3.881191
+19,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_5564,Non-hispanic Black,21322,2394848,890.3279,8.685925
+20,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_5564,Non-hispanic Black,26934,2000803,1346.16,11.75503
+21,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_5564,Hispanic,12988,1971488,658.7917,13.3133
+22,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_5564,Hispanic,12931,1826230,708.0707,14.37417
+23,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_5564,Other,7099,1178370,602.4423,15.0544
+24,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_5564,Other,5994,987955,606.7078,16.95202
+25,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_over65,Non-hispanic White,321201,19540158,1643.799,6.587643
+26,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_over65,Non-hispanic White,356437,15565987,2289.845,8.86622
+27,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_over65,Non-hispanic Black,35223,2329909,1511.776,18.29511
+28,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_over65,Non-hispanic Black,36295,1542829,2352.497,27.81429
+29,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_over65,Hispanic,23335,1892809,1232.824,29.56068
+30,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_over65,Hispanic,24740,1423816,1737.584,38.21698
+31,Incidence,All Invasive Cancer Sites Combined,2013,Female,Age_over65,Other,12229,1154945,1058.838,33.25156
+32,Incidence,All Invasive Cancer Sites Combined,2013,Male,Age_over65,Other,12755,891473,1430.778,44.10983

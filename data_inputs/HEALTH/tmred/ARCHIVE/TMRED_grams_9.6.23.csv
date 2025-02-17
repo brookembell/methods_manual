@@ -1,0 +1,31 @@
+Risk_factor,TMRED_LB,TMRED_UB,TMRED_mid,TMRED_old,SD_old,Unit,Source
+added_sugar,,,,,,,
+dairy,360,500,430,435,43.5,grams/day,GBD 2019
+fruit_exc_juice,310,340,325,250,25,grams/day,GBD 2019
+fruit_juice,,,,,,,
+gr_refined,,,,,,,
+gr_whole,140,160,150,125,12.5,grams/day,GBD 2019
+oil,,,,,,,
+pf_egg,,,,,,,
+pf_leg,,,,,,,
+pf_ns,10,19,14.5,20.5,2.05,grams/day,GBD 2019
+pf_pm,0,0,0,2,0.2,grams/day,GBD 2019
+pf_poultry,,,,,,,
+pf_redm,0,0,0,22.5,2.25,grams/day,GBD 2019
+pf_seafood,NA,NA,32,32,3.2,grams/day,DGA daily recommendation (US pattern)
+pf_soy,,,,,,,
+sat_fat,,,,,,,
+veg_dg,,,,,,,
+veg_leg,,,,,,,
+veg_oth,,,,,,,
+veg_ro,,,,,,,
+veg_sta,,,,,,,
+veg_exc_sta,280,320,300,360,36,grams/day,GBD 2019
+leg_tot,90,100,95,60,6,grams/day,GBD 2019
+ssb,0,0,0,2.5,0.25,grams/day,GBD 2019
+sea_omega3_fa,430,470,450,250,25,mg/day,GBD 2019
+sodium,NA,NA,2000,2000,200,mg/day,"Micha et al. 2017, eTable 3"
+fiber,21,22,21.5,23.5,2.35,grams/day,GBD 2019
+pufa_rep_carb,7,9,8,11,1.1,%E/day,GBD 2019
+pufa_rep_sfa,7,9,8,11,1.1,%E/day,GBD 2019
+pufa_rep_carbsfa,7,9,8,11,1.1,%E/day,GBD 2019

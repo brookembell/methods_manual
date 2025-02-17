@@ -1,0 +1,110 @@
+"Notes"	"Ten-Year Age Groups"	"Ten-Year Age Groups Code"	"Gender"	"Gender Code"	"Hispanic Origin"	"Hispanic Origin Code"	Deaths	Population	Crude Rate	Crude Rate Lower 95% Confidence Interval	Crude Rate Upper 95% Confidence Interval	Crude Rate Standard Error
+	"25-34 years"	"25-34"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	35	4488709	0.78	0.54	1.08	0.13
+"Total"	"25-34 years"	"25-34"	"Female"	"F"			35	4488709	0.78	0.54	1.08	0.13
+	"25-34 years"	"25-34"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	59	4940457	1.19	0.91	1.54	0.16
+"Total"	"25-34 years"	"25-34"	"Male"	"M"			59	4940457	1.19	0.91	1.54	0.16
+"Total"	"25-34 years"	"25-34"					94	9429166	1.00	0.81	1.22	0.10
+	"35-44 years"	"35-44"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	76	4169801	1.82	1.44	2.28	0.21
+"Total"	"35-44 years"	"35-44"	"Female"	"F"			76	4169801	1.82	1.44	2.28	0.21
+	"35-44 years"	"35-44"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	144	4417311	3.26	2.73	3.79	0.27
+"Total"	"35-44 years"	"35-44"	"Male"	"M"			144	4417311	3.26	2.73	3.79	0.27
+"Total"	"35-44 years"	"35-44"					220	8587112	2.56	2.22	2.90	0.17
+	"45-54 years"	"45-54"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	176	3484917	5.05	4.30	5.80	0.38
+"Total"	"45-54 years"	"45-54"	"Female"	"F"			176	3484917	5.05	4.30	5.80	0.38
+	"45-54 years"	"45-54"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	329	3540648	9.29	8.29	10.30	0.51
+"Total"	"45-54 years"	"45-54"	"Male"	"M"			329	3540648	9.29	8.29	10.30	0.51
+"Total"	"45-54 years"	"45-54"					505	7025565	7.19	6.56	7.81	0.32
+	"55-64 years"	"55-64"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	216	2510751	8.60	7.46	9.75	0.59
+"Total"	"55-64 years"	"55-64"	"Female"	"F"			216	2510751	8.60	7.46	9.75	0.59
+	"55-64 years"	"55-64"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	367	2379682	15.42	13.84	17.00	0.81
+"Total"	"55-64 years"	"55-64"	"Male"	"M"			367	2379682	15.42	13.84	17.00	0.81
+"Total"	"55-64 years"	"55-64"					583	4890433	11.92	10.95	12.89	0.49
+	"65-74 years"	"65-74"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	278	1458288	19.06	16.82	21.30	1.14
+"Total"	"65-74 years"	"65-74"	"Female"	"F"			278	1458288	19.06	16.82	21.30	1.14
+	"65-74 years"	"65-74"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	266	1224396	21.72	19.11	24.34	1.33
+"Total"	"65-74 years"	"65-74"	"Male"	"M"			266	1224396	21.72	19.11	24.34	1.33
+"Total"	"65-74 years"	"65-74"					544	2682684	20.28	18.57	21.98	0.87
+	"75-84 years"	"75-84"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	378	721560	52.39	47.11	57.67	2.69
+"Total"	"75-84 years"	"75-84"	"Female"	"F"			378	721560	52.39	47.11	57.67	2.69
+	"75-84 years"	"75-84"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	281	514814	54.58	48.20	60.96	3.26
+"Total"	"75-84 years"	"75-84"	"Male"	"M"			281	514814	54.58	48.20	60.96	3.26
+"Total"	"75-84 years"	"75-84"					659	1236374	53.30	49.23	57.37	2.08
+	"85+ years"	"85+"	"Female"	"F"	"Hispanic or Latino"	"2135-2"	330	317260	104.02	92.79	115.24	5.73
+"Total"	"85+ years"	"85+"	"Female"	"F"			330	317260	104.02	92.79	115.24	5.73
+	"85+ years"	"85+"	"Male"	"M"	"Hispanic or Latino"	"2135-2"	182	181768	100.13	85.58	114.67	7.42
+"Total"	"85+ years"	"85+"	"Male"	"M"			182	181768	100.13	85.58	114.67	7.42
+"Total"	"85+ years"	"85+"					512	499028	102.60	93.71	111.49	4.53
+"Total"							3117	34350362	9.07	8.76	9.39	0.16
+"---"
+"Dataset: Underlying Cause of Death, 1999-2020"
+"Query Parameters:"
+"Title: HSTK_2018_HIS"
+"Hispanic Origin: Hispanic or Latino"
+"ICD-10 Codes: I60.0 (Subarachnoid haemorrhage from carotid siphon and bifurcation); I60.1 (Subarachnoid haemorrhage from middle"
+"cerebral artery); I60.2 (Subarachnoid haemorrhage from anterior communicating artery); I60.3 (Subarachnoid haemorrhage from"
+"posterior communicating artery); I60.4 (Subarachnoid haemorrhage from basilar artery); I60.5 (Subarachnoid haemorrhage from"
+"vertebral artery); I60.6 (Subarachnoid haemorrhage from other intracranial arteries); I60.7 (Subarachnoid haemorrhage from"
+"intracranial artery, unspecified); I60.8 (Other subarachnoid haemorrhage); I60.9 (Subarachnoid haemorrhage, unspecified); I61.0"
+"(Intracerebral haemorrhage in hemisphere, subcortical); I61.1 (Intracerebral haemorrhage in hemisphere, cortical); I61.2"
+"(Intracerebral haemorrhage in hemisphere, unspecified); I61.3 (Intracerebral haemorrhage in brain stem); I61.4 (Intracerebral"
+"haemorrhage in cerebellum); I61.5 (Intracerebral haemorrhage, intraventricular); I61.6 (Intracerebral haemorrhage, multiple"
+"localized); I61.8 (Other intracerebral haemorrhage); I61.9 (Intracerebral haemorrhage, unspecified); I62.0 (Subdural haemorrhage"
+"(acute)(nontraumatic)); I62.1 (Nontraumatic extradural haemorrhage); I62.9 (Intracranial haemorrhage (nontraumatic),"
+"unspecified); I67.4 (Hypertensive encephalopathy); I69.0 (Sequelae of subarachnoid haemorrhage); I69.1 (Sequelae of"
+"intracerebral haemorrhage); I69.2 (Sequelae of other nontraumatic intracranial haemorrhage)"
+"Ten-Year Age Groups: 25-34 years; 35-44 years; 45-54 years; 55-64 years; 65-74 years; 75-84 years; 85+ years"
+"Year/Month: 2018"
+"Group By: Ten-Year Age Groups; Gender; Hispanic Origin"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Apr 10, 2023 8:56:16 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files,"
+"1999-2020, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/ucd-icd10.html on Apr 10, 2023 8:56:16 PM"
+"---"
+Caveats:
+"1. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"2. Deaths of persons with Hispanic origin ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among"
+"Hispanic Origin groups, so are not included in the Hispanic Origin specific counts and rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"3. Information included on the death certificate about the race and Hispanic ethnicity of the decedent is reported by the"
+"funeral director as provided by an informant, often the surviving next of kin, or, in the absence of an informant, on the basis"
+"of observation. Race and ethnicity information from the census is by self-report. To the extent that race and Hispanic origin"
+"are inconsistent between these two data sources, death rates will be biased. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Racial Differences."
+"4. The method used to calculate 95% confidence intervals is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Confidence-Intervals."
+"5. The method used to calculate standard errors is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Standard-Errors."
+"6. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"7. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#ICD-10 Changes."

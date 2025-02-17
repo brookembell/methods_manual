@@ -1,0 +1,7 @@
+riskfactor,outcome,midage,logRR.perchange,se.perchange,logRR.perchange.exp,se.perchange.exp,event.age,origlogRR
+gr_whole,HSTK,30,0,0,1,0,60,0
+gr_whole,HSTK,40,0,0,1,0,60,0
+gr_whole,HSTK,50,0,0,1,0,60,0
+gr_whole,HSTK,60,0,0,1,0,60,0
+gr_whole,HSTK,70,0,0,1,0,60,0
+gr_whole,HSTK,87.5,0,0,1,0,60,0

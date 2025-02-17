@@ -1,0 +1,145 @@
+"Race and origin recode (NHW, NHB, NHO, Hispanic)"	"Sex"	"Age recode 10yr"	"stomach"	"Crude Rate"	"Standard Error"	"Lower Confidence Interval"	"Upper Confidence Interval"	"Count"	"Population"
+"Non-Hispanic White"	"Male and female"	"25-34 years"	"C16.0-Cardia, NOS"	0.17	0.05	0.08	0.32	10	5800816
+"Non-Hispanic White"	"Male and female"	"25-34 years"	"C16.1-6noncardia"	0.17	0.05	0.08	0.32	10	5800816
+"Non-Hispanic White"	"Male and female"	"35-44 years"	"C16.0-Cardia, NOS"	0.64	0.11	0.44	0.89	34	5344399
+"Non-Hispanic White"	"Male and female"	"35-44 years"	"C16.1-6noncardia"	0.90	0.13	0.66	1.19	48	5344399
+"Non-Hispanic White"	"Male and female"	"45-54 years"	"C16.0-Cardia, NOS"	1.95	0.18	1.60	2.34	114	5859292
+"Non-Hispanic White"	"Male and female"	"45-54 years"	"C16.1-6noncardia"	1.95	0.18	1.60	2.34	114	5859292
+"Non-Hispanic White"	"Male and female"	"55-64 years"	"C16.0-Cardia, NOS"	5.25	0.28	4.71	5.83	348	6633946
+"Non-Hispanic White"	"Male and female"	"55-64 years"	"C16.1-6noncardia"	3.48	0.23	3.05	3.96	231	6633946
+"Non-Hispanic White"	"Male and female"	"65-74 years"	"C16.0-Cardia, NOS"	9.80	0.44	8.96	10.71	495	5048890
+"Non-Hispanic White"	"Male and female"	"65-74 years"	"C16.1-6noncardia"	7.72	0.39	6.98	8.53	390	5048890
+"Non-Hispanic White"	"Male and female"	"75+ years"	"C16.0-Cardia, NOS"	3.25	0.09	3.08	3.42	1446	44535467
+"Non-Hispanic White"	"Male and female"	"75+ years"	"C16.1-6noncardia"	2.94	0.08	2.78	3.10	1309	44535467
+"Non-Hispanic White"	"Male"	"25-34 years"	"C16.0-Cardia, NOS"	0.20	0.08	0.07	0.44	6	2973485
+"Non-Hispanic White"	"Male"	"25-34 years"	"C16.1-6noncardia"	0.10	0.06	0.02	0.29	3	2973485
+"Non-Hispanic White"	"Male"	"35-44 years"	"C16.0-Cardia, NOS"	1.03	0.20	0.69	1.49	28	2710870
+"Non-Hispanic White"	"Male"	"35-44 years"	"C16.1-6noncardia"	0.70	0.16	0.42	1.09	19	2710870
+"Non-Hispanic White"	"Male"	"45-54 years"	"C16.0-Cardia, NOS"	3.37	0.34	2.74	4.10	99	2936612
+"Non-Hispanic White"	"Male"	"45-54 years"	"C16.1-6noncardia"	2.11	0.27	1.62	2.71	62	2936612
+"Non-Hispanic White"	"Male"	"55-64 years"	"C16.0-Cardia, NOS"	8.86	0.52	7.87	9.94	289	3262450
+"Non-Hispanic White"	"Male"	"55-64 years"	"C16.1-6noncardia"	3.95	0.35	3.30	4.70	129	3262450
+"Non-Hispanic White"	"Male"	"65-74 years"	"C16.0-Cardia, NOS"	17.05	0.84	15.44	18.79	409	2398481
+"Non-Hispanic White"	"Male"	"65-74 years"	"C16.1-6noncardia"	8.67	0.60	7.53	9.93	208	2398481
+"Non-Hispanic White"	"Male"	"75+ years"	"C16.0-Cardia, NOS"	5.27	0.15	4.97	5.58	1163	22070429
+"Non-Hispanic White"	"Male"	"75+ years"	"C16.1-6noncardia"	3.15	0.12	2.92	3.39	695	22070429
+"Non-Hispanic White"	"Female"	"25-34 years"	"C16.0-Cardia, NOS"	0.14	0.07	0.04	0.36	4	2827331
+"Non-Hispanic White"	"Female"	"25-34 years"	"C16.1-6noncardia"	0.25	0.09	0.10	0.51	7	2827331
+"Non-Hispanic White"	"Female"	"35-44 years"	"C16.0-Cardia, NOS"	0.23	0.09	0.08	0.50	6	2633529
+"Non-Hispanic White"	"Female"	"35-44 years"	"C16.1-6noncardia"	1.10	0.20	0.74	1.58	29	2633529
+"Non-Hispanic White"	"Female"	"45-54 years"	"C16.0-Cardia, NOS"	0.51	0.13	0.29	0.85	15	2922680
+"Non-Hispanic White"	"Female"	"45-54 years"	"C16.1-6noncardia"	1.78	0.25	1.33	2.33	52	2922680
+"Non-Hispanic White"	"Female"	"55-64 years"	"C16.0-Cardia, NOS"	1.75	0.23	1.33	2.26	59	3371496
+"Non-Hispanic White"	"Female"	"55-64 years"	"C16.1-6noncardia"	3.03	0.30	2.47	3.67	102	3371496
+"Non-Hispanic White"	"Female"	"65-74 years"	"C16.0-Cardia, NOS"	3.24	0.35	2.60	4.01	86	2650409
+"Non-Hispanic White"	"Female"	"65-74 years"	"C16.1-6noncardia"	6.87	0.51	5.91	7.94	182	2650409
+"Non-Hispanic White"	"Female"	"75+ years"	"C16.0-Cardia, NOS"	1.26	0.07	1.12	1.42	283	22465038
+"Non-Hispanic White"	"Female"	"75+ years"	"C16.1-6noncardia"	2.73	0.11	2.52	2.96	614	22465038
+"Non-Hispanic Black"	"Male and female"	"25-34 years"	"C16.0-Cardia, NOS"	0.06	0.06	0.00	0.36	1	1556892
+"Non-Hispanic Black"	"Male and female"	"25-34 years"	"C16.1-6noncardia"	0.32	0.14	0.10	0.75	5	1556892
+"Non-Hispanic Black"	"Male and female"	"35-44 years"	"C16.0-Cardia, NOS"	0.63	0.22	0.27	1.23	8	1278752
+"Non-Hispanic Black"	"Male and female"	"35-44 years"	"C16.1-6noncardia"	2.19	0.41	1.45	3.16	28	1278752
+"Non-Hispanic Black"	"Male and female"	"45-54 years"	"C16.0-Cardia, NOS"	0.80	0.25	0.38	1.47	10	1252683
+"Non-Hispanic Black"	"Male and female"	"45-54 years"	"C16.1-6noncardia"	3.51	0.53	2.55	4.72	44	1252683
+"Non-Hispanic Black"	"Male and female"	"55-64 years"	"C16.0-Cardia, NOS"	2.42	0.46	1.61	3.49	28	1158493
+"Non-Hispanic Black"	"Male and female"	"55-64 years"	"C16.1-6noncardia"	11.65	1.00	9.77	13.79	135	1158493
+"Non-Hispanic Black"	"Male and female"	"65-74 years"	"C16.0-Cardia, NOS"	6.58	0.98	4.80	8.80	45	683968
+"Non-Hispanic Black"	"Male and female"	"65-74 years"	"C16.1-6noncardia"	19.88	1.71	16.68	23.52	136	683968
+"Non-Hispanic Black"	"Male and female"	"75+ years"	"C16.0-Cardia, NOS"	1.28	0.11	1.07	1.52	127	9934931
+"Non-Hispanic Black"	"Male and female"	"75+ years"	"C16.1-6noncardia"	5.02	0.22	4.59	5.48	499	9934931
+"Non-Hispanic Black"	"Male"	"25-34 years"	"C16.0-Cardia, NOS"	0.13	0.13	0.00	0.71	1	780654
+"Non-Hispanic Black"	"Male"	"25-34 years"	"C16.1-6noncardia"	0.13	0.13	0.00	0.71	1	780654
+"Non-Hispanic Black"	"Male"	"35-44 years"	"C16.0-Cardia, NOS"	0.49	0.28	0.10	1.44	3	610690
+"Non-Hispanic Black"	"Male"	"35-44 years"	"C16.1-6noncardia"	1.64	0.52	0.79	3.01	10	610690
+"Non-Hispanic Black"	"Male"	"45-54 years"	"C16.0-Cardia, NOS"	1.35	0.48	0.58	2.66	8	592009
+"Non-Hispanic Black"	"Male"	"45-54 years"	"C16.1-6noncardia"	3.89	0.81	2.46	5.83	23	592009
+"Non-Hispanic Black"	"Male"	"55-64 years"	"C16.0-Cardia, NOS"	3.91	0.85	2.42	5.98	21	536427
+"Non-Hispanic Black"	"Male"	"55-64 years"	"C16.1-6noncardia"	14.17	1.63	11.16	17.73	76	536427
+"Non-Hispanic Black"	"Male"	"65-74 years"	"C16.0-Cardia, NOS"	11.54	1.98	7.99	16.13	34	294547
+"Non-Hispanic Black"	"Male"	"65-74 years"	"C16.1-6noncardia"	25.80	2.96	20.33	32.30	76	294547
+"Non-Hispanic Black"	"Male"	"75+ years"	"C16.0-Cardia, NOS"	1.88	0.20	1.51	2.31	90	4792305
+"Non-Hispanic Black"	"Male"	"75+ years"	"C16.1-6noncardia"	5.43	0.34	4.79	6.13	260	4792305
+"Non-Hispanic Black"	"Female"	"25-34 years"	"C16.0-Cardia, NOS"	0.00	 	0.00	0.48	0	776238
+"Non-Hispanic Black"	"Female"	"25-34 years"	"C16.1-6noncardia"	0.52	0.26	0.14	1.32	4	776238
+"Non-Hispanic Black"	"Female"	"35-44 years"	"C16.0-Cardia, NOS"	0.75	0.33	0.24	1.75	5	668062
+"Non-Hispanic Black"	"Female"	"35-44 years"	"C16.1-6noncardia"	2.69	0.64	1.60	4.26	18	668062
+"Non-Hispanic Black"	"Female"	"45-54 years"	"C16.0-Cardia, NOS"	0.30	0.21	0.04	1.09	2	660674
+"Non-Hispanic Black"	"Female"	"45-54 years"	"C16.1-6noncardia"	3.18	0.69	1.97	4.86	21	660674
+"Non-Hispanic Black"	"Female"	"55-64 years"	"C16.0-Cardia, NOS"	1.13	0.43	0.45	2.32	7	622066
+"Non-Hispanic Black"	"Female"	"55-64 years"	"C16.1-6noncardia"	9.48	1.23	7.22	12.23	59	622066
+"Non-Hispanic Black"	"Female"	"65-74 years"	"C16.0-Cardia, NOS"	2.82	0.85	1.41	5.05	11	389421
+"Non-Hispanic Black"	"Female"	"65-74 years"	"C16.1-6noncardia"	15.41	1.99	11.76	19.83	60	389421
+"Non-Hispanic Black"	"Female"	"75+ years"	"C16.0-Cardia, NOS"	0.72	0.12	0.51	0.99	37	5142626
+"Non-Hispanic Black"	"Female"	"75+ years"	"C16.1-6noncardia"	4.65	0.30	4.08	5.28	239	5142626
+"Hispanic (All Races)"	"Male and female"	"25-34 years"	"C16.0-Cardia, NOS"	0.20	0.08	0.08	0.42	7	3474967
+"Hispanic (All Races)"	"Male and female"	"25-34 years"	"C16.1-6noncardia"	0.81	0.15	0.54	1.16	28	3474967
+"Hispanic (All Races)"	"Male and female"	"35-44 years"	"C16.0-Cardia, NOS"	0.72	0.15	0.45	1.09	22	3063538
+"Hispanic (All Races)"	"Male and female"	"35-44 years"	"C16.1-6noncardia"	2.32	0.28	1.81	2.92	71	3063538
+"Hispanic (All Races)"	"Male and female"	"45-54 years"	"C16.0-Cardia, NOS"	1.72	0.26	1.25	2.30	44	2564390
+"Hispanic (All Races)"	"Male and female"	"45-54 years"	"C16.1-6noncardia"	4.80	0.43	3.99	5.72	123	2564390
+"Hispanic (All Races)"	"Male and female"	"55-64 years"	"C16.0-Cardia, NOS"	2.38	0.36	1.72	3.21	43	1804131
+"Hispanic (All Races)"	"Male and female"	"55-64 years"	"C16.1-6noncardia"	11.14	0.79	9.65	12.79	201	1804131
+"Hispanic (All Races)"	"Male and female"	"65-74 years"	"C16.0-Cardia, NOS"	4.81	0.71	3.52	6.42	46	956390
+"Hispanic (All Races)"	"Male and female"	"65-74 years"	"C16.1-6noncardia"	21.43	1.50	18.60	24.58	205	956390
+"Hispanic (All Races)"	"Male and female"	"75+ years"	"C16.0-Cardia, NOS"	0.98	0.07	0.85	1.12	212	21595355
+"Hispanic (All Races)"	"Male and female"	"75+ years"	"C16.1-6noncardia"	3.86	0.13	3.60	4.13	834	21595355
+"Hispanic (All Races)"	"Male"	"25-34 years"	"C16.0-Cardia, NOS"	0.33	0.13	0.12	0.72	6	1816781
+"Hispanic (All Races)"	"Male"	"25-34 years"	"C16.1-6noncardia"	0.77	0.21	0.42	1.29	14	1816781
+"Hispanic (All Races)"	"Male"	"35-44 years"	"C16.0-Cardia, NOS"	1.02	0.25	0.58	1.65	16	1571106
+"Hispanic (All Races)"	"Male"	"35-44 years"	"C16.1-6noncardia"	1.85	0.34	1.24	2.65	29	1571106
+"Hispanic (All Races)"	"Male"	"45-54 years"	"C16.0-Cardia, NOS"	2.01	0.39	1.31	2.94	26	1295262
+"Hispanic (All Races)"	"Male"	"45-54 years"	"C16.1-6noncardia"	4.25	0.57	3.20	5.53	55	1295262
+"Hispanic (All Races)"	"Male"	"55-64 years"	"C16.0-Cardia, NOS"	3.52	0.63	2.39	5.00	31	880512
+"Hispanic (All Races)"	"Male"	"55-64 years"	"C16.1-6noncardia"	12.95	1.21	10.68	15.55	114	880512
+"Hispanic (All Races)"	"Male"	"65-74 years"	"C16.0-Cardia, NOS"	8.20	1.37	5.75	11.36	36	438777
+"Hispanic (All Races)"	"Male"	"65-74 years"	"C16.1-6noncardia"	25.30	2.40	20.81	30.46	111	438777
+"Hispanic (All Races)"	"Male"	"75+ years"	"C16.0-Cardia, NOS"	1.35	0.11	1.14	1.59	147	10896533
+"Hispanic (All Races)"	"Male"	"75+ years"	"C16.1-6noncardia"	3.99	0.19	3.63	4.39	435	10896533
+"Hispanic (All Races)"	"Female"	"25-34 years"	"C16.0-Cardia, NOS"	0.06	0.06	0.00	0.34	1	1658186
+"Hispanic (All Races)"	"Female"	"25-34 years"	"C16.1-6noncardia"	0.84	0.23	0.46	1.42	14	1658186
+"Hispanic (All Races)"	"Female"	"35-44 years"	"C16.0-Cardia, NOS"	0.40	0.16	0.15	0.88	6	1492432
+"Hispanic (All Races)"	"Female"	"35-44 years"	"C16.1-6noncardia"	2.81	0.43	2.03	3.80	42	1492432
+"Hispanic (All Races)"	"Female"	"45-54 years"	"C16.0-Cardia, NOS"	1.42	0.33	0.84	2.24	18	1269128
+"Hispanic (All Races)"	"Female"	"45-54 years"	"C16.1-6noncardia"	5.36	0.65	4.16	6.79	68	1269128
+"Hispanic (All Races)"	"Female"	"55-64 years"	"C16.0-Cardia, NOS"	1.30	0.38	0.67	2.27	12	923619
+"Hispanic (All Races)"	"Female"	"55-64 years"	"C16.1-6noncardia"	9.42	1.01	7.54	11.62	87	923619
+"Hispanic (All Races)"	"Female"	"65-74 years"	"C16.0-Cardia, NOS"	1.93	0.61	0.93	3.55	10	517613
+"Hispanic (All Races)"	"Female"	"65-74 years"	"C16.1-6noncardia"	18.16	1.87	14.68	22.22	94	517613
+"Hispanic (All Races)"	"Female"	"75+ years"	"C16.0-Cardia, NOS"	0.61	0.08	0.47	0.77	65	10698822
+"Hispanic (All Races)"	"Female"	"75+ years"	"C16.1-6noncardia"	3.73	0.19	3.37	4.11	399	10698822
+"OTHER"	"Male and female"	"25-34 years"	"C16.0-Cardia, NOS"	0.17	0.10	0.04	0.51	3	1734372
+"OTHER"	"Male and female"	"25-34 years"	"C16.1-6noncardia"	0.23	0.12	0.06	0.59	4	1734372
+"OTHER"	"Male and female"	"35-44 years"	"C16.0-Cardia, NOS"	0.63	0.20	0.30	1.15	10	1598909
+"OTHER"	"Male and female"	"35-44 years"	"C16.1-6noncardia"	1.94	0.35	1.32	2.75	31	1598909
+"OTHER"	"Male and female"	"45-54 years"	"C16.0-Cardia, NOS"	1.54	0.33	0.97	2.33	22	1427341
+"OTHER"	"Male and female"	"45-54 years"	"C16.1-6noncardia"	3.71	0.51	2.78	4.86	53	1427341
+"OTHER"	"Male and female"	"55-64 years"	"C16.0-Cardia, NOS"	2.35	0.44	1.58	3.38	29	1231743
+"OTHER"	"Male and female"	"55-64 years"	"C16.1-6noncardia"	10.72	0.93	8.97	12.71	132	1231743
+"OTHER"	"Male and female"	"65-74 years"	"C16.0-Cardia, NOS"	6.79	0.89	5.16	8.78	58	853891
+"OTHER"	"Male and female"	"65-74 years"	"C16.1-6noncardia"	22.60	1.63	19.53	26.03	193	853891
+"OTHER"	"Male and female"	"75+ years"	"C16.0-Cardia, NOS"	1.66	0.13	1.43	1.93	177	10631096
+"OTHER"	"Male and female"	"75+ years"	"C16.1-6noncardia"	6.04	0.24	5.58	6.52	642	10631096
+"OTHER"	"Male"	"25-34 years"	"C16.0-Cardia, NOS"	0.35	0.20	0.07	1.02	3	859629
+"OTHER"	"Male"	"25-34 years"	"C16.1-6noncardia"	0.23	0.16	0.03	0.84	2	859629
+"OTHER"	"Male"	"35-44 years"	"C16.0-Cardia, NOS"	0.93	0.35	0.37	1.91	7	754329
+"OTHER"	"Male"	"35-44 years"	"C16.1-6noncardia"	1.59	0.46	0.82	2.78	12	754329
+"OTHER"	"Male"	"45-54 years"	"C16.0-Cardia, NOS"	2.10	0.56	1.15	3.52	14	667025
+"OTHER"	"Male"	"45-54 years"	"C16.1-6noncardia"	4.35	0.81	2.91	6.24	29	667025
+"OTHER"	"Male"	"55-64 years"	"C16.0-Cardia, NOS"	3.20	0.75	1.89	5.05	18	562975
+"OTHER"	"Male"	"55-64 years"	"C16.1-6noncardia"	13.32	1.54	10.48	16.70	75	562975
+"OTHER"	"Male"	"65-74 years"	"C16.0-Cardia, NOS"	11.35	1.73	8.21	15.28	43	378941
+"OTHER"	"Male"	"65-74 years"	"C16.1-6noncardia"	27.71	2.70	22.66	33.54	105	378941
+"OTHER"	"Male"	"75+ years"	"C16.0-Cardia, NOS"	2.35	0.21	1.95	2.81	120	5099353
+"OTHER"	"Male"	"75+ years"	"C16.1-6noncardia"	6.98	0.37	6.27	7.75	356	5099353
+"OTHER"	"Female"	"25-34 years"	"C16.0-Cardia, NOS"	0.00	 	0.00	0.42	0	874743
+"OTHER"	"Female"	"25-34 years"	"C16.1-6noncardia"	0.23	0.16	0.03	0.83	2	874743
+"OTHER"	"Female"	"35-44 years"	"C16.0-Cardia, NOS"	0.36	0.21	0.07	1.04	3	844580
+"OTHER"	"Female"	"35-44 years"	"C16.1-6noncardia"	2.25	0.52	1.35	3.51	19	844580
+"OTHER"	"Female"	"45-54 years"	"C16.0-Cardia, NOS"	1.05	0.37	0.45	2.07	8	760316
+"OTHER"	"Female"	"45-54 years"	"C16.1-6noncardia"	3.16	0.64	2.02	4.70	24	760316
+"OTHER"	"Female"	"55-64 years"	"C16.0-Cardia, NOS"	1.64	0.50	0.82	2.94	11	668768
+"OTHER"	"Female"	"55-64 years"	"C16.1-6noncardia"	8.52	1.13	6.46	11.04	57	668768
+"OTHER"	"Female"	"65-74 years"	"C16.0-Cardia, NOS"	3.16	0.82	1.77	5.21	15	474950
+"OTHER"	"Female"	"65-74 years"	"C16.1-6noncardia"	18.53	1.98	14.86	22.83	88	474950
+"OTHER"	"Female"	"75+ years"	"C16.0-Cardia, NOS"	1.03	0.14	0.78	1.34	57	5531743
+"OTHER"	"Female"	"75+ years"	"C16.1-6noncardia"	5.17	0.31	4.59	5.81	286	5531743

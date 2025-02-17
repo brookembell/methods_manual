@@ -1,0 +1,13 @@
+outcome,outcome_label,risk_factor,RR_unit,RR,CI_lower,CI_upper,logRR,logCI_lower,logCI_upper
+MPLC,Oral Cavity and Pharynx,fruit,100 g/d,0.95,0.91,1,-0.05129329,-0.09431068,0
+Larynx,Larynx,fruit,100 g/d,0.95,0.91,1,-0.05129329,-0.09431068,0
+LC,Lung and Bronchus,fruit,100 g/d,0.82,0.76,0.89,-0.198450939,-0.274436846,-0.116533816
+MPLC,Oral Cavity and Pharynx,veg_exc_sta,100 g/d,0.91,0.87,0.96,-0.09431068,-0.1392621,-0.04082199
+Larynx,Larynx,veg_exc_sta,100 g/d,0.91,0.87,0.96,-0.09431068,-0.1392621,-0.04082199
+LC,Lung and Bronchus,veg_exc_sta,100/d,0.92,0.87,0.97,-0.083381609,-0.139262067,-0.030459207
+CC,Colon and Rectum,gr_whole,90g/d,0.83,0.78,0.89,-0.186329578,-0.248461359,-0.116533816
+CC,Colon and Rectum,pf_pm,50g/d,1.16,1.08,1.26,0.1482,0.07696,0.2311
+SCNC,Stomach Non-Cardia,pf_pm,50g/d,1.18,1.01,1.38,0.1655144,0.009950331,0.3220835
+CC,Colon and Rectum,pf_redm,100g/d,1.12,1,1.25,0.1133,0,0.2231
+CC,Colon and Rectum,fiber,10g/d,0.9,0.86,0.94,-0.105360516,-0.15082289,-0.061875404
+CC,Colon and Rectum,dairy,400g/d,0.87,0.83,0.9,-0.139262067,-0.186329578,-0.105360516

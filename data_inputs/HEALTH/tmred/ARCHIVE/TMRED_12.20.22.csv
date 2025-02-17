@@ -1,0 +1,36 @@
+﻿Risk_factor,TMRED_g,SD_g,Unit_g,Conversion_factor,TMRED_converted,SD_converted,Unit_converted
+added_sugar,,,,,,,
+dairy,450,45,grams/day,225,2,0.2,cups/day
+fruit,300,30,grams/day,149.37,2.008435429,0.200843543,cups/day
+fruit_exc_juice,,,,,,,
+gr_refined,,,,,,,
+gr_whole,125,12.5,grams/day,28.35,4.409171076,0.440917108,oz eq/day
+oil,,,,,,,
+pf_egg,,,,,,,
+pf_leg,,,,,,,
+pf_ns,16.2,1.62,grams/day,14.175,1.142857143,0.114285714,oz eq/day
+pf_pm,0,0,grams/day,30.21,0,0,oz eq/day
+pf_poultry,,,,,,,
+pf_redm,14.3,1.43,grams/day,30.21,0.473353194,0.047335319,oz eq/day
+pf_seafood,50,5,grams/day,28.35,1.76366843,0.176366843,oz eq/day
+pf_soy,,,,,,,
+sat_fat,10,1,%E/day,,,,grams/day
+veg_dg,,,,,,,
+veg_leg,,,,,,,
+veg_oth,,,,,,,
+veg_ro,,,,,,,
+veg_sta,,,,,,,
+veg_exc_sta,400,40,grams/day,130.2690476,3.070568238,0.307056824,cups/day
+ssb,0,0,grams/day,1,0,0,grams/day
+sea_omega3_fa,250,25,mg/day,1,250,25,mg/day
+sodium,2000,200,mg/day,1,2000,200,mg/day
+fiber,30,3,grams/day,1,30,3,grams/day
+pf_animal,,,,,,,
+pf_plant,,,,,,,
+pufa_rep_carb,11,1.1,%E/day,1,11,1.1,%E/day
+pufa_rep_sfa,11,1.1,%E/day,1,11,1.1,%E/day
+pufa_rep_carbsfa,11,1.1,%E/day,1,11,1.1,%E/day
+babyfood,,,,,,,
+coffee_tea,,,,,,,
+other,,,,,,,
+water,,,,,,,

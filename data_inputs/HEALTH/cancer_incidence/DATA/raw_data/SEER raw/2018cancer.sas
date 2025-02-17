@@ -1,0 +1,168 @@
+filename in1 'C:\Users\bbell06\Box\lasting_aim_3\model development\data_new\in\Cancer incidence\SEER raw\2018cancer.txt';
+
+proc format;
+  value Age_recode_with_1_year_oldsf
+    0 = "00 years"
+    1 = "01-04 years"
+    2 = "05-09 years"
+    3 = "10-14 years"
+    4 = "15-19 years"
+    5 = "20-24 years"
+    6 = "25-29 years"
+    7 = "30-34 years"
+    8 = "35-39 years"
+    9 = "40-44 years"
+    10 = "45-49 years"
+    11 = "50-54 years"
+    12 = "55-59 years"
+    13 = "60-64 years"
+    14 = "65-69 years"
+    15 = "70-74 years"
+    16 = "75-79 years"
+    17 = "80-84 years"
+    18 = "85+ years"
+    19 = "Unknown"
+    ;
+  value Sexf
+    0 = "Male and female"
+    1 = "  Male"
+    2 = "  Female"
+    ;
+  value RaceandoriginrecodeNHWNHBNHAIANf
+    0 = "Non-Hispanic White"
+    1 = "Non-Hispanic Black"
+    2 = "Non-Hispanic American Indian/Alaska Native"
+    3 = "Non-Hispanic Asian or Pacific Islander"
+    4 = "Hispanic (All Races)"
+    5 = "Non-Hispanic Unknown Race"
+    ;
+  value Site_recode_ICD_O_3_WHO_2008f
+    0 = "All Sites"
+    1 = "  Oral Cavity and Pharynx"
+    2 = "    Lip"
+    3 = "    Tongue"
+    4 = "    Salivary Gland"
+    5 = "    Floor of Mouth"
+    6 = "    Gum and Other Mouth"
+    7 = "    Nasopharynx"
+    8 = "    Tonsil"
+    9 = "    Oropharynx"
+    10 = "    Hypopharynx"
+    11 = "    Other Oral Cavity and Pharynx"
+    12 = "  Digestive System"
+    13 = "    Esophagus"
+    14 = "    Stomach"
+    15 = "    Small Intestine"
+    16 = "    Colon and Rectum"
+    17 = "      Colon excluding Rectum"
+    18 = "        Cecum"
+    19 = "        Appendix"
+    20 = "        Ascending Colon"
+    21 = "        Hepatic Flexure"
+    22 = "        Transverse Colon"
+    23 = "        Splenic Flexure"
+    24 = "        Descending Colon"
+    25 = "        Sigmoid Colon"
+    26 = "        Large Intestine, NOS"
+    27 = "      Rectum and Rectosigmoid Junction"
+    28 = "        Rectosigmoid Junction"
+    29 = "        Rectum"
+    30 = "    Anus, Anal Canal and Anorectum"
+    31 = "    Liver and Intrahepatic Bile Duct"
+    32 = "      Liver"
+    33 = "      Intrahepatic Bile Duct"
+    34 = "    Gallbladder"
+    35 = "    Other Biliary"
+    36 = "    Pancreas"
+    37 = "    Retroperitoneum"
+    38 = "    Peritoneum, Omentum and Mesentery"
+    39 = "    Other Digestive Organs"
+    40 = "  Respiratory System"
+    41 = "    Nose, Nasal Cavity and Middle Ear"
+    42 = "    Larynx"
+    43 = "    Lung and Bronchus"
+    44 = "    Pleura"
+    45 = "    Trachea, Mediastinum and Other Respiratory Organs"
+    46 = "  Bones and Joints"
+    47 = "  Soft Tissue including Heart"
+    48 = "  Skin excluding Basal and Squamous"
+    49 = "    Melanoma of the Skin"
+    50 = "    Other Non-Epithelial Skin"
+    51 = "  Breast"
+    52 = "  Female Genital System"
+    53 = "    Cervix Uteri"
+    54 = "    Corpus and Uterus, NOS"
+    55 = "      Corpus Uteri"
+    56 = "      Uterus, NOS"
+    57 = "    Ovary"
+    58 = "    Vagina"
+    59 = "    Vulva"
+    60 = "    Other Female Genital Organs"
+    61 = "  Male Genital System"
+    62 = "    Prostate"
+    63 = "    Testis"
+    64 = "    Penis"
+    65 = "    Other Male Genital Organs"
+    66 = "  Urinary System"
+    67 = "    Urinary Bladder"
+    68 = "    Kidney and Renal Pelvis"
+    69 = "    Ureter"
+    70 = "    Other Urinary Organs"
+    71 = "  Eye and Orbit"
+    72 = "  Brain and Other Nervous System"
+    73 = "    Brain"
+    74 = "    Cranial Nerves Other Nervous System"
+    75 = "  Endocrine System"
+    76 = "    Thyroid"
+    77 = "    Other Endocrine including Thymus"
+    78 = "  Lymphoma"
+    79 = "    Hodgkin Lymphoma"
+    80 = "      Hodgkin - Nodal"
+    81 = "      Hodgkin - Extranodal"
+    82 = "    Non-Hodgkin Lymphoma"
+    83 = "      NHL - Nodal"
+    84 = "      NHL - Extranodal"
+    85 = "  Myeloma"
+    86 = "  Leukemia"
+    87 = "    Lymphocytic Leukemia"
+    88 = "      Acute Lymphocytic Leukemia"
+    89 = "      Chronic Lymphocytic Leukemia"
+    90 = "      Other Lymphocytic Leukemia"
+    91 = "    Myeloid and Monocytic Leukemia"
+    92 = "      Acute Myeloid Leukemia"
+    93 = "      Acute Monocytic Leukemia"
+    94 = "      Chronic Myeloid Leukemia"
+    95 = "      Other Myeloid/Monocytic Leukemia"
+    96 = "    Other Leukemia"
+    97 = "      Other Acute Leukemia"
+    98 = "      Aleukemic, Subleukemic and NOS"
+    99 = "  Mesothelioma"
+    100 = "  Kaposi Sarcoma"
+    101 = "  Miscellaneous"
+    ;
+run;
+
+data freqdat;
+  /*NOTE: The data file was created using the Windows format line delimiter.*/
+  /*The TERMSTR=CRLF input option for reading the file in UNIX, requires SAS version 9.*/
+  infile in1 LRECL = 32000 delimiter = '09'X TERMSTR = CRLF;
+
+  input Age_recode_with_1_year_olds
+    Sex
+    RaceandoriginrecodeNHWNHBNHAIAN
+    Site_recode_ICD_O_3_WHO_2008
+    Count
+    ;
+  label Age_recode_with_1_year_olds = "Age recode with <1 year olds"
+    Sex = "Sex"
+    RaceandoriginrecodeNHWNHBNHAIAN = "Race and origin recode (NHW, NHB, NHAIAN, NHAPI, Hispanic)"
+    Site_recode_ICD_O_3_WHO_2008 = "Site recode ICD-O-3/WHO 2008"
+    Count = "Count"
+    ;
+  format Age_recode_with_1_year_olds Age_recode_with_1_year_oldsf.
+    Sex Sexf.
+    RaceandoriginrecodeNHWNHBNHAIAN RaceandoriginrecodeNHWNHBNHAIANf.
+    Site_recode_ICD_O_3_WHO_2008 Site_recode_ICD_O_3_WHO_2008f.
+    ;
+run;
+

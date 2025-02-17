@@ -1,0 +1,153 @@
+"Notes"	"Ten-Year Age Groups"	"Ten-Year Age Groups Code"	"Race"	"Race Code"	"Gender"	"Gender Code"	"Hispanic Origin"	"Hispanic Origin Code"	Deaths	Population	Crude Rate	Crude Rate Lower 95% Confidence Interval	Crude Rate Upper 95% Confidence Interval	Crude Rate Standard Error
+	"25-34 years"	"25-34"	"Black or African American"	"2054-5"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	44	3360161	1.31	0.95	1.76	0.20
+"Total"	"25-34 years"	"25-34"	"Black or African American"	"2054-5"	"Female"	"F"			44	3360161	1.31	0.95	1.76	0.20
+	"25-34 years"	"25-34"	"Black or African American"	"2054-5"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	58	3297930	1.76	1.34	2.27	0.23
+"Total"	"25-34 years"	"25-34"	"Black or African American"	"2054-5"	"Male"	"M"			58	3297930	1.76	1.34	2.27	0.23
+"Total"	"25-34 years"	"25-34"	"Black or African American"	"2054-5"					102	6658091	1.53	1.23	1.83	0.15
+	"25-34 years"	"25-34"	"White"	"2106-3"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	65	12626506	0.51	0.40	0.66	0.06
+"Total"	"25-34 years"	"25-34"	"White"	"2106-3"	"Female"	"F"			65	12626506	0.51	0.40	0.66	0.06
+	"25-34 years"	"25-34"	"White"	"2106-3"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	108	13030959	0.83	0.67	0.99	0.08
+"Total"	"25-34 years"	"25-34"	"White"	"2106-3"	"Male"	"M"			108	13030959	0.83	0.67	0.99	0.08
+"Total"	"25-34 years"	"25-34"	"White"	"2106-3"					173	25657465	0.67	0.57	0.77	0.05
+"Total"	"25-34 years"	"25-34"							275	32315556	0.85	0.75	0.95	0.05
+	"35-44 years"	"35-44"	"Black or African American"	"2054-5"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	125	2849171	4.39	3.62	5.16	0.39
+"Total"	"35-44 years"	"35-44"	"Black or African American"	"2054-5"	"Female"	"F"			125	2849171	4.39	3.62	5.16	0.39
+	"35-44 years"	"35-44"	"Black or African American"	"2054-5"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	150	2565382	5.85	4.91	6.78	0.48
+"Total"	"35-44 years"	"35-44"	"Black or African American"	"2054-5"	"Male"	"M"			150	2565382	5.85	4.91	6.78	0.48
+"Total"	"35-44 years"	"35-44"	"Black or African American"	"2054-5"					275	5414553	5.08	4.48	5.68	0.31
+	"35-44 years"	"35-44"	"White"	"2106-3"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	229	11786558	1.94	1.69	2.19	0.13
+"Total"	"35-44 years"	"35-44"	"White"	"2106-3"	"Female"	"F"			229	11786558	1.94	1.69	2.19	0.13
+	"35-44 years"	"35-44"	"White"	"2106-3"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	241	11922768	2.02	1.77	2.28	0.13
+"Total"	"35-44 years"	"35-44"	"White"	"2106-3"	"Male"	"M"			241	11922768	2.02	1.77	2.28	0.13
+"Total"	"35-44 years"	"35-44"	"White"	"2106-3"					470	23709326	1.98	1.80	2.16	0.09
+"Total"	"35-44 years"	"35-44"							745	29123879	2.56	2.37	2.74	0.09
+	"45-54 years"	"45-54"	"Black or African American"	"2054-5"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	312	2811658	11.10	9.87	12.33	0.63
+"Total"	"45-54 years"	"45-54"	"Black or African American"	"2054-5"	"Female"	"F"			312	2811658	11.10	9.87	12.33	0.63
+	"45-54 years"	"45-54"	"Black or African American"	"2054-5"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	377	2475578	15.23	13.69	16.77	0.78
+"Total"	"45-54 years"	"45-54"	"Black or African American"	"2054-5"	"Male"	"M"			377	2475578	15.23	13.69	16.77	0.78
+"Total"	"45-54 years"	"45-54"	"Black or African American"	"2054-5"					689	5287236	13.03	12.06	14.00	0.50
+	"45-54 years"	"45-54"	"White"	"2106-3"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	645	13153739	4.90	4.53	5.28	0.19
+"Total"	"45-54 years"	"45-54"	"White"	"2106-3"	"Female"	"F"			645	13153739	4.90	4.53	5.28	0.19
+	"45-54 years"	"45-54"	"White"	"2106-3"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	714	13079246	5.46	5.06	5.86	0.20
+"Total"	"45-54 years"	"45-54"	"White"	"2106-3"	"Male"	"M"			714	13079246	5.46	5.06	5.86	0.20
+"Total"	"45-54 years"	"45-54"	"White"	"2106-3"					1359	26232985	5.18	4.91	5.46	0.14
+"Total"	"45-54 years"	"45-54"							2048	31520221	6.50	6.22	6.78	0.14
+	"55-64 years"	"55-64"	"Black or African American"	"2054-5"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	498	2699093	18.45	16.83	20.07	0.83
+"Total"	"55-64 years"	"55-64"	"Black or African American"	"2054-5"	"Female"	"F"			498	2699093	18.45	16.83	20.07	0.83
+	"55-64 years"	"55-64"	"Black or African American"	"2054-5"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	585	2275130	25.71	23.63	27.80	1.06
+"Total"	"55-64 years"	"55-64"	"Black or African American"	"2054-5"	"Male"	"M"			585	2275130	25.71	23.63	27.80	1.06
+"Total"	"55-64 years"	"55-64"	"Black or African American"	"2054-5"					1083	4974223	21.77	20.48	23.07	0.66
+	"55-64 years"	"55-64"	"White"	"2106-3"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	1402	15277067	9.18	8.70	9.66	0.25
+"Total"	"55-64 years"	"55-64"	"White"	"2106-3"	"Female"	"F"			1402	15277067	9.18	8.70	9.66	0.25
+	"55-64 years"	"55-64"	"White"	"2106-3"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	1550	14575176	10.63	10.11	11.16	0.27
+"Total"	"55-64 years"	"55-64"	"White"	"2106-3"	"Male"	"M"			1550	14575176	10.63	10.11	11.16	0.27
+"Total"	"55-64 years"	"55-64"	"White"	"2106-3"					2952	29852243	9.89	9.53	10.25	0.18
+"Total"	"55-64 years"	"55-64"							4035	34826466	11.59	11.23	11.94	0.18
+	"65-74 years"	"65-74"	"Black or African American"	"2054-5"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	507	1715869	29.55	26.98	32.12	1.31
+"Total"	"65-74 years"	"65-74"	"Black or African American"	"2054-5"	"Female"	"F"			507	1715869	29.55	26.98	32.12	1.31
+	"65-74 years"	"65-74"	"Black or African American"	"2054-5"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	510	1290797	39.51	36.08	42.94	1.75
+"Total"	"65-74 years"	"65-74"	"Black or African American"	"2054-5"	"Male"	"M"			510	1290797	39.51	36.08	42.94	1.75
+"Total"	"65-74 years"	"65-74"	"Black or African American"	"2054-5"					1017	3006666	33.82	31.75	35.90	1.06
+	"65-74 years"	"65-74"	"White"	"2106-3"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	2276	12121360	18.78	18.01	19.55	0.39
+"Total"	"65-74 years"	"65-74"	"White"	"2106-3"	"Female"	"F"			2276	12121360	18.78	18.01	19.55	0.39
+	"65-74 years"	"65-74"	"White"	"2106-3"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	2533	10970346	23.09	22.19	23.99	0.46
+"Total"	"65-74 years"	"65-74"	"White"	"2106-3"	"Male"	"M"			2533	10970346	23.09	22.19	23.99	0.46
+"Total"	"65-74 years"	"65-74"	"White"	"2106-3"					4809	23091706	20.83	20.24	21.41	0.30
+"Total"	"65-74 years"	"65-74"							5826	26098372	22.32	21.75	22.90	0.29
+	"75-84 years"	"75-84"	"Black or African American"	"2054-5"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	539	816332	66.03	60.45	71.60	2.84
+"Total"	"75-84 years"	"75-84"	"Black or African American"	"2054-5"	"Female"	"F"			539	816332	66.03	60.45	71.60	2.84
+	"75-84 years"	"75-84"	"Black or African American"	"2054-5"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	362	513623	70.48	63.22	77.74	3.70
+"Total"	"75-84 years"	"75-84"	"Black or African American"	"2054-5"	"Male"	"M"			362	513623	70.48	63.22	77.74	3.70
+"Total"	"75-84 years"	"75-84"	"Black or African American"	"2054-5"					901	1329955	67.75	63.32	72.17	2.26
+	"75-84 years"	"75-84"	"White"	"2106-3"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	4045	6675477	60.59	58.73	62.46	0.95
+"Total"	"75-84 years"	"75-84"	"White"	"2106-3"	"Female"	"F"			4045	6675477	60.59	58.73	62.46	0.95
+	"75-84 years"	"75-84"	"White"	"2106-3"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	3365	5358726	62.79	60.67	64.92	1.08
+"Total"	"75-84 years"	"75-84"	"White"	"2106-3"	"Male"	"M"			3365	5358726	62.79	60.67	64.92	1.08
+"Total"	"75-84 years"	"75-84"	"White"	"2106-3"					7410	12034203	61.57	60.17	62.98	0.72
+"Total"	"75-84 years"	"75-84"							8311	13364158	62.19	60.85	63.53	0.68
+	"85+ years"	"85+"	"Black or African American"	"2054-5"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	459	354052	129.64	117.78	141.50	6.05
+"Total"	"85+ years"	"85+"	"Black or African American"	"2054-5"	"Female"	"F"			459	354052	129.64	117.78	141.50	6.05
+	"85+ years"	"85+"	"Black or African American"	"2054-5"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	194	153453	126.42	108.63	144.21	9.08
+"Total"	"85+ years"	"85+"	"Black or African American"	"2054-5"	"Male"	"M"			194	153453	126.42	108.63	144.21	9.08
+"Total"	"85+ years"	"85+"	"Black or African American"	"2054-5"					653	507505	128.67	118.80	138.54	5.04
+	"85+ years"	"85+"	"White"	"2106-3"	"Female"	"F"	"Not Hispanic or Latino"	"2186-2"	4530	3349454	135.25	131.31	139.18	2.01
+"Total"	"85+ years"	"85+"	"White"	"2106-3"	"Female"	"F"			4530	3349454	135.25	131.31	139.18	2.01
+	"85+ years"	"85+"	"White"	"2106-3"	"Male"	"M"	"Not Hispanic or Latino"	"2186-2"	2752	1873994	146.85	141.37	152.34	2.80
+"Total"	"85+ years"	"85+"	"White"	"2106-3"	"Male"	"M"			2752	1873994	146.85	141.37	152.34	2.80
+"Total"	"85+ years"	"85+"	"White"	"2106-3"					7282	5223448	139.41	136.21	142.61	1.63
+"Total"	"85+ years"	"85+"							7935	5730953	138.46	135.41	141.51	1.55
+"Total"									29175	172979605	16.87	16.67	17.06	0.10
+"---"
+"Dataset: Underlying Cause of Death, 1999-2020"
+"Query Parameters:"
+"Title: HSTK_2018_NONHIS"
+"Hispanic Origin: Not Hispanic or Latino"
+"ICD-10 Codes: I60.0 (Subarachnoid haemorrhage from carotid siphon and bifurcation); I60.1 (Subarachnoid haemorrhage from middle"
+"cerebral artery); I60.2 (Subarachnoid haemorrhage from anterior communicating artery); I60.3 (Subarachnoid haemorrhage from"
+"posterior communicating artery); I60.4 (Subarachnoid haemorrhage from basilar artery); I60.5 (Subarachnoid haemorrhage from"
+"vertebral artery); I60.6 (Subarachnoid haemorrhage from other intracranial arteries); I60.7 (Subarachnoid haemorrhage from"
+"intracranial artery, unspecified); I60.8 (Other subarachnoid haemorrhage); I60.9 (Subarachnoid haemorrhage, unspecified); I61.0"
+"(Intracerebral haemorrhage in hemisphere, subcortical); I61.1 (Intracerebral haemorrhage in hemisphere, cortical); I61.2"
+"(Intracerebral haemorrhage in hemisphere, unspecified); I61.3 (Intracerebral haemorrhage in brain stem); I61.4 (Intracerebral"
+"haemorrhage in cerebellum); I61.5 (Intracerebral haemorrhage, intraventricular); I61.6 (Intracerebral haemorrhage, multiple"
+"localized); I61.8 (Other intracerebral haemorrhage); I61.9 (Intracerebral haemorrhage, unspecified); I62.0 (Subdural haemorrhage"
+"(acute)(nontraumatic)); I62.1 (Nontraumatic extradural haemorrhage); I62.9 (Intracranial haemorrhage (nontraumatic),"
+"unspecified); I67.4 (Hypertensive encephalopathy); I69.0 (Sequelae of subarachnoid haemorrhage); I69.1 (Sequelae of"
+"intracerebral haemorrhage); I69.2 (Sequelae of other nontraumatic intracranial haemorrhage)"
+"Race: Black or African American; White"
+"Ten-Year Age Groups: 25-34 years; 35-44 years; 45-54 years; 55-64 years; 65-74 years; 75-84 years; 85+ years"
+"Year/Month: 2018"
+"Group By: Ten-Year Age Groups; Race; Gender; Hispanic Origin"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Apr 10, 2023 8:56:42 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files,"
+"1999-2020, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/ucd-icd10.html on Apr 10, 2023 8:56:42 PM"
+"---"
+Caveats:
+"1. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"2. Deaths of persons with Hispanic origin ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among"
+"Hispanic Origin groups, so are not included in the Hispanic Origin specific counts and rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"3. Information included on the death certificate about the race and Hispanic ethnicity of the decedent is reported by the"
+"funeral director as provided by an informant, often the surviving next of kin, or, in the absence of an informant, on the basis"
+"of observation. Race and ethnicity information from the census is by self-report. To the extent that race and Hispanic origin"
+"are inconsistent between these two data sources, death rates will be biased. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Racial Differences."
+"4. The method used to calculate 95% confidence intervals is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Confidence-Intervals."
+"5. The method used to calculate standard errors is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Standard-Errors."
+"6. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"7. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#ICD-10 Changes."

@@ -1,0 +1,87 @@
+"Notes"	"Ten-Year Age Groups"	"Ten-Year Age Groups Code"	"Gender"	"Gender Code"	Deaths	Population	Crude Rate	Crude Rate Lower 95% Confidence Interval	Crude Rate Upper 95% Confidence Interval	Crude Rate Standard Error
+	"25-34 years"	"25-34"	"Female"	"F"	161	20970529	0.77	0.65	0.89	0.06
+	"25-34 years"	"25-34"	"Male"	"M"	218	21338792	1.02	0.89	1.16	0.07
+"Total"	"25-34 years"	"25-34"			379	42309321	0.90	0.81	0.99	0.05
+	"35-44 years"	"35-44"	"Female"	"F"	517	20342813	2.54	2.32	2.76	0.11
+	"35-44 years"	"35-44"	"Male"	"M"	635	20173607	3.15	2.90	3.39	0.12
+"Total"	"35-44 years"	"35-44"			1152	40516420	2.84	2.68	3.01	0.08
+	"45-54 years"	"45-54"	"Female"	"F"	1578	22461868	7.03	6.68	7.37	0.18
+	"45-54 years"	"45-54"	"Male"	"M"	1725	21806870	7.91	7.54	8.28	0.19
+"Total"	"45-54 years"	"45-54"			3303	44268738	7.46	7.21	7.72	0.13
+	"55-64 years"	"55-64"	"Female"	"F"	2133	19983308	10.67	10.22	11.13	0.23
+	"55-64 years"	"55-64"	"Male"	"M"	2603	18602894	13.99	13.45	14.53	0.27
+"Total"	"55-64 years"	"55-64"			4736	38586202	12.27	11.92	12.62	0.18
+	"65-74 years"	"65-74"	"Female"	"F"	2888	12782530	22.59	21.77	23.42	0.42
+	"65-74 years"	"65-74"	"Male"	"M"	2906	11202862	25.94	25.00	26.88	0.48
+"Total"	"65-74 years"	"65-74"			5794	23985392	24.16	23.53	24.78	0.32
+	"75-84 years"	"75-84"	"Female"	"F"	5060	7624484	66.37	64.54	68.19	0.93
+	"75-84 years"	"75-84"	"Male"	"M"	3907	5648150	69.17	67.00	71.34	1.11
+"Total"	"75-84 years"	"75-84"			8967	13272634	67.56	66.16	68.96	0.71
+	"85+ years"	"85+"	"Female"	"F"	5347	3923297	136.29	132.64	139.94	1.86
+	"85+ years"	"85+"	"Male"	"M"	2913	1964033	148.32	142.93	153.70	2.75
+"Total"	"85+ years"	"85+"			8260	5887330	140.30	137.28	143.33	1.54
+"Total"					32591	208826037	15.61	15.44	15.78	0.09
+"---"
+"Dataset: Underlying Cause of Death, 1999-2020"
+"Query Parameters:"
+"Title: HSTK_2012"
+"ICD-10 Codes: I60.0 (Subarachnoid haemorrhage from carotid siphon and bifurcation); I60.1 (Subarachnoid haemorrhage from middle"
+"cerebral artery); I60.2 (Subarachnoid haemorrhage from anterior communicating artery); I60.3 (Subarachnoid haemorrhage from"
+"posterior communicating artery); I60.4 (Subarachnoid haemorrhage from basilar artery); I60.5 (Subarachnoid haemorrhage from"
+"vertebral artery); I60.6 (Subarachnoid haemorrhage from other intracranial arteries); I60.7 (Subarachnoid haemorrhage from"
+"intracranial artery, unspecified); I60.8 (Other subarachnoid haemorrhage); I60.9 (Subarachnoid haemorrhage, unspecified); I61.0"
+"(Intracerebral haemorrhage in hemisphere, subcortical); I61.1 (Intracerebral haemorrhage in hemisphere, cortical); I61.2"
+"(Intracerebral haemorrhage in hemisphere, unspecified); I61.3 (Intracerebral haemorrhage in brain stem); I61.4 (Intracerebral"
+"haemorrhage in cerebellum); I61.5 (Intracerebral haemorrhage, intraventricular); I61.6 (Intracerebral haemorrhage, multiple"
+"localized); I61.8 (Other intracerebral haemorrhage); I61.9 (Intracerebral haemorrhage, unspecified); I62.0 (Subdural haemorrhage"
+"(acute)(nontraumatic)); I62.1 (Nontraumatic extradural haemorrhage); I62.9 (Intracranial haemorrhage (nontraumatic),"
+"unspecified); I67.4 (Hypertensive encephalopathy); I69.0 (Sequelae of subarachnoid haemorrhage); I69.1 (Sequelae of"
+"intracerebral haemorrhage); I69.2 (Sequelae of other nontraumatic intracranial haemorrhage)"
+"Ten-Year Age Groups: 25-34 years; 35-44 years; 45-54 years; 55-64 years; 65-74 years; 75-84 years; 85+ years"
+"Year/Month: 2012"
+"Group By: Ten-Year Age Groups; Gender"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Feb 20, 2023 3:43:58 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files,"
+"1999-2020, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/ucd-icd10.html on Feb 20, 2023 3:43:58 PM"
+"---"
+Caveats:
+"1. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"2. The method used to calculate 95% confidence intervals is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Confidence-Intervals."
+"3. The method used to calculate standard errors is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Standard-Errors."
+"4. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"5. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#ICD-10 Changes."

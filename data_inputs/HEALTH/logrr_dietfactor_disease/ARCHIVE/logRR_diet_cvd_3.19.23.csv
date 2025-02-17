@@ -1,0 +1,175 @@
+outcome,outcome_label,risk_factor,Age,Age_label,RR_unit,logRR,logRR_se
+IHD,Ischemic heart disease,fruit,1,25-34,100g/d,-0.087935232,0.027152855
+IHD,Ischemic heart disease,fruit,2,35-44,100g/d,-0.084339119,0.026042439
+IHD,Ischemic heart disease,fruit,3,45-54,100g/d,-0.07154748,0.022092605
+IHD,Ischemic heart disease,fruit,4,55-64,100g/d,-0.059286007,0.018306478
+IHD,Ischemic heart disease,fruit,5,65-74,100g/d,-0.049174651,0.015184269
+IHD,Ischemic heart disease,fruit,6,75+,100g/d,-0.028323567,0.007531258
+ISTK,Ischemic stroke,fruit,1,25-34,100g/d,-0.190831374,0.042684467
+ISTK,Ischemic stroke,fruit,2,35-44,100g/d,-0.183027322,0.040938885
+ISTK,Ischemic stroke,fruit,3,45-54,100g/d,-0.155267729,0.03472972
+ISTK,Ischemic stroke,fruit,4,55-64,100g/d,-0.128658672,0.028777903
+ISTK,Ischemic stroke,fruit,5,65-74,100g/d,-0.106715659,0.02386977
+ISTK,Ischemic stroke,fruit,6,75+,100g/d,-0.061073689,0.011910794
+HSTK,Hemorrhagic stroke,fruit,1,25-34,100g/d,-0.466348301,0.131250128
+HSTK,Hemorrhagic stroke,fruit,2,35-44,100g/d,-0.44727698,0.125882652
+HSTK,Hemorrhagic stroke,fruit,3,45-54,100g/d,-0.379438875,0.106790141
+HSTK,Hemorrhagic stroke,fruit,4,55-64,100g/d,-0.314412414,0.088488946
+HSTK,Hemorrhagic stroke,fruit,5,65-74,100g/d,-0.260788701,0.073396966
+HSTK,Hemorrhagic stroke,fruit,6,75+,100g/d,-0.14973267,0.036032997
+OSTK,Other stroke,fruit,1,25-34,100g/d,-0.412395295,0.103051388
+OSTK,Other stroke,fruit,2,35-44,100g/d,-0.40121856,0.101558014
+OSTK,Other stroke,fruit,3,45-54,100g/d,-0.340439409,0.086515022
+OSTK,Other stroke,fruit,4,55-64,100g/d,-0.278706378,0.07138828
+OSTK,Other stroke,fruit,5,65-74,100g/d,-0.220450738,0.05419226
+OSTK,Other stroke,fruit,6,75+,100g/d,-0.110232875,0.020220556
+IHD,Ischemic heart disease,fruit_exc_juice,1,25-34,100g/d,-0.087935232,0.027152855
+IHD,Ischemic heart disease,fruit_exc_juice,2,35-44,100g/d,-0.084339119,0.026042439
+IHD,Ischemic heart disease,fruit_exc_juice,3,45-54,100g/d,-0.07154748,0.022092605
+IHD,Ischemic heart disease,fruit_exc_juice,4,55-64,100g/d,-0.059286007,0.018306478
+IHD,Ischemic heart disease,fruit_exc_juice,5,65-74,100g/d,-0.049174651,0.015184269
+IHD,Ischemic heart disease,fruit_exc_juice,6,75+,100g/d,-0.028323567,0.007531258
+ISTK,Ischemic stroke,fruit_exc_juice,1,25-34,100g/d,-0.190831374,0.042684467
+ISTK,Ischemic stroke,fruit_exc_juice,2,35-44,100g/d,-0.183027322,0.040938885
+ISTK,Ischemic stroke,fruit_exc_juice,3,45-54,100g/d,-0.155267729,0.03472972
+ISTK,Ischemic stroke,fruit_exc_juice,4,55-64,100g/d,-0.128658672,0.028777903
+ISTK,Ischemic stroke,fruit_exc_juice,5,65-74,100g/d,-0.106715659,0.02386977
+ISTK,Ischemic stroke,fruit_exc_juice,6,75+,100g/d,-0.061073689,0.011910794
+HSTK,Hemorrhagic stroke,fruit_exc_juice,1,25-34,100g/d,-0.466348301,0.131250128
+HSTK,Hemorrhagic stroke,fruit_exc_juice,2,35-44,100g/d,-0.44727698,0.125882652
+HSTK,Hemorrhagic stroke,fruit_exc_juice,3,45-54,100g/d,-0.379438875,0.106790141
+HSTK,Hemorrhagic stroke,fruit_exc_juice,4,55-64,100g/d,-0.314412414,0.088488946
+HSTK,Hemorrhagic stroke,fruit_exc_juice,5,65-74,100g/d,-0.260788701,0.073396966
+HSTK,Hemorrhagic stroke,fruit_exc_juice,6,75+,100g/d,-0.14973267,0.036032997
+OSTK,Other stroke,fruit_exc_juice,1,25-34,100g/d,-0.412395295,0.103051388
+OSTK,Other stroke,fruit_exc_juice,2,35-44,100g/d,-0.40121856,0.101558014
+OSTK,Other stroke,fruit_exc_juice,3,45-54,100g/d,-0.340439409,0.086515022
+OSTK,Other stroke,fruit_exc_juice,4,55-64,100g/d,-0.278706378,0.07138828
+OSTK,Other stroke,fruit_exc_juice,5,65-74,100g/d,-0.220450738,0.05419226
+OSTK,Other stroke,fruit_exc_juice,6,75+,100g/d,-0.110232875,0.020220556
+IHD,Ischemic heart disease,veg_exc_sta,1,25-34,100g/d,-0.073145434,0.021386787
+IHD,Ischemic heart disease,veg_exc_sta,2,35-44,100g/d,-0.070154151,0.020512174
+IHD,Ischemic heart disease,veg_exc_sta,3,45-54,100g/d,-0.059513933,0.017401111
+IHD,Ischemic heart disease,veg_exc_sta,4,55-64,100g/d,-0.049314713,0.01441899
+IHD,Ischemic heart disease,veg_exc_sta,5,65-74,100g/d,-0.040903983,0.0119598
+IHD,Ischemic heart disease,veg_exc_sta,6,75+,100g/d,-0.023287259,0.005800797
+ISTK,Ischemic stroke,veg_exc_sta,1,25-34,100g/d,-0.175966334,0.064300581
+ISTK,Ischemic stroke,veg_exc_sta,2,35-44,100g/d,-0.168770188,0.061671008
+ISTK,Ischemic stroke,veg_exc_sta,3,45-54,100g/d,-0.143172963,0.05231742
+ISTK,Ischemic stroke,veg_exc_sta,4,55-64,100g/d,-0.118636649,0.043351505
+ISTK,Ischemic stroke,veg_exc_sta,5,65-74,100g/d,-0.098402914,0.035957813
+ISTK,Ischemic stroke,veg_exc_sta,6,75+,100g/d,-0.056900587,0.017912058
+HSTK,Hemorrhagic stroke,veg_exc_sta,1,25-34,100g/d,-0.274254469,0.111300351
+HSTK,Hemorrhagic stroke,veg_exc_sta,2,35-44,100g/d,-0.263038829,0.106748722
+HSTK,Hemorrhagic stroke,veg_exc_sta,3,45-54,100g/d,-0.223143962,0.090558237
+HSTK,Hemorrhagic stroke,veg_exc_sta,4,55-64,100g/d,-0.184902592,0.07503879
+HSTK,Hemorrhagic stroke,veg_exc_sta,5,65-74,100g/d,-0.153367058,0.062240763
+HSTK,Hemorrhagic stroke,veg_exc_sta,6,75+,100g/d,-0.088430182,0.030668484
+OSTK,Other stroke,veg_exc_sta,1,25-34,100g/d,-0.256366377,0.091882911
+OSTK,Other stroke,veg_exc_sta,2,35-44,100g/d,-0.247750337,0.089415672
+OSTK,Other stroke,veg_exc_sta,3,45-54,100g/d,-0.210053468,0.076521388
+OSTK,Other stroke,veg_exc_sta,4,55-64,100g/d,-0.172775858,0.061093488
+OSTK,Other stroke,veg_exc_sta,5,65-74,100g/d,-0.139501254,0.047043588
+OSTK,Other stroke,veg_exc_sta,6,75+,100g/d,-0.074605321,0.01890749
+IHD,Ischemic heart disease (fatal),pf_ns,1,25-34,1oz/wk,-0.121916142,0.023133922
+IHD,Ischemic heart disease (fatal),pf_ns,2,35-44,1oz/wk,-0.116930379,0.022187859
+IHD,Ischemic heart disease (fatal),pf_ns,3,45-54,1oz/wk,-0.099195652,0.018822646
+IHD,Ischemic heart disease (fatal),pf_ns,4,55-64,1oz/wk,-0.082195964,0.015596909
+IHD,Ischemic heart disease (fatal),pf_ns,5,65-74,1oz/wk,-0.068177266,0.012936823
+IHD,Ischemic heart disease (fatal),pf_ns,6,75+,1oz/wk,-0.03908445,0.006387834
+DIAB,DIAB,pf_ns,1,25-34,1oz/wk,-0.05086187,0.014256825
+DIAB,DIAB,pf_ns,2,35-44,1oz/wk,-0.048781873,0.013673792
+DIAB,DIAB,pf_ns,3,45-54,1oz/wk,-0.04138317,0.0115999
+DIAB,DIAB,pf_ns,4,55-64,1oz/wk,-0.034291115,0.009611963
+DIAB,DIAB,pf_ns,5,65-74,1oz/wk,-0.028442692,0.007972622
+DIAB,DIAB,pf_ns,6,75+,1oz/wk,-0.01626955,0.003940716
+IHD,Ischemic heart disease,gr_whole,1,25-34,50g/d,-0.050649688,0.020902493
+IHD,Ischemic heart disease,gr_whole,2,35-44,50g/d,-0.048578369,0.020047685
+IHD,Ischemic heart disease,gr_whole,3,45-54,50g/d,-0.04121053,0.01700707
+IHD,Ischemic heart disease,gr_whole,4,55-64,50g/d,-0.034148062,0.014092478
+IHD,Ischemic heart disease,gr_whole,5,65-74,50g/d,-0.028324037,0.011688976
+IHD,Ischemic heart disease,gr_whole,6,75+,50g/d,-0.016347001,0.005770998
+ISTK,Ischemic stroke,gr_whole,1,25-34,50g/d,-0.134053217,0.046110927
+ISTK,Ischemic stroke,gr_whole,2,35-44,50g/d,-0.128571109,0.04422522
+ISTK,Ischemic stroke,gr_whole,3,45-54,50g/d,-0.109070842,0.03751762
+ISTK,Ischemic stroke,gr_whole,4,55-64,50g/d,-0.090378791,0.031088026
+ISTK,Ischemic stroke,gr_whole,5,65-74,50g/d,-0.074964494,0.025785896
+ISTK,Ischemic stroke,gr_whole,6,75+,50g/d,-0.043288178,0.01278527
+HSTK,Hemorrhagic stroke,gr_whole,1,25-34,50g/d,-0.134053217,0.046110927
+HSTK,Hemorrhagic stroke,gr_whole,2,35-44,50g/d,-0.128571109,0.04422522
+HSTK,Hemorrhagic stroke,gr_whole,3,45-54,50g/d,-0.109070842,0.03751762
+HSTK,Hemorrhagic stroke,gr_whole,4,55-64,50g/d,-0.090378791,0.031088026
+HSTK,Hemorrhagic stroke,gr_whole,5,65-74,50g/d,-0.074964494,0.025785896
+HSTK,Hemorrhagic stroke,gr_whole,6,75+,50g/d,-0.043288178,0.01278527
+DIAB,DIAB,gr_whole,1,25-34,50g/d,-0.191565599,0.043310807
+DIAB,DIAB,gr_whole,2,35-44,50g/d,-0.183731521,0.041539611
+DIAB,DIAB,gr_whole,3,45-54,50g/d,-0.155865123,0.035239335
+DIAB,DIAB,gr_whole,4,55-64,50g/d,-0.129153687,0.029200183
+DIAB,DIAB,gr_whole,5,65-74,50g/d,-0.107126248,0.024220029
+DIAB,DIAB,gr_whole,6,75+,50g/d,-0.061624073,0.011909687
+OSTK,Other stroke,gr_whole,1,25-34,50g/d,-0.134053217,0.038536328
+OSTK,Other stroke,gr_whole,2,35-44,50g/d,-0.128571109,0.038199408
+OSTK,Other stroke,gr_whole,3,45-54,50g/d,-0.109070842,0.0317305
+OSTK,Other stroke,gr_whole,4,55-64,50g/d,-0.090378791,0.026055126
+OSTK,Other stroke,gr_whole,5,65-74,50g/d,-0.074964494,0.020267921
+OSTK,Other stroke,gr_whole,6,75+,50g/d,-0.043288178,0.009147009
+DIAB,DIAB,pf_redm,1,25-34,100g/d,0.258398711,0.107654614
+DIAB,DIAB,pf_redm,2,35-44,100g/d,0.247831491,0.103252077
+DIAB,DIAB,pf_redm,3,45-54,100g/d,0.210243108,0.087591926
+DIAB,DIAB,pf_redm,4,55-64,100g/d,0.174212626,0.072580831
+DIAB,DIAB,pf_redm,5,65-74,100g/d,0.144500289,0.060202014
+DIAB,DIAB,pf_redm,6,75+,100g/d,0.08355849,0.03030418
+IHD,Ischemic heart disease,pf_pm,1,25-34,50g/d,0.466861245,0.158373405
+IHD,Ischemic heart disease,pf_pm,2,35-44,50g/d,0.447768948,0.151896722
+IHD,Ischemic heart disease,pf_pm,3,45-54,50g/d,0.379856226,0.12885868
+IHD,Ischemic heart disease,pf_pm,4,55-64,50g/d,0.314758241,0.106775482
+IHD,Ischemic heart disease,pf_pm,5,65-74,50g/d,0.261075547,0.088564694
+IHD,Ischemic heart disease,pf_pm,6,75+,50g/d,0.150026628,0.043782428
+DIAB,DIAB,pf_pm,1,25-34,50g/d,0.609413249,0.147552266
+DIAB,DIAB,pf_pm,2,35-44,50g/d,0.584491285,0.141518114
+DIAB,DIAB,pf_pm,3,45-54,50g/d,0.495842008,0.120054186
+DIAB,DIAB,pf_pm,4,55-64,50g/d,0.410866922,0.099479861
+DIAB,DIAB,pf_pm,5,65-74,50g/d,0.340792685,0.082513357
+DIAB,DIAB,pf_pm,6,75+,50g/d,0.195890543,0.040802218
+IHD,Ischemic heart disease,pufa_rep_carb,1,25-34,5%E/d,-0.155492299,0.039104051
+IHD,Ischemic heart disease,pufa_rep_carb,2,35-44,5%E/d,-0.149133439,0.03750489
+IHD,Ischemic heart disease,pufa_rep_carb,3,45-54,5%E/d,-0.126514502,0.031816556
+IHD,Ischemic heart disease,pufa_rep_carb,4,55-64,5%E/d,-0.104833038,0.026363984
+IHD,Ischemic heart disease,pufa_rep_carb,5,65-74,5%E/d,-0.086953538,0.021867549
+IHD,Ischemic heart disease,pufa_rep_carb,6,75+,5%E/d,-0.049670911,0.010914561
+IHD,Ischemic heart disease,pufa_rep_sfa,1,25-34,5%E/d,-0.140050312,0.036521934
+IHD,Ischemic heart disease,pufa_rep_sfa,2,35-44,5%E/d,-0.134322952,0.035028369
+IHD,Ischemic heart disease,pufa_rep_sfa,3,45-54,5%E/d,-0.113950308,0.029715647
+IHD,Ischemic heart disease,pufa_rep_sfa,4,55-64,5%E/d,-0.094422037,0.024623118
+IHD,Ischemic heart disease,pufa_rep_sfa,5,65-74,5%E/d,-0.078318156,0.020423592
+IHD,Ischemic heart disease,pufa_rep_sfa,6,75+,5%E/d,-0.044598688,0.010082947
+IHD,Ischemic heart disease,pufa_rep_carbsfa,1,25-34,5%E/d,-0.155492299,0.039104051
+IHD,Ischemic heart disease,pufa_rep_carbsfa,2,35-44,5%E/d,-0.149133439,0.03750489
+IHD,Ischemic heart disease,pufa_rep_carbsfa,3,45-54,5%E/d,-0.126514502,0.031816556
+IHD,Ischemic heart disease,pufa_rep_carbsfa,4,55-64,5%E/d,-0.104833038,0.026363984
+IHD,Ischemic heart disease,pufa_rep_carbsfa,5,65-74,5%E/d,-0.086953538,0.021867549
+IHD,Ischemic heart disease,pufa_rep_carbsfa,6,75+,5%E/d,-0.049670911,0.010914561
+IHD,Ischemic heart disease (fatal),sea_omega3_fa,1,25-34,100mg/d,-0.240370768,0.058723997
+IHD,Ischemic heart disease (fatal),sea_omega3_fa,2,35-44,100mg/d,-0.230540802,0.056322478
+IHD,Ischemic heart disease (fatal),sea_omega3_fa,3,45-54,100mg/d,-0.195574882,0.047780097
+IHD,Ischemic heart disease (fatal),sea_omega3_fa,4,55-64,100mg/d,-0.162058173,0.039591768
+IHD,Ischemic heart disease (fatal),sea_omega3_fa,5,65-74,100mg/d,-0.134418803,0.032839307
+IHD,Ischemic heart disease (fatal),sea_omega3_fa,6,75+,100mg/d,-0.077126463,0.01624626
+DIAB,DIAB,ssb,1,25-34,8oz/d,0.294610699,0.084846742
+DIAB,DIAB,ssb,2,35-44,8oz/d,0.28256259,0.081376933
+DIAB,DIAB,ssb,3,45-54,8oz/d,0.239706572,0.069034565
+DIAB,DIAB,ssb,4,55-64,8oz/d,0.19862678,0.057203744
+DIAB,DIAB,ssb,5,65-74,8oz/d,0.164750555,0.047447523
+DIAB,DIAB,ssb,6,75+,8oz/d,0.094932802,0.023034438
+IHD,Ischemic heart disease,ssb,1,25-34,8oz/d,0.280127496,0.053668141
+IHD,Ischemic heart disease,ssb,2,35-44,8oz/d,0.268671678,0.051473382
+IHD,Ischemic heart disease,ssb,3,45-54,8oz/d,0.227922482,0.043666459
+IHD,Ischemic heart disease,ssb,4,55-64,8oz/d,0.188862192,0.036183106
+IHD,Ischemic heart disease,ssb,5,65-74,8oz/d,0.156651339,0.030011999
+IHD,Ischemic heart disease,ssb,6,75+,8oz/d,0.089836216,0.014961295
+IHD,Ischemic heart disease,sat_fat,1,25-34,5%E/d,0.139352458,0.037770377
+IHD,Ischemic heart disease,sat_fat,2,35-44,5%E/d,0.133653637,0.036225757
+IHD,Ischemic heart disease,sat_fat,3,45-54,5%E/d,0.113382508,0.030731428
+IHD,Ischemic heart disease,sat_fat,4,55-64,5%E/d,0.093951544,0.02546482
+IHD,Ischemic heart disease,sat_fat,5,65-74,5%E/d,0.077927906,0.02112174
+IHD,Ischemic heart disease,sat_fat,6,75+,5%E/d,0.044720456,0.010482698

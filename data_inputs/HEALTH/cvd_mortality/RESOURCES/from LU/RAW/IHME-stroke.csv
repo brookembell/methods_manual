@@ -1,0 +1,73 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+1,Deaths,102,United States of America,1,Male,232,65-74 years,494,Stroke,1,Number,2019,15362.813586811875,16328.8477860445,14547.616407479964
+1,Deaths,102,United States of America,2,Female,232,65-74 years,494,Stroke,1,Number,2019,13500.563778646809,14492.5068857526,12654.041720300504
+1,Deaths,102,United States of America,1,Male,10,25-29 years,495,Ischemic stroke,1,Number,2019,11.682809823018454,14.050391165814561,9.442325184446805
+1,Deaths,102,United States of America,2,Female,10,25-29 years,495,Ischemic stroke,1,Number,2019,12.356494663554384,14.243584824624685,10.132631363734172
+1,Deaths,102,United States of America,1,Male,11,30-34 years,495,Ischemic stroke,1,Number,2019,20.55595431678298,23.9585308320937,16.363393678133217
+1,Deaths,102,United States of America,2,Female,11,30-34 years,495,Ischemic stroke,1,Number,2019,22.97002712010901,26.518724513789614,19.31463590590624
+1,Deaths,102,United States of America,1,Male,12,35-39 years,495,Ischemic stroke,1,Number,2019,32.94089495513634,37.85834986808295,28.235026822803192
+1,Deaths,102,United States of America,2,Female,12,35-39 years,495,Ischemic stroke,1,Number,2019,32.57777877087178,36.31093762102236,28.89468784996736
+1,Deaths,102,United States of America,1,Male,13,40-44 years,495,Ischemic stroke,1,Number,2019,54.766267149618514,62.51445670508224,47.210408054940345
+1,Deaths,102,United States of America,2,Female,13,40-44 years,495,Ischemic stroke,1,Number,2019,53.78094333869162,59.507326794075134,48.39114879639539
+1,Deaths,102,United States of America,1,Male,14,45-49 years,495,Ischemic stroke,1,Number,2019,125.55100705594154,143.4928097699136,112.37586477374686
+1,Deaths,102,United States of America,2,Female,14,45-49 years,495,Ischemic stroke,1,Number,2019,86.45438412010904,97.16893989309504,76.57984996250873
+1,Deaths,102,United States of America,1,Male,15,50-54 years,495,Ischemic stroke,1,Number,2019,237.2923310263685,268.6113879921962,215.16702593004868
+1,Deaths,102,United States of America,2,Female,15,50-54 years,495,Ischemic stroke,1,Number,2019,165.45384319002702,182.8150576478652,150.47098424074434
+1,Deaths,102,United States of America,1,Male,16,55-59 years,495,Ischemic stroke,1,Number,2019,449.6093197206093,510.5707196843,403.8922795308773
+1,Deaths,102,United States of America,2,Female,16,55-59 years,495,Ischemic stroke,1,Number,2019,290.9063134842494,315.32901161429834,265.7111661000599
+1,Deaths,102,United States of America,1,Male,17,60-64 years,495,Ischemic stroke,1,Number,2019,1343.199928135177,1488.5853835083221,1214.5779986131806
+1,Deaths,102,United States of America,2,Female,17,60-64 years,495,Ischemic stroke,1,Number,2019,833.3451569312002,917.3335122013787,753.2544131638658
+1,Deaths,102,United States of America,1,Male,232,65-74 years,495,Ischemic stroke,1,Number,2019,5474.81492032031,5957.93695013896,5074.933992710438
+1,Deaths,102,United States of America,2,Female,232,65-74 years,495,Ischemic stroke,1,Number,2019,5068.074873536095,5484.811362853011,4684.484275257792
+1,Deaths,102,United States of America,1,Male,10,25-29 years,496,Intracerebral hemorrhage,1,Number,2019,62.71489481394503,74.30397267024013,53.52057310007458
+1,Deaths,102,United States of America,2,Female,10,25-29 years,496,Intracerebral hemorrhage,1,Number,2019,47.81821680014717,55.60302933700552,40.423579877092244
+1,Deaths,102,United States of America,1,Male,11,30-34 years,496,Intracerebral hemorrhage,1,Number,2019,116.4904606453588,136.61822252000792,100.8779026173354
+1,Deaths,102,United States of America,2,Female,11,30-34 years,496,Intracerebral hemorrhage,1,Number,2019,88.53695913983668,101.0606200468606,76.5802352297605
+1,Deaths,102,United States of America,1,Male,12,35-39 years,496,Intracerebral hemorrhage,1,Number,2019,219.96069160894893,249.88489458121458,196.9271514584108
+1,Deaths,102,United States of America,2,Female,12,35-39 years,496,Intracerebral hemorrhage,1,Number,2019,142.52368636289043,159.3308650304769,127.9592623685109
+1,Deaths,102,United States of America,1,Male,13,40-44 years,496,Intracerebral hemorrhage,1,Number,2019,398.2751961208129,452.8273007237992,355.6235376814781
+1,Deaths,102,United States of America,2,Female,13,40-44 years,496,Intracerebral hemorrhage,1,Number,2019,260.7629911451842,286.6674548411353,238.8412044120366
+1,Deaths,102,United States of America,1,Male,14,45-49 years,496,Intracerebral hemorrhage,1,Number,2019,711.7795437162717,811.8795190695533,641.8648368351154
+1,Deaths,102,United States of America,2,Female,14,45-49 years,496,Intracerebral hemorrhage,1,Number,2019,480.0711750617971,542.6857075839139,431.36240090982176
+1,Deaths,102,United States of America,1,Male,15,50-54 years,496,Intracerebral hemorrhage,1,Number,2019,1268.13189846686,1426.410826099697,1162.661519302683
+1,Deaths,102,United States of America,2,Female,15,50-54 years,496,Intracerebral hemorrhage,1,Number,2019,859.7924100363188,942.4717883851812,785.6562725620272
+1,Deaths,102,United States of America,1,Male,16,55-59 years,496,Intracerebral hemorrhage,1,Number,2019,2128.6540877344755,2382.9012037467432,1957.749008369719
+1,Deaths,102,United States of America,2,Female,16,55-59 years,496,Intracerebral hemorrhage,1,Number,2019,1340.2428748118566,1459.2137939154795,1231.5984327681772
+1,Deaths,102,United States of America,1,Male,17,60-64 years,496,Intracerebral hemorrhage,1,Number,2019,2933.546383786893,3227.5256611162963,2708.336801025152
+1,Deaths,102,United States of America,2,Female,17,60-64 years,496,Intracerebral hemorrhage,1,Number,2019,2081.8323644156694,2273.8055309836736,1902.8864543485086
+1,Deaths,102,United States of America,1,Male,232,65-74 years,496,Intracerebral hemorrhage,1,Number,2019,7909.08872628574,8528.627326359685,7416.961128916279
+1,Deaths,102,United States of America,2,Female,232,65-74 years,496,Intracerebral hemorrhage,1,Number,2019,6188.7910292804245,6778.328878250998,5742.106401880275
+1,Deaths,102,United States of America,1,Male,10,25-29 years,497,Subarachnoid hemorrhage,1,Number,2019,55.831682039567546,69.47248988438774,47.73938738167146
+1,Deaths,102,United States of America,2,Female,10,25-29 years,497,Subarachnoid hemorrhage,1,Number,2019,58.894751934857716,66.93130169917313,52.63932531391907
+1,Deaths,102,United States of America,1,Male,11,30-34 years,497,Subarachnoid hemorrhage,1,Number,2019,87.73103603413406,108.27663534286039,76.01411444485977
+1,Deaths,102,United States of America,2,Female,11,30-34 years,497,Subarachnoid hemorrhage,1,Number,2019,107.3400492075963,122.04620771491574,96.80707299610248
+1,Deaths,102,United States of America,1,Male,12,35-39 years,497,Subarachnoid hemorrhage,1,Number,2019,154.254217024706,184.01372184755752,137.19121556130403
+1,Deaths,102,United States of America,2,Female,12,35-39 years,497,Subarachnoid hemorrhage,1,Number,2019,185.56543512633993,210.11337416010207,169.3991221831052
+1,Deaths,102,United States of America,1,Male,13,40-44 years,497,Subarachnoid hemorrhage,1,Number,2019,246.92014240320233,285.7095201593152,222.3138881083506
+1,Deaths,102,United States of America,2,Female,13,40-44 years,497,Subarachnoid hemorrhage,1,Number,2019,308.38197439186604,345.6149289844783,285.3851663166866
+1,Deaths,102,United States of America,1,Male,14,45-49 years,497,Subarachnoid hemorrhage,1,Number,2019,371.8045291185048,421.087618689232,335.43305952485554
+1,Deaths,102,United States of America,2,Female,14,45-49 years,497,Subarachnoid hemorrhage,1,Number,2019,433.67938515885623,486.40581818539437,396.02234179276957
+1,Deaths,102,United States of America,1,Male,15,50-54 years,497,Subarachnoid hemorrhage,1,Number,2019,603.600498935452,676.4528887298964,535.5141547366846
+1,Deaths,102,United States of America,2,Female,15,50-54 years,497,Subarachnoid hemorrhage,1,Number,2019,651.2143197359322,722.1616843956978,599.1529325595673
+1,Deaths,102,United States of America,1,Male,16,55-59 years,497,Subarachnoid hemorrhage,1,Number,2019,988.6615247284203,1101.617936998113,847.8722206287673
+1,Deaths,102,United States of America,2,Female,16,55-59 years,497,Subarachnoid hemorrhage,1,Number,2019,972.1397706651582,1067.324517773139,892.9296086741763
+1,Deaths,102,United States of America,1,Male,17,60-64 years,497,Subarachnoid hemorrhage,1,Number,2019,877.981047488666,974.3665891951056,699.4250877263438
+1,Deaths,102,United States of America,2,Female,17,60-64 years,497,Subarachnoid hemorrhage,1,Number,2019,951.2226839481435,1051.657760014548,864.3678306923541
+1,Deaths,102,United States of America,1,Male,232,65-74 years,497,Subarachnoid hemorrhage,1,Number,2019,1978.9099402058157,2149.5865635197088,1629.9969552988412
+1,Deaths,102,United States of America,2,Female,232,65-74 years,497,Subarachnoid hemorrhage,1,Number,2019,2243.6978758302994,2452.923954521435,2067.9970341826543
+1,Deaths,102,United States of America,1,Male,10,25-29 years,494,Stroke,1,Number,2019,130.22938667653094,153.22785362159908,113.36656623404333
+1,Deaths,102,United States of America,2,Female,10,25-29 years,494,Stroke,1,Number,2019,119.06946339855912,134.29525119654977,105.18085700193457
+1,Deaths,102,United States of America,1,Male,11,30-34 years,494,Stroke,1,Number,2019,224.77745099627555,261.42805469854625,197.83312485767752
+1,Deaths,102,United States of America,2,Female,11,30-34 years,494,Stroke,1,Number,2019,218.8470354675418,243.02160144893688,198.84486726162973
+1,Deaths,102,United States of America,1,Male,12,35-39 years,494,Stroke,1,Number,2019,407.15580358879157,459.38877305580235,367.2595519927483
+1,Deaths,102,United States of America,2,Female,12,35-39 years,494,Stroke,1,Number,2019,360.66690026010207,398.37231690482855,332.58827418996657
+1,Deaths,102,United States of America,1,Male,13,40-44 years,494,Stroke,1,Number,2019,699.9616056736344,782.3135292162115,637.0420728007131
+1,Deaths,102,United States of America,2,Female,13,40-44 years,494,Stroke,1,Number,2019,622.9259088757418,682.3707983682983,581.8355203397387
+1,Deaths,102,United States of America,1,Male,14,45-49 years,494,Stroke,1,Number,2019,1209.1350798907179,1342.40577872776,1107.8541483830716
+1,Deaths,102,United States of America,2,Female,14,45-49 years,494,Stroke,1,Number,2019,1000.2049443407637,1106.6324112784569,914.4378597333573
+1,Deaths,102,United States of America,1,Male,15,50-54 years,494,Stroke,1,Number,2019,2109.024728428679,2301.9863692389395,1963.2599020724326
+1,Deaths,102,United States of America,2,Female,15,50-54 years,494,Stroke,1,Number,2019,1676.460572962274,1830.6499110621057,1552.0124090956149
+1,Deaths,102,United States of America,1,Male,16,55-59 years,494,Stroke,1,Number,2019,3566.9249321835077,3872.278339664362,3316.7171647507935
+1,Deaths,102,United States of America,2,Female,16,55-59 years,494,Stroke,1,Number,2019,2603.2889589612605,2800.9218795038146,2426.4666771056927
+1,Deaths,102,United States of America,1,Male,17,60-64 years,494,Stroke,1,Number,2019,5154.727359410739,5567.453225518763,4798.395022417877
+1,Deaths,102,United States of America,2,Female,17,60-64 years,494,Stroke,1,Number,2019,3866.400205295014,4172.507754926983,3557.3886351906826

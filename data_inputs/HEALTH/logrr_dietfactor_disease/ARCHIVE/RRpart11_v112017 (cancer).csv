@@ -1,0 +1,29 @@
+risk_factor,outcome,outcome_label,RR_unit,RR,CI_lower,CI_upper,logRR,logCI_lower,logCI_upper
+frt,MPLC,Headneck,100 g/d,0.95,0.91,1,-0.05129329,-0.09431068,0
+frt,Larynx,larynx,100 g/d,0.95,0.91,1,-0.05129329,-0.09431068,0
+frt,LC,lung,100 g/d,0.82,0.76,0.89,-0.198450939,-0.274436846,-0.116533816
+veg,MPLC,Headneck,100 g/d,0.91,0.87,0.96,-0.09431068,-0.1392621,-0.04082199
+veg,Larynx,larynx,100 g/d,0.91,0.87,0.96,-0.09431068,-0.1392621,-0.04082199
+veg,LC,lung,100/d,0.92,0.87,0.97,-0.083381609,-0.139262067,-0.030459207
+wg,CC,Colorectal Cancer,3 servings/d,0.83,0.78,0.89,-0.186329578,-0.248461359,-0.116533816
+pmeat,CC,Colorectal Cancer,50g/d,1.16,1.08,1.26,0.1482,0.07696,0.2311
+pmeat,SCNC,Stomach Cancer,50g/d,1.18,1.01,1.38,0.1655144,0.009950331,0.3220835
+rmeat,CC,Colorectal Cancer,100g/d,1.12,1,1.25,0.1133,0,0.2231
+prmeat,CC,Colorectal Cancer,100g/d,1.16,1.04,1.3,0.148420005,0.039220713,0.262364265
+fiber,CC,Colorectal Cancer,10g/d,0.9,0.86,0.94,-0.105360516,-0.15082289,-0.061875404
+sodium,SC,Stomach Cancer,5000 mg/d,1.339664,1.052424,1.706003,0.2924192,0.05109622,0.5341535
+ssb,ECA,Esophageal Cancer (cardia),1,1,1,1,0,0,0
+ssb,SCC,to fill in later,1,1,1,1,0,0,0
+ssb,LVC,to fill in later,1,1,1,1,0,0,0
+ssb,PC,to fill in later,1,1,1,1,0,0,0
+ssb,CC,to fill in later,1,1,1,1,0,0,0
+ssb,UC,to fill in later,1,1,1,1,0,0,0
+ssb,OC,to fill in later,1,1,1,1,0,0,0
+ssb,GC,to fill in later,1,1,1,1,0,0,0
+ssb,KC,to fill in later,1,1,1,1,0,0,0
+ssb,BC,to fill in later,1,1,1,1,0,0,0
+ssb,TC,to fill in later,1,1,1,1,0,0,0
+ssb,MMC,to fill in later,1,1,1,1,0,0,0
+ssb,APCA,Advanced Prostate Cancer,1,1,1,1,0,0,0
+ssb,EC,to fill in later,1,1,1,1,0,0,0
+ssb,LC,Advanced Prostate Cancer,1,1,1,1,0,0,0

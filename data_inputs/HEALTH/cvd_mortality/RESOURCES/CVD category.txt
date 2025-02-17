@@ -1,0 +1,75 @@
+
+coronary heart disease (CHD): I20‐I25; 
+25:https://wonder.cdc.gov/controller/saved/D76/D326F554
+20:https://wonder.cdc.gov/controller/saved/D76/D332F488
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F919
+
+Ischemic stroke (ISTK): I63, I65‐I67 (except I67.4), I69.3, G45; 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F856
+20:https://wonder.cdc.gov/controller/saved/D76/D325F789
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F920
+
+Hemorrhagic stroke (HSTK): I60‐I62, I69.0‐I69.2, I67.4; 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F855
+20:https://wonder.cdc.gov/controller/saved/D76/D325F797
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F921
+
+Other stroke (OSTK), unclassified stroke or sequelae of stroke, not specified as haemorrhage or infarction: I64, I69.4, I69.8; 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F854
+20:https://wonder.cdc.gov/controller/saved/D76/D325F799
+20-34:https://wonder.cdc.gov/controller/saved/D76/D335F979
+
+TSTK:
+25:https://wonder.cdc.gov/controller/saved/D76/D311F325
+20:https://wonder.cdc.gov/controller/saved/D76/D325F800
+20-24:https://wonder.cdc.gov/controller/saved/D76/D325F884
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F924
+
+
+Diabetes: E10‐E14 (except E10.2, E11.2, E12.2, E13.2);
+25:https://wonder.cdc.gov/controller/saved/D76/D326F550
+20:https://wonder.cdc.gov/controller/saved/D76/D325F801
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F925
+
+
+andother cardiovascular diseases (other CVD) including 
+hypertensive heart disease (I11), 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F857
+20:https://wonder.cdc.gov/controller/saved/D76/D325F802
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F927
+
+
+rheumatic heart disease (I01, I02.0, I05‐I09), 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F858
+20:https://wonder.cdc.gov/controller/saved/D76/D325F803
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F928
+
+cardiomyopathy and myocarditis (I42, I40), 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F859
+20:https://wonder.cdc.gov/controller/saved/D76/D325F804
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F915
+
+atrial fibrillation and flutter (I48), 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F863
+20:https://wonder.cdc.gov/controller/saved/D76/D325F806
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F929
+
+aortic aneurysm (I71), 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F864
+20:https://wonder.cdc.gov/controller/saved/D76/D325F805
+20-34:https://wonder.cdc.gov/controller/saved/D76/D335F951
+
+peripheral vascular disease (I73, I70.2), 
+25:https://wonder.cdc.gov/controller/saved/D76/D336F865
+20:https://wonder.cdc.gov/controller/saved/D76/D325F807
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F931
+
+endocarditis (I33),
+25:https://wonder.cdc.gov/controller/saved/D76/D336F866
+20:https://wonder.cdc.gov/controller/saved/D76/D325F808
+20-34:https://wonder.cdc.gov/controller/saved/D76/D334F932
+ 
+other cardiovascular and circulatory diseases (I00, I02.9, I27‐I28 (except I27.1), I30‐I32 (except I31.2, I31.3), I34‐I39, I47, I70.8, I72, I77‐I80, I82‐I84, I86‐I98).
+25:https://wonder.cdc.gov/controller/saved/D76/D336F867
+20:https://wonder.cdc.gov/controller/saved/D76/D325F809
+20-34:https://wonder.cdc.gov/controller/saved/D76/D342F208

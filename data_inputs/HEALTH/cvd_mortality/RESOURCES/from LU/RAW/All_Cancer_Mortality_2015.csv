@@ -1,0 +1,609 @@
+subgroup_id,type,CancerSite,year,Sex,age_gp,race_gp,count,population,crude_rate,crude_SE
+1,Mortality,All Malignanat Cancers,2015,Female,Age_2044,Non-hispanic White,4850,30523184,15.88956119,0.503233833
+2,Mortality,All Malignanat Cancers,2015,Female,Age_2044,Non-hispanic Black,1647,7676770,21.45433561,1.225925163
+3,Mortality,All Malignanat Cancers,2015,Female,Age_2044,Hispanic,1427,10518884,13.56607792,1.097699294
+4,Mortality,All Malignanat Cancers,2015,Female,Age_2044,Other,547,4433343,12.33831896,1.777237849
+5,Mortality,All Malignanat Cancers,2015,Male,Age_2044,Non-hispanic White,4291,31292111,13.71272139,0.459709394
+6,Mortality,All Malignanat Cancers,2015,Male,Age_2044,Non-hispanic Black,1053,7275243,14.47374335,1.036949758
+7,Mortality,All Malignanat Cancers,2015,Male,Age_2044,Hispanic,1200,11306346,10.61350856,0.95726126
+8,Mortality,All Malignanat Cancers,2015,Male,Age_2044,Other,444,4155228,10.68533423,1.803312591
+9,Mortality,All Malignanat Cancers,2015,Female,Age_4554,Non-hispanic White,14762,14238423,103.677212,1.170442783
+10,Mortality,All Malignanat Cancers,2015,Female,Age_4554,Non-hispanic Black,3771,2860342,131.8373817,2.99512922
+11,Mortality,All Malignanat Cancers,2015,Female,Age_4554,Hispanic,2198,3213000,68.40958606,2.832366952
+12,Mortality,All Malignanat Cancers,2015,Female,Age_4554,Other,1093,1529112,71.47939458,4.575444996
+13,Mortality,All Malignanat Cancers,2015,Male,Age_4554,Non-hispanic White,14804,14096551,105.0185964,1.228805009
+14,Mortality,All Malignanat Cancers,2015,Male,Age_4554,Non-hispanic Black,3266,2528856,129.149307,3.169323309
+15,Mortality,All Malignanat Cancers,2015,Male,Age_4554,Hispanic,2088,3272152,63.81121659,2.854045528
+16,Mortality,All Malignanat Cancers,2015,Male,Age_4554,Other,930,1352454,68.76389142,5.032903374
+17,Mortality,All Malignanat Cancers,2015,Female,Age_5564,Non-hispanic White,37865,15111568,250.5696298,1.802730636
+18,Mortality,All Malignanat Cancers,2015,Female,Age_5564,Non-hispanic Black,8324,2546832,326.83742,5.12912524
+19,Mortality,All Malignanat Cancers,2015,Female,Age_5564,Hispanic,3572,2198328,162.4871266,5.439892174
+20,Mortality,All Malignanat Cancers,2015,Female,Age_5564,Other,2019,1272047,158.7205504,7.614481291
+21,Mortality,All Malignanat Cancers,2015,Male,Age_5564,Non-hispanic White,47829,14415002,331.8001621,2.20403374
+22,Mortality,All Malignanat Cancers,2015,Male,Age_5564,Non-hispanic Black,9646,2137700,451.2326332,6.613875667
+23,Mortality,All Malignanat Cancers,2015,Male,Age_5564,Hispanic,4336,2058899,210.5979944,6.196726456
+24,Mortality,All Malignanat Cancers,2015,Male,Age_5564,Other,2114,1066033,198.3053057,9.433452043
+25,Mortality,All Malignanat Cancers,2015,Female,Age_over65,Non-hispanic White,161624,20639658,783.0749909,4.57400391
+26,Mortality,All Malignanat Cancers,2015,Female,Age_over65,Non-hispanic Black,19864,2552333,778.2683529,13.12687955
+27,Mortality,All Malignanat Cancers,2015,Female,Age_over65,Hispanic,10574,2132451,495.8613351,16.7348558
+28,Mortality,All Malignanat Cancers,2015,Female,Age_over65,Other,6327,1339138,472.4681101,21.94540916
+29,Mortality,All Malignanat Cancers,2015,Male,Age_over65,Non-hispanic White,180159,16705087,1078.467894,6.30832329
+30,Mortality,All Malignanat Cancers,2015,Male,Age_over65,Non-hispanic Black,20673,1714280,1205.92902,20.90467398
+31,Mortality,All Malignanat Cancers,2015,Male,Age_over65,Hispanic,11973,1619259,739.4122867,24.03649664
+32,Mortality,All Malignanat Cancers,2015,Male,Age_over65,Other,6905,1032086,669.0333945,30.40689696
+1,Mortality,Colon and Rectum,2015,Female,Age_2044,Non-hispanic White,442,30523184,1.448079597,0.171314946
+2,Mortality,Colon and Rectum,2015,Female,Age_2044,Non-hispanic Black,161,7676770,2.097236207,0.372949292
+3,Mortality,Colon and Rectum,2015,Female,Age_2044,Hispanic,116,10518884,1.102778584,0.326233929
+4,Mortality,Colon and Rectum,2015,Female,Age_2044,Other,58,4433343,1.308267824,0.712797048
+5,Mortality,Colon and Rectum,2015,Male,Age_2044,Non-hispanic White,608,31292111,1.942981731,0.187178255
+6,Mortality,Colon and Rectum,2015,Male,Age_2044,Non-hispanic Black,155,7275243,2.130513029,0.416537722
+7,Mortality,Colon and Rectum,2015,Male,Age_2044,Hispanic,146,11306346,1.291310208,0.312887498
+8,Mortality,Colon and Rectum,2015,Male,Age_2044,Other,68,4155228,1.63649263,0.790485155
+9,Mortality,Colon and Rectum,2015,Female,Age_4554,Non-hispanic White,1389,14238423,9.755293827,0.357113106
+10,Mortality,Colon and Rectum,2015,Female,Age_4554,Non-hispanic Black,387,2860342,13.52985063,0.96543419
+11,Mortality,Colon and Rectum,2015,Female,Age_4554,Hispanic,232,3213000,7.220666044,0.912965432
+12,Mortality,Colon and Rectum,2015,Female,Age_4554,Other,101,1529112,6.605140761,1.400704512
+13,Mortality,Colon and Rectum,2015,Male,Age_4554,Non-hispanic White,1826,14096551,12.95352317,0.45586063
+14,Mortality,Colon and Rectum,2015,Male,Age_4554,Non-hispanic Black,480,2528856,18.98091469,1.220502818
+15,Mortality,Colon and Rectum,2015,Male,Age_4554,Hispanic,297,3272152,9.076595464,1.079048446
+16,Mortality,Colon and Rectum,2015,Male,Age_4554,Other,121,1352454,8.946699851,1.771979011
+17,Mortality,Colon and Rectum,2015,Female,Age_5564,Non-hispanic White,2780,15111568,18.3965026,0.5
+18,Mortality,Colon and Rectum,2015,Female,Age_5564,Non-hispanic Black,758,2546832,29.76246568,1.542968607
+19,Mortality,Colon and Rectum,2015,Female,Age_5564,Hispanic,311,2198328,14.14711544,1.653763044
+20,Mortality,Colon and Rectum,2015,Female,Age_5564,Other,198,1272047,15.5654626,2.31258199
+21,Mortality,Colon and Rectum,2015,Male,Age_5564,Non-hispanic White,4166,14415002,28.90044691,0.649186383
+22,Mortality,Colon and Rectum,2015,Male,Age_5564,Non-hispanic Black,1030,2137700,48.18262619,2.13545711
+23,Mortality,Colon and Rectum,2015,Male,Age_5564,Hispanic,509,2058899,24.72195091,2.02847913
+24,Mortality,Colon and Rectum,2015,Male,Age_5564,Other,217,1066033,20.35584264,2.974212488
+25,Mortality,Colon and Rectum,2015,Female,Age_over65,Non-hispanic White,14182,20639658,68.71237886,1.386743971
+26,Mortality,Colon and Rectum,2015,Female,Age_over65,Non-hispanic Black,2101,2552333,82.31684502,4.398330915
+27,Mortality,Colon and Rectum,2015,Female,Age_over65,Hispanic,964,2132451,45.206197,4.776117704
+28,Mortality,Colon and Rectum,2015,Female,Age_over65,Other,630,1339138,47.04518877,6.991668569
+29,Mortality,Colon and Rectum,2015,Male,Age_over65,Non-hispanic White,14014,16705087,83.89061368,1.761838161
+30,Mortality,Colon and Rectum,2015,Male,Age_over65,Non-hispanic Black,1961,1714280,114.392048,6.484762549
+31,Mortality,Colon and Rectum,2015,Male,Age_over65,Hispanic,1172,1619259,72.37878561,6.968643088
+32,Mortality,Colon and Rectum,2015,Male,Age_over65,Other,639,1032086,61.9134452,9.99899011
+1,Mortality,Corpus Uteri,2015,Female,Age_2044,Non-hispanic White,46,30523184,0.150705116,0.062171225
+2,Mortality,Corpus Uteri,2015,Female,Age_2044,Non-hispanic Black,12,7676770,0.156315742,0.157659561
+3,Mortality,Corpus Uteri,2015,Female,Age_2044,Hispanic,14,10518884,0.133093967,0.088409385
+4,Mortality,Corpus Uteri,2015,Female,Age_2044,Other,8,4433343,0.180450734,0.361554171
+5,Mortality,Corpus Uteri,2015,Male,Age_2044,Non-hispanic White,0,31292111,0,0
+6,Mortality,Corpus Uteri,2015,Male,Age_2044,Non-hispanic Black,0,7275243,0,0
+7,Mortality,Corpus Uteri,2015,Male,Age_2044,Hispanic,0,11306346,0,0
+8,Mortality,Corpus Uteri,2015,Male,Age_2044,Other,0,4155228,0,0
+9,Mortality,Corpus Uteri,2015,Female,Age_4554,Non-hispanic White,183,14238423,1.285254694,0.161505998
+10,Mortality,Corpus Uteri,2015,Female,Age_4554,Non-hispanic Black,45,2860342,1.573238445,0.354777969
+11,Mortality,Corpus Uteri,2015,Female,Age_4554,Hispanic,36,3213000,1.120448179,0.405551646
+12,Mortality,Corpus Uteri,2015,Female,Age_4554,Other,22,1529112,1.438743532,0.532399906
+13,Mortality,Corpus Uteri,2015,Male,Age_4554,Non-hispanic White,0,14096551,0,0
+14,Mortality,Corpus Uteri,2015,Male,Age_4554,Non-hispanic Black,0,2528856,0,0
+15,Mortality,Corpus Uteri,2015,Male,Age_4554,Hispanic,0,3272152,0,0
+16,Mortality,Corpus Uteri,2015,Male,Age_4554,Other,0,1352454,0,0
+17,Mortality,Corpus Uteri,2015,Female,Age_5564,Non-hispanic White,692,15111568,4.579273309,0.25288871
+18,Mortality,Corpus Uteri,2015,Female,Age_5564,Non-hispanic Black,202,2546832,7.931422253,0.827239247
+19,Mortality,Corpus Uteri,2015,Female,Age_5564,Hispanic,76,2198328,3.457172906,0.928766023
+20,Mortality,Corpus Uteri,2015,Female,Age_5564,Other,51,1272047,4.00928582,0.99162295
+21,Mortality,Corpus Uteri,2015,Male,Age_5564,Non-hispanic White,0,14415002,0,0
+22,Mortality,Corpus Uteri,2015,Male,Age_5564,Non-hispanic Black,0,2137700,0,0
+23,Mortality,Corpus Uteri,2015,Male,Age_5564,Hispanic,0,2058899,0,0
+24,Mortality,Corpus Uteri,2015,Male,Age_5564,Other,0,1066033,0,0
+25,Mortality,Corpus Uteri,2015,Female,Age_over65,Non-hispanic White,2226,20639658,10.78506243,0.538218474
+26,Mortality,Corpus Uteri,2015,Female,Age_over65,Non-hispanic Black,488,2552333,19.11976219,1.925549241
+27,Mortality,Corpus Uteri,2015,Female,Age_over65,Hispanic,156,2132451,7.315525656,2.03656471
+28,Mortality,Corpus Uteri,2015,Female,Age_over65,Other,76,1339138,5.675292614,1.923666505
+29,Mortality,Corpus Uteri,2015,Male,Age_over65,Non-hispanic White,0,16705087,0,0
+30,Mortality,Corpus Uteri,2015,Male,Age_over65,Non-hispanic Black,0,1714280,0,0
+31,Mortality,Corpus Uteri,2015,Male,Age_over65,Hispanic,0,1619259,0,0
+32,Mortality,Corpus Uteri,2015,Male,Age_over65,Other,0,1032086,0,0
+1,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_2044,Non-hispanic White,18,30523184,0.058971567,0.1
+2,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_2044,Non-hispanic Black,0,7676770,0,0
+3,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_2044,Hispanic,0,10518884,0,0
+4,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_2044,Other,0,4433343,0,0
+5,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_2044,Non-hispanic White,79,31292111,0.252459797,0.156374617
+6,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_2044,Non-hispanic Black,4,7275243,0.054980981,0.4
+7,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_2044,Hispanic,22,11306346,0.19458099,0.491987152
+8,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_2044,Other,10,4155228,0.240660681,0.920793835
+9,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_4554,Non-hispanic White,58,14238423,0.407348482,0.161505998
+10,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_4554,Non-hispanic Black,9,2860342,0.314647689,0.4
+11,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_4554,Hispanic,11,3213000,0.342359166,0.4
+12,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_4554,Other,0,1529112,0,0
+13,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_4554,Non-hispanic White,432,14096551,3.064579414,0.418322394
+14,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_4554,Non-hispanic Black,44,2528856,1.73991718,0.8
+15,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_4554,Hispanic,37,3272152,1.130754317,0.502404413
+16,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_4554,Other,23,1352454,1.700612368,1.994949631
+17,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_5564,Non-hispanic White,131,15111568,0.866885554,0.2
+18,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_5564,Non-hispanic Black,19,2546832,0.746024865,0.520546497
+19,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_5564,Hispanic,11,2198328,0.500380289,0.6
+20,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_5564,Other,8,1272047,0.62890758,1.289343849
+21,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_5564,Non-hispanic White,1323,14415002,9.177938373,0.748929718
+22,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_5564,Non-hispanic Black,55,2137700,2.57285868,1.065240648
+23,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_5564,Hispanic,82,2058899,3.982711148,1.357491888
+24,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_5564,Other,32,1066033,3.001783247,2.75157767
+25,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_over65,Non-hispanic White,789,20639658,3.82273776,0.671955408
+26,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_over65,Non-hispanic Black,41,2552333,1.606373463,1.272570938
+27,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_over65,Hispanic,34,2132451,1.594409438,1.170321101
+28,Mortality,Esophageal Adenocarcinoma,2015,Female,Age_over65,Other,4,1339138,0.298699611,0.60906584
+29,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_over65,Non-hispanic White,4306,16705087,25.77657931,1.987213678
+30,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_over65,Non-hispanic Black,74,1714280,4.316681056,2.544019635
+31,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_over65,Hispanic,163,1619259,10.06633281,5.591938162
+32,Mortality,Esophageal Adenocarcinoma,2015,Male,Age_over65,Other,36,1032086,3.48808142,5.367676676
+1,Mortality,Esophagus,2015,Female,Age_2044,Non-hispanic White,34,30523184,0.111390738,0.069624969
+2,Mortality,Esophagus,2015,Female,Age_2044,Non-hispanic Black,9,7676770,0.117236807,0.140364867
+3,Mortality,Esophagus,2015,Female,Age_2044,Hispanic,6,10518884,0.057040272,0.1669475
+4,Mortality,Esophagus,2015,Female,Age_2044,Other,1,4433343,0.022556342,0.1
+5,Mortality,Esophagus,2015,Male,Age_2044,Non-hispanic White,162,31292111,0.517702369,0.107726449
+6,Mortality,Esophagus,2015,Male,Age_2044,Non-hispanic Black,19,7275243,0.261159662,0.203927552
+7,Mortality,Esophagus,2015,Male,Age_2044,Hispanic,25,11306346,0.221114762,0.118852146
+8,Mortality,Esophagus,2015,Male,Age_2044,Other,9,4155228,0.216594613,0.373203249
+9,Mortality,Esophagus,2015,Female,Age_4554,Non-hispanic White,136,14238423,0.955161959,0.1
+10,Mortality,Esophagus,2015,Female,Age_4554,Non-hispanic Black,42,2860342,1.468355882,0.318570218
+11,Mortality,Esophagus,2015,Female,Age_4554,Hispanic,15,3213000,0.466853408,0.437543681
+12,Mortality,Esophagus,2015,Female,Age_4554,Other,2,1529112,0.130794867,1.5
+13,Mortality,Esophagus,2015,Male,Age_4554,Non-hispanic White,845,14096551,5.994374085,0.257993232
+14,Mortality,Esophagus,2015,Male,Age_4554,Non-hispanic Black,96,2528856,3.796182938,0.553265857
+15,Mortality,Esophagus,2015,Male,Age_4554,Hispanic,66,3272152,2.017021214,0.457362994
+16,Mortality,Esophagus,2015,Male,Age_4554,Other,34,1352454,2.513948718,1.171579413
+17,Mortality,Esophagus,2015,Female,Age_5564,Non-hispanic White,439,15111568,2.905059224,0.2
+18,Mortality,Esophagus,2015,Female,Age_5564,Non-hispanic Black,129,2546832,5.065116191,0.647159032
+19,Mortality,Esophagus,2015,Female,Age_5564,Hispanic,29,2198328,1.319184398,0.40003464
+20,Mortality,Esophagus,2015,Female,Age_5564,Other,13,1272047,1.021974817,0.714639875
+21,Mortality,Esophagus,2015,Male,Age_5564,Non-hispanic White,2667,14415002,18.50155831,0.504507315
+22,Mortality,Esophagus,2015,Male,Age_5564,Non-hispanic Black,291,2137700,13.61276138,1.141329029
+23,Mortality,Esophagus,2015,Male,Age_5564,Hispanic,151,2058899,7.33401687,1.197157258
+24,Mortality,Esophagus,2015,Male,Age_5564,Other,78,1066033,7.316846664,2.311261912
+25,Mortality,Esophagus,2015,Female,Age_over65,Non-hispanic White,1842,20639658,8.924566483,0.499929848
+26,Mortality,Esophagus,2015,Female,Age_over65,Non-hispanic Black,179,2552333,7.013191461,1.208663487
+27,Mortality,Esophagus,2015,Female,Age_over65,Hispanic,88,2132451,4.12670678,1.860052909
+28,Mortality,Esophagus,2015,Female,Age_over65,Other,50,1339138,3.733745141,2.199778152
+29,Mortality,Esophagus,2015,Male,Age_over65,Non-hispanic White,6789,16705087,40.64031513,1.150740942
+30,Mortality,Esophagus,2015,Male,Age_over65,Non-hispanic Black,447,1714280,26.07508692,2.790571827
+31,Mortality,Esophagus,2015,Male,Age_over65,Hispanic,302,1619259,18.65050619,3.644672304
+32,Mortality,Esophagus,2015,Male,Age_over65,Other,163,1032086,15.79325754,4.90551318
+1,Mortality,Female Breast,2015,Female,Age_2044,Non-hispanic White,1201,30523184,3.934714019,0.24226805
+2,Mortality,Female Breast,2015,Female,Age_2044,Non-hispanic Black,553,7676770,7.203550452,0.706850694
+3,Mortality,Female Breast,2015,Female,Age_2044,Hispanic,337,10518884,3.20376192,0.568278205
+4,Mortality,Female Breast,2015,Female,Age_2044,Other,132,4433343,2.977437117,0.909915186
+5,Mortality,Female Breast,2015,Male,Age_2044,Non-hispanic White,0,31292111,0,0
+6,Mortality,Female Breast,2015,Male,Age_2044,Non-hispanic Black,0,7275243,0,0
+7,Mortality,Female Breast,2015,Male,Age_2044,Hispanic,0,11306346,0,0
+8,Mortality,Female Breast,2015,Male,Age_2044,Other,0,4155228,0,0
+9,Mortality,Female Breast,2015,Female,Age_4554,Non-hispanic White,3269,14238423,22.95900325,0.555855515
+10,Mortality,Female Breast,2015,Female,Age_4554,Non-hispanic Black,1137,2860342,39.75049137,1.660502219
+11,Mortality,Female Breast,2015,Female,Age_4554,Hispanic,507,3213000,15.77964519,1.364576228
+12,Mortality,Female Breast,2015,Female,Age_4554,Other,250,1529112,16.34935832,2.091899282
+13,Mortality,Female Breast,2015,Male,Age_4554,Non-hispanic White,0,14096551,0,0
+14,Mortality,Female Breast,2015,Male,Age_4554,Non-hispanic Black,0,2528856,0,0
+15,Mortality,Female Breast,2015,Male,Age_4554,Hispanic,0,3272152,0,0
+16,Mortality,Female Breast,2015,Male,Age_4554,Other,0,1352454,0,0
+17,Mortality,Female Breast,2015,Female,Age_5564,Non-hispanic White,6400,15111568,42.35166066,0.749571944
+18,Mortality,Female Breast,2015,Female,Age_5564,Non-hispanic Black,1668,2546832,65.49313029,2.240707302
+19,Mortality,Female Breast,2015,Female,Age_5564,Hispanic,683,2198328,31.06906704,2.405608636
+20,Mortality,Female Breast,2015,Female,Age_5564,Other,382,1272047,30.03033693,3.096994422
+21,Mortality,Female Breast,2015,Male,Age_5564,Non-hispanic White,0,14415002,0,0
+22,Mortality,Female Breast,2015,Male,Age_5564,Non-hispanic Black,0,2137700,0,0
+23,Mortality,Female Breast,2015,Male,Age_5564,Hispanic,0,2058899,0,0
+24,Mortality,Female Breast,2015,Male,Age_5564,Other,0,1066033,0,0
+25,Mortality,Female Breast,2015,Female,Age_over65,Non-hispanic White,20128,20639658,97.52099575,1.617666417
+26,Mortality,Female Breast,2015,Female,Age_over65,Non-hispanic Black,2871,2552333,112.4853223,4.957488981
+27,Mortality,Female Breast,2015,Female,Age_over65,Hispanic,1212,2132451,56.83600702,5.850345804
+28,Mortality,Female Breast,2015,Female,Age_over65,Other,656,1339138,48.98673624,7.394294792
+29,Mortality,Female Breast,2015,Male,Age_over65,Non-hispanic White,0,16705087,0,0
+30,Mortality,Female Breast,2015,Male,Age_over65,Non-hispanic Black,0,1714280,0,0
+31,Mortality,Female Breast,2015,Male,Age_over65,Hispanic,0,1619259,0,0
+32,Mortality,Female Breast,2015,Male,Age_over65,Other,0,1032086,0,0
+1,Mortality,Gallbladder,2015,Female,Age_2044,Non-hispanic White,7,30523184,0.022933387,0
+2,Mortality,Gallbladder,2015,Female,Age_2044,Non-hispanic Black,8,7676770,0.104210495,0.1
+3,Mortality,Gallbladder,2015,Female,Age_2044,Hispanic,7,10518884,0.066546984,0.1
+4,Mortality,Gallbladder,2015,Female,Age_2044,Other,2,4433343,0.045112684,0.38125819
+5,Mortality,Gallbladder,2015,Male,Age_2044,Non-hispanic White,2,31292111,0.006391387,0
+6,Mortality,Gallbladder,2015,Male,Age_2044,Non-hispanic Black,0,7275243,0,0
+7,Mortality,Gallbladder,2015,Male,Age_2044,Hispanic,1,11306346,0.00884459,0.1
+8,Mortality,Gallbladder,2015,Male,Age_2044,Other,3,4155228,0.072198204,0.307193657
+9,Mortality,Gallbladder,2015,Female,Age_4554,Non-hispanic White,47,14238423,0.330092736,0.1
+10,Mortality,Gallbladder,2015,Female,Age_4554,Non-hispanic Black,29,2860342,1.013864776,0.256163184
+11,Mortality,Gallbladder,2015,Female,Age_4554,Hispanic,23,3213000,0.715841892,0.332451346
+12,Mortality,Gallbladder,2015,Female,Age_4554,Other,11,1529112,0.719371766,0.489301629
+13,Mortality,Gallbladder,2015,Male,Age_4554,Non-hispanic White,27,14096551,0.191536213,0.072884165
+14,Mortality,Gallbladder,2015,Male,Age_4554,Non-hispanic Black,8,2528856,0.316348578,0.159062402
+15,Mortality,Gallbladder,2015,Male,Age_4554,Hispanic,6,3272152,0.183365565,0.1
+16,Mortality,Gallbladder,2015,Male,Age_4554,Other,4,1352454,0.295758673,0.367242979
+17,Mortality,Gallbladder,2015,Female,Age_5564,Non-hispanic White,142,15111568,0.939677471,0.1
+18,Mortality,Gallbladder,2015,Female,Age_5564,Non-hispanic Black,46,2546832,1.806165464,0.402973277
+19,Mortality,Gallbladder,2015,Female,Age_5564,Hispanic,43,2198328,1.956032039,0.574035178
+20,Mortality,Gallbladder,2015,Female,Age_5564,Other,21,1272047,1.650882397,0.813596366
+21,Mortality,Gallbladder,2015,Male,Age_5564,Non-hispanic White,64,14415002,0.443981902,0.1
+22,Mortality,Gallbladder,2015,Male,Age_5564,Non-hispanic Black,21,2137700,0.982364223,0.304354471
+23,Mortality,Gallbladder,2015,Male,Age_5564,Hispanic,17,2058899,0.825684018,0.301166473
+24,Mortality,Gallbladder,2015,Male,Age_5564,Other,4,1066033,0.375222906,0.5
+25,Mortality,Gallbladder,2015,Female,Age_over65,Non-hispanic White,753,20639658,3.648316266,0.326988096
+26,Mortality,Gallbladder,2015,Female,Age_over65,Non-hispanic Black,135,2552333,5.289278476,1.112944995
+27,Mortality,Gallbladder,2015,Female,Age_over65,Hispanic,140,2132451,6.565215332,1.645168498
+28,Mortality,Gallbladder,2015,Female,Age_over65,Other,54,1339138,4.032444752,2.091922717
+29,Mortality,Gallbladder,2015,Male,Age_over65,Non-hispanic White,336,16705087,2.011363365,0.273116735
+30,Mortality,Gallbladder,2015,Male,Age_over65,Non-hispanic Black,72,1714280,4.200014,1.271138171
+31,Mortality,Gallbladder,2015,Male,Age_over65,Hispanic,45,1619259,2.779048935,1.872875388
+32,Mortality,Gallbladder,2015,Male,Age_over65,Other,41,1032086,3.972537172,2.321491687
+1,Mortality,Kidney and Renal Pelvis,2015,Female,Age_2044,Non-hispanic White,44,30523184,0.14415272,0.062171225
+2,Mortality,Kidney and Renal Pelvis,2015,Female,Age_2044,Non-hispanic Black,30,7676770,0.390789355,0.173027346
+3,Mortality,Kidney and Renal Pelvis,2015,Female,Age_2044,Hispanic,17,10518884,0.161614103,0.115633272
+4,Mortality,Kidney and Renal Pelvis,2015,Female,Age_2044,Other,7,4433343,0.157894393,0.401598482
+5,Mortality,Kidney and Renal Pelvis,2015,Male,Age_2044,Non-hispanic White,107,31292111,0.341939219,0.085837476
+6,Mortality,Kidney and Renal Pelvis,2015,Male,Age_2044,Non-hispanic Black,60,7275243,0.824714721,0.262523887
+7,Mortality,Kidney and Renal Pelvis,2015,Male,Age_2044,Hispanic,37,11306346,0.327249847,0.147836132
+8,Mortality,Kidney and Renal Pelvis,2015,Male,Age_2044,Other,10,4155228,0.240660681,0.35926512
+9,Mortality,Kidney and Renal Pelvis,2015,Female,Age_4554,Non-hispanic White,177,14238423,1.243115196,0.1
+10,Mortality,Kidney and Renal Pelvis,2015,Female,Age_4554,Non-hispanic Black,36,2860342,1.258590756,0.3
+11,Mortality,Kidney and Renal Pelvis,2015,Female,Age_4554,Hispanic,32,3213000,0.995953937,0.310409916
+12,Mortality,Kidney and Renal Pelvis,2015,Female,Age_4554,Other,10,1529112,0.653974333,0.538098813
+13,Mortality,Kidney and Renal Pelvis,2015,Male,Age_4554,Non-hispanic White,556,14096551,3.944227208,0.257993232
+14,Mortality,Kidney and Renal Pelvis,2015,Male,Age_4554,Non-hispanic Black,119,2528856,4.7056851,0.610251409
+15,Mortality,Kidney and Renal Pelvis,2015,Male,Age_4554,Hispanic,107,3272152,3.270019241,0.536818922
+16,Mortality,Kidney and Renal Pelvis,2015,Male,Age_4554,Other,31,1352454,2.292129714,0.984292448
+17,Mortality,Kidney and Renal Pelvis,2015,Female,Age_5564,Non-hispanic White,605,15111568,4.003555422,0.25288871
+18,Mortality,Kidney and Renal Pelvis,2015,Female,Age_5564,Non-hispanic Black,104,2546832,4.083504526,0.547509251
+19,Mortality,Kidney and Renal Pelvis,2015,Female,Age_5564,Hispanic,105,2198328,4.776357304,0.882088061
+20,Mortality,Kidney and Renal Pelvis,2015,Female,Age_5564,Other,25,1272047,1.965336186,0.971609355
+21,Mortality,Kidney and Renal Pelvis,2015,Male,Age_5564,Non-hispanic White,1671,14415002,11.59208996,0.450041591
+22,Mortality,Kidney and Renal Pelvis,2015,Male,Age_5564,Non-hispanic Black,272,2137700,12.72395565,1.093602025
+23,Mortality,Kidney and Renal Pelvis,2015,Male,Age_5564,Hispanic,209,2058899,10.15105646,1.344164281
+24,Mortality,Kidney and Renal Pelvis,2015,Male,Age_5564,Other,76,1066033,7.129235211,1.921884749
+25,Mortality,Kidney and Renal Pelvis,2015,Female,Age_over65,Non-hispanic White,3006,20639658,14.56419481,0.635842245
+26,Mortality,Kidney and Renal Pelvis,2015,Female,Age_over65,Non-hispanic Black,346,2552333,13.55622483,1.754949632
+27,Mortality,Kidney and Renal Pelvis,2015,Female,Age_over65,Hispanic,269,2132451,12.61459232,3.372508648
+28,Mortality,Kidney and Renal Pelvis,2015,Female,Age_over65,Other,93,1339138,6.944765961,3.235926258
+29,Mortality,Kidney and Renal Pelvis,2015,Male,Age_over65,Non-hispanic White,5175,16705087,30.97858754,1.051981719
+30,Mortality,Kidney and Renal Pelvis,2015,Male,Age_over65,Non-hispanic Black,434,1714280,25.31675106,3.010405586
+31,Mortality,Kidney and Renal Pelvis,2015,Male,Age_over65,Hispanic,448,1619259,27.66697607,4.242489042
+32,Mortality,Kidney and Renal Pelvis,2015,Male,Age_over65,Other,154,1032086,14.92123718,5.585949586
+1,Mortality,Larynx,2015,Female,Age_2044,Non-hispanic White,4,30523184,0.013104793,0
+2,Mortality,Larynx,2015,Female,Age_2044,Non-hispanic Black,2,7676770,0.026052624,0.1
+3,Mortality,Larynx,2015,Female,Age_2044,Hispanic,0,10518884,0,0
+4,Mortality,Larynx,2015,Female,Age_2044,Other,0,4433343,0,0
+5,Mortality,Larynx,2015,Male,Age_2044,Non-hispanic White,15,31292111,0.047935405,0.049298824
+6,Mortality,Larynx,2015,Male,Age_2044,Non-hispanic Black,5,7275243,0.068726227,0.2
+7,Mortality,Larynx,2015,Male,Age_2044,Hispanic,1,11306346,0.00884459,0.1
+8,Mortality,Larynx,2015,Male,Age_2044,Other,0,4155228,0,0
+9,Mortality,Larynx,2015,Female,Age_4554,Non-hispanic White,57,14238423,0.400325233,0.1
+10,Mortality,Larynx,2015,Female,Age_4554,Non-hispanic Black,6,2860342,0.209765126,0.2
+11,Mortality,Larynx,2015,Female,Age_4554,Hispanic,5,3213000,0.155617803,0.1
+12,Mortality,Larynx,2015,Female,Age_4554,Other,1,1529112,0.065397433,0.2
+13,Mortality,Larynx,2015,Male,Age_4554,Non-hispanic White,190,14096551,1.347847427,0.161047523
+14,Mortality,Larynx,2015,Male,Age_4554,Non-hispanic Black,41,2528856,1.621286463,0.318124804
+15,Mortality,Larynx,2015,Male,Age_4554,Hispanic,22,3272152,0.672340405,0.251202207
+16,Mortality,Larynx,2015,Male,Age_4554,Other,4,1352454,0.295758673,0.718502144
+17,Mortality,Larynx,2015,Female,Age_5564,Non-hispanic White,158,15111568,1.045556623,0.1
+18,Mortality,Larynx,2015,Female,Age_5564,Non-hispanic Black,32,2546832,1.256462931,0.348811575
+19,Mortality,Larynx,2015,Female,Age_5564,Hispanic,6,2198328,0.272934703,0.163920114
+20,Mortality,Larynx,2015,Female,Age_5564,Other,2,1272047,0.157226895,0.2
+21,Mortality,Larynx,2015,Male,Age_5564,Non-hispanic White,579,14415002,4.016648766,0.252253658
+22,Mortality,Larynx,2015,Male,Age_5564,Non-hispanic Black,173,2137700,8.092810029,0.844798489
+23,Mortality,Larynx,2015,Male,Age_5564,Hispanic,51,2058899,2.477052055,0.544496227
+24,Mortality,Larynx,2015,Male,Age_5564,Other,15,1066033,1.407085897,0.737656226
+25,Mortality,Larynx,2015,Female,Age_over65,Non-hispanic White,415,20639658,2.010692231,0.251069929
+26,Mortality,Larynx,2015,Female,Age_over65,Non-hispanic Black,66,2552333,2.585869477,0.714346051
+27,Mortality,Larynx,2015,Female,Age_over65,Hispanic,12,2132451,0.562732743,0.493390332
+28,Mortality,Larynx,2015,Female,Age_over65,Other,10,1339138,0.746749028,1.027524761
+29,Mortality,Larynx,2015,Male,Age_over65,Non-hispanic White,1410,16705087,8.440542692,0.526048383
+30,Mortality,Larynx,2015,Male,Age_over65,Non-hispanic Black,279,1714280,16.27505425,2.273542301
+31,Mortality,Larynx,2015,Male,Age_over65,Hispanic,132,1619259,8.151876877,3.131010921
+32,Mortality,Larynx,2015,Male,Age_over65,Other,49,1032086,4.747666377,2.846056356
+1,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_2044,Non-hispanic White,82,30523184,0.268648251,0.062171225
+2,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_2044,Non-hispanic Black,29,7676770,0.377763044,0.173027346
+3,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_2044,Hispanic,35,10518884,0.332734918,0.22900735
+4,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_2044,Other,21,4433343,0.473683178,0.340908409
+5,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_2044,Non-hispanic White,122,31292111,0.389874624,0.088975585
+6,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_2044,Non-hispanic Black,55,7275243,0.755988494,0.247873407
+7,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_2044,Hispanic,45,11306346,0.398006571,0.216878122
+8,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_2044,Other,64,4155228,1.540228358,0.592368642
+9,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_4554,Non-hispanic White,351,14238423,2.465160643,0.161505998
+10,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_4554,Non-hispanic Black,80,2860342,2.796868347,0.414707904
+11,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_4554,Hispanic,83,3213000,2.583255524,0.493248161
+12,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_4554,Other,39,1529112,2.550499898,0.824525996
+13,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_4554,Non-hispanic White,856,14096551,6.072407357,0.257993232
+14,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_4554,Non-hispanic Black,239,2528856,9.450913773,0.890799652
+15,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_4554,Hispanic,288,3272152,8.801547116,1.380187919
+16,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_4554,Other,146,1352454,10.79519156,1.953764427
+17,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_5564,Non-hispanic White,1153,15111568,7.629916366,0.351473725
+18,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_5564,Non-hispanic Black,345,2546832,13.54624098,1.046434724
+19,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_5564,Hispanic,222,2198328,10.09858401,1.48787547
+20,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_5564,Other,115,1272047,9.040546458,1.900088376
+21,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_5564,Non-hispanic White,3883,14415002,26.93721444,0.602854176
+22,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_5564,Non-hispanic Black,1130,2137700,52.86055106,2.292934005
+23,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_5564,Hispanic,716,2058899,34.77586807,2.396828209
+24,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_5564,Other,374,1066033,35.0833417,3.810527157
+25,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_over65,Non-hispanic White,3982,20639658,19.29295534,0.729622471
+26,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_over65,Non-hispanic Black,573,2552333,22.45004864,2.208028665
+27,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_over65,Hispanic,764,2132451,35.82731795,4.236109835
+28,Mortality,Liver and Intrahepatic Bile Duct,2015,Female,Age_over65,Other,434,1339138,32.40890782,5.329767401
+29,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_over65,Non-hispanic White,6653,16705087,39.82619187,1.134202651
+30,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_over65,Non-hispanic Black,1059,1714280,61.77520592,4.123558047
+31,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_over65,Hispanic,1025,1619259,63.30055908,6.492036559
+32,Mortality,Liver and Intrahepatic Bile Duct,2015,Male,Age_over65,Other,660,1032086,63.94815936,8.05402148
+1,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_2044,Non-hispanic White,31,30523184,0.101562144,0.158684123
+2,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_2044,Non-hispanic Black,36,7676770,0.468947227,0.651443265
+3,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_2044,Hispanic,5,10518884,0.04753356,0.2
+4,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_2044,Other,4,4433343,0.090225367,0.4
+5,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_2044,Non-hispanic White,40,31292111,0.127827745,0.156965885
+6,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_2044,Non-hispanic Black,30,7275243,0.41235736,0.692293722
+7,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_2044,Hispanic,8,11306346,0.070756724,0.471988536
+8,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_2044,Other,0,4155228,0,0
+9,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_4554,Non-hispanic White,152,14238423,1.067533954,0.25847046
+10,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_4554,Non-hispanic Black,133,2860342,4.649793626,1.163421746
+11,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_4554,Hispanic,42,3213000,1.307189542,1.37426804
+12,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_4554,Other,18,1529112,1.177153799,1.14026316
+13,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_4554,Non-hispanic White,269,14096551,1.9082682,0.356629655
+14,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_4554,Non-hispanic Black,114,2528856,4.507967239,1.252001224
+15,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_4554,Hispanic,56,3272152,1.711411939,0.6
+16,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_4554,Other,30,1352454,2.218190046,1.390130439
+17,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_5564,Non-hispanic White,517,15111568,3.421220088,0.450682659
+18,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_5564,Non-hispanic Black,314,2546832,12.32904251,2.154268261
+19,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_5564,Hispanic,84,2198328,3.821085843,1.522266771
+20,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_5564,Other,43,1272047,3.380378241,2.22296552
+21,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_5564,Non-hispanic White,1037,14415002,7.19389425,0.659036327
+22,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_5564,Non-hispanic Black,345,2137700,16.13884081,2.632889638
+23,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_5564,Hispanic,135,2058899,6.5569025,1.895341997
+24,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_5564,Other,56,1066033,5.253120682,2.914225781
+25,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_over65,Non-hispanic White,4342,20639658,21.03717029,1.615037333
+26,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_over65,Non-hispanic Black,1112,2552333,43.5679827,6.890532292
+27,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_over65,Hispanic,404,2132451,18.94533567,8.347922931
+28,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Female,Age_over65,Other,212,1339138,15.8310794,7.402618892
+29,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_over65,Non-hispanic White,5852,16705087,35.03124527,2.465340411
+30,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_over65,Non-hispanic Black,1183,1714280,69.00856336,11.02842352
+31,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_over65,Hispanic,468,1619259,28.90210893,8.088774191
+32,Mortality,Myeloma: Multiple myeloma/plasma-cell leuk,2015,Male,Age_over65,Other,152,1032086,14.72745488,8.427689042
+1,Mortality,Oral Cavity and Pharynx,2015,Female,Age_2044,Non-hispanic White,40,30523184,0.131047927,0.076817235
+2,Mortality,Oral Cavity and Pharynx,2015,Female,Age_2044,Non-hispanic Black,10,7676770,0.130263118,0.130451019
+3,Mortality,Oral Cavity and Pharynx,2015,Female,Age_2044,Hispanic,8,10518884,0.076053695,0.1
+4,Mortality,Oral Cavity and Pharynx,2015,Female,Age_2044,Other,7,4433343,0.157894393,0.174012847
+5,Mortality,Oral Cavity and Pharynx,2015,Male,Age_2044,Non-hispanic White,111,31292111,0.354721994,0.088975585
+6,Mortality,Oral Cavity and Pharynx,2015,Male,Age_2044,Non-hispanic Black,28,7275243,0.38486687,0.169404674
+7,Mortality,Oral Cavity and Pharynx,2015,Male,Age_2044,Hispanic,17,11306346,0.150358038,0.180221998
+8,Mortality,Oral Cavity and Pharynx,2015,Male,Age_2044,Other,30,4155228,0.721982043,0.423287129
+9,Mortality,Oral Cavity and Pharynx,2015,Female,Age_4554,Non-hispanic White,169,14238423,1.186929199,0.1
+10,Mortality,Oral Cavity and Pharynx,2015,Female,Age_4554,Non-hispanic Black,56,2860342,1.957807843,0.354777969
+11,Mortality,Oral Cavity and Pharynx,2015,Female,Age_4554,Hispanic,14,3213000,0.435729847,0.41911547
+12,Mortality,Oral Cavity and Pharynx,2015,Female,Age_4554,Other,21,1529112,1.373346099,0.629661089
+13,Mortality,Oral Cavity and Pharynx,2015,Male,Age_4554,Non-hispanic White,524,14096551,3.717221326,0.257993232
+14,Mortality,Oral Cavity and Pharynx,2015,Male,Age_4554,Non-hispanic Black,111,2528856,4.389336522,0.572982831
+15,Mortality,Oral Cavity and Pharynx,2015,Male,Age_4554,Hispanic,49,3272152,1.497485447,0.349776454
+16,Mortality,Oral Cavity and Pharynx,2015,Male,Age_4554,Other,60,1352454,4.436380091,1.236229391
+17,Mortality,Oral Cavity and Pharynx,2015,Female,Age_5564,Non-hispanic White,436,15111568,2.885206883,0.2
+18,Mortality,Oral Cavity and Pharynx,2015,Female,Age_5564,Non-hispanic Black,97,2546832,3.80865326,0.547509251
+19,Mortality,Oral Cavity and Pharynx,2015,Female,Age_5564,Hispanic,24,2198328,1.091738812,0.626592842
+20,Mortality,Oral Cavity and Pharynx,2015,Female,Age_5564,Other,27,1272047,2.122563081,0.812628526
+21,Mortality,Oral Cavity and Pharynx,2015,Male,Age_5564,Non-hispanic White,1574,14415002,10.91917989,0.35083425
+22,Mortality,Oral Cavity and Pharynx,2015,Male,Age_5564,Non-hispanic Black,287,2137700,13.42564438,1.141329029
+23,Mortality,Oral Cavity and Pharynx,2015,Male,Age_5564,Hispanic,126,2058899,6.119775667,1.100515443
+24,Mortality,Oral Cavity and Pharynx,2015,Male,Age_5564,Other,73,1066033,6.847818032,1.642890658
+25,Mortality,Oral Cavity and Pharynx,2015,Female,Age_over65,Non-hispanic White,1599,20639658,7.747221393,0.465834367
+26,Mortality,Oral Cavity and Pharynx,2015,Female,Age_over65,Non-hispanic Black,154,2552333,6.033695446,1.14805571
+27,Mortality,Oral Cavity and Pharynx,2015,Female,Age_over65,Hispanic,111,2132451,5.20527787,1.728479896
+28,Mortality,Oral Cavity and Pharynx,2015,Female,Age_over65,Other,88,1339138,6.571391447,2.56353872
+29,Mortality,Oral Cavity and Pharynx,2015,Male,Age_over65,Non-hispanic White,3175,16705087,19.00618656,0.782011291
+30,Mortality,Oral Cavity and Pharynx,2015,Male,Age_over65,Non-hispanic Black,320,1714280,18.66672889,2.305224909
+31,Mortality,Oral Cavity and Pharynx,2015,Male,Age_over65,Hispanic,213,1619259,13.15416496,3.555678187
+32,Mortality,Oral Cavity and Pharynx,2015,Male,Age_over65,Other,142,1032086,13.75854338,3.666965797
+1,Mortality,Ovary,2015,Female,Age_2044,Non-hispanic White,260,30523184,0.851811528,0.117648693
+2,Mortality,Ovary,2015,Female,Age_2044,Non-hispanic Black,51,7676770,0.664341904,0.206437192
+3,Mortality,Ovary,2015,Female,Age_2044,Hispanic,65,10518884,0.617936275,0.191452887
+4,Mortality,Ovary,2015,Female,Age_2044,Other,36,4433343,0.812028305,0.443440598
+5,Mortality,Ovary,2015,Male,Age_2044,Non-hispanic White,0,31292111,0,0
+6,Mortality,Ovary,2015,Male,Age_2044,Non-hispanic Black,0,7275243,0,0
+7,Mortality,Ovary,2015,Male,Age_2044,Hispanic,0,11306346,0,0
+8,Mortality,Ovary,2015,Male,Age_2044,Other,0,4155228,0,0
+9,Mortality,Ovary,2015,Female,Age_4554,Non-hispanic White,866,14238423,6.082134236,0.3
+10,Mortality,Ovary,2015,Female,Age_4554,Non-hispanic Black,140,2860342,4.894519606,0.610715947
+11,Mortality,Ovary,2015,Female,Age_4554,Hispanic,171,3213000,5.322128852,0.791067591
+12,Mortality,Ovary,2015,Female,Age_4554,Other,91,1529112,5.951166429,1.32165221
+13,Mortality,Ovary,2015,Male,Age_4554,Non-hispanic White,0,14096551,0,0
+14,Mortality,Ovary,2015,Male,Age_4554,Non-hispanic Black,0,2528856,0,0
+15,Mortality,Ovary,2015,Male,Age_4554,Hispanic,0,3272152,0,0
+16,Mortality,Ovary,2015,Male,Age_4554,Other,0,1352454,0,0
+17,Mortality,Ovary,2015,Female,Age_5564,Non-hispanic White,2240,15111568,14.82308123,0.450682659
+18,Mortality,Ovary,2015,Female,Age_5564,Non-hispanic Black,346,2546832,13.58550544,1.046434724
+19,Mortality,Ovary,2015,Female,Age_5564,Hispanic,223,2198328,10.14407313,1.376532096
+20,Mortality,Ovary,2015,Female,Age_5564,Other,146,1272047,11.47756333,2.022935564
+21,Mortality,Ovary,2015,Male,Age_5564,Non-hispanic White,0,14415002,0,0
+22,Mortality,Ovary,2015,Male,Age_5564,Non-hispanic Black,0,2137700,0,0
+23,Mortality,Ovary,2015,Male,Age_5564,Hispanic,0,2058899,0,0
+24,Mortality,Ovary,2015,Male,Age_5564,Other,0,1066033,0,0
+25,Mortality,Ovary,2015,Female,Age_over65,Non-hispanic White,7652,20639658,37.07425772,0.97493473
+26,Mortality,Ovary,2015,Female,Age_over65,Non-hispanic Black,797,2552333,31.22633293,2.546516221
+27,Mortality,Ovary,2015,Female,Age_over65,Hispanic,538,2132451,25.22918463,4.120179865
+28,Mortality,Ovary,2015,Female,Age_over65,Other,259,1339138,19.34079983,4.563211255
+29,Mortality,Ovary,2015,Male,Age_over65,Non-hispanic White,0,16705087,0,0
+30,Mortality,Ovary,2015,Male,Age_over65,Non-hispanic Black,0,1714280,0,0
+31,Mortality,Ovary,2015,Male,Age_over65,Hispanic,0,1619259,0,0
+32,Mortality,Ovary,2015,Male,Age_over65,Other,0,1032086,0,0
+1,Mortality,Pancreas,2015,Female,Age_2044,Non-hispanic White,125,30523184,0.409524773,0.098655863
+2,Mortality,Pancreas,2015,Female,Age_2044,Non-hispanic Black,45,7676770,0.586184033,0.206300979
+3,Mortality,Pancreas,2015,Female,Age_2044,Hispanic,27,10518884,0.256681222,0.172650362
+4,Mortality,Pancreas,2015,Female,Age_2044,Other,16,4433343,0.360901469,0.349428949
+5,Mortality,Pancreas,2015,Male,Age_2044,Non-hispanic White,209,31292111,0.66789997,0.107726449
+6,Mortality,Pancreas,2015,Male,Age_2044,Non-hispanic Black,48,7275243,0.659771777,0.221810854
+7,Mortality,Pancreas,2015,Male,Age_2044,Hispanic,40,11306346,0.353783619,0.167658736
+8,Mortality,Pancreas,2015,Male,Age_2044,Other,10,4155228,0.240660681,0.407059586
+9,Mortality,Pancreas,2015,Female,Age_4554,Non-hispanic White,703,14238423,4.937344536,0.25847046
+10,Mortality,Pancreas,2015,Female,Age_4554,Non-hispanic Black,210,2860342,7.34177941,0.670695682
+11,Mortality,Pancreas,2015,Female,Age_4554,Hispanic,133,3213000,4.139433551,0.646712182
+12,Mortality,Pancreas,2015,Female,Age_4554,Other,46,1529112,3.008281931,0.991747985
+13,Mortality,Pancreas,2015,Male,Age_4554,Non-hispanic White,1105,14096551,7.83879688,0.356629655
+14,Mortality,Pancreas,2015,Male,Age_4554,Non-hispanic Black,279,2528856,11.03265666,0.964736289
+15,Mortality,Pancreas,2015,Male,Age_4554,Hispanic,170,3272152,5.195357673,0.761300762
+16,Mortality,Pancreas,2015,Male,Age_4554,Other,54,1352454,3.992742082,1.114762136
+17,Mortality,Pancreas,2015,Female,Age_5564,Non-hispanic White,2458,15111568,16.26568467,0.450682659
+18,Mortality,Pancreas,2015,Female,Age_5564,Non-hispanic Black,633,2546832,24.85440736,1.447760814
+19,Mortality,Pancreas,2015,Female,Age_5564,Hispanic,255,2198328,11.59972488,1.470931815
+20,Mortality,Pancreas,2015,Female,Age_5564,Other,125,1272047,9.826680932,1.959250267
+21,Mortality,Pancreas,2015,Male,Age_5564,Non-hispanic White,3566,14415002,24.73811658,0.602854176
+22,Mortality,Pancreas,2015,Male,Age_5564,Non-hispanic Black,700,2137700,32.74547411,1.795315976
+23,Mortality,Pancreas,2015,Male,Age_5564,Hispanic,388,2058899,18.84502348,2.238928553
+24,Mortality,Pancreas,2015,Male,Age_5564,Other,155,1066033,14.5398876,2.557564292
+25,Mortality,Pancreas,2015,Female,Age_over65,Non-hispanic White,12010,20639658,58.18894867,1.247411549
+26,Mortality,Pancreas,2015,Female,Age_over65,Non-hispanic Black,1779,2552333,69.70093636,3.963959643
+27,Mortality,Pancreas,2015,Female,Age_over65,Hispanic,1004,2132451,47.08197281,5.397632075
+28,Mortality,Pancreas,2015,Female,Age_over65,Other,605,1339138,45.1783162,6.56969729
+29,Mortality,Pancreas,2015,Male,Age_over65,Non-hispanic White,11961,16705087,71.60094407,1.560107614
+30,Mortality,Pancreas,2015,Male,Age_over65,Non-hispanic Black,1328,1714280,77.46692489,5.119705268
+31,Mortality,Pancreas,2015,Male,Age_over65,Hispanic,804,1619259,49.65234098,5.937153113
+32,Mortality,Pancreas,2015,Male,Age_over65,Other,505,1032086,48.93003102,7.425906106
+1,Mortality,Prostate,2015,Female,Age_2044,Non-hispanic White,0,30523184,0,0
+2,Mortality,Prostate,2015,Female,Age_2044,Non-hispanic Black,0,7676770,0,0
+3,Mortality,Prostate,2015,Female,Age_2044,Hispanic,0,10518884,0,0
+4,Mortality,Prostate,2015,Female,Age_2044,Other,0,4433343,0,0
+5,Mortality,Prostate,2015,Male,Age_2044,Non-hispanic White,10,31292111,0.031956936,0
+6,Mortality,Prostate,2015,Male,Age_2044,Non-hispanic Black,9,7275243,0.123707208,0.137781549
+7,Mortality,Prostate,2015,Male,Age_2044,Hispanic,3,11306346,0.026533771,0.054800779
+8,Mortality,Prostate,2015,Male,Age_2044,Other,0,4155228,0,0
+9,Mortality,Prostate,2015,Female,Age_4554,Non-hispanic White,0,14238423,0,0
+10,Mortality,Prostate,2015,Female,Age_4554,Non-hispanic Black,0,2860342,0,0
+11,Mortality,Prostate,2015,Female,Age_4554,Hispanic,0,3213000,0,0
+12,Mortality,Prostate,2015,Female,Age_4554,Other,0,1529112,0,0
+13,Mortality,Prostate,2015,Male,Age_4554,Non-hispanic White,226,14096551,1.603229045,0.161047523
+14,Mortality,Prostate,2015,Male,Age_4554,Non-hispanic Black,108,2528856,4.270705805,0.572982831
+15,Mortality,Prostate,2015,Male,Age_4554,Hispanic,49,3272152,1.497485447,0.622512077
+16,Mortality,Prostate,2015,Male,Age_4554,Other,10,1352454,0.739396682,0.601404878
+17,Mortality,Prostate,2015,Female,Age_5564,Non-hispanic White,0,15111568,0,0
+18,Mortality,Prostate,2015,Female,Age_5564,Non-hispanic Black,0,2546832,0,0
+19,Mortality,Prostate,2015,Female,Age_5564,Hispanic,0,2198328,0,0
+20,Mortality,Prostate,2015,Female,Age_5564,Other,0,1272047,0,0
+21,Mortality,Prostate,2015,Male,Age_5564,Non-hispanic White,1708,14415002,11.848767,0.406966958
+22,Mortality,Prostate,2015,Male,Age_5564,Non-hispanic Black,696,2137700,32.55835711,1.808023595
+23,Mortality,Prostate,2015,Male,Age_5564,Hispanic,230,2058899,11.17101907,1.495369265
+24,Mortality,Prostate,2015,Male,Age_5564,Other,76,1066033,7.129235211,2.024540354
+25,Mortality,Prostate,2015,Female,Age_over65,Non-hispanic White,0,20639658,0,0
+26,Mortality,Prostate,2015,Female,Age_over65,Non-hispanic Black,0,2552333,0,0
+27,Mortality,Prostate,2015,Female,Age_over65,Hispanic,0,2132451,0,0
+28,Mortality,Prostate,2015,Female,Age_over65,Other,0,1339138,0,0
+29,Mortality,Prostate,2015,Male,Age_over65,Non-hispanic White,19569,16705087,117.1439574,2.247002152
+30,Mortality,Prostate,2015,Male,Age_over65,Non-hispanic Black,3865,1714280,225.4590849,10.00977548
+31,Mortality,Prostate,2015,Male,Age_over65,Hispanic,1585,1619259,97.88427917,9.57343813
+32,Mortality,Prostate,2015,Male,Age_over65,Other,631,1032086,61.13831599,11.05129592
+1,Mortality,Stomach,2015,Female,Age_2044,Non-hispanic White,79,30523184,0.258819657,0.076817235
+2,Mortality,Stomach,2015,Female,Age_2044,Non-hispanic Black,45,7676770,0.586184033,0.211968779
+3,Mortality,Stomach,2015,Female,Age_2044,Hispanic,119,10518884,1.13129872,0.34495607
+4,Mortality,Stomach,2015,Female,Age_2044,Other,39,4433343,0.87969733,0.477298287
+5,Mortality,Stomach,2015,Male,Age_2044,Non-hispanic White,111,31292111,0.354721994,0.076374396
+6,Mortality,Stomach,2015,Male,Age_2044,Non-hispanic Black,50,7275243,0.687262267,0.234219321
+7,Mortality,Stomach,2015,Male,Age_2044,Hispanic,114,11306346,1.008283313,0.24095764
+8,Mortality,Stomach,2015,Male,Age_2044,Other,29,4155228,0.697915975,0.508233383
+9,Mortality,Stomach,2015,Female,Age_4554,Non-hispanic White,170,14238423,1.193952448,0.1
+10,Mortality,Stomach,2015,Female,Age_4554,Non-hispanic Black,75,2860342,2.622064075,0.453999161
+11,Mortality,Stomach,2015,Female,Age_4554,Hispanic,114,3213000,3.548085901,0.532292082
+12,Mortality,Stomach,2015,Female,Age_4554,Other,53,1529112,3.466063964,0.749532114
+13,Mortality,Stomach,2015,Male,Age_4554,Non-hispanic White,306,14096551,2.170743751,0.2
+14,Mortality,Stomach,2015,Male,Age_4554,Non-hispanic Black,150,2528856,5.931535841,0.709089495
+15,Mortality,Stomach,2015,Male,Age_4554,Hispanic,156,3272152,4.767504688,0.678285925
+16,Mortality,Stomach,2015,Male,Age_4554,Other,56,1352454,4.140621419,1.250489621
+17,Mortality,Stomach,2015,Female,Age_5564,Non-hispanic White,358,15111568,2.369046018,0.2
+18,Mortality,Stomach,2015,Female,Age_5564,Non-hispanic Black,137,2546832,5.379231924,0.647159032
+19,Mortality,Stomach,2015,Female,Age_5564,Hispanic,156,2198328,7.096302281,1.0554827
+20,Mortality,Stomach,2015,Female,Age_5564,Other,75,1272047,5.896008559,1.348464871
+21,Mortality,Stomach,2015,Male,Age_5564,Non-hispanic White,800,14415002,5.54977377,0.252253658
+22,Mortality,Stomach,2015,Male,Age_5564,Non-hispanic Black,313,2137700,14.64190485,1.192079339
+23,Mortality,Stomach,2015,Male,Age_5564,Hispanic,208,2058899,10.10248681,1.330684366
+24,Mortality,Stomach,2015,Male,Age_5564,Other,96,1066033,9.005349741,1.845339733
+25,Mortality,Stomach,2015,Female,Age_over65,Non-hispanic White,1964,20639658,9.515661548,0.523780645
+26,Mortality,Stomach,2015,Female,Age_over65,Non-hispanic Black,521,2552333,20.41269693,2.211542972
+27,Mortality,Stomach,2015,Female,Age_over65,Hispanic,385,2132451,18.05434216,2.987112264
+28,Mortality,Stomach,2015,Female,Age_over65,Other,261,1339138,19.49014963,3.776067911
+29,Mortality,Stomach,2015,Male,Age_over65,Non-hispanic White,2797,16705087,16.74340277,0.797314431
+30,Mortality,Stomach,2015,Male,Age_over65,Non-hispanic Black,702,1714280,40.9501365,3.948809879
+31,Mortality,Stomach,2015,Male,Age_over65,Hispanic,499,1619259,30.81656486,4.786952689
+32,Mortality,Stomach,2015,Male,Age_over65,Other,346,1032086,33.52433809,5.813261497
+1,Mortality,Stomach Cardia,2015,Female,Age_2044,Non-hispanic White,13,30523184,0.042590576,0.1
+2,Mortality,Stomach Cardia,2015,Female,Age_2044,Non-hispanic Black,4,7676770,0.052105247,0.3
+3,Mortality,Stomach Cardia,2015,Female,Age_2044,Hispanic,14,10518884,0.133093967,0.15747041
+4,Mortality,Stomach Cardia,2015,Female,Age_2044,Other,0,4433343,0,0
+5,Mortality,Stomach Cardia,2015,Male,Age_2044,Non-hispanic White,120,31292111,0.383483236,0.176243742
+6,Mortality,Stomach Cardia,2015,Male,Age_2044,Non-hispanic Black,0,7275243,0,0
+7,Mortality,Stomach Cardia,2015,Male,Age_2044,Hispanic,18,11306346,0.159202628,0.235438167
+8,Mortality,Stomach Cardia,2015,Male,Age_2044,Other,4,4155228,0.096264272,0.4
+9,Mortality,Stomach Cardia,2015,Female,Age_4554,Non-hispanic White,49,14238423,0.344139235,0.161505998
+10,Mortality,Stomach Cardia,2015,Female,Age_4554,Non-hispanic Black,17,2860342,0.594334524,0.414707904
+11,Mortality,Stomach Cardia,2015,Female,Age_4554,Hispanic,16,3213000,0.497976969,0.310409916
+12,Mortality,Stomach Cardia,2015,Female,Age_4554,Other,8,1529112,0.523179466,1.05884211
+13,Mortality,Stomach Cardia,2015,Male,Age_4554,Non-hispanic White,308,14096551,2.184931619,0.4
+14,Mortality,Stomach Cardia,2015,Male,Age_4554,Non-hispanic Black,31,2528856,1.22585074,0.652919347
+15,Mortality,Stomach Cardia,2015,Male,Age_4554,Hispanic,42,3272152,1.283558954,0.502404413
+16,Mortality,Stomach Cardia,2015,Male,Age_4554,Other,26,1352454,1.922431373,1.713609353
+17,Mortality,Stomach Cardia,2015,Female,Age_5564,Non-hispanic White,166,15111568,1.098496198,0.25288871
+18,Mortality,Stomach Cardia,2015,Female,Age_5564,Non-hispanic Black,14,2546832,0.549702532,0.460601609
+19,Mortality,Stomach Cardia,2015,Female,Age_5564,Hispanic,14,2198328,0.636847641,0.424329384
+20,Mortality,Stomach Cardia,2015,Female,Age_5564,Other,6,1272047,0.471680685,1.680298608
+21,Mortality,Stomach Cardia,2015,Male,Age_5564,Non-hispanic White,968,14415002,6.715226262,0.649186383
+22,Mortality,Stomach Cardia,2015,Male,Age_5564,Non-hispanic Black,77,2137700,3.602002152,1.29079081
+23,Mortality,Stomach Cardia,2015,Male,Age_5564,Hispanic,104,2058899,5.051243407,1.980467988
+24,Mortality,Stomach Cardia,2015,Male,Age_5564,Other,32,1066033,3.001783247,2.840301999
+25,Mortality,Stomach Cardia,2015,Female,Age_over65,Non-hispanic White,861,20639658,4.17158075,0.730886548
+26,Mortality,Stomach Cardia,2015,Female,Age_over65,Non-hispanic Black,61,2552333,2.389970274,1.779635948
+27,Mortality,Stomach Cardia,2015,Female,Age_over65,Hispanic,49,2132451,2.297825366,1.443638982
+28,Mortality,Stomach Cardia,2015,Female,Age_over65,Other,39,1339138,2.91232121,3.372330685
+29,Mortality,Stomach Cardia,2015,Male,Age_over65,Non-hispanic White,3070,16705087,18.37763551,1.689564461
+30,Mortality,Stomach Cardia,2015,Male,Age_over65,Non-hispanic Black,206,1714280,12.01670672,4.414393764
+31,Mortality,Stomach Cardia,2015,Male,Age_over65,Hispanic,179,1619259,11.0544391,6.050848963
+32,Mortality,Stomach Cardia,2015,Male,Age_over65,Other,109,1032086,10.56113541,7.877582768
+1,Mortality,Stomach Non-Cardia,2015,Female,Age_2044,Non-hispanic White,45,30523184,0.147428918,0.14122248
+2,Mortality,Stomach Non-Cardia,2015,Female,Age_2044,Non-hispanic Black,58,7676770,0.755526087,0.660414711
+3,Mortality,Stomach Non-Cardia,2015,Female,Age_2044,Hispanic,145,10518884,1.37847323,0.650617212
+4,Mortality,Stomach Non-Cardia,2015,Female,Age_2044,Other,44,4433343,0.992479039,0.913557481
+5,Mortality,Stomach Non-Cardia,2015,Male,Age_2044,Non-hispanic White,80,31292111,0.255655491,0.146430726
+6,Mortality,Stomach Non-Cardia,2015,Male,Age_2044,Non-hispanic Black,80,7275243,1.099619628,0.720859162
+7,Mortality,Stomach Non-Cardia,2015,Male,Age_2044,Hispanic,107,11306346,0.94637118,0.502370071
+8,Mortality,Stomach Non-Cardia,2015,Male,Age_2044,Other,36,4155228,0.866378451,1.54703787
+9,Mortality,Stomach Non-Cardia,2015,Female,Age_4554,Non-hispanic White,160,14238423,1.123719951,0.25847046
+10,Mortality,Stomach Non-Cardia,2015,Female,Age_4554,Non-hispanic Black,67,2860342,2.34237724,0.866786988
+11,Mortality,Stomach Non-Cardia,2015,Female,Age_4554,Hispanic,152,3213000,4.730781201,1.293044576
+12,Mortality,Stomach Non-Cardia,2015,Female,Age_4554,Other,49,1529112,3.204474231,1.440736275
+13,Mortality,Stomach Non-Cardia,2015,Male,Age_4554,Non-hispanic White,229,14096551,1.624510847,0.3
+14,Mortality,Stomach Non-Cardia,2015,Male,Age_4554,Non-hispanic Black,149,2528856,5.891992268,1.40141122
+15,Mortality,Stomach Non-Cardia,2015,Male,Age_4554,Hispanic,184,3272152,5.623210658,1.301722994
+16,Mortality,Stomach Non-Cardia,2015,Male,Age_4554,Other,41,1352454,3.031526396,2.594177715
+17,Mortality,Stomach Non-Cardia,2015,Female,Age_5564,Non-hispanic White,323,15111568,2.137435374,0.351473725
+18,Mortality,Stomach Non-Cardia,2015,Female,Age_5564,Non-hispanic Black,139,2546832,5.457760857,1.447760814
+19,Mortality,Stomach Non-Cardia,2015,Female,Age_5564,Hispanic,215,2198328,9.780160194,2.171652051
+20,Mortality,Stomach Non-Cardia,2015,Female,Age_5564,Other,84,1272047,6.603529587,1.864514144
+21,Mortality,Stomach Non-Cardia,2015,Male,Age_5564,Non-hispanic White,573,14415002,3.975025463,0.5
+22,Mortality,Stomach Non-Cardia,2015,Male,Age_5564,Non-hispanic Black,387,2137700,18.10356926,2.844293236
+23,Mortality,Stomach Non-Cardia,2015,Male,Age_5564,Hispanic,248,2058899,12.04527274,1.942879061
+24,Mortality,Stomach Non-Cardia,2015,Male,Age_5564,Other,90,1066033,8.442515382,3.443203726
+25,Mortality,Stomach Non-Cardia,2015,Female,Age_over65,Non-hispanic White,2374,20639658,11.50212857,1.225317411
+26,Mortality,Stomach Non-Cardia,2015,Female,Age_over65,Non-hispanic Black,761,2552333,29.81585867,5.903044643
+27,Mortality,Stomach Non-Cardia,2015,Female,Age_over65,Hispanic,561,2132451,26.30775572,6.733593359
+28,Mortality,Stomach Non-Cardia,2015,Female,Age_over65,Other,364,1339138,27.18166462,7.161439081
+29,Mortality,Stomach Non-Cardia,2015,Male,Age_over65,Non-hispanic White,3104,16705087,18.58116632,1.84063863
+30,Mortality,Stomach Non-Cardia,2015,Male,Age_over65,Non-hispanic Black,873,1714280,50.92516975,9.349287361
+31,Mortality,Stomach Non-Cardia,2015,Male,Age_over65,Hispanic,655,1619259,40.45060117,8.8968309
+32,Mortality,Stomach Non-Cardia,2015,Male,Age_over65,Other,476,1032086,46.12018766,11.99144237
+1,Mortality,Thyroid,2015,Female,Age_2044,Non-hispanic White,9,30523184,0.029485784,0
+2,Mortality,Thyroid,2015,Female,Age_2044,Non-hispanic Black,5,7676770,0.065131559,0.1
+3,Mortality,Thyroid,2015,Female,Age_2044,Hispanic,9,10518884,0.085560407,0.1
+4,Mortality,Thyroid,2015,Female,Age_2044,Other,0,4433343,0,0
+5,Mortality,Thyroid,2015,Male,Age_2044,Non-hispanic White,16,31292111,0.051131098,0
+6,Mortality,Thyroid,2015,Male,Age_2044,Non-hispanic Black,6,7275243,0.082471472,0.140874367
+7,Mortality,Thyroid,2015,Male,Age_2044,Hispanic,4,11306346,0.035378362,0.1
+8,Mortality,Thyroid,2015,Male,Age_2044,Other,1,4155228,0.024066068,0.1
+9,Mortality,Thyroid,2015,Female,Age_4554,Non-hispanic White,45,14238423,0.316046236,0.1
+10,Mortality,Thyroid,2015,Female,Age_4554,Non-hispanic Black,6,2860342,0.209765126,0.1
+11,Mortality,Thyroid,2015,Female,Age_4554,Hispanic,10,3213000,0.311235605,0.155204958
+12,Mortality,Thyroid,2015,Female,Age_4554,Other,7,1529112,0.457782033,0.374442106
+13,Mortality,Thyroid,2015,Male,Age_4554,Non-hispanic White,67,14096551,0.475293566,0.1
+14,Mortality,Thyroid,2015,Male,Age_4554,Non-hispanic Black,11,2528856,0.434979295,0.2
+15,Mortality,Thyroid,2015,Male,Age_4554,Hispanic,9,3272152,0.275048347,0.154471775
+16,Mortality,Thyroid,2015,Male,Age_4554,Other,3,1352454,0.221819005,0.3
+17,Mortality,Thyroid,2015,Female,Age_5564,Non-hispanic White,96,15111568,0.63527491,0.1
+18,Mortality,Thyroid,2015,Female,Age_5564,Non-hispanic Black,20,2546832,0.785289332,0.250242047
+19,Mortality,Thyroid,2015,Female,Age_5564,Hispanic,20,2198328,0.909782344,0.557877333
+20,Mortality,Thyroid,2015,Female,Age_5564,Other,7,1272047,0.550294132,0.350038351
+21,Mortality,Thyroid,2015,Male,Age_5564,Non-hispanic White,128,14415002,0.887963803,0.1
+22,Mortality,Thyroid,2015,Male,Age_5564,Non-hispanic Black,14,2137700,0.654909482,0.248857091
+23,Mortality,Thyroid,2015,Male,Age_5564,Hispanic,16,2058899,0.77711437,0.301166473
+24,Mortality,Thyroid,2015,Male,Age_5564,Other,13,1066033,1.219474444,0.691802762
+25,Mortality,Thyroid,2015,Female,Age_over65,Non-hispanic White,558,20639658,2.703533169,0.288928166
+26,Mortality,Thyroid,2015,Female,Age_over65,Non-hispanic Black,82,2552333,3.212746926,0.877292808
+27,Mortality,Thyroid,2015,Female,Age_over65,Hispanic,78,2132451,3.657762828,1.116525647
+28,Mortality,Thyroid,2015,Female,Age_over65,Other,56,1339138,4.181794557,1.712546264
+29,Mortality,Thyroid,2015,Male,Age_over65,Non-hispanic White,466,16705087,2.789569429,0.327889997
+30,Mortality,Thyroid,2015,Male,Age_over65,Non-hispanic Black,35,1714280,2.041673472,0.820072167
+31,Mortality,Thyroid,2015,Male,Age_over65,Hispanic,60,1619259,3.70539858,1.903945116
+32,Mortality,Thyroid,2015,Male,Age_over65,Other,33,1032086,3.197407968,1.974801685

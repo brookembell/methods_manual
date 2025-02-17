@@ -1,0 +1,73 @@
+"Race and origin recode (NHW, NHB, NHO, Hispanic)"	"Age 10yr single ages"	"Sex"	"BREAST"	"Crude Rate"	"Standard Error"	"Lower Confidence Interval"	"Upper Confidence Interval"	"Count"	"Population"
+"Non-Hispanic White"	"25-34 years"	"Male and female"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"25-34 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"25-34 years"	"Female"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"35-44 years"	"Male and female"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"35-44 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"35-44 years"	"Female"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"45-54 years"	"Male and female"	"Breast"	246.42	4.47	237.73	255.34	3036	1232061
+"Non-Hispanic White"	"45-54 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"45-54 years"	"Female"	"Breast"	246.42	4.47	237.73	255.34	3036	1232061
+"Non-Hispanic White"	"55-64 years"	"Male and female"	"Breast"	318.64	3.07	312.64	324.73	10743	3371496
+"Non-Hispanic White"	"55-64 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"55-64 years"	"Female"	"Breast"	318.64	3.07	312.64	324.73	10743	3371496
+"Non-Hispanic White"	"65-74 years"	"Male and female"	"Breast"	476.57	4.24	468.29	484.95	12631	2650409
+"Non-Hispanic White"	"65-74 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"65-74 years"	"Female"	"Breast"	476.57	4.24	468.29	484.95	12631	2650409
+"Non-Hispanic White"	"75+ years"	"Male and female"	"Breast"	449.29	4.54	440.43	458.28	9780	2176780
+"Non-Hispanic White"	"75+ years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic White"	"75+ years"	"Female"	"Breast"	449.29	4.54	440.43	458.28	9780	2176780
+"Non-Hispanic Black"	"25-34 years"	"Male and female"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"25-34 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"25-34 years"	"Female"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"35-44 years"	"Male and female"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"35-44 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"35-44 years"	"Female"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"45-54 years"	"Male and female"	"Breast"	217.22	8.99	199.96	235.57	584	268855
+"Non-Hispanic Black"	"45-54 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"45-54 years"	"Female"	"Breast"	217.22	8.99	199.96	235.57	584	268855
+"Non-Hispanic Black"	"55-64 years"	"Male and female"	"Breast"	307.04	7.03	293.42	321.13	1910	622066
+"Non-Hispanic Black"	"55-64 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"55-64 years"	"Female"	"Breast"	307.04	7.03	293.42	321.13	1910	622066
+"Non-Hispanic Black"	"65-74 years"	"Male and female"	"Breast"	441.68	10.65	421.05	463.06	1720	389421
+"Non-Hispanic Black"	"65-74 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"65-74 years"	"Female"	"Breast"	441.68	10.65	421.05	463.06	1720	389421
+"Non-Hispanic Black"	"75+ years"	"Male and female"	"Breast"	409.32	12.55	385.09	434.67	1064	259943
+"Non-Hispanic Black"	"75+ years"	"Male"	"Breast"	 	 	 	 	0	0
+"Non-Hispanic Black"	"75+ years"	"Female"	"Breast"	409.32	12.55	385.09	434.67	1064	259943
+"Hispanic (All Races)"	"25-34 years"	"Male and female"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"25-34 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"25-34 years"	"Female"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"35-44 years"	"Male and female"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"35-44 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"35-44 years"	"Female"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"45-54 years"	"Male and female"	"Breast"	178.72	6.17	166.83	191.23	839	469462
+"Hispanic (All Races)"	"45-54 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"45-54 years"	"Female"	"Breast"	178.72	6.17	166.83	191.23	839	469462
+"Hispanic (All Races)"	"55-64 years"	"Male and female"	"Breast"	242.85	5.13	232.90	253.11	2243	923619
+"Hispanic (All Races)"	"55-64 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"55-64 years"	"Female"	"Breast"	242.85	5.13	232.90	253.11	2243	923619
+"Hispanic (All Races)"	"65-74 years"	"Male and female"	"Breast"	355.67	8.29	339.61	372.30	1841	517613
+"Hispanic (All Races)"	"65-74 years"	"Male"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"65-74 years"	"Female"	"Breast"	355.67	8.29	339.61	372.30	1841	517613
+"Hispanic (All Races)"	"75+ years"	"Male and female"	"Breast"	274.63	8.66	257.91	292.15	1005	365950
+"Hispanic (All Races)"	"75+ years"	"Male"	"Breast"	 	 	 	 	0	0
+"Hispanic (All Races)"	"75+ years"	"Female"	"Breast"	274.63	8.66	257.91	292.15	1005	365950
+"OTHER"	"25-34 years"	"Male and female"	"Breast"	 	 	 	 	0	0
+"OTHER"	"25-34 years"	"Male"	"Breast"	 	 	 	 	0	0
+"OTHER"	"25-34 years"	"Female"	"Breast"	 	 	 	 	0	0
+"OTHER"	"35-44 years"	"Male and female"	"Breast"	 	 	 	 	0	0
+"OTHER"	"35-44 years"	"Male"	"Breast"	 	 	 	 	0	0
+"OTHER"	"35-44 years"	"Female"	"Breast"	 	 	 	 	0	0
+"OTHER"	"45-54 years"	"Male and female"	"Breast"	245.28	9.28	227.43	264.16	699	284976
+"OTHER"	"45-54 years"	"Male"	"Breast"	 	 	 	 	0	0
+"OTHER"	"45-54 years"	"Female"	"Breast"	245.28	9.28	227.43	264.16	699	284976
+"OTHER"	"55-64 years"	"Male and female"	"Breast"	295.02	6.64	282.14	308.33	1973	668768
+"OTHER"	"55-64 years"	"Male"	"Breast"	 	 	 	 	0	0
+"OTHER"	"55-64 years"	"Female"	"Breast"	295.02	6.64	282.14	308.33	1973	668768
+"OTHER"	"65-74 years"	"Male and female"	"Breast"	406.36	9.25	388.43	424.90	1930	474950
+"OTHER"	"65-74 years"	"Male"	"Breast"	 	 	 	 	0	0
+"OTHER"	"65-74 years"	"Female"	"Breast"	406.36	9.25	388.43	424.90	1930	474950
+"OTHER"	"75+ years"	"Male and female"	"Breast"	292.27	9.02	274.86	310.50	1050	359253
+"OTHER"	"75+ years"	"Male"	"Breast"	 	 	 	 	0	0
+"OTHER"	"75+ years"	"Female"	"Breast"	292.27	9.02	274.86	310.50	1050	359253

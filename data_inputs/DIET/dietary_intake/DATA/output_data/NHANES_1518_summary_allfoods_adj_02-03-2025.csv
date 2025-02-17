@@ -1,0 +1,45 @@
+food,mean,SE,food_label,food_desc
+added_sugar_adj,15.146703073980019,0.27424341761608534,Added sugars,Foods defined as added sugars (tsp. eq.)
+afs_tot_adj,117.01330777837441,1.1143032559523947,Total AFS,NA
+dairy_cow_adj,1.3761825914827963,0.02532558617634822,Cow-based dairy,"Milk, yogurt, cheese, and whey (cup ep.)"
+dairy_soy_adj,0.009220714269440062,0.0016266863067467812,Soy-based dairy,Calcium fortified soy milk (soymilk) (cup ep.)
+dairy_tot_adj,1.3853766810379493,0.02519015228040128,Dairy (total),"Total milk, yogurt, cheese, and whey (cup ep.)"
+fiber_adj,16.921585353527334,0.20610532328769107,Fiber,Dietary fiber (gm)
+fruit_exc_juice_adj,0.7042359571025634,0.02528547643314036,Fruit excluding juice,"Intact fruits (whole or cut) of citrus, melons, and berries (cup eq.); Intact fruits (whole or cut); excluding citrus, melons, and berries (cup eq.)"
+fruit_juice_adj,0.21091178213797135,0.007096191655962615,Fruit juice,"Fruit juices, citrus and non-citrus (cup eq.)"
+fruit_tot_adj,0.915594863967438,0.026791483935939633,Fruits,Total intact fruits (whole or cut) and fruit juices (cup eq.)
+fruit_tot_adj_grams,159.98272279622046,4.373624685610866,NA,NA
+gr_refined_adj,5.250960186747907,0.05502382448311867,Refined grains,Refined grains that do not contain all of the components of the entire grain kernel (oz. eq.)
+gr_tot_adj,6.1603397042229036,0.051689174956879205,Total grains,NA
+gr_tot_adj_grams,234.28879794575997,1.9653834791097615,NA,NA
+gr_whole_adj,0.8873378671144178,0.02982866270785454,Whole grains,"Grains defined as whole grains and contain the entire grain kernel ― the bran, germ, and endosperm (oz. eq.)"
+leg_tot_adj,0.5645822721253438,0.02792971225631172,"Beans, peas, lentils (total)","Beans and Peas (legumes) computed as protein foods (oz. eq.); Soy products, excluding calcium fortified soy milk (soymilk) and raw soybeans products (oz. eq.)"
+oil_adj,27.578184554632863,0.2932590800650542,Oils,"Fats naturally present in nuts, seeds, and seafood; all unhydrogenated vegetable oils, except palm oil, palm kernel oil, and coconut oils; the fat present in avocado and olives above the allowable amount; 50% of the fat present in stick and tub margarines and margarine spreads (grams)"
+pf_animal_adj,5.355420337399423,0.06715419506211337,Animal-protein foods,"Total of meat, poultry, seafood, organ meat, and cured meat (oz. eq.); Eggs (chicken, duck, goose, quail) and egg substitutes (oz. eq.)"
+pf_egg_adj,0.5965634621797391,0.016395088559876658,Eggs,"Eggs (chicken, duck, goose, quail) and egg substitutes (oz. eq.)"
+pf_leg_adj,0.4587632691893184,0.024468232675864725,"Beans, peas, lentils (protein)",Beans and Peas (legumes) computed as protein foods (oz. eq.)
+pf_ns_adj,0.7476778240013174,0.03849959469396251,Nuts and seeds,"Peanuts, tree nuts, and seeds; excludes coconut (oz. eq.)"
+pf_plant_adj,1.3139295173187684,0.04632334888814172,Plant-protein foods,"Beans and Peas (legumes) computed as protein foods (oz. eq.); Soy products, excluding calcium fortified soy milk (soymilk) and raw soybeans products (oz. eq.); Peanuts, tree nuts, and seeds; excludes coconut (oz. eq.)"
+pf_pm_adj,0.931055009199848,0.01934127594077441,Processed meat,"Frankfurters, sausages, corned beef, cured ham and luncheon meat that are made from beef, pork, or poultry (oz. eq.)"
+pf_poultry_adj,1.579961057313947,0.04315352023568506,Unprocessed poultry,"Chicken, turkey, Cornish hens, duck, goose, quail, and pheasant (game birds); excludes organ meat and cured meat (oz. eq.)"
+pf_poultry_tot_adj,1.831068966308429,0.04374852550511446,Unprocessed and processed poultry,Combination of ‘uncured poultry’ and ‘cured poultry’
+pf_redm_adj,1.51135216332766,0.041637037149318136,Unprocessed red meat,"Beef, veal, pork, lamb, and game meat; excludes organ meat and cured meat (oz. eq.)"
+pf_redm_tot_adj,2.2097557413496345,0.04527758865674917,Unprocessed and processed red meat,Combination of ‘uncured red meat’ and ‘cured red meat’
+pf_seafood_adj,0.6115815852630873,0.029405744055441344,Seafood,"Seafood (finfish, shellfish, and other seafood) high in n-3 fatty acids (oz. eq.); Seafood (finfish, shellfish, and other seafood) low in n-3 fatty acids (oz. eq.)"
+pf_soy_adj,0.10078537875678656,0.008554043729135347,Soy foods,"Soy products, excluding calcium fortified soy milk (soymilk) and raw soybeans products (oz. eq.)"
+pf_tot_adj,6.720417723326978,0.07246741726983755,Total protein,NA
+pf_tot_adj_grams,201.27217851505708,2.065700247976939,NA,NA
+pufa_energy_adj,8.456989735194378,0.0650686313140699,PUFA as percent of total energy intake,Total polyunsaturated fatty acids (%E)
+sat_fat_adj,25.958758222997513,0.170290683788835,Saturated fats,Total saturated fatty acids (gm)
+sea_omega3_fa_adj,0.09261615775871603,0.003442324718176192,Seafood omega-3 fats,PFA 20:5 (Eicosapentaenoic) (gm); PFA 22:6 (Docosahexaenoic) (gm)
+sfat_energy_adj,11.683972089098933,0.07626417585342729,Saturated fat as percent of total energy intake,Total saturated fatty acids (%E)
+sodium_adj,3521.5355463408023,82.73350444518697,Sodium,Sodium (mg)
+ssb_adj,279.2469081653406,12.653710629151155,Sugar sweetened beverages,Sugar sweetened beverages (gm)
+veg_dg_adj,0.1686198648570147,0.008629928889699984,Dark-green vegetables,Dark green vegetables (cup eq.)
+veg_exc_sta_adj,1.118718822495854,0.026333373866057597,Vegetables excluding starchy,"Dark green vegetables (cup eq.); Other red and orange vegetables, excluding tomatoes and tomato products (cup eq.); Other vegetables not in the vegetable components listed above (cup eq.)"
+veg_leg_adj,0.11446924510907218,0.006116594810871236,"Beans, peas, lentils (vegetables)","Beans, peas, and lentils  (legumes) computed as vegetables (cup eq.)"
+veg_oth_adj,0.5581113942060436,0.013450992702244903,Other vegetables,Other vegetables not in the vegetable components listed above (cup eq.)
+veg_ro_adj,0.37596312322692194,0.009262717788810177,Red and orange vegetables,"Other red and orange vegetables, excluding tomatoes and tomato products (cup eq.)"
+veg_sta_adj,0.4305445190979564,0.012460724434998528,Starchy vegetables,Total starchy vegetables (white potatoes + other starchy vegetables) (cup eq.)
+veg_tot_adj,1.5637170262765117,0.030490325426742407,Total vegetables,NA
+veg_tot_adj_grams,209.86439454577675,4.020086696600206,NA,NA

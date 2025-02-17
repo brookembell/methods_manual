@@ -1,0 +1,87 @@
+"Notes"	"Ten-Year Age Groups"	"Ten-Year Age Groups Code"	"Gender"	"Gender Code"	Deaths	Population	Crude Rate	Crude Rate Lower 95% Confidence Interval	Crude Rate Upper 95% Confidence Interval	Crude Rate Standard Error
+	"25-34 years"	"25-34"	"Female"	"F"	33	20970529	0.16	0.11	0.22	0.03
+	"25-34 years"	"25-34"	"Male"	"M"	32	21338792	0.15	0.10	0.21	0.03
+"Total"	"25-34 years"	"25-34"			65	42309321	0.15	0.12	0.20	0.02
+	"35-44 years"	"35-44"	"Female"	"F"	80	20342813	0.39	0.31	0.49	0.04
+	"35-44 years"	"35-44"	"Male"	"M"	95	20173607	0.47	0.38	0.58	0.05
+"Total"	"35-44 years"	"35-44"			175	40516420	0.43	0.37	0.50	0.03
+	"45-54 years"	"45-54"	"Female"	"F"	236	22461868	1.05	0.92	1.18	0.07
+	"45-54 years"	"45-54"	"Male"	"M"	353	21806870	1.62	1.45	1.79	0.09
+"Total"	"45-54 years"	"45-54"			589	44268738	1.33	1.22	1.44	0.05
+	"55-64 years"	"55-64"	"Female"	"F"	455	19983308	2.28	2.07	2.49	0.11
+	"55-64 years"	"55-64"	"Male"	"M"	744	18602894	4.00	3.71	4.29	0.15
+"Total"	"55-64 years"	"55-64"			1199	38586202	3.11	2.93	3.28	0.09
+	"65-74 years"	"65-74"	"Female"	"F"	968	12782530	7.57	7.10	8.05	0.24
+	"65-74 years"	"65-74"	"Male"	"M"	1103	11202862	9.85	9.26	10.43	0.30
+"Total"	"65-74 years"	"65-74"			2071	23985392	8.63	8.26	9.01	0.19
+	"75-84 years"	"75-84"	"Female"	"F"	2442	7624484	32.03	30.76	33.30	0.65
+	"75-84 years"	"75-84"	"Male"	"M"	1958	5648150	34.67	33.13	36.20	0.78
+"Total"	"75-84 years"	"75-84"			4400	13272634	33.15	32.17	34.13	0.50
+	"85+ years"	"85+"	"Female"	"F"	5498	3923297	140.14	136.43	143.84	1.89
+	"85+ years"	"85+"	"Male"	"M"	2128	1964033	108.35	103.74	112.95	2.35
+"Total"	"85+ years"	"85+"			7626	5887330	129.53	126.63	132.44	1.48
+"Total"					16125	208826037	7.72	7.60	7.84	0.06
+"---"
+"Dataset: Underlying Cause of Death, 1999-2020"
+"Query Parameters:"
+"Title: ISTK_2012"
+"ICD-10 Codes: G45.0 (Vertebro-basilar artery syndrome); G45.1 (Carotid artery syndrome (hemispheric)); G45.2 (Multiple and"
+"bilateral precerebral artery syndromes); G45.3 (Amaurosis fugax); G45.4 (Transient global amnesia); G45.8 (Other transient"
+"cerebral ischaemic attacks and related syndromes); G45.9 (Transient cerebral ischaemic attack, unspecified); I63.0 (Cerebral"
+"infarction due to thrombosis of precerebral arteries); I63.1 (Cerebral infarction due to embolism of precerebral arteries);"
+"I63.2 (Cerebral infarction due to unspecified occlusion or stenosis of precerebral arteries); I63.3 (Cerebral infarction due to"
+"thrombosis of cerebral arteries); I63.4 (Cerebral infarction due to embolism of cerebral arteries); I63.5 (Cerebral infarction"
+"due to unspecified occlusion or stenosis of cerebral arteries); I63.6 (Cerebral infarction due to cerebral venous thrombosis,"
+"nonpyogenic); I63.8 (Other cerebral infarction); I63.9 (Cerebral infarction, unspecified); I67.0 (Dissection of cerebral"
+"arteries, nonruptured); I67.1 (Cerebral aneurysm, nonruptured); I67.2 (Cerebral atherosclerosis); I67.3 (Progressive vascular"
+"leukoencephalopathy); I67.5 (Moyamoya disease); I67.6 (Nonpyogenic thrombosis of intracranial venous system); I67.7 (Cerebral"
+"arteritis, not elsewhere classified); I67.8 (Other specified cerebrovascular diseases); I67.9 (Cerebrovascular disease,"
+"unspecified); I69.3 (Sequelae of cerebral infarction)"
+"Ten-Year Age Groups: 25-34 years; 35-44 years; 45-54 years; 55-64 years; 65-74 years; 75-84 years; 85+ years"
+"Year/Month: 2012"
+"Group By: Ten-Year Age Groups; Gender"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Feb 20, 2023 3:42:08 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files,"
+"1999-2020, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/ucd-icd10.html on Feb 20, 2023 3:42:08 PM"
+"---"
+Caveats:
+"1. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"2. The method used to calculate 95% confidence intervals is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Confidence-Intervals."
+"3. The method used to calculate standard errors is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Standard-Errors."
+"4. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"5. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#ICD-10 Changes."

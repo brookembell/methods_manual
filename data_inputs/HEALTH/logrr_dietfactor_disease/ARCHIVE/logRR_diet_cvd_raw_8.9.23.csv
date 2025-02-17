@@ -1,0 +1,37 @@
+﻿risk.factor,outcome,event.age,include,new_RR,RR.unit,RR,CI.lower,CI.upper,logRR,logCI.lower,logCI.upper,source,notes
+fruit_exc_juice,IHD,60.2,1,0,100 g/d,0.94,0.91,0.98,-0.061875404,-0.094310679,-0.020202707,Gan 2015,risk factor name matches the TMRED
+fruit_exc_juice,ISTK,59.1,1,0,100 g/d,0.88,0.83,0.93,-0.127833372,-0.186329578,-0.072570693,de novo_MRao,
+fruit_exc_juice,HSTK,61.5,1,0,100 g/d,0.73,0.62,0.87,-0.314710745,-0.478035801,-0.139262067,de novo_MRao,
+veg_exc_sta,IHD,55.4,1,0,100 g/d,0.95,0.92,0.98,-0.051293294,-0.083381609,-0.020202707,Gan 2015,includes legumes (primary definition)
+veg_exc_sta,ISTK,60,1,0,100 g/d,0.83,0.75,0.93,-0.186329578,-0.287682072,-0.072570693,de novo_MRao,includes legumes
+veg_exc_sta,HSTK,64.2,1,0,100 g/d,0.83,0.72,0.96,-0.186329578,-0.328504067,-0.040821995,de novo_MRao,includes legumes (primary definition)
+leg_tot,IHD,55.4,1,0,100 g/d,0.95,0.92,0.98,-0.051293294,-0.083381609,-0.020202707,Gan 2015,includes legumes (primary definition)
+leg_tot,ISTK,60,1,0,100 g/d,0.83,0.75,0.93,-0.186329578,-0.287682072,-0.072570693,de novo_MRao,includes legumes
+leg_tot,HSTK,64.2,1,0,100 g/d,0.83,0.72,0.96,-0.186329578,-0.328504067,-0.040821995,de novo_MRao,includes legumes (primary definition)
+pf_ns,IHD,65.15,1,0,1 oz/wk,0.93,0.91,0.96,-0.072570693,-0.094310679,-0.040821995,Afshin 2014,age at event represents the simple average of FTL and nFTL (see notes tab)- add a footnote to the relevant Table(s)
+pf_ns,DIAB,59.5,1,0,1 oz/wk,0.97,0.95,0.98,-0.030459207,-0.051293294,-0.020202707,Afshin 2014,
+gr_whole,IHD,63.4,1,0,50 g/d,0.97,0.94,0.99,-0.030459207,-0.061875404,-0.010050336,Mellen 2008,
+gr_whole,DIAB,58,1,0,50 g/d,0.88,0.83,0.93,-0.127833372,-0.186329578,-0.072570693,Aune 2013,-0.127833372
+gr_whole,ISTK,NA,1,1,50 g/d,0.81,0.72,0.93,-0.210721031,-0.328504067,-0.072570693,Chen 2016,
+gr_whole,HSTK,NA,1,1,50 g/d,1,1,1,0,0,0,no evidence for risk,
+pf_redm,IHD,NA,1,1,300 g/wk,1.06,1.03,1.09,0.058268908,0.029558802,0.086177696,Bechthold 2019,
+pf_redm,TSTK,NA,0,1,300 g/wk,1.15,1.13,1.18,0.139761942,0.122217633,0.165514438,Bechthold 2019,
+pf_redm,ISTK,NA,1,1,300 g/wk,1.15,1.13,1.18,0.139761942,0.122217633,0.165514438,Bechthold 2019,using TSTK as proxy
+pf_redm,HSTK,NA,1,1,300 g/wk,1.15,1.13,1.18,0.139761942,0.122217633,0.165514438,Bechthold 2019,using TSTK as proxy
+pf_redm,DIAB,59.6,1,0,100 g/d,1.19,1.04,1.37,0.173953307,0.039220713,0.31481074,Pan 2011,
+pf_pm,IHD,64.9,1,0,50 g/d,1.37,1.11,1.69,0.31481074,0.104360015,0.524728529,Micha 2010,
+pf_pm,TSTK,NA,0,1,150 g/wk,1.18,1.17,1.19,0.165514438,0.157003749,0.173953307,Zeraatkar 2019,
+pf_pm,ISTK,NA,1,1,150 g/wk,1.05,1.01,1.09,0.048790164,0.009950331,0.086177696,Bechthold 2019,decided to use ISTK RR (not TSTK)
+pf_pm,HSTK,NA,1,1,150 g/wk,1,1,1,0,0,0,no evidence for risk,
+pf_pm,DIAB,60.2,1,0,50 g/d,1.51,1.25,1.83,0.412109651,0.223143551,0.604315967,Pan 2011,
+ssb,IHD,67,1,0,8 oz/d,1.17,1.1,1.24,0.157003749,0.09531018,0.21511138,Xi 2015,direct SSB effects on IHD
+ssb,DIAB,53.8,1,0,8 oz/d,1.27,1.1,1.46,0.2390169,0.09531018,0.378436436,Imamura 2015,direct SSB effects on DIAB
+sat_fat,IHD,56.9,1,0,5 %E/d,1.1,1.04,1.15,0.09531018,0.039220713,0.139761942,Farvid 2014,
+pufa_rep_carb,IHD,56.8,1,0,5 %E/d,0.9,0.85,0.94,-0.105360516,-0.162518929,-0.061875404,Farvid 2014,
+pufa_rep_carbsfa,IHD,56.8,1,0,5 %E/d,0.9,0.85,0.94,-0.105360516,-0.162518929,-0.061875404,Farvid 2014,same as pufa_rep_carb
+pufa_rep_sfa,IHD,56.9,1,0,5 %E/d,0.91,0.87,0.96,-0.094310679,-0.139262067,-0.040821995,Farvid 2014,
+sea_omega3_fa,IHD,62.1,1,0,100 mg/d,0.85,0.79,0.92,-0.162518929,-0.235722334,-0.083381609,Mozaffarian 2006,
+pf_seafood,IHD,NA,1,1,300 g/wk,0.95,0.9,1,-0.051293294,-0.105360516,0,Bechthold 2019,
+pf_seafood,TSTK,NA,0,1,300 g/wk,0.94,0.88,1,-0.061875404,-0.127833372,0,Bechthold 2019,
+pf_seafood,ISTK,NA,1,1,300 g/wk,0.94,0.88,1,-0.061875404,-0.127833372,0,Bechthold 2019,using TSTK as proxy
+pf_seafood,HSTK,NA,1,1,300 g/wk,0.94,0.88,1,-0.061875404,-0.127833372,0,Bechthold 2019,using TSTK as proxy

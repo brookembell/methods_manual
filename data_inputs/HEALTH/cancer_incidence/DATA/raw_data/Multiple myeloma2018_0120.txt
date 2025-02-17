@@ -1,0 +1,73 @@
+"Race and origin recode (NHW, NHB, NHO, Hispanic)"	"Sex"	"Age recode 10yr"	"Multiple myeloma/plasma-cell leuk"	"Crude Rate"	"Standard Error"	"Lower Confidence Interval"	"Upper Confidence Interval"	"Count"	"Population"
+"Non-Hispanic White"	"Male and female"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.17	0.05	0.08	0.32	10	5800816
+"Non-Hispanic White"	"Male and female"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	1.40	0.16	1.10	1.76	75	5344399
+"Non-Hispanic White"	"Male and female"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	4.73	0.28	4.19	5.32	277	5859292
+"Non-Hispanic White"	"Male and female"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	11.32	0.41	10.53	12.16	751	6633946
+"Non-Hispanic White"	"Male and female"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	25.00	0.70	23.64	26.41	1262	5048890
+"Non-Hispanic White"	"Male and female"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	37.63	1.00	35.69	39.65	1408	3741240
+"Non-Hispanic White"	"Male"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.17	0.08	0.05	0.39	5	2973485
+"Non-Hispanic White"	"Male"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	1.66	0.25	1.21	2.22	45	2710870
+"Non-Hispanic White"	"Male"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	5.62	0.44	4.79	6.54	165	2936612
+"Non-Hispanic White"	"Male"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	13.58	0.65	12.34	14.90	443	3262450
+"Non-Hispanic White"	"Male"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	31.94	1.15	29.71	34.28	766	2398481
+"Non-Hispanic White"	"Male"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	50.75	1.80	47.28	54.41	794	1564460
+"Non-Hispanic White"	"Female"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.18	0.08	0.06	0.41	5	2827331
+"Non-Hispanic White"	"Female"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	1.14	0.21	0.77	1.63	30	2633529
+"Non-Hispanic White"	"Female"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	3.83	0.36	3.16	4.61	112	2922680
+"Non-Hispanic White"	"Female"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	9.14	0.52	8.14	10.21	308	3371496
+"Non-Hispanic White"	"Female"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	18.71	0.84	17.10	20.44	496	2650409
+"Non-Hispanic White"	"Female"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	28.21	1.14	26.02	30.53	614	2176780
+"Non-Hispanic Black"	"Male and female"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.58	0.19	0.26	1.10	9	1556892
+"Non-Hispanic Black"	"Male and female"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	3.99	0.56	2.97	5.24	51	1278752
+"Non-Hispanic Black"	"Male and female"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	14.37	1.07	12.35	16.63	180	1252683
+"Non-Hispanic Black"	"Male and female"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	29.18	1.59	26.15	32.46	338	1158493
+"Non-Hispanic Black"	"Male and female"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	62.14	3.01	56.37	68.34	425	683968
+"Non-Hispanic Black"	"Male and female"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	78.66	4.37	70.32	87.70	324	411924
+"Non-Hispanic Black"	"Male"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.64	0.29	0.21	1.49	5	780654
+"Non-Hispanic Black"	"Male"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	4.26	0.83	2.78	6.24	26	610690
+"Non-Hispanic Black"	"Male"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	14.86	1.58	11.92	18.31	88	592009
+"Non-Hispanic Black"	"Male"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	32.25	2.45	27.62	37.43	173	536427
+"Non-Hispanic Black"	"Male"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	73.67	5.00	64.20	84.15	217	294547
+"Non-Hispanic Black"	"Male"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	97.38	8.00	82.32	114.39	148	151981
+"Non-Hispanic Black"	"Female"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.52	0.26	0.14	1.32	4	776238
+"Non-Hispanic Black"	"Female"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	3.74	0.75	2.42	5.52	25	668062
+"Non-Hispanic Black"	"Female"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	13.93	1.45	11.23	17.08	92	660674
+"Non-Hispanic Black"	"Female"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	26.52	2.06	22.63	30.89	165	622066
+"Non-Hispanic Black"	"Female"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	53.41	3.70	46.40	61.19	208	389421
+"Non-Hispanic Black"	"Female"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	67.71	5.10	58.07	78.48	176	259943
+"Hispanic (All Races)"	"Male and female"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.17	0.07	0.06	0.38	6	3474967
+"Hispanic (All Races)"	"Male and female"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	1.31	0.21	0.93	1.78	40	3063538
+"Hispanic (All Races)"	"Male and female"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	5.77	0.47	4.88	6.78	148	2564390
+"Hispanic (All Races)"	"Male and female"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	13.25	0.86	11.62	15.04	239	1804131
+"Hispanic (All Races)"	"Male and female"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	24.57	1.60	21.53	27.92	235	956390
+"Hispanic (All Races)"	"Male and female"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	39.72	2.55	34.88	45.04	243	611782
+"Hispanic (All Races)"	"Male"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.28	0.12	0.09	0.64	5	1816781
+"Hispanic (All Races)"	"Male"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	1.08	0.26	0.63	1.73	17	1571106
+"Hispanic (All Races)"	"Male"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	6.33	0.70	5.04	7.86	82	1295262
+"Hispanic (All Races)"	"Male"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	14.88	1.30	12.44	17.65	131	880512
+"Hispanic (All Races)"	"Male"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	29.40	2.59	24.55	34.93	129	438777
+"Hispanic (All Races)"	"Male"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	47.59	4.40	39.36	57.04	117	245832
+"Hispanic (All Races)"	"Female"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.06	0.06	0.00	0.34	1	1658186
+"Hispanic (All Races)"	"Female"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	1.54	0.32	0.98	2.31	23	1492432
+"Hispanic (All Races)"	"Female"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	5.20	0.64	4.02	6.62	66	1269128
+"Hispanic (All Races)"	"Female"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	11.69	1.13	9.59	14.12	108	923619
+"Hispanic (All Races)"	"Female"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	20.48	1.99	16.77	24.77	106	517613
+"Hispanic (All Races)"	"Female"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	34.43	3.07	28.68	40.99	126	365950
+"OTHER"	"Male and female"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.35	0.14	0.13	0.75	6	1734372
+"OTHER"	"Male and female"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	1.19	0.27	0.72	1.86	19	1598909
+"OTHER"	"Male and female"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	3.29	0.48	2.42	4.38	47	1427341
+"OTHER"	"Male and female"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	7.39	0.77	5.95	9.07	91	1231743
+"OTHER"	"Male and female"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	17.68	1.44	14.98	20.74	151	853891
+"OTHER"	"Male and female"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	24.93	2.02	21.12	29.22	152	609760
+"OTHER"	"Male"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.47	0.23	0.13	1.19	4	859629
+"OTHER"	"Male"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	1.59	0.46	0.82	2.78	12	754329
+"OTHER"	"Male"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	4.35	0.81	2.91	6.24	29	667025
+"OTHER"	"Male"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	9.24	1.28	6.90	12.11	52	562975
+"OTHER"	"Male"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	22.17	2.42	17.68	27.44	84	378941
+"OTHER"	"Male"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	28.34	3.36	22.14	35.75	71	250507
+"OTHER"	"Female"	"25-34 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.23	0.16	0.03	0.83	2	874743
+"OTHER"	"Female"	"35-44 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	0.83	0.31	0.33	1.71	7	844580
+"OTHER"	"Female"	"45-54 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	2.37	0.56	1.40	3.74	18	760316
+"OTHER"	"Female"	"55-64 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	5.83	0.93	4.15	7.97	39	668768
+"OTHER"	"Female"	"65-74 years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	14.11	1.72	10.93	17.92	67	474950
+"OTHER"	"Female"	"75+ years"	"2(a)2.8.2 Multiple myeloma/plasma-cell leuk"	22.55	2.51	17.91	28.02	81	359253

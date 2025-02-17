@@ -1,0 +1,72 @@
+"Non-Hispanic White"	"Male and female"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.12	0.04	0.06	0.22	10	8443998
+"Non-Hispanic White"	"Male and female"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.65	0.11	0.46	0.91	35	5344399
+"Non-Hispanic White"	"Male and female"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	3.35	0.24	2.89	3.85	196	5859292
+"Non-Hispanic White"	"Male and female"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	8.22	0.35	7.54	8.93	545	6633946
+"Non-Hispanic White"	"Male and female"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	15.11	0.55	14.06	16.22	763	5048890
+"Non-Hispanic White"	"Male and female"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	17.43	0.68	16.12	18.82	652	3741240
+"Non-Hispanic White"	"Male"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.18	0.07	0.08	0.36	8	4342588
+"Non-Hispanic White"	"Male"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	1.29	0.22	0.90	1.80	35	2710870
+"Non-Hispanic White"	"Male"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	5.82	0.45	4.98	6.76	171	2936612
+"Non-Hispanic White"	"Male"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	14.90	0.68	13.60	16.28	486	3262450
+"Non-Hispanic White"	"Male"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	28.23	1.08	26.14	30.43	677	2398481
+"Non-Hispanic White"	"Male"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	33.56	1.46	30.75	36.56	525	1564460
+"Non-Hispanic White"	"Female"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.05	0.03	0.01	0.18	2	4101410
+"Non-Hispanic White"	"Female"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.00	 	0.00	0.14	0	2633529
+"Non-Hispanic White"	"Female"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.86	0.17	0.55	1.26	25	2922680
+"Non-Hispanic White"	"Female"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	1.75	0.23	1.33	2.26	59	3371496
+"Non-Hispanic White"	"Female"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	3.24	0.35	2.60	4.01	86	2650409
+"Non-Hispanic White"	"Female"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	5.83	0.52	4.86	6.94	127	2176780
+"Non-Hispanic Black"	"Male and female"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.00	 	0.00	0.16	0	2329816
+"Non-Hispanic Black"	"Male and female"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.23	0.14	0.05	0.69	3	1278752
+"Non-Hispanic Black"	"Male and female"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.40	0.18	0.13	0.93	5	1252683
+"Non-Hispanic Black"	"Male and female"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	2.16	0.43	1.40	3.19	25	1158493
+"Non-Hispanic Black"	"Male and female"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	3.07	0.67	1.90	4.69	21	683968
+"Non-Hispanic Black"	"Male and female"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	4.86	1.09	2.97	7.50	20	411924
+"Non-Hispanic Black"	"Male"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.00	 	0.00	0.31	0	1175051
+"Non-Hispanic Black"	"Male"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.33	0.23	0.04	1.18	2	610690
+"Non-Hispanic Black"	"Male"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.68	0.34	0.18	1.73	4	592009
+"Non-Hispanic Black"	"Male"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	3.73	0.83	2.28	5.76	20	536427
+"Non-Hispanic Black"	"Male"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	5.43	1.36	3.10	8.82	16	294547
+"Non-Hispanic Black"	"Male"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	9.87	2.55	5.52	16.28	15	151981
+"Non-Hispanic Black"	"Female"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.00	 	0.00	0.32	0	1154765
+"Non-Hispanic Black"	"Female"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.15	0.15	0.00	0.83	1	668062
+"Non-Hispanic Black"	"Female"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.15	0.15	0.00	0.84	1	660674
+"Non-Hispanic Black"	"Female"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.80	0.36	0.26	1.88	5	622066
+"Non-Hispanic Black"	"Female"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	1.28	0.57	0.42	3.00	5	389421
+"Non-Hispanic Black"	"Female"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	1.92	0.86	0.62	4.49	5	259943
+"Hispanic (All Races)"	"Male and female"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.09	0.04	0.03	0.22	5	5264023
+"Hispanic (All Races)"	"Male and female"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.26	0.09	0.11	0.51	8	3063538
+"Hispanic (All Races)"	"Male and female"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	1.21	0.22	0.82	1.72	31	2564390
+"Hispanic (All Races)"	"Male and female"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	2.99	0.41	2.25	3.91	54	1804131
+"Hispanic (All Races)"	"Male and female"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	7.32	0.87	5.71	9.25	70	956390
+"Hispanic (All Races)"	"Male and female"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	6.70	1.05	4.81	9.09	41	611782
+"Hispanic (All Races)"	"Male"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.15	0.07	0.04	0.37	4	2731781
+"Hispanic (All Races)"	"Male"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.51	0.18	0.22	1.00	8	1571106
+"Hispanic (All Races)"	"Male"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	2.01	0.39	1.31	2.94	26	1295262
+"Hispanic (All Races)"	"Male"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	5.56	0.79	4.12	7.36	49	880512
+"Hispanic (All Races)"	"Male"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	13.45	1.75	10.24	17.34	59	438777
+"Hispanic (All Races)"	"Male"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	12.20	2.23	8.23	17.42	30	245832
+"Hispanic (All Races)"	"Female"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.04	0.04	0.00	0.22	1	2532242
+"Hispanic (All Races)"	"Female"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.00	 	0.00	0.25	0	1492432
+"Hispanic (All Races)"	"Female"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.39	0.18	0.13	0.92	5	1269128
+"Hispanic (All Races)"	"Female"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.54	0.24	0.18	1.26	5	923619
+"Hispanic (All Races)"	"Female"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	2.13	0.64	1.06	3.80	11	517613
+"Hispanic (All Races)"	"Female"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	3.01	0.91	1.50	5.38	11	365950
+"OTHER"	"Male and female"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.00	 	0.00	0.15	0	2399226
+"OTHER"	"Male and female"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.31	0.14	0.10	0.73	5	1598909
+"OTHER"	"Male and female"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.35	0.16	0.11	0.82	5	1427341
+"OTHER"	"Male and female"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	1.54	0.35	0.93	2.41	19	1231743
+"OTHER"	"Male and female"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	2.93	0.59	1.89	4.32	25	853891
+"OTHER"	"Male and female"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	4.43	0.85	2.92	6.44	27	609760
+"OTHER"	"Male"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.00	 	0.00	0.31	0	1201174
+"OTHER"	"Male"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.53	0.27	0.14	1.36	4	754329
+"OTHER"	"Male"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.45	0.26	0.09	1.31	3	667025
+"OTHER"	"Male"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	3.02	0.73	1.76	4.83	17	562975
+"OTHER"	"Male"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	6.33	1.29	4.06	9.42	24	378941
+"OTHER"	"Male"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	7.98	1.79	4.88	12.33	20	250507
+"OTHER"	"Female"	"20-34 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.00	 	0.00	0.31	0	1198052
+"OTHER"	"Female"	"35-44 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.12	0.12	0.00	0.66	1	844580
+"OTHER"	"Female"	"45-54 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.26	0.19	0.03	0.95	2	760316
+"OTHER"	"Female"	"55-64 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.30	0.21	0.04	1.08	2	668768
+"OTHER"	"Female"	"65-74 years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	0.21	0.21	0.01	1.17	1	474950
+"OTHER"	"Female"	"75+ years"	"Esophagus"	"8140-8389: adenomas and adenocarcinomas"	1.95	0.74	0.78	4.01	7	359253

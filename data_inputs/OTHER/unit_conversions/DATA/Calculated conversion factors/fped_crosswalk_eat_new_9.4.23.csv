@@ -1,0 +1,322 @@
+,FNDDS_food_code,FNDDS_food_code_descr,food_item_cluster,rep_food,food_grp,dga_subgrp,dga_subgrp_new,prop_dga_subgrp,prop_food_subgrp,FPED,FPED_CF
+27,41102020,"Black, brown, or Bayo beans, dry, cooked, fat not added in cooking",Black beans,"Beans, black, cooked, boiled, without salt",protein,bean,leg_tot,0.083333333,0.889,0.57,1.754385965
+81,41302020,"Chickpeas, dry, cooked, fat not added in cooking",Chickpeas,"Chickpeas, cooked, boiled, without salt",protein,bean,leg_tot,0.05,0.889,0.57,1.754385965
+125,41303000,"Green or yellow split peas, dry, cooked, fat not added in cooking",Split Peas,"Peas, split, cooked, boiled, without salt",protein,bean,leg_tot,0.016666667,0.889,0.57,1.754385965
+141,41305000,"Lentils, dry, cooked, fat not added in cooking",Lentils,"Lentils, cooked, boiled, without salt",protein,bean,leg_tot,0.066666667,0.889,0.57,1.754385965
+144,41103020,"Lima beans, dry, cooked, fat not added in cooking",Lima beans (mature) (Incl. fava and mung beans),"Lima beans, large, cooked, boiled, without salt",protein,bean,leg_tot,0.016666667,0.889,0.57,1.754385965
+225,41104020,"Pinto, calico, or red Mexican beans, dry, cooked, fat not added in cooking",Pinto beans (Incl. pink beans),"Beans, pinto, cooked, boiled, without salt",protein,bean,leg_tot,0.383333333,0.889,0.57,1.754385965
+244,41106020,"Red kidney beans, dry, cooked, fat not added in cooking",Kidney Beans,"Beans, kidney, cooked, boiled, without salt",protein,bean,leg_tot,0.133333333,0.889,0.57,1.754385965
+300,41101120,"White beans, dry, cooked, fat not added in cooking",White beans (Incl. navy and pea beans),"Beans, small white, cooked, boiled, without salt",protein,bean,leg_tot,0.25,0.889,0.57,1.754385965
+56,14204010,"Cheese, cottage, lowfat (1-2% fat)","Cottage cheeses, lowfat and fat NFS","Cheese, cottage, lowfat, (1% milkfat) no sodium added",dairy,dairy,,0.001003009,,0.2,5
+57,14204010,"Cheese, cottage, lowfat (1-2% fat)","Cottage cheeses, regular","Cheese, cottage, lowfat, (1% milkfat) no sodium added",dairy,dairy,,0.001003009,,0.2,5
+58,14120020,"Cheese, Mexican blend, reduced fat ",Cheese in egg or meat dishes and frozen meals,"Cheese, Mexican, blend, reduced fat",dairy,dairy,,0.020060181,,3.53,0.283286119
+59,14120020,"Cheese, Mexican blend, reduced fat ","Cheese in pasta and Italian dishes, regular and NFS","Cheese, Mexican, blend, reduced fat",dairy,dairy,,0.023069208,,3.53,0.283286119
+60,14120020,"Cheese, Mexican blend, reduced fat ",Cheese NFS,"Cheese, Mexican, blend, reduced fat",dairy,dairy,,0.030090271,,3.53,0.283286119
+61,14120020,"Cheese, Mexican blend, reduced fat ",Cheese in Mexican dishes,"Cheese, Mexican, blend, reduced fat",dairy,dairy,,0.017051153,,3.53,0.283286119
+62,14120020,"Cheese, Mexican blend, reduced fat ","Cheese in pasta and Italian dishes, reduced fat, lowfat, and nonfat","Cheese, Mexican, blend, reduced fat",dairy,dairy,,0.003009027,,3.53,0.283286119
+63,14107060,"cheese, mozzarella, nonfat or fat free","Cheese in grains products (incl fried cheese, gnocchi), desserts/sweets, reduced fat, lowfat, nonfat","Cheese, mozzarella, nonfat or fat free",dairy,dairy,,0.003009027,,3.53,0.283286119
+64,14107060,"cheese, mozzarella, nonfat or fat free","Natural cheeses (incl low sodium cheeses), fat NFS","Cheese, mozzarella, nonfat or fat free",dairy,dairy,,0.009027081,,3.53,0.283286119
+65,14107060,"cheese, mozzarella, nonfat or fat free","Cheese on pizza and calzone, reduced-fat and lowfat","cheese, mozzarella, nonfat or fat free",dairy,dairy,,0.08224674,,3.53,0.283286119
+66,14107060,"cheese, mozzarella, nonfat or fat free","Cheese on pizza and calzone, regular","cheese, mozzarella, nonfat or fat free",dairy,dairy,,0.080240722,,3.53,0.283286119
+67,14107060,"Cheese, Mozzarella, nonfat or fat free","Natural cheeses (incl low sodium cheeses), regular","Cheese, mozzarella, nonfat or fat free",dairy,dairy,,0.075225677,,3.53,0.283286119
+68,14107060,"Cheese, Mozzarella, nonfat or fat free","Natural cheeses (incl low sodium cheeses), lowfat and fat-free","Cheese, mozzarella, nonfat or fat free",dairy,dairy,,0.002006018,,3.53,0.283286119
+69,14107060,"cheese, mozzarella, nonfat or fat free","Natural cheeses (incl low sodium cheeses), reduced-fat","Cheese, mozzarella, nonfat or fat free",dairy,dairy,,0.017051153,,3.53,0.283286119
+70,14410300,"Cheese, processed, American or Cheddar type, lowfat ","Cheese in grains products, snacks (incl breads and cereals), desserts/sweets, regular and NFS","Cheese, pasturized processed, American, lowfat",dairy,dairy,,0.004012036,,2.35,0.425531915
+71,14410300,"Cheese, processed, American or Cheddar type, lowfat ",Cheese on sandwiches,"Cheese, pasturized processed, American, lowfat",dairy,dairy,,0.019057172,,2.35,0.425531915
+72,14410300,"Cheese, processed, American or Cheddar type, lowfat ","Processed cheeses (incl low sodium cheeses), lowfat and fat-free","Cheese, pasturized processed, American, lowfat",dairy,dairy,,0.002006018,,2.35,0.425531915
+73,14410300,"Cheese, processed, American or Cheddar type, lowfat ","Processed cheeses (incl low sodium cheeses), reduced-fat","Cheese, pasturized processed, American, lowfat",dairy,dairy,,0.001003009,,2.35,0.425531915
+74,14410300,"Cheese, processed, American or Cheddar type, lowfat ","Processed cheeses (incl low sodium cheeses), regular","Cheese, pasturized processed, American, lowfat",dairy,dairy,,0.04112337,,2.35,0.425531915
+75,14410300,"Cheese, processed, American or Cheddar type, lowfat ","Cheese on vegetables (cheese sauce), in salads & dressings","Cheese, pasturized processed, American, lowfat",dairy,dairy,,0.008024072,,2.35,0.425531915
+76,14410300,"Cheese, processed, American or Cheddar type, lowfat ","Cheese spreads, dips, sauces, soups","Cheese, pasturized processed, American, lowfat",dairy,dairy,,0.009027081,,2.35,0.425531915
+109,13160400," Fat free ice cream, flavors other than chocolate","Ice cream, regular and rich","Ice creams, vanilla, fat-free",dairy,dairy,,0.015045135,,0.48,2.083333333
+110,13160400," Fat free ice cream, flavors other than chocolate","Ice cream sundaes, cones, sticks/bars/novelties, light and lowfat","Ice creams, vanilla, fat-free",dairy,dairy,,0.002006018,,0.48,2.083333333
+111,13160400," Fat free ice cream, flavors other than chocolate","Ice cream sundaes, cones, sticks/bars/novelties, regular, rich, NFS","Ice creams, vanilla, fat-free",dairy,dairy,,0.002006018,,0.48,2.083333333
+112,13160400," Fat free ice cream, flavors other than chocolate","Ice cream, light and fat-free","Ice creams, vanilla, fat-free",dairy,dairy,,0.004012036,,0.48,2.083333333
+152,11114320," Milk, cow's, fluid, lactose reduced, nonfat","Low lactose, calcium-fortified, acidopholus, buttermilk, goat's milk & imitation milks, 1% and fat-free","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.002006018,,0.41,2.43902439
+153,11114320," Milk, cow's, fluid, lactose reduced, nonfat","Low lactose, calcium-fortified, acidopholus, buttermilk, goat's milk & imitation milks, 2%","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.001003009,,0.41,2.43902439
+154,11114320," Milk, cow's, fluid, lactose reduced, nonfat","Low lactose, calcium-fortified, acidopholus, buttermilk, goat's milk & imitation milks, whole and NFS","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.002006018,,0.41,2.43902439
+155,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Flavored milks (chocolate, cocoa), fat-free","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.003009027,,0.41,2.43902439
+156,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Flavored milks (chocolate, cocoa), NFS","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.006018054,,0.41,2.43902439
+157,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Flavored milks (chocolate, cocoa), whole","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.01003009,,0.41,2.43902439
+158,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat",Milk in soups,"Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.005015045,,0.41,2.43902439
+159,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Flavored milks (chocolate, cocoa), 2%","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.014042126,,0.41,2.43902439
+160,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Milk shakes, malted milk drinks, fruit-milk drinks/smoothies, NFS","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.009027081,,0.41,2.43902439
+161,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Milk in puddings custards, desserts, sweetened condensed milk","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.006018054,,0.41,2.43902439
+162,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Flavored milks (chocolate, cocoa), 1%","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.01003009,,0.41,2.43902439
+163,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Unflavored cow milks, fat-free","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.069207623,,0.41,2.43902439
+164,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Milk in mashed potatoes, creamed veg., sauces, gravies, salad dressings","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.007021063,,0.41,2.43902439
+165,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Milk in bread, baked products, cereals","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.008024072,,0.41,2.43902439
+166,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat",Milk in scrambled eggs/omelets,"Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.017051153,,0.41,2.43902439
+167,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Milk in casseroles, mixtures, batters, frozen meals, man & other dishes","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.037111334,,0.41,2.43902439
+168,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Unflavored cow milks, whole","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.066198596,,0.41,2.43902439
+169,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Unflavored cow milks, 1%","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.059177533,,0.41,2.43902439
+170,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Unflavored cow milks, 2%","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.12337011,,0.41,2.43902439
+171,11113000," Milk, cow's, fluid, skim or nonfat, 0.5% or less butterfat","Milk in coffee drinks, lattes, etc.","Milk, nonfat, fluid, added vitamin A and D",dairy,dairy,,0.015045135,,0.41,2.43902439
+172,11121300," Milk, dry, reconstituted, nonfat","Milk powder drinks, eggnog, other bev.","Milk, dry, nonfat, instant, added vitamin A and D",dairy,dairy,,0.001003009,,0.41,2.43902439
+173,11121300," Milk, dry, reconstituted, nonfat",Meal supplements/replacements/diet drinks,"Milk, dry, nonfat, instant, added vitamin A and D",dairy,dairy,,0.003009027,,0.41,2.43902439
+174,11121300," Milk, dry, reconstituted, nonfat","Dry & evaporated milks, whole, reduced fat, and NFS","Milk, dry, nonfat, instant, added vitamin A and D",dairy,dairy,,0.001003009,,0.41,2.43902439
+175,11121300," Milk, dry, reconstituted, nonfat",Milk in candies and bars and cookies,"Milk, dry, nonfat, instant, added vitamin A and D",dairy,dairy,,0.011033099,,0.41,2.43902439
+176,11320000,"MILK, SOY, READY-TO-DRINK, NOT BABY",Soymilk,"Soymilk (all flavors), unsweetened, added calcium, vitamins A and D",dairy,dairy,,0.015045135,,0.41,2.43902439
+308,11460300,"Yogurt, frozen, flavors other than chocolate, nonfat milk","Frozen yogurt and sherbet, regular, lowfat, fat-free, and NFS","Frozen yogurts, choc, nonfat milk, sweetened w/o sugar",dairy,dairy,,0.003009027,,0.36,2.777777778
+309,11411300," Yogurt, plain, nonfat milk","Unflavored Yogurts, fat-free","Yogurt, plain, skim milk, 13 grams protein per 8 oz",dairy,dairy,,0.001003009,,0.41,2.43902439
+310,11411300," Yogurt, plain, nonfat milk","Unflavored Yogurts, lowfat","Yogurt, plain, skim milk, 13 grams protein per 8 oz",dairy,dairy,,0.001003009,,0.41,2.43902439
+311,11411300," Yogurt, plain, nonfat milk","Unflavored Yogurts, whole and NFS","Yogurt, plain, skim milk, 13 grams protein per 8 oz",dairy,dairy,,0.001003009,,0.41,2.43902439
+312,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Flavored Yogurts (caloric sweeteners), NFS","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.001003009,,0.41,2.43902439
+313,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Fruit Yogurts (low calorie sweeteners), fat-free","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.003009027,,0.41,2.43902439
+314,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Flavored Yogurts (low calorie sweeteners), fat-free","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.001003009,,0.41,2.43902439
+315,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Flavored Yogurts (low calorie sweeteners), lowfat","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.001003009,,0.41,2.43902439
+316,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Flavored Yogurts (caloric sweeteners), fat-free","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.001003009,,0.41,2.43902439
+317,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Flavored Yogurts (caloric sweeteners), lowfat","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.002006018,,0.41,2.43902439
+318,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Fruit Yogurts (caloric sweeteners) incl. yogurt NS, whole","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.001003009,,0.41,2.43902439
+319,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Fruit Yogurts (caloric sweeteners) incl.yogurt NS, fat NFS","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.002006018,,0.41,2.43902439
+320,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Fruit Yogurts (caloric sweeteners) incl.yogurt NS, fat-free","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.002006018,,0.41,2.43902439
+321,11424000,"Yogurt, vanilla, lemon, maple, or coffee flavor, nonfat milk, sweetened with low calorie sweetener","Fruit Yogurts (caloric sweeteners) incl.yogurt NS, lowfat","Yogurt, vanilla or lemon, nonfat milk, low calorie sweetener, fortified with vitamin D",dairy,dairy,,0.007021063,,0.41,2.43902439
+106,31103000,"Egg, whole, boiled",Eggs,"Egg, whole, cooked, hard-boiled",protein,egg,,1,,2,0.5
+39,81101000,NA,Dairy fat (incl. butter),"Butter, salted",extra,extra,,0.1265,,717,0.0013947
+84,82101500,NA,Coconut oil,Coconut oil,extra,extra,,0.022,,892,0.001121076
+138,81202000,NA,Beef fat (incl. tallow),Beef fat (tallow),extra,extra,,0.099,,902,0.001108647
+139,81202000,NA,Pork fat (incl. lard),Lard,extra,extra,,0.0385,,902,0.001108647
+151,81103030,NA,Margarine (1/2 total),"70% fat stick margarine, without Vit. D",extra,extra,,0.0165,,628,0.001592357
+256,81203100,NA,Vegetable shortening,"Vegetable shortening,household,composite",extra,extra,,0.1045,,884,0.001131222
+257,81203100,NA,Hydrogentated soy oil,"Soybean oil, partially hydrogenated",extra,extra,,0.0825,,884,0.001131222
+273,91101010,NA,Granulated sugar,"Sugar, granulated",extra,extra,,0.45,,387,0.002583979
+294,82101000,NA,Palm Kernel oil,Palm kernel oil,extra,extra,,0.0165,,884,0.001131222
+295,82101000,NA,Palm oil,Palm oil,extra,extra,,0.044,,884,0.001131222
+3,64104010,Apple juice,Apple Juice,"Apple juice, canned/bottled, unsweetened, without vitamin C",fruit,fruit,fruit_juice,0.054822335,,0.4,2.5
+4,64104010,Apple juice,Unknown Other Fruit Juice,"Apple juice, canned/bottled, unsweetened, without vitamin C",fruit,fruit,fruit_juice,0.016243655,,0.4,2.5
+5,64104010,Apple juice,Mixed Fruit Juice (NOT citrus),"Apple juice, canned/bottled, unsweetened, without vitamin C",fruit,fruit,fruit_juice,0.004060914,,0.4,2.5
+6,62101100,"Apple, dried, uncooked","Apples, dried","Apple, dried, sulfured, uncooked",fruit,fruit,whole_fruit,0.001015228,,2.22,0.45045045
+7,63101000,"Apple, raw","Apples, raw","Apple, raw, with skin",fruit,fruit,whole_fruit,0.187817259,,0.91,1.098901099
+8,63101120,"Applesauce, stewed apples, unsweetened",Applesauce,"Applesauce, canned, unsweetened, without vitamin C",fruit,fruit,whole_fruit,0.010152284,,0.41,2.43902439
+9,63101120,"Applesauce, stewed apples, unsweetened","Apples, cooked or canned","Applesauce, canned, unsweetened, without vitamin C",fruit,fruit,whole_fruit,0.008121827,,0.41,2.43902439
+10,63101120,"Applesauce, stewed apples, unsweetened",Unknown Other Fruit,"Applesauce, canned, unsweetened, without vitamin C",fruit,fruit,whole_fruit,0.016243655,,0.41,2.43902439
+11,63103010,"Apricot, raw","Apricot, raw","Apricots, raw",fruit,fruit,whole_fruit,0.001015228,,0.61,1.639344262
+17,63107010,"Banana, raw","Bananas, raw (Incl. white, red, Chinese, and apple types)","Bananas, raw",fruit,fruit,whole_fruit,0.129949239,,0.67,1.492537313
+18,63107010,"Banana, raw","Bananas, cooked or canned (Incl. red)","Bananas, raw",fruit,fruit,whole_fruit,0.001015228,,0.67,1.492537313
+28,63201010,"Blackberries, raw","Blackberries, raw","Blackberries, raw",fruit,fruit,whole_fruit,0.003045685,,0.69,1.449275362
+29,63203010,"Blueberries, raw","Blueberries, cooked or canned","Blueberries, raw",fruit,fruit,whole_fruit,0.002030457,,0.69,1.449275362
+30,63203010,"Blueberries, raw","Blueberries, raw","Blueberries, raw",fruit,fruit,whole_fruit,0.015228426,,0.69,1.449275362
+46,63109010,"Cantaloupe, raw","Cantaloupe, raw","Melons, cantaloupe, raw",fruit,fruit,whole_fruit,0.020304569,,0.59,1.694915254
+77,63113110,"Cherries, sour, red, ckd, unswtnd","Cherries, cooked or canned (Incl. maraschino)","Cherries, sour, red, canned, water pack",fruit,fruit,whole_fruit,0.001015228,,0.26,3.846153846
+98,63207110,"Cranberries, cooked or canned","Cranberries, cooked or canned","Cranberry sauce, canned, sweetened",fruit,fruit,whole_fruit,0.001015228,,0.48,2.083333333
+99,62109100,"Cranberries, dried","Cranberries, dried","Cranberries, dried, sweetened",fruit,fruit,whole_fruit,0.004060914,,1.79,0.558659218
+100,64105400,"Cranberry jce, 100%, not a blend",Cranberry Juice,"Cranberry juice,unsweetened",fruit,fruit,fruit_juice,0.004060914,,0.4,2.5
+105,62110100,Date,"Dates, raw and cooked","Dates, deglet noor",fruit,fruit,whole_fruit,0.001015228,,1.33,0.751879699
+121,64116020,"Grape juice, unswtnd, w/ Vit. C",Grape Juice,"Grape juice, canned, unsweetened, without vitamin C",fruit,fruit,fruit_juice,0.012182741,,0.4,2.5
+122,61201220,"Grapefruit juice, cnd, unswt.",Grapefruit Juice,"Grapefruit juice, white, canned, unsweetened",fruit,fruit,fruit_juice,0.005076142,,0.4,2.5
+123,61101010,"Grapefruit, raw","Grapefruit, raw","Grapefruit, raw, pink, red, and white",fruit,fruit,whole_fruit,0.006091371,,0.48,2.083333333
+124,63123010,"Grapes, European type, adherent skin, raw","Grapes, raw","Grapes, red/green (European type), raw",fruit,fruit,whole_fruit,0.03857868,,0.67,1.492537313
+133,63127010,"Honeydew melon, raw","Honeydew Melon, raw","Melons, honeydew, raw",fruit,fruit,whole_fruit,0.004060914,,0.59,1.694915254
+136,63126500,"Kiwifruit, raw","Kiwifruit, raw","Kiwifruit, green, raw",fruit,fruit,whole_fruit,0.001015228,,0.57,1.754385965
+140,61204200,"Lemon juice, cnd or bottled",Lemon Juice,"Lemon juice, canned or bottled",fruit,fruit,fruit_juice,0.004060914,,0.4,2.5
+145,61207200,"Lime juice, cnd or bottled",Lime Juice,"Lime juice, canned or bottled, unsweetened",fruit,fruit,fruit_juice,0.001015228,,0.4,2.5
+148,64204010,Mango nectar,Mango Juice/Nectar,"Mango nectar, canned",fruit,fruit,fruit_juice,0.001015228,,0.16,6.25
+149,63129010,"Mango, raw","Mango, raw","Mangos, raw",fruit,fruit,whole_fruit,0.008121827,,0.61,1.639344262
+150,63129010,"Mango, raw","Mango, dried","Mangos, raw",fruit,fruit,whole_fruit,0.001015228,,0.61,1.639344262
+182,63131010,"Nectarine, raw","Nectarine, raw","Nectarines, raw",fruit,fruit,whole_fruit,0.005076142,,0.69,1.449275362
+194,61210620,"Orange jce, frz, unswt., recons.",Orange Juice (Incl. tangerine & acerola),"Orange juice, chilled, including from concentrate",fruit,fruit,fruit_juice,0.174619289,,0.4,2.5
+195,61210620,"Orange jce, frz, unswt., recons.",Unknown Citrus Fruit Juice,"Orange juice, chilled, including from concentrate",fruit,fruit,fruit_juice,0.012182741,,0.4,2.5
+196,61119010,"Orange, raw","Oranges, raw (Incl. orange peel)","Oranges, raw, all varieties",fruit,fruit,whole_fruit,0.035532995,,0.54,1.851851852
+200,64120010,Papaya juice,Papaya Juice/Nectar,"Papaya nectar, canned",fruit,fruit,fruit_juice,0.001015228,,0.4,2.5
+201,63133010,"Papaya, raw","Papaya, raw","Papayas, raw",fruit,fruit,whole_fruit,0.002030457,,0.71,1.408450704
+202,63135120,"Peach, ckd/cnd, unsweetened, water pack","Peaches, cooked or canned","Peaches, canned, water pack",fruit,fruit,whole_fruit,0.006091371,,0.26,3.846153846
+203,63135010,"Peach, raw","Peaches, raw","Peaches, raw",fruit,fruit,whole_fruit,0.022335025,,0.65,1.538461538
+207,63137120,"Pear, ckd/cnd, unswtnd, water pack","Pears, cooked or canned","Pears, canned, water pack",fruit,fruit,whole_fruit,0.004060914,,0.26,3.846153846
+208,63137050,"Pear, Japanese, raw","Japanese Pears, raw","Pears, asian, raw",fruit,fruit,whole_fruit,0.001015228,,0.61,1.639344262
+209,63137010,"Pear, raw","Pears, raw","Pears, raw",fruit,fruit,whole_fruit,0.015228426,,0.61,1.639344262
+218,63139010,"Persimmon, raw","Persimmons, raw","Persimmons, native, raw",fruit,fruit,whole_fruit,0.002030457,,0.61,1.639344262
+222,64124020,Pineapple juice,Pineapple Juice,"Pineapple juice, canned, unsweetened, without vitamin C",fruit,fruit,fruit_juice,0.004060914,,0.4,2.5
+223,63141120,"Pineapple, ckd/cnd, unsweetened, water pack","Pineapple, cooked or canned","Pineapples, canned, water pack",fruit,fruit,whole_fruit,0.004060914,,0.26,3.846153846
+224,63141010,"Pineapple, raw","Pineapple, raw","Pineapples, raw, all varieties",fruit,fruit,whole_fruit,0.012182741,,0.61,1.639344262
+227,63143010,"Plum, raw","Plums, raw","Plums, raw",fruit,fruit,whole_fruit,0.004060914,,0.61,1.639344262
+228,64126000,Pomegranate juice,Pomegranate Juice,"Pomegranate juice, bottled",fruit,fruit,fruit_juice,0.002030457,,0.4,2.5
+229,63145010,"Pomegranate, raw","Pomegranate, raw","Pomegranates, raw",fruit,fruit,whole_fruit,0.001015228,,0.65,1.538461538
+236,64132010,Prune juice,Prune Juice,"Prune juice, canned",fruit,fruit,fruit_juice,0.001015228,,0.4,2.5
+237,62122100,"Prune, dried, unckd","Plums, dried (include dried prunes)","Plums, dried (prunes), uncooked",fruit,fruit,whole_fruit,0.001015228,,1.18,0.847457627
+241,62125100,Raisins,"Raisins, cooked or canned","Raisins, seedless",fruit,fruit,whole_fruit,0.004060914,,1.33,0.751879699
+242,62125100,Raisins,"Raisins, raw (Incl. raw & dried currants)","Raisins, seedless",fruit,fruit,whole_fruit,0.014213198,,1.33,0.751879699
+243,63219000,"Raspberries, raw, NS as to color","Raspberries, raw (incl. black & red)","Raspberries, raw",fruit,fruit,whole_fruit,0.002030457,,0.69,1.449275362
+270,63223120,"Strawberries, ckd or cnd, unsweetened, water pack",Unknown Citrus Fruit,"Strawberries,raw",fruit,fruit,whole_fruit,0.004060914,,0.26,3.846153846
+271,63223120,"Strawberries, ckd or cnd, unsweetened, water pack","Strawberries, cooked, canned, dried","Strawberries,  frozen, unsweetened",fruit,fruit,whole_fruit,0.002030457,,0.26,3.846153846
+272,63223020,"Strawberries, raw","Strawberries, raw","Strawberries, raw",fruit,fruit,whole_fruit,0.036548223,,0.69,1.449275362
+278,61125010,"Tangerine, raw","Tangerine, raw or canned/cooked","Tangerines (mandarin oranges), raw",fruit,fruit,whole_fruit,0.009137056,,0.54,1.851851852
+299,63149010,"Watermelon, raw","Watermelon, raw","Watermelon, raw",fruit,fruit,whole_fruit,0.052791878,,0.67,1.492537313
+36,72201210,"Broccoli, cooked, NS as to form, fat not added in cooking","Broccoli, cooked","Broccoli, cooked, boiled, without salt",veg,green,veg_exc_sta,0.32,0.079787234,0.65,1.538461538
+37,72201100,"Broccoli, raw","Broccoli, raw","Broccoli, raw",veg,green,veg_exc_sta,0.066666667,0.079787234,1.25,0.8
+40,75210010,"Cabbage, Chinese, cooked, fat not added in cooking",Bak Choy (Chinese Cabbage),"Cabbage, Chinese (pak-choi), cooked, without salt",veg,green,veg_exc_sta,0.026666667,0.079787234,0.62,1.612903226
+82,75109550,"Cilantro, raw","Cilantro, raw and ckd","Coriander leaves (Cilantro), raw",veg,green,veg_exc_sta,0.013333333,0.079787234,3.33,0.3003003
+86,72107210,"Collards, cooked, NS as to form, fat not added in cooking",Collard Greens,"Collards, cooked, boiled, without salt",veg,green,veg_exc_sta,0.04,0.079787234,0.77,1.298701299
+108,72116000,"Endive, chicory, escarole, or romaine lettuce, raw","Mixed Dark Leafy Greens (includes Romaine, Chicory, Escarole, and Endive) ","Lettuce, cos or romaine, raw",veg,green,veg_exc_sta,0.253333333,0.079787234,1,1
+135,72119210,"Kale, cooked, NS as to form, fat not added in cooking","Ckd Kale (Incl. lambsquarters, mustard cabbage, raw & ckd beet greens, bitter melon leaves, horseradish leaves, jute leaves, rad)","Kale, cooked, boiled, without salt",veg,green,veg_exc_sta,0.013333333,0.079787234,0.77,1.298701299
+142,75113080,"Lettuce, arugula, raw",Arugula Lettuce,"Arugula, raw",veg,green,veg_exc_sta,0.013333333,0.079787234,2.5,0.4
+181,72122210,"Mustard greens, cooked, NS as to form, fat not added in cooking",Ckd Mustard Greens (Incl. dandelion and poke greens),"Mustard greens, cooked, boiled, without salt",veg,green,veg_exc_sta,0.013333333,0.079787234,0.67,1.492537313
+266,72125210,"Spinach, cooked, NS as to form, fat not added in cooking","Spinach, cooked (Incl. taro leaves)","Spinach, cooked, boiled, without salt",veg,green,veg_exc_sta,0.08,0.079787234,0.67,1.492537313
+267,72125100,"Spinach, raw","Spinach, raw","Spinach, raw",veg,green,veg_exc_sta,0.146666667,0.079787234,1.43,0.699300699
+291,72128210,"Turnip greens, cooked, NS as to form, fat not added in cooking",Turnip Greens,"Turnip greens, cooked, boiled, without salt",veg,green,veg_exc_sta,0.013333333,0.079787234,0.63,1.587301587
+22,25110140,"Beef liver, fried",Liver,"Beef, liver, pan-fried",protein,meat,,0.005178792,,3.5,0.285714286
+23,21102130,"Beef steak, fried, lean only eaten","Beef, ground","Ground beef, 95% lean, patty, pan-broiled",protein,meat,,0.2675709,,3.5,0.285714286
+24,21401120,"BEEF, ROAST, ROASTED, LEAN ONLY",Beef,"Beef, round, eye of round, separable lean only, roasted",protein,meat,,0.27053021,,3.45,0.307255072
+119,25210610,"Frankfurter or hot dog, beef, lowfat","Luncheon meats, beef","Frankfurter, beef, low fat",protein,meat,,0.106781751,,3.12,0.435212821
+130,25230230,"Ham, sliced, ex lean,prepkgd/deli, lunch meat","Luncheon meats, pork","Ham, sliced, extra lean",protein,meat,,0.12946979,,3.53,0.283286119
+131,22311020,"Ham, smoked or cured, cooked, lean only eaten","Pork, cured","Pork, cured, ham, whole, separable lean only, roasted",protein,meat,,0.078668311,,3.53,0.283286119
+137,23120120,"Lamb, roast, ckd, lean only eaten",Lamb,"Lamb, domestic, leg, separable lean only, choice, roasted",protein,meat,,0.006905055,,3.48,0.295556322
+234,22201120,"PORK STEAK OR CUTLET, BROILED OR BAKED, LEAN ONLY","Pork, fresh","Pork, fresh, sirloin chops, boneless, lean, broiled",protein,meat,,0.118618989,,3.42,0.314997661
+289,25221860,"Turkey sausage, reduced fat, brown and serve, cooked",Sausage,"Turkey sausage, reduced fat, brown and serve, cooked",protein,meat,,0.011097411,,3.49,0.297832951
+296,23321200,"Venison/deer steak, ckd, method NS",Game meat,"Deer, loin, lean only, steak, brld",protein,meat,,0.005178792,,3.48,0.289956322
+1,42101210,"Almonds, dry roasted, without salt",Almonds,"Almonds, dry roasted, without salt",protein,nuts,,0.157792836,,7.05,0.141843972
+49,42104200,"Cashew nuts, dry roasted",Cashew nuts,"Cashew nuts, dry roasted, without salt",protein,nuts,,0.057115198,,7.05,0.141843972
+78,42105000,"Chestnuts, roasted",Chestnuts,"Chestnuts, European, roasted",protein,nuts,,0.001936108,,7.05,0.141843972
+113,42107000,"Filberts, hazelnuts",Filberts/hazelnuts,Hazelnuts or filberts,protein,nuts,,0.001936108,,7.05,0.141843972
+115,43104000,Flax seeds,Flax seeds,Flaxseed,protein,nuts,,0.009680542,,7.05,0.141843972
+177,42110200,"Mixed nuts, dry roasted",Mixed nuts,"Mixed nuts, dry roasted, with peanuts, without salt",protein,nuts,,0.103581801,,7.05,0.141843972
+204,42202000,Peanut butter,Peanut butter,"Peanut butter, smooth style, with salt",protein,nuts,,0.256534366,,6.25,0.16
+206,42111200,"Peanuts, dry roasted, without salt",Peanuts,"Peanuts, all types, dry-roasted, without salt",protein,nuts,,0.247821878,,7.05,0.141843972
+212,42112000,Pecans,Pecans,Pecans,protein,nuts,,0.016456922,,7.05,0.141843972
+221,42113000,Pine nuts (Pignolias),Pine nuts,"Pine nuts, dried",protein,nuts,,0.003872217,,7.05,0.141843972
+226,42114130,Pistachio nuts,Pistachio nuts,"Pistachio nuts, dry roasted, without salt",protein,nuts,,0.027105518,,7.05,0.141843972
+238,43101150,"Pumpkin and/or squash seeds, hulled, roasted, without salt",Pumpkin/squash seed kernels,"Pumpkin and squash seed kernels,roasted, without salt",protein,nuts,,0.010648596,,7.05,0.141843972
+255,43103000,Sesame seeds,Sesame seeds,"Sesame seed kernels, toasted, without salt (decorticated)",protein,nuts,,0.005808325,,7.05,0.141843972
+275,43102200,"Sunflower seeds, hulled dry roasted",Sunflower seeds,"Sunflower seed kernels, dry roasted, without salt",protein,nuts,,0.046466602,,7.05,0.141843972
+297,42116000,Walnuts,Walnuts,"Walnuts, English",protein,nuts,,0.053242982,,7.05,0.141843972
+45,82105750,NA,Canola oil,"Oil, canola",oils,oils,,0.22,,100,0.01
+88,82102000,NA,Corn oil,"Oil, corn, industrial and retail, all purpose salad or cooking",oils,oils,,0.1,,100,0.01
+92,82103000,NA,Cottonseed oil,"Oil, cottonseed, salad or cooking",oils,oils,,0.04,,100,0.01
+188,82104000,NA,Olive oil,"Oil, olive, salad or cooking",oils,oils,,0.04,,100,0.01
+205,82105000,NA,Peanut oil,"Oil, peanut, salad or cooking",oils,oils,,0.01,,100,0.01
+263,82108000,NA,Unhydrogenated soy oil,"Oil, soybean, salad or cooking",oils,oils,,0.53,,100,0.01
+274,82108500,NA,Sunflower oil,"Oil, sunflower, linoleic (approx. 65%)",oils,oils,,0.03,,100,0.01
+293,81104510,NA,Margarine (1/2 total),"Margarine-like, veg. oil spread, 60% fat, tub, with salt, without vit. D",oils,oils,,0.03,,100,0.01
+12,75201011,"Artichoke, globe (French), cooked, from fresh, fat not added in cooking",Artichoke,"Artichokes, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.002754821,0.384042553,0.57,1.754385965
+13,75202011,"Asparagus, cooked, from fresh, fat not added in cooking",Asparagus,"Asparagus, cooked, boiled, drained",veg,other,veg_exc_sta,0.011019284,0.384042553,0.56,1.785714286
+14,63105010,"Avocado, raw",Avocado,"Avocados, raw, all commercial varieties",veg,other,veg_exc_sta,0.03030303,0.384042553,0.69,1.449275362
+16,75203000,"Bamboo shoots, cooked, fat not added in cooking",Bamboo Shoots,"Bamboo shoots, cooked, drained, without salt",veg,other,veg_exc_sta,0.008264463,0.384042553,0.67,1.492537313
+19,75207011,"Bean sprouts, cooked, from fresh, fat not added in cooking","Mungbeans Sprt, ckd and raw (Incl. alfalfa and buckwheat sprouts)","Mung beans, mature seeds, sprouted, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.013774105,0.384042553,0.8,1.25
+21,75205021,"Beans, string, green, cooked, from fresh, fat not added in cooking","Green Beans, ckd and raw (Incl. snap and yellow beans)","Beans, snap, green, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.104683196,0.384042553,0.8,1.25
+25,75208011,"Beets, cooked, from fresh, fat not added in cooking",Beets,"Beets, cooked, boiled, drained",veg,other,veg_exc_sta,0.005509642,0.384042553,0.59,1.694915254
+38,75209011,"Brussels sprouts, cooked, from fresh, fat not added in cooking",Brussels Sprouts,"Brussels sprouts, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.005509642,0.384042553,0.65,1.538461538
+41,75211020,"Cabbage, green, cooked, fat not added in cooking","Green Cabbage, cooked","Cabbage, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.019283747,0.384042553,0.67,1.492537313
+42,75103000,"Cabbage, green, raw","Green Cabbage, raw and ckd (Incl. savoy cabbage; swt pot., squash, & pumpkin leaves)","Cabbage, raw",veg,other,veg_exc_sta,0.024793388,0.384042553,1.11,0.900900901
+43,75105000,"Cabbage, red, raw",Red Cabbage (Incl. radicchio),"Cabbage, red, raw",veg,other,veg_exc_sta,0.002754821,0.384042553,1.11,0.900900901
+44,75213110,"Cactus, cooked, fat not added in cooking",Cactus (Nopales),"Nopales, cooked, without salt",veg,other,veg_exc_sta,0.002754821,0.384042553,0.67,1.492537313
+52,75214011,"Cauliflower, cooked, from fresh, fat not added in cooking",Cauliflower (Incl. broccoflower),"Cauliflower, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.013774105,0.384042553,0.8,1.25
+53,75215010,"Celery, cooked, fat not added in cooking","Celery, cooked","Celery, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.033057851,0.384042553,0.67,1.492537313
+54,75109000,"Celery, raw","Celery, raw","Celery, raw",veg,other,veg_exc_sta,0.024793388,0.384042553,0.83,1.204819277
+103,75503110,"Cucumber pickles, dill, reduced salt",Cucumber Pickles (Incl. relish and capers),"Pickles, cucumber, dill, low sodium",veg,other,veg_exc_sta,0.035812672,0.384042553,0.65,1.538461538
+104,75111000,"Cucumber, raw","Cucumber (Incl. flowers of sesbania, squash, lily, pumpkin)","Cucumber, peeled,raw",veg,other,veg_exc_sta,0.063360882,0.384042553,0.83,1.204819277
+107,75217010,"Eggplant, cooked, fat not added in cooking",Eggplant (Incl. hearts of palm),"Eggplant, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.013774105,0.384042553,1.05,0.952380952
+120,75111500,"Garlic, raw",Garlic,"Garlic, raw",veg,other,veg_exc_sta,0.013774105,0.384042553,0.74,1.351351351
+134,75503090,Horseradish,Horseradish (Incl. ginger root),Horseradish,veg,other,veg_exc_sta,0.002754821,0.384042553,0.4,2.5
+143,75113000,"Lettuce, raw","Lettuce (Incl. Iceberg, manoa)","Lettuce, iceberg, raw",veg,other,veg_exc_sta,0.223140496,0.384042553,0.91,1.098901099
+179,75219011,"Mushrooms, cooked, from fresh, fat not added in cooking",Mushrooms (Incl. shiitake),"Mushrooms, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.038567493,0.384042553,0.65,1.538461538
+187,75220011,"Okra, cooked, from fresh, fat not added in cooking",Okra (Incl. horseradish pods),"Okra, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.002754821,0.384042553,0.63,1.587301587
+189,75510020,"Olives, black",Olives,"Olives, ripe, canned (small-extra large)",veg,other,veg_exc_sta,0.011019284,0.384042553,0.74,1.351351351
+190,75221011,"Onions, mature, cooked, from fresh, fat not added in cooking",Unknown other vegetable,"Onions, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.016528926,0.384042553,0.48,2.083333333
+191,75221011,"Onions, mature, cooked, from fresh, fat not added in cooking","Onions, mature, cooked (includes Leeks)","Onions, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.110192837,0.384042553,0.48,2.083333333
+192,75117020,"Onions, mature, raw","Onions, mature, raw","Onions, raw",veg,other,veg_exc_sta,0.049586777,0.384042553,0.63,1.587301587
+193,75117010,"Onions, young green, raw",Spring Onions/Scallions,"Onions, spring or scallions (includes tops and bulb), raw",veg,other,veg_exc_sta,0.013774105,0.384042553,1,1
+213,75122100,"Pepper, sweet, green, raw","Raw Green Peppers (sweet, bell) (Incl. color NS)","Pepper, sweet, green, raw",veg,other,veg_exc_sta,0.019283747,0.384042553,0.83,1.204819277
+214,75226010,"Peppers, green, cooked, fat not added in cooking","Green Peppers, cooked, sweet, bell","Peppers, sweet, green, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.03030303,0.384042553,0.74,1.351351351
+215,75226100,"Peppers, hot, cooked, NS as to form, fat not added in cooking","Chili Pepper, hot, red, ckd and raw (Incl. color NS) RO ","Peppers, hot chili, green, raw",veg,other,veg_exc_sta,0.002754821,0.384042553,0.74,1.351351351
+240,75125000,"Radish, raw",Radishes,"Radish, raw",veg,other,veg_exc_sta,0.002754821,0.384042553,0.8,1.25
+260,75231011,"Snowpea (pea pod), cooked, from fresh, fat not added in cooking","Edible-pod Green Peas, ckd and raw (Incl. snowpeas, fern shoots)","Peas, edible-podded, boiled, drained, without salt",veg,other,veg_exc_sta,0.008264463,0.384042553,0.63,1.587301587
+268,75233011,"Squash, summer, cooked, from fresh, fat not added in cooking","Summer Squash, ckd and raw, yellow and zucchini (Incl. spaghetti squash, chayote, bitter and winter melons)","Squash, summer, all varieties, cooked, boiled, drained,",veg,other,veg_exc_sta,0.027548209,0.384042553,0.56,1.785714286
+282,74101000,"Tomatoes, raw",Tomatillos,"Tomatillos, raw",veg,other,veg_exc_sta,0.005509642,0.384042553,0.59,1.694915254
+292,75234011,"Turnip, cooked, from fresh, fat not added in cooking","Turnips, ckd and raw (Incl. rutabaga, jicama, kohlrabi, celeriac, fennel bulb)","Turnips, cooked, boiled, drained, without salt",veg,other,veg_exc_sta,0.005509642,0.384042553,0.65,1.538461538
+79,25230310,"Chicken or turkey loaf, prepkgd/deli, lunch meat","Luncheon meats, poultry","Chicken roll, light meat",protein,poultry,,0.122247782,,3.53,0.283286119
+80,24102020,"Chicken, part NS, rstd, brld, bkd, no skin",Chicken,"Chicken, meat only, roasted",protein,poultry,,0.824515281,,3.5,0.285714286
+290,24201320,"Turkey, light & dark mt, rst, no skin",Turkey,"Turkey, meat only, roasted",protein,poultry,,0.053236937,,3.51,0.284900285
+47,73102210,"Carrots, cooked, NS as to form, fat not added in cooking","Carrots, cooked","Carrots, cooked, boiled, drained, without salt",veg,red,veg_exc_sta,0.101694915,0.25106383,0.69,1.449275362
+48,73101010,"Carrots, raw","Carrots, raw","Carrots, raw",veg,red,veg_exc_sta,0.076271186,0.25106383,0.8,1.25
+216,75226100,"Peppers, hot, cooked, NS as to form, fat not added in cooking","Chili Pepper, hot, red, (Incl. color NS)","Peppers, hot chili, red, raw",veg,red,veg_exc_sta,0.021186441,0.25106383,0.74,1.351351351
+217,75226050,"Peppers, red, cooked, fat not added in cooking","Red Peppers, sweet, bell (Incl.","Peppers, sweet, red, cooked, boiled, without salt",veg,red,veg_exc_sta,0.008474576,0.25106383,0.74,1.351351351
+239,73201013,"Pumpkin, cooked, from canned, fat not added in cooking",Pumpkin,"Pumpkin, canned, without salt",veg,red,veg_exc_sta,0.004237288,0.25106383,0.41,2.43902439
+269,73303010,"Squash, winter type, baked, no fat or sugar added in cooking",Ckd Winter Squash,"Squash, winter, all varieties, baked, without salt",veg,red,veg_exc_sta,0.008474576,0.25106383,0.49,2.040816327
+276,73403010,"Sweetpotato, baked, peel not eaten, fat not added in cooking",Ckd Sweet Potatoes/orange yams,"Sweet potato, cooked, baked in skin, without salt",veg,red,veg_exc_sta,0.025423729,0.25106383,0.5,2
+280,74301100,Tomato juice,Tomato Juice,"Tomato juice, canned, without salt added",veg,red,veg_exc_sta,0.050847458,0.25106383,0.41,2.43902439
+281,74403120,Tomato puree,"Tomatoes, cooked","Tomatoes, canned, puree, without salt added",veg,red,veg_exc_sta,0.474576271,0.25106383,0.83,1.204819277
+283,74101000,"Tomatoes, raw","Tomatoes, raw","Tomatoes, red, ripe, raw",veg,red,veg_exc_sta,0.228813559,0.25106383,0.59,1.694915254
+15,51180010,BAGEL,Bagels and English Muffins,"Bagels, plain, enriched",grain,refined,,0.041902605,,4.23,0.236406619
+26,52101150,"BISCUITS,PLN/BTTRMLK,REFR DOUGH,LO FAT,BKD",Biscuits,"Biscuits, plain or buttermilk, refrigerated dough, lower fat, baked",grain,refined,,0.020385051,,4.16,0.240384615
+31,51107010,"BREAD, FRENCH OR VIENNA",French Bread,"Bread, french or vienna",grain,refined,,0.024915062,,4.06,0.246305419
+32,51109100,"BREAD, PITA",Pizza Crust,"Bread, pita, white, enriched",grain,refined,,0.095130238,,4.69,0.213219616
+33,51101000,"BREAD, WHITE",Breadings and Stuffings/Dressings,"Bread, white, commercially prepared",grain,refined,,0.045300113,,3.39,0.294985251
+34,51101000,"BREAD, WHITE",White Bread,"Bread, white, commercially prepared",grain,refined,,0.130237826,,3.39,0.294985251
+87,57135000,"CORN FLAKES, KELLOGG",Refined grain RTE Cereal,"Cereals ready-to-eat, Corn Flakes",grain,refined,,0.021517554,,3,0.333333333
+96,54101010,"CRACKER, ANIMAL","Flour-based Desserts (cakes, cookies, etc)","Cookies, animal crackers",grain,refined,,0.088335221,,4.49,0.222717149
+97,54101010,"CRACKER, ANIMAL",Snack Bars containing refined grains,"Cookies, animal crackers",grain,refined,,0.002265006,,4.49,0.222717149
+118,50010000,"FLOUR, WHITE",Refined Grain as Thickener,"Wheat flour, white, all-purpose, enriched, bleached",grain,refined,,0.005662514,,6.25,0.16
+126,56201000," Grits, cooked, corn or hominy, NS as to regular, quick, or instant, fat not added in cooking ",Cooked Cereal,"Cereals, corn grits, white, regular and quick, enriched, cooked without salt",grain,refined,,0.003397508,,0.42,2.380952381
+198,55101000,"PANCAKES, PLAIN",Quick Breads,"Pancakes, plain, frozen, ready-to-heat",grain,refined,,0.028312571,,1.92,0.520833333
+219,53391000,PIE SHELL,Pie and Pastry Crusts,"Pie crust, standard-type, frozen, ready-to-bake, enriched, baked",grain,refined,,0.019252548,,3,0.333333333
+235,54408030,"PRETZELS, HARD, UNSALTED",Pretzels and Crackers,"Pretzels, hard, plain, made with enriched flour, unsalted",grain,refined,,0.046432616,,5.75,0.173913043
+246,56205010,"RICE, WHITE, COOKED, REGULAR, FAT NOT ADDED IN COOKING",White Rice,"Rice, white, long-grain, regular, cooked",grain,refined,,0.064552661,,1.2,0.833333333
+247,56205010,"RICE, WHITE, COOKED, REGULAR, FAT NOT ADDED IN COOKING",Other Foods Containing Refined Grains,"Rice, white, long-grain, regular, cooked",grain,refined,,0.001132503,,1.2,0.833333333
+249,51150000,"ROLL, WHITE, SOFT",White Rolls and Buns,"Rolls, hamburger or hotdog, plain",grain,refined,,0.103057758,,3.25,0.307692308
+264,56130010,"SPAGHETTI, COOKED, FAT NOT ADDED IN COOKING",Pasta and noodles,"Spaghetti, cooked, enriched, without salt",grain,refined,,0.110985277,,1.4,0.714285714
+284,52215100,"TORTILLA, CORN",Corn Tortilla,"Tortillas, ready-to-bake or -fry, corn",grain,refined,,0.086070215,,3.83,0.261096606
+285,52215200,"TORTILLA, FLOUR (WHEAT)",Flour Tortilla,"Tortillas, ready-to-bake or -fry, flour",grain,refined,,0.061155153,,4.53,0.220750552
+2,26101180,"ANCHOVY, CANNED",Anchovy,"Anchovy, European, canned in oil, drained",protein,seafood,,0.000967118,,3.51,0.289700285
+51,26107160,"Catfish, steamed or poached",Catfish,"Catfish, channel, farmed, cooked, dry heat",protein,seafood,,0.02417795,,3.52,0.286390909
+83,26303160,"Clams, steamed or boiled",Clams,"Clams, mixed species, cooked, moist heat",protein,seafood,,0.015473888,,3.49,0.286532951
+85,26109160,"Cod, steamed or poached",Cod,"Cod, Pacific, cooked, dry heat",protein,seafood,,0.067698259,,3.53,0.283286119
+93,26305160,"Crab, hard shell, steamed",Crab,"Crab, blue, cooked, moist heat",protein,seafood,,0.047388781,,3.5,0.285714286
+101,26309160,"Crayfish, boiled or steamed",Crayfish,"Crayfish, mixed species, wild, cooked, moist heat",protein,seafood,,0.00483559,,3.5,0.285714286
+102,26111160,"Croaker, steamed or poached",Croaker,"Croaker, Atlantic, raw",protein,seafood,,0.006769826,,3.53,0.283286119
+114,26100160,"Fish, NS as to type, steamed",Unknown Fish,"Fish, pollock, Atlantic, cooked, dry heat",protein,seafood,,0.050290135,,3.53,0.283286119
+116,26115160,"Flounder, steamed or poached",Flounder,"Flatfish (flounder and sole), cooked, dry heat",protein,seafood,,0.047388781,,3.53,0.283286119
+117,26115160,"Flounder, steamed or poached",Halibut,"Halibut, Atlantic and Pacific, cooked, dry heat",protein,seafood,,0.00967118,,3.53,0.283286119
+127,26117160,"Haddock, steamed or poached (includes pollock)",Fish sticks,"Fish, pollock, Atlantic, cooked, dry heat",protein,seafood,,0.020309478,,3.53,0.283286119
+128,26117160,"Haddock, steamed or poached",Haddock,"Haddock, cooked, dry heat",protein,seafood,,0.012572534,,3.53,0.283286119
+129,26117160,"Haddock, steamed or poached (includes pollock)",Restructured fish,"Fish, pollock, Atlantic, cooked, dry heat",protein,seafood,,0.001934236,,3.53,0.283286119
+132,26119120,"Herring, baked or broiled",Herring,"Herring, Atlantic, cooked, dry heat",protein,seafood,,0.006769826,,3.31,0.326614804
+146,26311160,"Lobster, steamed or boiled",Lobster,"Lobster, northern, cooked, moist heat",protein,seafood,,0.008704062,,3.5,0.285714286
+147,26121110,"Mackerel, ckd, method NS",Mackerel,"Mackerel, Atlantic, cooked, dry heat",protein,seafood,,0.000967118,,3.07,0.413032899
+180,26313160,"Mussels, steamed or poached",Mussels,"Mussel, blue, cooked, moist heat",protein,seafood,,0.001934236,,3.47,0.288184438
+185,26125160,"Ocean perch, steamed or poached",Perch,"Ocean perch, Atlantic, cooked, dry heat",protein,seafood,,0.023210832,,3.53,0.283286119
+186,26205160,"Octopus, steamed",Octopus/squid,"Octopus, common, cooked, moist heat",protein,seafood,,0.01450677,,3.47,0.288184438
+197,26315130,"Oysters, steamed",Oysters,"Mollusks, oyster, Pacific, cooked, moist heat",protein,seafood,,0.021276596,,3.49,0.286532951
+220,26129160,"Pike, steamed or poached",Pike,"Pike, northern, cooked, dry heat",protein,seafood,,0.007736944,,3.53,0.283286119
+230,26131160,"Pompano, steamed or poached",Pompano,"Pompano, Florida, cooked, dry heat",protein,seafood,,0.012572534,,3.42,0.322297661
+232,26133160,"Porgy, steamed or poached",Porgy,"sheepshead, cooked, dry heat",protein,seafood,,0.003868472,,3.53,0.283286119
+233,26133160,"Porgy, steamed or poached",Snapper,"Snapper, mixed species, cooked, dry heat",protein,seafood,,0.007736944,,3.53,0.283286119
+251,26137160,"Salmon, steamed or poached",Salmon,"Fish, salmon, Atlantic, farmed, cooked, dry heat",protein,seafood,,0.131528046,,3.53,0.283286119
+252,26139180,"Sardines, canned in oil",Sardines,"Sardine, Atlantic, canned in oil, drained with bone",protein,seafood,,0.00483559,,3.44,0.314697674
+253,26317130,"Scallops, steamed or boiled",Scallops,"Scallops (bay and sea), cooked, steamed",protein,seafood,,0.008704062,,3.4,0.318317647
+254,26141160,"Sea bass, steamed or poached",Sea bass,"Sea bass, mixed species, cooked, dry heat",protein,seafood,,0.008704062,,3.53,0.283286119
+259,26319130,"Shrimp, steamed or boiled",Shrimp,"Shrimp, cooked, moist heat",protein,seafood,,0.169245648,,3.49,0.286532951
+277,26149160,"Swordfish, steamed or poached",Swordfish,"Swordfish, cooked, dry heat",protein,seafood,,0.003868472,,3.53,0.283286119
+279,26158010,"Tilapia, baked or broiled",Tilapia,"Tilapia, cooked, dry heat",protein,seafood,,0.050290135,,3.39,0.294985251
+286,26151160,"Trout, steamed or poached",Trout,"Trout, rainbow, farmed, cooked, dry heat",protein,seafood,,0.015473888,,3.53,0.283286119
+287,26155190,"Tuna, canned, water pack",Tuna-high Omega 3,"Tuna, white, canned in water, drained solids",protein,seafood,,0.040618956,,3.53,0.283286119
+288,26155190,"Tuna, canned, water pack",Tuna-low 0mega3,"Tuna, light, canned in water, drained solids",protein,seafood,,0.137330754,,3.53,0.283286119
+307,26157160,"Whiting, steamed or poached",Whiting,"Fish, whiting, mixed species, cooked, dry heat",protein,seafood,,0.010638298,,3.53,0.283286119
+261,16122,Soy protein isolate,Processed Soy,Soy protein isolate,protein,soy,leg_tot,0.805825243,0.111,6.8,0.147058824
+262,41420010,"Soybean curd (includes stir fried, soybean cake, bean curd, tofu)",Tofu,"Tofu, firm, prepared with calcium sulfate and magnesium chloride",protein,soy,leg_tot,0.194174757,0.111,1.6,0.625
+20,75204011,"Beans, lima, immature, cooked, from fresh, fat not added in cooking","Lima Beans, immature","Lima beans, immature, cooked, boiled, without salt",veg,starch,veg_sta,0.011152416,0.285106383,0.59,1.694915254
+50,71930100,"Cassava (yuca blanca), cooked, fat not added in cooking","Cassava (Tapioca) (Incl. taro, burdock root, and white yam)","Cassava, raw",veg,starch,veg_sta,0.003717472,0.285106383,0.77,1.298701299
+90,75216211,"Corn, white, cooked, from fresh, fat not added in cooking",Corn (white) (Incl. hominy),"Corn, sweet, white, cooked, boiled, without salt",veg,starch,veg_sta,0.018587361,0.285106383,0.61,1.639344262
+91,75216111,"Corn, yellow, cooked, from fresh, fat not added in cooking","Corn, yellow","Corn, sweet, yellow, cooked, boiled, without salt",veg,starch,veg_sta,0.096654275,0.285106383,0.61,1.639344262
+210,75223011,"Peas, cowpeas, field peas, or blackeye peas (not dried), cooked, from fresh, fat not added in cooking","Ckd Cowpeas, Field Peas, Blackeye Peas (NOT dried) (Incl. pigeon peas)","Cowpeas, immature, cooked, boiled, without salt",veg,starch,veg_sta,0.003717472,0.285106383,0.59,1.694915254
+211,75224021,"Peas, green, cooked, from fresh, fat not added in cooking",Green Peas,"Peas, green, cooked, boiled, without salt",veg,starch,veg_sta,0.05204461,0.285106383,0.63,1.587301587
+248,71905010,"Ripe plantains, boiled",Plantains,"Plantains, cooked",veg,starch,veg_sta,0.011152416,0.285106383,0.67,1.492537313
+298,75235000,Water chestnut,Waterchestnuts (Incl. lotus root),"Waterchestnuts, chinese, canned",veg,starch,veg_sta,0.003717472,0.285106383,0.63,1.587301587
+301,71101110,"White potato, baked, peel eaten, fat not added in cooking","Potatoes, baked","Potatoes, white, flesh and skin, baked",veg,starch,veg_sta,0.130111524,0.285106383,0.83,1.204819277
+302,71103010,"White potato, boiled, without peel, fat not added in cooking","Potatoes, boiled (Incl. breadfruit)","Potatoes, boiled, flesh, cooked without skin or salt",veg,starch,veg_sta,0.24535316,0.285106383,0.65,1.538461538
+303,71103010,"White potato, boiled, without peel, fat not added in cooking",Vegetable starches,Potato Flour,veg,starch,veg_sta,0.003717472,0.285106383,0.65,1.538461538
+304,71201080,"White potato, chips, fat free",Potato Chips/Puffs/Sticks,"Potato chips, fat free, salted",veg,starch,veg_sta,0.17472119,0.285106383,1.75,0.571428571
+305,71401020,"White potato, french fries, from frozen, oven baked",French Fries,"Potatoes, french fried, frozen, without salt, oven heated",veg,starch,veg_sta,0.148698885,0.285106383,0.65,1.538461538
+306,71405020,"White potato, hash brown, from frozen",Home Fries/Hash Browns,"Potatoes, hashed brown, frozen, plain, prepared",veg,starch,veg_sta,0.096654275,0.285106383,0.65,1.538461538
+35,51201010,"Bread, whole wheat, 100%",Whole Wheat Bread,"Bread, whole wheat",grain,whole,,0.307692308,,3.63,0.275482094
+55,57123000,Cheerios,Whole Oat RTE cereals,"Cereals ready-to-eat, Cheerios",grain,whole,,0.102564103,,3.26,0.306748466
+89,57137000,Corn Puffs,Whole Grain Corn RTE Cereals,"Cereals ready-to-eat, Kix",grain,whole,,0.034188034,,3.05,0.327868852
+94,54337050,"Cracker, 100% whole wheat, reduced fat",Snack bars containing whole grains,"Crackers, whole wheat, reduced fat",grain,whole,,0.025641026,,5.76,0.173611111
+95,54337050,"Cracker, 100% whole wheat, reduced fat",Whole wheat crackers,"Crackers, whole wheat, reduced fat",grain,whole,,0.051282051,,5.76,0.173611111
+178,51202000,"English muffin, whole wheat, 100%",Whole grain bagels & Eng. muffins,"English muffins, whole-wheat",grain,whole,,0.034188034,,3.5,0.285714286
+183,56203000,"Oatmeal, ckd, NS as to reg, quick or instant, fat not added in ckg",Oatmeal and other cooked cereals,"Oats, regular and quick and instant, unenriched, ckd with water without salt",grain,whole,,0.128205128,,0.57,1.754385965
+184,57602100,"Oats, raw","Whole Grains in other foods, incl desserts","Oats, regular, quick, and instant, unenriched, dry",grain,whole,,0.008547009,,3.53,0.283286119
+199,55105200,"Pancakes, whole wheat",Whole wheat quick bread,"Pancakes, whole-wheat, dry mix, incomplete, prepared",grain,whole,,0.017094017,,1.92,0.520833333
+231,54403010,"Popcorn, air-popped (no butter or oil)",Popcorn,"Popcorn, air-popped",grain,whole,,0.085470085,,3.53,0.283286119
+245,56205110,"Brown rice, ckd, reg., fat not added in ckg",Brown rice,"Brown rice, long-grain, cooked",grain,whole,,0.068376068,,1.22,0.819672131
+250,51220000,"Roll, whole wheat, 100%",Whole grain rolls (not sweet),"Rolls, dinner, whole wheat",grain,whole,,0.008547009,,3.5,0.285714286
+258,57417000,"Shredded wheat, 100%",Whole Wheat RTE Cereals,"Cereals,RTE, wheat, shredded, plain, sugar and salt free",grain,whole,,0.111111111,,3.53,0.283286119
+265,56133000," Spaghetti, cooked, whole wheat, fat not added in cooking",Whole grain pasta,"Spaghetti, whole wheat, cooked",grain,whole,,0.017094017,,1.4,0.714285714
