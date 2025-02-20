@@ -1,0 +1,608 @@
+# Cleaning Code
+
+This chapter walks you through all of the R code used to clean the raw data inputs. The resulting cleaned datasets are then used in the modeling (see next Chapter).
+
+## Create Final Data Inputs
+
+This script imports all of raw data inputs needed for the model.
+
+Note that you must first open the 'methods_manual' R project before running this script or else it will not work.
+
+First, let's set up our environment. 
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list = ls())
+
+options(scipen=999)
+
+library(tidyverse)
+library(readxl)
+library(stringr)
+
+# check working directory
+getwd()
+
+```
+
+Create a date string that will be appended to all data file names.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+my_date <- paste0("_", Sys.Date(), "_FINAL.csv")
+
+```
+
+### Other Data Inputs
+
+#### U.S. population {-}
+
+Just need to round the population number the nearest whole number. Then export data to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+pop <- read_xlsx("data_inputs/OTHER/us_population/DATA/NHANES 17 SUBPOPratio_0327.xlsx", sheet = "final")
+
+pop1 <- pop %>% rename(subgroup = subgroup_id,
+                       `2018_pop` = Pop_2018) %>% 
+  mutate(`2018_pop` = ceiling(`2018_pop`)) # round up to next whole number
+
+write_csv(pop1, paste0("data_inputs/FINAL/cleaned_raw_data/population_distribution", my_date))
+
+```
+
+#### Conversion units {-}
+
+Just select the needed variables then export.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+units <- read_csv("data_inputs/OTHER/unit_conversions/DATA/Unit_conversions_1.4.24.csv")
+
+units1 <- units %>% select(Food_group, DGA_unit, Conversion_to_grams, Equation)
+
+write_csv(units1, paste0("data_inputs/FINAL/cleaned_raw_data/unit_conversions", my_date))
+
+```
+
+Clear global environment expect for my_date.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list=setdiff(ls(), c("my_date")))
+
+```
+
+### Health Data Inputs
+
+#### Cancer incidence {-}
+
+Import the raw cancer data input, clean up the variable names, and calculate the standard error of the cancer counts ('count_se').
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# import cancer data
+cancer <- read_xls("data_inputs/HEALTH/cancer_incidence/DATA/2018CANCERRATE_0327.xls", sheet = "2018pop")
+
+cancer1 <- 
+  cancer %>% select(subgroup_id, cancer_code_ICD_O_3, Crude_Rate, 
+                  Standard_Error, `_2018_pop`, No_2018) %>% 
+  rename(crude_rate = Crude_Rate,
+                  crude_se = Standard_Error,
+                  count = No_2018,
+                  population = `_2018_pop`,
+         subgroup = subgroup_id,
+         diseases = cancer_code_ICD_O_3) %>% 
+  mutate(count_se = (crude_se / 100000) * population)
+
+```
+
+Recode the cancer labels as shorter abbreviations.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+cancer2 <- cancer1 %>% mutate(diseases = recode(diseases, 
+                                     "All Sites" = "ALL",
+                                     "Colon and Rectum" = "CC",
+                                     "Corpus Uteri" = "UC",
+                                     "Esophagus" = "ECA",
+                                     "Breast" = "BC",
+                                     "Gallbladder" = "GC",
+                                     "Kidney and Renal Pelvis" = "KC",
+                                     "Liver and Intrahepatic Bile Duct" = "LVC",
+                                     "Lung and Bronchus" = "LC",
+                                     "myeloma" = "MMC",
+                                     "Ovary" = "OC",
+                                     "Pancreas" = "PC",
+                                     "prostate(advanced)" = "APCA",
+                                     "stomach_cardia" = "SCC",
+                                     "stomach_noncar" = "SCNC",
+                                     "Thyroid" = "TC",
+                                     "oral cavity and pharynx and larynx" = "MLPC"))
+
+```
+
+Round the count values to the nearest whole number.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+cancer3 <- cancer2 %>% mutate(population = ceiling(population),
+                              count = ceiling(count),
+                              count_se = ceiling(count_se)) %>% 
+  arrange(diseases, subgroup)
+
+```
+
+Lastly, merge with population subsgroup information and cancer labels.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# import subgroups info
+subgrps <- read_csv("data_inputs/OTHER/labels/DATA/population_subgroups_48_060923_FINAL.csv")
+
+# join with cancer data
+cancer4 <- left_join(cancer3, subgrps, by = "subgroup") 
+
+# import cancer label data
+dis_labels <- read_csv("data_inputs/OTHER/labels/DATA/disease_outcomes_060923_FINAL.csv") %>% 
+  select(outcome, outcome_label)
+
+cancer5 <- left_join(cancer4, dis_labels, by = c("diseases" = "outcome")) %>% 
+  rename(diseases_label = outcome_label) %>% 
+  relocate(diseases_label, .after = diseases)
+
+```
+
+If the rate or standard error variable are missing, then replace with 0. Lastly, export the cleaned file to the "FINAL" folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+cancer6 <- cancer5 %>% mutate(crude_rate = ifelse(is.na(crude_rate), 0, crude_rate),
+                              crude_se = ifelse(is.na(crude_se), 0, crude_se),
+                              count_se = ifelse(is.na(count_se), 0, count_se))
+
+# export final dataset
+write_csv(cancer6, paste0("data_inputs/FINAL/cleaned_raw_data/cancer_incidence", my_date))
+
+```
+
+#### Cardiovascular disease (CVD) mortaliaty {-}
+
+Import raw CVD data and tidy.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+cvd <- read_xlsx("data_inputs/HEALTH/cvd_mortality/DATA/CVDmotality2018_11022023.xlsx", sheet = "merge")
+
+cvd1 <- cvd %>% select(cause, subgroup_id, Deaths, Deaths_se) %>% 
+  rename(subgroup = subgroup_id) %>% 
+  mutate(deaths_rounded = ceiling(Deaths),
+         deaths_se_rounded = ceiling(Deaths_se))
+
+# look at outcome labels
+unique(cvd1$cause)
+
+# need to rename diabetes
+cvd2 <- cvd1 %>% mutate(cause = recode(cause, 
+                               "DM" = "DIAB")) %>% 
+  select(-c(Deaths, Deaths_se))
+
+```
+
+Transform the mean and SE data from long to wide format and then rejoin.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# just mean death values
+cvd_wide_mean <- pivot_wider(cvd2 %>% select(-deaths_se_rounded), 
+                        names_from = cause, 
+                        values_from = deaths_rounded)
+
+# just se death values
+cvd_wide_se <- pivot_wider(cvd2 %>% select(-deaths_rounded), 
+                           names_from = cause, 
+                           values_from = deaths_se_rounded,
+                           names_prefix = "se_")
+
+# merge
+cvd_wide <- left_join(cvd_wide_mean, cvd_wide_se, by = "subgroup")
+
+```
+
+Join with population subgroup information.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# get rid of NA row
+cvd_wide1 <- cvd_wide %>% filter(!(is.na(subgroup)))
+
+# merge with cvd data
+cvd_final <- left_join(cvd_wide1, subgrps, by = "subgroup") %>% 
+  relocate(subgroup, Age, Age_label, Sex, Sex_label, Race, Race_label)
+
+```
+
+Create the BMI-mediated and SBP-mediated variables by simply setting them equal to the cvd death values. This is needed for the model code to work properly later.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+cvd_final1 <- cvd_final %>% mutate(
+                      
+                     # BMI
+  
+                     AA_medBMI = AA,
+                     se_AA_medBMI = se_AA,
+                                   
+                     AFF_medBMI = AFF,
+                     se_AFF_medBMI = se_AFF,
+                     
+                     CM_medBMI = CM,
+                     se_CM_medBMI = se_CM,
+                     
+                     DIAB_medBMI = DIAB,
+                     se_DIAB_medBMI = se_DIAB,
+                     
+                     ENDO_medBMI = ENDO,
+                     se_ENDO_medBMI = se_ENDO,
+                     
+                     HHD_medBMI = HHD,
+                     se_HHD_medBMI = se_HHD,
+                     
+                     HSTK_medBMI = HSTK,
+                     se_HSTK_medBMI = se_HSTK,
+                     
+                     IHD_medBMI = IHD,
+                     se_IHD_medBMI = se_IHD,
+                     
+                     ISTK_medBMI = ISTK,
+                     se_ISTK_medBMI = se_ISTK,
+                     
+                     OSTK_medBMI = OSTK,
+                     se_OSTK_medBMI = se_OSTK,
+                     
+                     OTH_medBMI = OTH,
+                     se_OTH_medBMI = se_OTH,
+                     
+                     PVD_medBMI = PVD,
+                     se_PVD_medBMI = se_PVD,
+                     
+                     RHD_medBMI = RHD,
+                     se_RHD_medBMI = se_RHD,
+                     
+                     TSTK_medBMI = TSTK,
+                     se_TSTK_medBMI = se_TSTK,
+                     
+                     # SBP
+                     
+                     AA_medSBP = AA,
+                     se_AA_medSBP = se_AA,
+                     
+                     AFF_medSBP = AFF,
+                     se_AFF_medSBP = se_AFF,
+                     
+                     CM_medSBP = CM,
+                     se_CM_medSBP = se_CM,
+                     
+                     DIAB_medSBP = DIAB,
+                     se_DIAB_medSBP = se_DIAB,
+                     
+                     ENDO_medSBP = ENDO,
+                     se_ENDO_medSBP = se_ENDO,
+                     
+                     HHD_medSBP = HHD,
+                     se_HHD_medSBP = se_HHD,
+                     
+                     HSTK_medSBP = HSTK,
+                     se_HSTK_medSBP = se_HSTK,
+                     
+                     IHD_medSBP = IHD,
+                     se_IHD_medSBP = se_IHD,
+                     
+                     ISTK_medSBP = ISTK,
+                     se_ISTK_medSBP = se_ISTK,
+                     
+                     OSTK_medSBP = OSTK,
+                     se_OSTK_medSBP = se_OSTK,
+                     
+                     OTH_medSBP = OTH,
+                     se_OTH_medSBP = se_OTH,
+                     
+                     PVD_medSBP = PVD,
+                     se_PVD_medSBP = se_PVD,
+                     
+                     RHD_medSBP = RHD,
+                     se_RHD_medSBP = se_RHD,
+                     
+                     TSTK_medSBP = TSTK,
+                     se_TSTK_medSBP = se_TSTK)
+
+```
+
+Export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+write_csv(cvd_final1, paste0("data_inputs/FINAL/cleaned_raw_data/cvd_mortality", my_date))
+
+```
+
+#### Other health data {-}
+
+Import other health datsets.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+weight <- read_xls("data_inputs/HEALTH/overweight_prevalence/DATA/overweight1518_48grp_04.10.23.xls")
+
+hbp <- read_xls("data_inputs/HEALTH/systolic_blood_pressure/DATA/SBP_1718_04192023.xls", sheet = "HBPbyGRP")
+
+sbp <- read_xls("data_inputs/HEALTH/systolic_blood_pressure/DATA/SBP_1718_04192023.xls", sheet = "over20yr")
+
+#high sbp variables
+highSBP <- read_xlsx("data_inputs/HEALTH/systolic_blood_pressure/DATA/highSBP_data.xlsx")
+
+```
+
+Create non-Hipsanic Black (NHB) variables.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+oth_health <- weight %>% mutate(nhb = ifelse(Race_label == "NHB", 1, 0),
+                            nhb_se = 0) %>% 
+  rename(overweight_rate = Percent,
+         overweight_rate_se = StdErr) %>% 
+  select(subgroup, overweight_rate, overweight_rate_se, nhb, nhb_se)
+
+```
+
+The SBP data is at the participant-level so it needs to be summarized at population subgroup level.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+sbp1 <- sbp %>% 
+  filter(!(is.na(mean_sbp))) # only include those with non-missing mean_sbp value
+
+# summarize by subgroup ID
+sbp_vars <- sbp1 %>% 
+  group_by(subgroup_id) %>% 
+  summarise(sbp_mean = mean(mean_sbp),
+            # calculate standard error
+            sbp_se = sd(mean_sbp)/sqrt(length(mean_sbp)))
+
+# merge with highSBP
+highSBP1 <- highSBP %>% 
+  select(subgroup_id, Percent, StdErr) %>% 
+  rename(highSBP_rate = Percent,
+         highSBP_rate_se = StdErr)
+
+sbp_vars1 <- left_join(sbp_vars, highSBP1, by = "subgroup_id")
+
+# merge sbp vars with oth_health
+oth_health1 <- left_join(oth_health, sbp_vars1, by = c("subgroup" = "subgroup_id"))
+
+# hbp variables
+hbp1 <- 
+  hbp %>% rename(hbp = Percent,
+               hbp_se = StdErr) %>% 
+  mutate(hbp = hbp/100,
+         hbp_se = hbp_se/100) %>% 
+  select(subgroup_id, hbp, hbp_se)
+
+# merge hbp vars with oth_health
+oth_health2 <- left_join(oth_health1, hbp1, by = c("subgroup" = "subgroup_id"))
+
+```
+
+Export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+write_csv(oth_health2, paste0("data_inputs/FINAL/cleaned_raw_data/other_health", my_date))
+
+```
+
+#### Effect sizes for diet and body mass index (BMI) {-}
+
+No changes are needed so just import the file then export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+bmi_effects <- read_csv("data_inputs/HEALTH/effect_sizes_dietfactor_bmi/DATA/food_to_BMI_effects_from_Dari_1.5.24.csv")
+
+write_csv(bmi_effects, paste0("data_inputs/FINAL/cleaned_raw_data/food_to_bmi_effects", my_date))
+
+```
+
+#### Effect sizes for diet and systolic blood pressure (SBP) {-}
+
+No changes are needed so just import the file then export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+sbp_effects <- read_csv("data_inputs/HEALTH/effect_sizes_dietfactor_sbp/DATA/food_to_sbp_effects_NOT_converted_1.5.24.csv")
+
+write_csv(sbp_effects, paste0("data_inputs/FINAL/cleaned_raw_data/food_to_sbp_effects", my_date))
+
+```
+
+#### Relative risks (RR) for BMI and cancer {-}
+
+No changes are needed so just import the file then export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+bmi_cancer <- read_csv("data_inputs/HEALTH/rr_bmi_cancer/DATA/RR_BMI_cancer_11.23.22.csv") 
+
+write_csv(bmi_cancer, paste0("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cancer", my_date))
+
+```
+
+#### Relative risks (RR) for BMI and CVD {-}
+
+No changes are needed so just import the file then export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+bmi_cvd <- read_csv("data_inputs/HEALTH/rr_bmi_cvd/DATA/RR_BMI_cvd_3.2.23.csv")
+
+write_csv(bmi_cvd, paste0("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cvd", my_date))
+
+```
+
+#### Relative risks (RR) for SBP and CVD {-}
+
+No changes are needed so just import the file then export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+sbp_cvd <- read_csv("data_inputs/HEALTH/rr_sbp_cvd/DATA/RR_sbp_cvd_2.16.23.csv")
+
+write_csv(sbp_cvd, paste0("data_inputs/FINAL/cleaned_raw_data/rr_sbp_cvd", my_date))
+
+```
+
+#### Log relative risks (LogRR) for diet-CVD {-}
+
+No changes are needed so just import the file then export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list=ls(pattern="^cvd"))
+
+cvd <- read_csv("data_inputs/HEALTH/logrr_dietfactor_disease/DATA/logRR_diet_cvd_byage_1.26.24.csv")
+
+write_csv(cvd, paste0("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cvd", my_date))
+
+```
+
+#### Log relative risks (LogRR) for diet-cancer {-}
+
+No changes are needed so just import the file then export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list=ls(pattern="^cancer"))
+
+cancer <- read_csv("data_inputs/HEALTH/logrr_dietfactor_disease/DATA/logRR_diet_cancer_1.5.24.csv")
+
+write_csv(cancer, paste0("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cancer", my_date))
+
+```
+
+#### TMRED {-}
+
+Import the TMRED values (in grams). Then, import the conversion units and join with the TMRED data.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+tmred_g <- read_csv("data_inputs/HEALTH/tmred/DATA/TMRED_grams_1.5.24.csv")
+
+# import conversion units
+conversion <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/unit_conversions", my_date))
+
+# join with tmred dataset
+tmred_dga <- left_join(tmred_g, conversion, by = c("Risk_factor" = "Food_group"))
+
+```
+
+Then, transform the TMRED mean and standard deviation values from grams to "FPED units" (i.e., cups or ounces).
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+tmred_dga1 <- tmred_dga %>% mutate(tmred_dga_units = TMRED / Conversion_to_grams,
+                     sd_dga_units = SD / Conversion_to_grams)
+
+tmred_dga2 <- tmred_dga1 %>% 
+  select(Risk_factor, tmred_dga_units, sd_dga_units, DGA_unit) %>% 
+  rename(TMRED = tmred_dga_units,
+         SD = sd_dga_units,
+         Unit = DGA_unit) %>% 
+  mutate(TMRED = signif(TMRED, 3), # round to 3 sig figs
+         SD = signif(SD, 3), # round to 3 sig figs
+    Unit = str_sub(Unit, start = 3)) # fix unit var
+
+```
+
+Then, export the conversion units in both grams and FPED units to be used later.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# export grams dataset
+write_csv(tmred_g, paste0("data_inputs/FINAL/cleaned_raw_data/tmred_grams", my_date))
+
+# export FPED units
+write_csv(tmred_dga2, paste0("data_inputs/FINAL/cleaned_raw_data/tmred_dga_units", my_date))
+
+```
+
+Clear global environment expect for my_date.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list=setdiff(ls(), c("my_date")))
+
+```
+
+### Diet Data Inputs
+
+#### Dietary intake {-}
+
+Import the NHANES diet intake dataset and clean up.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+nhanes <- read_csv("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_07-08-2024.csv")
+
+nhanes1 <- nhanes %>% 
+  rename("Foodgroup" = "food",
+         "Mean_Intake" = "mean",
+         "SE_Intake" = "SE",
+         "Food_label" = "food_label",
+         "Food_desc" = "food_desc") %>% 
+  mutate(Food_label = ifelse(Foodgroup == "kcal", "Kilocalorires", Food_label),
+         Food_desc = ifelse(Foodgroup == "kcal", "Energy (kcal)", Food_desc)) %>% 
+  select(-c(starts_with(c("gro_", "oth_"))))
+
+```
+
+Then, convert the sugar sweetened beverage (SSB) mean and standard error from grams to cup (8 fl oz).
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+nhanes2 <- nhanes1 %>% 
+  # Divide by 240 to go from grams to cup
+  mutate(Mean_Intake = ifelse(Foodgroup == "ssb", Mean_Intake/240, Mean_Intake),
+  SE_Intake = ifelse(Foodgroup == "ssb", SE_Intake/240, SE_Intake),
+  Food_desc = ifelse(Foodgroup == "ssb", "Sugar sweetened beverages (1 cup [8 fl oz])", Food_desc))
+
+nhanes3 <- nhanes2 %>% arrange(Foodgroup, subgroup)
+
+```
+
+Lastly, rename the standard deviation variable and then export.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# rename stddev
+nhanes4 <- nhanes3 %>% 
+  rename(sigma_u_wgt = StdDev) %>%
+  mutate(sigma_u_wgt = ifelse(Foodgroup == "ssb", sigma_u_wgt/240, sigma_u_wgt)) %>%
+  relocate(sigma_u_wgt, .after = "SE_Intake")
+
+# export
+write_csv(nhanes4, paste0("data_inputs/FINAL/cleaned_raw_data/nhanes1518_agesexrace", my_date))
+
+```
+
+#### Counterfactual intake {-}
+
+No changes are needed so just import the file then export to FINAL folder.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+cf <- read_csv("data_inputs/DIET/counterfactual_intake/DATA/counterfactual_intake_050724.csv")
+
+write_csv(cf, paste0("data_inputs/FINAL/cleaned_raw_data/counterfactual_intake", my_date))
+
+```
+

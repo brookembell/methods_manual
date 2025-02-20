@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Cleaning Code | LASTING Four-Pillar Model Methodology</title>
+  <meta name="description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Cleaning Code | LASTING Four-Pillar Model Methodology" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Cleaning Code | LASTING Four-Pillar Model Methodology" />
+  
+  <meta name="twitter:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  
+
+<meta name="author" content="Brooke M. Bell" />
+
+
+<meta name="date" content="2025-02-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cleaning-code---nhanes-diet-data.html"/>
+<link rel="next" href="model-code.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">LASTING Methods Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#github-repository"><i class="fa fa-check"></i>Github Repository</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#data-inputs"><i class="fa fa-check"></i>Data Inputs</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#model-output"><i class="fa fa-check"></i>Model Output</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html"><i class="fa fa-check"></i><b>1</b> Summary of Data Inputs</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#diet-inputs"><i class="fa fa-check"></i><b>1.1</b> Diet Inputs</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#counterfactual-intake"><i class="fa fa-check"></i><b>1.1.1</b> Counterfactual Intake</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cleaning-code---nhanes-diet-data.html"><a href="cleaning-code---nhanes-diet-data.html"><i class="fa fa-check"></i><b>2</b> Cleaning Code - NHANES Diet Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cleaning-code---nhanes-diet-data.html"><a href="cleaning-code---nhanes-diet-data.html#processed-and-organ-meat"><i class="fa fa-check"></i><b>2.1</b> Processed and Organ Meat</a></li>
+<li class="chapter" data-level="2.2" data-path="cleaning-code---nhanes-diet-data.html"><a href="cleaning-code---nhanes-diet-data.html#clean-raw-nhanes-data"><i class="fa fa-check"></i><b>2.2</b> Clean Raw NHANES Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cleaning-code.html"><a href="cleaning-code.html"><i class="fa fa-check"></i><b>3</b> Cleaning Code</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cleaning-code.html"><a href="cleaning-code.html#create-final-data-inputs"><i class="fa fa-check"></i><b>3.1</b> Create Final Data Inputs</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="cleaning-code.html"><a href="cleaning-code.html#other-data-inputs"><i class="fa fa-check"></i><b>3.1.1</b> Other Data Inputs</a></li>
+<li class="chapter" data-level="3.1.2" data-path="cleaning-code.html"><a href="cleaning-code.html#health-data-inputs"><i class="fa fa-check"></i><b>3.1.2</b> Health Data Inputs</a></li>
+<li class="chapter" data-level="3.1.3" data-path="cleaning-code.html"><a href="cleaning-code.html#diet-data-inputs"><i class="fa fa-check"></i><b>3.1.3</b> Diet Data Inputs</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="model-code.html"><a href="model-code.html"><i class="fa fa-check"></i><b>4</b> Model Code</a></li>
+<li class="chapter" data-level="5" data-path="model-output-1.html"><a href="model-output-1.html"><i class="fa fa-check"></i><b>5</b> Model Output</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LASTING Four-Pillar Model Methodology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cleaning-code" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Cleaning Code<a href="cleaning-code.html#cleaning-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter walks you through all of the R code used to clean the raw data inputs. The resulting cleaned datasets are then used in the modeling (see next Chapter).</p>
+<div id="create-final-data-inputs" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Create Final Data Inputs<a href="cleaning-code.html#create-final-data-inputs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This script imports all of raw data inputs needed for the model.</p>
+<p>Note that you must first open the ‘methods_manual’ R project before running this script or else it will not work.</p>
+<p>First, let’s set up our environment.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="cleaning-code.html#cb9-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb9-2"><a href="cleaning-code.html#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="cleaning-code.html#cb9-3" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>)</span>
+<span id="cb9-4"><a href="cleaning-code.html#cb9-4" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="cleaning-code.html#cb9-5" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-6"><a href="cleaning-code.html#cb9-6" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb9-7"><a href="cleaning-code.html#cb9-7" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb9-8"><a href="cleaning-code.html#cb9-8" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="cleaning-code.html#cb9-9" tabindex="-1"></a><span class="co"># check working directory</span></span>
+<span id="cb9-10"><a href="cleaning-code.html#cb9-10" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<p>Create a date string that will be appended to all data file names.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="cleaning-code.html#cb10-1" tabindex="-1"></a>my_date <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;_&quot;</span>, <span class="fu">Sys.Date</span>(), <span class="st">&quot;_FINAL.csv&quot;</span>)</span></code></pre></div>
+<div id="other-data-inputs" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Other Data Inputs<a href="cleaning-code.html#other-data-inputs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="u.s.-population" class="section level4 unnumbered hasAnchor">
+<h4>U.S. population<a href="cleaning-code.html#u.s.-population" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Just need to round the population number the nearest whole number. Then export data to FINAL folder.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="cleaning-code.html#cb11-1" tabindex="-1"></a>pop <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;data_inputs/OTHER/us_population/DATA/NHANES 17 SUBPOPratio_0327.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;final&quot;</span>)</span>
+<span id="cb11-2"><a href="cleaning-code.html#cb11-2" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="cleaning-code.html#cb11-3" tabindex="-1"></a>pop1 <span class="ot">&lt;-</span> pop <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">subgroup =</span> subgroup_id,</span>
+<span id="cb11-4"><a href="cleaning-code.html#cb11-4" tabindex="-1"></a>                       <span class="st">`</span><span class="at">2018_pop</span><span class="st">`</span> <span class="ot">=</span> Pop_2018) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-5"><a href="cleaning-code.html#cb11-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">`</span><span class="at">2018_pop</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ceiling</span>(<span class="st">`</span><span class="at">2018_pop</span><span class="st">`</span>)) <span class="co"># round up to next whole number</span></span>
+<span id="cb11-6"><a href="cleaning-code.html#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="cleaning-code.html#cb11-7" tabindex="-1"></a><span class="fu">write_csv</span>(pop1, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/population_distribution&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="conversion-units" class="section level4 unnumbered hasAnchor">
+<h4>Conversion units<a href="cleaning-code.html#conversion-units" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Just select the needed variables then export.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="cleaning-code.html#cb12-1" tabindex="-1"></a>units <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/OTHER/unit_conversions/DATA/Unit_conversions_1.4.24.csv&quot;</span>)</span>
+<span id="cb12-2"><a href="cleaning-code.html#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="cleaning-code.html#cb12-3" tabindex="-1"></a>units1 <span class="ot">&lt;-</span> units <span class="sc">%&gt;%</span> <span class="fu">select</span>(Food_group, DGA_unit, Conversion_to_grams, Equation)</span>
+<span id="cb12-4"><a href="cleaning-code.html#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="cleaning-code.html#cb12-5" tabindex="-1"></a><span class="fu">write_csv</span>(units1, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/unit_conversions&quot;</span>, my_date))</span></code></pre></div>
+<p>Clear global environment expect for my_date.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="cleaning-code.html#cb13-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">&quot;my_date&quot;</span>)))</span></code></pre></div>
+</div>
+</div>
+<div id="health-data-inputs" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Health Data Inputs<a href="cleaning-code.html#health-data-inputs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cancer-incidence" class="section level4 unnumbered hasAnchor">
+<h4>Cancer incidence<a href="cleaning-code.html#cancer-incidence" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Import the raw cancer data input, clean up the variable names, and calculate the standard error of the cancer counts (‘count_se’).</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="cleaning-code.html#cb14-1" tabindex="-1"></a><span class="co"># import cancer data</span></span>
+<span id="cb14-2"><a href="cleaning-code.html#cb14-2" tabindex="-1"></a>cancer <span class="ot">&lt;-</span> <span class="fu">read_xls</span>(<span class="st">&quot;data_inputs/HEALTH/cancer_incidence/DATA/2018CANCERRATE_0327.xls&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;2018pop&quot;</span>)</span>
+<span id="cb14-3"><a href="cleaning-code.html#cb14-3" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="cleaning-code.html#cb14-4" tabindex="-1"></a>cancer1 <span class="ot">&lt;-</span> </span>
+<span id="cb14-5"><a href="cleaning-code.html#cb14-5" tabindex="-1"></a>  cancer <span class="sc">%&gt;%</span> <span class="fu">select</span>(subgroup_id, cancer_code_ICD_O_3, Crude_Rate, </span>
+<span id="cb14-6"><a href="cleaning-code.html#cb14-6" tabindex="-1"></a>                  Standard_Error, <span class="st">`</span><span class="at">_2018_pop</span><span class="st">`</span>, No_2018) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-7"><a href="cleaning-code.html#cb14-7" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">crude_rate =</span> Crude_Rate,</span>
+<span id="cb14-8"><a href="cleaning-code.html#cb14-8" tabindex="-1"></a>                  <span class="at">crude_se =</span> Standard_Error,</span>
+<span id="cb14-9"><a href="cleaning-code.html#cb14-9" tabindex="-1"></a>                  <span class="at">count =</span> No_2018,</span>
+<span id="cb14-10"><a href="cleaning-code.html#cb14-10" tabindex="-1"></a>                  <span class="at">population =</span> <span class="st">`</span><span class="at">_2018_pop</span><span class="st">`</span>,</span>
+<span id="cb14-11"><a href="cleaning-code.html#cb14-11" tabindex="-1"></a>         <span class="at">subgroup =</span> subgroup_id,</span>
+<span id="cb14-12"><a href="cleaning-code.html#cb14-12" tabindex="-1"></a>         <span class="at">diseases =</span> cancer_code_ICD_O_3) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-13"><a href="cleaning-code.html#cb14-13" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">count_se =</span> (crude_se <span class="sc">/</span> <span class="dv">100000</span>) <span class="sc">*</span> population)</span></code></pre></div>
+<p>Recode the cancer labels as shorter abbreviations.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="cleaning-code.html#cb15-1" tabindex="-1"></a>cancer2 <span class="ot">&lt;-</span> cancer1 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">diseases =</span> <span class="fu">recode</span>(diseases, </span>
+<span id="cb15-2"><a href="cleaning-code.html#cb15-2" tabindex="-1"></a>                                     <span class="st">&quot;All Sites&quot;</span> <span class="ot">=</span> <span class="st">&quot;ALL&quot;</span>,</span>
+<span id="cb15-3"><a href="cleaning-code.html#cb15-3" tabindex="-1"></a>                                     <span class="st">&quot;Colon and Rectum&quot;</span> <span class="ot">=</span> <span class="st">&quot;CC&quot;</span>,</span>
+<span id="cb15-4"><a href="cleaning-code.html#cb15-4" tabindex="-1"></a>                                     <span class="st">&quot;Corpus Uteri&quot;</span> <span class="ot">=</span> <span class="st">&quot;UC&quot;</span>,</span>
+<span id="cb15-5"><a href="cleaning-code.html#cb15-5" tabindex="-1"></a>                                     <span class="st">&quot;Esophagus&quot;</span> <span class="ot">=</span> <span class="st">&quot;ECA&quot;</span>,</span>
+<span id="cb15-6"><a href="cleaning-code.html#cb15-6" tabindex="-1"></a>                                     <span class="st">&quot;Breast&quot;</span> <span class="ot">=</span> <span class="st">&quot;BC&quot;</span>,</span>
+<span id="cb15-7"><a href="cleaning-code.html#cb15-7" tabindex="-1"></a>                                     <span class="st">&quot;Gallbladder&quot;</span> <span class="ot">=</span> <span class="st">&quot;GC&quot;</span>,</span>
+<span id="cb15-8"><a href="cleaning-code.html#cb15-8" tabindex="-1"></a>                                     <span class="st">&quot;Kidney and Renal Pelvis&quot;</span> <span class="ot">=</span> <span class="st">&quot;KC&quot;</span>,</span>
+<span id="cb15-9"><a href="cleaning-code.html#cb15-9" tabindex="-1"></a>                                     <span class="st">&quot;Liver and Intrahepatic Bile Duct&quot;</span> <span class="ot">=</span> <span class="st">&quot;LVC&quot;</span>,</span>
+<span id="cb15-10"><a href="cleaning-code.html#cb15-10" tabindex="-1"></a>                                     <span class="st">&quot;Lung and Bronchus&quot;</span> <span class="ot">=</span> <span class="st">&quot;LC&quot;</span>,</span>
+<span id="cb15-11"><a href="cleaning-code.html#cb15-11" tabindex="-1"></a>                                     <span class="st">&quot;myeloma&quot;</span> <span class="ot">=</span> <span class="st">&quot;MMC&quot;</span>,</span>
+<span id="cb15-12"><a href="cleaning-code.html#cb15-12" tabindex="-1"></a>                                     <span class="st">&quot;Ovary&quot;</span> <span class="ot">=</span> <span class="st">&quot;OC&quot;</span>,</span>
+<span id="cb15-13"><a href="cleaning-code.html#cb15-13" tabindex="-1"></a>                                     <span class="st">&quot;Pancreas&quot;</span> <span class="ot">=</span> <span class="st">&quot;PC&quot;</span>,</span>
+<span id="cb15-14"><a href="cleaning-code.html#cb15-14" tabindex="-1"></a>                                     <span class="st">&quot;prostate(advanced)&quot;</span> <span class="ot">=</span> <span class="st">&quot;APCA&quot;</span>,</span>
+<span id="cb15-15"><a href="cleaning-code.html#cb15-15" tabindex="-1"></a>                                     <span class="st">&quot;stomach_cardia&quot;</span> <span class="ot">=</span> <span class="st">&quot;SCC&quot;</span>,</span>
+<span id="cb15-16"><a href="cleaning-code.html#cb15-16" tabindex="-1"></a>                                     <span class="st">&quot;stomach_noncar&quot;</span> <span class="ot">=</span> <span class="st">&quot;SCNC&quot;</span>,</span>
+<span id="cb15-17"><a href="cleaning-code.html#cb15-17" tabindex="-1"></a>                                     <span class="st">&quot;Thyroid&quot;</span> <span class="ot">=</span> <span class="st">&quot;TC&quot;</span>,</span>
+<span id="cb15-18"><a href="cleaning-code.html#cb15-18" tabindex="-1"></a>                                     <span class="st">&quot;oral cavity and pharynx and larynx&quot;</span> <span class="ot">=</span> <span class="st">&quot;MLPC&quot;</span>))</span></code></pre></div>
+<p>Round the count values to the nearest whole number.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="cleaning-code.html#cb16-1" tabindex="-1"></a>cancer3 <span class="ot">&lt;-</span> cancer2 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">population =</span> <span class="fu">ceiling</span>(population),</span>
+<span id="cb16-2"><a href="cleaning-code.html#cb16-2" tabindex="-1"></a>                              <span class="at">count =</span> <span class="fu">ceiling</span>(count),</span>
+<span id="cb16-3"><a href="cleaning-code.html#cb16-3" tabindex="-1"></a>                              <span class="at">count_se =</span> <span class="fu">ceiling</span>(count_se)) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-4"><a href="cleaning-code.html#cb16-4" tabindex="-1"></a>  <span class="fu">arrange</span>(diseases, subgroup)</span></code></pre></div>
+<p>Lastly, merge with population subsgroup information and cancer labels.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="cleaning-code.html#cb17-1" tabindex="-1"></a><span class="co"># import subgroups info</span></span>
+<span id="cb17-2"><a href="cleaning-code.html#cb17-2" tabindex="-1"></a>subgrps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/OTHER/labels/DATA/population_subgroups_48_060923_FINAL.csv&quot;</span>)</span>
+<span id="cb17-3"><a href="cleaning-code.html#cb17-3" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="cleaning-code.html#cb17-4" tabindex="-1"></a><span class="co"># join with cancer data</span></span>
+<span id="cb17-5"><a href="cleaning-code.html#cb17-5" tabindex="-1"></a>cancer4 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(cancer3, subgrps, <span class="at">by =</span> <span class="st">&quot;subgroup&quot;</span>) </span>
+<span id="cb17-6"><a href="cleaning-code.html#cb17-6" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="cleaning-code.html#cb17-7" tabindex="-1"></a><span class="co"># import cancer label data</span></span>
+<span id="cb17-8"><a href="cleaning-code.html#cb17-8" tabindex="-1"></a>dis_labels <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/OTHER/labels/DATA/disease_outcomes_060923_FINAL.csv&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-9"><a href="cleaning-code.html#cb17-9" tabindex="-1"></a>  <span class="fu">select</span>(outcome, outcome_label)</span>
+<span id="cb17-10"><a href="cleaning-code.html#cb17-10" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="cleaning-code.html#cb17-11" tabindex="-1"></a>cancer5 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(cancer4, dis_labels, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;diseases&quot;</span> <span class="ot">=</span> <span class="st">&quot;outcome&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-12"><a href="cleaning-code.html#cb17-12" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">diseases_label =</span> outcome_label) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-13"><a href="cleaning-code.html#cb17-13" tabindex="-1"></a>  <span class="fu">relocate</span>(diseases_label, <span class="at">.after =</span> diseases)</span></code></pre></div>
+<p>If the rate or standard error variable are missing, then replace with 0. Lastly, export the cleaned file to the “FINAL” folder.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="cleaning-code.html#cb18-1" tabindex="-1"></a>cancer6 <span class="ot">&lt;-</span> cancer5 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">crude_rate =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(crude_rate), <span class="dv">0</span>, crude_rate),</span>
+<span id="cb18-2"><a href="cleaning-code.html#cb18-2" tabindex="-1"></a>                              <span class="at">crude_se =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(crude_se), <span class="dv">0</span>, crude_se),</span>
+<span id="cb18-3"><a href="cleaning-code.html#cb18-3" tabindex="-1"></a>                              <span class="at">count_se =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(count_se), <span class="dv">0</span>, count_se))</span>
+<span id="cb18-4"><a href="cleaning-code.html#cb18-4" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="cleaning-code.html#cb18-5" tabindex="-1"></a><span class="co"># export final dataset</span></span>
+<span id="cb18-6"><a href="cleaning-code.html#cb18-6" tabindex="-1"></a><span class="fu">write_csv</span>(cancer6, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/cancer_incidence&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="cardiovascular-disease-cvd-mortaliaty" class="section level4 unnumbered hasAnchor">
+<h4>Cardiovascular disease (CVD) mortaliaty<a href="cleaning-code.html#cardiovascular-disease-cvd-mortaliaty" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Import raw CVD data and tidy.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="cleaning-code.html#cb19-1" tabindex="-1"></a>cvd <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;data_inputs/HEALTH/cvd_mortality/DATA/CVDmotality2018_11022023.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;merge&quot;</span>)</span>
+<span id="cb19-2"><a href="cleaning-code.html#cb19-2" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="cleaning-code.html#cb19-3" tabindex="-1"></a>cvd1 <span class="ot">&lt;-</span> cvd <span class="sc">%&gt;%</span> <span class="fu">select</span>(cause, subgroup_id, Deaths, Deaths_se) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-4"><a href="cleaning-code.html#cb19-4" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">subgroup =</span> subgroup_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-5"><a href="cleaning-code.html#cb19-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">deaths_rounded =</span> <span class="fu">ceiling</span>(Deaths),</span>
+<span id="cb19-6"><a href="cleaning-code.html#cb19-6" tabindex="-1"></a>         <span class="at">deaths_se_rounded =</span> <span class="fu">ceiling</span>(Deaths_se))</span>
+<span id="cb19-7"><a href="cleaning-code.html#cb19-7" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="cleaning-code.html#cb19-8" tabindex="-1"></a><span class="co"># look at outcome labels</span></span>
+<span id="cb19-9"><a href="cleaning-code.html#cb19-9" tabindex="-1"></a><span class="fu">unique</span>(cvd1<span class="sc">$</span>cause)</span>
+<span id="cb19-10"><a href="cleaning-code.html#cb19-10" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="cleaning-code.html#cb19-11" tabindex="-1"></a><span class="co"># need to rename diabetes</span></span>
+<span id="cb19-12"><a href="cleaning-code.html#cb19-12" tabindex="-1"></a>cvd2 <span class="ot">&lt;-</span> cvd1 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">cause =</span> <span class="fu">recode</span>(cause, </span>
+<span id="cb19-13"><a href="cleaning-code.html#cb19-13" tabindex="-1"></a>                               <span class="st">&quot;DM&quot;</span> <span class="ot">=</span> <span class="st">&quot;DIAB&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-14"><a href="cleaning-code.html#cb19-14" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(Deaths, Deaths_se))</span></code></pre></div>
+<p>Transform the mean and SE data from long to wide format and then rejoin.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="cleaning-code.html#cb20-1" tabindex="-1"></a><span class="co"># just mean death values</span></span>
+<span id="cb20-2"><a href="cleaning-code.html#cb20-2" tabindex="-1"></a>cvd_wide_mean <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(cvd2 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>deaths_se_rounded), </span>
+<span id="cb20-3"><a href="cleaning-code.html#cb20-3" tabindex="-1"></a>                        <span class="at">names_from =</span> cause, </span>
+<span id="cb20-4"><a href="cleaning-code.html#cb20-4" tabindex="-1"></a>                        <span class="at">values_from =</span> deaths_rounded)</span>
+<span id="cb20-5"><a href="cleaning-code.html#cb20-5" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="cleaning-code.html#cb20-6" tabindex="-1"></a><span class="co"># just se death values</span></span>
+<span id="cb20-7"><a href="cleaning-code.html#cb20-7" tabindex="-1"></a>cvd_wide_se <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(cvd2 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>deaths_rounded), </span>
+<span id="cb20-8"><a href="cleaning-code.html#cb20-8" tabindex="-1"></a>                           <span class="at">names_from =</span> cause, </span>
+<span id="cb20-9"><a href="cleaning-code.html#cb20-9" tabindex="-1"></a>                           <span class="at">values_from =</span> deaths_se_rounded,</span>
+<span id="cb20-10"><a href="cleaning-code.html#cb20-10" tabindex="-1"></a>                           <span class="at">names_prefix =</span> <span class="st">&quot;se_&quot;</span>)</span>
+<span id="cb20-11"><a href="cleaning-code.html#cb20-11" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="cleaning-code.html#cb20-12" tabindex="-1"></a><span class="co"># merge</span></span>
+<span id="cb20-13"><a href="cleaning-code.html#cb20-13" tabindex="-1"></a>cvd_wide <span class="ot">&lt;-</span> <span class="fu">left_join</span>(cvd_wide_mean, cvd_wide_se, <span class="at">by =</span> <span class="st">&quot;subgroup&quot;</span>)</span></code></pre></div>
+<p>Join with population subgroup information.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="cleaning-code.html#cb21-1" tabindex="-1"></a><span class="co"># get rid of NA row</span></span>
+<span id="cb21-2"><a href="cleaning-code.html#cb21-2" tabindex="-1"></a>cvd_wide1 <span class="ot">&lt;-</span> cvd_wide <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">is.na</span>(subgroup)))</span>
+<span id="cb21-3"><a href="cleaning-code.html#cb21-3" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="cleaning-code.html#cb21-4" tabindex="-1"></a><span class="co"># merge with cvd data</span></span>
+<span id="cb21-5"><a href="cleaning-code.html#cb21-5" tabindex="-1"></a>cvd_final <span class="ot">&lt;-</span> <span class="fu">left_join</span>(cvd_wide1, subgrps, <span class="at">by =</span> <span class="st">&quot;subgroup&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-6"><a href="cleaning-code.html#cb21-6" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup, Age, Age_label, Sex, Sex_label, Race, Race_label)</span></code></pre></div>
+<p>Create the BMI-mediated and SBP-mediated variables by simply setting them equal to the cvd death values. This is needed for the model code to work properly later.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="cleaning-code.html#cb22-1" tabindex="-1"></a>cvd_final1 <span class="ot">&lt;-</span> cvd_final <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
+<span id="cb22-2"><a href="cleaning-code.html#cb22-2" tabindex="-1"></a>                      </span>
+<span id="cb22-3"><a href="cleaning-code.html#cb22-3" tabindex="-1"></a>                     <span class="co"># BMI</span></span>
+<span id="cb22-4"><a href="cleaning-code.html#cb22-4" tabindex="-1"></a>  </span>
+<span id="cb22-5"><a href="cleaning-code.html#cb22-5" tabindex="-1"></a>                     <span class="at">AA_medBMI =</span> AA,</span>
+<span id="cb22-6"><a href="cleaning-code.html#cb22-6" tabindex="-1"></a>                     <span class="at">se_AA_medBMI =</span> se_AA,</span>
+<span id="cb22-7"><a href="cleaning-code.html#cb22-7" tabindex="-1"></a>                                   </span>
+<span id="cb22-8"><a href="cleaning-code.html#cb22-8" tabindex="-1"></a>                     <span class="at">AFF_medBMI =</span> AFF,</span>
+<span id="cb22-9"><a href="cleaning-code.html#cb22-9" tabindex="-1"></a>                     <span class="at">se_AFF_medBMI =</span> se_AFF,</span>
+<span id="cb22-10"><a href="cleaning-code.html#cb22-10" tabindex="-1"></a>                     </span>
+<span id="cb22-11"><a href="cleaning-code.html#cb22-11" tabindex="-1"></a>                     <span class="at">CM_medBMI =</span> CM,</span>
+<span id="cb22-12"><a href="cleaning-code.html#cb22-12" tabindex="-1"></a>                     <span class="at">se_CM_medBMI =</span> se_CM,</span>
+<span id="cb22-13"><a href="cleaning-code.html#cb22-13" tabindex="-1"></a>                     </span>
+<span id="cb22-14"><a href="cleaning-code.html#cb22-14" tabindex="-1"></a>                     <span class="at">DIAB_medBMI =</span> DIAB,</span>
+<span id="cb22-15"><a href="cleaning-code.html#cb22-15" tabindex="-1"></a>                     <span class="at">se_DIAB_medBMI =</span> se_DIAB,</span>
+<span id="cb22-16"><a href="cleaning-code.html#cb22-16" tabindex="-1"></a>                     </span>
+<span id="cb22-17"><a href="cleaning-code.html#cb22-17" tabindex="-1"></a>                     <span class="at">ENDO_medBMI =</span> ENDO,</span>
+<span id="cb22-18"><a href="cleaning-code.html#cb22-18" tabindex="-1"></a>                     <span class="at">se_ENDO_medBMI =</span> se_ENDO,</span>
+<span id="cb22-19"><a href="cleaning-code.html#cb22-19" tabindex="-1"></a>                     </span>
+<span id="cb22-20"><a href="cleaning-code.html#cb22-20" tabindex="-1"></a>                     <span class="at">HHD_medBMI =</span> HHD,</span>
+<span id="cb22-21"><a href="cleaning-code.html#cb22-21" tabindex="-1"></a>                     <span class="at">se_HHD_medBMI =</span> se_HHD,</span>
+<span id="cb22-22"><a href="cleaning-code.html#cb22-22" tabindex="-1"></a>                     </span>
+<span id="cb22-23"><a href="cleaning-code.html#cb22-23" tabindex="-1"></a>                     <span class="at">HSTK_medBMI =</span> HSTK,</span>
+<span id="cb22-24"><a href="cleaning-code.html#cb22-24" tabindex="-1"></a>                     <span class="at">se_HSTK_medBMI =</span> se_HSTK,</span>
+<span id="cb22-25"><a href="cleaning-code.html#cb22-25" tabindex="-1"></a>                     </span>
+<span id="cb22-26"><a href="cleaning-code.html#cb22-26" tabindex="-1"></a>                     <span class="at">IHD_medBMI =</span> IHD,</span>
+<span id="cb22-27"><a href="cleaning-code.html#cb22-27" tabindex="-1"></a>                     <span class="at">se_IHD_medBMI =</span> se_IHD,</span>
+<span id="cb22-28"><a href="cleaning-code.html#cb22-28" tabindex="-1"></a>                     </span>
+<span id="cb22-29"><a href="cleaning-code.html#cb22-29" tabindex="-1"></a>                     <span class="at">ISTK_medBMI =</span> ISTK,</span>
+<span id="cb22-30"><a href="cleaning-code.html#cb22-30" tabindex="-1"></a>                     <span class="at">se_ISTK_medBMI =</span> se_ISTK,</span>
+<span id="cb22-31"><a href="cleaning-code.html#cb22-31" tabindex="-1"></a>                     </span>
+<span id="cb22-32"><a href="cleaning-code.html#cb22-32" tabindex="-1"></a>                     <span class="at">OSTK_medBMI =</span> OSTK,</span>
+<span id="cb22-33"><a href="cleaning-code.html#cb22-33" tabindex="-1"></a>                     <span class="at">se_OSTK_medBMI =</span> se_OSTK,</span>
+<span id="cb22-34"><a href="cleaning-code.html#cb22-34" tabindex="-1"></a>                     </span>
+<span id="cb22-35"><a href="cleaning-code.html#cb22-35" tabindex="-1"></a>                     <span class="at">OTH_medBMI =</span> OTH,</span>
+<span id="cb22-36"><a href="cleaning-code.html#cb22-36" tabindex="-1"></a>                     <span class="at">se_OTH_medBMI =</span> se_OTH,</span>
+<span id="cb22-37"><a href="cleaning-code.html#cb22-37" tabindex="-1"></a>                     </span>
+<span id="cb22-38"><a href="cleaning-code.html#cb22-38" tabindex="-1"></a>                     <span class="at">PVD_medBMI =</span> PVD,</span>
+<span id="cb22-39"><a href="cleaning-code.html#cb22-39" tabindex="-1"></a>                     <span class="at">se_PVD_medBMI =</span> se_PVD,</span>
+<span id="cb22-40"><a href="cleaning-code.html#cb22-40" tabindex="-1"></a>                     </span>
+<span id="cb22-41"><a href="cleaning-code.html#cb22-41" tabindex="-1"></a>                     <span class="at">RHD_medBMI =</span> RHD,</span>
+<span id="cb22-42"><a href="cleaning-code.html#cb22-42" tabindex="-1"></a>                     <span class="at">se_RHD_medBMI =</span> se_RHD,</span>
+<span id="cb22-43"><a href="cleaning-code.html#cb22-43" tabindex="-1"></a>                     </span>
+<span id="cb22-44"><a href="cleaning-code.html#cb22-44" tabindex="-1"></a>                     <span class="at">TSTK_medBMI =</span> TSTK,</span>
+<span id="cb22-45"><a href="cleaning-code.html#cb22-45" tabindex="-1"></a>                     <span class="at">se_TSTK_medBMI =</span> se_TSTK,</span>
+<span id="cb22-46"><a href="cleaning-code.html#cb22-46" tabindex="-1"></a>                     </span>
+<span id="cb22-47"><a href="cleaning-code.html#cb22-47" tabindex="-1"></a>                     <span class="co"># SBP</span></span>
+<span id="cb22-48"><a href="cleaning-code.html#cb22-48" tabindex="-1"></a>                     </span>
+<span id="cb22-49"><a href="cleaning-code.html#cb22-49" tabindex="-1"></a>                     <span class="at">AA_medSBP =</span> AA,</span>
+<span id="cb22-50"><a href="cleaning-code.html#cb22-50" tabindex="-1"></a>                     <span class="at">se_AA_medSBP =</span> se_AA,</span>
+<span id="cb22-51"><a href="cleaning-code.html#cb22-51" tabindex="-1"></a>                     </span>
+<span id="cb22-52"><a href="cleaning-code.html#cb22-52" tabindex="-1"></a>                     <span class="at">AFF_medSBP =</span> AFF,</span>
+<span id="cb22-53"><a href="cleaning-code.html#cb22-53" tabindex="-1"></a>                     <span class="at">se_AFF_medSBP =</span> se_AFF,</span>
+<span id="cb22-54"><a href="cleaning-code.html#cb22-54" tabindex="-1"></a>                     </span>
+<span id="cb22-55"><a href="cleaning-code.html#cb22-55" tabindex="-1"></a>                     <span class="at">CM_medSBP =</span> CM,</span>
+<span id="cb22-56"><a href="cleaning-code.html#cb22-56" tabindex="-1"></a>                     <span class="at">se_CM_medSBP =</span> se_CM,</span>
+<span id="cb22-57"><a href="cleaning-code.html#cb22-57" tabindex="-1"></a>                     </span>
+<span id="cb22-58"><a href="cleaning-code.html#cb22-58" tabindex="-1"></a>                     <span class="at">DIAB_medSBP =</span> DIAB,</span>
+<span id="cb22-59"><a href="cleaning-code.html#cb22-59" tabindex="-1"></a>                     <span class="at">se_DIAB_medSBP =</span> se_DIAB,</span>
+<span id="cb22-60"><a href="cleaning-code.html#cb22-60" tabindex="-1"></a>                     </span>
+<span id="cb22-61"><a href="cleaning-code.html#cb22-61" tabindex="-1"></a>                     <span class="at">ENDO_medSBP =</span> ENDO,</span>
+<span id="cb22-62"><a href="cleaning-code.html#cb22-62" tabindex="-1"></a>                     <span class="at">se_ENDO_medSBP =</span> se_ENDO,</span>
+<span id="cb22-63"><a href="cleaning-code.html#cb22-63" tabindex="-1"></a>                     </span>
+<span id="cb22-64"><a href="cleaning-code.html#cb22-64" tabindex="-1"></a>                     <span class="at">HHD_medSBP =</span> HHD,</span>
+<span id="cb22-65"><a href="cleaning-code.html#cb22-65" tabindex="-1"></a>                     <span class="at">se_HHD_medSBP =</span> se_HHD,</span>
+<span id="cb22-66"><a href="cleaning-code.html#cb22-66" tabindex="-1"></a>                     </span>
+<span id="cb22-67"><a href="cleaning-code.html#cb22-67" tabindex="-1"></a>                     <span class="at">HSTK_medSBP =</span> HSTK,</span>
+<span id="cb22-68"><a href="cleaning-code.html#cb22-68" tabindex="-1"></a>                     <span class="at">se_HSTK_medSBP =</span> se_HSTK,</span>
+<span id="cb22-69"><a href="cleaning-code.html#cb22-69" tabindex="-1"></a>                     </span>
+<span id="cb22-70"><a href="cleaning-code.html#cb22-70" tabindex="-1"></a>                     <span class="at">IHD_medSBP =</span> IHD,</span>
+<span id="cb22-71"><a href="cleaning-code.html#cb22-71" tabindex="-1"></a>                     <span class="at">se_IHD_medSBP =</span> se_IHD,</span>
+<span id="cb22-72"><a href="cleaning-code.html#cb22-72" tabindex="-1"></a>                     </span>
+<span id="cb22-73"><a href="cleaning-code.html#cb22-73" tabindex="-1"></a>                     <span class="at">ISTK_medSBP =</span> ISTK,</span>
+<span id="cb22-74"><a href="cleaning-code.html#cb22-74" tabindex="-1"></a>                     <span class="at">se_ISTK_medSBP =</span> se_ISTK,</span>
+<span id="cb22-75"><a href="cleaning-code.html#cb22-75" tabindex="-1"></a>                     </span>
+<span id="cb22-76"><a href="cleaning-code.html#cb22-76" tabindex="-1"></a>                     <span class="at">OSTK_medSBP =</span> OSTK,</span>
+<span id="cb22-77"><a href="cleaning-code.html#cb22-77" tabindex="-1"></a>                     <span class="at">se_OSTK_medSBP =</span> se_OSTK,</span>
+<span id="cb22-78"><a href="cleaning-code.html#cb22-78" tabindex="-1"></a>                     </span>
+<span id="cb22-79"><a href="cleaning-code.html#cb22-79" tabindex="-1"></a>                     <span class="at">OTH_medSBP =</span> OTH,</span>
+<span id="cb22-80"><a href="cleaning-code.html#cb22-80" tabindex="-1"></a>                     <span class="at">se_OTH_medSBP =</span> se_OTH,</span>
+<span id="cb22-81"><a href="cleaning-code.html#cb22-81" tabindex="-1"></a>                     </span>
+<span id="cb22-82"><a href="cleaning-code.html#cb22-82" tabindex="-1"></a>                     <span class="at">PVD_medSBP =</span> PVD,</span>
+<span id="cb22-83"><a href="cleaning-code.html#cb22-83" tabindex="-1"></a>                     <span class="at">se_PVD_medSBP =</span> se_PVD,</span>
+<span id="cb22-84"><a href="cleaning-code.html#cb22-84" tabindex="-1"></a>                     </span>
+<span id="cb22-85"><a href="cleaning-code.html#cb22-85" tabindex="-1"></a>                     <span class="at">RHD_medSBP =</span> RHD,</span>
+<span id="cb22-86"><a href="cleaning-code.html#cb22-86" tabindex="-1"></a>                     <span class="at">se_RHD_medSBP =</span> se_RHD,</span>
+<span id="cb22-87"><a href="cleaning-code.html#cb22-87" tabindex="-1"></a>                     </span>
+<span id="cb22-88"><a href="cleaning-code.html#cb22-88" tabindex="-1"></a>                     <span class="at">TSTK_medSBP =</span> TSTK,</span>
+<span id="cb22-89"><a href="cleaning-code.html#cb22-89" tabindex="-1"></a>                     <span class="at">se_TSTK_medSBP =</span> se_TSTK)</span></code></pre></div>
+<p>Export to FINAL folder.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="cleaning-code.html#cb23-1" tabindex="-1"></a><span class="fu">write_csv</span>(cvd_final1, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/cvd_mortality&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="other-health-data" class="section level4 unnumbered hasAnchor">
+<h4>Other health data<a href="cleaning-code.html#other-health-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Import other health datsets.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="cleaning-code.html#cb24-1" tabindex="-1"></a>weight <span class="ot">&lt;-</span> <span class="fu">read_xls</span>(<span class="st">&quot;data_inputs/HEALTH/overweight_prevalence/DATA/overweight1518_48grp_04.10.23.xls&quot;</span>)</span>
+<span id="cb24-2"><a href="cleaning-code.html#cb24-2" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="cleaning-code.html#cb24-3" tabindex="-1"></a>hbp <span class="ot">&lt;-</span> <span class="fu">read_xls</span>(<span class="st">&quot;data_inputs/HEALTH/systolic_blood_pressure/DATA/SBP_1718_04192023.xls&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;HBPbyGRP&quot;</span>)</span>
+<span id="cb24-4"><a href="cleaning-code.html#cb24-4" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="cleaning-code.html#cb24-5" tabindex="-1"></a>sbp <span class="ot">&lt;-</span> <span class="fu">read_xls</span>(<span class="st">&quot;data_inputs/HEALTH/systolic_blood_pressure/DATA/SBP_1718_04192023.xls&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;over20yr&quot;</span>)</span>
+<span id="cb24-6"><a href="cleaning-code.html#cb24-6" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="cleaning-code.html#cb24-7" tabindex="-1"></a><span class="co">#high sbp variables</span></span>
+<span id="cb24-8"><a href="cleaning-code.html#cb24-8" tabindex="-1"></a>highSBP <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;data_inputs/HEALTH/systolic_blood_pressure/DATA/highSBP_data.xlsx&quot;</span>)</span></code></pre></div>
+<p>Create non-Hipsanic Black (NHB) variables.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="cleaning-code.html#cb25-1" tabindex="-1"></a>oth_health <span class="ot">&lt;-</span> weight <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">nhb =</span> <span class="fu">ifelse</span>(Race_label <span class="sc">==</span> <span class="st">&quot;NHB&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb25-2"><a href="cleaning-code.html#cb25-2" tabindex="-1"></a>                            <span class="at">nhb_se =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb25-3"><a href="cleaning-code.html#cb25-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">overweight_rate =</span> Percent,</span>
+<span id="cb25-4"><a href="cleaning-code.html#cb25-4" tabindex="-1"></a>         <span class="at">overweight_rate_se =</span> StdErr) <span class="sc">%&gt;%</span> </span>
+<span id="cb25-5"><a href="cleaning-code.html#cb25-5" tabindex="-1"></a>  <span class="fu">select</span>(subgroup, overweight_rate, overweight_rate_se, nhb, nhb_se)</span></code></pre></div>
+<p>The SBP data is at the participant-level so it needs to be summarized at population subgroup level.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="cleaning-code.html#cb26-1" tabindex="-1"></a>sbp1 <span class="ot">&lt;-</span> sbp <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="cleaning-code.html#cb26-2" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">is.na</span>(mean_sbp))) <span class="co"># only include those with non-missing mean_sbp value</span></span>
+<span id="cb26-3"><a href="cleaning-code.html#cb26-3" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="cleaning-code.html#cb26-4" tabindex="-1"></a><span class="co"># summarize by subgroup ID</span></span>
+<span id="cb26-5"><a href="cleaning-code.html#cb26-5" tabindex="-1"></a>sbp_vars <span class="ot">&lt;-</span> sbp1 <span class="sc">%&gt;%</span> </span>
+<span id="cb26-6"><a href="cleaning-code.html#cb26-6" tabindex="-1"></a>  <span class="fu">group_by</span>(subgroup_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-7"><a href="cleaning-code.html#cb26-7" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">sbp_mean =</span> <span class="fu">mean</span>(mean_sbp),</span>
+<span id="cb26-8"><a href="cleaning-code.html#cb26-8" tabindex="-1"></a>            <span class="co"># calculate standard error</span></span>
+<span id="cb26-9"><a href="cleaning-code.html#cb26-9" tabindex="-1"></a>            <span class="at">sbp_se =</span> <span class="fu">sd</span>(mean_sbp)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(mean_sbp)))</span>
+<span id="cb26-10"><a href="cleaning-code.html#cb26-10" tabindex="-1"></a></span>
+<span id="cb26-11"><a href="cleaning-code.html#cb26-11" tabindex="-1"></a><span class="co"># merge with highSBP</span></span>
+<span id="cb26-12"><a href="cleaning-code.html#cb26-12" tabindex="-1"></a>highSBP1 <span class="ot">&lt;-</span> highSBP <span class="sc">%&gt;%</span> </span>
+<span id="cb26-13"><a href="cleaning-code.html#cb26-13" tabindex="-1"></a>  <span class="fu">select</span>(subgroup_id, Percent, StdErr) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-14"><a href="cleaning-code.html#cb26-14" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">highSBP_rate =</span> Percent,</span>
+<span id="cb26-15"><a href="cleaning-code.html#cb26-15" tabindex="-1"></a>         <span class="at">highSBP_rate_se =</span> StdErr)</span>
+<span id="cb26-16"><a href="cleaning-code.html#cb26-16" tabindex="-1"></a></span>
+<span id="cb26-17"><a href="cleaning-code.html#cb26-17" tabindex="-1"></a>sbp_vars1 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(sbp_vars, highSBP1, <span class="at">by =</span> <span class="st">&quot;subgroup_id&quot;</span>)</span>
+<span id="cb26-18"><a href="cleaning-code.html#cb26-18" tabindex="-1"></a></span>
+<span id="cb26-19"><a href="cleaning-code.html#cb26-19" tabindex="-1"></a><span class="co"># merge sbp vars with oth_health</span></span>
+<span id="cb26-20"><a href="cleaning-code.html#cb26-20" tabindex="-1"></a>oth_health1 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(oth_health, sbp_vars1, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span> <span class="ot">=</span> <span class="st">&quot;subgroup_id&quot;</span>))</span>
+<span id="cb26-21"><a href="cleaning-code.html#cb26-21" tabindex="-1"></a></span>
+<span id="cb26-22"><a href="cleaning-code.html#cb26-22" tabindex="-1"></a><span class="co"># hbp variables</span></span>
+<span id="cb26-23"><a href="cleaning-code.html#cb26-23" tabindex="-1"></a>hbp1 <span class="ot">&lt;-</span> </span>
+<span id="cb26-24"><a href="cleaning-code.html#cb26-24" tabindex="-1"></a>  hbp <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">hbp =</span> Percent,</span>
+<span id="cb26-25"><a href="cleaning-code.html#cb26-25" tabindex="-1"></a>               <span class="at">hbp_se =</span> StdErr) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-26"><a href="cleaning-code.html#cb26-26" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">hbp =</span> hbp<span class="sc">/</span><span class="dv">100</span>,</span>
+<span id="cb26-27"><a href="cleaning-code.html#cb26-27" tabindex="-1"></a>         <span class="at">hbp_se =</span> hbp_se<span class="sc">/</span><span class="dv">100</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-28"><a href="cleaning-code.html#cb26-28" tabindex="-1"></a>  <span class="fu">select</span>(subgroup_id, hbp, hbp_se)</span>
+<span id="cb26-29"><a href="cleaning-code.html#cb26-29" tabindex="-1"></a></span>
+<span id="cb26-30"><a href="cleaning-code.html#cb26-30" tabindex="-1"></a><span class="co"># merge hbp vars with oth_health</span></span>
+<span id="cb26-31"><a href="cleaning-code.html#cb26-31" tabindex="-1"></a>oth_health2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(oth_health1, hbp1, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span> <span class="ot">=</span> <span class="st">&quot;subgroup_id&quot;</span>))</span></code></pre></div>
+<p>Export to FINAL folder.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="cleaning-code.html#cb27-1" tabindex="-1"></a><span class="fu">write_csv</span>(oth_health2, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/other_health&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="effect-sizes-for-diet-and-body-mass-index-bmi" class="section level4 unnumbered hasAnchor">
+<h4>Effect sizes for diet and body mass index (BMI)<a href="cleaning-code.html#effect-sizes-for-diet-and-body-mass-index-bmi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No changes are needed so just import the file then export to FINAL folder.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="cleaning-code.html#cb28-1" tabindex="-1"></a>bmi_effects <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/HEALTH/effect_sizes_dietfactor_bmi/DATA/food_to_BMI_effects_from_Dari_1.5.24.csv&quot;</span>)</span>
+<span id="cb28-2"><a href="cleaning-code.html#cb28-2" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="cleaning-code.html#cb28-3" tabindex="-1"></a><span class="fu">write_csv</span>(bmi_effects, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/food_to_bmi_effects&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="effect-sizes-for-diet-and-systolic-blood-pressure-sbp" class="section level4 unnumbered hasAnchor">
+<h4>Effect sizes for diet and systolic blood pressure (SBP)<a href="cleaning-code.html#effect-sizes-for-diet-and-systolic-blood-pressure-sbp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No changes are needed so just import the file then export to FINAL folder.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="cleaning-code.html#cb29-1" tabindex="-1"></a>sbp_effects <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/HEALTH/effect_sizes_dietfactor_sbp/DATA/food_to_sbp_effects_NOT_converted_1.5.24.csv&quot;</span>)</span>
+<span id="cb29-2"><a href="cleaning-code.html#cb29-2" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="cleaning-code.html#cb29-3" tabindex="-1"></a><span class="fu">write_csv</span>(sbp_effects, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/food_to_sbp_effects&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="relative-risks-rr-for-bmi-and-cancer" class="section level4 unnumbered hasAnchor">
+<h4>Relative risks (RR) for BMI and cancer<a href="cleaning-code.html#relative-risks-rr-for-bmi-and-cancer" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No changes are needed so just import the file then export to FINAL folder.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="cleaning-code.html#cb30-1" tabindex="-1"></a>bmi_cancer <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/HEALTH/rr_bmi_cancer/DATA/RR_BMI_cancer_11.23.22.csv&quot;</span>) </span>
+<span id="cb30-2"><a href="cleaning-code.html#cb30-2" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="cleaning-code.html#cb30-3" tabindex="-1"></a><span class="fu">write_csv</span>(bmi_cancer, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/rr_bmi_cancer&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="relative-risks-rr-for-bmi-and-cvd" class="section level4 unnumbered hasAnchor">
+<h4>Relative risks (RR) for BMI and CVD<a href="cleaning-code.html#relative-risks-rr-for-bmi-and-cvd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No changes are needed so just import the file then export to FINAL folder.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="cleaning-code.html#cb31-1" tabindex="-1"></a>bmi_cvd <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/HEALTH/rr_bmi_cvd/DATA/RR_BMI_cvd_3.2.23.csv&quot;</span>)</span>
+<span id="cb31-2"><a href="cleaning-code.html#cb31-2" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="cleaning-code.html#cb31-3" tabindex="-1"></a><span class="fu">write_csv</span>(bmi_cvd, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/rr_bmi_cvd&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="relative-risks-rr-for-sbp-and-cvd" class="section level4 unnumbered hasAnchor">
+<h4>Relative risks (RR) for SBP and CVD<a href="cleaning-code.html#relative-risks-rr-for-sbp-and-cvd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No changes are needed so just import the file then export to FINAL folder.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="cleaning-code.html#cb32-1" tabindex="-1"></a>sbp_cvd <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/HEALTH/rr_sbp_cvd/DATA/RR_sbp_cvd_2.16.23.csv&quot;</span>)</span>
+<span id="cb32-2"><a href="cleaning-code.html#cb32-2" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="cleaning-code.html#cb32-3" tabindex="-1"></a><span class="fu">write_csv</span>(sbp_cvd, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/rr_sbp_cvd&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="log-relative-risks-logrr-for-diet-cvd" class="section level4 unnumbered hasAnchor">
+<h4>Log relative risks (LogRR) for diet-CVD<a href="cleaning-code.html#log-relative-risks-logrr-for-diet-cvd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No changes are needed so just import the file then export to FINAL folder.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="cleaning-code.html#cb33-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>(<span class="at">pattern=</span><span class="st">&quot;^cvd&quot;</span>))</span>
+<span id="cb33-2"><a href="cleaning-code.html#cb33-2" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="cleaning-code.html#cb33-3" tabindex="-1"></a>cvd <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/HEALTH/logrr_dietfactor_disease/DATA/logRR_diet_cvd_byage_1.26.24.csv&quot;</span>)</span>
+<span id="cb33-4"><a href="cleaning-code.html#cb33-4" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="cleaning-code.html#cb33-5" tabindex="-1"></a><span class="fu">write_csv</span>(cvd, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/logRR_diet_cvd&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="log-relative-risks-logrr-for-diet-cancer" class="section level4 unnumbered hasAnchor">
+<h4>Log relative risks (LogRR) for diet-cancer<a href="cleaning-code.html#log-relative-risks-logrr-for-diet-cancer" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No changes are needed so just import the file then export to FINAL folder.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="cleaning-code.html#cb34-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>(<span class="at">pattern=</span><span class="st">&quot;^cancer&quot;</span>))</span>
+<span id="cb34-2"><a href="cleaning-code.html#cb34-2" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="cleaning-code.html#cb34-3" tabindex="-1"></a>cancer <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/HEALTH/logrr_dietfactor_disease/DATA/logRR_diet_cancer_1.5.24.csv&quot;</span>)</span>
+<span id="cb34-4"><a href="cleaning-code.html#cb34-4" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="cleaning-code.html#cb34-5" tabindex="-1"></a><span class="fu">write_csv</span>(cancer, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/logRR_diet_cancer&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="tmred" class="section level4 unnumbered hasAnchor">
+<h4>TMRED<a href="cleaning-code.html#tmred" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Import the TMRED values (in grams). Then, import the conversion units and join with the TMRED data.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="cleaning-code.html#cb35-1" tabindex="-1"></a>tmred_g <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/HEALTH/tmred/DATA/TMRED_grams_1.5.24.csv&quot;</span>)</span>
+<span id="cb35-2"><a href="cleaning-code.html#cb35-2" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="cleaning-code.html#cb35-3" tabindex="-1"></a><span class="co"># import conversion units</span></span>
+<span id="cb35-4"><a href="cleaning-code.html#cb35-4" tabindex="-1"></a>conversion <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/unit_conversions&quot;</span>, my_date))</span>
+<span id="cb35-5"><a href="cleaning-code.html#cb35-5" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="cleaning-code.html#cb35-6" tabindex="-1"></a><span class="co"># join with tmred dataset</span></span>
+<span id="cb35-7"><a href="cleaning-code.html#cb35-7" tabindex="-1"></a>tmred_dga <span class="ot">&lt;-</span> <span class="fu">left_join</span>(tmred_g, conversion, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;Risk_factor&quot;</span> <span class="ot">=</span> <span class="st">&quot;Food_group&quot;</span>))</span></code></pre></div>
+<p>Then, transform the TMRED mean and standard deviation values from grams to “FPED units” (i.e., cups or ounces).</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="cleaning-code.html#cb36-1" tabindex="-1"></a>tmred_dga1 <span class="ot">&lt;-</span> tmred_dga <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">tmred_dga_units =</span> TMRED <span class="sc">/</span> Conversion_to_grams,</span>
+<span id="cb36-2"><a href="cleaning-code.html#cb36-2" tabindex="-1"></a>                     <span class="at">sd_dga_units =</span> SD <span class="sc">/</span> Conversion_to_grams)</span>
+<span id="cb36-3"><a href="cleaning-code.html#cb36-3" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="cleaning-code.html#cb36-4" tabindex="-1"></a>tmred_dga2 <span class="ot">&lt;-</span> tmred_dga1 <span class="sc">%&gt;%</span> </span>
+<span id="cb36-5"><a href="cleaning-code.html#cb36-5" tabindex="-1"></a>  <span class="fu">select</span>(Risk_factor, tmred_dga_units, sd_dga_units, DGA_unit) <span class="sc">%&gt;%</span> </span>
+<span id="cb36-6"><a href="cleaning-code.html#cb36-6" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">TMRED =</span> tmred_dga_units,</span>
+<span id="cb36-7"><a href="cleaning-code.html#cb36-7" tabindex="-1"></a>         <span class="at">SD =</span> sd_dga_units,</span>
+<span id="cb36-8"><a href="cleaning-code.html#cb36-8" tabindex="-1"></a>         <span class="at">Unit =</span> DGA_unit) <span class="sc">%&gt;%</span> </span>
+<span id="cb36-9"><a href="cleaning-code.html#cb36-9" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">TMRED =</span> <span class="fu">signif</span>(TMRED, <span class="dv">3</span>), <span class="co"># round to 3 sig figs</span></span>
+<span id="cb36-10"><a href="cleaning-code.html#cb36-10" tabindex="-1"></a>         <span class="at">SD =</span> <span class="fu">signif</span>(SD, <span class="dv">3</span>), <span class="co"># round to 3 sig figs</span></span>
+<span id="cb36-11"><a href="cleaning-code.html#cb36-11" tabindex="-1"></a>    <span class="at">Unit =</span> <span class="fu">str_sub</span>(Unit, <span class="at">start =</span> <span class="dv">3</span>)) <span class="co"># fix unit var</span></span></code></pre></div>
+<p>Then, export the conversion units in both grams and FPED units to be used later.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="cleaning-code.html#cb37-1" tabindex="-1"></a><span class="co"># export grams dataset</span></span>
+<span id="cb37-2"><a href="cleaning-code.html#cb37-2" tabindex="-1"></a><span class="fu">write_csv</span>(tmred_g, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/tmred_grams&quot;</span>, my_date))</span>
+<span id="cb37-3"><a href="cleaning-code.html#cb37-3" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="cleaning-code.html#cb37-4" tabindex="-1"></a><span class="co"># export FPED units</span></span>
+<span id="cb37-5"><a href="cleaning-code.html#cb37-5" tabindex="-1"></a><span class="fu">write_csv</span>(tmred_dga2, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/tmred_dga_units&quot;</span>, my_date))</span></code></pre></div>
+<p>Clear global environment expect for my_date.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="cleaning-code.html#cb38-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">&quot;my_date&quot;</span>)))</span></code></pre></div>
+</div>
+</div>
+<div id="diet-data-inputs" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Diet Data Inputs<a href="cleaning-code.html#diet-data-inputs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="dietary-intake" class="section level4 unnumbered hasAnchor">
+<h4>Dietary intake<a href="cleaning-code.html#dietary-intake" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Import the NHANES diet intake dataset and clean up.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="cleaning-code.html#cb39-1" tabindex="-1"></a>nhanes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_07-08-2024.csv&quot;</span>)</span>
+<span id="cb39-2"><a href="cleaning-code.html#cb39-2" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="cleaning-code.html#cb39-3" tabindex="-1"></a>nhanes1 <span class="ot">&lt;-</span> nhanes <span class="sc">%&gt;%</span> </span>
+<span id="cb39-4"><a href="cleaning-code.html#cb39-4" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">&quot;Foodgroup&quot;</span> <span class="ot">=</span> <span class="st">&quot;food&quot;</span>,</span>
+<span id="cb39-5"><a href="cleaning-code.html#cb39-5" tabindex="-1"></a>         <span class="st">&quot;Mean_Intake&quot;</span> <span class="ot">=</span> <span class="st">&quot;mean&quot;</span>,</span>
+<span id="cb39-6"><a href="cleaning-code.html#cb39-6" tabindex="-1"></a>         <span class="st">&quot;SE_Intake&quot;</span> <span class="ot">=</span> <span class="st">&quot;SE&quot;</span>,</span>
+<span id="cb39-7"><a href="cleaning-code.html#cb39-7" tabindex="-1"></a>         <span class="st">&quot;Food_label&quot;</span> <span class="ot">=</span> <span class="st">&quot;food_label&quot;</span>,</span>
+<span id="cb39-8"><a href="cleaning-code.html#cb39-8" tabindex="-1"></a>         <span class="st">&quot;Food_desc&quot;</span> <span class="ot">=</span> <span class="st">&quot;food_desc&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb39-9"><a href="cleaning-code.html#cb39-9" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Food_label =</span> <span class="fu">ifelse</span>(Foodgroup <span class="sc">==</span> <span class="st">&quot;kcal&quot;</span>, <span class="st">&quot;Kilocalorires&quot;</span>, Food_label),</span>
+<span id="cb39-10"><a href="cleaning-code.html#cb39-10" tabindex="-1"></a>         <span class="at">Food_desc =</span> <span class="fu">ifelse</span>(Foodgroup <span class="sc">==</span> <span class="st">&quot;kcal&quot;</span>, <span class="st">&quot;Energy (kcal)&quot;</span>, Food_desc)) <span class="sc">%&gt;%</span> </span>
+<span id="cb39-11"><a href="cleaning-code.html#cb39-11" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="fu">starts_with</span>(<span class="fu">c</span>(<span class="st">&quot;gro_&quot;</span>, <span class="st">&quot;oth_&quot;</span>))))</span></code></pre></div>
+<p>Then, convert the sugar sweetened beverage (SSB) mean and standard error from grams to cup (8 fl oz).</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="cleaning-code.html#cb40-1" tabindex="-1"></a>nhanes2 <span class="ot">&lt;-</span> nhanes1 <span class="sc">%&gt;%</span> </span>
+<span id="cb40-2"><a href="cleaning-code.html#cb40-2" tabindex="-1"></a>  <span class="co"># Divide by 240 to go from grams to cup</span></span>
+<span id="cb40-3"><a href="cleaning-code.html#cb40-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Mean_Intake =</span> <span class="fu">ifelse</span>(Foodgroup <span class="sc">==</span> <span class="st">&quot;ssb&quot;</span>, Mean_Intake<span class="sc">/</span><span class="dv">240</span>, Mean_Intake),</span>
+<span id="cb40-4"><a href="cleaning-code.html#cb40-4" tabindex="-1"></a>  <span class="at">SE_Intake =</span> <span class="fu">ifelse</span>(Foodgroup <span class="sc">==</span> <span class="st">&quot;ssb&quot;</span>, SE_Intake<span class="sc">/</span><span class="dv">240</span>, SE_Intake),</span>
+<span id="cb40-5"><a href="cleaning-code.html#cb40-5" tabindex="-1"></a>  <span class="at">Food_desc =</span> <span class="fu">ifelse</span>(Foodgroup <span class="sc">==</span> <span class="st">&quot;ssb&quot;</span>, <span class="st">&quot;Sugar sweetened beverages (1 cup [8 fl oz])&quot;</span>, Food_desc))</span>
+<span id="cb40-6"><a href="cleaning-code.html#cb40-6" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="cleaning-code.html#cb40-7" tabindex="-1"></a>nhanes3 <span class="ot">&lt;-</span> nhanes2 <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(Foodgroup, subgroup)</span></code></pre></div>
+<p>Lastly, rename the standard deviation variable and then export.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="cleaning-code.html#cb41-1" tabindex="-1"></a><span class="co"># rename stddev</span></span>
+<span id="cb41-2"><a href="cleaning-code.html#cb41-2" tabindex="-1"></a>nhanes4 <span class="ot">&lt;-</span> nhanes3 <span class="sc">%&gt;%</span> </span>
+<span id="cb41-3"><a href="cleaning-code.html#cb41-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">sigma_u_wgt =</span> StdDev) <span class="sc">%&gt;%</span></span>
+<span id="cb41-4"><a href="cleaning-code.html#cb41-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sigma_u_wgt =</span> <span class="fu">ifelse</span>(Foodgroup <span class="sc">==</span> <span class="st">&quot;ssb&quot;</span>, sigma_u_wgt<span class="sc">/</span><span class="dv">240</span>, sigma_u_wgt)) <span class="sc">%&gt;%</span></span>
+<span id="cb41-5"><a href="cleaning-code.html#cb41-5" tabindex="-1"></a>  <span class="fu">relocate</span>(sigma_u_wgt, <span class="at">.after =</span> <span class="st">&quot;SE_Intake&quot;</span>)</span>
+<span id="cb41-6"><a href="cleaning-code.html#cb41-6" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="cleaning-code.html#cb41-7" tabindex="-1"></a><span class="co"># export</span></span>
+<span id="cb41-8"><a href="cleaning-code.html#cb41-8" tabindex="-1"></a><span class="fu">write_csv</span>(nhanes4, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/nhanes1518_agesexrace&quot;</span>, my_date))</span></code></pre></div>
+</div>
+<div id="counterfactual-intake-1" class="section level4 unnumbered hasAnchor">
+<h4>Counterfactual intake<a href="cleaning-code.html#counterfactual-intake-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No changes are needed so just import the file then export to FINAL folder.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="cleaning-code.html#cb42-1" tabindex="-1"></a>cf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/DIET/counterfactual_intake/DATA/counterfactual_intake_050724.csv&quot;</span>)</span>
+<span id="cb42-2"><a href="cleaning-code.html#cb42-2" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="cleaning-code.html#cb42-3" tabindex="-1"></a><span class="fu">write_csv</span>(cf, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/counterfactual_intake&quot;</span>, my_date))</span></code></pre></div>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cleaning-code---nhanes-diet-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="model-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-cleaning-code.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

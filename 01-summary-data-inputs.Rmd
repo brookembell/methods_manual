@@ -1,0 +1,79 @@
+# Summary of Data Inputs
+
+This chapter describes all of the data inputs that are used in the model. All data inputs fall into one of the following categories: diet, health, environment, economic, social, and other.
+
+In the "methods_manual" folder, there is a "data_inputs" subfolder that contains the following subfolders that correspond with each data input:
+
+- methods_manual/data_inputs/DIET/counterfactual_intake ([Box](https://tufts.box.com/s/2zhv1ugq6o0cd0ivts9cctyqto3or0du))
+- methods_manual/data_inputs/DIET/dietary_intake ([Box](https://tufts.box.com/s/o8btvxrqaqskx8vztfecrr5tou2c1d6k))
+- methods_manual/data_inputs/ECONOMIC/fah_fafh_ratio
+- methods_manual/data_inputs/ECONOMIC/food_prices
+- methods_manual/data_inputs/ENVIRONMENT/ghg_ced_impacts
+- methods_manual/data_inputs/ENVIRONMENT/land_use
+- methods_manual/data_inputs/ENVIRONMENT/water_impacts
+- methods_manual/data_inputs/HEALTH/cancer_incidence
+- methods_manual/data_inputs/HEALTH/cvd_mortality
+- methods_manual/data_inputs/HEALTH/effect_sizes_dietfactor_bmi
+- methods_manual/data_inputs/HEALTH/effect_sizes_dietfactor_sbp
+- methods_manual/data_inputs/HEALTH/logrr_dietfactor_disease
+- methods_manual/data_inputs/HEALTH/overweight_prevalence
+- methods_manual/data_inputs/HEALTH/rr_bmi_cancer
+- methods_manual/data_inputs/HEALTH/rr_bmi_cvd
+- methods_manual/data_inputs/HEALTH/rr_sbp_cvd
+- methods_manual/data_inputs/HEALTH/systolic_blood_pressure
+- methods_manual/data_inputs/HEALTH/tmred
+- methods_manual/data_inputs/SOCIAL/forced_labor
+- methods_manual/data_inputs/OTHER/dietfactor_to_fcid_mapping
+- methods_manual/data_inputs/OTHER/dietfactor_to_fndds_mapping
+- methods_manual/data_inputs/OTHER/food_waste
+- methods_manual/data_inputs/OTHER/labels
+- methods_manual/data_inputs/OTHER/unit_conversions
+- methods_manual/data_inputs/OTHER/us_population
+
+## Diet Inputs
+
+### Counterfactual Intake
+
+#### Purpose {-}
+
+This dataset contains three recommended dietary patterns (Healthy U.S.-Style Dietary Pattern, Healthy Vegetarian Dietary Pattern, and Healthy Mediterranean-Style Dietary Pattern) from the Dietary Guidelines for Americans (DGA) 2020-2025 report; 1 vegan dietary pattern published in the literature, and 1 dietary pattern that was constructed by the LASTING team (DGA+ Pattern). This dataset serves as the “ideal” dietary pattern that we are shifting to in the 4 models.
+
+#### Raw data sources {-}
+
+- DGA 2020-2025, Table A3-2: Healthy U.S.-Style Dietary Pattern for Ages 2 and Older ([data](https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines_for_Americans_2020-2025.pdf))
+- DGA 2020-2025, Table A3-4: Healthy Vegetarian Dietary Pattern for Ages 2 and Older ([data](https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines_for_Americans_2020-2025.pdf))
+- DGA 2020-2025, Table A3-5: Healthy Mediterranean-Style Dietary Pattern for Ages 2 and Older ([data](https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines_for_Americans_2020-2025.pdf))
+- Vegan dietary pattern: Hess 2022 ([paper](https://doi.org/10.1093/jn/nxac100))
+- DGA+ pattern: AHA recs, ACS recs (Brooke - add more info here)
+
+#### Raw data location {-}
+
+- methods_manual/data_inputs/DIET/counterfactual_intake/RESOURCES/DGA 2020-2025/Table A3-2 Healthy U.S.-Style.xlsx
+- methods_manual/data_inputs/DIET/counterfactual_intake/RESOURCES/DGA 2020-2025/Table A3-4 Healthy Vegetarian.xlsx
+- methods_manual/data_inputs/DIET/counterfactual_intake/RESOURCES/DGA 2020-2025/Table A3-5 Healthy Mediterranean-Style.xlsx
+- methods_manual/data_inputs/DIET/counterfactual_intake/RESOURCES/Vegan/Hess 2022.pdf
+- methods_manual/data_inputs/DIET/counterfactual_intake/RESOURCES/DGA+/Org dietary recommendations - operationalized.xlsx
+
+#### Data pre-processing notes {-}
+
+We use the 2,000-calorie recommendations for all dietary patterns.
+
+Standard deviations were calculated as 10% of the recommendation value, and standard errors were set to 0.
+
+Any recommendation values at the week-level were converted to day-level. For example, the Healthy U.S.-Style recommends 1.5 cups/week of dark-green vegetables. This value was divided by 7 and the new value is 0.21 cups/day.
+
+Some of the DGA recommendations for various food items were grouped together. For example, the Healthy U.S.-Style recommends 26 oz/week of meats, poultry, and eggs, but it does not provide values for just meats, poultry, or eggs. Therefore, to get recommendation values for each of these three food items individually, we used NHANES 2015-2018 data to look at the intake distribution of these three food items and then applied that proportion to the total 26 oz/week value. This same method was applied to the food group ‘Nuts, seeds, and soy products’, and ‘Limit on calories for other uses’ (added sugar and saturated fat).
+
+We also had to construct recommendation values for the dietary factors ‘fruit_exc_juice’ (fruit excluding juice) and ‘veg_exc_sta’ (vegetables excluding starchy vegetables).
+
+The recommendation value for veg_exc_sta was simply the sum of the recommendation values for veg_dg (dark-green vegetables), veg_ro (red-orange vegetables), and veg_oth (other vegetables).
+
+To calculate the recommendation value for fruit_exc_juice, we utilized the proportion of whole fruits to fruit juice from NHANES. Approximately 75% of total fruit consumed was whole fruit excluding juice. Therefore, the recommendation value for fruit_exc_juice was the DGA recommended value for total fruit multiplied by 0.753.
+
+The NHANES proportions are located in:
+
+- methods_manual/data_inputs/DIET/counterfactual_intake/DATA/NHANES proportions.xlsx (sheets ‘Fruit proportions’, ‘Veg proportions’, ‘Animal protein props US MED’, ‘Veg protein proportions US MED’, and ‘Sugar proportions’)
+
+#### Raw data (pre-processed) location {-}
+
+- methods_manual/data_inputs/DIET/counterfactual_intake/DATA/counterfactual_intake_050724.csv
