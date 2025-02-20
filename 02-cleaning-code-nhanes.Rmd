@@ -12,10 +12,10 @@ This is done using a SAS MACRO written by the USDA, located here:
 
 This code produces four SAS datasets:
 
--   meat_day1
--   meat_day1_sum
--   meat_day2
--   meat_day2_sum
+-   meat_day1.sas7bdat
+-   meat_day1_sum.sas7bdat
+-   meat_day2.sas7bdat
+-   meat_day2_sum.sas7bdat
 
 We also have to disaggregate the organ meat food codes into "red meat" or "poultry" categories. I manually mapped various FNDDS codes that represented organ meats to either "red meat" or "poultry". The mapping is here:
 

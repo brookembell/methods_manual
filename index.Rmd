@@ -19,7 +19,7 @@ This manual was built using **bookdown**, an open-source R package that facilita
 
 ## Github Repository {.unnumbered}
 
-A Github repository (AKA repo) titled [methods-manual](https://github.com/brookembell/methods-manual) has been created to store all of the project's code, data, and documentation (including this manual). In order to gain access to the Github repo, you must ask Brooke to add you as a user.
+A Github repository (AKA repo) titled [methods_manual](https://github.com/brookembell/methods_manual) has been created to store all of the project's code, data, and documentation (including this manual). In order to gain access to the Github repo, you must ask Brooke to add you as a user.
 
 ## Data Inputs {.unnumbered}
 
