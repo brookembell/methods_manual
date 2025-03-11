@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Cleaning Code - NHANES Diet Data | LASTING Four-Pillar Model Methodology</title>
+  <meta name="description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Cleaning Code - NHANES Diet Data | LASTING Four-Pillar Model Methodology" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Cleaning Code - NHANES Diet Data | LASTING Four-Pillar Model Methodology" />
+  
+  <meta name="twitter:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  
+
+<meta name="author" content="Brooke M. Bell" />
+
+
+<meta name="date" content="2025-03-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="summary-of-data-inputs.html"/>
+<link rel="next" href="cleaning-code.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">LASTING Methods Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#github-repository"><i class="fa fa-check"></i>Github Repository</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#data-inputs"><i class="fa fa-check"></i>Data Inputs</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#model-output"><i class="fa fa-check"></i>Model Output</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html"><i class="fa fa-check"></i><b>1</b> Summary of Data Inputs</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#diet-inputs"><i class="fa fa-check"></i><b>1.1</b> Diet Inputs</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#counterfactual-intake"><i class="fa fa-check"></i><b>1.1.1</b> Counterfactual Intake</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cleaning-code---nhanes-diet-data.html"><a href="cleaning-code---nhanes-diet-data.html"><i class="fa fa-check"></i><b>2</b> Cleaning Code - NHANES Diet Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cleaning-code---nhanes-diet-data.html"><a href="cleaning-code---nhanes-diet-data.html#processed-and-organ-meat"><i class="fa fa-check"></i><b>2.1</b> Processed and Organ Meat</a></li>
+<li class="chapter" data-level="2.2" data-path="cleaning-code---nhanes-diet-data.html"><a href="cleaning-code---nhanes-diet-data.html#clean-raw-nhanes-data"><i class="fa fa-check"></i><b>2.2</b> Clean Raw NHANES Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cleaning-code.html"><a href="cleaning-code.html"><i class="fa fa-check"></i><b>3</b> Cleaning Code</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cleaning-code.html"><a href="cleaning-code.html#create-final-data-inputs"><i class="fa fa-check"></i><b>3.1</b> Create Final Data Inputs</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="cleaning-code.html"><a href="cleaning-code.html#other-data-inputs"><i class="fa fa-check"></i><b>3.1.1</b> Other Data Inputs</a></li>
+<li class="chapter" data-level="3.1.2" data-path="cleaning-code.html"><a href="cleaning-code.html#health-data-inputs"><i class="fa fa-check"></i><b>3.1.2</b> Health Data Inputs</a></li>
+<li class="chapter" data-level="3.1.3" data-path="cleaning-code.html"><a href="cleaning-code.html#diet-data-inputs"><i class="fa fa-check"></i><b>3.1.3</b> Diet Data Inputs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="cleaning-code.html"><a href="cleaning-code.html#clean-health-datasets"><i class="fa fa-check"></i><b>3.2</b> Clean Health Datasets</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="cleaning-code.html"><a href="cleaning-code.html#cancer-incidence-and-2-cvd-mortality"><i class="fa fa-check"></i><b>3.2.1</b> (1) Cancer incidence and (2) CVD mortality</a></li>
+<li class="chapter" data-level="3.2.2" data-path="cleaning-code.html"><a href="cleaning-code.html#effect-sizes-for-diet-and-bmi-and-4-diet-and-sbp"><i class="fa fa-check"></i><b>3.2.2</b> (3) Effect sizes for diet and BMI and (4) diet and SBP</a></li>
+<li class="chapter" data-level="3.2.3" data-path="cleaning-code.html"><a href="cleaning-code.html#rrs-for-bmi-and-cancer-and-6-for-bmi-and-cvd"><i class="fa fa-check"></i><b>3.2.3</b> (5) RRs for BMI and cancer and (6) for BMI and CVD</a></li>
+<li class="chapter" data-level="3.2.4" data-path="cleaning-code.html"><a href="cleaning-code.html#logrrs-for-diet-and-cancer-and-8-for-diet-and-cvd"><i class="fa fa-check"></i><b>3.2.4</b> (7) LogRRs for diet and cancer and (8) for diet and CVD</a></li>
+<li class="chapter" data-level="3.2.5" data-path="cleaning-code.html"><a href="cleaning-code.html#rrs-for-sbp-and-cvd"><i class="fa fa-check"></i><b>3.2.5</b> (9) RRs for SBP and CVD</a></li>
+<li class="chapter" data-level="3.2.6" data-path="cleaning-code.html"><a href="cleaning-code.html#current-intake-nhanes-11-tmred-14-counterfactual-and-12-other-health-data"><i class="fa fa-check"></i><b>3.2.6</b> (10) Current intake (NHANES), (11) TMRED, (14) Counterfactual, and (12) Other health data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="model-code.html"><a href="model-code.html"><i class="fa fa-check"></i><b>4</b> Model Code</a></li>
+<li class="chapter" data-level="5" data-path="model-output-1.html"><a href="model-output-1.html"><i class="fa fa-check"></i><b>5</b> Model Output</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LASTING Four-Pillar Model Methodology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cleaning-code---nhanes-diet-data" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Cleaning Code - NHANES Diet Data<a href="cleaning-code---nhanes-diet-data.html#cleaning-code---nhanes-diet-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter walks you through all of code used to clean the raw NHANES dietary intake datasets.</p>
+<div id="processed-and-organ-meat" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Processed and Organ Meat<a href="cleaning-code---nhanes-diet-data.html#processed-and-organ-meat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To start, we need to disaggregate “procecessed meat” into “processed red meat” and “processed poultry’ categories. We need this because the environmental impact factors don’t take”processed” into consideration, so we’ll need to eventually create new food groups for the environment model (“total red meat” and “total poultry”, which include both unprocessed and processed meat).</p>
+<p>This is done using a SAS MACRO written by the USDA, located here:</p>
+<ul>
+<li>TBD/Processed Meat Categories NHANES day 1_revised_121123.sas</li>
+</ul>
+<p>This code produces four SAS datasets:</p>
+<ul>
+<li>meat_day1.sas7bdat</li>
+<li>meat_day1_sum.sas7bdat</li>
+<li>meat_day2.sas7bdat</li>
+<li>meat_day2_sum.sas7bdat</li>
+</ul>
+<p>We also have to disaggregate the organ meat food codes into “red meat” or “poultry” categories. I manually mapped various FNDDS codes that represented organ meats to either “red meat” or “poultry”. The mapping is here:</p>
+<ul>
+<li>methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/meat/organ_meats_bothdays_mapped_121323.csv</li>
+</ul>
+<p>Then, I merged this mapping with the processed meat data.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="cleaning-code---nhanes-diet-data.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="cleaning-code---nhanes-diet-data.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb1-3"><a href="cleaning-code---nhanes-diet-data.html#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="cleaning-code---nhanes-diet-data.html#cb1-4" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb1-5"><a href="cleaning-code---nhanes-diet-data.html#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="cleaning-code---nhanes-diet-data.html#cb1-6" tabindex="-1"></a><span class="co"># read in meat data</span></span>
+<span id="cb1-7"><a href="cleaning-code---nhanes-diet-data.html#cb1-7" tabindex="-1"></a>meat_day1 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.sas7bdat&quot;</span>)</span>
+<span id="cb1-8"><a href="cleaning-code---nhanes-diet-data.html#cb1-8" tabindex="-1"></a>meat_day2 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.sas7bdat&quot;</span>)</span>
+<span id="cb1-9"><a href="cleaning-code---nhanes-diet-data.html#cb1-9" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="cleaning-code---nhanes-diet-data.html#cb1-10" tabindex="-1"></a><span class="co"># read in organ mapping</span></span>
+<span id="cb1-11"><a href="cleaning-code---nhanes-diet-data.html#cb1-11" tabindex="-1"></a>new_organ <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/meat/organ_meats_bothdays_mapped_121323.csv&quot;</span>)</span>
+<span id="cb1-12"><a href="cleaning-code---nhanes-diet-data.html#cb1-12" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="cleaning-code---nhanes-diet-data.html#cb1-13" tabindex="-1"></a><span class="co"># DAY 1 -----</span></span>
+<span id="cb1-14"><a href="cleaning-code---nhanes-diet-data.html#cb1-14" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="cleaning-code---nhanes-diet-data.html#cb1-15" tabindex="-1"></a>meat_day1_1 <span class="ot">&lt;-</span> meat_day1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">is.na</span>(SEQN))) <span class="sc">%&gt;%</span> <span class="fu">select</span>(SEQN, DESCRIPTION, FOODCODE, DR1ILINE, DR1IGRMS,</span>
+<span id="cb1-16"><a href="cleaning-code---nhanes-diet-data.html#cb1-16" tabindex="-1"></a>                                                               DR1I_PF_ORGAN,</span>
+<span id="cb1-17"><a href="cleaning-code---nhanes-diet-data.html#cb1-17" tabindex="-1"></a>                                                               total_redmeat, total_poultry) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-18"><a href="cleaning-code---nhanes-diet-data.html#cb1-18" tabindex="-1"></a>  <span class="fu">arrange</span>(SEQN, DR1ILINE)</span>
+<span id="cb1-19"><a href="cleaning-code---nhanes-diet-data.html#cb1-19" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="cleaning-code---nhanes-diet-data.html#cb1-20" tabindex="-1"></a><span class="co"># filter to organ intake &gt; 0</span></span>
+<span id="cb1-21"><a href="cleaning-code---nhanes-diet-data.html#cb1-21" tabindex="-1"></a>meat_day1_1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(DR1I_PF_ORGAN <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb1-22"><a href="cleaning-code---nhanes-diet-data.html#cb1-22" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="cleaning-code---nhanes-diet-data.html#cb1-23" tabindex="-1"></a><span class="co"># join with day1</span></span>
+<span id="cb1-24"><a href="cleaning-code---nhanes-diet-data.html#cb1-24" tabindex="-1"></a>meat_day1_2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(meat_day1_1, new_organ, <span class="at">by =</span> <span class="st">&quot;DESCRIPTION&quot;</span>)</span>
+<span id="cb1-25"><a href="cleaning-code---nhanes-diet-data.html#cb1-25" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="cleaning-code---nhanes-diet-data.html#cb1-26" tabindex="-1"></a>meat_day1_3 <span class="ot">&lt;-</span> meat_day1_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb1-27"><a href="cleaning-code---nhanes-diet-data.html#cb1-27" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-28"><a href="cleaning-code---nhanes-diet-data.html#cb1-28" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">new =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(new), <span class="st">&quot;No change&quot;</span>, new),</span>
+<span id="cb1-29"><a href="cleaning-code---nhanes-diet-data.html#cb1-29" tabindex="-1"></a>         <span class="at">total_redmeat_new =</span> <span class="fu">ifelse</span>(new <span class="sc">==</span> <span class="st">&quot;pf_redm&quot;</span>, total_redmeat <span class="sc">+</span> DR1I_PF_ORGAN, total_redmeat),</span>
+<span id="cb1-30"><a href="cleaning-code---nhanes-diet-data.html#cb1-30" tabindex="-1"></a>         <span class="at">total_poultry_new =</span> <span class="fu">ifelse</span>(new <span class="sc">==</span> <span class="st">&quot;pf_poultry&quot;</span>, total_poultry <span class="sc">+</span> DR1I_PF_ORGAN, total_poultry)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-31"><a href="cleaning-code---nhanes-diet-data.html#cb1-31" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, DR1ILINE, total_redmeat_new, total_poultry_new)</span>
+<span id="cb1-32"><a href="cleaning-code---nhanes-diet-data.html#cb1-32" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="cleaning-code---nhanes-diet-data.html#cb1-33" tabindex="-1"></a><span class="co"># export</span></span>
+<span id="cb1-34"><a href="cleaning-code---nhanes-diet-data.html#cb1-34" tabindex="-1"></a><span class="fu">write_rds</span>(meat_day1_3, <span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.rds&quot;</span>)</span>
+<span id="cb1-35"><a href="cleaning-code---nhanes-diet-data.html#cb1-35" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="cleaning-code---nhanes-diet-data.html#cb1-36" tabindex="-1"></a><span class="co"># DAY 2 -----</span></span>
+<span id="cb1-37"><a href="cleaning-code---nhanes-diet-data.html#cb1-37" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="cleaning-code---nhanes-diet-data.html#cb1-38" tabindex="-1"></a>meat_day2_1 <span class="ot">&lt;-</span> meat_day2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">is.na</span>(SEQN))) <span class="sc">%&gt;%</span> <span class="fu">select</span>(SEQN, DESCRIPTION2, FOODCODE2, DR2ILINE, DR2IGRMS,</span>
+<span id="cb1-39"><a href="cleaning-code---nhanes-diet-data.html#cb1-39" tabindex="-1"></a>                                                               DR2I_PF_ORGAN, total_redmeat_day2, total_poultry_day2) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-40"><a href="cleaning-code---nhanes-diet-data.html#cb1-40" tabindex="-1"></a>  <span class="fu">arrange</span>(SEQN, DR2ILINE)</span>
+<span id="cb1-41"><a href="cleaning-code---nhanes-diet-data.html#cb1-41" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="cleaning-code---nhanes-diet-data.html#cb1-42" tabindex="-1"></a>meat_day2_1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(DR2I_PF_ORGAN <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb1-43"><a href="cleaning-code---nhanes-diet-data.html#cb1-43" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="cleaning-code---nhanes-diet-data.html#cb1-44" tabindex="-1"></a><span class="co"># join with day2</span></span>
+<span id="cb1-45"><a href="cleaning-code---nhanes-diet-data.html#cb1-45" tabindex="-1"></a>meat_day2_2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(meat_day2_1, new_organ, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;DESCRIPTION2&quot;</span> <span class="ot">=</span> <span class="st">&quot;DESCRIPTION&quot;</span>))</span>
+<span id="cb1-46"><a href="cleaning-code---nhanes-diet-data.html#cb1-46" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="cleaning-code---nhanes-diet-data.html#cb1-47" tabindex="-1"></a>meat_day2_3 <span class="ot">&lt;-</span> meat_day2_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb1-48"><a href="cleaning-code---nhanes-diet-data.html#cb1-48" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-49"><a href="cleaning-code---nhanes-diet-data.html#cb1-49" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">new =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(new), <span class="st">&quot;No change&quot;</span>, new),</span>
+<span id="cb1-50"><a href="cleaning-code---nhanes-diet-data.html#cb1-50" tabindex="-1"></a>         <span class="at">total_redmeat_new =</span> <span class="fu">ifelse</span>(new <span class="sc">==</span> <span class="st">&quot;pf_redm&quot;</span>, total_redmeat_day2 <span class="sc">+</span> DR2I_PF_ORGAN, total_redmeat_day2),</span>
+<span id="cb1-51"><a href="cleaning-code---nhanes-diet-data.html#cb1-51" tabindex="-1"></a>         <span class="at">total_poultry_new =</span> <span class="fu">ifelse</span>(new <span class="sc">==</span> <span class="st">&quot;pf_poultry&quot;</span>, total_poultry_day2 <span class="sc">+</span> DR2I_PF_ORGAN, total_poultry_day2)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-52"><a href="cleaning-code---nhanes-diet-data.html#cb1-52" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, DR2ILINE, total_redmeat_new, total_poultry_new)</span>
+<span id="cb1-53"><a href="cleaning-code---nhanes-diet-data.html#cb1-53" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="cleaning-code---nhanes-diet-data.html#cb1-54" tabindex="-1"></a><span class="co"># export</span></span>
+<span id="cb1-55"><a href="cleaning-code---nhanes-diet-data.html#cb1-55" tabindex="-1"></a><span class="fu">write_rds</span>(meat_day2_3, <span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.rds&quot;</span>)</span></code></pre></div>
+</div>
+<div id="clean-raw-nhanes-data" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Clean Raw NHANES Data<a href="cleaning-code---nhanes-diet-data.html#clean-raw-nhanes-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that I have dealt with processed and organ meat, I can start to clean the raw NHANES data. We use data from the 2015-2016 and 2017-2018 cycles.</p>
+<div id="step-1-set-up-workspace" class="section level4 unnumbered hasAnchor">
+<h4>Step 1: Set up workspace<a href="cleaning-code---nhanes-diet-data.html#step-1-set-up-workspace" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="cleaning-code---nhanes-diet-data.html#cb2-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb2-2"><a href="cleaning-code---nhanes-diet-data.html#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="cleaning-code---nhanes-diet-data.html#cb2-3" tabindex="-1"></a><span class="co"># load packages</span></span>
+<span id="cb2-4"><a href="cleaning-code---nhanes-diet-data.html#cb2-4" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb2-5"><a href="cleaning-code---nhanes-diet-data.html#cb2-5" tabindex="-1"></a><span class="fu">library</span>(survey)</span>
+<span id="cb2-6"><a href="cleaning-code---nhanes-diet-data.html#cb2-6" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-7"><a href="cleaning-code---nhanes-diet-data.html#cb2-7" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
+<span id="cb2-8"><a href="cleaning-code---nhanes-diet-data.html#cb2-8" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb2-9"><a href="cleaning-code---nhanes-diet-data.html#cb2-9" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code></pre></div>
+</div>
+<div id="step-2-clean-individual-level-food-intake-datasets" class="section level4 unnumbered hasAnchor">
+<h4>Step 2: Clean individual-level food intake datasets<a href="cleaning-code---nhanes-diet-data.html#step-2-clean-individual-level-food-intake-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="cleaning-code---nhanes-diet-data.html#cb3-1" tabindex="-1"></a><span class="co"># 2015-2016 diet data (i)</span></span>
+<span id="cb3-2"><a href="cleaning-code---nhanes-diet-data.html#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="cleaning-code---nhanes-diet-data.html#cb3-3" tabindex="-1"></a><span class="co"># foods day 1</span></span>
+<span id="cb3-4"><a href="cleaning-code---nhanes-diet-data.html#cb3-4" tabindex="-1"></a>foods_i1_nutrients <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/dr1iff_i.sas7bdat&quot;</span>)</span>
+<span id="cb3-5"><a href="cleaning-code---nhanes-diet-data.html#cb3-5" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="cleaning-code---nhanes-diet-data.html#cb3-6" tabindex="-1"></a>foods_i1_whole <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1iff_1516.sas7bdat&quot;</span>)</span>
+<span id="cb3-7"><a href="cleaning-code---nhanes-diet-data.html#cb3-7" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="cleaning-code---nhanes-diet-data.html#cb3-8" tabindex="-1"></a><span class="co"># join</span></span>
+<span id="cb3-9"><a href="cleaning-code---nhanes-diet-data.html#cb3-9" tabindex="-1"></a>foods_i1 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(foods_i1_whole, foods_i1_nutrients) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">nhanes_cycle =</span> <span class="st">&quot;2015-2016&quot;</span>)</span>
+<span id="cb3-10"><a href="cleaning-code---nhanes-diet-data.html#cb3-10" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="cleaning-code---nhanes-diet-data.html#cb3-11" tabindex="-1"></a><span class="co"># foods day 2</span></span>
+<span id="cb3-12"><a href="cleaning-code---nhanes-diet-data.html#cb3-12" tabindex="-1"></a>foods_i2_nutrients <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/dr2iff_i.sas7bdat&quot;</span>)</span>
+<span id="cb3-13"><a href="cleaning-code---nhanes-diet-data.html#cb3-13" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="cleaning-code---nhanes-diet-data.html#cb3-14" tabindex="-1"></a>foods_i2_whole <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2iff_1516.sas7bdat&quot;</span>)</span>
+<span id="cb3-15"><a href="cleaning-code---nhanes-diet-data.html#cb3-15" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="cleaning-code---nhanes-diet-data.html#cb3-16" tabindex="-1"></a><span class="co"># join</span></span>
+<span id="cb3-17"><a href="cleaning-code---nhanes-diet-data.html#cb3-17" tabindex="-1"></a>foods_i2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(foods_i2_whole, foods_i2_nutrients) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">nhanes_cycle =</span> <span class="st">&quot;2015-2016&quot;</span>)</span>
+<span id="cb3-18"><a href="cleaning-code---nhanes-diet-data.html#cb3-18" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="cleaning-code---nhanes-diet-data.html#cb3-19" tabindex="-1"></a><span class="co"># 2017-2018 diet data (j)</span></span>
+<span id="cb3-20"><a href="cleaning-code---nhanes-diet-data.html#cb3-20" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="cleaning-code---nhanes-diet-data.html#cb3-21" tabindex="-1"></a><span class="co"># foods day 1</span></span>
+<span id="cb3-22"><a href="cleaning-code---nhanes-diet-data.html#cb3-22" tabindex="-1"></a>foods_j1_nutrients <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/dr1iff_j.sas7bdat&quot;</span>)</span>
+<span id="cb3-23"><a href="cleaning-code---nhanes-diet-data.html#cb3-23" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="cleaning-code---nhanes-diet-data.html#cb3-24" tabindex="-1"></a>foods_j1_whole <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1iff_1718.sas7bdat&quot;</span>)</span>
+<span id="cb3-25"><a href="cleaning-code---nhanes-diet-data.html#cb3-25" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="cleaning-code---nhanes-diet-data.html#cb3-26" tabindex="-1"></a><span class="co">#join</span></span>
+<span id="cb3-27"><a href="cleaning-code---nhanes-diet-data.html#cb3-27" tabindex="-1"></a>foods_j1 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(foods_j1_whole, foods_j1_nutrients) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">nhanes_cycle =</span> <span class="st">&quot;2017-2018&quot;</span>)</span>
+<span id="cb3-28"><a href="cleaning-code---nhanes-diet-data.html#cb3-28" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="cleaning-code---nhanes-diet-data.html#cb3-29" tabindex="-1"></a><span class="co"># foods day 2</span></span>
+<span id="cb3-30"><a href="cleaning-code---nhanes-diet-data.html#cb3-30" tabindex="-1"></a>foods_j2_nutrients <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/dr2iff_j.sas7bdat&quot;</span>)</span>
+<span id="cb3-31"><a href="cleaning-code---nhanes-diet-data.html#cb3-31" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="cleaning-code---nhanes-diet-data.html#cb3-32" tabindex="-1"></a>foods_j2_whole <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2iff_1718.sas7bdat&quot;</span>)</span>
+<span id="cb3-33"><a href="cleaning-code---nhanes-diet-data.html#cb3-33" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="cleaning-code---nhanes-diet-data.html#cb3-34" tabindex="-1"></a><span class="co"># join</span></span>
+<span id="cb3-35"><a href="cleaning-code---nhanes-diet-data.html#cb3-35" tabindex="-1"></a>foods_j2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(foods_j2_whole, foods_j2_nutrients) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">nhanes_cycle =</span> <span class="st">&quot;2017-2018&quot;</span>)</span>
+<span id="cb3-36"><a href="cleaning-code---nhanes-diet-data.html#cb3-36" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="cleaning-code---nhanes-diet-data.html#cb3-37" tabindex="-1"></a><span class="co"># create day 1 and 2 datasets</span></span>
+<span id="cb3-38"><a href="cleaning-code---nhanes-diet-data.html#cb3-38" tabindex="-1"></a>foods_day1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(foods_i1, foods_j1) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-39"><a href="cleaning-code---nhanes-diet-data.html#cb3-39" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">foodsource =</span> <span class="fu">ifelse</span>(DR1FS <span class="sc">==</span> <span class="dv">1</span>, <span class="st">&quot;Grocery&quot;</span>, <span class="st">&quot;Other&quot;</span>), <span class="co"># create food source variable</span></span>
+<span id="cb3-40"><a href="cleaning-code---nhanes-diet-data.html#cb3-40" tabindex="-1"></a>         <span class="at">foodsource =</span> <span class="fu">replace_na</span>(foodsource, <span class="st">&quot;Other&quot;</span>), <span class="co"># replace NAs with &quot;other&quot; (applies to tap water and breast milk)</span></span>
+<span id="cb3-41"><a href="cleaning-code---nhanes-diet-data.html#cb3-41" tabindex="-1"></a>         <span class="at">dayrec =</span> <span class="dv">1</span>) <span class="co"># day1</span></span>
+<span id="cb3-42"><a href="cleaning-code---nhanes-diet-data.html#cb3-42" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="cleaning-code---nhanes-diet-data.html#cb3-43" tabindex="-1"></a>foods_day2 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(foods_i2, foods_j2) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-44"><a href="cleaning-code---nhanes-diet-data.html#cb3-44" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">foodsource =</span> <span class="fu">ifelse</span>(DR2FS <span class="sc">==</span> <span class="dv">1</span>, <span class="st">&quot;Grocery&quot;</span>, <span class="st">&quot;Other&quot;</span>), <span class="co"># create food source variable</span></span>
+<span id="cb3-45"><a href="cleaning-code---nhanes-diet-data.html#cb3-45" tabindex="-1"></a>         <span class="at">foodsource =</span> <span class="fu">replace_na</span>(foodsource, <span class="st">&quot;Other&quot;</span>), <span class="co"># replace NAs with &quot;other&quot; (applies to tap water and breast milk)</span></span>
+<span id="cb3-46"><a href="cleaning-code---nhanes-diet-data.html#cb3-46" tabindex="-1"></a>         <span class="at">dayrec =</span> <span class="dv">2</span>) </span>
+<span id="cb3-47"><a href="cleaning-code---nhanes-diet-data.html#cb3-47" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="cleaning-code---nhanes-diet-data.html#cb3-48" tabindex="-1"></a><span class="co"># read in meat data</span></span>
+<span id="cb3-49"><a href="cleaning-code---nhanes-diet-data.html#cb3-49" tabindex="-1"></a>meat_day1 <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.rds&quot;</span>)</span>
+<span id="cb3-50"><a href="cleaning-code---nhanes-diet-data.html#cb3-50" tabindex="-1"></a>meat_day2 <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.rds&quot;</span>)</span>
+<span id="cb3-51"><a href="cleaning-code---nhanes-diet-data.html#cb3-51" tabindex="-1"></a></span>
+<span id="cb3-52"><a href="cleaning-code---nhanes-diet-data.html#cb3-52" tabindex="-1"></a>foods_day1_ <span class="ot">&lt;-</span> <span class="fu">left_join</span>(foods_day1, meat_day1, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;SEQN&quot;</span>, <span class="st">&quot;DR1ILINE&quot;</span>))</span>
+<span id="cb3-53"><a href="cleaning-code---nhanes-diet-data.html#cb3-53" tabindex="-1"></a>foods_day2_ <span class="ot">&lt;-</span> <span class="fu">left_join</span>(foods_day2, meat_day2, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;SEQN&quot;</span>, <span class="st">&quot;DR2ILINE&quot;</span>))</span>
+<span id="cb3-54"><a href="cleaning-code---nhanes-diet-data.html#cb3-54" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="cleaning-code---nhanes-diet-data.html#cb3-55" tabindex="-1"></a><span class="co"># check</span></span>
+<span id="cb3-56"><a href="cleaning-code---nhanes-diet-data.html#cb3-56" tabindex="-1"></a>foods_day1_ <span class="sc">%&gt;%</span> <span class="fu">select</span>(SEQN, DR1ILINE, DR1I_PF_MPS_TOTAL, DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW, total_redmeat_new, total_poultry_new)</span>
+<span id="cb3-57"><a href="cleaning-code---nhanes-diet-data.html#cb3-57" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="cleaning-code---nhanes-diet-data.html#cb3-58" tabindex="-1"></a>foods_day1_ <span class="sc">%&gt;%</span> <span class="fu">filter</span>(DR1I_PF_ORGAN <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(SEQN, DR1ILINE, DR1I_PF_MPS_TOTAL, DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW, total_redmeat_new, total_poultry_new)</span>
+<span id="cb3-59"><a href="cleaning-code---nhanes-diet-data.html#cb3-59" tabindex="-1"></a></span>
+<span id="cb3-60"><a href="cleaning-code---nhanes-diet-data.html#cb3-60" tabindex="-1"></a><span class="co"># Calculate amount of intake for each dietary factor</span></span>
+<span id="cb3-61"><a href="cleaning-code---nhanes-diet-data.html#cb3-61" tabindex="-1"></a><span class="co"># for day 1 and day 2</span></span>
+<span id="cb3-62"><a href="cleaning-code---nhanes-diet-data.html#cb3-62" tabindex="-1"></a><span class="co"># by SEQN and foodsource</span></span>
+<span id="cb3-63"><a href="cleaning-code---nhanes-diet-data.html#cb3-63" tabindex="-1"></a></span>
+<span id="cb3-64"><a href="cleaning-code---nhanes-diet-data.html#cb3-64" tabindex="-1"></a><span class="co"># first need to create diet variables that are combinations of 2+ vars</span></span>
+<span id="cb3-65"><a href="cleaning-code---nhanes-diet-data.html#cb3-65" tabindex="-1"></a></span>
+<span id="cb3-66"><a href="cleaning-code---nhanes-diet-data.html#cb3-66" tabindex="-1"></a><span class="co"># day 1</span></span>
+<span id="cb3-67"><a href="cleaning-code---nhanes-diet-data.html#cb3-67" tabindex="-1"></a>foods_day1_1 <span class="ot">&lt;-</span> foods_day1_ <span class="sc">%&gt;%</span> </span>
+<span id="cb3-68"><a href="cleaning-code---nhanes-diet-data.html#cb3-68" tabindex="-1"></a>  </span>
+<span id="cb3-69"><a href="cleaning-code---nhanes-diet-data.html#cb3-69" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-70"><a href="cleaning-code---nhanes-diet-data.html#cb3-70" tabindex="-1"></a>  </span>
+<span id="cb3-71"><a href="cleaning-code---nhanes-diet-data.html#cb3-71" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">sat_fat =</span> DR1ISFAT,</span>
+<span id="cb3-72"><a href="cleaning-code---nhanes-diet-data.html#cb3-72" tabindex="-1"></a>         <span class="at">p_fat =</span> DR1IPFAT,</span>
+<span id="cb3-73"><a href="cleaning-code---nhanes-diet-data.html#cb3-73" tabindex="-1"></a>         <span class="at">sodium =</span> DR1ISODI,</span>
+<span id="cb3-74"><a href="cleaning-code---nhanes-diet-data.html#cb3-74" tabindex="-1"></a>         <span class="at">gr_refined =</span> DR1I_G_REFINED,</span>
+<span id="cb3-75"><a href="cleaning-code---nhanes-diet-data.html#cb3-75" tabindex="-1"></a>         <span class="at">gr_whole =</span> DR1I_G_WHOLE,</span>
+<span id="cb3-76"><a href="cleaning-code---nhanes-diet-data.html#cb3-76" tabindex="-1"></a>         <span class="at">added_sugar =</span> DR1I_ADD_SUGARS,</span>
+<span id="cb3-77"><a href="cleaning-code---nhanes-diet-data.html#cb3-77" tabindex="-1"></a>         <span class="at">fruit_tot =</span> DR1I_F_TOTAL,</span>
+<span id="cb3-78"><a href="cleaning-code---nhanes-diet-data.html#cb3-78" tabindex="-1"></a>         <span class="at">fruit_juice =</span> DR1I_F_JUICE,</span>
+<span id="cb3-79"><a href="cleaning-code---nhanes-diet-data.html#cb3-79" tabindex="-1"></a>         <span class="at">fiber =</span> DR1IFIBE,</span>
+<span id="cb3-80"><a href="cleaning-code---nhanes-diet-data.html#cb3-80" tabindex="-1"></a>         <span class="at">dairy_tot =</span> DR1I_D_TOTAL,</span>
+<span id="cb3-81"><a href="cleaning-code---nhanes-diet-data.html#cb3-81" tabindex="-1"></a>         <span class="at">veg_dg =</span> DR1I_V_DRKGR,</span>
+<span id="cb3-82"><a href="cleaning-code---nhanes-diet-data.html#cb3-82" tabindex="-1"></a>         <span class="at">veg_oth =</span> DR1I_V_OTHER,</span>
+<span id="cb3-83"><a href="cleaning-code---nhanes-diet-data.html#cb3-83" tabindex="-1"></a>         <span class="at">veg_ro =</span> DR1I_V_REDOR_TOTAL,</span>
+<span id="cb3-84"><a href="cleaning-code---nhanes-diet-data.html#cb3-84" tabindex="-1"></a>         <span class="at">veg_sta =</span> DR1I_V_STARCHY_TOTAL,</span>
+<span id="cb3-85"><a href="cleaning-code---nhanes-diet-data.html#cb3-85" tabindex="-1"></a>         <span class="at">veg_leg =</span> DR1I_V_LEGUMES,</span>
+<span id="cb3-86"><a href="cleaning-code---nhanes-diet-data.html#cb3-86" tabindex="-1"></a>         <span class="at">oil =</span> DR1I_OILS,</span>
+<span id="cb3-87"><a href="cleaning-code---nhanes-diet-data.html#cb3-87" tabindex="-1"></a>         <span class="at">pf_egg =</span> DR1I_PF_EGGS,</span>
+<span id="cb3-88"><a href="cleaning-code---nhanes-diet-data.html#cb3-88" tabindex="-1"></a>         <span class="at">pf_ns =</span> DR1I_PF_NUTSDS,</span>
+<span id="cb3-89"><a href="cleaning-code---nhanes-diet-data.html#cb3-89" tabindex="-1"></a>         <span class="at">pf_soy =</span> DR1I_PF_SOY,</span>
+<span id="cb3-90"><a href="cleaning-code---nhanes-diet-data.html#cb3-90" tabindex="-1"></a>         <span class="at">pf_poultry =</span> DR1I_PF_POULT,</span>
+<span id="cb3-91"><a href="cleaning-code---nhanes-diet-data.html#cb3-91" tabindex="-1"></a>         <span class="at">pf_redm =</span> DR1I_PF_MEAT,</span>
+<span id="cb3-92"><a href="cleaning-code---nhanes-diet-data.html#cb3-92" tabindex="-1"></a>         <span class="at">pf_redm_tot =</span> total_redmeat_new,</span>
+<span id="cb3-93"><a href="cleaning-code---nhanes-diet-data.html#cb3-93" tabindex="-1"></a>         <span class="at">pf_poultry_tot =</span> total_poultry_new,</span>
+<span id="cb3-94"><a href="cleaning-code---nhanes-diet-data.html#cb3-94" tabindex="-1"></a>         <span class="at">pf_leg =</span> DR1I_PF_LEGUMES,</span>
+<span id="cb3-95"><a href="cleaning-code---nhanes-diet-data.html#cb3-95" tabindex="-1"></a>         <span class="at">kcal =</span> DR1IKCAL) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-96"><a href="cleaning-code---nhanes-diet-data.html#cb3-96" tabindex="-1"></a>  </span>
+<span id="cb3-97"><a href="cleaning-code---nhanes-diet-data.html#cb3-97" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sea_omega3_fa =</span> <span class="fu">sum</span>(DR1IP226, DR1IP205),</span>
+<span id="cb3-98"><a href="cleaning-code---nhanes-diet-data.html#cb3-98" tabindex="-1"></a>         <span class="at">veg_exc_sta =</span> <span class="fu">sum</span>(veg_dg, veg_ro, veg_oth),</span>
+<span id="cb3-99"><a href="cleaning-code---nhanes-diet-data.html#cb3-99" tabindex="-1"></a>         <span class="at">fruit_exc_juice =</span> <span class="fu">sum</span>(DR1I_F_CITMLB, DR1I_F_OTHER),</span>
+<span id="cb3-100"><a href="cleaning-code---nhanes-diet-data.html#cb3-100" tabindex="-1"></a>         <span class="at">pf_pm =</span> <span class="fu">sum</span>(DR1I_PF_CUREDMEAT, DR1I_PF_ORGAN),</span>
+<span id="cb3-101"><a href="cleaning-code---nhanes-diet-data.html#cb3-101" tabindex="-1"></a>         <span class="at">pf_seafood =</span> <span class="fu">sum</span>(DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW),</span>
+<span id="cb3-102"><a href="cleaning-code---nhanes-diet-data.html#cb3-102" tabindex="-1"></a>         <span class="at">leg_tot =</span> <span class="fu">sum</span>(pf_leg, pf_soy), <span class="co"># doesn&#39;t include soy milk?</span></span>
+<span id="cb3-103"><a href="cleaning-code---nhanes-diet-data.html#cb3-103" tabindex="-1"></a>         <span class="at">pf_animal =</span> <span class="fu">sum</span>(DR1I_PF_MPS_TOTAL, pf_egg),</span>
+<span id="cb3-104"><a href="cleaning-code---nhanes-diet-data.html#cb3-104" tabindex="-1"></a>         <span class="at">pf_plant =</span> <span class="fu">sum</span>(pf_leg, pf_ns, pf_soy)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-105"><a href="cleaning-code---nhanes-diet-data.html#cb3-105" tabindex="-1"></a>  </span>
+<span id="cb3-106"><a href="cleaning-code---nhanes-diet-data.html#cb3-106" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb3-107"><a href="cleaning-code---nhanes-diet-data.html#cb3-107" tabindex="-1"></a></span>
+<span id="cb3-108"><a href="cleaning-code---nhanes-diet-data.html#cb3-108" tabindex="-1"></a><span class="co"># create soy milk category</span></span>
+<span id="cb3-109"><a href="cleaning-code---nhanes-diet-data.html#cb3-109" tabindex="-1"></a>foods_day1_2 <span class="ot">&lt;-</span> </span>
+<span id="cb3-110"><a href="cleaning-code---nhanes-diet-data.html#cb3-110" tabindex="-1"></a>  foods_day1_1 <span class="sc">%&gt;%</span> </span>
+<span id="cb3-111"><a href="cleaning-code---nhanes-diet-data.html#cb3-111" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dairy_soy =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(DESCRIPTION, <span class="st">&quot;Soy milk&quot;</span>) <span class="sc">&amp;</span> dairy_tot <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb3-112"><a href="cleaning-code---nhanes-diet-data.html#cb3-112" tabindex="-1"></a>                                           dairy_tot, </span>
+<span id="cb3-113"><a href="cleaning-code---nhanes-diet-data.html#cb3-113" tabindex="-1"></a>                                           <span class="dv">0</span>),</span>
+<span id="cb3-114"><a href="cleaning-code---nhanes-diet-data.html#cb3-114" tabindex="-1"></a>         <span class="at">dairy_cow =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(DESCRIPTION, <span class="st">&quot;Soy milk&quot;</span>, <span class="at">negate =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span> dairy_tot <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb3-115"><a href="cleaning-code---nhanes-diet-data.html#cb3-115" tabindex="-1"></a>                            dairy_tot, </span>
+<span id="cb3-116"><a href="cleaning-code---nhanes-diet-data.html#cb3-116" tabindex="-1"></a>                            <span class="dv">0</span>))</span>
+<span id="cb3-117"><a href="cleaning-code---nhanes-diet-data.html#cb3-117" tabindex="-1"></a><span class="co"># check</span></span>
+<span id="cb3-118"><a href="cleaning-code---nhanes-diet-data.html#cb3-118" tabindex="-1"></a>foods_day1_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb3-119"><a href="cleaning-code---nhanes-diet-data.html#cb3-119" tabindex="-1"></a>  <span class="fu">filter</span>(dairy_tot <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-120"><a href="cleaning-code---nhanes-diet-data.html#cb3-120" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, DESCRIPTION, dairy_tot, dairy_soy, dairy_cow) <span class="co">#good</span></span>
+<span id="cb3-121"><a href="cleaning-code---nhanes-diet-data.html#cb3-121" tabindex="-1"></a></span>
+<span id="cb3-122"><a href="cleaning-code---nhanes-diet-data.html#cb3-122" tabindex="-1"></a><span class="co"># day 2</span></span>
+<span id="cb3-123"><a href="cleaning-code---nhanes-diet-data.html#cb3-123" tabindex="-1"></a></span>
+<span id="cb3-124"><a href="cleaning-code---nhanes-diet-data.html#cb3-124" tabindex="-1"></a>foods_day2_1 <span class="ot">&lt;-</span> foods_day2_ <span class="sc">%&gt;%</span> </span>
+<span id="cb3-125"><a href="cleaning-code---nhanes-diet-data.html#cb3-125" tabindex="-1"></a>  </span>
+<span id="cb3-126"><a href="cleaning-code---nhanes-diet-data.html#cb3-126" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-127"><a href="cleaning-code---nhanes-diet-data.html#cb3-127" tabindex="-1"></a>  </span>
+<span id="cb3-128"><a href="cleaning-code---nhanes-diet-data.html#cb3-128" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">sat_fat =</span> DR2ISFAT,</span>
+<span id="cb3-129"><a href="cleaning-code---nhanes-diet-data.html#cb3-129" tabindex="-1"></a>         <span class="at">p_fat =</span> DR2IPFAT,</span>
+<span id="cb3-130"><a href="cleaning-code---nhanes-diet-data.html#cb3-130" tabindex="-1"></a>         <span class="at">sodium =</span> DR2ISODI,</span>
+<span id="cb3-131"><a href="cleaning-code---nhanes-diet-data.html#cb3-131" tabindex="-1"></a>         <span class="at">gr_refined =</span> DR2I_G_REFINED,</span>
+<span id="cb3-132"><a href="cleaning-code---nhanes-diet-data.html#cb3-132" tabindex="-1"></a>         <span class="at">gr_whole =</span> DR2I_G_WHOLE,</span>
+<span id="cb3-133"><a href="cleaning-code---nhanes-diet-data.html#cb3-133" tabindex="-1"></a>         <span class="at">added_sugar =</span> DR2I_ADD_SUGARS,</span>
+<span id="cb3-134"><a href="cleaning-code---nhanes-diet-data.html#cb3-134" tabindex="-1"></a>         <span class="at">fruit_tot =</span> DR2I_F_TOTAL,</span>
+<span id="cb3-135"><a href="cleaning-code---nhanes-diet-data.html#cb3-135" tabindex="-1"></a>         <span class="at">fruit_juice =</span> DR2I_F_JUICE,</span>
+<span id="cb3-136"><a href="cleaning-code---nhanes-diet-data.html#cb3-136" tabindex="-1"></a>         <span class="at">fiber =</span> DR2IFIBE,</span>
+<span id="cb3-137"><a href="cleaning-code---nhanes-diet-data.html#cb3-137" tabindex="-1"></a>         <span class="at">dairy_tot =</span> DR2I_D_TOTAL,</span>
+<span id="cb3-138"><a href="cleaning-code---nhanes-diet-data.html#cb3-138" tabindex="-1"></a>         <span class="at">veg_dg =</span> DR2I_V_DRKGR,</span>
+<span id="cb3-139"><a href="cleaning-code---nhanes-diet-data.html#cb3-139" tabindex="-1"></a>         <span class="at">veg_oth =</span> DR2I_V_OTHER,</span>
+<span id="cb3-140"><a href="cleaning-code---nhanes-diet-data.html#cb3-140" tabindex="-1"></a>         <span class="at">veg_ro =</span> DR2I_V_REDOR_TOTAL,</span>
+<span id="cb3-141"><a href="cleaning-code---nhanes-diet-data.html#cb3-141" tabindex="-1"></a>         <span class="at">veg_sta =</span> DR2I_V_STARCHY_TOTAL,</span>
+<span id="cb3-142"><a href="cleaning-code---nhanes-diet-data.html#cb3-142" tabindex="-1"></a>         <span class="at">veg_leg =</span> DR2I_V_LEGUMES,</span>
+<span id="cb3-143"><a href="cleaning-code---nhanes-diet-data.html#cb3-143" tabindex="-1"></a>         <span class="at">oil =</span> DR2I_OILS,</span>
+<span id="cb3-144"><a href="cleaning-code---nhanes-diet-data.html#cb3-144" tabindex="-1"></a>         <span class="at">pf_egg =</span> DR2I_PF_EGGS,</span>
+<span id="cb3-145"><a href="cleaning-code---nhanes-diet-data.html#cb3-145" tabindex="-1"></a>         <span class="at">pf_ns =</span> DR2I_PF_NUTSDS,</span>
+<span id="cb3-146"><a href="cleaning-code---nhanes-diet-data.html#cb3-146" tabindex="-1"></a>         <span class="at">pf_soy =</span> DR2I_PF_SOY,</span>
+<span id="cb3-147"><a href="cleaning-code---nhanes-diet-data.html#cb3-147" tabindex="-1"></a>         <span class="at">pf_poultry =</span> DR2I_PF_POULT,</span>
+<span id="cb3-148"><a href="cleaning-code---nhanes-diet-data.html#cb3-148" tabindex="-1"></a>         <span class="at">pf_redm =</span> DR2I_PF_MEAT,</span>
+<span id="cb3-149"><a href="cleaning-code---nhanes-diet-data.html#cb3-149" tabindex="-1"></a>         <span class="at">pf_redm_tot =</span> total_redmeat_new,</span>
+<span id="cb3-150"><a href="cleaning-code---nhanes-diet-data.html#cb3-150" tabindex="-1"></a>         <span class="at">pf_poultry_tot =</span> total_poultry_new,</span>
+<span id="cb3-151"><a href="cleaning-code---nhanes-diet-data.html#cb3-151" tabindex="-1"></a>         <span class="at">pf_leg =</span> DR2I_PF_LEGUMES,</span>
+<span id="cb3-152"><a href="cleaning-code---nhanes-diet-data.html#cb3-152" tabindex="-1"></a>         <span class="at">kcal =</span> DR2IKCAL) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-153"><a href="cleaning-code---nhanes-diet-data.html#cb3-153" tabindex="-1"></a>  </span>
+<span id="cb3-154"><a href="cleaning-code---nhanes-diet-data.html#cb3-154" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sea_omega3_fa =</span> <span class="fu">sum</span>(DR2IP226, DR2IP205),</span>
+<span id="cb3-155"><a href="cleaning-code---nhanes-diet-data.html#cb3-155" tabindex="-1"></a>         <span class="at">veg_exc_sta =</span> <span class="fu">sum</span>(veg_dg, veg_ro, veg_oth),</span>
+<span id="cb3-156"><a href="cleaning-code---nhanes-diet-data.html#cb3-156" tabindex="-1"></a>         <span class="at">fruit_exc_juice =</span> <span class="fu">sum</span>(DR2I_F_CITMLB, DR2I_F_OTHER),</span>
+<span id="cb3-157"><a href="cleaning-code---nhanes-diet-data.html#cb3-157" tabindex="-1"></a>         <span class="at">pf_pm =</span> <span class="fu">sum</span>(DR2I_PF_CUREDMEAT, DR2I_PF_ORGAN),</span>
+<span id="cb3-158"><a href="cleaning-code---nhanes-diet-data.html#cb3-158" tabindex="-1"></a>         <span class="at">pf_seafood =</span> <span class="fu">sum</span>(DR2I_PF_SEAFD_HI, DR2I_PF_SEAFD_LOW),</span>
+<span id="cb3-159"><a href="cleaning-code---nhanes-diet-data.html#cb3-159" tabindex="-1"></a>         <span class="at">leg_tot =</span> <span class="fu">sum</span>(pf_leg, pf_soy),</span>
+<span id="cb3-160"><a href="cleaning-code---nhanes-diet-data.html#cb3-160" tabindex="-1"></a>         <span class="at">pf_animal =</span> <span class="fu">sum</span>(DR2I_PF_MPS_TOTAL, pf_egg),</span>
+<span id="cb3-161"><a href="cleaning-code---nhanes-diet-data.html#cb3-161" tabindex="-1"></a>         <span class="at">pf_plant =</span> <span class="fu">sum</span>(pf_leg, pf_ns, pf_soy)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-162"><a href="cleaning-code---nhanes-diet-data.html#cb3-162" tabindex="-1"></a>  </span>
+<span id="cb3-163"><a href="cleaning-code---nhanes-diet-data.html#cb3-163" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb3-164"><a href="cleaning-code---nhanes-diet-data.html#cb3-164" tabindex="-1"></a></span>
+<span id="cb3-165"><a href="cleaning-code---nhanes-diet-data.html#cb3-165" tabindex="-1"></a><span class="co"># create soy milk category</span></span>
+<span id="cb3-166"><a href="cleaning-code---nhanes-diet-data.html#cb3-166" tabindex="-1"></a>foods_day2_2 <span class="ot">&lt;-</span> </span>
+<span id="cb3-167"><a href="cleaning-code---nhanes-diet-data.html#cb3-167" tabindex="-1"></a>  foods_day2_1 <span class="sc">%&gt;%</span> </span>
+<span id="cb3-168"><a href="cleaning-code---nhanes-diet-data.html#cb3-168" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dairy_soy =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(DESCRIPTION, <span class="st">&quot;Soy milk&quot;</span>) <span class="sc">&amp;</span> dairy_tot <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb3-169"><a href="cleaning-code---nhanes-diet-data.html#cb3-169" tabindex="-1"></a>                            dairy_tot, </span>
+<span id="cb3-170"><a href="cleaning-code---nhanes-diet-data.html#cb3-170" tabindex="-1"></a>                            <span class="dv">0</span>),</span>
+<span id="cb3-171"><a href="cleaning-code---nhanes-diet-data.html#cb3-171" tabindex="-1"></a>         <span class="at">dairy_cow =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(DESCRIPTION, <span class="st">&quot;Soy milk&quot;</span>, <span class="at">negate =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span> dairy_tot <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb3-172"><a href="cleaning-code---nhanes-diet-data.html#cb3-172" tabindex="-1"></a>                            dairy_tot, </span>
+<span id="cb3-173"><a href="cleaning-code---nhanes-diet-data.html#cb3-173" tabindex="-1"></a>                            <span class="dv">0</span>))</span>
+<span id="cb3-174"><a href="cleaning-code---nhanes-diet-data.html#cb3-174" tabindex="-1"></a><span class="co"># check</span></span>
+<span id="cb3-175"><a href="cleaning-code---nhanes-diet-data.html#cb3-175" tabindex="-1"></a>foods_day2_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb3-176"><a href="cleaning-code---nhanes-diet-data.html#cb3-176" tabindex="-1"></a>  <span class="fu">filter</span>(dairy_tot <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-177"><a href="cleaning-code---nhanes-diet-data.html#cb3-177" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, DESCRIPTION, dairy_tot, dairy_soy, dairy_cow) <span class="co">#good</span></span>
+<span id="cb3-178"><a href="cleaning-code---nhanes-diet-data.html#cb3-178" tabindex="-1"></a></span>
+<span id="cb3-179"><a href="cleaning-code---nhanes-diet-data.html#cb3-179" tabindex="-1"></a></span>
+<span id="cb3-180"><a href="cleaning-code---nhanes-diet-data.html#cb3-180" tabindex="-1"></a><span class="co"># export foods day 1 and day 2 for later use</span></span>
+<span id="cb3-181"><a href="cleaning-code---nhanes-diet-data.html#cb3-181" tabindex="-1"></a><span class="fu">write_rds</span>(foods_day1_2, <span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds&quot;</span>)</span>
+<span id="cb3-182"><a href="cleaning-code---nhanes-diet-data.html#cb3-182" tabindex="-1"></a><span class="fu">write_rds</span>(foods_day2_2, <span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds&quot;</span>)</span></code></pre></div>
+</div>
+<div id="step-3-clean-the-food-and-nutrient-intake-summary-datasets" class="section level4 unnumbered hasAnchor">
+<h4>Step 3: Clean the food and nutrient intake (summary) datasets<a href="cleaning-code---nhanes-diet-data.html#step-3-clean-the-food-and-nutrient-intake-summary-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="cleaning-code---nhanes-diet-data.html#cb4-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">&quot;foods_day1_2&quot;</span>, <span class="st">&quot;foods_day2_2&quot;</span>)))</span>
+<span id="cb4-2"><a href="cleaning-code---nhanes-diet-data.html#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="cleaning-code---nhanes-diet-data.html#cb4-3" tabindex="-1"></a><span class="co"># QUICKLY HANDLE MEAT</span></span>
+<span id="cb4-4"><a href="cleaning-code---nhanes-diet-data.html#cb4-4" tabindex="-1"></a>meat_sum_day1 <span class="ot">&lt;-</span> </span>
+<span id="cb4-5"><a href="cleaning-code---nhanes-diet-data.html#cb4-5" tabindex="-1"></a>  foods_day1_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="cleaning-code---nhanes-diet-data.html#cb4-6" tabindex="-1"></a>  <span class="fu">group_by</span>(SEQN) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-7"><a href="cleaning-code---nhanes-diet-data.html#cb4-7" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">pf_redm_tot_1 =</span> <span class="fu">sum</span>(pf_redm_tot),</span>
+<span id="cb4-8"><a href="cleaning-code---nhanes-diet-data.html#cb4-8" tabindex="-1"></a>            <span class="at">pf_poultry_tot_1 =</span> <span class="fu">sum</span>(pf_poultry_tot))</span>
+<span id="cb4-9"><a href="cleaning-code---nhanes-diet-data.html#cb4-9" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="cleaning-code---nhanes-diet-data.html#cb4-10" tabindex="-1"></a>meat_sum_day2 <span class="ot">&lt;-</span> </span>
+<span id="cb4-11"><a href="cleaning-code---nhanes-diet-data.html#cb4-11" tabindex="-1"></a>  foods_day2_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb4-12"><a href="cleaning-code---nhanes-diet-data.html#cb4-12" tabindex="-1"></a>  <span class="fu">group_by</span>(SEQN) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-13"><a href="cleaning-code---nhanes-diet-data.html#cb4-13" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">pf_redm_tot_2 =</span> <span class="fu">sum</span>(pf_redm_tot),</span>
+<span id="cb4-14"><a href="cleaning-code---nhanes-diet-data.html#cb4-14" tabindex="-1"></a>            <span class="at">pf_poultry_tot_2 =</span> <span class="fu">sum</span>(pf_poultry_tot))</span>
+<span id="cb4-15"><a href="cleaning-code---nhanes-diet-data.html#cb4-15" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="cleaning-code---nhanes-diet-data.html#cb4-16" tabindex="-1"></a><span class="co"># 2015-2016 diet data (i)</span></span>
+<span id="cb4-17"><a href="cleaning-code---nhanes-diet-data.html#cb4-17" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="cleaning-code---nhanes-diet-data.html#cb4-18" tabindex="-1"></a><span class="co"># demographic data</span></span>
+<span id="cb4-19"><a href="cleaning-code---nhanes-diet-data.html#cb4-19" tabindex="-1"></a>demo_i <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/demo_i.sas7bdat&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-20"><a href="cleaning-code---nhanes-diet-data.html#cb4-20" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2, INDFMPIR, RIDAGEYR)</span>
+<span id="cb4-21"><a href="cleaning-code---nhanes-diet-data.html#cb4-21" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="cleaning-code---nhanes-diet-data.html#cb4-22" tabindex="-1"></a><span class="co"># fped day 1</span></span>
+<span id="cb4-23"><a href="cleaning-code---nhanes-diet-data.html#cb4-23" tabindex="-1"></a>fped_i1 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1tot_1516.sas7bdat&quot;</span>) </span>
+<span id="cb4-24"><a href="cleaning-code---nhanes-diet-data.html#cb4-24" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="cleaning-code---nhanes-diet-data.html#cb4-25" tabindex="-1"></a><span class="co"># fped day 2</span></span>
+<span id="cb4-26"><a href="cleaning-code---nhanes-diet-data.html#cb4-26" tabindex="-1"></a>fped_i2 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2tot_1516.sas7bdat&quot;</span>)</span>
+<span id="cb4-27"><a href="cleaning-code---nhanes-diet-data.html#cb4-27" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="cleaning-code---nhanes-diet-data.html#cb4-28" tabindex="-1"></a><span class="co"># join the two datasets</span></span>
+<span id="cb4-29"><a href="cleaning-code---nhanes-diet-data.html#cb4-29" tabindex="-1"></a>fped_i <span class="ot">&lt;-</span> <span class="fu">left_join</span>(fped_i1, fped_i2)</span>
+<span id="cb4-30"><a href="cleaning-code---nhanes-diet-data.html#cb4-30" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="cleaning-code---nhanes-diet-data.html#cb4-31" tabindex="-1"></a><span class="co"># nutrients day 1</span></span>
+<span id="cb4-32"><a href="cleaning-code---nhanes-diet-data.html#cb4-32" tabindex="-1"></a>nutrient_i1 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/dr1tot_i.sas7bdat&quot;</span>)</span>
+<span id="cb4-33"><a href="cleaning-code---nhanes-diet-data.html#cb4-33" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="cleaning-code---nhanes-diet-data.html#cb4-34" tabindex="-1"></a><span class="co"># nutrients day 2</span></span>
+<span id="cb4-35"><a href="cleaning-code---nhanes-diet-data.html#cb4-35" tabindex="-1"></a>nutrient_i2 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/dr2tot_i.sas7bdat&quot;</span>)</span>
+<span id="cb4-36"><a href="cleaning-code---nhanes-diet-data.html#cb4-36" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="cleaning-code---nhanes-diet-data.html#cb4-37" tabindex="-1"></a><span class="co"># join the two datasets</span></span>
+<span id="cb4-38"><a href="cleaning-code---nhanes-diet-data.html#cb4-38" tabindex="-1"></a>nutrient_i <span class="ot">&lt;-</span> <span class="fu">full_join</span>(nutrient_i1, nutrient_i2)</span>
+<span id="cb4-39"><a href="cleaning-code---nhanes-diet-data.html#cb4-39" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="cleaning-code---nhanes-diet-data.html#cb4-40" tabindex="-1"></a><span class="co"># Combine all datasets</span></span>
+<span id="cb4-41"><a href="cleaning-code---nhanes-diet-data.html#cb4-41" tabindex="-1"></a>nhanes1516 <span class="ot">&lt;-</span>  </span>
+<span id="cb4-42"><a href="cleaning-code---nhanes-diet-data.html#cb4-42" tabindex="-1"></a>  fped_i <span class="sc">%&gt;%</span> </span>
+<span id="cb4-43"><a href="cleaning-code---nhanes-diet-data.html#cb4-43" tabindex="-1"></a>  <span class="fu">left_join</span>(nutrient_i) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-44"><a href="cleaning-code---nhanes-diet-data.html#cb4-44" tabindex="-1"></a>  <span class="fu">left_join</span>(demo_i)</span>
+<span id="cb4-45"><a href="cleaning-code---nhanes-diet-data.html#cb4-45" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="cleaning-code---nhanes-diet-data.html#cb4-46" tabindex="-1"></a><span class="co"># 2017-2018 diet data (j)</span></span>
+<span id="cb4-47"><a href="cleaning-code---nhanes-diet-data.html#cb4-47" tabindex="-1"></a></span>
+<span id="cb4-48"><a href="cleaning-code---nhanes-diet-data.html#cb4-48" tabindex="-1"></a><span class="co"># demographic data</span></span>
+<span id="cb4-49"><a href="cleaning-code---nhanes-diet-data.html#cb4-49" tabindex="-1"></a>demo_j <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/demo_j.sas7bdat&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-50"><a href="cleaning-code---nhanes-diet-data.html#cb4-50" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2, INDFMPIR, RIDAGEYR)</span>
+<span id="cb4-51"><a href="cleaning-code---nhanes-diet-data.html#cb4-51" tabindex="-1"></a></span>
+<span id="cb4-52"><a href="cleaning-code---nhanes-diet-data.html#cb4-52" tabindex="-1"></a><span class="co"># fped day 1</span></span>
+<span id="cb4-53"><a href="cleaning-code---nhanes-diet-data.html#cb4-53" tabindex="-1"></a>fped_j1 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1tot_1718.sas7bdat&quot;</span>) </span>
+<span id="cb4-54"><a href="cleaning-code---nhanes-diet-data.html#cb4-54" tabindex="-1"></a></span>
+<span id="cb4-55"><a href="cleaning-code---nhanes-diet-data.html#cb4-55" tabindex="-1"></a><span class="co"># fped day 2</span></span>
+<span id="cb4-56"><a href="cleaning-code---nhanes-diet-data.html#cb4-56" tabindex="-1"></a>fped_j2 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2tot_1718.sas7bdat&quot;</span>)</span>
+<span id="cb4-57"><a href="cleaning-code---nhanes-diet-data.html#cb4-57" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="cleaning-code---nhanes-diet-data.html#cb4-58" tabindex="-1"></a><span class="co"># join the two datasets</span></span>
+<span id="cb4-59"><a href="cleaning-code---nhanes-diet-data.html#cb4-59" tabindex="-1"></a>fped_j <span class="ot">&lt;-</span> <span class="fu">left_join</span>(fped_j1, fped_j2)</span>
+<span id="cb4-60"><a href="cleaning-code---nhanes-diet-data.html#cb4-60" tabindex="-1"></a></span>
+<span id="cb4-61"><a href="cleaning-code---nhanes-diet-data.html#cb4-61" tabindex="-1"></a><span class="co"># nutrients day 1</span></span>
+<span id="cb4-62"><a href="cleaning-code---nhanes-diet-data.html#cb4-62" tabindex="-1"></a>nutrient_j1 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/dr1tot_j.sas7bdat&quot;</span>)</span>
+<span id="cb4-63"><a href="cleaning-code---nhanes-diet-data.html#cb4-63" tabindex="-1"></a></span>
+<span id="cb4-64"><a href="cleaning-code---nhanes-diet-data.html#cb4-64" tabindex="-1"></a><span class="co"># nutrients day 2</span></span>
+<span id="cb4-65"><a href="cleaning-code---nhanes-diet-data.html#cb4-65" tabindex="-1"></a>nutrient_j2 <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/raw_data/dr2tot_j.sas7bdat&quot;</span>)</span>
+<span id="cb4-66"><a href="cleaning-code---nhanes-diet-data.html#cb4-66" tabindex="-1"></a></span>
+<span id="cb4-67"><a href="cleaning-code---nhanes-diet-data.html#cb4-67" tabindex="-1"></a><span class="co"># join the two datasets</span></span>
+<span id="cb4-68"><a href="cleaning-code---nhanes-diet-data.html#cb4-68" tabindex="-1"></a>nutrient_j <span class="ot">&lt;-</span> <span class="fu">full_join</span>(nutrient_j1, nutrient_j2)</span>
+<span id="cb4-69"><a href="cleaning-code---nhanes-diet-data.html#cb4-69" tabindex="-1"></a></span>
+<span id="cb4-70"><a href="cleaning-code---nhanes-diet-data.html#cb4-70" tabindex="-1"></a><span class="co"># Combine all datasets</span></span>
+<span id="cb4-71"><a href="cleaning-code---nhanes-diet-data.html#cb4-71" tabindex="-1"></a>nhanes1718 <span class="ot">&lt;-</span> fped_j <span class="sc">%&gt;%</span> </span>
+<span id="cb4-72"><a href="cleaning-code---nhanes-diet-data.html#cb4-72" tabindex="-1"></a>  <span class="fu">left_join</span>(nutrient_j) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-73"><a href="cleaning-code---nhanes-diet-data.html#cb4-73" tabindex="-1"></a>  <span class="fu">left_join</span>(demo_j) </span>
+<span id="cb4-74"><a href="cleaning-code---nhanes-diet-data.html#cb4-74" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="cleaning-code---nhanes-diet-data.html#cb4-75" tabindex="-1"></a><span class="co"># combine the two nhanes datasets</span></span>
+<span id="cb4-76"><a href="cleaning-code---nhanes-diet-data.html#cb4-76" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="cleaning-code---nhanes-diet-data.html#cb4-77" tabindex="-1"></a><span class="co"># first, change 2 variable names that don&#39;t match</span></span>
+<span id="cb4-78"><a href="cleaning-code---nhanes-diet-data.html#cb4-78" tabindex="-1"></a>nhanes1718 <span class="ot">&lt;-</span> nhanes1718 <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">DR1TWS =</span> DR1TWSZ,</span>
+<span id="cb4-79"><a href="cleaning-code---nhanes-diet-data.html#cb4-79" tabindex="-1"></a>                                    <span class="at">DR2TWS =</span> DR2TWSZ)</span>
+<span id="cb4-80"><a href="cleaning-code---nhanes-diet-data.html#cb4-80" tabindex="-1"></a></span>
+<span id="cb4-81"><a href="cleaning-code---nhanes-diet-data.html#cb4-81" tabindex="-1"></a>nhanes_comb <span class="ot">&lt;-</span> <span class="fu">rbind</span>(nhanes1516, nhanes1718)</span>
+<span id="cb4-82"><a href="cleaning-code---nhanes-diet-data.html#cb4-82" tabindex="-1"></a></span>
+<span id="cb4-83"><a href="cleaning-code---nhanes-diet-data.html#cb4-83" tabindex="-1"></a><span class="co"># combine with meat</span></span>
+<span id="cb4-84"><a href="cleaning-code---nhanes-diet-data.html#cb4-84" tabindex="-1"></a>nhanes_comb1 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(nhanes_comb, meat_sum_day1, <span class="at">by =</span> <span class="st">&quot;SEQN&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(meat_sum_day2, <span class="at">by =</span> <span class="st">&quot;SEQN&quot;</span>)</span>
+<span id="cb4-85"><a href="cleaning-code---nhanes-diet-data.html#cb4-85" tabindex="-1"></a></span>
+<span id="cb4-86"><a href="cleaning-code---nhanes-diet-data.html#cb4-86" tabindex="-1"></a><span class="co"># create dairy variables</span></span>
+<span id="cb4-87"><a href="cleaning-code---nhanes-diet-data.html#cb4-87" tabindex="-1"></a>dairy_day1 <span class="ot">&lt;-</span></span>
+<span id="cb4-88"><a href="cleaning-code---nhanes-diet-data.html#cb4-88" tabindex="-1"></a>  foods_day1_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb4-89"><a href="cleaning-code---nhanes-diet-data.html#cb4-89" tabindex="-1"></a>  <span class="fu">group_by</span>(SEQN) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-90"><a href="cleaning-code---nhanes-diet-data.html#cb4-90" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">dairy_cow_1 =</span> <span class="fu">sum</span>(dairy_cow),</span>
+<span id="cb4-91"><a href="cleaning-code---nhanes-diet-data.html#cb4-91" tabindex="-1"></a>            <span class="at">dairy_soy_1 =</span> <span class="fu">sum</span>(dairy_soy))</span>
+<span id="cb4-92"><a href="cleaning-code---nhanes-diet-data.html#cb4-92" tabindex="-1"></a></span>
+<span id="cb4-93"><a href="cleaning-code---nhanes-diet-data.html#cb4-93" tabindex="-1"></a>dairy_day2 <span class="ot">&lt;-</span></span>
+<span id="cb4-94"><a href="cleaning-code---nhanes-diet-data.html#cb4-94" tabindex="-1"></a>  foods_day2_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb4-95"><a href="cleaning-code---nhanes-diet-data.html#cb4-95" tabindex="-1"></a>  <span class="fu">group_by</span>(SEQN) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-96"><a href="cleaning-code---nhanes-diet-data.html#cb4-96" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">dairy_cow_2 =</span> <span class="fu">sum</span>(dairy_cow),</span>
+<span id="cb4-97"><a href="cleaning-code---nhanes-diet-data.html#cb4-97" tabindex="-1"></a>            <span class="at">dairy_soy_2 =</span> <span class="fu">sum</span>(dairy_soy))</span>
+<span id="cb4-98"><a href="cleaning-code---nhanes-diet-data.html#cb4-98" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="cleaning-code---nhanes-diet-data.html#cb4-99" tabindex="-1"></a><span class="co"># merge with nhanes</span></span>
+<span id="cb4-100"><a href="cleaning-code---nhanes-diet-data.html#cb4-100" tabindex="-1"></a>dairy_bothdays <span class="ot">&lt;-</span> <span class="fu">full_join</span>(dairy_day1, dairy_day2)</span>
+<span id="cb4-101"><a href="cleaning-code---nhanes-diet-data.html#cb4-101" tabindex="-1"></a></span>
+<span id="cb4-102"><a href="cleaning-code---nhanes-diet-data.html#cb4-102" tabindex="-1"></a>nhanes_comb2 <span class="ot">&lt;-</span> nhanes_comb1 <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(dairy_bothdays, <span class="at">by =</span> <span class="st">&quot;SEQN&quot;</span>)</span></code></pre></div>
+</div>
+<div id="step-4-construct-dietary-factors" class="section level4 unnumbered hasAnchor">
+<h4>Step 4: Construct dietary factors<a href="cleaning-code---nhanes-diet-data.html#step-4-construct-dietary-factors" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="cleaning-code---nhanes-diet-data.html#cb5-1" tabindex="-1"></a>nhanes_comb3 <span class="ot">&lt;-</span></span>
+<span id="cb5-2"><a href="cleaning-code---nhanes-diet-data.html#cb5-2" tabindex="-1"></a>  nhanes_comb2 <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="cleaning-code---nhanes-diet-data.html#cb5-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">kcal_1 =</span> DR1TKCAL,</span>
+<span id="cb5-4"><a href="cleaning-code---nhanes-diet-data.html#cb5-4" tabindex="-1"></a>         <span class="at">kcal_2 =</span> DR2TKCAL,</span>
+<span id="cb5-5"><a href="cleaning-code---nhanes-diet-data.html#cb5-5" tabindex="-1"></a>         </span>
+<span id="cb5-6"><a href="cleaning-code---nhanes-diet-data.html#cb5-6" tabindex="-1"></a>         <span class="at">sat_fat_1 =</span> DR1TSFAT,</span>
+<span id="cb5-7"><a href="cleaning-code---nhanes-diet-data.html#cb5-7" tabindex="-1"></a>         <span class="at">sat_fat_2 =</span> DR2TSFAT,</span>
+<span id="cb5-8"><a href="cleaning-code---nhanes-diet-data.html#cb5-8" tabindex="-1"></a>         </span>
+<span id="cb5-9"><a href="cleaning-code---nhanes-diet-data.html#cb5-9" tabindex="-1"></a>         <span class="at">sodium_1 =</span> DR1TSODI,</span>
+<span id="cb5-10"><a href="cleaning-code---nhanes-diet-data.html#cb5-10" tabindex="-1"></a>         <span class="at">sodium_2 =</span> DR2TSODI,</span>
+<span id="cb5-11"><a href="cleaning-code---nhanes-diet-data.html#cb5-11" tabindex="-1"></a>         </span>
+<span id="cb5-12"><a href="cleaning-code---nhanes-diet-data.html#cb5-12" tabindex="-1"></a>         <span class="at">gr_refined_1 =</span> DR1T_G_REFINED,</span>
+<span id="cb5-13"><a href="cleaning-code---nhanes-diet-data.html#cb5-13" tabindex="-1"></a>         <span class="at">gr_refined_2 =</span> DR2T_G_REFINED,</span>
+<span id="cb5-14"><a href="cleaning-code---nhanes-diet-data.html#cb5-14" tabindex="-1"></a>         </span>
+<span id="cb5-15"><a href="cleaning-code---nhanes-diet-data.html#cb5-15" tabindex="-1"></a>         <span class="at">gr_whole_1 =</span> DR1T_G_WHOLE,</span>
+<span id="cb5-16"><a href="cleaning-code---nhanes-diet-data.html#cb5-16" tabindex="-1"></a>         <span class="at">gr_whole_2 =</span> DR2T_G_WHOLE,</span>
+<span id="cb5-17"><a href="cleaning-code---nhanes-diet-data.html#cb5-17" tabindex="-1"></a>         </span>
+<span id="cb5-18"><a href="cleaning-code---nhanes-diet-data.html#cb5-18" tabindex="-1"></a>         <span class="at">added_sugar_1 =</span> DR1T_ADD_SUGARS,</span>
+<span id="cb5-19"><a href="cleaning-code---nhanes-diet-data.html#cb5-19" tabindex="-1"></a>         <span class="at">added_sugar_2 =</span> DR2T_ADD_SUGARS,</span>
+<span id="cb5-20"><a href="cleaning-code---nhanes-diet-data.html#cb5-20" tabindex="-1"></a>         </span>
+<span id="cb5-21"><a href="cleaning-code---nhanes-diet-data.html#cb5-21" tabindex="-1"></a>         <span class="at">fruit_tot_1 =</span> DR1T_F_TOTAL,</span>
+<span id="cb5-22"><a href="cleaning-code---nhanes-diet-data.html#cb5-22" tabindex="-1"></a>         <span class="at">fruit_tot_2 =</span> DR2T_F_TOTAL,</span>
+<span id="cb5-23"><a href="cleaning-code---nhanes-diet-data.html#cb5-23" tabindex="-1"></a>         </span>
+<span id="cb5-24"><a href="cleaning-code---nhanes-diet-data.html#cb5-24" tabindex="-1"></a>         <span class="at">fruit_juice_1 =</span> DR1T_F_JUICE,</span>
+<span id="cb5-25"><a href="cleaning-code---nhanes-diet-data.html#cb5-25" tabindex="-1"></a>         <span class="at">fruit_juice_2 =</span> DR2T_F_JUICE,</span>
+<span id="cb5-26"><a href="cleaning-code---nhanes-diet-data.html#cb5-26" tabindex="-1"></a>         </span>
+<span id="cb5-27"><a href="cleaning-code---nhanes-diet-data.html#cb5-27" tabindex="-1"></a>         <span class="at">fiber_1 =</span> DR1TFIBE,</span>
+<span id="cb5-28"><a href="cleaning-code---nhanes-diet-data.html#cb5-28" tabindex="-1"></a>         <span class="at">fiber_2 =</span> DR2TFIBE,</span>
+<span id="cb5-29"><a href="cleaning-code---nhanes-diet-data.html#cb5-29" tabindex="-1"></a>         </span>
+<span id="cb5-30"><a href="cleaning-code---nhanes-diet-data.html#cb5-30" tabindex="-1"></a>         <span class="at">dairy_tot_1 =</span> DR1T_D_TOTAL,</span>
+<span id="cb5-31"><a href="cleaning-code---nhanes-diet-data.html#cb5-31" tabindex="-1"></a>         <span class="at">dairy_tot_2 =</span> DR2T_D_TOTAL,</span>
+<span id="cb5-32"><a href="cleaning-code---nhanes-diet-data.html#cb5-32" tabindex="-1"></a>         </span>
+<span id="cb5-33"><a href="cleaning-code---nhanes-diet-data.html#cb5-33" tabindex="-1"></a>         <span class="at">veg_dg_1 =</span> DR1T_V_DRKGR,</span>
+<span id="cb5-34"><a href="cleaning-code---nhanes-diet-data.html#cb5-34" tabindex="-1"></a>         <span class="at">veg_dg_2 =</span> DR2T_V_DRKGR,</span>
+<span id="cb5-35"><a href="cleaning-code---nhanes-diet-data.html#cb5-35" tabindex="-1"></a>         </span>
+<span id="cb5-36"><a href="cleaning-code---nhanes-diet-data.html#cb5-36" tabindex="-1"></a>         <span class="at">veg_oth_1 =</span> DR1T_V_OTHER,</span>
+<span id="cb5-37"><a href="cleaning-code---nhanes-diet-data.html#cb5-37" tabindex="-1"></a>         <span class="at">veg_oth_2 =</span> DR2T_V_OTHER,</span>
+<span id="cb5-38"><a href="cleaning-code---nhanes-diet-data.html#cb5-38" tabindex="-1"></a>         </span>
+<span id="cb5-39"><a href="cleaning-code---nhanes-diet-data.html#cb5-39" tabindex="-1"></a>         <span class="at">veg_ro_1 =</span> DR1T_V_REDOR_TOTAL,</span>
+<span id="cb5-40"><a href="cleaning-code---nhanes-diet-data.html#cb5-40" tabindex="-1"></a>         <span class="at">veg_ro_2 =</span> DR2T_V_REDOR_TOTAL,</span>
+<span id="cb5-41"><a href="cleaning-code---nhanes-diet-data.html#cb5-41" tabindex="-1"></a>         </span>
+<span id="cb5-42"><a href="cleaning-code---nhanes-diet-data.html#cb5-42" tabindex="-1"></a>         <span class="at">veg_sta_1 =</span> DR1T_V_STARCHY_TOTAL,</span>
+<span id="cb5-43"><a href="cleaning-code---nhanes-diet-data.html#cb5-43" tabindex="-1"></a>         <span class="at">veg_sta_2 =</span> DR2T_V_STARCHY_TOTAL,</span>
+<span id="cb5-44"><a href="cleaning-code---nhanes-diet-data.html#cb5-44" tabindex="-1"></a>         </span>
+<span id="cb5-45"><a href="cleaning-code---nhanes-diet-data.html#cb5-45" tabindex="-1"></a>         <span class="co"># Beans, peas, and lentils  (legumes) computed as vegetables (cup eq.) </span></span>
+<span id="cb5-46"><a href="cleaning-code---nhanes-diet-data.html#cb5-46" tabindex="-1"></a>         <span class="at">veg_leg_1 =</span> DR1T_V_LEGUMES,</span>
+<span id="cb5-47"><a href="cleaning-code---nhanes-diet-data.html#cb5-47" tabindex="-1"></a>         <span class="at">veg_leg_2 =</span> DR2T_V_LEGUMES,</span>
+<span id="cb5-48"><a href="cleaning-code---nhanes-diet-data.html#cb5-48" tabindex="-1"></a>         </span>
+<span id="cb5-49"><a href="cleaning-code---nhanes-diet-data.html#cb5-49" tabindex="-1"></a>         <span class="at">oil_1 =</span> DR1T_OILS,</span>
+<span id="cb5-50"><a href="cleaning-code---nhanes-diet-data.html#cb5-50" tabindex="-1"></a>         <span class="at">oil_2 =</span> DR2T_OILS,</span>
+<span id="cb5-51"><a href="cleaning-code---nhanes-diet-data.html#cb5-51" tabindex="-1"></a>         </span>
+<span id="cb5-52"><a href="cleaning-code---nhanes-diet-data.html#cb5-52" tabindex="-1"></a>         <span class="at">pf_egg_1 =</span> DR1T_PF_EGGS,</span>
+<span id="cb5-53"><a href="cleaning-code---nhanes-diet-data.html#cb5-53" tabindex="-1"></a>         <span class="at">pf_egg_2 =</span> DR2T_PF_EGGS,</span>
+<span id="cb5-54"><a href="cleaning-code---nhanes-diet-data.html#cb5-54" tabindex="-1"></a>         </span>
+<span id="cb5-55"><a href="cleaning-code---nhanes-diet-data.html#cb5-55" tabindex="-1"></a>         <span class="at">pf_ns_1 =</span> DR1T_PF_NUTSDS,</span>
+<span id="cb5-56"><a href="cleaning-code---nhanes-diet-data.html#cb5-56" tabindex="-1"></a>         <span class="at">pf_ns_2 =</span> DR2T_PF_NUTSDS,</span>
+<span id="cb5-57"><a href="cleaning-code---nhanes-diet-data.html#cb5-57" tabindex="-1"></a>         </span>
+<span id="cb5-58"><a href="cleaning-code---nhanes-diet-data.html#cb5-58" tabindex="-1"></a>         <span class="co"># soy only</span></span>
+<span id="cb5-59"><a href="cleaning-code---nhanes-diet-data.html#cb5-59" tabindex="-1"></a>         <span class="co"># Soy products, excluding calcium fortified soy milk (soymilk) </span></span>
+<span id="cb5-60"><a href="cleaning-code---nhanes-diet-data.html#cb5-60" tabindex="-1"></a>         <span class="co"># and raw soybeans products (oz. eq.) </span></span>
+<span id="cb5-61"><a href="cleaning-code---nhanes-diet-data.html#cb5-61" tabindex="-1"></a>         <span class="at">pf_soy_1 =</span> DR1T_PF_SOY,</span>
+<span id="cb5-62"><a href="cleaning-code---nhanes-diet-data.html#cb5-62" tabindex="-1"></a>         <span class="at">pf_soy_2 =</span> DR2T_PF_SOY,</span>
+<span id="cb5-63"><a href="cleaning-code---nhanes-diet-data.html#cb5-63" tabindex="-1"></a>         </span>
+<span id="cb5-64"><a href="cleaning-code---nhanes-diet-data.html#cb5-64" tabindex="-1"></a>         <span class="at">pf_poultry_1 =</span> DR1T_PF_POULT,</span>
+<span id="cb5-65"><a href="cleaning-code---nhanes-diet-data.html#cb5-65" tabindex="-1"></a>         <span class="at">pf_poultry_2 =</span> DR2T_PF_POULT,</span>
+<span id="cb5-66"><a href="cleaning-code---nhanes-diet-data.html#cb5-66" tabindex="-1"></a>         </span>
+<span id="cb5-67"><a href="cleaning-code---nhanes-diet-data.html#cb5-67" tabindex="-1"></a>         <span class="at">pf_redm_1 =</span> DR1T_PF_MEAT,</span>
+<span id="cb5-68"><a href="cleaning-code---nhanes-diet-data.html#cb5-68" tabindex="-1"></a>         <span class="at">pf_redm_2 =</span> DR2T_PF_MEAT,</span>
+<span id="cb5-69"><a href="cleaning-code---nhanes-diet-data.html#cb5-69" tabindex="-1"></a>         </span>
+<span id="cb5-70"><a href="cleaning-code---nhanes-diet-data.html#cb5-70" tabindex="-1"></a>         <span class="at">pf_pm_1 =</span> DR1T_PF_CUREDMEAT,</span>
+<span id="cb5-71"><a href="cleaning-code---nhanes-diet-data.html#cb5-71" tabindex="-1"></a>         <span class="at">pf_pm_2 =</span> DR2T_PF_CUREDMEAT,</span>
+<span id="cb5-72"><a href="cleaning-code---nhanes-diet-data.html#cb5-72" tabindex="-1"></a>         </span>
+<span id="cb5-73"><a href="cleaning-code---nhanes-diet-data.html#cb5-73" tabindex="-1"></a>         <span class="at">pf_organ_1 =</span> DR1T_PF_ORGAN,</span>
+<span id="cb5-74"><a href="cleaning-code---nhanes-diet-data.html#cb5-74" tabindex="-1"></a>         <span class="at">pf_organ_2 =</span> DR2T_PF_ORGAN,</span>
+<span id="cb5-75"><a href="cleaning-code---nhanes-diet-data.html#cb5-75" tabindex="-1"></a>         </span>
+<span id="cb5-76"><a href="cleaning-code---nhanes-diet-data.html#cb5-76" tabindex="-1"></a>         <span class="co"># Beans and Peas (legumes) computed as protein foods (oz. eq.) </span></span>
+<span id="cb5-77"><a href="cleaning-code---nhanes-diet-data.html#cb5-77" tabindex="-1"></a>         <span class="at">pf_leg_1 =</span> DR1T_PF_LEGUMES,</span>
+<span id="cb5-78"><a href="cleaning-code---nhanes-diet-data.html#cb5-78" tabindex="-1"></a>         <span class="at">pf_leg_2 =</span> DR2T_PF_LEGUMES) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-79"><a href="cleaning-code---nhanes-diet-data.html#cb5-79" tabindex="-1"></a>  </span>
+<span id="cb5-80"><a href="cleaning-code---nhanes-diet-data.html#cb5-80" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb5-81"><a href="cleaning-code---nhanes-diet-data.html#cb5-81" tabindex="-1"></a>  </span>
+<span id="cb5-82"><a href="cleaning-code---nhanes-diet-data.html#cb5-82" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sea_omega3_fa_1 =</span> <span class="fu">sum</span>(DR1TP226, DR1TP205),</span>
+<span id="cb5-83"><a href="cleaning-code---nhanes-diet-data.html#cb5-83" tabindex="-1"></a>         <span class="at">sea_omega3_fa_2 =</span> <span class="fu">sum</span>(DR2TP226, DR2TP205),</span>
+<span id="cb5-84"><a href="cleaning-code---nhanes-diet-data.html#cb5-84" tabindex="-1"></a>         </span>
+<span id="cb5-85"><a href="cleaning-code---nhanes-diet-data.html#cb5-85" tabindex="-1"></a>         <span class="at">veg_exc_sta_1 =</span> <span class="fu">sum</span>(veg_dg_1, veg_ro_1, veg_oth_1),</span>
+<span id="cb5-86"><a href="cleaning-code---nhanes-diet-data.html#cb5-86" tabindex="-1"></a>         <span class="at">veg_exc_sta_2 =</span> <span class="fu">sum</span>(veg_dg_2, veg_ro_2, veg_oth_2),</span>
+<span id="cb5-87"><a href="cleaning-code---nhanes-diet-data.html#cb5-87" tabindex="-1"></a>         </span>
+<span id="cb5-88"><a href="cleaning-code---nhanes-diet-data.html#cb5-88" tabindex="-1"></a>         <span class="at">fruit_exc_juice_1 =</span> <span class="fu">sum</span>(DR1T_F_CITMLB, DR1T_F_OTHER),</span>
+<span id="cb5-89"><a href="cleaning-code---nhanes-diet-data.html#cb5-89" tabindex="-1"></a>         <span class="at">fruit_exc_juice_2 =</span> <span class="fu">sum</span>(DR2T_F_CITMLB, DR2T_F_OTHER),</span>
+<span id="cb5-90"><a href="cleaning-code---nhanes-diet-data.html#cb5-90" tabindex="-1"></a>         </span>
+<span id="cb5-91"><a href="cleaning-code---nhanes-diet-data.html#cb5-91" tabindex="-1"></a>         <span class="co"># pf_redm_tot_1 = sum(),</span></span>
+<span id="cb5-92"><a href="cleaning-code---nhanes-diet-data.html#cb5-92" tabindex="-1"></a>         <span class="co"># pf_redm_tot_2 = sum(),</span></span>
+<span id="cb5-93"><a href="cleaning-code---nhanes-diet-data.html#cb5-93" tabindex="-1"></a>         <span class="co"># </span></span>
+<span id="cb5-94"><a href="cleaning-code---nhanes-diet-data.html#cb5-94" tabindex="-1"></a>         <span class="co"># pf_poultry_tot_1 = sum(),</span></span>
+<span id="cb5-95"><a href="cleaning-code---nhanes-diet-data.html#cb5-95" tabindex="-1"></a>         <span class="co"># pf_poultry_tot_2 = sum(),</span></span>
+<span id="cb5-96"><a href="cleaning-code---nhanes-diet-data.html#cb5-96" tabindex="-1"></a>         </span>
+<span id="cb5-97"><a href="cleaning-code---nhanes-diet-data.html#cb5-97" tabindex="-1"></a>         <span class="at">pufa_energy_1 =</span> ((DR1TPFAT <span class="sc">*</span> <span class="dv">9</span>) <span class="sc">/</span> kcal_1) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb5-98"><a href="cleaning-code---nhanes-diet-data.html#cb5-98" tabindex="-1"></a>         <span class="at">pufa_energy_2 =</span> ((DR2TPFAT <span class="sc">*</span> <span class="dv">9</span>) <span class="sc">/</span> kcal_2) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb5-99"><a href="cleaning-code---nhanes-diet-data.html#cb5-99" tabindex="-1"></a>         </span>
+<span id="cb5-100"><a href="cleaning-code---nhanes-diet-data.html#cb5-100" tabindex="-1"></a>         <span class="at">sfat_energy_1 =</span> ((sat_fat_1 <span class="sc">*</span> <span class="dv">9</span>) <span class="sc">/</span> kcal_1) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb5-101"><a href="cleaning-code---nhanes-diet-data.html#cb5-101" tabindex="-1"></a>         <span class="at">sfat_energy_2 =</span> ((sat_fat_2 <span class="sc">*</span> <span class="dv">9</span>) <span class="sc">/</span> kcal_2) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb5-102"><a href="cleaning-code---nhanes-diet-data.html#cb5-102" tabindex="-1"></a>         </span>
+<span id="cb5-103"><a href="cleaning-code---nhanes-diet-data.html#cb5-103" tabindex="-1"></a>         <span class="at">pf_seafood_1 =</span> <span class="fu">sum</span>(DR1T_PF_SEAFD_HI, DR1T_PF_SEAFD_LOW),</span>
+<span id="cb5-104"><a href="cleaning-code---nhanes-diet-data.html#cb5-104" tabindex="-1"></a>         <span class="at">pf_seafood_2 =</span> <span class="fu">sum</span>(DR2T_PF_SEAFD_HI, DR2T_PF_SEAFD_LOW),</span>
+<span id="cb5-105"><a href="cleaning-code---nhanes-diet-data.html#cb5-105" tabindex="-1"></a>         </span>
+<span id="cb5-106"><a href="cleaning-code---nhanes-diet-data.html#cb5-106" tabindex="-1"></a>         <span class="co"># includes legumes and soy foods</span></span>
+<span id="cb5-107"><a href="cleaning-code---nhanes-diet-data.html#cb5-107" tabindex="-1"></a>         <span class="at">leg_tot_1 =</span> <span class="fu">sum</span>(pf_leg_1, pf_soy_1),</span>
+<span id="cb5-108"><a href="cleaning-code---nhanes-diet-data.html#cb5-108" tabindex="-1"></a>         <span class="at">leg_tot_2 =</span> <span class="fu">sum</span>(pf_leg_2, pf_soy_2),</span>
+<span id="cb5-109"><a href="cleaning-code---nhanes-diet-data.html#cb5-109" tabindex="-1"></a>         </span>
+<span id="cb5-110"><a href="cleaning-code---nhanes-diet-data.html#cb5-110" tabindex="-1"></a>         <span class="at">pf_animal_1 =</span> <span class="fu">sum</span>(DR1T_PF_MPS_TOTAL, pf_egg_1),</span>
+<span id="cb5-111"><a href="cleaning-code---nhanes-diet-data.html#cb5-111" tabindex="-1"></a>         <span class="at">pf_animal_2 =</span> <span class="fu">sum</span>(DR2T_PF_MPS_TOTAL, pf_egg_2),</span>
+<span id="cb5-112"><a href="cleaning-code---nhanes-diet-data.html#cb5-112" tabindex="-1"></a>         </span>
+<span id="cb5-113"><a href="cleaning-code---nhanes-diet-data.html#cb5-113" tabindex="-1"></a>         <span class="at">pf_plant_1 =</span> <span class="fu">sum</span>(pf_leg_1, pf_ns_1, pf_soy_1),</span>
+<span id="cb5-114"><a href="cleaning-code---nhanes-diet-data.html#cb5-114" tabindex="-1"></a>         <span class="at">pf_plant_2 =</span> <span class="fu">sum</span>(pf_leg_2, pf_ns_2, pf_soy_2)</span>
+<span id="cb5-115"><a href="cleaning-code---nhanes-diet-data.html#cb5-115" tabindex="-1"></a>  )</span>
+<span id="cb5-116"><a href="cleaning-code---nhanes-diet-data.html#cb5-116" tabindex="-1"></a></span>
+<span id="cb5-117"><a href="cleaning-code---nhanes-diet-data.html#cb5-117" tabindex="-1"></a><span class="co"># select the variables we need</span></span>
+<span id="cb5-118"><a href="cleaning-code---nhanes-diet-data.html#cb5-118" tabindex="-1"></a>nhanes_comb4 <span class="ot">&lt;-</span> nhanes_comb3 <span class="sc">%&gt;%</span> <span class="fu">select</span>(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2,</span>
+<span id="cb5-119"><a href="cleaning-code---nhanes-diet-data.html#cb5-119" tabindex="-1"></a>                                        INDFMPIR, RIDAGEYR, SDMVPSU, SDMVSTRA,</span>
+<span id="cb5-120"><a href="cleaning-code---nhanes-diet-data.html#cb5-120" tabindex="-1"></a>                                        WTDRD1, WTDR2D, DR1DRSTZ, DR2DRSTZ, </span>
+<span id="cb5-121"><a href="cleaning-code---nhanes-diet-data.html#cb5-121" tabindex="-1"></a>                                        DRDINT, <span class="fu">ends_with</span>(<span class="st">&quot;_1&quot;</span>), <span class="fu">ends_with</span>(<span class="st">&quot;_2&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-122"><a href="cleaning-code---nhanes-diet-data.html#cb5-122" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="co"># stop using rowwise</span></span></code></pre></div>
+</div>
+<div id="step-5-create-sociodemographic-subgroups" class="section level4 unnumbered hasAnchor">
+<h4>Step 5: Create sociodemographic subgroups<a href="cleaning-code---nhanes-diet-data.html#step-5-create-sociodemographic-subgroups" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="cleaning-code---nhanes-diet-data.html#cb6-1" tabindex="-1"></a>nhanes_comb5 <span class="ot">&lt;-</span> nhanes_comb4 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
+<span id="cb6-2"><a href="cleaning-code---nhanes-diet-data.html#cb6-2" tabindex="-1"></a>  </span>
+<span id="cb6-3"><a href="cleaning-code---nhanes-diet-data.html#cb6-3" tabindex="-1"></a>  <span class="at">female =</span> <span class="fu">ifelse</span>(RIAGENDR <span class="sc">==</span> <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb6-4"><a href="cleaning-code---nhanes-diet-data.html#cb6-4" tabindex="-1"></a>  </span>
+<span id="cb6-5"><a href="cleaning-code---nhanes-diet-data.html#cb6-5" tabindex="-1"></a>  <span class="at">sex =</span> <span class="fu">ifelse</span>(female <span class="sc">==</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb6-6"><a href="cleaning-code---nhanes-diet-data.html#cb6-6" tabindex="-1"></a>  </span>
+<span id="cb6-7"><a href="cleaning-code---nhanes-diet-data.html#cb6-7" tabindex="-1"></a>  <span class="at">race =</span> <span class="fu">recode</span>(RIDRETH1,</span>
+<span id="cb6-8"><a href="cleaning-code---nhanes-diet-data.html#cb6-8" tabindex="-1"></a>                <span class="st">`</span><span class="at">3</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span>,</span>
+<span id="cb6-9"><a href="cleaning-code---nhanes-diet-data.html#cb6-9" tabindex="-1"></a>                <span class="st">`</span><span class="at">4</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">2</span>,</span>
+<span id="cb6-10"><a href="cleaning-code---nhanes-diet-data.html#cb6-10" tabindex="-1"></a>                <span class="st">`</span><span class="at">1</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">3</span>,</span>
+<span id="cb6-11"><a href="cleaning-code---nhanes-diet-data.html#cb6-11" tabindex="-1"></a>                <span class="st">`</span><span class="at">2</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">3</span>,</span>
+<span id="cb6-12"><a href="cleaning-code---nhanes-diet-data.html#cb6-12" tabindex="-1"></a>                <span class="st">`</span><span class="at">5</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">4</span>),</span>
+<span id="cb6-13"><a href="cleaning-code---nhanes-diet-data.html#cb6-13" tabindex="-1"></a>  </span>
+<span id="cb6-14"><a href="cleaning-code---nhanes-diet-data.html#cb6-14" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">case_when</span>(RIDAGEYR <span class="sc">&gt;=</span> <span class="dv">20</span> <span class="sc">&amp;</span> RIDAGEYR <span class="sc">&lt;</span> <span class="dv">35</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb6-15"><a href="cleaning-code---nhanes-diet-data.html#cb6-15" tabindex="-1"></a>                  RIDAGEYR <span class="sc">&gt;=</span> <span class="dv">35</span> <span class="sc">&amp;</span> RIDAGEYR <span class="sc">&lt;</span> <span class="dv">45</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb6-16"><a href="cleaning-code---nhanes-diet-data.html#cb6-16" tabindex="-1"></a>                  RIDAGEYR <span class="sc">&gt;=</span> <span class="dv">45</span> <span class="sc">&amp;</span> RIDAGEYR <span class="sc">&lt;</span> <span class="dv">55</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb6-17"><a href="cleaning-code---nhanes-diet-data.html#cb6-17" tabindex="-1"></a>                  RIDAGEYR <span class="sc">&gt;=</span> <span class="dv">55</span> <span class="sc">&amp;</span> RIDAGEYR <span class="sc">&lt;</span> <span class="dv">65</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
+<span id="cb6-18"><a href="cleaning-code---nhanes-diet-data.html#cb6-18" tabindex="-1"></a>                  RIDAGEYR <span class="sc">&gt;=</span> <span class="dv">65</span> <span class="sc">&amp;</span> RIDAGEYR <span class="sc">&lt;</span> <span class="dv">75</span> <span class="sc">~</span> <span class="dv">5</span>,</span>
+<span id="cb6-19"><a href="cleaning-code---nhanes-diet-data.html#cb6-19" tabindex="-1"></a>                  RIDAGEYR <span class="sc">&gt;=</span> <span class="dv">75</span> <span class="sc">~</span> <span class="dv">6</span>),</span>
+<span id="cb6-20"><a href="cleaning-code---nhanes-diet-data.html#cb6-20" tabindex="-1"></a>  </span>
+<span id="cb6-21"><a href="cleaning-code---nhanes-diet-data.html#cb6-21" tabindex="-1"></a>  <span class="co"># create new weight variable</span></span>
+<span id="cb6-22"><a href="cleaning-code---nhanes-diet-data.html#cb6-22" tabindex="-1"></a>  <span class="at">wtnew =</span> WTDRD1<span class="sc">/</span><span class="dv">2</span>)</span></code></pre></div>
+</div>
+<div id="step-6-create-averages-of-dietary-factors-for-day-1-and-day-2" class="section level4 unnumbered hasAnchor">
+<h4>Step 6: Create averages of dietary factors for Day 1 and Day 2<a href="cleaning-code---nhanes-diet-data.html#step-6-create-averages-of-dietary-factors-for-day-1-and-day-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="cleaning-code---nhanes-diet-data.html#cb7-1" tabindex="-1"></a>nhanes_comb6 <span class="ot">&lt;-</span> nhanes_comb5 <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="cleaning-code---nhanes-diet-data.html#cb7-2" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="cleaning-code---nhanes-diet-data.html#cb7-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">kcal =</span> <span class="fu">mean</span>(<span class="fu">c</span>(kcal_1, kcal_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-4"><a href="cleaning-code---nhanes-diet-data.html#cb7-4" tabindex="-1"></a>         <span class="at">sat_fat =</span> <span class="fu">mean</span>(<span class="fu">c</span>(sat_fat_1, sat_fat_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-5"><a href="cleaning-code---nhanes-diet-data.html#cb7-5" tabindex="-1"></a>         <span class="at">sodium =</span> <span class="fu">mean</span>(<span class="fu">c</span>(sodium_1, sodium_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-6"><a href="cleaning-code---nhanes-diet-data.html#cb7-6" tabindex="-1"></a>         <span class="at">gr_refined =</span> <span class="fu">mean</span>(<span class="fu">c</span>(gr_refined_1, gr_refined_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-7"><a href="cleaning-code---nhanes-diet-data.html#cb7-7" tabindex="-1"></a>         <span class="at">gr_whole =</span> <span class="fu">mean</span>(<span class="fu">c</span>(gr_whole_1, gr_whole_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-8"><a href="cleaning-code---nhanes-diet-data.html#cb7-8" tabindex="-1"></a>         <span class="at">added_sugar =</span> <span class="fu">mean</span>(<span class="fu">c</span>(added_sugar_1, added_sugar_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-9"><a href="cleaning-code---nhanes-diet-data.html#cb7-9" tabindex="-1"></a>         <span class="at">fruit_tot =</span> <span class="fu">mean</span>(<span class="fu">c</span>(fruit_tot_1, fruit_tot_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-10"><a href="cleaning-code---nhanes-diet-data.html#cb7-10" tabindex="-1"></a>         <span class="at">fruit_exc_juice =</span> <span class="fu">mean</span>(<span class="fu">c</span>(fruit_exc_juice_1, fruit_exc_juice_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-11"><a href="cleaning-code---nhanes-diet-data.html#cb7-11" tabindex="-1"></a>         <span class="at">fruit_juice =</span> <span class="fu">mean</span>(<span class="fu">c</span>(fruit_juice_1, fruit_juice_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-12"><a href="cleaning-code---nhanes-diet-data.html#cb7-12" tabindex="-1"></a>         <span class="at">fiber =</span> <span class="fu">mean</span>(<span class="fu">c</span>(fiber_1, fiber_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-13"><a href="cleaning-code---nhanes-diet-data.html#cb7-13" tabindex="-1"></a>         <span class="at">dairy_tot =</span> <span class="fu">mean</span>(<span class="fu">c</span>(dairy_tot_1, dairy_tot_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-14"><a href="cleaning-code---nhanes-diet-data.html#cb7-14" tabindex="-1"></a>         <span class="at">dairy_cow =</span> <span class="fu">mean</span>(<span class="fu">c</span>(dairy_cow_1, dairy_cow_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-15"><a href="cleaning-code---nhanes-diet-data.html#cb7-15" tabindex="-1"></a>         <span class="at">dairy_soy =</span> <span class="fu">mean</span>(<span class="fu">c</span>(dairy_soy_1, dairy_soy_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-16"><a href="cleaning-code---nhanes-diet-data.html#cb7-16" tabindex="-1"></a>         <span class="at">veg_dg =</span> <span class="fu">mean</span>(<span class="fu">c</span>(veg_dg_1, veg_dg_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-17"><a href="cleaning-code---nhanes-diet-data.html#cb7-17" tabindex="-1"></a>         <span class="at">veg_oth =</span> <span class="fu">mean</span>(<span class="fu">c</span>(veg_oth_1, veg_oth_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-18"><a href="cleaning-code---nhanes-diet-data.html#cb7-18" tabindex="-1"></a>         <span class="at">veg_ro =</span> <span class="fu">mean</span>(<span class="fu">c</span>(veg_ro_1, veg_ro_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-19"><a href="cleaning-code---nhanes-diet-data.html#cb7-19" tabindex="-1"></a>         <span class="at">veg_sta =</span> <span class="fu">mean</span>(<span class="fu">c</span>(veg_sta_1, veg_sta_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-20"><a href="cleaning-code---nhanes-diet-data.html#cb7-20" tabindex="-1"></a>         <span class="at">veg_leg =</span> <span class="fu">mean</span>(<span class="fu">c</span>(veg_leg_1, veg_leg_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-21"><a href="cleaning-code---nhanes-diet-data.html#cb7-21" tabindex="-1"></a>         <span class="at">veg_exc_sta =</span> <span class="fu">mean</span>(<span class="fu">c</span>(veg_exc_sta_1, veg_exc_sta_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-22"><a href="cleaning-code---nhanes-diet-data.html#cb7-22" tabindex="-1"></a>         <span class="at">oil =</span> <span class="fu">mean</span>(<span class="fu">c</span>(oil_1, oil_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-23"><a href="cleaning-code---nhanes-diet-data.html#cb7-23" tabindex="-1"></a>         <span class="at">pf_egg =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_egg_1, pf_egg_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-24"><a href="cleaning-code---nhanes-diet-data.html#cb7-24" tabindex="-1"></a>         <span class="at">pf_ns =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_ns_1, pf_ns_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-25"><a href="cleaning-code---nhanes-diet-data.html#cb7-25" tabindex="-1"></a>         <span class="at">pf_soy =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_soy_1, pf_soy_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-26"><a href="cleaning-code---nhanes-diet-data.html#cb7-26" tabindex="-1"></a>         <span class="at">pf_poultry =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_poultry_1, pf_poultry_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-27"><a href="cleaning-code---nhanes-diet-data.html#cb7-27" tabindex="-1"></a>         <span class="at">pf_poultry_tot =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_poultry_tot_1, pf_poultry_tot_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-28"><a href="cleaning-code---nhanes-diet-data.html#cb7-28" tabindex="-1"></a>         <span class="at">pf_pm =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_pm_1, pf_pm_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-29"><a href="cleaning-code---nhanes-diet-data.html#cb7-29" tabindex="-1"></a>         <span class="at">pf_redm =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_redm_1, pf_redm_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-30"><a href="cleaning-code---nhanes-diet-data.html#cb7-30" tabindex="-1"></a>         <span class="at">pf_redm_tot =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_redm_tot_1, pf_redm_tot_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-31"><a href="cleaning-code---nhanes-diet-data.html#cb7-31" tabindex="-1"></a>         <span class="at">pf_organ =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_organ_1, pf_organ_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-32"><a href="cleaning-code---nhanes-diet-data.html#cb7-32" tabindex="-1"></a>         <span class="at">pf_leg =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_leg_1, pf_leg_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-33"><a href="cleaning-code---nhanes-diet-data.html#cb7-33" tabindex="-1"></a>         <span class="at">sea_omega3_fa =</span> <span class="fu">mean</span>(<span class="fu">c</span>(sea_omega3_fa_1, sea_omega3_fa_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-34"><a href="cleaning-code---nhanes-diet-data.html#cb7-34" tabindex="-1"></a>         <span class="at">pufa_energy =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pufa_energy_1, pufa_energy_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-35"><a href="cleaning-code---nhanes-diet-data.html#cb7-35" tabindex="-1"></a>         <span class="at">sfat_energy =</span> <span class="fu">mean</span>(<span class="fu">c</span>(sfat_energy_1, sfat_energy_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-36"><a href="cleaning-code---nhanes-diet-data.html#cb7-36" tabindex="-1"></a>         <span class="at">pf_seafood =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_seafood_1, pf_seafood_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-37"><a href="cleaning-code---nhanes-diet-data.html#cb7-37" tabindex="-1"></a>         <span class="at">leg_tot =</span> <span class="fu">mean</span>(<span class="fu">c</span>(leg_tot_1, leg_tot_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-38"><a href="cleaning-code---nhanes-diet-data.html#cb7-38" tabindex="-1"></a>         <span class="at">pf_animal =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_animal_1, pf_animal_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-39"><a href="cleaning-code---nhanes-diet-data.html#cb7-39" tabindex="-1"></a>         <span class="at">pf_plant =</span> <span class="fu">mean</span>(<span class="fu">c</span>(pf_plant_1, pf_plant_2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb7-40"><a href="cleaning-code---nhanes-diet-data.html#cb7-40" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="cleaning-code---nhanes-diet-data.html#cb7-41" tabindex="-1"></a><span class="co"># get rid of NaN</span></span>
+<span id="cb7-42"><a href="cleaning-code---nhanes-diet-data.html#cb7-42" tabindex="-1"></a>nhanes_comb6[nhanes_comb6 <span class="sc">==</span> <span class="st">&quot;NaN&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb7-43"><a href="cleaning-code---nhanes-diet-data.html#cb7-43" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="cleaning-code---nhanes-diet-data.html#cb7-44" tabindex="-1"></a><span class="co"># ungroup</span></span>
+<span id="cb7-45"><a href="cleaning-code---nhanes-diet-data.html#cb7-45" tabindex="-1"></a>nhanes_comb7 <span class="ot">&lt;-</span> nhanes_comb6 <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>()</span>
+<span id="cb7-46"><a href="cleaning-code---nhanes-diet-data.html#cb7-46" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="cleaning-code---nhanes-diet-data.html#cb7-47" tabindex="-1"></a><span class="co"># Merge with subgroup file</span></span>
+<span id="cb7-48"><a href="cleaning-code---nhanes-diet-data.html#cb7-48" tabindex="-1"></a>subgroups <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/OTHER/labels/DATA/population_subgroups_48_060923_FINAL.csv&quot;</span>)</span>
+<span id="cb7-49"><a href="cleaning-code---nhanes-diet-data.html#cb7-49" tabindex="-1"></a></span>
+<span id="cb7-50"><a href="cleaning-code---nhanes-diet-data.html#cb7-50" tabindex="-1"></a>nhanes_comb8 <span class="ot">&lt;-</span></span>
+<span id="cb7-51"><a href="cleaning-code---nhanes-diet-data.html#cb7-51" tabindex="-1"></a>  nhanes_comb7 <span class="sc">%&gt;%</span> </span>
+<span id="cb7-52"><a href="cleaning-code---nhanes-diet-data.html#cb7-52" tabindex="-1"></a>  <span class="fu">left_join</span>(subgroups, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;age&quot;</span> <span class="ot">=</span> <span class="st">&quot;Age&quot;</span>, </span>
+<span id="cb7-53"><a href="cleaning-code---nhanes-diet-data.html#cb7-53" tabindex="-1"></a>                              <span class="st">&quot;sex&quot;</span> <span class="ot">=</span> <span class="st">&quot;Sex&quot;</span>, </span>
+<span id="cb7-54"><a href="cleaning-code---nhanes-diet-data.html#cb7-54" tabindex="-1"></a>                              <span class="st">&quot;race&quot;</span> <span class="ot">=</span> <span class="st">&quot;Race&quot;</span>))</span>
+<span id="cb7-55"><a href="cleaning-code---nhanes-diet-data.html#cb7-55" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="cleaning-code---nhanes-diet-data.html#cb7-56" tabindex="-1"></a><span class="co"># create final dataset</span></span>
+<span id="cb7-57"><a href="cleaning-code---nhanes-diet-data.html#cb7-57" tabindex="-1"></a>nhanes_final <span class="ot">&lt;-</span> nhanes_comb8</span>
+<span id="cb7-58"><a href="cleaning-code---nhanes-diet-data.html#cb7-58" tabindex="-1"></a></span>
+<span id="cb7-59"><a href="cleaning-code---nhanes-diet-data.html#cb7-59" tabindex="-1"></a><span class="co"># look at meat variables</span></span>
+<span id="cb7-60"><a href="cleaning-code---nhanes-diet-data.html#cb7-60" tabindex="-1"></a>nhanes_final <span class="sc">%&gt;%</span></span>
+<span id="cb7-61"><a href="cleaning-code---nhanes-diet-data.html#cb7-61" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, <span class="fu">starts_with</span>(<span class="fu">c</span>(<span class="st">&quot;pf_redm&quot;</span>, <span class="st">&quot;pf_poultry&quot;</span>, <span class="st">&quot;pf_pm&quot;</span>, <span class="st">&quot;pf_organ&quot;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb7-62"><a href="cleaning-code---nhanes-diet-data.html#cb7-62" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sumtot =</span> (pf_redm <span class="sc">+</span> pf_poultry <span class="sc">+</span> pf_pm <span class="sc">+</span> pf_organ <span class="sc">==</span> pf_redm_tot <span class="sc">+</span> pf_poultry_tot),</span>
+<span id="cb7-63"><a href="cleaning-code---nhanes-diet-data.html#cb7-63" tabindex="-1"></a>         <span class="at">sum1 =</span> (pf_redm_1 <span class="sc">+</span> pf_poultry_1 <span class="sc">+</span> pf_pm_1 <span class="sc">+</span> pf_organ_1 <span class="sc">==</span> pf_redm_tot_1 <span class="sc">+</span> pf_poultry_tot_1),</span>
+<span id="cb7-64"><a href="cleaning-code---nhanes-diet-data.html#cb7-64" tabindex="-1"></a>         <span class="at">sum2 =</span> (pf_redm_2 <span class="sc">+</span> pf_poultry_2 <span class="sc">+</span> pf_pm_2 <span class="sc">+</span> pf_organ_2 <span class="sc">==</span> pf_redm_tot_2 <span class="sc">+</span> pf_poultry_tot_2))</span>
+<span id="cb7-65"><a href="cleaning-code---nhanes-diet-data.html#cb7-65" tabindex="-1"></a></span>
+<span id="cb7-66"><a href="cleaning-code---nhanes-diet-data.html#cb7-66" tabindex="-1"></a>nhanes_final <span class="sc">%&gt;%</span></span>
+<span id="cb7-67"><a href="cleaning-code---nhanes-diet-data.html#cb7-67" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, <span class="fu">starts_with</span>(<span class="fu">c</span>(<span class="st">&quot;pf_redm&quot;</span>, <span class="st">&quot;pf_poultry&quot;</span>, <span class="st">&quot;pf_pm&quot;</span>, <span class="st">&quot;pf_organ&quot;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb7-68"><a href="cleaning-code---nhanes-diet-data.html#cb7-68" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sum1 =</span> (pf_redm <span class="sc">+</span> pf_poultry <span class="sc">+</span> pf_pm <span class="sc">+</span> pf_organ <span class="sc">==</span> pf_redm_tot <span class="sc">+</span> pf_poultry_tot)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-69"><a href="cleaning-code---nhanes-diet-data.html#cb7-69" tabindex="-1"></a>  <span class="fu">filter</span>(sum1 <span class="sc">==</span> <span class="st">&quot;FALSE&quot;</span>)</span>
+<span id="cb7-70"><a href="cleaning-code---nhanes-diet-data.html#cb7-70" tabindex="-1"></a></span>
+<span id="cb7-71"><a href="cleaning-code---nhanes-diet-data.html#cb7-71" tabindex="-1"></a><span class="co"># look at day 1</span></span>
+<span id="cb7-72"><a href="cleaning-code---nhanes-diet-data.html#cb7-72" tabindex="-1"></a>nhanes_final <span class="sc">%&gt;%</span></span>
+<span id="cb7-73"><a href="cleaning-code---nhanes-diet-data.html#cb7-73" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-74"><a href="cleaning-code---nhanes-diet-data.html#cb7-74" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, pf_redm_1, pf_poultry_1, pf_pm_1, pf_organ_1, pf_redm_tot_1, pf_poultry_tot_1) <span class="sc">%&gt;%</span></span>
+<span id="cb7-75"><a href="cleaning-code---nhanes-diet-data.html#cb7-75" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sum1 =</span> <span class="fu">round</span>(<span class="fu">sum</span>(pf_redm_1, pf_poultry_1, pf_pm_1, pf_organ_1), <span class="at">digits =</span> <span class="dv">3</span>),</span>
+<span id="cb7-76"><a href="cleaning-code---nhanes-diet-data.html#cb7-76" tabindex="-1"></a>         <span class="at">sum2 =</span> <span class="fu">round</span>(<span class="fu">sum</span>(pf_redm_tot_1, pf_poultry_tot_1), <span class="at">digits =</span> <span class="dv">3</span>),</span>
+<span id="cb7-77"><a href="cleaning-code---nhanes-diet-data.html#cb7-77" tabindex="-1"></a>         <span class="at">my_test =</span> (sum1 <span class="sc">==</span> sum2)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-78"><a href="cleaning-code---nhanes-diet-data.html#cb7-78" tabindex="-1"></a>  <span class="fu">filter</span>(my_test <span class="sc">==</span> <span class="st">&quot;FALSE&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-79"><a href="cleaning-code---nhanes-diet-data.html#cb7-79" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">my_subtract =</span> sum2 <span class="sc">-</span> sum1) <span class="sc">%&gt;%</span></span>
+<span id="cb7-80"><a href="cleaning-code---nhanes-diet-data.html#cb7-80" tabindex="-1"></a>  <span class="fu">filter</span>(my_subtract <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.05</span> <span class="sc">|</span> my_subtract <span class="sc">&gt;</span> <span class="fl">0.05</span>) <span class="co"># not bad</span></span>
+<span id="cb7-81"><a href="cleaning-code---nhanes-diet-data.html#cb7-81" tabindex="-1"></a></span>
+<span id="cb7-82"><a href="cleaning-code---nhanes-diet-data.html#cb7-82" tabindex="-1"></a><span class="co"># look at day2</span></span>
+<span id="cb7-83"><a href="cleaning-code---nhanes-diet-data.html#cb7-83" tabindex="-1"></a>nhanes_final <span class="sc">%&gt;%</span></span>
+<span id="cb7-84"><a href="cleaning-code---nhanes-diet-data.html#cb7-84" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-85"><a href="cleaning-code---nhanes-diet-data.html#cb7-85" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, pf_redm_2, pf_poultry_2, pf_pm_2, pf_organ_2, pf_redm_tot_2, pf_poultry_tot_2) <span class="sc">%&gt;%</span></span>
+<span id="cb7-86"><a href="cleaning-code---nhanes-diet-data.html#cb7-86" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sum1 =</span> <span class="fu">round</span>(<span class="fu">sum</span>(pf_redm_2, pf_poultry_2, pf_pm_2, pf_organ_2), <span class="at">digits =</span> <span class="dv">3</span>),</span>
+<span id="cb7-87"><a href="cleaning-code---nhanes-diet-data.html#cb7-87" tabindex="-1"></a>         <span class="at">sum2 =</span> <span class="fu">round</span>(<span class="fu">sum</span>(pf_redm_tot_2, pf_poultry_tot_2), <span class="at">digits =</span> <span class="dv">3</span>),</span>
+<span id="cb7-88"><a href="cleaning-code---nhanes-diet-data.html#cb7-88" tabindex="-1"></a>         <span class="at">my_test =</span> (sum1 <span class="sc">==</span> sum2)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-89"><a href="cleaning-code---nhanes-diet-data.html#cb7-89" tabindex="-1"></a>  <span class="fu">filter</span>(my_test <span class="sc">==</span> <span class="st">&quot;FALSE&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-90"><a href="cleaning-code---nhanes-diet-data.html#cb7-90" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">my_subtract =</span> sum2 <span class="sc">-</span> sum1) <span class="sc">%&gt;%</span></span>
+<span id="cb7-91"><a href="cleaning-code---nhanes-diet-data.html#cb7-91" tabindex="-1"></a>  <span class="fu">filter</span>(my_subtract <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.05</span> <span class="sc">|</span> my_subtract <span class="sc">&gt;</span> <span class="fl">0.05</span>) <span class="co"># not bad</span></span></code></pre></div>
+</div>
+<div id="step-7-examine-cleaned-nhanes-data" class="section level4 unnumbered hasAnchor">
+<h4>Step 7: Examine cleaned NHANES data<a href="cleaning-code---nhanes-diet-data.html#step-7-examine-cleaned-nhanes-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="cleaning-code---nhanes-diet-data.html#cb8-1" tabindex="-1"></a><span class="co"># check missing</span></span>
+<span id="cb8-2"><a href="cleaning-code---nhanes-diet-data.html#cb8-2" tabindex="-1"></a><span class="fu">summary</span>(nhanes_final)</span>
+<span id="cb8-3"><a href="cleaning-code---nhanes-diet-data.html#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="cleaning-code---nhanes-diet-data.html#cb8-4" tabindex="-1"></a><span class="co"># check for outliers</span></span>
+<span id="cb8-5"><a href="cleaning-code---nhanes-diet-data.html#cb8-5" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="cleaning-code---nhanes-diet-data.html#cb8-6" tabindex="-1"></a><span class="co"># kcal &lt; 500</span></span>
+<span id="cb8-7"><a href="cleaning-code---nhanes-diet-data.html#cb8-7" tabindex="-1"></a>nhanes_final <span class="sc">%&gt;%</span> <span class="fu">filter</span>(kcal_1 <span class="sc">&lt;</span> <span class="dv">500</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()  <span class="co">#233</span></span>
+<span id="cb8-8"><a href="cleaning-code---nhanes-diet-data.html#cb8-8" tabindex="-1"></a>nhanes_final <span class="sc">%&gt;%</span> <span class="fu">filter</span>(kcal_2 <span class="sc">&lt;</span> <span class="dv">500</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()  <span class="co">#301</span></span>
+<span id="cb8-9"><a href="cleaning-code---nhanes-diet-data.html#cb8-9" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="cleaning-code---nhanes-diet-data.html#cb8-10" tabindex="-1"></a><span class="co"># kcal &gt; 3500</span></span>
+<span id="cb8-11"><a href="cleaning-code---nhanes-diet-data.html#cb8-11" tabindex="-1"></a>nhanes_final <span class="sc">%&gt;%</span> <span class="fu">filter</span>(kcal_1 <span class="sc">&gt;</span> <span class="dv">3500</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()  <span class="co">#1028</span></span>
+<span id="cb8-12"><a href="cleaning-code---nhanes-diet-data.html#cb8-12" tabindex="-1"></a>nhanes_final <span class="sc">%&gt;%</span> <span class="fu">filter</span>(kcal_2 <span class="sc">&gt;</span> <span class="dv">3500</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()  <span class="co">#588</span></span>
+<span id="cb8-13"><a href="cleaning-code---nhanes-diet-data.html#cb8-13" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="cleaning-code---nhanes-diet-data.html#cb8-14" tabindex="-1"></a><span class="co"># do not remove because I will filter out </span></span>
+<span id="cb8-15"><a href="cleaning-code---nhanes-diet-data.html#cb8-15" tabindex="-1"></a><span class="co"># dietary recalls that are not valid later</span></span>
+<span id="cb8-16"><a href="cleaning-code---nhanes-diet-data.html#cb8-16" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="cleaning-code---nhanes-diet-data.html#cb8-17" tabindex="-1"></a><span class="co"># diet recall status</span></span>
+<span id="cb8-18"><a href="cleaning-code---nhanes-diet-data.html#cb8-18" tabindex="-1"></a><span class="fu">table</span>(nhanes_final<span class="sc">$</span>DR1DRSTZ, <span class="at">useNA =</span> <span class="st">&quot;always&quot;</span>) </span>
+<span id="cb8-19"><a href="cleaning-code---nhanes-diet-data.html#cb8-19" tabindex="-1"></a><span class="fu">table</span>(nhanes_final<span class="sc">$</span>DR2DRSTZ, <span class="at">useNA =</span> <span class="st">&quot;always&quot;</span>) </span>
+<span id="cb8-20"><a href="cleaning-code---nhanes-diet-data.html#cb8-20" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="cleaning-code---nhanes-diet-data.html#cb8-21" tabindex="-1"></a><span class="co"># first, create inAnalysis variable</span></span>
+<span id="cb8-22"><a href="cleaning-code---nhanes-diet-data.html#cb8-22" tabindex="-1"></a>nhanes_final1 <span class="ot">&lt;-</span> nhanes_final <span class="sc">%&gt;%</span> </span>
+<span id="cb8-23"><a href="cleaning-code---nhanes-diet-data.html#cb8-23" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb8-24"><a href="cleaning-code---nhanes-diet-data.html#cb8-24" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-25"><a href="cleaning-code---nhanes-diet-data.html#cb8-25" tabindex="-1"></a>    <span class="co"># Define sub-population of interest: </span></span>
+<span id="cb8-26"><a href="cleaning-code---nhanes-diet-data.html#cb8-26" tabindex="-1"></a>    <span class="co"># Adults aged 20+ with 1 or 2 days of reliable dietary recalls</span></span>
+<span id="cb8-27"><a href="cleaning-code---nhanes-diet-data.html#cb8-27" tabindex="-1"></a>    </span>
+<span id="cb8-28"><a href="cleaning-code---nhanes-diet-data.html#cb8-28" tabindex="-1"></a>    <span class="at">reliable_yes =</span> <span class="fu">ifelse</span>((DRDINT <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> DR1DRSTZ <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">|</span> (DRDINT <span class="sc">==</span> <span class="dv">2</span> <span class="sc">&amp;</span> DR1DRSTZ <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> DR2DRSTZ <span class="sc">==</span> <span class="dv">1</span>), <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb8-29"><a href="cleaning-code---nhanes-diet-data.html#cb8-29" tabindex="-1"></a>    </span>
+<span id="cb8-30"><a href="cleaning-code---nhanes-diet-data.html#cb8-30" tabindex="-1"></a>    <span class="at">inAnalysis =</span> (<span class="sc">!</span>(<span class="fu">is.na</span>(subgroup)) <span class="sc">&amp;</span> reliable_yes <span class="sc">==</span> <span class="dv">1</span>), <span class="co"># if subgroup ISN&#39;T missing and reliable data</span></span>
+<span id="cb8-31"><a href="cleaning-code---nhanes-diet-data.html#cb8-31" tabindex="-1"></a>    </span>
+<span id="cb8-32"><a href="cleaning-code---nhanes-diet-data.html#cb8-32" tabindex="-1"></a>    <span class="co"># Change NAs to 0s, otherwise svydesign function below won&#39;t run</span></span>
+<span id="cb8-33"><a href="cleaning-code---nhanes-diet-data.html#cb8-33" tabindex="-1"></a>    <span class="at">wtnew =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(wtnew), <span class="dv">0</span>, wtnew),</span>
+<span id="cb8-34"><a href="cleaning-code---nhanes-diet-data.html#cb8-34" tabindex="-1"></a>    <span class="at">SDMVPSU =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(SDMVPSU), <span class="dv">0</span>, SDMVPSU),</span>
+<span id="cb8-35"><a href="cleaning-code---nhanes-diet-data.html#cb8-35" tabindex="-1"></a>    <span class="at">SDMVSTRA =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(SDMVSTRA), <span class="dv">0</span>, SDMVSTRA)</span>
+<span id="cb8-36"><a href="cleaning-code---nhanes-diet-data.html#cb8-36" tabindex="-1"></a>  )</span>
+<span id="cb8-37"><a href="cleaning-code---nhanes-diet-data.html#cb8-37" tabindex="-1"></a></span>
+<span id="cb8-38"><a href="cleaning-code---nhanes-diet-data.html#cb8-38" tabindex="-1"></a><span class="co"># check new survey weight</span></span>
+<span id="cb8-39"><a href="cleaning-code---nhanes-diet-data.html#cb8-39" tabindex="-1"></a>nhanes_final1 <span class="sc">%&gt;%</span> <span class="fu">select</span>(SEQN, wtnew, SDMVPSU, SDMVSTRA, inAnalysis) <span class="co"># looks good</span></span>
+<span id="cb8-40"><a href="cleaning-code---nhanes-diet-data.html#cb8-40" tabindex="-1"></a></span>
+<span id="cb8-41"><a href="cleaning-code---nhanes-diet-data.html#cb8-41" tabindex="-1"></a><span class="co"># export</span></span>
+<span id="cb8-42"><a href="cleaning-code---nhanes-diet-data.html#cb8-42" tabindex="-1"></a><span class="fu">write_rds</span>(nhanes_final1,</span>
+<span id="cb8-43"><a href="cleaning-code---nhanes-diet-data.html#cb8-43" tabindex="-1"></a>          <span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_clean.rds&quot;</span>)</span></code></pre></div>
+<p>Finally, the cleaned dataset is exported to use later.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="summary-of-data-inputs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cleaning-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-cleaning-code-nhanes.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

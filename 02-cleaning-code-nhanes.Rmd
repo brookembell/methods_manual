@@ -83,6 +83,7 @@ write_rds(meat_day2_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day
 
 ```
 
+
 ## Clean Raw NHANES Data
 
 Now that I have dealt with processed and organ meat, I can start to clean the raw NHANES data. We use data from the 2015-2016 and 2017-2018 cycles.

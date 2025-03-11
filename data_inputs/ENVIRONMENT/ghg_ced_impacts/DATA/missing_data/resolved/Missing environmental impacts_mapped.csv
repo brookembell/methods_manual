@@ -1,0 +1,7 @@
+foodcode,description,fcidcode,fcid_desc,proxy_desc,proxy_fcidcode,proxy_notes
+71962020,"Dasheen, fried",NA,NA,"Dasheen, corm",103139000,
+72133200,"Sweet potato leaves, squash leaves, pumpkin leaves, chrysanthemum leaves, bean leaves, or swamp cabbage, cooked, fat not added in cooking",401104000,"Chrysanthemum, garland","Herbs, other",1901184000,
+63109700,"Starfruit, raw",2302358000,Starfruit,"Lemon, peel",1002201000,"Starfruit is not a citrus, but it mostly grown in US; Proxy FCID is Lemon, peel because it has conversion factor =1, which is most applicable to starfruit"
+75215990,"Corn, cooked, from restaurant",NA,NA,"Corn, sweet",1500127000,
+71962020,"Dasheen, cooked",NA,NA,"Dasheen, corm",103139000,
+72133201,"Sweet potato, squash, pumpkin, chrysanthemum, or bean leaves, cooked",401104000,"Chrysanthemum, garland","Herbs, other",1901184000,

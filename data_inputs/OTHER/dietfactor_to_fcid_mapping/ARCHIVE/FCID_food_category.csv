@@ -1,0 +1,485 @@
+﻿Food category,Meat category,FCID ingredient description,FCID ingredient code
+Dairy,None,"Milk, nonfat solids",3600223000
+Dairy,None,"Milk, nonfat solids-baby food/infant formula",3600223001
+Dairy,None,"Milk, water",3600224000
+Dairy,None,"Milk, water-babyfood/infant formula",3600224001
+Dairy,None,"Milk, sugar (lactose)-baby food/infant formula",3600225001
+Dairy,None,"Milk, fat",3600222000
+Dairy,None,"Milk, fat-baby food/infant formula",3600222001
+Beef,Red meat,"Beef, meat",3100044000
+Beef,Red meat,"Beef, meat-babyfood",3100044001
+Beef,Red meat,"Beef, meat, dried",3100045000
+Beef,Red meat,"Beef, meat byproducts",3100046000
+Beef,Red meat,"Beef, meat byproducts-babyfood",3100046001
+Beef,Red meat,"Beef, kidney",3100048000
+Beef,Red meat,"Beef, liver",3100049000
+Beef,Red meat,"Beef, liver-babyfood",3100049001
+Beef,Red meat,"Beef, fat",3100047000
+Beef,Red meat,"Beef, fat-babyfood",3100047001
+Pork,Red meat,"Pork, meat",3400290000
+Pork,Red meat,"Pork, meat-babyfood",3400290001
+Pork,Red meat,"Pork, skin",3400291000
+Pork,Red meat,"Pork, meat byproducts",3400292000
+Pork,Red meat,"Pork, meat byproducts-babyfood",3400292001
+Pork,Red meat,"Pork, kidney",3400294000
+Pork,Red meat,"Pork, liver",3400295000
+Pork,Red meat,"Pork, fat",3400293000
+Pork,Red meat,"Pork, fat-babyfood",3400293001
+Other meat,Red meat,"Goat, meat",3200169000
+Other meat,Red meat,"Goat, meat byproducts",3200170000
+Other meat,Red meat,"Sheep, meat",3500339000
+Other meat,Red meat,"Sheep, meat-babyfood",3500339001
+Other meat,Red meat,"Sheep, meat byproducts",3500340000
+Other meat,Red meat,"Sheep, kidney",3500342000
+Other meat,Red meat,"Sheep, liver",3500343000
+Other meat,Red meat,"Meat, game",3800221000
+Other meat,Red meat,"Rabbit, meat",3900312000
+Other meat,Red meat,"Goat, fat",3200171000
+Other meat,Red meat,"Sheep, fat",3500341000
+Other meat,Red meat,"Sheep, fat-babyfood",3500341001
+Poultry,Poultry,"Turkey, meat",5000382000
+Poultry,Poultry,"Turkey, meat-babyfood",5000382001
+Poultry,Poultry,"Turkey, liver",5000383000
+Poultry,Poultry,"Turkey, meat byproducts",5000384000
+Poultry,Poultry,"Turkey, meat byproducts-babyfood",5000384001
+Poultry,Poultry,"Turkey, skin",5000386000
+Poultry,Poultry,"Turkey, skin-babyfood",5000386001
+Poultry,Poultry,"Chicken, meat",4000093000
+Poultry,Poultry,"Chicken, meat-babyfood",4000093001
+Poultry,Poultry,"Chicken, liver",4000094000
+Poultry,Poultry,"Chicken, meat byproducts",4000095000
+Poultry,Poultry,"Chicken, meat byproducts-babyfood",4000095001
+Poultry,Poultry,"Chicken, skin",4000097000
+Poultry,Poultry,"Chicken, skin-babyfood",4000097001
+Poultry,Poultry,"Poultry, other, meat",6000301000
+Poultry,Poultry,"Poultry, other, liver",6000302000
+Poultry,Poultry,"Poultry, other, meat byproducts",6000303000
+Poultry,Poultry,"Poultry, other, skin",6000305000
+Poultry,Poultry,"Chicken, fat",4000096000
+Poultry,Poultry,"Chicken, fat-babyfood",4000096001
+Poultry,Poultry,"Turkey, fat",5000385000
+Poultry,Poultry,"Turkey, fat-babyfood",5000385001
+Poultry,Poultry,"Poultry, other, fat",6000304000
+Seafood,None,Fish-freshwater finfish,8000157000
+Seafood,None,"Fish-freshwater finfish, farm raised",8000158000
+Seafood,None,"Fish-saltwater finfish, tuna",8000159000
+Seafood,None,"Fish-saltwater finfish, other",8000160000
+Seafood,None,"Fish-shellfish, crustacean",8000161000
+Seafood,None,"Fish-shellfish, mollusc",8000162000
+Eggs,None,"Egg, whole",7000145000
+Eggs,None,"Egg, whole-babyfood",7000145001
+Eggs,None,"Egg, white",7000146000
+Eggs,None,"Egg, yolk",7000147000
+Eggs,None,"Egg, yolk-babyfood",7000147001
+Nuts and seeds,None,"Pumpkin, seed",902309000
+Nuts and seeds,None,Almond,1400003000
+Nuts and seeds,None,Brazil nut,1400059000
+Nuts and seeds,None,Butternut,1400068000
+Nuts and seeds,None,Cashew,1400081000
+Nuts and seeds,None,Chestnut,1400092000
+Nuts and seeds,None,Hazelnut,1400155000
+Nuts and seeds,None,Macadamia nut,1400213000
+Nuts and seeds,None,Pecan,1400269000
+Nuts and seeds,None,Pine nut,1400278000
+Nuts and seeds,None,Pistachio,1400282000
+Nuts and seeds,None,Walnut,1400391000
+Nuts and seeds,None,"Flax, seed",2001162900
+Nuts and seeds,None,"Sesame, seed",2001336000
+Nuts and seeds,None,"Sunflower, seed",2002364000
+Nuts and seeds,None,Peanut,9500263000
+Nuts and seeds,None,"Peanut, butter",9500264000
+Legumes,None,"Pea, edible podded, succulent",601257000
+Legumes,None,"Bean, broad, succulent",602031000
+Legumes,None,"Bean, cowpea, succulent",602033000
+Legumes,None,"Bean, lima, succulent",602037000
+Legumes,None,"Pea, succulent",602255000
+Legumes,None,"Pea, succulent-babyfood",602255001
+Legumes,None,"Pea, pigeon, succulent",602259000
+Legumes,None,"Bean, black, seed",603030000
+Legumes,None,"Bean, broad, seed",603032000
+Legumes,None,"Bean, cowpea, seed",603034000
+Legumes,None,"Bean,  great northern, seed",603035000
+Legumes,None,"Bean, kidney, seed",603036000
+Legumes,None,"Bean, lima, seed",603038000
+Legumes,None,"Bean, mung, seed",603039000
+Legumes,None,"Bean, navy, seed",603040000
+Legumes,None,"Bean, pink, seed",603041000
+Legumes,None,"Bean, pinto, seed",603042000
+Legumes,None,"Chickpea, seed",603098000
+Legumes,None,"Chickpea, seed-babyfood",603098001
+Legumes,None,"Guar, seed",603182000
+Legumes,None,"Lentil, seed",603203000
+Legumes,None,"Pea, dry",603256000
+Legumes,None,"Pea, dry-babyfood",603256001
+Legumes,None,"Pea, pigeon, seed",603258000
+Legumes,None,Carob,2302077000
+Legumes,None,Yam bean,103407000
+Legumes,None,"Soybean, seed",600347000
+Legumes,None,"Soybean, flour",600348000
+Legumes,None,"Soybean, flour-babyfood",600348001
+Legumes,None,"Soybean, soy milk",600349000
+Grains,None,"Barley, pearled barley",1500025000
+Grains,None,"Barley, pearled barley-babyfood",1500025001
+Grains,None,"Barley, flour",1500026000
+Grains,None,"Barley, flour-babyfood",1500026001
+Grains,None,"Barley, bran",1500027000
+Grains,None,Buckwheat,1500065000
+Grains,None,"Corn, field, flour",1500120000
+Grains,None,"Corn, field, flour-babyfood",1500120001
+Grains,None,"Corn, field, meal",1500121000
+Grains,None,"Corn, field, bran",1500122000
+Grains,None,"Millet, grain",1500226000
+Grains,None,"Oat, bran",1500231000
+Grains,None,"Oat, flour",1500232000
+Grains,None,"Oat, flour-babyfood",1500232001
+Grains,None,"Oat, groats/rolled oats",1500233000
+Grains,None,"Oat, groats/rolled oats-babyfood",1500233001
+Grains,None,"Rice, white",1500323000
+Grains,None,"Rice, white-babyfood",1500323001
+Grains,None,"Rice, brown",1500324000
+Grains,None,"Rice, brown-babyfood",1500324001
+Grains,None,"Rice, flour",1500325000
+Grains,None,"Rice, flour-babyfood",1500325001
+Grains,None,"Rice, bran",1500326000
+Grains,None,"Rice, bran-babyfood",1500326001
+Grains,None,"Rye, grain",1500328000
+Grains,None,"Rye, flour",1500329000
+Grains,None,"Triticale, flour",1500381000
+Grains,None,"Wheat, grain",1500401000
+Grains,None,"Wheat, grain-babyfood",1500401001
+Grains,None,"Wheat, flour",1500402000
+Grains,None,"Wheat, flour-babyfood",1500402001
+Grains,None,"Wheat, germ",1500403000
+Grains,None,"Wheat, bran",1500404000
+Grains,None,Wild rice,1500405000
+Grains,None,"Amaranth, grain",9500006000
+Grains,None,"Corn, pop",1500126000
+Grains,None,"Corn, field, starch",1500123000
+Grains,None,"Corn, field, starch-babyfood",1500123001
+"Citrus fruit, melons, and berries",None,Cantaloupe,901075000
+"Citrus fruit, melons, and berries",None,Honeydew melon,901187000
+"Citrus fruit, melons, and berries",None,Watermelon,901399000
+"Citrus fruit, melons, and berries",None,Citron,1001106000
+"Citrus fruit, melons, and berries",None,Citrus hybrids,1001107000
+"Citrus fruit, melons, and berries",None,Orange,1001240000
+"Citrus fruit, melons, and berries",None,"Orange, peel",1001242000
+"Citrus fruit, melons, and berries",None,Tangerine,1001369000
+"Citrus fruit, melons, and berries",None,Kumquat,1002197000
+"Citrus fruit, melons, and berries",None,Lemon,1002199000
+"Citrus fruit, melons, and berries",None,"Lemon, peel",1002201000
+"Citrus fruit, melons, and berries",None,Lime,1002206000
+"Citrus fruit, melons, and berries",None,Grapefruit,1003180000
+"Citrus fruit, melons, and berries",None,Blackberry,1301055000
+"Citrus fruit, melons, and berries",None,Boysenberry,1301058000
+"Citrus fruit, melons, and berries",None,Raspberry,1301320000
+"Citrus fruit, melons, and berries",None,Raspberry-babyfood,1301320001
+"Citrus fruit, melons, and berries",None,Blueberry,1302057000
+"Citrus fruit, melons, and berries",None,Blueberry-babyfood,1302057001
+"Citrus fruit, melons, and berries",None,Huckleberry,1302191000
+"Citrus fruit, melons, and berries",None,Mulberry,1303227000
+"Citrus fruit, melons, and berries",None,"Kiwifruit, fuzzy",1304195000
+"Citrus fruit, melons, and berries",None,Cranberry,1307130000
+"Citrus fruit, melons, and berries",None,Cranberry-babyfood,1307130001
+"Citrus fruit, melons, and berries",None,"Cranberry, dried",1307131000
+"Citrus fruit, melons, and berries",None,Strawberry,1307359000
+"Citrus fruit, melons, and berries",None,Strawberry-babyfood,1307359001
+"Citrus fruit, melons, and berries",None,Spanish lime,2401351000
+"Citrus fruit, melons, and berries",None,Gooseberry,1302174000
+Other fruit,None,Passionfruit,2405252000
+Other fruit,None,"Apple, fruit with peel",1100007000
+Other fruit,None,"Apple, peeled fruit",1100008000
+Other fruit,None,"Apple, peeled fruit-babyfood",1100008001
+Other fruit,None,"Apple, dried",1100009000
+Other fruit,None,"Apple, dried-babyfood",1100009001
+Other fruit,None,"Apple, sauce",1100011000
+Other fruit,None,"Apple, sauce-babyfood",1100011001
+Other fruit,None,Pear,1100266000
+Other fruit,None,Pear-babyfood,1100266001
+Other fruit,None,"Pear, dried",1100267000
+Other fruit,None,Quince,1100310000
+Other fruit,None,Cherry,1201090000
+Other fruit,None,Cherry-babyfood,1201090001
+Other fruit,None,Apricot,1202012000
+Other fruit,None,Apricot-babyfood,1202012001
+Other fruit,None,"Apricot, dried",1202013000
+Other fruit,None,Nectarine,1202230000
+Other fruit,None,Peach,1202260000
+Other fruit,None,Peach-babyfood,1202260001
+Other fruit,None,"Peach, dried",1202261000
+Other fruit,None,Plum,1203285000
+Other fruit,None,Plum-babyfood,1203285001
+Other fruit,None,"Plum, prune, fresh",1203286000
+Other fruit,None,"Plum, prune, fresh-babyfood",1203286001
+Other fruit,None,"Plum, prune, dried",1203287000
+Other fruit,None,Currant,1302136000
+Other fruit,None,"Currant, dried",1302137000
+Other fruit,None,Grape,1304175000
+Other fruit,None,"Grape, raisin",1304178000
+Other fruit,None,Rhubarb,2202322000
+Other fruit,None,Fig,2302153000
+Other fruit,None,"Fig, dried",2302154000
+Other fruit,None,Guava,2302183000
+Other fruit,None,Starfruit,2302358000
+Other fruit,None,Tamarind,2302368000
+Other fruit,None,Date,2303141000
+Other fruit,None,Lychee,2401211000
+Other fruit,None,Banana,2402023000
+Other fruit,None,Banana-babyfood,2402023001
+Other fruit,None,"Banana, dried",2402024000
+Other fruit,None,"Banana, dried-babyfood",2402024001
+Other fruit,None,Mango,2402215000
+Other fruit,None,Mango-babyfood,2402215001
+Other fruit,None,"Mango, dried",2402216000
+Other fruit,None,Papaya,2402245000
+Other fruit,None,"Papaya, dried",2402246000
+Other fruit,None,Persimmon,2402277000
+Other fruit,None,Plantain,2402283000
+Other fruit,None,"Plantain, dried",2402284000
+Other fruit,None,Pomegranate,2402289000
+Other fruit,None,Breadfruit,2403060000
+Other fruit,None,Pineapple,2403279000
+Other fruit,None,Pineapple-babyfood,2403279001
+Other fruit,None,"Pineapple, dried",2403280000
+Other fruit,None,Soursop,2403346000
+Other fruit,None,Sugar apple,2403361000
+Other fruit,None,"Chayote, fruit",902088000
+Fruit juice,None,"Watermelon, juice",901400000
+Fruit juice,None,"Orange, juice",1001241000
+Fruit juice,None,"Orange, juice-babyfood",1001241001
+Fruit juice,None,"Tangerine, juice",1001370000
+Fruit juice,None,"Lemon, juice",1002200000
+Fruit juice,None,"Lemon, juice-babyfood",1002200001
+Fruit juice,None,"Lime, juice",1002207000
+Fruit juice,None,"Lime, juice-babyfood",1002207001
+Fruit juice,None,"Grapefruit, juice",1003181000
+Fruit juice,None,"Blackberry, juice",1301056000
+Fruit juice,None,"Blackberry, juice-babyfood",1301056001
+Fruit juice,None,"Raspberry, juice",1301321000
+Fruit juice,None,"Raspberry, juice-babyfood",1301321001
+Fruit juice,None,"Cranberry, juice",1307132000
+Fruit juice,None,"Cranberry, juice-babyfood",1307132001
+Fruit juice,None,"Strawberry, juice",1307360000
+Fruit juice,None,"Strawberry, juice-babyfood",1307360001
+Fruit juice,None,"Passionfruit, juice",2405253000
+Fruit juice,None,"Apple, juice",1100010000
+Fruit juice,None,"Apple, juice-babyfood",1100010001
+Fruit juice,None,"Pear, juice",1100268000
+Fruit juice,None,"Pear, juice-babyfood",1100268001
+Fruit juice,None,"Cherry, juice",1201091000
+Fruit juice,None,"Cherry, juice-babyfood",1201091001
+Fruit juice,None,"Apricot, juice",1202014000
+Fruit juice,None,"Apricot, juice-babyfood",1202014001
+Fruit juice,None,"Peach, juice",1202262000
+Fruit juice,None,"Peach, juice-babyfood",1202262001
+Fruit juice,None,"Plum, prune, juice",1203288000
+Fruit juice,None,"Plum, prune, juice-babyfood",1203288001
+Fruit juice,None,"Grape, juice",1304176000
+Fruit juice,None,"Grape, juice-babyfood",1304176001
+Fruit juice,None,"Mango, juice",2402217000
+Fruit juice,None,"Mango, juice-babyfood",2402217001
+Fruit juice,None,"Papaya, juice",2402247000
+Fruit juice,None,"Pomegranate, juice",2402290000
+Fruit juice,None,"Pineapple, juice",2403281000
+Fruit juice,None,"Pineapple, juice-babyfood",2403281001
+Dark green vegetables,None,"Chrysanthemum, garland",401104000
+Dark green vegetables,None,"Cilantro, leaves",401118000
+Dark green vegetables,None,"Dandelion, leaves",401138000
+Dark green vegetables,None,Endive,401150000
+Dark green vegetables,None,"Parsley, leaves",401248000
+Dark green vegetables,None,Spinach,401355000
+Dark green vegetables,None,Spinach-babyfood,401355001
+Dark green vegetables,None,Arugula,402018000
+Dark green vegetables,None,"Broccoli, Chinese",402062000
+Dark green vegetables,None,"Cabbage, Chinese, bok choy",402070000
+Dark green vegetables,None,Collards,402117000
+Dark green vegetables,None,"Cress, garden",402133000
+Dark green vegetables,None,Kale,402194000
+Dark green vegetables,None,Mustard greens,402229000
+Dark green vegetables,None,"Turnip, greens",402389000
+Dark green vegetables,None,Watercress,402398000
+Dark green vegetables,None,Broccoli,500061000
+Dark green vegetables,None,Broccoli-babyfood,500061001
+Dark green vegetables,None,"Cabbage, Chinese, napa",500071000
+Dark green vegetables,None,"Cabbage, Chinese, mustard",500072000
+Dark green vegetables,None,"Basil, fresh leaves",1901028000
+Dark green vegetables,None,"Basil, dried leaves",1901029000
+Dark green vegetables,None,"Basil, dried leaves-babyfood",1901029001
+Dark green vegetables,None,"Parsley, dried leaves",1901249000
+Dark green vegetables,None,"Parsley, dried leaves-babyfood",1901249001
+Dark green vegetables,None,Belgium endive,9500054000
+Dark green vegetables,None,"Grape, leaves",9500177000
+Dark green vegetables,None,Seaweed-babyfood,9500335001
+Dark green vegetables,None,"Amaranth, leafy",401005000
+Dark green vegetables,None,Swiss chard,401367000
+Dark green vegetables,None,"Palm heart, leaves",2201243000
+Dark green vegetables,None,"Beet, garden, tops",200051000
+Dark green vegetables,None,"Chicory, tops",200101000
+Dark green vegetables,None,"Dasheen, leaves",200140000
+Dark green vegetables,None,"Lettuce, leaf",401205000
+Dark green vegetables,None,Seaweed,9500335000
+Red and orange vegetables,None,Tomato,801375000
+Red and orange vegetables,None,Tomato-babyfood,801375001
+Red and orange vegetables,None,"Tomato, paste",801376000
+Red and orange vegetables,None,"Tomato, paste-babyfood",801376001
+Red and orange vegetables,None,"Tomato, puree",801377000
+Red and orange vegetables,None,"Tomato, puree-babyfood",801377001
+Red and orange vegetables,None,"Tomato, dried",801378000
+Red and orange vegetables,None,"Tomato, dried-babyfood",801378001
+Red and orange vegetables,None,"Tomato, juice",801379000
+Red and orange vegetables,None,"Beet, garden, roots",101050000
+Red and orange vegetables,None,"Beet, garden, roots-babyfood",101050001
+Red and orange vegetables,None,Carrot,101078000
+Red and orange vegetables,None,Carrot-babyfood,101078001
+Red and orange vegetables,None,"Carrot, juice",101079000
+Red and orange vegetables,None,Sweet potato,103366000
+Red and orange vegetables,None,Sweet potato-babyfood,103366001
+Red and orange vegetables,None,"Squash, winter",902357000
+Red and orange vegetables,None,"Squash, winter-babyfood",902357001
+Red and orange vegetables,None,Pumpkin,902308000
+Starchy vegetables,None,"Potato, chips",103296000
+Starchy vegetables,None,"Potato, dry (granules/ flakes)",103297000
+Starchy vegetables,None,"Potato, dry (granules/ flakes)-babyfood",103297001
+Starchy vegetables,None,"Potato, flour",103298000
+Starchy vegetables,None,"Potato, flour-babyfood",103298001
+Starchy vegetables,None,"Potato, tuber, w/peel",103299000
+Starchy vegetables,None,"Potato, tuber, w/o peel",103300000
+Starchy vegetables,None,"Potato, tuber, w/o peel-babyfood",103300001
+Starchy vegetables,None,Burdock,101067000
+Starchy vegetables,None,Parsnip,101251000
+Starchy vegetables,None,Parsnip-babyfood,101251001
+Starchy vegetables,None,Cassava,103082000
+Starchy vegetables,None,Cassava-babyfood,103082001
+Starchy vegetables,None,"Dasheen, corm",103139000
+Starchy vegetables,None,"Yam, true",103406000
+Starchy vegetables,None,"Corn, sweet",1500127000
+Starchy vegetables,None,"Corn, sweet-babyfood",1500127001
+Starchy vegetables,None,Water chestnut,9500397000
+Starchy vegetables,None,"Tanier, corm",103371000
+Starchy vegetables,None,"Arrowroot, flour",103015000
+Starchy vegetables,None,"Chicory, roots",101100000
+Other vegetables,None,"Bean, snap, succulent",601043000
+Other vegetables,None,"Bean, snap, succulent-babyfood",601043001
+Other vegetables,None,"Garlic, bulb-babyfood",301165001
+Other vegetables,None,"Onion, bulb-babyfood",301237001
+Other vegetables,None,"Onion, bulb, dried",301238000
+Other vegetables,None,"Onion, bulb, dried-babyfood",301238001
+Other vegetables,None,"Shallot, bulb",301338000
+Other vegetables,None,"Onion, green",302239000
+Other vegetables,None,"Pepper, bell",802270000
+Other vegetables,None,"Pepper, bell, dried",802271000
+Other vegetables,None,"Pepper, bell, dried-babyfood",802271001
+Other vegetables,None,"Pepper, nonbell",802272000
+Other vegetables,None,"Pepper, nonbell-babyfood",802272001
+Other vegetables,None,"Pepper, nonbell, dried",802273000
+Other vegetables,None,"Squash, summer",902356000
+Other vegetables,None,"Squash, summer-babyfood",902356001
+Other vegetables,None,"Artichoke, globe",9500016000
+Other vegetables,None,Avocado,2402020000
+Other vegetables,None,"Lettuce, head",401204000
+Other vegetables,None,Celeriac,101084000
+Other vegetables,None,Horseradish,101190000
+Other vegetables,None,"Radish, roots",101314000
+Other vegetables,None,"Radish, Oriental, roots",101316000
+Other vegetables,None,Rutabaga,101327000
+Other vegetables,None,"Artichoke, Jerusalem",103017000
+Other vegetables,None,Ginger,103166000
+Other vegetables,None,"Garlic, bulb",301165000
+Other vegetables,None,"Onion, bulb",301237000
+Other vegetables,None,Leek,302198000
+Other vegetables,None,Radicchio,401313000
+Other vegetables,None,Brussels sprouts,500064000
+Other vegetables,None,Cabbage,500069000
+Other vegetables,None,Cauliflower,500083000
+Other vegetables,None,Tomatillo,801374000
+Other vegetables,None,Eggplant,802148000
+Other vegetables,None,Okra,802234000
+Other vegetables,None,Balsam pear,902021000
+Other vegetables,None,Chinese waxgourd,902102000
+Other vegetables,None,Cucumber,902135000
+Other vegetables,None,Mushroom,2100228000
+Other vegetables,None,Asparagus,2201019000
+Other vegetables,None,"Bamboo, shoots",2201022000
+Other vegetables,None,Cactus,2201073000
+Other vegetables,None,"Fennel, Florence",2201152000
+Other vegetables,None,Kohlrabi,2201196000
+Other vegetables,None,Celery,2202085000
+Other vegetables,None,Celery-babyfood,2202085001
+Other vegetables,None,"Celery, juice",2202086000
+Other vegetables,None,Olive,2301235000
+Other vegetables,None,"Turnip, roots",101388000
+Other vegetables,None,"Ginger, dried",103167000
+Other vegetables,None,"Chive, fresh leaves",302103000
+Vegetable and seed oils,None,"Corn, field, oil",1500125000
+Vegetable and seed oils,None,"Corn, field, oil-babyfood",1500125001
+Vegetable and seed oils,None,"Flax seed, oil",2001163000
+Vegetable and seed oils,None,"Rapeseed, oil",2001319000
+Vegetable and seed oils,None,"Rapeseed, oil-babyfood",2001319001
+Vegetable and seed oils,None,"Sesame, oil",2001337000
+Vegetable and seed oils,None,"Safflower, oil",2002330000
+Vegetable and seed oils,None,"Safflower, oil-babyfood",2002330001
+Vegetable and seed oils,None,"Sunflower, oil",2002365000
+Vegetable and seed oils,None,"Sunflower, oil-babyfood",2002365001
+Vegetable and seed oils,None,"Cottonseed, oil",2003128000
+Vegetable and seed oils,None,"Cottonseed, oil-babyfood",2003128001
+Vegetable and seed oils,None,"Olive, oil",2301236000
+Vegetable and seed oils,None,"Peanut, oil",9500265000
+Vegetable and seed oils,None,"Almond, oil",1400004000
+Vegetable and seed oils,None,"Peppermint, oil",9500276000
+Vegetable and seed oils,None,"Soybean, oil",600350000
+Vegetable and seed oils,None,"Soybean, oil-babyfood",600350001
+Tropical oils,None,"Palm, oil",9500244000
+Tropical oils,None,"Palm, oil-babyfood",9500244001
+Tropical oils,None,"Coconut, oil",1400114000
+Tropical oils,None,"Coconut, oil-babyfood",1400114001
+Sweeteners,None,"Beet, sugar",101052000
+Sweeteners,None,"Beet, sugar-babyfood",101052001
+Sweeteners,None,"Beet, sugar, molasses",101053000
+Sweeteners,None,"Beet, sugar, molasses-babyfood",101053001
+Sweeteners,None,"Corn, field, syrup",1500124000
+Sweeteners,None,"Corn, field, syrup-babyfood",1500124001
+Sweeteners,None,"Sorghum, syrup",1500345000
+Sweeteners,None,Honey,9500186000
+Sweeteners,None,Honey-babyfood,9500186001
+Sweeteners,None,"Maple, sugar",9500218000
+Sweeteners,None,Maple syrup,9500219000
+Sweeteners,None,"Sugarcane, sugar",9500362000
+Sweeteners,None,"Sugarcane, sugar-babyfood",9500362001
+Sweeteners,None,"Sugarcane, molasses",9500363000
+Sweeteners,None,"Sugarcane, molasses-babyfood",9500363001
+Other foods,None,"Milk, human",3700222501
+Other foods,None,"Alfalfa, seed",1800002000
+Other foods,None,"Coriander, seed",1902119000
+Other foods,None,"Dill, seed",1902143000
+Other foods,None,"Psyllium, seed",9500306000
+Other foods,None,Turmeric,103387000
+Other foods,None,"Ginseng, dried",101168000
+Other foods,None,Dillweed,401144000
+Other foods,None,"Coconut, meat",1400111000
+Other foods,None,"Coconut, meat-babyfood",1400111001
+Other foods,None,"Coconut, dried",1400112000
+Other foods,None,"Coconut, milk",1400113000
+Other foods,None,"Herbs, other",1901184000
+Other foods,None,"Herbs, other-babyfood",1901184001
+Other foods,None,Marjoram,1901220000
+Other foods,None,Marjoram-babyfood,1901220001
+Other foods,None,Savory,1901334000
+Other foods,None,Cinnamon,1902105000
+Other foods,None,Cinnamon-babyfood,1902105001
+Other foods,None,"Pepper, black and white",1902274000
+Other foods,None,"Pepper, black and white-babyfood",1902274001
+Other foods,None,"Spices, other",1902354000
+Other foods,None,"Spices, other-babyfood",1902354001
+Other foods,None,"Water, direct, tap",8601100000
+Other foods,None,"Water, direct, bottled",8601200000
+Other foods,None,"Water, indirect, all sources",8602000000
+Other foods,None,"Cocoa bean, chocolate",9500109000
+Other foods,None,"Cocoa bean, powder",9500110000
+Other foods,None,"Coffee, roasted bean",9500115000
+Other foods,None,"Coffee, instant",9500116000
+Other foods,None,Bee pollen,9500186100
+Other foods,None,Peppermint,9500275000
+Other foods,None,"Tea, dried",9500372000
+Other foods,None,"Tea, instant",9500373000
+Other foods,None,Vinegar,9500390000
+Other foods,None,"Grape, wine and sherry",1304179000
+Other foods,None,Hop,9500188000

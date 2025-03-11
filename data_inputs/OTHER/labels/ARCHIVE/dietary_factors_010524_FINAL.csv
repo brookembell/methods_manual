@@ -1,0 +1,42 @@
+﻿Food_group,Var_label
+added_sugar,Added sugars
+dairy_tot,Dairy (TOTAL)
+dairy_cow,Cow dairy
+dairy_soy,Soy dairy
+fruit_tot,Fruit (TOTAL)
+fruit_exc_juice,Fruit excluding juice
+fruit_juice,Fruit juice
+gr_refined,Refined grains
+gr_whole,Whole grains
+oil,Oils
+pf_egg,Eggs
+pf_leg,"Beans, peas, lentils (protein)"
+pf_ns,Nuts and seeds
+pf_pm,Processed meat
+pf_poultry_tot,Poultry (TOTAL)
+pf_poultry,Poultry
+pf_redm_tot,Red meat (TOTAL)
+pf_redm,Red meat
+pf_seafood,Seafood
+pf_soy,Soy foods
+sat_fat,Saturated fats
+veg_dg,Dark-green vegetables
+veg_leg,"Beans, peas, lentils (vegetables)"
+veg_oth,Other vegetables
+veg_ro,Red and orange vegetables
+veg_sta,Starchy vegetables
+veg_exc_sta,Vegetables excluding starchy
+leg_tot,"Beans, peas, lentils (TOTAL)"
+ssb,Sugar sweetened beverages
+sea_omega3_fa,Seafood omega-3 fats
+sodium,Sodium
+fiber,Fiber
+pf_animal,Animal-protein foods
+pf_plant,Plant-protein foods
+pufa_rep_carb,PUFA replace carbs
+pufa_rep_sfa,PUFA replace sfa
+pufa_rep_carbsfa,PUFA replace carbs or sfa
+babyfood,Baby food
+coffee_tea,Coffee and tea
+other,Other
+water,Water

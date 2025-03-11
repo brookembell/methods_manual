@@ -1,0 +1,89 @@
+description,Foodgroup_FNDDS,fcid_desc,Foodgroup_FCID
+"Pasta with tomato-based sauce, seafood, and added vegetables, home recipe",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Pasta with tomato-based sauce, seafood, and added vegetables, home recipe",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Noodle soup, with fish ball, shrimp, and dark green leafy vegetable",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Noodle soup, with fish ball, shrimp, and dark green leafy vegetable",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+Pho,pf_redm,"Fish-saltwater finfish, other",pf_seafood
+"Pasta with tomato-based sauce and seafood, home recipe",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Pasta with tomato-based sauce and seafood, home recipe",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+Pad Thai with chicken,gr_refined,"Fish-saltwater finfish, other",pf_seafood
+Caesar dressing,other,"Fish-saltwater finfish, other",pf_seafood
+"Caesar dressing, light",other,"Fish-saltwater finfish, other",pf_seafood
+"Dumpling, steamed, filled with meat, poultry, or seafood",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Dumpling, steamed, filled with meat, poultry, or seafood",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Dumpling, steamed, filled with meat, poultry, or seafood",gr_refined,Fish-freshwater finfish,pf_seafood
+"Dumpling, steamed, filled with meat, poultry, or seafood",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Cheese spread, cream cheese, regular",dairy_tot,"Fish-shellfish, mollusc",pf_seafood
+"Cheese spread, cream cheese, regular",dairy_tot,Fish-freshwater finfish,pf_seafood
+Seafood dip,dairy_tot,"Fish-shellfish, crustacean",pf_seafood
+Seafood dip,dairy_tot,"Fish-shellfish, mollusc",pf_seafood
+"Roll with meat and/or shrimp, vegetables and rice paper, not fried",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Egg roll, with shrimp",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Crepe, filled with meat, poultry, or seafood, with sauce",gr_refined,"Fish-saltwater finfish, tuna",pf_seafood
+Shrimp egg foo yung,pf_egg,"Fish-shellfish, crustacean",pf_seafood
+Soft taco with fish,gr_refined,"Fish-shellfish, crustacean",pf_seafood
+Sushi roll tuna,gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Sushi roll, salmon",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Chow mein or chop suey, meatless, with noodles",veg_oth,"Fish-shellfish, crustacean",pf_seafood
+"Rice, fried, with shrimp",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Dark-green leafy vegetable soup with meat, Asian style",veg_dg,"Fish-saltwater finfish, other",pf_seafood
+"Sushi, NFS",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Quiche with meat, poultry or fish",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Quiche with meat, poultry or fish",gr_refined,Fish-freshwater finfish,pf_seafood
+"Quiche with meat, poultry or fish",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Quiche with meat, poultry or fish",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+Gumbo with rice,pf_redm,"Fish-shellfish, crustacean",pf_seafood
+Gumbo with rice,pf_redm,"Fish-shellfish, mollusc",pf_seafood
+"Caesar salad, with romaine, no dressing",veg_dg,"Fish-saltwater finfish, other",pf_seafood
+"Puffs, fried, crab meat and cream cheese filled",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Sushi roll, eel",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Pasta with tomato-based sauce and seafood, restaurant",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Pasta with tomato-based sauce and seafood, restaurant",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Codfish fritter, Puerto Rican style",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Pasta, whole grain, with cream sauce and seafood, restaurant",gr_whole,"Fish-shellfish, crustacean",pf_seafood
+"Lo mein, with shrimp",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+Macaroni or pasta salad with tuna,gr_refined,"Fish-saltwater finfish, tuna",pf_seafood
+"Cheese spread, cream cheese, light or lite",dairy_tot,"Fish-shellfish, mollusc",pf_seafood
+"Cheese spread, cream cheese, light or lite",dairy_tot,Fish-freshwater finfish,pf_seafood
+"Paella, NFS",pf_redm,"Fish-shellfish, mollusc",pf_seafood
+"Paella, NFS",pf_redm,"Fish-shellfish, crustacean",pf_seafood
+Taco or tostada with fish,gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Sushi, topped with salmon",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Sushi roll, shrimp",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+Pad Thai with seafood,gr_refined,"Fish-saltwater finfish, other",pf_seafood
+Pad Thai with seafood,gr_refined,"Fish-shellfish, crustacean",pf_seafood
+Macaroni or pasta salad with shrimp,gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Antipasto with ham, fish, cheese, vegetables",pf_redm,"Fish-saltwater finfish, other",pf_seafood
+Pork hash,pf_redm,"Fish-shellfish, crustacean",pf_seafood
+"Sweet bread dough, filled with meat, steamed",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Sushi, topped with tuna",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Sushi, topped with shrimp",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Stuffed shells, with fish and/or shellfish, with tomato sauce",gr_refined,"Fish-saltwater finfish, tuna",pf_seafood
+"Stuffed shells, with fish and/or shellfish, with tomato sauce",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Pasta, whole grain, with tomato-based sauce and seafood, home recipe",gr_whole,"Fish-shellfish, mollusc",pf_seafood
+"Pasta, whole grain, with tomato-based sauce and seafood, home recipe",gr_whole,"Fish-shellfish, crustacean",pf_seafood
+Macaroni or noodles with cheese and tuna,gr_refined,"Fish-saltwater finfish, tuna",pf_seafood
+Macaroni or pasta salad with tuna and egg,gr_refined,"Fish-saltwater finfish, tuna",pf_seafood
+"Whole wheat cereal, cooked, fat added in cooking",gr_whole,NA,gr_whole
+"Gumbo, no rice",pf_redm,"Fish-shellfish, crustacean",pf_seafood
+"Gumbo, no rice",pf_redm,"Fish-shellfish, mollusc",pf_seafood
+Pad Thai with meat,gr_refined,"Fish-saltwater finfish, other",pf_seafood
+"Pasta with tomato-based sauce, seafood, and added vegetables, restaurant",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Pasta with tomato-based sauce, seafood, and added vegetables, restaurant",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Pasta with tomato-based sauce and seafood, ready-to-heat",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Pasta with tomato-based sauce and seafood, ready-to-heat",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Pasta, whole grain, with tomato-based sauce, seafood, and added vegetables, home recipe",gr_whole,"Fish-shellfish, crustacean",pf_seafood
+"Pasta, whole grain, with tomato-based sauce, seafood, and added vegetables, home recipe",gr_whole,"Fish-shellfish, mollusc",pf_seafood
+"Sushi, topped with eel",gr_refined,"Fish-saltwater finfish, other",pf_seafood
+Steak tartare,pf_redm,"Fish-saltwater finfish, other",pf_seafood
+"Caesar dressing, fat free",other,"Fish-saltwater finfish, other",pf_seafood
+"Pasta with tomato-based sauce, seafood, and added vegetables, ready-to-heat",gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Pasta with tomato-based sauce, seafood, and added vegetables, ready-to-heat",gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Cream cheese, regular, flavored",dairy_tot,Fish-freshwater finfish,pf_seafood
+"Cream cheese, regular, flavored",dairy_tot,"Fish-shellfish, mollusc",pf_seafood
+"Whole wheat cereal, cooked, fat added",gr_whole,NA,gr_whole
+Dressing with oysters,gr_refined,"Fish-shellfish, mollusc",pf_seafood
+"Macaroni or noodles, creamed, with cheese and tuna",gr_refined,"Fish-saltwater finfish, tuna",pf_seafood
+Shrimp chips,gr_refined,"Fish-shellfish, crustacean",pf_seafood
+"Greek Salad, no dressing",veg_oth,"Fish-saltwater finfish, other",pf_seafood
+"Sushi, topped with crab",gr_refined,"Fish-saltwater finfish, other",pf_seafood

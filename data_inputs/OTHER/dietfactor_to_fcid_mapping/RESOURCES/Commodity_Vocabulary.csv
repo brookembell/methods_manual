@@ -1,0 +1,559 @@
+WWEIA_FCID_Code_0510,FCID_Descb,Weight_Basis,Comments
+101050000,"Beet, garden, roots",weight of roots; juice,
+101050001,"Beet, garden, roots-babyfood",weight of roots,
+101052000,"Beet, sugar",dry weight of sugar (sucrose),Sucrose is a disaccharide obtained from sugar cane and sugar beet.
+101052001,"Beet, sugar-babyfood",dry weight of sugar (sucrose),Sucrose is a disaccharide obtained from sugar cane and sugar beet.
+101053000,"Beet, sugar, molasses",weight of molasses,
+101053001,"Beet, sugar, molasses-babyfood",weight of molasses,
+101067000,Burdock,weight of roots,
+101078000,Carrot,"weight of roots, with or without peel, excluding tops",
+101078001,Carrot-babyfood,"weight of roots, with or without peel, excluding tops",
+101079000,"Carrot, juice",weight of juice at single strength (or standard dilution),
+101084000,Celeriac,weight of tuberous root,
+101100000,"Chicory, roots",weight of roots,
+101168000,"Ginseng, dried",dry weight of roots,
+101190000,Horseradish,"weight of root, ground",
+101250000,"Parsley, turnip rooted",weight of roots and leaves,
+101251000,Parsnip,weight of roots with or without peel,
+101251001,Parsnip-babyfood,weight of roots with or without peel,
+101314000,"Radish, roots",weight of roots,
+101316000,"Radish, Oriental, roots",weight of roots,
+101327000,Rutabaga,weight of roots; excluding tops,
+101331000,"Salsify, roots",weight of roots,Also called oyster plant.
+101388000,"Turnip, roots",weight of roots,
+103015000,"Arrowroot, flour",dry weight of flour,
+103015001,"Arrowroot, flour-babyfood",dry weight of flour,
+103017000,"Artichoke, Jerusalem",edible portion of tuber,
+103082000,Cassava,weight of root; dry tapioca,Includes tapioca.
+103082001,Cassava-babyfood,weight of root; dry tapioca,Includes tapioca.
+103139000,"Dasheen, corm",weight of the corm,Includes taro.
+103166000,Ginger,weight of roots; excluding peel,
+103166001,Ginger-babyfood,"weight of roots, excluding peel",
+103167000,"Ginger, dried",dry weight of roots; excluding peel,
+103296000,"Potato, chips","weight of potato from chip or stick, with or without peel",
+103297000,"Potato, dry (granules/ flakes)",dry weight of granules or flakes,
+103297001,"Potato, dry (granules/ flakes)-babyfood",dry weight of granules or flakes,
+103298000,"Potato, flour",dry weight of flour or potato starch,
+103298001,"Potato, flour-babyfood",dry weight of flour or potato starch,
+103299000,"Potato, tuber, w/peel",weight of tuber;  including peel,
+103299001,"Potato, tuber, w/peel-babyfood",weight of tuber;  including peel,
+103300000,"Potato, tuber, w/o peel",weight of tuber;  excluding peel,
+103300001,"Potato, tuber, w/o peel-babyfood",weight of tuber; excluding peel,
+103366000,Sweet potato,"weight of roots, with or without peel; juice",
+103366001,Sweet potato-babyfood,weight of root; juice,Likely without peel.
+103371000,"Tanier, corm",weight of corm,Also called Cocoyam.
+103387000,Turmeric,weight of roots,
+103406000,"Yam, true",weight of roots,
+103407000,Yam bean,weight of roots,Also called jicama.
+200051000,"Beet, garden, tops",weight of leaves,Include pumpkin leaves.
+200101000,"Chicory, tops",weight of leaves,
+200140000,"Dasheen, leaves",weight of the leaves,Includes taro.
+200317000,"Radish, Oriental, tops",weight of leaves,
+200332000,"Salsify, tops",weight of leaves,Also called oyster plant.
+301165000,"Garlic, bulb",dry weight of bulb; excluding skin (outer scales),"same as Garlic, bulb includes great headed garlic, serpent garlic, and eleph"
+301165001,"Garlic, bulb-babyfood",dry weight of bulb; excluding skin (outer scales),"same as Garlic, bulb includes great headed garlic, serpent garlic, and eleph"
+301237000,"Onion, bulb",weight of bulb; excluding outer skin,"Includes Daylily; Fritillaria, bulb; Lily; Chinese onion, bulb."
+301237001,"Onion, bulb-babyfood",weight of bulb; excluding outer skin,"Includes Daylily; Fritillaria, bulb; Lily; Chinese onion, bulb."
+301238000,"Onion, bulb, dried",dry weight of bulb; excluding outer skin,"Includes Daylily; Fritillaria, bulb; Lily; Chinese onion, bulb."
+301238001,"Onion, bulb, dried-babyfood",dry weight of bulb; excluding outer skin,"Includes Daylily; Fritillaria, bulb; Lily; Chinese onion, bulb."
+301338000,"Shallot, bulb",weight of bulb; excluding skin,
+302103000,"Chive, fresh leaves",weight of fresh leaves,Includes Chinese chives.
+302198000,Leek,weight of whole plant; including leaves and bulb,Includes lady leek and wild leek
+302239000,"Onion, green",weight of bulb or bulb and leaves,"Includes Elegans hosta; Fritillaria, leaves, Kurrat; Beltsville bunching oni"
+302338500,"Shallot, fresh leaves",weight of leaves and stems,
+401005000,"Amaranth, leafy",weight of leaf,"Includes Tampala, Chinese spinach, lambsquarter, and pokeweed (pokeberry)."
+401104000,"Chrysanthemum, garland",edible leaves and stems,"Includes Chrysanthemum, edible leaved."
+401118000,"Cilantro, leaves",weight of leaves,Includes Chinese parsley and coriander leaves.
+401118001,"Cilantro, leaves-babyfood",weight of leaves,Includes Chinese parsley and coriander leaves.
+401138000,"Dandelion, leaves",weight of leaves,
+401144000,Dillweed,weight of leaves,
+401150000,Endive,weight of leaves,Includes escarole.
+401204000,"Lettuce, head",weight of leaves; juice,
+401205000,"Lettuce, leaf",weight of leaves,Includes romaine.
+401248000,"Parsley, leaves",weight of leaves and stems,
+401313000,Radicchio,weight of leaves,
+401355000,Spinach,weight of leaves; juice,
+401355001,Spinach-babyfood,weight of leaves; juice,
+401367000,Swiss chard,weight of leaves and stalks,
+402018000,Arugula,weight of leaves,
+402062000,"Broccoli, Chinese","weight of flower buds, adjoining stems and leaves",
+402063000,Broccoli raab,"weight of flower buds, adjoining stems and leaves",
+402070000,"Cabbage, Chinese, bok choy",weight of leaves and stems,
+402117000,Collards,weight of leaves,
+402133000,"Cress, garden",weight of leaves,
+402134000,"Cress, upland",weight of leaves,Includes Yellow rocket and Winter cress.
+402194000,Kale,weight of leaves,Includes mizuna.
+402229000,Mustard greens,weight of leaves and stems,
+402315000,"Radish, tops",weight of leaves,
+402318000,Rape greens,weight of leaves and stems,
+402389000,"Turnip, greens",weight of leaves,
+402398000,Watercress,weight of leaves and stems; juice,
+500061000,Broccoli,weight of flower heads and adjoining stems,
+500061001,Broccoli-babyfood,weight of flower heads and adjoining stems,
+500064000,Brussels sprouts,weight of leaf sprouts,
+500069000,Cabbage,weight of leaves,
+500071000,"Cabbage, Chinese, napa",weight of leaves,
+500072000,"Cabbage, Chinese, mustard",weight of leaves,
+500083000,Cauliflower,weight of flower heads and adjoining stems,Includes Broccoflower and green cauliflower.
+600347000,"Soybean, seed",dry weight of seed or bean,
+600348000,"Soybean, flour","dry weight of flour, soy meal, soy protein concentrate and",
+600348001,"Soybean, flour-babyfood","dry weight of flour, soy meal, soy protein concentrate and",
+600349000,"Soybean, soy milk",total weight of milk,
+600349001,"Soybean, soy milk-babyfood or infant formula",total weight of milk,
+600350000,"Soybean, oil",weight of oil,Includes lecithin.
+600350001,"Soybean, oil-babyfood",weight of oil,Includes lecithin.
+601043000,"Bean, snap, succulent",weight of bean and pod,"Includes green bean, string bean, runner bean, and wax bean."
+601043001,"Bean, snap, succulent-babyfood",weight of bean and pod,"Includes green bean, runner bean, and wax bean."
+601257000,"Pea, edible podded, succulent",weight of pea and pod,
+601349500,"Soybean, vegetable",Weight of bean and pod or weight of bean excluding pod,"Includes soybean immature seed, vegetable soybean succulent, and edamane."
+602031000,"Bean, broad, succulent",weight of bean and pod,Also called fava bean.
+602033000,"Bean, cowpea, succulent",weight of bean; excluding pod,"Includes cowpea, crowder pea, blackeye pea, and southern pea."
+602037000,"Bean, lima, succulent",weight of bean; excluding pod,
+602255000,"Pea, succulent",weight of peas,
+602255001,"Pea, succulent-babyfood",weight of peas,
+602259000,"Pea, pigeon, succulent",weight of pea,"In U.S. presently, usually found as canned pigeon peas."
+603030000,"Bean, black, seed",dry weight of bean,"Includes black turtle bean, Bayo, and brown bean."
+603032000,"Bean, broad, seed",dry weight of bean,Also called fava bean.
+603034000,"Bean, cowpea, seed",dry weight of bean,"Includes cowpea, crowder pea, blackeye pea, and southern pea."
+603035000,"Bean,  great northern, seed",dry weight of bean,
+603036000,"Bean, kidney, seed",dry weight of bean,
+603038000,"Bean, lima, seed",dry weight of bean,
+603039000,"Bean, mung, seed",dry weight of bean,Bean sprouts are the human food item.
+603040000,"Bean, navy, seed",dry weight of bean,Includes pea bean.
+603041000,"Bean, pink, seed",dry weight of bean,
+603042000,"Bean, pinto, seed",dry weight of bean,Include calico and red Mexican bean.
+603098000,"Chickpea, seed",dry weight of bean,Also called garbanzo bean.
+603098001,"Chickpea, seed-babyfood",dry weight of bean,Also called garbanzo bean.
+603099000,"Chickpea, flour",dry weight of flour,Also called garbanzo bean.
+603182000,"Guar, seed",weight of bean,
+603182001,"Guar, seed-babyfood",weight of bean,
+603203000,"Lentil, seed",dry weight of edible seed,
+603256000,"Pea, dry",dry weight of pea,
+603256001,"Pea, dry-babyfood",dry weight of pea,
+603258000,"Pea, pigeon, seed",dry weight of pea,
+801173500,Goji berry,dry weight of berry,
+801374000,Tomatillo,weight of fruit; excluding outer husks,
+801375000,Tomato,"weight of pulp, seeds and skin; tomatoes without skin but w",
+801375001,Tomato-babyfood,"weight of pulp, seeds and skin; tomatoes without skin but w",
+801376000,"Tomato, paste",weight of concentrated tomato pulp from food described as p,
+801376001,"Tomato, paste-babyfood",weight of concentrated tomato pulp (from food described as,
+801377000,"Tomato, puree",weight of concentrated tomato pulp (from food described as,
+801377001,"Tomato, puree-babyfood",weight of concentrated tomato pulp (from food described as,
+801378000,"Tomato, dried",weight of dried tomato (may include skin and/or seeds),
+801378001,"Tomato, dried-babyfood",weight of dried tomato (may include skin and/or seeds),
+801379000,"Tomato, juice",weight of juice at single strength (or standard dilution),
+801380000,Tree Tomato,"weight of the tree tomato, excluding peel",Also called Tamarillo.
+802148000,Eggplant,"weight of whole vegetable; including seeds, with or without",
+802234000,Okra,weight of pods; including seeds,
+802270000,"Pepper, bell",weight of flesh; excluding seeds and stem,"Includes sweet pepper, cooking pepper, pimento, and banana pepper."
+802270001,"Pepper, bell-babyfood",weight of flesh; excluding seeds and stem,"Includes sweet pepper, cooking pepper, pimento, and banana pepper."
+802271000,"Pepper, bell, dried",dry weight of flesh only,"Includes sweet pepper, cooking pepper, pimento, and banana pepper."
+802271001,"Pepper, bell, dried-babyfood",dry weight of flesh only,"Includes sweet pepper, cooking pepper, pimento, and banana pepper."
+802272000,"Pepper, nonbell","weight of flesh, with or without seeds; excluding stem",
+802272001,"Pepper, nonbell-babyfood","weight of flesh, with or without seeds; excluding stem",
+802273000,"Pepper, nonbell, dried",dry weight of flesh or flesh and seeds,
+901075000,Cantaloupe,weight of pulp; excluding seeds and outer rind,"Includes casaba, muskmelon, and wintermelon."
+901187000,Honeydew melon,weight of pulp; excluding seeds and rind,
+901399000,Watermelon,weight of pulp and rind; excluding seeds,To include weight of pickled watermelon rind.
+901400000,"Watermelon, juice",weight of juice at single strength (or standard dilution),
+902021000,Balsam pear,weight of whole fruit,"Includes Balsam apple, Chinese cucumber, and Bittermelon."
+902088000,"Chayote, fruit",weight of fruit,"Also called Christophine, and Mirliton."
+902102000,Chinese waxgourd,weight of flesh; including or excluding peel,Includes Togan and wintermelon.
+902135000,Cucumber,weight of flesh and seeds; including or excluding peel,
+902308000,Pumpkin,weight of pulp; excluding seeds and rind,
+902309000,"Pumpkin, seed",weight of dried seed only,
+902356000,"Squash, summer","weight of flesh, seeds and peel","Includes crookneck squash, kampyo,  scallop squash, straightneck squash, veg"
+902356001,"Squash, summer-babyfood","weight of flesh, seeds and peel","Includes crookneck squash, kampyo, scallop squash, straightneck squash, vege"
+902357000,"Squash, winter",weight of flesh; excluding seeds and peel,"Includes butternut squash, hubbard squash, calabaza, acorn squash, and spagh"
+902357001,"Squash, winter-babyfood",weight of flesh; excluding seeds and peel,
+1001106000,Citron,weight of pulp; excluding peel,
+1001107000,Citrus hybrids,weight of pulp; excluding seeds and peel,"Includes tangelo, Tangor, Chironja, and Calamondin."
+1001108000,"Citrus, oil",weight of oil,
+1001240000,Orange,weight of pulp; excluding seeds and peel,
+1001241000,"Orange, juice",weight of juice at single strength (or standard dilution),
+1001241001,"Orange, juice-babyfood",weight of juice at single strength (or standard dilution),
+1001242000,"Orange, peel",weight of peel only,
+1001369000,Tangerine,weight of pulp; excluding seeds and peel,Include clementine and mandarin.
+1001370000,"Tangerine, juice",weight of juice at single strength (or standard dilution),Include+G148 clementine and mandarin.
+1002197000,Kumquat,weight of fruit; including peel; excluding seeds,
+1002199000,Lemon,weight of pulp; excluding seeds and peel,
+1002200000,"Lemon, juice",weight of juice at single strength (or standard dilution),
+1002200001,"Lemon, juice-babyfood",weight of juice at single strength (or standard dilution),
+1002201000,"Lemon, peel",weight of peel only,
+1002206000,Lime,weight of pulp; excluding seeds and peel,"Australian desert lime, Australian finger lime, Australian round lime, Brown"
+1002207000,"Lime, juice",weight of juice at single strength (or standard dilution),"Australian desert lime, Australian finger lime, Australian round lime, Brown"
+1002207001,"Lime, juice-babyfood",weight of juice at single strength (or standard dilution),"Australian desert lime, Australian finger lime, Australian round lime, Brown"
+1003180000,Grapefruit,weight of pulp; excluding seeds and rind,Includes Uniq fruit
+1003181000,"Grapefruit, juice",weight of juice at single strength (or standard dilution),
+1003307000,Pummelo,weight of pulp; excluding seeds and peel,
+1100007000,"Apple, fruit with peel","weight of apple; including peel, excluding core and stem",
+1100008000,"Apple, peeled fruit","weight of apple; excluding peel, core and stem",
+1100008001,"Apple, peeled fruit-babyfood","weight of apple; excluding peel, core and stem",
+1100009000,"Apple, dried","dry weight; excluding peel, core, stem",
+1100009001,"Apple, dried-babyfood","dry weight; excluding peel, core, stem",
+1100010000,"Apple, juice",weight of juice at single strength (or standard dilution),
+1100010001,"Apple, juice-babyfood",weight of juice at single strength (or standard dilution),
+1100011000,"Apple, sauce",weight of applesauce,
+1100011001,"Apple, sauce-babyfood",weight of applesauce,
+1100129000,Crabapple,weight of pulp; excluding core and stem; including or exclu,Includes mayhaw.
+1100210000,Loquat,weight of pulp; excluding seeds and skin,
+1100266000,Pear,"weight of pulp, with or without peel; excluding core and st",Include Asian (Oriental) pear.
+1100266001,Pear-babyfood,"weight of pulp, with or without peel; excluding core and st",Include Asian (Oriental) pear.
+1100267000,"Pear, dried","weight of dried pulp, with or without peel",Include Asian (Oriental) pear.
+1100268000,"Pear, juice",weight of juice at single strength (or standard dilution),Include Asian (Oriental) pear.
+1100268001,"Pear, juice-babyfood",weight of juice at single strength (or standard dilution),Include Asian (Oriental) pear.
+1100310000,Quince,weight of pulp; excluding seeds and peel,
+1201090000,Cherry,weight of fruit; including skin; excluding pit and stem,Includes sweet cherry and sour or tart cherry.
+1201090001,Cherry-babyfood,weight of fruit; including skin; excluding pit and stem,Includes sweet cherry and sour or tart cherry.
+1201091000,"Cherry, juice",weight of juice at single strength (or standard dilution),Includes sweet cherry and sour or tart cherry.
+1201091001,"Cherry, juice-babyfood",weight of juice at single strength (or standard dilution),Includes Sweet cherry and  Sour or tart cherry.
+1202012000,Apricot,"weight of pulp, with or without peel; excluding pit",Includes Japanese apricot.
+1202012001,Apricot-babyfood,"weight of pulp, with or without peel; excluding pit",
+1202013000,"Apricot, dried","dry weight of pulp, with or without peel; excluding pit",Includes Japanese apricot.
+1202014000,"Apricot, juice",weight of juice at single strength (or standard dilution),Includes Japanese apricot.
+1202014001,"Apricot, juice-babyfood",weight of juice at single strength (or standard dilution),Includes Japanese apricot.
+1202230000,Nectarine,weight of pulp; including peel; excluding pit and stem,
+1202260000,Peach,"weight of pulp, with or without peel; excluding pit",
+1202260001,Peach-babyfood,"weight of pulp, with or without peel; excluding pit",
+1202261000,"Peach, dried","weight of dried pulp, with or without peel; excluding pit",
+1202261001,"Peach, dried-babyfood","weight of dried pulp, with or without peel; excluding pit",
+1202262000,"Peach, juice",weight of juice at single strength (or standard dilution),
+1202262001,"Peach, juice-babyfood",weight of juice at single strength (or standard dilution),
+1203285000,Plum,weight of pulp with peel; excluding pit,"""Includes American plum; Klamath plum; Beach plum; Canada plum; Cherry plum;"
+1203285001,Plum-babyfood,weight of pulp with peel; excluding pit,"""Includes American plum; Klamath plum; Beach plum; Canada plum; Cherry plum;"
+1203286000,"Plum, prune, fresh","weight of plum, with peel; excluding pit",
+1203286001,"Plum, prune, fresh-babyfood","weight of plum, with peel; excluding pit",
+1203287000,"Plum, prune, dried","weight of dried flesh, with or without peel; excluding pit",
+1203287001,"Plum, prune, dried-babyfood","weight of dried flesh, with or without peel; excluding pit",
+1203288000,"Plum, prune, juice",weight of juice at single strength (or standard dilution),
+1203288001,"Plum, prune, juice-babyfood",weight of juice at single strength (or standard dilution),
+1301055000,Blackberry,weight of berry,"Includes Andean blackberry, Arctic blackberry, bingleberry, black satin berr"
+1301056000,"Blackberry, juice",weight of juice at single strength (or standard dilution),"Includes Andean blackberry, Arctic blackberry, bingleberry, black satin berr"
+1301056001,"Blackberry, juice-babyfood",weight of juice at single strength (or standard dilution),"Includes Andean blackberry, Arctic blackberry, bingleberry, black satin berr"
+1301058000,Boysenberry,weight of berry,
+1301208000,Loganberry,weight of berry,
+1301320000,Raspberry,weight of berry,"Includes black raspberry, red raspberry, bababerry, blackcap, framboise, fra"
+1301320001,Raspberry-babyfood,weight of berry,
+1301321000,"Raspberry, juice",weight of juice at single strength (or standard dilution),"Includes black raspberry, red raspberry, bababerry, blackcap, framboise, fra"
+1301321001,"Raspberry, juice-babyfood",weight of juice at single strength (or standard dilution),"Includes black raspberry, red raspberry, bababerry, blackcap, framboise, fra"
+1302057000,Blueberry,weight of berry,Includes highbush blueberry and lowbush blueberry.
+1302057001,Blueberry-babyfood,weight of berry,Includes highbush blueberry and lowbush blueberry.
+1302136000,Currant,weight of berry,Includes red and black currants.
+1302137000,"Currant, dried",dry weight of berry,Includes red and black currants.
+1302149000,Elderberry,weight of berry,Includes Juneberry.
+1302174000,Gooseberry,weight of berry,
+1302191000,Huckleberry,weight of berry,
+1303227000,Mulberry,weight of fruit,Includes Juneberry.
+1304175000,Grape,"weight of grape, with skin, and with or without seeds",Includes Muscadine.
+1304176000,"Grape, juice",weight of juice at single strength (or standard dilution),Includes hardy kiwifruit
+1304176001,"Grape, juice-babyfood",weight of juice at single strength (or standard dilution),
+1304178000,"Grape, raisin",dry weight of raisin,Includes Zante currant.
+1304179000,"Grape, wine and sherry",weight of wine or sherry,
+1304195000,"Kiwifruit, fuzzy",weight of pulp and peel.,
+1307130000,Cranberry,weight of berry,
+1307130001,Cranberry-babyfood,weight of berry,
+1307131000,"Cranberry, dried",dry weight of berry,
+1307132000,"Cranberry, juice",weight of juice at single strength (or standard dilution),
+1307132001,"Cranberry, juice-babyfood",weight of juice at single strength (or standard dilution),
+1307359000,Strawberry,weight of berry; excluding leaf cap,
+1307359001,Strawberry-babyfood,"weight of berry, excluding leaf cap",
+1307360000,"Strawberry, juice",weight of juice at single strength (or standard dilution),
+1307360001,"Strawberry, juice-babyfood",weight of juice at single strength (or standard dilution),
+1400003000,Almond,weight of nutmeat,
+1400003001,Almond-babyfood,weight of nutmeat,
+1400004000,"Almond, oil",weight of oil,
+1400004001,"Almond, oil-babyfood",weight of oil,
+1400059000,Brazil nut,weight of nutmeat,
+1400068000,Butternut,weight of nutmeat,
+1400081000,Cashew,weight of nutmeat,
+1400092000,Chestnut,weight of  nutmeat,
+1400111000,"Coconut, meat",weight of meat; excluding milk and shell,"includes coconut, water"
+1400111001,"Coconut, meat-babyfood",weight of meat; excluding milk and shell,
+1400112000,"Coconut, dried",dry weight of meat; excluding milk and shell,
+1400113000,"Coconut, milk",weight of milk only; excluding meat and shell,
+1400114000,"Coconut, oil",weight of oil,
+1400114001,"Coconut, oil-babyfood",weight of oil,
+1400155000,Hazelnut,weight of nutmeat,Also called filbert.
+1400156000,"Hazelnut, oil",weight of oil,Also called hazelnut.
+1400185000,Hickory nut,weight of  nutmeat,
+1400213000,Macadamia nut,weight of nutmeat,
+1400269000,Pecan,weight of nutmeat,
+1400278000,Pine nut,weight of nutmeat,Also called pignolia.
+1400282000,Pistachio,weight of nutmeat,
+1400391000,Walnut,weight of nutmeat,
+1500025000,"Barley, pearled barley",dry weight of barley,
+1500025001,"Barley, pearled barley-babyfood",dry weight of barley,
+1500026000,"Barley, flour",dry weight of flour,Includes malt and whole barley.
+1500026001,"Barley, flour-babyfood",dry weight of flour,Includes malt and whole barley.
+1500027000,"Barley, bran",dry weight of bran,
+1500065000,Buckwheat,dry weight of groats; whole groat flour,
+1500066000,"Buckwheat, flour",dry weight of flour,
+1500120000,"Corn, field, flour",dry weight of whole grain flour; masa harina,
+1500120001,"Corn, field, flour-babyfood",dry weight of whole grain flour; masa harina,
+1500121000,"Corn, field, meal",dry weight of whole grain or degermed meal; dry weight of c,Includes hominy.
+1500121001,"Corn, field, meal-babyfood",dry weight of whole grain or degermed meal; dry weight of c,Includes hominy.
+1500122000,"Corn, field, bran",dry weight of bran,
+1500123000,"Corn, field, starch",dry weight of corn starch,
+1500123001,"Corn, field, starch-babyfood",dry weight of corn starch,
+1500124000,"Corn, field, syrup",weight of syrup,
+1500124001,"Corn, field, syrup-babyfood",weight of syrup,
+1500125000,"Corn, field, oil",weight of oil,
+1500125001,"Corn, field, oil-babyfood",weight of oil,
+1500126000,"Corn, pop",weight of kernels; excluding cob and husk,
+1500127000,"Corn, sweet",weight of kernels; excluding cob and husk,
+1500127001,"Corn, sweet-babyfood",weight of kernels; excluding cob and husk,
+1500226000,"Millet, grain",dry weight of grain,
+1500231000,"Oat, bran",dry weight of bran,
+1500232000,"Oat, flour",dry weight of flour,
+1500232001,"Oat, flour-babyfood",dry weight of flour,
+1500233000,"Oat, groats/rolled oats",dry weight,
+1500233001,"Oat, groats/rolled oats-babyfood",dry weight,
+1500323000,"Rice, white",dry weight of grain,
+1500323001,"Rice, white-babyfood",dry weight of grain,
+1500324000,"Rice, brown",dry weight of grain or brown rice flour,
+1500324001,"Rice, brown-babyfood",dry weight of grain or brown rice flour,
+1500325000,"Rice, flour",dry weight of flour,
+1500325001,"Rice, flour-babyfood",dry weight of flour,
+1500326000,"Rice, bran",dry weight of bran,
+1500326001,"Rice, bran-babyfood",dry weight of bran,
+1500328000,"Rye, grain",dry weight of grain; weight of whole grain flour,
+1500329000,"Rye, flour",dry weight of flour,
+1500344000,"Sorghum, grain",dry weight of grain,
+1500345000,"Sorghum, syrup",weight of syrup,
+1500381000,"Triticale, flour",dry weight of flour,
+1500381001,"Triticale, flour-babyfood",dry weight of flour,
+1500401000,"Wheat, grain",dry weight of grain,"Include whole kernel, cracked wheat, whole grain flour, bulgur, couscous."
+1500401001,"Wheat, grain-babyfood",dry weight of grain,"Include whole kernel, cracked wheat, whole grain flour, bulgur, couscous"
+1500402000,"Wheat, flour",dry weight of flour,
+1500402001,"Wheat, flour-babyfood",dry weight of flour,
+1500403000,"Wheat, germ",dry weight of germ,
+1500404000,"Wheat, bran",dry weight of bran,
+1500405000,Wild rice,dry weight of grain,
+1800002000,"Alfalfa, seed",weight of dry seed,Alfalfa sprouts are the human food item.
+1901028000,"Basil, fresh leaves",weight of leaves and stems,
+1901028001,"Basil, fresh leaves-babyfood",weight of leaves and stems,
+1901029000,"Basil, dried leaves",dry weight of leaves and stems,
+1901029001,"Basil, dried leaves-babyfood",dry weight of leaves and stems,
+1901102500,"Chive, dried leaves",weight of dried leaves,Includes Chinese chives.
+1901184000,"Herbs, other",weight of leaves and stems,See Appendix B (“The Herb List”).  Note that some herbs are not included in
+1901184001,"Herbs, other-babyfood",weight of leaves and stems,See Appendix B (“The Herb List”).  Note that some herbs are not included in
+1901202000,Lemongrass,weight of leaves,
+1901220000,Marjoram,weight of leaves and stems,Includes oregano.
+1901220001,Marjoram-babyfood,weight of leaves and stems,Includes oregano.
+1901249000,"Parsley, dried leaves",dried weight of leaves and stems,
+1901249001,"Parsley, dried leaves-babyfood",dried weight of leaves and stems,
+1901334000,Savory,weight of leaves and flower buds,Includes summer and winter savory.
+1902105000,Cinnamon,dry weight of spice: stick or ground powder,
+1902105001,Cinnamon-babyfood,dry weight of spice: stick or ground powder,
+1902119000,"Coriander, seed",weight of seed,Includes Chinese parsley and cilantro seed.
+1902119001,"Coriander, seed-babyfood",weight of seed,Includes Chinese parsley and cilantro seed.
+1902143000,"Dill, seed",dry weight of seed,
+1902274000,"Pepper, black and white",dry weight of pepper,
+1902274001,"Pepper, black and white-babyfood",dry weight of pepper,
+1902354000,"Spices, other",dry weight,See Appendix C (“The Spice List”).  Note that this list does not include som
+1902354001,"Spices, other-babyfood",dry weight,See Appendix C.
+2001163000,"Flax seed, oil",weight of oil; nutrient fat from flax seeds,Also called Solin.
+2001319000,"Rapeseed, oil",weight of oil,Includes canola oil.
+2001319001,"Rapeseed, oil-babyfood",weight of oil,Includes canola oil.
+2001336000,"Sesame, seed",dry weight of seed,
+2001336001,"Sesame, seed-babyfood",dry weight of seed,
+2001337000,"Sesame, oil",weight of oil,
+2001337001,"Sesame, oil-babyfood",weight of oil,
+2002330000,"Safflower, oil",weight of oil,
+2002330001,"Safflower, oil-babyfood",weight of oil,
+2002364000,"Sunflower, seed",dry weight of seeds,
+2002365000,"Sunflower, oil",weight of oil,
+2002365001,"Sunflower, oil-babyfood",weight of oil,
+2003128000,"Cottonseed, oil",weight of oil,
+2003128001,"Cottonseed, oil-babyfood",weight of oil,
+2100228000,Mushroom,weight of caps or caps and stems,"Includes oyster, shiitake, and  button mushroom."
+2201001500,Agave,weight of syrup or nectar.,
+2201019000,Asparagus,weight of edible portion of spears/stems,
+2201022000,"Bamboo, shoots",weight of shoots,Bamboo shoots are the human food item.
+2201073000,Cactus,weight of pulp; excluding peel; juice,"Includes Prickly pear, Cactus pads and flowers, Nopales, and Aloe vera."
+2201087000,Celtuce,weight of stalks and leaves,
+2201152000,"Fennel, Florence",weight of leaves,Includes Italian and sweet fennel.
+2201196000,Kohlrabi,weight of leaves and stems,
+2201243000,"Palm heart, leaves",weight of stem and leaves,
+2202076000,Cardoon,weight of leaf stalks,
+2202085000,Celery,weight of leaf stalk,
+2202085001,Celery-babyfood,weight of leaf stalk,
+2202086000,"Celery, juice",weight of juice as single strength (or standard dilution),
+2202322000,Rhubarb,weight of stalks; excluding leaves,
+2301001000,Acerola,"weight of fruit, excluding seed",
+2301235000,Olive,weight of fruit; excluding pit,
+2301236000,"Olive, oil",weight of oil,
+2302077000,Carob,dry weight of bean; flour,
+2302153000,Fig,weight of fruit,
+2302154000,"Fig, dried",dry weight of fruit,
+2302183000,Guava,weight of pulp; excluding peel; juice,
+2302183001,Guava-babyfood,weight of pulp; excluding peel; juice,
+2302358000,Starfruit,"weight of fruit, including seeds and peel",Also called Carambola.
+2302368000,Tamarind,"weight of pulp, including seeds; excluding peel; juice",
+2303000500,Acai berry,weight of fruit,
+2303141000,Date,"weight of fruit, excluding pit",
+2303151000,Feijoa,"weight of pulp, excluding peel",Also called pineapple guava.
+2401019500,Atemoya,"weight of pulp, excluding peel",
+2401074000,Canistel,weight of pulp; excluding peel,Also called Eggfruit.
+2401211000,Lychee,weight of pulp; excluding peel,
+2401212000,"Lychee, dried",weight of dried pulp,
+2401351000,Spanish lime,weight of pulp; excluding seeds and pulp,Includes Genip.
+2402020000,Avocado,weight of pulp; excluding skin and pit,
+2402023000,Banana,weight of pulp; excluding peel; juice,
+2402023001,Banana-babyfood,weight of pulp; excluding peel; juice,
+2402024000,"Banana, dried",dry weight of dried pulp; excluding peel (include weight of,
+2402024001,"Banana, dried-babyfood",dry weight of dried pulp; excluding peel (include weight of,
+2402215000,Mango,weight of pulp; excluding peel,
+2402215001,Mango-babyfood,weight of pulp; excluding peel,
+2402216000,"Mango, dried",weight of dried pulp,
+2402217000,"Mango, juice",weight of juice at single strength (or standard dilution),
+2402217001,"Mango, juice-babyfood",weight of juice at single strength (or standard dilution),
+2402245000,Papaya,weight of pulp; excluding peel and seeds,
+2402245001,Papaya-babyfood,weight of pulp; excluding peel and seeds,
+2402246000,"Papaya, dried",weight of dried pulp,
+2402247000,"Papaya, juice",weight of juice at single strength (or standard dilution),
+2402254000,Pawpaw,weight of pulp; excluding peel,
+2402277000,Persimmon,"weight of entire fruit, pulp and peel",
+2402283000,Plantain,weight of pulp; excluding skin,
+2402284000,"Plantain, dried",weight of dried pulp only,
+2402289000,Pomegranate,weight of pulp; excluding peel and seeds,Seeds are usually not consumed.
+2403060000,Breadfruit,weight of pulp; excluding peel,
+2403089000,Cherimoya,weight of fruit; excluding peel,Also called custard apple.
+2403193000,Jackfruit,weight of pulp; excluding peel,
+2403209000,Longan,weight of pulp; excluding seeds and rind,
+2403214000,Mamey apple,"weight of pulp; excluding peel, core and stem",Also called Mamey.
+2403279000,Pineapple,weight of pulp; excluding leaves and outer peel,
+2403279001,Pineapple-babyfood,weight of pulp; excluding leaves and outer peel,
+2403280000,"Pineapple, dried",weight of dried pulp only,
+2403281000,"Pineapple, juice",weight of juice at single strength (or standard dilution),
+2403281001,"Pineapple, juice-babyfood",weight of juice at single strength (or standard dilution),
+2403333000,"Sapote, Mamey",weight of pulp; excluding peel,"Includes black sapote, Mamey sapote, and white sapote."
+2403346000,Soursop,weight of pulp; excluding peel,
+2403361000,Sugar apple,weight of pulp; excluding peel,
+2405252000,Passionfruit,weight of pulp; excluding seeds and peel,
+2405252001,Passionfruit-babyfood,weight of pulp; excluding seeds and peel,
+2405253000,"Passionfruit, juice",weight of juice at single strength (or standard dilution),
+2405253001,"Passionfruit, juice-babyfood",weight of juice at single strength (or standard dilution),
+3100044000,"Beef, meat","weight of meat; excluding the weight of bone, and all nutri",Consider veal as equivalent to beef. Include bison and buffalo.
+3100044001,"Beef, meat-babyfood","weight of meat; excluding the weight of bone, and all nutri",
+3100045000,"Beef, meat, dried","weight of dried meat; excluding bones, and trimmable fat",
+3100046000,"Beef, meat byproducts",weight of meat; excluding bone; may contain some fat,"Includes brain, heart, lung, sweetbread, tail, tripe, tongue, and head."
+3100046001,"Beef, meat byproducts-babyfood",weight of meat; excluding bone; may contain some fat,"Includes brain, heart, lung, sweetbread, tail, tripe and tongue."
+3100047000,"Beef, fat",weight of nutrient fat only; includes  nutrient fat from be,
+3100047001,"Beef, fat-babyfood",weight of nutrient fat only; includes  nutrient fat from be,
+3100048000,"Beef, kidney",weight of organ including nutrient fat,
+3100049000,"Beef, liver",weight of organ including nutrient fat,
+3100049001,"Beef, liver-babyfood",weight of organ including nutrient fat,
+3200169000,"Goat, meat","weight of meat; excluding weight of bone, and all nutrient",
+3200170000,"Goat, meat byproducts",weight of meat; excluding bone; may include some trimmable,"Includes brain, heart, and head."
+3200171000,"Goat, fat",weight of nutrient fat only; include nutrient fat from goat,
+3200172000,"Goat, kidney",weight of organ including nutrient fat,
+3200173000,"Goat, liver",weight of organ including nutrient fat,
+3300189000,"Horse, meat","weight of meat; excluding bone, trimmable fat or skin",
+3400290000,"Pork, meat","weight of meat; excluding weight of bone, and all nutrient",
+3400290001,"Pork, meat-babyfood","weight of meat; excluding weight of bone, and all nutrient",
+3400291000,"Pork, skin",dry weight of skin including nutrient fat,"e.g., pork rind snacks."
+3400292000,"Pork, meat byproducts",weight of meat; excluding bone; may include some trimmable,"Includes ears, jowl, chitterlings, stomach (maw), fatback, and feet."
+3400292001,"Pork, meat byproducts-babyfood",weight of meat; excluding bone; may include some trimmable,"Includes ears, jowl, chitterlings, stomach (maw), fatback, and feet."
+3400293000,"Pork, fat",weight of nutrient  fat only; includes weight of nutrient f,
+3400293001,"Pork, fat-babyfood",weight of nutrient  fat only; includes weight of nutrient f,
+3400294000,"Pork, kidney",weight of organ including nutrient fat,
+3400295000,"Pork, liver",weight of organ including nutrient fat,
+3500339000,"Sheep, meat","weight of meat; excluding weight of bone, total nutrient fa",
+3500339001,"Sheep, meat-babyfood","weight of meat; excluding weight of bone, total nutrient fa",
+3500340000,"Sheep, meat byproducts",weight of meat; excluding bones; may include some trimmable,Includes brain and tongue.
+3500341000,"Sheep, fat",weight of nutrient fat only; includes nutrient fat from mea,
+3500341001,"Sheep, fat-babyfood",weight of nutrient fat only; includes nutrient fat from mea,
+3500342000,"Sheep, kidney","weight of organ, including nutrient fat",
+3500343000,"Sheep, liver","weight of organ, including nutrient fat",
+3600222000,"Milk, fat",weight of nutrient fat only,
+3600222001,"Milk, fat-baby food/infant formula",weight of nutrient fat only,
+3600223000,"Milk, nonfat solids",Remaining weight of milk after subtracting milk fat and moi,"Includes casein; also, includes lactose added to items that are neither comm"
+3600223001,"Milk, nonfat solids-baby food/infant formula",Remaining weight of milk after subtracting milk fat and moi,"Includes casein; also, note that lactose added to commercial baby foods or i"
+3600224000,"Milk, water",Moisture content of milk,
+3600224001,"Milk, water-babyfood/infant formula",Moisture content of milk,
+3600225001,"Milk, sugar (lactose)-baby food/infant formula",dry weight of lactose- report only when consumed from baby,Includes lactose added to items that are either commercial baby foods or inf
+3700222501,"Milk, human",,
+3800221000,"Meat, game","weight of meat; excluding bone, trimmable fat and skin","Includes armadillo, bear, beaver, caribou, deer, elk, frog, groundhog, moose"
+3900312000,"Rabbit, meat","weight of meat; excluding bone, trimmable fat and skin",
+4000093000,"Chicken, meat","weight of flesh; excluding the weight of bone, total nutrie",
+4000093001,"Chicken, meat-babyfood","weight of flesh; excluding the weight of bone, total nutrie",
+4000094000,"Chicken, liver",weight of organ;  including nutrient fat,
+4000095000,"Chicken, meat byproducts",weight of meat; excluding bone; may include some trimmable,"Includes giblets (heart), necks, gizzard, feet, and tail."
+4000095001,"Chicken, meat byproducts-babyfood",weight of meat; excluding bone; may include some trimmable,"Includes giblets (heart), necks, gizzard, feet, and tail."
+4000096000,"Chicken, fat",weight of nutrient fat only; includes weight of nutrient fa,
+4000096001,"Chicken, fat-babyfood",weight of nutrient fat only; includes weight of nutrient fa,
+4000097000,"Chicken, skin",weight of skin only (0 grams nutrient fat),
+4000097001,"Chicken, skin-babyfood",weight of skin only (0 grams nutrient fat),
+5000382000,"Turkey, meat","weight of meat; excluding bone, all nutrient fat, and skin",
+5000382001,"Turkey, meat-babyfood","weight of meat; excluding bone, all nutrient fat, and skin",
+5000383000,"Turkey, liver","weight of organ, including nutrient fat",
+5000383001,"Turkey, liver-babyfood","weight of organ, including nutrient fat",
+5000384000,"Turkey, meat byproducts",weight of meat; excluding bone (may contain some fat and/or,"Includes gizzard, heart, neck, and tail."
+5000384001,"Turkey, meat byproducts-babyfood",weight of meat; excluding bone (may contain some fat and/or,"Includes gizzard, heart, neck, and tail."
+5000385000,"Turkey, fat",weight of nutrient  fat only; includes nutrient fat from me,
+5000385001,"Turkey, fat-babyfood",weight of nutrient  fat only; includes nutrient fat from me,
+5000386000,"Turkey, skin",weight of skin only (0 grams nutrient fat),
+5000386001,"Turkey, skin-babyfood",weight of skin only (0 grams nutrient fat),
+6000301000,"Poultry, other, meat","weight of meat; excluding weight of bone, and all nutrient","Includes dove, duck, emu, goose, guinea hen, ostrich, partridge, pheasant, p"
+6000302000,"Poultry, other, liver","weight of organ, including nutrient fat","Includes dove, duck, emu, goose, guinea hen, ostrich, partridge, pheasant, p"
+6000303000,"Poultry, other, meat byproducts",weight of meat; excluding bone; may contain some trimmable,"Includes dove, duck, emu, goose, guinea hen, ostrich, partridge, pheasant, p"
+6000304000,"Poultry, other, fat",weight of nutrient  fat only; includes weight of nutrient f,"Includes dove, duck, emu, goose, guinea hen, ostrich, partridge, pheasant, p"
+6000305000,"Poultry, other, skin",weight of nutrient  fat only; includes weight of nutrient f,"Includes dove, duck, emu, goose, guinea hen, ostrich, partridge, pheasant, p"
+7000145000,"Egg, whole",weight of white and yolk; excluding shell,
+7000145001,"Egg, whole-babyfood",weight of white and yolk; excluding shell,
+7000146000,"Egg, white",weight of egg white,
+7000146001,"Egg, white (solids)-babyfood",rehydrated weight of egg white solids,
+7000147000,"Egg, yolk",weight of egg yolk,
+7000147001,"Egg, yolk-babyfood",weight of egg yolk,
+8000157000,Fish-freshwater finfish,"weight of edible portion; excluding head, tail, scales, fin",See Appendix A (”The Fish List”) for categorization of various fish species
+8000158000,"Fish-freshwater finfish, farm raised","weight of edible portion; excluding head, tail, scales, fin",See Appendix A.
+8000159000,"Fish-saltwater finfish, tuna","weight of edible portion; excluding head, tail, scales, fin",See Appendix A.
+8000160000,"Fish-saltwater finfish, other","weight of edible portion; excluding head, tail, scales, fin",See Appendix A.
+8000161000,"Fish-shellfish, crustacean","weight of edible portion; excluding shell, gills, and visce",See Appendix A.
+8000162000,"Fish-shellfish, mollusc",weight of edible portion; excluding shells,See Appendix A.
+8601000000,"Water, direct, all sources",,
+8601100000,"Water, direct, tap",,
+8601200000,"Water, direct, bottled",,
+8601300000,"Water, direct, other",,
+8601400000,"Water, direct, source-NS",,
+8602000000,"Water, indirect, all sources",,
+8602100000,"Water, indirect, tap",,
+8602200000,"Water, indirect, bottled",,
+8602300000,"Water, indirect, other",,
+8602400000,"Water, indirect, source-NS",,
+9500006000,"Amaranth, grain",dry weight of grain; include Amaranth flour,
+9500016000,"Artichoke, globe",edible portion of flowerhead,
+9500054000,Belgium endive,weight of leaves,Also called Witloof chicory.
+9500109000,"Cocoa bean, chocolate",weight of chocolate; cocoa butter,
+9500110000,"Cocoa bean, powder",weight of powder,
+9500115000,"Coffee, roasted bean",dry weight of bean,
+9500116000,"Coffee, instant",dry weight of powder or granules,
+9500177000,"Grape, leaves",weight of leaves,
+9500186000,Honey,weight of honey,
+9500186001,Honey-babyfood,weight of honey,
+9500188000,Hop,weight of dried hops,
+9500218000,"Maple, sugar",dry weight of sugar,
+9500219000,Maple syrup,weight of syrup,
+9500244000,"Palm, oil",weight of oil,
+9500244001,"Palm, oil-babyfood",weight of oil,
+9500263000,Peanut,weight of nutmeat; excluding shell,
+9500264000,"Peanut, butter",weight of ground peanuts; excluding shell,
+9500265000,"Peanut, oil",weight of oil,
+9500275000,Peppermint,weight of leaves and stems,Includes other mints (Mentha spp.) except spearmint.
+9500276000,"Peppermint, oil",weight of oil,
+9500306000,"Psyllium, seed",dry weight of psyllium husks,
+9500311000,"Quinoa, grain",weight of grain or Quinoa flour,
+9500335000,Seaweed,weight of vegetation (wet and dry),"Includes algae, Irish moss, kelp, spirulina, agar, laver, and wakame."
+9500335001,Seaweed-babyfood,weight of vegetation (wet and dry),"Includes algae, Irish moss, kelp, spirulina, agar, laver, and wakame."
+9500352000,Spearmint,weight of leaves and stems,
+9500353000,"Spearmint, oil",weight of oil,
+9500362000,"Sugarcane, sugar",dry weight of cane sugar (sucrose),Sucrose is a disaccharide obtained from sugar cane and sugar beet.
+9500362001,"Sugarcane, sugar-babyfood",dry weight of cane sugar (sucrose),Sucrose is a disaccharide obtained from sugar cane and sugar beet.
+9500363000,"Sugarcane, molasses",weight of molasses,Includes blackstrap molasses.
+9500363001,"Sugarcane, molasses-babyfood",weight of molasses,
+9500372000,"Tea, dried",dry weight of tea leaves,
+9500373000,"Tea, instant",dry weight of powder,
+9500373500,"Teff, flour",dry weight of grain,
+9500390000,Vinegar,"Weight of vinegar made from apple, grape or rice juice in r",
+9500397000,Water chestnut,weight of tuber,
