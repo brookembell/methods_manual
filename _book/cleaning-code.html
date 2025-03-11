@@ -23,7 +23,7 @@
 <meta name="author" content="Brooke M. Bell" />
 
 
-<meta name="date" content="2025-03-10" />
+<meta name="date" content="2025-03-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -174,8 +174,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.3" data-path="cleaning-code.html"><a href="cleaning-code.html#rrs-for-bmi-and-cancer-and-6-for-bmi-and-cvd"><i class="fa fa-check"></i><b>3.2.3</b> (5) RRs for BMI and cancer and (6) for BMI and CVD</a></li>
 <li class="chapter" data-level="3.2.4" data-path="cleaning-code.html"><a href="cleaning-code.html#logrrs-for-diet-and-cancer-and-8-for-diet-and-cvd"><i class="fa fa-check"></i><b>3.2.4</b> (7) LogRRs for diet and cancer and (8) for diet and CVD</a></li>
 <li class="chapter" data-level="3.2.5" data-path="cleaning-code.html"><a href="cleaning-code.html#rrs-for-sbp-and-cvd"><i class="fa fa-check"></i><b>3.2.5</b> (9) RRs for SBP and CVD</a></li>
-<li class="chapter" data-level="3.2.6" data-path="cleaning-code.html"><a href="cleaning-code.html#current-intake-nhanes-11-tmred-14-counterfactual-and-12-other-health-data"><i class="fa fa-check"></i><b>3.2.6</b> (10) Current intake (NHANES), (11) TMRED, (14) Counterfactual, and (12) Other health data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="cleaning-code.html"><a href="cleaning-code.html#current-intake-nhanes-11-tmred-12-counterfactual-and-13-other-health-data"><i class="fa fa-check"></i><b>3.2.6</b> (10) Current intake (NHANES), (11) TMRED, (12) Counterfactual, and (13) Other health data</a></li>
 </ul></li>
+<li class="chapter" data-level="3.3" data-path="cleaning-code.html"><a href="cleaning-code.html#restructure-data"><i class="fa fa-check"></i><b>3.3</b> Restructure data</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model-code.html"><a href="model-code.html"><i class="fa fa-check"></i><b>4</b> Model Code</a></li>
 <li class="chapter" data-level="5" data-path="model-output-1.html"><a href="model-output-1.html"><i class="fa fa-check"></i><b>5</b> Model Output</a></li>
@@ -581,7 +582,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="dietary-intake" class="section level4 unnumbered hasAnchor">
 <h4>Dietary intake<a href="cleaning-code.html#dietary-intake" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Import the NHANES diet intake dataset and clean up.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="cleaning-code.html#cb39-1" tabindex="-1"></a>nhanes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_07-08-2024.csv&quot;</span>)</span>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="cleaning-code.html#cb39-1" tabindex="-1"></a>nhanes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_2025-03-10.csv&quot;</span>)</span>
 <span id="cb39-2"><a href="cleaning-code.html#cb39-2" tabindex="-1"></a></span>
 <span id="cb39-3"><a href="cleaning-code.html#cb39-3" tabindex="-1"></a>nhanes1 <span class="ot">&lt;-</span> nhanes <span class="sc">%&gt;%</span> </span>
 <span id="cb39-4"><a href="cleaning-code.html#cb39-4" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">&quot;Foodgroup&quot;</span> <span class="ot">=</span> <span class="st">&quot;food&quot;</span>,</span>
@@ -690,95 +691,85 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb46-2"><a href="cleaning-code.html#cb46-2" tabindex="-1"></a><span class="co"># This function was written by Fred</span></span>
 <span id="cb46-3"><a href="cleaning-code.html#cb46-3" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;/Users/bmb73/Documents/GitHub/LASTING/Code/swap.r&quot;</span>)</span>
 <span id="cb46-4"><a href="cleaning-code.html#cb46-4" tabindex="-1"></a></span>
-<span id="cb46-5"><a href="cleaning-code.html#cb46-5" tabindex="-1"></a>raw.file <span class="ot">&lt;-</span> cvd_cancer_merged2</span>
+<span id="cb46-5"><a href="cleaning-code.html#cb46-5" tabindex="-1"></a>raw_file <span class="ot">&lt;-</span> cvd_cancer_merged2</span>
 <span id="cb46-6"><a href="cleaning-code.html#cb46-6" tabindex="-1"></a></span>
 <span id="cb46-7"><a href="cleaning-code.html#cb46-7" tabindex="-1"></a><span class="co"># remove all cancers and total stroke outcome categories</span></span>
-<span id="cb46-8"><a href="cleaning-code.html#cb46-8" tabindex="-1"></a>raw.file <span class="ot">&lt;-</span> raw.file <span class="sc">%&gt;%</span></span>
-<span id="cb46-9"><a href="cleaning-code.html#cb46-9" tabindex="-1"></a>  <span class="fu">filter</span>(diseases <span class="sc">!=</span> <span class="st">&quot;ALL&quot;</span> <span class="sc">&amp;</span> diseases <span class="sc">!=</span> <span class="st">&quot;TSTK&quot;</span>)</span>
-<span id="cb46-10"><a href="cleaning-code.html#cb46-10" tabindex="-1"></a></span>
-<span id="cb46-11"><a href="cleaning-code.html#cb46-11" tabindex="-1"></a><span class="co"># remove BMImed and SBPmed for now</span></span>
-<span id="cb46-12"><a href="cleaning-code.html#cb46-12" tabindex="-1"></a>index <span class="ot">&lt;-</span> <span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;_medBMI|_medSBP&quot;</span>, <span class="at">x=</span>raw.file<span class="sc">$</span>diseases)</span>
-<span id="cb46-13"><a href="cleaning-code.html#cb46-13" tabindex="-1"></a>raw.file <span class="ot">&lt;-</span> raw.file[<span class="sc">-</span>index,]</span>
-<span id="cb46-14"><a href="cleaning-code.html#cb46-14" tabindex="-1"></a></span>
-<span id="cb46-15"><a href="cleaning-code.html#cb46-15" tabindex="-1"></a><span class="co"># Fix Sex var</span></span>
-<span id="cb46-16"><a href="cleaning-code.html#cb46-16" tabindex="-1"></a>raw.file<span class="sc">$</span>Sex <span class="ot">&lt;-</span> <span class="fu">factor</span>(raw.file<span class="sc">$</span>Sex)</span>
-<span id="cb46-17"><a href="cleaning-code.html#cb46-17" tabindex="-1"></a>raw.file<span class="sc">$</span>SexTemp <span class="ot">&lt;-</span> <span class="fu">as.character</span>(raw.file<span class="sc">$</span>Sex)</span>
-<span id="cb46-18"><a href="cleaning-code.html#cb46-18" tabindex="-1"></a>raw.file<span class="sc">$</span>SexTemp <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(raw.file<span class="sc">$</span>SexTemp)</span>
-<span id="cb46-19"><a href="cleaning-code.html#cb46-19" tabindex="-1"></a></span>
-<span id="cb46-20"><a href="cleaning-code.html#cb46-20" tabindex="-1"></a><span class="co"># set SE</span></span>
-<span id="cb46-21"><a href="cleaning-code.html#cb46-21" tabindex="-1"></a>raw.file<span class="sc">$</span>se <span class="ot">&lt;-</span> raw.file<span class="sc">$</span>crude_se</span>
-<span id="cb46-22"><a href="cleaning-code.html#cb46-22" tabindex="-1"></a></span>
-<span id="cb46-23"><a href="cleaning-code.html#cb46-23" tabindex="-1"></a><span class="co"># rename disease</span></span>
-<span id="cb46-24"><a href="cleaning-code.html#cb46-24" tabindex="-1"></a>raw.file <span class="ot">&lt;-</span> raw.file <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="st">&quot;disease&quot;</span> <span class="ot">=</span> <span class="st">&quot;diseases&quot;</span>)</span>
-<span id="cb46-25"><a href="cleaning-code.html#cb46-25" tabindex="-1"></a></span>
-<span id="cb46-26"><a href="cleaning-code.html#cb46-26" tabindex="-1"></a>vars.to.keep <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;disease&quot;</span>, <span class="st">&quot;subgroup&quot;</span>,</span>
-<span id="cb46-27"><a href="cleaning-code.html#cb46-27" tabindex="-1"></a>                <span class="st">&quot;Sex&quot;</span>, <span class="st">&quot;Age_label&quot;</span>, <span class="st">&quot;Race_label&quot;</span>,</span>
-<span id="cb46-28"><a href="cleaning-code.html#cb46-28" tabindex="-1"></a>                <span class="st">&quot;count&quot;</span>, <span class="st">&quot;se&quot;</span>)</span>
-<span id="cb46-29"><a href="cleaning-code.html#cb46-29" tabindex="-1"></a></span>
-<span id="cb46-30"><a href="cleaning-code.html#cb46-30" tabindex="-1"></a>mort <span class="ot">&lt;-</span> raw.file[,vars.to.keep]</span>
-<span id="cb46-31"><a href="cleaning-code.html#cb46-31" tabindex="-1"></a></span>
-<span id="cb46-32"><a href="cleaning-code.html#cb46-32" tabindex="-1"></a>mort.wide <span class="ot">&lt;-</span> <span class="fu">reshape</span>(mort,</span>
-<span id="cb46-33"><a href="cleaning-code.html#cb46-33" tabindex="-1"></a>                   <span class="at">timevar=</span><span class="st">&quot;disease&quot;</span>,</span>
-<span id="cb46-34"><a href="cleaning-code.html#cb46-34" tabindex="-1"></a>                   <span class="at">idvar=</span><span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;Sex&quot;</span>, <span class="st">&quot;Age_label&quot;</span>, <span class="st">&quot;Race_label&quot;</span>),</span>
-<span id="cb46-35"><a href="cleaning-code.html#cb46-35" tabindex="-1"></a>                   <span class="at">direction=</span><span class="st">&quot;wide&quot;</span>)</span>
-<span id="cb46-36"><a href="cleaning-code.html#cb46-36" tabindex="-1"></a></span>
-<span id="cb46-37"><a href="cleaning-code.html#cb46-37" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="fu">dim</span>(mort.wide)[<span class="dv">2</span>])</span>
-<span id="cb46-38"><a href="cleaning-code.html#cb46-38" tabindex="-1"></a>{</span>
-<span id="cb46-39"><a href="cleaning-code.html#cb46-39" tabindex="-1"></a>  mort.wide[,i][<span class="fu">is.na</span>(mort.wide[,i])]<span class="ot">&lt;-</span><span class="dv">0</span></span>
-<span id="cb46-40"><a href="cleaning-code.html#cb46-40" tabindex="-1"></a>}</span>
-<span id="cb46-41"><a href="cleaning-code.html#cb46-41" tabindex="-1"></a></span>
-<span id="cb46-42"><a href="cleaning-code.html#cb46-42" tabindex="-1"></a>mort.wide<span class="sc">$</span>agecat <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(mort.wide<span class="sc">$</span>Age_label))</span>
-<span id="cb46-43"><a href="cleaning-code.html#cb46-43" tabindex="-1"></a>mort.wide<span class="sc">$</span>female <span class="ot">&lt;-</span> <span class="fu">swap</span>(<span class="fu">as.numeric</span>(mort.wide<span class="sc">$</span>Sex)<span class="sc">-</span><span class="dv">1</span>, <span class="at">from=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">to=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>))</span>
-<span id="cb46-44"><a href="cleaning-code.html#cb46-44" tabindex="-1"></a>mort.wide<span class="sc">$</span>race <span class="ot">&lt;-</span> <span class="fu">swap</span>(<span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(mort.wide<span class="sc">$</span>Race_label)), <span class="at">from=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">to=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">4</span>))</span>
-<span id="cb46-45"><a href="cleaning-code.html#cb46-45" tabindex="-1"></a>mort.wide<span class="sc">$</span>racecat <span class="ot">&lt;-</span> mort.wide<span class="sc">$</span>race</span>
-<span id="cb46-46"><a href="cleaning-code.html#cb46-46" tabindex="-1"></a></span>
-<span id="cb46-47"><a href="cleaning-code.html#cb46-47" tabindex="-1"></a><span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;count&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))] <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;count.&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;&quot;</span>,</span>
-<span id="cb46-48"><a href="cleaning-code.html#cb46-48" tabindex="-1"></a>                                                                        <span class="at">x=</span><span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;count&quot;</span>,</span>
-<span id="cb46-49"><a href="cleaning-code.html#cb46-49" tabindex="-1"></a>                                                                                                <span class="at">x=</span><span class="fu">names</span>(mort.wide))]),</span>
-<span id="cb46-50"><a href="cleaning-code.html#cb46-50" tabindex="-1"></a>                                                                   <span class="st">&quot;mn&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb46-51"><a href="cleaning-code.html#cb46-51" tabindex="-1"></a></span>
-<span id="cb46-52"><a href="cleaning-code.html#cb46-52" tabindex="-1"></a><span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))] <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;se.&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;&quot;</span>,</span>
-<span id="cb46-53"><a href="cleaning-code.html#cb46-53" tabindex="-1"></a>                                                                     <span class="at">x=</span><span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>,</span>
-<span id="cb46-54"><a href="cleaning-code.html#cb46-54" tabindex="-1"></a>                                                                                             <span class="at">x=</span><span class="fu">names</span>(mort.wide))]),</span>
-<span id="cb46-55"><a href="cleaning-code.html#cb46-55" tabindex="-1"></a>                                                                <span class="st">&quot;se&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb46-8"><a href="cleaning-code.html#cb46-8" tabindex="-1"></a>raw_file1 <span class="ot">&lt;-</span> raw_file <span class="sc">%&gt;%</span></span>
+<span id="cb46-9"><a href="cleaning-code.html#cb46-9" tabindex="-1"></a>  <span class="co"># remove all cancers and total stroke outcome categories</span></span>
+<span id="cb46-10"><a href="cleaning-code.html#cb46-10" tabindex="-1"></a>  <span class="fu">filter</span>(diseases <span class="sc">!=</span> <span class="st">&quot;ALL&quot;</span> <span class="sc">&amp;</span> diseases <span class="sc">!=</span> <span class="st">&quot;TSTK&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb46-11"><a href="cleaning-code.html#cb46-11" tabindex="-1"></a>  <span class="co"># remove BMImed and SBPmed for now</span></span>
+<span id="cb46-12"><a href="cleaning-code.html#cb46-12" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">str_detect</span>(diseases, <span class="st">&quot;_medBMI|_medSBP&quot;</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb46-13"><a href="cleaning-code.html#cb46-13" tabindex="-1"></a>  <span class="co"># Fix Sex var</span></span>
+<span id="cb46-14"><a href="cleaning-code.html#cb46-14" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Sex =</span> <span class="fu">factor</span>(Sex),</span>
+<span id="cb46-15"><a href="cleaning-code.html#cb46-15" tabindex="-1"></a>         <span class="at">SexTemp =</span> <span class="fu">as.character</span>(Sex),</span>
+<span id="cb46-16"><a href="cleaning-code.html#cb46-16" tabindex="-1"></a>         <span class="at">SexTemp =</span> <span class="fu">as.factor</span>(SexTemp),</span>
+<span id="cb46-17"><a href="cleaning-code.html#cb46-17" tabindex="-1"></a>         <span class="co"># set SE</span></span>
+<span id="cb46-18"><a href="cleaning-code.html#cb46-18" tabindex="-1"></a>         <span class="at">se =</span> crude_se) <span class="sc">%&gt;%</span> </span>
+<span id="cb46-19"><a href="cleaning-code.html#cb46-19" tabindex="-1"></a>  <span class="co"># rename disease</span></span>
+<span id="cb46-20"><a href="cleaning-code.html#cb46-20" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">&quot;disease&quot;</span> <span class="ot">=</span> <span class="st">&quot;diseases&quot;</span>)</span>
+<span id="cb46-21"><a href="cleaning-code.html#cb46-21" tabindex="-1"></a></span>
+<span id="cb46-22"><a href="cleaning-code.html#cb46-22" tabindex="-1"></a><span class="co"># select subset of variables</span></span>
+<span id="cb46-23"><a href="cleaning-code.html#cb46-23" tabindex="-1"></a>mort <span class="ot">&lt;-</span> raw_file1 <span class="sc">%&gt;%</span> </span>
+<span id="cb46-24"><a href="cleaning-code.html#cb46-24" tabindex="-1"></a>  <span class="fu">select</span>(disease, subgroup, count, se) <span class="sc">%&gt;%</span> </span>
+<span id="cb46-25"><a href="cleaning-code.html#cb46-25" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">mn =</span> count)</span>
+<span id="cb46-26"><a href="cleaning-code.html#cb46-26" tabindex="-1"></a></span>
+<span id="cb46-27"><a href="cleaning-code.html#cb46-27" tabindex="-1"></a><span class="co"># transform long to wide</span></span>
+<span id="cb46-28"><a href="cleaning-code.html#cb46-28" tabindex="-1"></a>mort_wide <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(mort,</span>
+<span id="cb46-29"><a href="cleaning-code.html#cb46-29" tabindex="-1"></a>                         <span class="at">id_cols =</span> subgroup,</span>
+<span id="cb46-30"><a href="cleaning-code.html#cb46-30" tabindex="-1"></a>                         <span class="at">names_from =</span> disease,</span>
+<span id="cb46-31"><a href="cleaning-code.html#cb46-31" tabindex="-1"></a>                         <span class="at">values_from =</span> <span class="fu">c</span>(mn, se),</span>
+<span id="cb46-32"><a href="cleaning-code.html#cb46-32" tabindex="-1"></a>                         <span class="at">names_glue =</span> <span class="st">&quot;{disease}{.value}&quot;</span>)</span>
+<span id="cb46-33"><a href="cleaning-code.html#cb46-33" tabindex="-1"></a></span>
+<span id="cb46-34"><a href="cleaning-code.html#cb46-34" tabindex="-1"></a><span class="co"># replace na with 0</span></span>
+<span id="cb46-35"><a href="cleaning-code.html#cb46-35" tabindex="-1"></a>mort_wide1 <span class="ot">&lt;-</span> mort_wide <span class="sc">%&gt;%</span> </span>
+<span id="cb46-36"><a href="cleaning-code.html#cb46-36" tabindex="-1"></a>  <span class="fu">replace</span>(<span class="fu">is.na</span>(.), <span class="dv">0</span>)</span>
+<span id="cb46-37"><a href="cleaning-code.html#cb46-37" tabindex="-1"></a></span>
+<span id="cb46-38"><a href="cleaning-code.html#cb46-38" tabindex="-1"></a><span class="co"># merge with subgroup info</span></span>
+<span id="cb46-39"><a href="cleaning-code.html#cb46-39" tabindex="-1"></a>subgrps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/OTHER/labels/DATA/population_subgroups_48_060923_FINAL.csv&quot;</span>)</span>
+<span id="cb46-40"><a href="cleaning-code.html#cb46-40" tabindex="-1"></a></span>
+<span id="cb46-41"><a href="cleaning-code.html#cb46-41" tabindex="-1"></a><span class="co"># join</span></span>
+<span id="cb46-42"><a href="cleaning-code.html#cb46-42" tabindex="-1"></a>mort_wide2 <span class="ot">&lt;-</span> mort_wide1 <span class="sc">%&gt;%</span> </span>
+<span id="cb46-43"><a href="cleaning-code.html#cb46-43" tabindex="-1"></a>  <span class="fu">left_join</span>(subgrps, <span class="at">by =</span> <span class="st">&quot;subgroup&quot;</span>)</span>
+<span id="cb46-44"><a href="cleaning-code.html#cb46-44" tabindex="-1"></a></span>
+<span id="cb46-45"><a href="cleaning-code.html#cb46-45" tabindex="-1"></a>mort_wide3 <span class="ot">&lt;-</span> mort_wide2 <span class="sc">%&gt;%</span> </span>
+<span id="cb46-46"><a href="cleaning-code.html#cb46-46" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">agecat =</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(Age_label)),</span>
+<span id="cb46-47"><a href="cleaning-code.html#cb46-47" tabindex="-1"></a>         <span class="at">female =</span> <span class="fu">ifelse</span>(Sex_label <span class="sc">==</span> <span class="st">&quot;Female&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb46-48"><a href="cleaning-code.html#cb46-48" tabindex="-1"></a>         <span class="at">race =</span> <span class="fu">as.numeric</span>(Race),</span>
+<span id="cb46-49"><a href="cleaning-code.html#cb46-49" tabindex="-1"></a>         <span class="at">racecat =</span> race)</span>
+<span id="cb46-50"><a href="cleaning-code.html#cb46-50" tabindex="-1"></a></span>
+<span id="cb46-51"><a href="cleaning-code.html#cb46-51" tabindex="-1"></a><span class="co"># rearrange variable order</span></span>
+<span id="cb46-52"><a href="cleaning-code.html#cb46-52" tabindex="-1"></a>mort_wide4 <span class="ot">&lt;-</span> mort_wide3 <span class="sc">%&gt;%</span> </span>
+<span id="cb46-53"><a href="cleaning-code.html#cb46-53" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup, agecat, female, race, racecat, Age, Age_label, Sex, Sex_label, Race, Race_label, <span class="fu">ends_with</span>(<span class="st">&quot;mn&quot;</span>), <span class="fu">ends_with</span>(<span class="st">&quot;se&quot;</span>))</span>
+<span id="cb46-54"><a href="cleaning-code.html#cb46-54" tabindex="-1"></a></span>
+<span id="cb46-55"><a href="cleaning-code.html#cb46-55" tabindex="-1"></a><span class="co"># brooke fix this later</span></span>
 <span id="cb46-56"><a href="cleaning-code.html#cb46-56" tabindex="-1"></a></span>
-<span id="cb46-57"><a href="cleaning-code.html#cb46-57" tabindex="-1"></a></span>
-<span id="cb46-58"><a href="cleaning-code.html#cb46-58" tabindex="-1"></a>ideal.order <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;agecat&quot;</span>, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;race&quot;</span>, <span class="st">&quot;Age_label&quot;</span>, <span class="st">&quot;Sex&quot;</span>, <span class="st">&quot;Race_label&quot;</span>, <span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))],</span>
-<span id="cb46-59"><a href="cleaning-code.html#cb46-59" tabindex="-1"></a>               <span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))])</span>
-<span id="cb46-60"><a href="cleaning-code.html#cb46-60" tabindex="-1"></a></span>
-<span id="cb46-61"><a href="cleaning-code.html#cb46-61" tabindex="-1"></a>mort.wide <span class="ot">&lt;-</span> mort.wide[,ideal.order]</span>
+<span id="cb46-57"><a href="cleaning-code.html#cb46-57" tabindex="-1"></a>medBMI <span class="ot">&lt;-</span> mort_wide4[, <span class="fu">c</span>(<span class="fu">names</span>(mort_wide4)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort_wide4))],</span>
+<span id="cb46-58"><a href="cleaning-code.html#cb46-58" tabindex="-1"></a>                      <span class="fu">names</span>(mort_wide4)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort_wide4))])]</span>
+<span id="cb46-59"><a href="cleaning-code.html#cb46-59" tabindex="-1"></a></span>
+<span id="cb46-60"><a href="cleaning-code.html#cb46-60" tabindex="-1"></a><span class="fu">names</span>(medBMI)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="fu">names</span>(medBMI))] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;_medBMImn&quot;</span>,</span>
+<span id="cb46-61"><a href="cleaning-code.html#cb46-61" tabindex="-1"></a>                                                       <span class="at">x=</span><span class="fu">names</span>(medBMI[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="fu">names</span>(medBMI))]))</span>
 <span id="cb46-62"><a href="cleaning-code.html#cb46-62" tabindex="-1"></a></span>
-<span id="cb46-63"><a href="cleaning-code.html#cb46-63" tabindex="-1"></a>medBMI <span class="ot">&lt;-</span> mort.wide[, <span class="fu">c</span>(<span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))],</span>
-<span id="cb46-64"><a href="cleaning-code.html#cb46-64" tabindex="-1"></a>                      <span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))])]</span>
+<span id="cb46-63"><a href="cleaning-code.html#cb46-63" tabindex="-1"></a><span class="fu">names</span>(medBMI)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="fu">names</span>(medBMI))] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;_medBMIse&quot;</span>,</span>
+<span id="cb46-64"><a href="cleaning-code.html#cb46-64" tabindex="-1"></a>                                                       <span class="at">x=</span><span class="fu">names</span>(medBMI[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="fu">names</span>(medBMI))]))</span>
 <span id="cb46-65"><a href="cleaning-code.html#cb46-65" tabindex="-1"></a></span>
-<span id="cb46-66"><a href="cleaning-code.html#cb46-66" tabindex="-1"></a><span class="fu">names</span>(medBMI)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="fu">names</span>(medBMI))] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;_medBMImn&quot;</span>,</span>
-<span id="cb46-67"><a href="cleaning-code.html#cb46-67" tabindex="-1"></a>                                                       <span class="at">x=</span><span class="fu">names</span>(medBMI[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="fu">names</span>(medBMI))]))</span>
+<span id="cb46-66"><a href="cleaning-code.html#cb46-66" tabindex="-1"></a>medSBP <span class="ot">&lt;-</span> mort_wide4[, <span class="fu">c</span>(<span class="fu">names</span>(mort_wide4)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort_wide4))],</span>
+<span id="cb46-67"><a href="cleaning-code.html#cb46-67" tabindex="-1"></a>                      <span class="fu">names</span>(mort_wide4)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort_wide4))])]</span>
 <span id="cb46-68"><a href="cleaning-code.html#cb46-68" tabindex="-1"></a></span>
-<span id="cb46-69"><a href="cleaning-code.html#cb46-69" tabindex="-1"></a><span class="fu">names</span>(medBMI)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="fu">names</span>(medBMI))] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;_medBMIse&quot;</span>,</span>
-<span id="cb46-70"><a href="cleaning-code.html#cb46-70" tabindex="-1"></a>                                                       <span class="at">x=</span><span class="fu">names</span>(medBMI[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="fu">names</span>(medBMI))]))</span>
+<span id="cb46-69"><a href="cleaning-code.html#cb46-69" tabindex="-1"></a><span class="fu">names</span>(medSBP)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="fu">names</span>(medSBP))] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;_medSBPmn&quot;</span>,</span>
+<span id="cb46-70"><a href="cleaning-code.html#cb46-70" tabindex="-1"></a>                                                       <span class="at">x=</span><span class="fu">names</span>(medSBP[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="fu">names</span>(medSBP))]))</span>
 <span id="cb46-71"><a href="cleaning-code.html#cb46-71" tabindex="-1"></a></span>
-<span id="cb46-72"><a href="cleaning-code.html#cb46-72" tabindex="-1"></a>medSBP <span class="ot">&lt;-</span> mort.wide[, <span class="fu">c</span>(<span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))],</span>
-<span id="cb46-73"><a href="cleaning-code.html#cb46-73" tabindex="-1"></a>                      <span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))])]</span>
+<span id="cb46-72"><a href="cleaning-code.html#cb46-72" tabindex="-1"></a><span class="fu">names</span>(medSBP)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="fu">names</span>(medSBP))] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;_medSBPse&quot;</span>,</span>
+<span id="cb46-73"><a href="cleaning-code.html#cb46-73" tabindex="-1"></a>                                                       <span class="at">x=</span><span class="fu">names</span>(medSBP[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="fu">names</span>(medSBP))]))</span>
 <span id="cb46-74"><a href="cleaning-code.html#cb46-74" tabindex="-1"></a></span>
-<span id="cb46-75"><a href="cleaning-code.html#cb46-75" tabindex="-1"></a><span class="fu">names</span>(medSBP)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="fu">names</span>(medSBP))] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;_medSBPmn&quot;</span>,</span>
-<span id="cb46-76"><a href="cleaning-code.html#cb46-76" tabindex="-1"></a>                                                       <span class="at">x=</span><span class="fu">names</span>(medSBP[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="fu">names</span>(medSBP))]))</span>
-<span id="cb46-77"><a href="cleaning-code.html#cb46-77" tabindex="-1"></a></span>
-<span id="cb46-78"><a href="cleaning-code.html#cb46-78" tabindex="-1"></a><span class="fu">names</span>(medSBP)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="fu">names</span>(medSBP))] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;_medSBPse&quot;</span>,</span>
-<span id="cb46-79"><a href="cleaning-code.html#cb46-79" tabindex="-1"></a>                                                       <span class="at">x=</span><span class="fu">names</span>(medSBP[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="fu">names</span>(medSBP))]))</span>
-<span id="cb46-80"><a href="cleaning-code.html#cb46-80" tabindex="-1"></a></span>
-<span id="cb46-81"><a href="cleaning-code.html#cb46-81" tabindex="-1"></a>mort.wide <span class="ot">&lt;-</span> <span class="fu">cbind</span>(mort.wide, medBMI, medSBP)</span>
-<span id="cb46-82"><a href="cleaning-code.html#cb46-82" tabindex="-1"></a></span>
-<span id="cb46-83"><a href="cleaning-code.html#cb46-83" tabindex="-1"></a>new.ideal.order <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;agecat&quot;</span>, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;race&quot;</span>, <span class="st">&quot;Age_label&quot;</span>, <span class="st">&quot;Sex&quot;</span>, <span class="st">&quot;Race_label&quot;</span>, <span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mn&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))],</span>
-<span id="cb46-84"><a href="cleaning-code.html#cb46-84" tabindex="-1"></a>                   <span class="fu">names</span>(mort.wide)[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;se&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(mort.wide))])</span>
-<span id="cb46-85"><a href="cleaning-code.html#cb46-85" tabindex="-1"></a></span>
-<span id="cb46-86"><a href="cleaning-code.html#cb46-86" tabindex="-1"></a>mort.wide <span class="ot">&lt;-</span> mort.wide[,new.ideal.order]</span>
-<span id="cb46-87"><a href="cleaning-code.html#cb46-87" tabindex="-1"></a></span>
-<span id="cb46-88"><a href="cleaning-code.html#cb46-88" tabindex="-1"></a>mort.wide <span class="ot">&lt;-</span> mort.wide[<span class="fu">order</span>(mort.wide<span class="sc">$</span>agecat, mort.wide<span class="sc">$</span>female, mort.wide<span class="sc">$</span>race),]</span>
-<span id="cb46-89"><a href="cleaning-code.html#cb46-89" tabindex="-1"></a></span>
-<span id="cb46-90"><a href="cleaning-code.html#cb46-90" tabindex="-1"></a>mort.wide <span class="ot">&lt;-</span> mort.wide <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(subgroup)</span>
-<span id="cb46-91"><a href="cleaning-code.html#cb46-91" tabindex="-1"></a></span>
-<span id="cb46-92"><a href="cleaning-code.html#cb46-92" tabindex="-1"></a><span class="co"># export to FINAL folder</span></span>
-<span id="cb46-93"><a href="cleaning-code.html#cb46-93" tabindex="-1"></a><span class="fu">write_csv</span>(mort.wide, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_data/disease_incidence&quot;</span>, my_date))</span></code></pre></div>
+<span id="cb46-75"><a href="cleaning-code.html#cb46-75" tabindex="-1"></a>mort_wide5 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(mort_wide4, medBMI, medSBP)</span>
+<span id="cb46-76"><a href="cleaning-code.html#cb46-76" tabindex="-1"></a></span>
+<span id="cb46-77"><a href="cleaning-code.html#cb46-77" tabindex="-1"></a><span class="co"># fix order again</span></span>
+<span id="cb46-78"><a href="cleaning-code.html#cb46-78" tabindex="-1"></a>mort_wide6 <span class="ot">&lt;-</span> mort_wide5 <span class="sc">%&gt;%</span> </span>
+<span id="cb46-79"><a href="cleaning-code.html#cb46-79" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup, agecat, female, race, racecat, Age, Age_label, Sex, Sex_label, Race, Race_label, <span class="fu">ends_with</span>(<span class="st">&quot;mn&quot;</span>), <span class="fu">ends_with</span>(<span class="st">&quot;se&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb46-80"><a href="cleaning-code.html#cb46-80" tabindex="-1"></a>  <span class="fu">arrange</span>(subgroup)</span>
+<span id="cb46-81"><a href="cleaning-code.html#cb46-81" tabindex="-1"></a></span>
+<span id="cb46-82"><a href="cleaning-code.html#cb46-82" tabindex="-1"></a><span class="co"># export to FINAL folder</span></span>
+<span id="cb46-83"><a href="cleaning-code.html#cb46-83" tabindex="-1"></a><span class="fu">write_csv</span>(mort_wide6, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_data/disease_incidence&quot;</span>, my_date))</span></code></pre></div>
 </div>
 <div id="effect-sizes-for-diet-and-bmi-and-4-diet-and-sbp" class="section level3 hasAnchor" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> (3) Effect sizes for diet and BMI and (4) diet and SBP<a href="cleaning-code.html#effect-sizes-for-diet-and-bmi-and-4-diet-and-sbp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -890,7 +881,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb55-4"><a href="cleaning-code.html#cb55-4" tabindex="-1"></a>disease_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(disease_dat<span class="sc">$</span>outcome_label)</span>
 <span id="cb55-5"><a href="cleaning-code.html#cb55-5" tabindex="-1"></a></span>
 <span id="cb55-6"><a href="cleaning-code.html#cb55-6" tabindex="-1"></a><span class="co"># Retrieve list of dietary factors</span></span>
-<span id="cb55-7"><a href="cleaning-code.html#cb55-7" tabindex="-1"></a>diet_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/OTHER/labels/DATA/dietary_factors_060923_FINAL.csv&quot;</span>)</span>
+<span id="cb55-7"><a href="cleaning-code.html#cb55-7" tabindex="-1"></a>diet_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv&quot;</span>)</span>
 <span id="cb55-8"><a href="cleaning-code.html#cb55-8" tabindex="-1"></a>diet_factors <span class="ot">&lt;-</span> <span class="fu">c</span>(diet_dat<span class="sc">$</span>Food_group)</span>
 <span id="cb55-9"><a href="cleaning-code.html#cb55-9" tabindex="-1"></a></span>
 <span id="cb55-10"><a href="cleaning-code.html#cb55-10" tabindex="-1"></a><span class="co"># Retrieve population subgroups</span></span>
@@ -1350,8 +1341,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb59-107"><a href="cleaning-code.html#cb59-107" tabindex="-1"></a><span class="co"># export</span></span>
 <span id="cb59-108"><a href="cleaning-code.html#cb59-108" tabindex="-1"></a><span class="fu">write_csv</span>(allRRs, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/model_data/rr_agesexrace&quot;</span>, my_date))</span></code></pre></div>
 </div>
-<div id="current-intake-nhanes-11-tmred-14-counterfactual-and-12-other-health-data" class="section level3 hasAnchor" number="3.2.6">
-<h3><span class="header-section-number">3.2.6</span> (10) Current intake (NHANES), (11) TMRED, (14) Counterfactual, and (12) Other health data<a href="cleaning-code.html#current-intake-nhanes-11-tmred-14-counterfactual-and-12-other-health-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="current-intake-nhanes-11-tmred-12-counterfactual-and-13-other-health-data" class="section level3 hasAnchor" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> (10) Current intake (NHANES), (11) TMRED, (12) Counterfactual, and (13) Other health data<a href="cleaning-code.html#current-intake-nhanes-11-tmred-12-counterfactual-and-13-other-health-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Other health data includes overweight rate, average SBP, % with hypertension, and high SBP rate.</p>
 <p>The other health dataset does not need to be changed, but it needs to be merged with the NHANES dataset.</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="cleaning-code.html#cb60-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="st">&quot;my_date&quot;</span>))</span></code></pre></div>
@@ -1453,8 +1444,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb61-96"><a href="cleaning-code.html#cb61-96" tabindex="-1"></a></span>
 <span id="cb61-97"><a href="cleaning-code.html#cb61-97" tabindex="-1"></a><span class="co"># export file</span></span>
 <span id="cb61-98"><a href="cleaning-code.html#cb61-98" tabindex="-1"></a><span class="fu">write_csv</span>(merged1, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/model_data/nhanes1518_agesexrace_merged&quot;</span>, my_date))</span></code></pre></div>
-
 </div>
+</div>
+<div id="restructure-data" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Restructure data<a href="cleaning-code.html#restructure-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This script transforms the NHANES dataset to match the structure of hte cost/environment mega dataset.</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="cleaning-code.html#cb62-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="st">&quot;my_date&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="cleaning-code.html#cb63-1" tabindex="-1"></a><span class="co"># IMPORT NHANES DATA</span></span>
+<span id="cb63-2"><a href="cleaning-code.html#cb63-2" tabindex="-1"></a></span>
+<span id="cb63-3"><a href="cleaning-code.html#cb63-3" tabindex="-1"></a>nhanes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/model_data/nhanes1518_agesexrace_merged&quot;</span>, my_date))</span></code></pre></div>
+<pre><code>## Rows: 6480 Columns: 211
+## ── Column specification ────────────────────────────────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr   (9): Age_label, Race_label, diet, diet_label, Food_desc, diet_pattern, CF_intake_unit, TMRED_intake_unit, ...
+## dbl (202): subgroup, agecat, female, Sex, race, N, mean, se, sigma_u_wgt, pro_gro, CF_mean_intake, CF_se_intake,...
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="cleaning-code.html#cb65-1" tabindex="-1"></a><span class="co"># update variable names</span></span>
+<span id="cb65-2"><a href="cleaning-code.html#cb65-2" tabindex="-1"></a></span>
+<span id="cb65-3"><a href="cleaning-code.html#cb65-3" tabindex="-1"></a>nhanes1 <span class="ot">&lt;-</span> nhanes <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">subgroup_id =</span> subgroup,</span>
+<span id="cb65-4"><a href="cleaning-code.html#cb65-4" tabindex="-1"></a>                  <span class="at">Foodgroup =</span> diet,</span>
+<span id="cb65-5"><a href="cleaning-code.html#cb65-5" tabindex="-1"></a>                  <span class="at">Mean_Intake =</span> mean,</span>
+<span id="cb65-6"><a href="cleaning-code.html#cb65-6" tabindex="-1"></a>                  <span class="at">SE_Intake =</span> se,</span>
+<span id="cb65-7"><a href="cleaning-code.html#cb65-7" tabindex="-1"></a>                  <span class="at">CF_Mean_Intake =</span> CF_mean_intake,</span>
+<span id="cb65-8"><a href="cleaning-code.html#cb65-8" tabindex="-1"></a>                  <span class="at">CF_SE_Intake =</span> CF_se_intake,</span>
+<span id="cb65-9"><a href="cleaning-code.html#cb65-9" tabindex="-1"></a>                  <span class="at">TMRED_Mean_Intake =</span> TMRED_mean_intake,</span>
+<span id="cb65-10"><a href="cleaning-code.html#cb65-10" tabindex="-1"></a>                  <span class="at">TMRED_SD_Intake =</span> TMRED_sd_intake) <span class="sc">%&gt;%</span></span>
+<span id="cb65-11"><a href="cleaning-code.html#cb65-11" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">datatype=</span><span class="st">&quot;Total&quot;</span>,</span>
+<span id="cb65-12"><a href="cleaning-code.html#cb65-12" tabindex="-1"></a>         <span class="at">pro_nongro =</span> <span class="dv">1</span> <span class="sc">-</span> pro_gro) <span class="sc">%&gt;%</span> </span>
+<span id="cb65-13"><a href="cleaning-code.html#cb65-13" tabindex="-1"></a>  <span class="fu">relocate</span>(datatype, <span class="at">.after =</span> Food_desc) <span class="sc">%&gt;%</span> </span>
+<span id="cb65-14"><a href="cleaning-code.html#cb65-14" tabindex="-1"></a>  <span class="fu">relocate</span>(pro_nongro, <span class="at">.after =</span> pro_gro)</span>
+<span id="cb65-15"><a href="cleaning-code.html#cb65-15" tabindex="-1"></a></span>
+<span id="cb65-16"><a href="cleaning-code.html#cb65-16" tabindex="-1"></a><span class="co"># remove extra ssb rows</span></span>
+<span id="cb65-17"><a href="cleaning-code.html#cb65-17" tabindex="-1"></a>nhanes1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Foodgroup <span class="sc">==</span> <span class="st">&quot;ssb&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">View</span>()</span>
+<span id="cb65-18"><a href="cleaning-code.html#cb65-18" tabindex="-1"></a></span>
+<span id="cb65-19"><a href="cleaning-code.html#cb65-19" tabindex="-1"></a>nhanes2 <span class="ot">&lt;-</span> nhanes1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">is.na</span>(subgroup_id)))</span>
+<span id="cb65-20"><a href="cleaning-code.html#cb65-20" tabindex="-1"></a></span>
+<span id="cb65-21"><a href="cleaning-code.html#cb65-21" tabindex="-1"></a><span class="co"># create grocery data</span></span>
+<span id="cb65-22"><a href="cleaning-code.html#cb65-22" tabindex="-1"></a>grocery <span class="ot">&lt;-</span> nhanes2 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">datatype =</span> <span class="fu">recode</span>(datatype,</span>
+<span id="cb65-23"><a href="cleaning-code.html#cb65-23" tabindex="-1"></a>                                                <span class="st">`</span><span class="at">Total</span><span class="st">`</span> <span class="ot">=</span> <span class="st">&quot;Grocery&quot;</span>),</span>
+<span id="cb65-24"><a href="cleaning-code.html#cb65-24" tabindex="-1"></a>                              <span class="at">Mean_Intake =</span> Mean_Intake <span class="sc">*</span> pro_gro,</span>
+<span id="cb65-25"><a href="cleaning-code.html#cb65-25" tabindex="-1"></a>                              <span class="at">SE_Intake =</span> SE_Intake <span class="sc">*</span> pro_gro,</span>
+<span id="cb65-26"><a href="cleaning-code.html#cb65-26" tabindex="-1"></a>                              <span class="at">sigma_u_wgt =</span> sigma_u_wgt <span class="sc">*</span> pro_gro,</span>
+<span id="cb65-27"><a href="cleaning-code.html#cb65-27" tabindex="-1"></a>                              </span>
+<span id="cb65-28"><a href="cleaning-code.html#cb65-28" tabindex="-1"></a>                              <span class="at">CF_Mean_Intake =</span> CF_Mean_Intake <span class="sc">*</span> pro_gro,</span>
+<span id="cb65-29"><a href="cleaning-code.html#cb65-29" tabindex="-1"></a>                              <span class="at">CF_SE_Intake =</span> CF_SE_Intake <span class="sc">*</span> pro_gro,</span>
+<span id="cb65-30"><a href="cleaning-code.html#cb65-30" tabindex="-1"></a>                              <span class="at">CF_sd_intake =</span> CF_sd_intake <span class="sc">*</span> pro_gro)</span>
+<span id="cb65-31"><a href="cleaning-code.html#cb65-31" tabindex="-1"></a></span>
+<span id="cb65-32"><a href="cleaning-code.html#cb65-32" tabindex="-1"></a></span>
+<span id="cb65-33"><a href="cleaning-code.html#cb65-33" tabindex="-1"></a>nongrocery <span class="ot">&lt;-</span> nhanes2 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">datatype =</span> <span class="fu">recode</span>(datatype,</span>
+<span id="cb65-34"><a href="cleaning-code.html#cb65-34" tabindex="-1"></a>                                                   <span class="st">`</span><span class="at">Total</span><span class="st">`</span> <span class="ot">=</span> <span class="st">&quot;Non-Grocery&quot;</span>),</span>
+<span id="cb65-35"><a href="cleaning-code.html#cb65-35" tabindex="-1"></a>                                 <span class="at">Mean_Intake =</span> Mean_Intake <span class="sc">*</span> pro_nongro,</span>
+<span id="cb65-36"><a href="cleaning-code.html#cb65-36" tabindex="-1"></a>                                 <span class="at">SE_Intake =</span> SE_Intake <span class="sc">*</span> pro_nongro,</span>
+<span id="cb65-37"><a href="cleaning-code.html#cb65-37" tabindex="-1"></a>                                 <span class="at">sigma_u_wgt =</span> sigma_u_wgt <span class="sc">*</span> pro_nongro,</span>
+<span id="cb65-38"><a href="cleaning-code.html#cb65-38" tabindex="-1"></a>                                 </span>
+<span id="cb65-39"><a href="cleaning-code.html#cb65-39" tabindex="-1"></a>                                 <span class="at">CF_Mean_Intake =</span> CF_Mean_Intake <span class="sc">*</span> pro_nongro,</span>
+<span id="cb65-40"><a href="cleaning-code.html#cb65-40" tabindex="-1"></a>                                 <span class="at">CF_SE_Intake =</span> CF_SE_Intake <span class="sc">*</span> pro_nongro,</span>
+<span id="cb65-41"><a href="cleaning-code.html#cb65-41" tabindex="-1"></a>                                 <span class="at">CF_sd_intake =</span> CF_sd_intake <span class="sc">*</span> pro_nongro)</span>
+<span id="cb65-42"><a href="cleaning-code.html#cb65-42" tabindex="-1"></a></span>
+<span id="cb65-43"><a href="cleaning-code.html#cb65-43" tabindex="-1"></a></span>
+<span id="cb65-44"><a href="cleaning-code.html#cb65-44" tabindex="-1"></a><span class="co"># bind together</span></span>
+<span id="cb65-45"><a href="cleaning-code.html#cb65-45" tabindex="-1"></a>nhanes_comb <span class="ot">&lt;-</span> <span class="fu">rbind</span>(nhanes2, grocery, nongrocery)</span>
+<span id="cb65-46"><a href="cleaning-code.html#cb65-46" tabindex="-1"></a>  </span>
+<span id="cb65-47"><a href="cleaning-code.html#cb65-47" tabindex="-1"></a><span class="co"># rearrange</span></span>
+<span id="cb65-48"><a href="cleaning-code.html#cb65-48" tabindex="-1"></a>nhanes_comb1 <span class="ot">&lt;-</span> </span>
+<span id="cb65-49"><a href="cleaning-code.html#cb65-49" tabindex="-1"></a>  nhanes_comb <span class="sc">%&gt;%</span> </span>
+<span id="cb65-50"><a href="cleaning-code.html#cb65-50" tabindex="-1"></a>  <span class="fu">arrange</span>(subgroup_id, Foodgroup, datatype, diet_pattern) <span class="sc">%&gt;%</span> </span>
+<span id="cb65-51"><a href="cleaning-code.html#cb65-51" tabindex="-1"></a>  <span class="fu">relocate</span>(<span class="fu">c</span>(datatype, diet_pattern), <span class="at">.before =</span> Mean_Intake)</span>
+<span id="cb65-52"><a href="cleaning-code.html#cb65-52" tabindex="-1"></a></span>
+<span id="cb65-53"><a href="cleaning-code.html#cb65-53" tabindex="-1"></a><span class="co"># lastly, add 2018 population variable</span></span>
+<span id="cb65-54"><a href="cleaning-code.html#cb65-54" tabindex="-1"></a></span>
+<span id="cb65-55"><a href="cleaning-code.html#cb65-55" tabindex="-1"></a><span class="co"># read in population distribution</span></span>
+<span id="cb65-56"><a href="cleaning-code.html#cb65-56" tabindex="-1"></a>pop <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/population_distribution&quot;</span>, my_date))</span></code></pre></div>
+<pre><code>## Rows: 48 Columns: 2
+## ── Column specification ────────────────────────────────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## dbl (2): subgroup, 2018_pop
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="cleaning-code.html#cb67-1" tabindex="-1"></a>nhanes_comb2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(nhanes_comb1, pop, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup_id&quot;</span> <span class="ot">=</span> <span class="st">&quot;subgroup&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb67-2"><a href="cleaning-code.html#cb67-2" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">population =</span> <span class="st">`</span><span class="at">2018_pop</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb67-3"><a href="cleaning-code.html#cb67-3" tabindex="-1"></a>  <span class="fu">relocate</span>(population, <span class="at">.before =</span> overweight_rate)</span>
+<span id="cb67-4"><a href="cleaning-code.html#cb67-4" tabindex="-1"></a></span>
+<span id="cb67-5"><a href="cleaning-code.html#cb67-5" tabindex="-1"></a><span class="co"># export</span></span>
+<span id="cb67-6"><a href="cleaning-code.html#cb67-6" tabindex="-1"></a><span class="fu">write_csv</span>(nhanes_comb2, <span class="fu">paste0</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_data/mega_costenv_structure_temp&quot;</span>, my_date))</span></code></pre></div>
+
 </div>
 </div>
             </section>
