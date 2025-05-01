@@ -23,7 +23,7 @@
 <meta name="author" content="Brooke M. Bell" />
 
 
-<meta name="date" content="2025-02-19" />
+<meta name="date" content="2025-03-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -167,6 +167,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.2" data-path="cleaning-code.html"><a href="cleaning-code.html#health-data-inputs"><i class="fa fa-check"></i><b>3.1.2</b> Health Data Inputs</a></li>
 <li class="chapter" data-level="3.1.3" data-path="cleaning-code.html"><a href="cleaning-code.html#diet-data-inputs"><i class="fa fa-check"></i><b>3.1.3</b> Diet Data Inputs</a></li>
 </ul></li>
+<li class="chapter" data-level="3.2" data-path="cleaning-code.html"><a href="cleaning-code.html#clean-health-datasets"><i class="fa fa-check"></i><b>3.2</b> Clean Health Datasets</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="cleaning-code.html"><a href="cleaning-code.html#cancer-incidence-and-2-cvd-mortality"><i class="fa fa-check"></i><b>3.2.1</b> (1) Cancer incidence and (2) CVD mortality</a></li>
+<li class="chapter" data-level="3.2.2" data-path="cleaning-code.html"><a href="cleaning-code.html#effect-sizes-for-diet-and-bmi-and-4-diet-and-sbp"><i class="fa fa-check"></i><b>3.2.2</b> (3) Effect sizes for diet and BMI and (4) diet and SBP</a></li>
+<li class="chapter" data-level="3.2.3" data-path="cleaning-code.html"><a href="cleaning-code.html#rrs-for-bmi-and-cancer-and-6-for-bmi-and-cvd"><i class="fa fa-check"></i><b>3.2.3</b> (5) RRs for BMI and cancer and (6) for BMI and CVD</a></li>
+<li class="chapter" data-level="3.2.4" data-path="cleaning-code.html"><a href="cleaning-code.html#logrrs-for-diet-and-cancer-and-8-for-diet-and-cvd"><i class="fa fa-check"></i><b>3.2.4</b> (7) LogRRs for diet and cancer and (8) for diet and CVD</a></li>
+<li class="chapter" data-level="3.2.5" data-path="cleaning-code.html"><a href="cleaning-code.html#rrs-for-sbp-and-cvd"><i class="fa fa-check"></i><b>3.2.5</b> (9) RRs for SBP and CVD</a></li>
+<li class="chapter" data-level="3.2.6" data-path="cleaning-code.html"><a href="cleaning-code.html#current-intake-nhanes-11-tmred-12-counterfactual-and-13-other-health-data"><i class="fa fa-check"></i><b>3.2.6</b> (10) Current intake (NHANES), (11) TMRED, (12) Counterfactual, and (13) Other health data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="cleaning-code.html"><a href="cleaning-code.html#restructure-data"><i class="fa fa-check"></i><b>3.3</b> Restructure data</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model-code.html"><a href="model-code.html"><i class="fa fa-check"></i><b>4</b> Model Code</a></li>
 <li class="chapter" data-level="5" data-path="model-output-1.html"><a href="model-output-1.html"><i class="fa fa-check"></i><b>5</b> Model Output</a></li>
@@ -202,10 +212,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>This code produces four SAS datasets:</p>
 <ul>
-<li>meat_day1</li>
-<li>meat_day1_sum</li>
-<li>meat_day2</li>
-<li>meat_day2_sum</li>
+<li>meat_day1.sas7bdat</li>
+<li>meat_day1_sum.sas7bdat</li>
+<li>meat_day2.sas7bdat</li>
+<li>meat_day2_sum.sas7bdat</li>
 </ul>
 <p>We also have to disaggregate the organ meat food codes into “red meat” or “poultry” categories. I manually mapped various FNDDS codes that represented organ meats to either “red meat” or “poultry”. The mapping is here:</p>
 <ul>
