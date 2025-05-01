@@ -1,0 +1,7 @@
+outcome,unit_new,impact_new_CDP,LB_new_CDP,UB_new_CDP,impact_new_HUS,LB_new_HUS,UB_new_HUS,impact_new_MED,LB_new_MED,UB_new_MED,impact_new_PLNT,LB_new_PLNT,UB_new_PLNT,impact_new_VEG,LB_new_VEG,UB_new_VEG
+Bluewater use,billion L,0.09,0.01,0.18,1.64,1.56,1.72,1.93,1.84,2.01,-1.92,-2,-1.84,-0.39,-0.47,-0.31
+Cumulative energy demand,million MJ,41.14,36.8,45.7,155.45,150.96,159.61,283.14,279,287.27,-265.69,-269.95,-261.24,-139.4,-143.54,-134.81
+Food price,million USD,18.29,15.14,21.33,75.61,72.48,78.86,143.66,140.65,146.67,-131.28,-134.27,-128.12,-82.8,-85.93,-79.5
+Greenhouse gas emissions,million kgCO2-eq,-25.75,-26.71,-24.77,7.76,6.84,8.73,10.29,9.21,11.22,-69.48,-70.4,-68.49,-45.61,-46.53,-44.64
+Risk of forced labor,hundred thousand mrh-eq,2.69,1.64,3.85,33.83,32.84,34.91,50.91,49.77,51.91,-10.02,-11.01,-8.95,-16.41,-17.44,-15.3
+Water scarcity,billion L-eq,6.98,6.48,7.48,15.51,15.07,16.01,19.69,19.19,20.16,1.14,0.67,1.61,7.03,6.59,7.58
