@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Calculate Cost, Environment, and Social Impact Factors | LASTING Four-Pillar Model Methodology</title>
+  <meta name="description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Calculate Cost, Environment, and Social Impact Factors | LASTING Four-Pillar Model Methodology" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Calculate Cost, Environment, and Social Impact Factors | LASTING Four-Pillar Model Methodology" />
+  
+  <meta name="twitter:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  
+
+<meta name="author" content="Brooke M. Bell" />
+
+
+<meta name="date" content="2025-04-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cleaning-code-for-cost-data.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">LASTING Methods Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#github-repository"><i class="fa fa-check"></i>Github Repository</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#data-inputs"><i class="fa fa-check"></i>Data Inputs</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#model-output"><i class="fa fa-check"></i>Model Output</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html"><i class="fa fa-check"></i><b>1</b> Summary of Data Inputs</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#diet-inputs"><i class="fa fa-check"></i><b>1.1</b> Diet Inputs</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#counterfactual-intake"><i class="fa fa-check"></i><b>1.1.1</b> Counterfactual Intake</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html"><i class="fa fa-check"></i><b>2</b> Cleaning Code for NHANES Diet Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#processed-and-organ-meat"><i class="fa fa-check"></i><b>2.1</b> Processed and Organ Meat</a></li>
+<li class="chapter" data-level="2.2" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#clean-raw-nhanes-data"><i class="fa fa-check"></i><b>2.2</b> Clean Raw NHANES Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html"><i class="fa fa-check"></i><b>3</b> Cleaning Code for Health Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#create-final-data-inputs"><i class="fa fa-check"></i><b>3.1</b> Create Final Data Inputs</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#other-data-inputs"><i class="fa fa-check"></i><b>3.1.1</b> Other Data Inputs</a></li>
+<li class="chapter" data-level="3.1.2" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#health-data-inputs"><i class="fa fa-check"></i><b>3.1.2</b> Health Data Inputs</a></li>
+<li class="chapter" data-level="3.1.3" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#diet-data-inputs"><i class="fa fa-check"></i><b>3.1.3</b> Diet Data Inputs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#clean-health-datasets"><i class="fa fa-check"></i><b>3.2</b> Clean Health Datasets</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#cancer-incidence-and-2-cvd-mortality"><i class="fa fa-check"></i><b>3.2.1</b> (1) Cancer incidence and (2) CVD mortality</a></li>
+<li class="chapter" data-level="3.2.2" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#effect-sizes-for-diet-and-bmi-and-4-diet-and-sbp"><i class="fa fa-check"></i><b>3.2.2</b> (3) Effect sizes for diet and BMI and (4) diet and SBP</a></li>
+<li class="chapter" data-level="3.2.3" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#rrs-for-bmi-and-cancer-and-6-for-bmi-and-cvd"><i class="fa fa-check"></i><b>3.2.3</b> (5) RRs for BMI and cancer and (6) for BMI and CVD</a></li>
+<li class="chapter" data-level="3.2.4" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#logrrs-for-diet-and-cancer-and-8-for-diet-and-cvd"><i class="fa fa-check"></i><b>3.2.4</b> (7) LogRRs for diet and cancer and (8) for diet and CVD</a></li>
+<li class="chapter" data-level="3.2.5" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#rrs-for-sbp-and-cvd"><i class="fa fa-check"></i><b>3.2.5</b> (9) RRs for SBP and CVD</a></li>
+<li class="chapter" data-level="3.2.6" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#current-intake-nhanes-11-tmred-12-counterfactual-and-13-other-health-data"><i class="fa fa-check"></i><b>3.2.6</b> (10) Current intake (NHANES), (11) TMRED, (12) Counterfactual, and (13) Other health data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#restructure-data"><i class="fa fa-check"></i><b>3.3</b> Restructure data</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cleaning-code-for-environment-data.html"><a href="cleaning-code-for-environment-data.html"><i class="fa fa-check"></i><b>4</b> Cleaning Code for Environment Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cleaning-code-for-environment-data.html"><a href="cleaning-code-for-environment-data.html#clean-and-restructure-intermediary-datasets"><i class="fa fa-check"></i><b>4.1</b> Clean and Restructure Intermediary Datasets</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="cleaning-code-for-environment-data.html"><a href="cleaning-code-for-environment-data.html#import-and-merge-data-inputs"><i class="fa fa-check"></i><b>4.1.1</b> Import and Merge Data Inputs</a></li>
+<li class="chapter" data-level="4.1.2" data-path="cleaning-code-for-environment-data.html"><a href="cleaning-code-for-environment-data.html#calculate-average-environmental-and-social-impact-per-fcid-code"><i class="fa fa-check"></i><b>4.1.2</b> Calculate Average Environmental and Social Impact, Per FCID Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cleaning-code-for-cost-data.html"><a href="cleaning-code-for-cost-data.html"><i class="fa fa-check"></i><b>5</b> Cleaning Code for Cost Data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cleaning-code-for-cost-data.html"><a href="cleaning-code-for-cost-data.html#clean-and-restructure-intermediary-datasets-1"><i class="fa fa-check"></i><b>5.1</b> Clean and Restructure Intermediary Datasets</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="cleaning-code-for-cost-data.html"><a href="cleaning-code-for-cost-data.html#import-and-merge-data-inputs-1"><i class="fa fa-check"></i><b>5.1.1</b> Import and Merge Data Inputs</a></li>
+<li class="chapter" data-level="5.1.2" data-path="cleaning-code-for-cost-data.html"><a href="cleaning-code-for-cost-data.html#calculate-average-food-cost-per-fndds-food-code"><i class="fa fa-check"></i><b>5.1.2</b> Calculate Average Food Cost, Per FNDDS Food Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html"><i class="fa fa-check"></i><b>6</b> Calculate Cost, Environment, and Social Impact Factors</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#prepare-data"><i class="fa fa-check"></i><b>6.1</b> Prepare Data</a></li>
+<li class="chapter" data-level="6.2" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors"><i class="fa fa-check"></i><b>6.2</b> Cost Impact Factors</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors-by-food-by-subgroup"><i class="fa fa-check"></i><b>6.2.1</b> Cost Impact Factors, by Food, by Subgroup</a></li>
+<li class="chapter" data-level="6.2.2" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors-per-100-grams-and-per-1-dga-serving"><i class="fa fa-check"></i><b>6.2.2</b> Cost Impact Factors, Per 100 Grams and Per 1 DGA Serving</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#environmental-social-impact-factors"><i class="fa fa-check"></i><b>6.3</b> Environmental &amp; Social Impact Factors</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#environmental-social-impact-factors-by-food-by-subgroup"><i class="fa fa-check"></i><b>6.3.1</b> Environmental &amp; Social Impact Factors, by Food, by Subgroup</a></li>
+<li class="chapter" data-level="6.3.2" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#environmentsocial-impact-factors-per-100-grams-and-per-1-dga-serving"><i class="fa fa-check"></i><b>6.3.2</b> Environment/Social Impact Factors, Per 100 Grams and Per 1 DGA Serving</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#finalize-impact-factors"><i class="fa fa-check"></i><b>6.4</b> Finalize Impact Factors</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#merge-cost-environment-and-social-impact-factors"><i class="fa fa-check"></i><b>6.4.1</b> Merge Cost, Environment, and Social Impact Factors</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#calculate-inedible-and-wasted-proportions"><i class="fa fa-check"></i><b>6.5</b> Calculate Inedible and Wasted Proportions</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#environmentsocial"><i class="fa fa-check"></i><b>6.5.1</b> Environment/Social</a></li>
+<li class="chapter" data-level="6.5.2" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#cost"><i class="fa fa-check"></i><b>6.5.2</b> Cost</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#export-data"><i class="fa fa-check"></i><b>6.6</b> Export Data</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LASTING Four-Pillar Model Methodology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="calculate-cost-environment-and-social-impact-factors" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Calculate Cost, Environment, and Social Impact Factors<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-cost-environment-and-social-impact-factors" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter walks you through all of the R code used to calculate the impact factors that are used in the final model. Additionally, the food group-level inedible and wasted proportions are calculated at the end.</p>
+<p>Note that you must first open the ‘methods_manual’ R project before running this script or else it will not work.</p>
+<p>First, let’s set up our environment.</p>
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb371-1" tabindex="-1"></a><span class="co"># check working directory</span></span>
+<span id="cb371-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb371-2" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;/Users/bmb73/Library/CloudStorage/Box-Box/lasting_aim_3/model development/methods_manual&quot;</code></pre>
+<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-1" tabindex="-1"></a><span class="co"># SET UP -----</span></span>
+<span id="cb373-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-2" tabindex="-1"></a></span>
+<span id="cb373-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-3" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb373-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-4" tabindex="-1"></a></span>
+<span id="cb373-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-5" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>)</span>
+<span id="cb373-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-6" tabindex="-1"></a></span>
+<span id="cb373-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-7" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb373-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-8" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb373-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-9" tabindex="-1"></a><span class="fu">library</span>(survey)</span>
+<span id="cb373-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-10" tabindex="-1"></a><span class="fu">library</span>(bookdown)</span>
+<span id="cb373-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-11" tabindex="-1"></a></span>
+<span id="cb373-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb373-12" tabindex="-1"></a>my_date <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span></code></pre></div>
+<div id="prepare-data" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Prepare Data<a href="calculate-cost-environment-and-social-impact-factors.html#prepare-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First, we need to import the NHANES dataset to get the survey weight variables that are necessary to incorporate when calculating mean estimates from NHANES data. See more information here: <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx" class="uri">https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx</a></p>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb374-1" tabindex="-1"></a><span class="co"># import subgroup-seqn mapping</span></span>
+<span id="cb374-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb374-2" tabindex="-1"></a>nhanes <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="st">&quot;data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.rds&quot;</span>)</span>
+<span id="cb374-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb374-3" tabindex="-1"></a></span>
+<span id="cb374-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb374-4" tabindex="-1"></a><span class="co"># select subset of variables</span></span>
+<span id="cb374-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb374-5" tabindex="-1"></a>subgroup_dat <span class="ot">&lt;-</span> nhanes <span class="sc">%&gt;%</span> <span class="fu">select</span>(SEQN, subgroup, SDMVPSU, SDMVSTRA, wtnew, inAnalysis)</span></code></pre></div>
+<p>Then, create a cleaning function that will be used to clean the output summary data from the “svymean” function used below.</p>
+<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb375-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-1" tabindex="-1"></a>clean_func <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb375-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-2" tabindex="-1"></a>  </span>
+<span id="cb375-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-3" tabindex="-1"></a>  x1 <span class="ot">&lt;-</span> x <span class="sc">%&gt;%</span> <span class="fu">select</span>(subgroup, <span class="fu">contains</span>(y))</span>
+<span id="cb375-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-4" tabindex="-1"></a>  </span>
+<span id="cb375-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-5" tabindex="-1"></a>  <span class="co"># split up into mean and se</span></span>
+<span id="cb375-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-6" tabindex="-1"></a>  my_se <span class="ot">&lt;-</span> x1 <span class="sc">%&gt;%</span> <span class="fu">select</span>(subgroup, <span class="fu">starts_with</span>(<span class="st">&quot;se.&quot;</span>))</span>
+<span id="cb375-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-7" tabindex="-1"></a>  my_mean <span class="ot">&lt;-</span> x1 <span class="sc">%&gt;%</span> <span class="fu">select</span>(subgroup, <span class="sc">!</span><span class="fu">starts_with</span>(<span class="st">&quot;se.&quot;</span>))</span>
+<span id="cb375-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-8" tabindex="-1"></a>  </span>
+<span id="cb375-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-9" tabindex="-1"></a>  <span class="co"># transform both datsets to long</span></span>
+<span id="cb375-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-10" tabindex="-1"></a>  my_se_long <span class="ot">&lt;-</span> my_se <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;se.&quot;</span>),</span>
+<span id="cb375-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-11" tabindex="-1"></a>                                       <span class="at">names_to =</span> <span class="st">&quot;food&quot;</span>,</span>
+<span id="cb375-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-12" tabindex="-1"></a>                                       <span class="at">names_prefix =</span> <span class="fu">c</span>(<span class="st">&quot;se.&quot;</span>),</span>
+<span id="cb375-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-13" tabindex="-1"></a>                                       <span class="at">values_to =</span> <span class="fu">paste0</span>(y, <span class="st">&quot;_se&quot;</span>))</span>
+<span id="cb375-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-14" tabindex="-1"></a>  </span>
+<span id="cb375-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-15" tabindex="-1"></a>  my_mean_long <span class="ot">&lt;-</span> my_mean <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">!</span>subgroup,</span>
+<span id="cb375-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-16" tabindex="-1"></a>                                           <span class="at">names_to =</span> <span class="st">&quot;food&quot;</span>,</span>
+<span id="cb375-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-17" tabindex="-1"></a>                                           <span class="at">values_to =</span> <span class="fu">paste0</span>(y, <span class="st">&quot;_mean&quot;</span>))</span>
+<span id="cb375-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-18" tabindex="-1"></a>  </span>
+<span id="cb375-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-19" tabindex="-1"></a>  <span class="co"># join</span></span>
+<span id="cb375-20"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-20" tabindex="-1"></a>  allfoods_bysub_long <span class="ot">&lt;-</span> <span class="fu">left_join</span>(my_mean_long, my_se_long, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>))</span>
+<span id="cb375-21"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-21" tabindex="-1"></a>  </span>
+<span id="cb375-22"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-22" tabindex="-1"></a>  <span class="co"># fix names</span></span>
+<span id="cb375-23"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-23" tabindex="-1"></a>  dat <span class="ot">&lt;-</span> allfoods_bysub_long <span class="sc">%&gt;%</span> </span>
+<span id="cb375-24"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-24" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">food_type =</span> <span class="fu">case_when</span>(<span class="fu">grepl</span>(<span class="st">&quot;fah&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Grocery&quot;</span>,</span>
+<span id="cb375-25"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-25" tabindex="-1"></a>                                 <span class="fu">grepl</span>(<span class="st">&quot;fafh&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Non-Grocery&quot;</span>,</span>
+<span id="cb375-26"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-26" tabindex="-1"></a>                                 <span class="fu">grepl</span>(<span class="st">&quot;total&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Total&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb375-27"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-27" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">food =</span> <span class="fu">gsub</span>(<span class="st">&quot;.*_sum_&quot;</span>, <span class="st">&quot;&quot;</span>, food)) <span class="sc">%&gt;%</span> </span>
+<span id="cb375-28"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-28" tabindex="-1"></a>    <span class="fu">arrange</span>(subgroup, food)</span>
+<span id="cb375-29"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-29" tabindex="-1"></a>  </span>
+<span id="cb375-30"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-30" tabindex="-1"></a>  <span class="fu">print</span>(dat)</span>
+<span id="cb375-31"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-31" tabindex="-1"></a>  </span>
+<span id="cb375-32"><a href="calculate-cost-environment-and-social-impact-factors.html#cb375-32" tabindex="-1"></a>}</span></code></pre></div>
+<p>Import the data that were cleaned in the last few chapters.</p>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb376-1" tabindex="-1"></a><span class="co"># diet intake data</span></span>
+<span id="cb376-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb376-2" tabindex="-1"></a><span class="co"># both_days &lt;- read_rds(&quot;data_inputs/IMPACT_FACTORS/temp_data/both_days15_env.rds&quot;)</span></span>
+<span id="cb376-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb376-3" tabindex="-1"></a></span>
+<span id="cb376-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb376-4" tabindex="-1"></a><span class="co"># price data</span></span>
+<span id="cb376-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb376-5" tabindex="-1"></a>price_dat <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="st">&quot;data_inputs/IMPACT_FACTORS/temp_data/price_input_dat.rds&quot;</span>)</span>
+<span id="cb376-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb376-6" tabindex="-1"></a></span>
+<span id="cb376-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb376-7" tabindex="-1"></a><span class="co"># environment and social data</span></span>
+<span id="cb376-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb376-8" tabindex="-1"></a>enviro_dat <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="st">&quot;data_inputs/IMPACT_FACTORS/temp_data/enviro_input_dat.rds&quot;</span>)</span></code></pre></div>
+</div>
+<div id="cost-impact-factors" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Cost Impact Factors<a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="cost-impact-factors-by-food-by-subgroup" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Cost Impact Factors, by Food, by Subgroup<a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors-by-food-by-subgroup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Join the price data with the NHANES subgroup data.</p>
+<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb377-1" tabindex="-1"></a><span class="co"># full join</span></span>
+<span id="cb377-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb377-2" tabindex="-1"></a>price_dat1 <span class="ot">&lt;-</span> <span class="fu">full_join</span>(price_dat, subgroup_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;seqn&quot;</span> <span class="ot">=</span> <span class="st">&quot;SEQN&quot;</span>))</span></code></pre></div>
+<p>Define the “survey design” for the cost dataset. Survey designs are a unique part of the R ‘survey’ package. Set the appropriate weight variables.</p>
+<p>Then, subset the dataset to only include participants who are eligible to be in the sample (i.e., inAnalysis == 1). <strong>Chapter XXX</strong> explains more about these weight and inAnalysis variables.</p>
+<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-1" tabindex="-1"></a><span class="co"># Define survey design for cost dataset </span></span>
+<span id="cb378-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-2" tabindex="-1"></a>my_cost_svy <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="at">data=</span>price_dat1, </span>
+<span id="cb378-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-3" tabindex="-1"></a>                    <span class="at">id=</span><span class="sc">~</span>SDMVPSU, <span class="co"># Masked Variance Unit Pseudo-PSU </span></span>
+<span id="cb378-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-4" tabindex="-1"></a>                    <span class="at">strata=</span><span class="sc">~</span>SDMVSTRA, <span class="co"># Masked Variance Unit Pseudo-Stratum </span></span>
+<span id="cb378-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-5" tabindex="-1"></a>                    <span class="at">weights=</span><span class="sc">~</span>wtnew, <span class="co"># New sample weight</span></span>
+<span id="cb378-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-6" tabindex="-1"></a>                    <span class="at">nest=</span><span class="cn">TRUE</span>)</span>
+<span id="cb378-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-7" tabindex="-1"></a></span>
+<span id="cb378-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-8" tabindex="-1"></a><span class="co"># Create a survey design object for the subset of interest </span></span>
+<span id="cb378-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb378-9" tabindex="-1"></a>my_cost_svy_sub <span class="ot">&lt;-</span> <span class="fu">subset</span>(my_cost_svy, inAnalysis<span class="sc">==</span><span class="dv">1</span>)</span></code></pre></div>
+<div id="calculate-daily-mean-cost-for-the-whole-sample" class="section level4 hasAnchor" number="6.2.1.1">
+<h4><span class="header-section-number">6.2.1.1</span> Calculate Daily Mean Cost, For The Whole Sample<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-daily-mean-cost-for-the-whole-sample" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Apply the ‘svymean’ function in order to calculate the mean daily cost for each food group, using the entire sample.</p>
+<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-1" tabindex="-1"></a>allfoods_cost <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(price_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;price&quot;</span>)),</span>
+<span id="cb379-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-2" tabindex="-1"></a>                             my_cost_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb379-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-3" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb379-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-4" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb379-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb379-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-6" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb379-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb379-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-8" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb379-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-9" tabindex="-1"></a></span>
+<span id="cb379-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-10" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb379-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-11" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_cost) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_cost))</span>
+<span id="cb379-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb379-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_cost) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_cost))</span></code></pre></div>
+</div>
+<div id="calculate-daily-mean-consumed-inedible-and-wasted-amounts-fndds-level-for-the-whole-sample" class="section level4 hasAnchor" number="6.2.1.2">
+<h4><span class="header-section-number">6.2.1.2</span> Calculate Daily Mean Consumed, Inedible, and Wasted Amounts (FNDDS-Level), For The Whole Sample<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-daily-mean-consumed-inedible-and-wasted-amounts-fndds-level-for-the-whole-sample" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Apply the ‘svymean’ function in order to calculate the mean daily consumed, inedible, and wasted amounts of each food group, using the entire sample.</p>
+<div id="consumed" class="section level5 hasAnchor" number="6.2.1.2.1">
+<h5><span class="header-section-number">6.2.1.2.1</span> Consumed<a href="calculate-cost-environment-and-social-impact-factors.html#consumed" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-1" tabindex="-1"></a>allfoods_cost_consumed <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(price_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;consumed&quot;</span>)),</span>
+<span id="cb380-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-2" tabindex="-1"></a>                                  my_cost_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb380-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-3" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb380-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-4" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb380-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb380-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-6" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb380-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb380-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-8" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb380-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-9" tabindex="-1"></a></span>
+<span id="cb380-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-10" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb380-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-11" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_cost_consumed) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_cost_consumed))</span>
+<span id="cb380-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb380-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_cost_consumed) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_cost_consumed))</span></code></pre></div>
+</div>
+<div id="inedible" class="section level5 hasAnchor" number="6.2.1.2.2">
+<h5><span class="header-section-number">6.2.1.2.2</span> Inedible<a href="calculate-cost-environment-and-social-impact-factors.html#inedible" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-1" tabindex="-1"></a>allfoods_cost_inedible <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(price_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;inedible&quot;</span>)),</span>
+<span id="cb381-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-2" tabindex="-1"></a>                                  my_cost_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb381-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-3" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb381-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-4" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb381-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb381-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-6" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb381-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb381-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-8" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb381-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-9" tabindex="-1"></a></span>
+<span id="cb381-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-10" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb381-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-11" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_cost_inedible) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_cost_inedible))</span>
+<span id="cb381-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb381-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_cost_inedible) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_cost_inedible))</span></code></pre></div>
+</div>
+<div id="wasted" class="section level5 hasAnchor" number="6.2.1.2.3">
+<h5><span class="header-section-number">6.2.1.2.3</span> Wasted<a href="calculate-cost-environment-and-social-impact-factors.html#wasted" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-1" tabindex="-1"></a>allfoods_cost_wasted <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(price_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;wasted&quot;</span>)),</span>
+<span id="cb382-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-2" tabindex="-1"></a>                                my_cost_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb382-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-3" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb382-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-4" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb382-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb382-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-6" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb382-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb382-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-8" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb382-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-9" tabindex="-1"></a></span>
+<span id="cb382-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-10" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb382-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-11" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_cost_wasted) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_cost_wasted))</span>
+<span id="cb382-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb382-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_cost_wasted) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_cost_wasted))</span></code></pre></div>
+</div>
+</div>
+<div id="calculate-daily-mean-cost-for-all-48-subgroups" class="section level4 hasAnchor" number="6.2.1.3">
+<h4><span class="header-section-number">6.2.1.3</span> Calculate Daily Mean Cost, For All 48 Subgroups<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-daily-mean-cost-for-all-48-subgroups" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Apply the ‘svyby’ function in order to calculate the mean daily cost for each food group, separately for each of the 48 population subgroups.</p>
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb383-1" tabindex="-1"></a>allfoods_cost_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(price_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;price&quot;</span>)),</span>
+<span id="cb383-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb383-2" tabindex="-1"></a>                            <span class="sc">~</span>subgroup,</span>
+<span id="cb383-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb383-3" tabindex="-1"></a>                            my_cost_svy_sub,</span>
+<span id="cb383-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb383-4" tabindex="-1"></a>                            svymean)</span></code></pre></div>
+<p>Combine the mean cost values for the whole sample (i.e., subgroup 0) with the mean cost values for subgroups 1-48.</p>
+<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb384-1" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb384-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb384-2" tabindex="-1"></a>allfoods_cost_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_cost, allfoods_cost_bysub)</span></code></pre></div>
+</div>
+<div id="calculate-daily-mean-consumed-inedible-and-wasted-amounts-fndds-level-for-all-48-subgroups" class="section level4 hasAnchor" number="6.2.1.4">
+<h4><span class="header-section-number">6.2.1.4</span> Calculate Daily Mean Consumed, Inedible, and Wasted Amounts (FNDDS-Level), For All 48 Subgroups<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-daily-mean-consumed-inedible-and-wasted-amounts-fndds-level-for-all-48-subgroups" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Apply the ‘svyby’ function in order to calculate the mean daily consumed, inedible, and wasted amounts of each food group, separately for each of the 48 population subgroups.</p>
+<p>Then, combine the mean values for the whole sample (i.e., subgroup 0) with the mean values for subgroups 1-48.</p>
+<div id="consumed-1" class="section level5 hasAnchor" number="6.2.1.4.1">
+<h5><span class="header-section-number">6.2.1.4.1</span> Consumed<a href="calculate-cost-environment-and-social-impact-factors.html#consumed-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb385-1" tabindex="-1"></a>allfoods_cost_consumed_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(price_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;consumed&quot;</span>)),</span>
+<span id="cb385-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb385-2" tabindex="-1"></a>                             <span class="sc">~</span>subgroup,</span>
+<span id="cb385-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb385-3" tabindex="-1"></a>                             my_cost_svy_sub,</span>
+<span id="cb385-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb385-4" tabindex="-1"></a>                             svymean)</span>
+<span id="cb385-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb385-5" tabindex="-1"></a></span>
+<span id="cb385-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb385-6" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb385-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb385-7" tabindex="-1"></a>allfoods_cost_consumed_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_cost_consumed, allfoods_cost_consumed_bysub)</span></code></pre></div>
+</div>
+<div id="inedible-1" class="section level5 hasAnchor" number="6.2.1.4.2">
+<h5><span class="header-section-number">6.2.1.4.2</span> Inedible<a href="calculate-cost-environment-and-social-impact-factors.html#inedible-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb386-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb386-1" tabindex="-1"></a>allfoods_cost_inedible_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(price_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;inedible&quot;</span>)),</span>
+<span id="cb386-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb386-2" tabindex="-1"></a>                                    <span class="sc">~</span>subgroup,</span>
+<span id="cb386-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb386-3" tabindex="-1"></a>                                    my_cost_svy_sub,</span>
+<span id="cb386-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb386-4" tabindex="-1"></a>                                    svymean)</span>
+<span id="cb386-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb386-5" tabindex="-1"></a></span>
+<span id="cb386-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb386-6" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb386-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb386-7" tabindex="-1"></a>allfoods_cost_inedible_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_cost_inedible, allfoods_cost_inedible_bysub)</span></code></pre></div>
+</div>
+<div id="wasted-1" class="section level5 hasAnchor" number="6.2.1.4.3">
+<h5><span class="header-section-number">6.2.1.4.3</span> Wasted<a href="calculate-cost-environment-and-social-impact-factors.html#wasted-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb387-1" tabindex="-1"></a>allfoods_cost_wasted_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(price_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;wasted&quot;</span>)),</span>
+<span id="cb387-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb387-2" tabindex="-1"></a>                                      <span class="sc">~</span>subgroup,</span>
+<span id="cb387-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb387-3" tabindex="-1"></a>                                      my_cost_svy_sub,</span>
+<span id="cb387-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb387-4" tabindex="-1"></a>                                      svymean)</span>
+<span id="cb387-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb387-5" tabindex="-1"></a></span>
+<span id="cb387-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb387-6" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb387-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb387-7" tabindex="-1"></a>allfoods_cost_wasted_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_cost_wasted, allfoods_cost_wasted_bysub)</span></code></pre></div>
+</div>
+</div>
+<div id="clean-output-data" class="section level4 hasAnchor" number="6.2.1.5">
+<h4><span class="header-section-number">6.2.1.5</span> Clean Output Data<a href="calculate-cost-environment-and-social-impact-factors.html#clean-output-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Apply the cleaning function (defined above) to the mean cost dataset.</p>
+<div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb388-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb388-1" tabindex="-1"></a><span class="co"># APPLY FUNCTION TO COST DAT</span></span>
+<span id="cb388-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb388-2" tabindex="-1"></a>cost_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_cost_bysub1, <span class="at">y =</span> <span class="st">&quot;price&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 5,292 × 5
+##    subgroup food                   price_mean  price_se food_type  
+##       &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;      
+##  1        0 Consumed_added_sugar_0  0.164     0.00690   Total      
+##  2        0 Consumed_added_sugar_0  0.0826    0.00345   Grocery    
+##  3        0 Consumed_added_sugar_0  0.0811    0.00494   Non-Grocery
+##  4        0 Consumed_babyfood_0     0.0000216 0.0000184 Total      
+##  5        0 Consumed_babyfood_0     0.0000216 0.0000184 Grocery    
+##  6        0 Consumed_babyfood_0     0         0         Non-Grocery
+##  7        0 Consumed_babyfood_1     0.00117   0.00116   Total      
+##  8        0 Consumed_babyfood_1     0.00117   0.00116   Grocery    
+##  9        0 Consumed_babyfood_1     0         0         Non-Grocery
+## 10        0 Consumed_dairy_tot_0    0.755     0.0244    Total      
+## # ℹ 5,282 more rows</code></pre>
+<div class="sourceCode" id="cb390"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb390-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-1" tabindex="-1"></a><span class="co"># MORE MANUAL CLEANING</span></span>
+<span id="cb390-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-2" tabindex="-1"></a>cost_dat1 <span class="ot">&lt;-</span> </span>
+<span id="cb390-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-3" tabindex="-1"></a>  cost_dat <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">intake_type =</span> <span class="fu">case_when</span>(<span class="fu">grepl</span>(<span class="st">&quot;Consumed&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Consumed&quot;</span>,</span>
+<span id="cb390-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-4" tabindex="-1"></a>                                            <span class="fu">grepl</span>(<span class="st">&quot;Wasted&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Wasted&quot;</span>,</span>
+<span id="cb390-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-5" tabindex="-1"></a>                                            <span class="fu">grepl</span>(<span class="st">&quot;Inedible&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Inedible&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb390-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">food =</span> <span class="fu">gsub</span>(<span class="st">&quot;Consumed_|Wasted_|Inedible_&quot;</span>, <span class="st">&quot;&quot;</span>, food))</span>
+<span id="cb390-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-7" tabindex="-1"></a></span>
+<span id="cb390-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-8" tabindex="-1"></a><span class="co"># MORE MANUAL CLEANING</span></span>
+<span id="cb390-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-9" tabindex="-1"></a>cost_dat2 <span class="ot">&lt;-</span> </span>
+<span id="cb390-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-10" tabindex="-1"></a>  cost_dat1 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">mixed_dish =</span> <span class="fu">case_when</span>(<span class="fu">grepl</span>(<span class="st">&quot;_0&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Non-Mixed&quot;</span>,</span>
+<span id="cb390-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-11" tabindex="-1"></a>                                              <span class="fu">grepl</span>(<span class="st">&quot;_1&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Mixed&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb390-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-12" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">food =</span> <span class="fu">gsub</span>(<span class="st">&quot;_0|_1&quot;</span>, <span class="st">&quot;&quot;</span>, food)) <span class="sc">%&gt;%</span> </span>
+<span id="cb390-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-13" tabindex="-1"></a>  <span class="fu">relocate</span>(intake_type, food_type, mixed_dish, <span class="at">.after =</span> food) <span class="sc">%&gt;%</span> </span>
+<span id="cb390-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-14" tabindex="-1"></a>  <span class="fu">arrange</span>(intake_type, subgroup, food, food_type, mixed_dish)</span>
+<span id="cb390-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-15" tabindex="-1"></a></span>
+<span id="cb390-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-16" tabindex="-1"></a><span class="co"># examine</span></span>
+<span id="cb390-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb390-17" tabindex="-1"></a>cost_dat2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(food_type <span class="sc">==</span> <span class="st">&quot;Total&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 7
+##   subgroup food            intake_type food_type mixed_dish price_mean  price_se
+##      &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;
+## 1        0 added_sugar     Consumed    Total     Non-Mixed   0.164     0.00690  
+## 2        0 babyfood        Consumed    Total     Mixed       0.00117   0.00116  
+## 3        0 babyfood        Consumed    Total     Non-Mixed   0.0000216 0.0000184
+## 4        0 dairy_tot       Consumed    Total     Non-Mixed   0.755     0.0244   
+## 5        0 fruit_exc_juice Consumed    Total     Mixed       0.0180    0.00207  
+## 6        0 fruit_exc_juice Consumed    Total     Non-Mixed   0.420     0.0170</code></pre>
+<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb392-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb392-1" tabindex="-1"></a><span class="co"># pivot to wide</span></span>
+<span id="cb392-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb392-2" tabindex="-1"></a>cost_dat3 <span class="ot">&lt;-</span></span>
+<span id="cb392-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb392-3" tabindex="-1"></a>  cost_dat2 <span class="sc">%&gt;%</span> <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> intake_type,</span>
+<span id="cb392-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb392-4" tabindex="-1"></a>                          <span class="at">values_from =</span> <span class="fu">c</span>(price_mean, price_se)) <span class="sc">%&gt;%</span> </span>
+<span id="cb392-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb392-5" tabindex="-1"></a>  <span class="fu">arrange</span>(subgroup, food, food_type)</span></code></pre></div>
+<p>Apply the cleaning function (defined above) to the mean consumed, inedible, and wasted datasets.</p>
+<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb393-1" tabindex="-1"></a><span class="co"># APPLY FUNCTION TO INTAKE DATASETS</span></span>
+<span id="cb393-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb393-2" tabindex="-1"></a>cost_consumed_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_cost_consumed_bysub1, <span class="at">y =</span> <span class="st">&quot;consumed&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 5,292 × 5
+##    subgroup food          consumed_mean consumed_se food_type  
+##       &lt;dbl&gt; &lt;chr&gt;                 &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;      
+##  1        0 added_sugar_0      16.8         0.571   Total      
+##  2        0 added_sugar_0      11.7         0.454   Grocery    
+##  3        0 added_sugar_0       5.11        0.304   Non-Grocery
+##  4        0 babyfood_0          0.00712     0.00653 Total      
+##  5        0 babyfood_0          0.00712     0.00653 Grocery    
+##  6        0 babyfood_0          0           0       Non-Grocery
+##  7        0 babyfood_1          0.185       0.184   Total      
+##  8        0 babyfood_1          0.185       0.184   Grocery    
+##  9        0 babyfood_1          0           0       Non-Grocery
+## 10        0 dairy_tot_0       186.          5.90    Total      
+## # ℹ 5,282 more rows</code></pre>
+<div class="sourceCode" id="cb395"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb395-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb395-1" tabindex="-1"></a>cost_wasted_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_cost_wasted_bysub1, <span class="at">y =</span> <span class="st">&quot;wasted&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 5,292 × 5
+##    subgroup food          wasted_mean wasted_se food_type  
+##       &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;      
+##  1        0 added_sugar_0    7.16      0.294    Total      
+##  2        0 added_sugar_0    5.04      0.254    Grocery    
+##  3        0 added_sugar_0    2.13      0.124    Non-Grocery
+##  4        0 babyfood_0       0.000775  0.000724 Total      
+##  5        0 babyfood_0       0.000775  0.000724 Grocery    
+##  6        0 babyfood_0       0         0        Non-Grocery
+##  7        0 babyfood_1       0.0449    0.0447   Total      
+##  8        0 babyfood_1       0.0449    0.0447   Grocery    
+##  9        0 babyfood_1       0         0        Non-Grocery
+## 10        0 dairy_tot_0     54.1       1.73     Total      
+## # ℹ 5,282 more rows</code></pre>
+<div class="sourceCode" id="cb397"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb397-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb397-1" tabindex="-1"></a>cost_inedible_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_cost_inedible_bysub1, <span class="at">y =</span> <span class="st">&quot;inedible&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 5,292 × 5
+##    subgroup food          inedible_mean inedible_se food_type  
+##       &lt;dbl&gt; &lt;chr&gt;                 &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;      
+##  1        0 added_sugar_0        0.217      0.0228  Total      
+##  2        0 added_sugar_0        0.172      0.0193  Grocery    
+##  3        0 added_sugar_0        0.0450     0.00874 Non-Grocery
+##  4        0 babyfood_0           0          0       Total      
+##  5        0 babyfood_0           0          0       Grocery    
+##  6        0 babyfood_0           0          0       Non-Grocery
+##  7        0 babyfood_1           0.0475     0.0473  Total      
+##  8        0 babyfood_1           0.0475     0.0473  Grocery    
+##  9        0 babyfood_1           0          0       Non-Grocery
+## 10        0 dairy_tot_0          1.72       0.251   Total      
+## # ℹ 5,282 more rows</code></pre>
+<div class="sourceCode" id="cb399"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb399-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-1" tabindex="-1"></a><span class="co"># join all 3</span></span>
+<span id="cb399-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-2" tabindex="-1"></a>cost_intake_dat <span class="ot">&lt;-</span> <span class="fu">left_join</span>(cost_consumed_dat, cost_wasted_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>, <span class="st">&quot;food_type&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb399-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-3" tabindex="-1"></a>  <span class="fu">left_join</span>(cost_inedible_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>, <span class="st">&quot;food_type&quot;</span>))</span>
+<span id="cb399-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-4" tabindex="-1"></a></span>
+<span id="cb399-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-5" tabindex="-1"></a><span class="co"># create mixed dish variable</span></span>
+<span id="cb399-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-6" tabindex="-1"></a>cost_intake_dat1 <span class="ot">&lt;-</span> cost_intake_dat <span class="sc">%&gt;%</span> </span>
+<span id="cb399-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mixed_dish =</span> <span class="fu">case_when</span>(<span class="fu">grepl</span>(<span class="st">&quot;_0&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Non-Mixed&quot;</span>,</span>
+<span id="cb399-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-8" tabindex="-1"></a>                                <span class="fu">grepl</span>(<span class="st">&quot;_1&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Mixed&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb399-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-9" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">food =</span> <span class="fu">gsub</span>(<span class="st">&quot;_0|_1&quot;</span>, <span class="st">&quot;&quot;</span>, food))</span>
+<span id="cb399-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-10" tabindex="-1"></a></span>
+<span id="cb399-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-11" tabindex="-1"></a><span class="co"># join</span></span>
+<span id="cb399-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-12" tabindex="-1"></a>cost_final_dat <span class="ot">&lt;-</span> </span>
+<span id="cb399-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-13" tabindex="-1"></a>  <span class="fu">left_join</span>(cost_dat3, cost_intake_dat1, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>, <span class="st">&quot;food_type&quot;</span>, <span class="st">&quot;mixed_dish&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb399-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-14" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">fndds_consumed_mean =</span> consumed_mean,</span>
+<span id="cb399-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-15" tabindex="-1"></a>         <span class="at">fndds_consumed_se =</span> consumed_se,</span>
+<span id="cb399-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-16" tabindex="-1"></a>         <span class="at">fndds_wasted_mean =</span> wasted_mean,</span>
+<span id="cb399-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-17" tabindex="-1"></a>         <span class="at">fndds_wasted_se =</span> wasted_se,</span>
+<span id="cb399-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-18" tabindex="-1"></a>         <span class="at">fndds_inedible_mean =</span> inedible_mean,</span>
+<span id="cb399-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb399-19" tabindex="-1"></a>         <span class="at">fndds_inedible_se =</span> inedible_se)</span></code></pre></div>
+</div>
+</div>
+<div id="cost-impact-factors-per-100-grams-and-per-1-dga-serving" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Cost Impact Factors, Per 100 Grams and Per 1 DGA Serving<a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors-per-100-grams-and-per-1-dga-serving" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First, import the conversion units.</p>
+<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb400-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb400-1" tabindex="-1"></a>units <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">paste</span>(<span class="st">&quot;data_inputs/FINAL/cleaned_raw_data/unit_conversions_&quot;</span>, my_date, <span class="st">&quot;_FINAL.csv&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb400-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb400-2" tabindex="-1"></a>  <span class="fu">select</span>(Food_group, Conversion_to_grams)</span></code></pre></div>
+<pre><code>## Rows: 41 Columns: 4
+## ── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (3): Food_group, DGA_unit, Equation
+## dbl (1): Conversion_to_grams
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb402-1" tabindex="-1"></a><span class="co"># merge with units</span></span>
+<span id="cb402-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb402-2" tabindex="-1"></a>cost_final_dat1 <span class="ot">&lt;-</span> cost_final_dat <span class="sc">%&gt;%</span> </span>
+<span id="cb402-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb402-3" tabindex="-1"></a>  <span class="fu">left_join</span>(units, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;food&quot;</span> <span class="ot">=</span> <span class="st">&quot;Food_group&quot;</span>))</span>
+<span id="cb402-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb402-4" tabindex="-1"></a></span>
+<span id="cb402-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb402-5" tabindex="-1"></a>cost_final_dat1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">is.na</span>(Conversion_to_grams)) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 0 × 13
+## # ℹ 13 variables: subgroup &lt;dbl&gt;, food &lt;chr&gt;, food_type &lt;chr&gt;, mixed_dish &lt;chr&gt;, price_mean_Consumed &lt;dbl&gt;,
+## #   price_se_Consumed &lt;dbl&gt;, fndds_consumed_mean &lt;dbl&gt;, fndds_consumed_se &lt;dbl&gt;, fndds_wasted_mean &lt;dbl&gt;,
+## #   fndds_wasted_se &lt;dbl&gt;, fndds_inedible_mean &lt;dbl&gt;, fndds_inedible_se &lt;dbl&gt;, Conversion_to_grams &lt;dbl&gt;</code></pre>
+<p>Then, calculate the cost impact factors (i) per 100 grams and (ii) per DGA unit.</p>
+<p>To calculate the cost per 100 grams, you divide the daily mean cost of the food group by the daily amount of food consumed, and then multiply by 100.</p>
+<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb404-1" tabindex="-1"></a><span class="co"># calculate impact factors</span></span>
+<span id="cb404-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb404-2" tabindex="-1"></a>cost_final_dat2 <span class="ot">&lt;-</span> cost_final_dat1 <span class="sc">%&gt;%</span> </span>
+<span id="cb404-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb404-3" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb404-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb404-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">costper100gram_consumed =</span> <span class="fu">ifelse</span>(fndds_consumed_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, (price_mean_Consumed <span class="sc">/</span> fndds_consumed_mean) <span class="sc">*</span> <span class="dv">100</span>),</span>
+<span id="cb404-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb404-5" tabindex="-1"></a>         <span class="at">costperDGA_consumed =</span> costper100gram_consumed <span class="sc">*</span> (Conversion_to_grams <span class="sc">/</span> <span class="dv">100</span>)) </span>
+<span id="cb404-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb404-6" tabindex="-1"></a></span>
+<span id="cb404-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb404-7" tabindex="-1"></a><span class="co"># check</span></span>
+<span id="cb404-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb404-8" tabindex="-1"></a>cost_final_dat2 <span class="sc">%&gt;%</span> <span class="fu">select</span>(subgroup, food, food_type, mixed_dish, costperDGA_consumed) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 5
+## # Rowwise: 
+##   subgroup food        food_type   mixed_dish costperDGA_consumed
+##      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;                    &lt;dbl&gt;
+## 1        0 added_sugar Grocery     Non-Mixed               0.0297
+## 2        0 added_sugar Non-Grocery Non-Mixed               0.0667
+## 3        0 added_sugar Total       Non-Mixed               0.0410
+## 4        0 babyfood    Grocery     Mixed                   0     
+## 5        0 babyfood    Grocery     Non-Mixed               0     
+## 6        0 babyfood    Non-Grocery Mixed                   0</code></pre>
+</div>
+</div>
+<div id="environmental-social-impact-factors" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Environmental &amp; Social Impact Factors<a href="calculate-cost-environment-and-social-impact-factors.html#environmental-social-impact-factors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="environmental-social-impact-factors-by-food-by-subgroup" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Environmental &amp; Social Impact Factors, by Food, by Subgroup<a href="calculate-cost-environment-and-social-impact-factors.html#environmental-social-impact-factors-by-food-by-subgroup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Essentially the same steps that were used to calculate the cost impact factors are also used to calculate the environmental and social impact factors.</p>
+<p>First, define the “survey design” for the enviro dataset. Survey designs are a unique part of the R ‘survey’ package. Set the appropriate weight variables.</p>
+<p>Then, subset the dataset to only include participants who are eligible to be in the sample (i.e., inAnalysis == 1). <strong>Chapter XXX</strong> explains more about these weight and inAnalysis variables.</p>
+<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-1" tabindex="-1"></a><span class="co"># join</span></span>
+<span id="cb406-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-2" tabindex="-1"></a>enviro_dat1 <span class="ot">&lt;-</span> <span class="fu">full_join</span>(enviro_dat, subgroup_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;seqn&quot;</span> <span class="ot">=</span> <span class="st">&quot;SEQN&quot;</span>))</span>
+<span id="cb406-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-3" tabindex="-1"></a></span>
+<span id="cb406-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-4" tabindex="-1"></a><span class="co"># Define survey design for ghg dataset </span></span>
+<span id="cb406-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-5" tabindex="-1"></a>my_enviro_svy <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="at">data=</span>enviro_dat1, </span>
+<span id="cb406-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-6" tabindex="-1"></a>                           <span class="at">id=</span><span class="sc">~</span>SDMVPSU, <span class="co"># Masked Variance Unit Pseudo-PSU </span></span>
+<span id="cb406-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-7" tabindex="-1"></a>                           <span class="at">strata=</span><span class="sc">~</span>SDMVSTRA, <span class="co"># Masked Variance Unit Pseudo-Stratum </span></span>
+<span id="cb406-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-8" tabindex="-1"></a>                           <span class="at">weights=</span><span class="sc">~</span>wtnew, <span class="co"># New sample weight</span></span>
+<span id="cb406-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-9" tabindex="-1"></a>                           <span class="at">nest=</span><span class="cn">TRUE</span>)</span>
+<span id="cb406-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-10" tabindex="-1"></a></span>
+<span id="cb406-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-11" tabindex="-1"></a><span class="co"># Create a survey design object for the subset of interest </span></span>
+<span id="cb406-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb406-12" tabindex="-1"></a>my_enviro_svy_sub <span class="ot">&lt;-</span> <span class="fu">subset</span>(my_enviro_svy, inAnalysis<span class="sc">==</span><span class="dv">1</span>)</span></code></pre></div>
+<div id="calculate-daily-mean-environment-and-social-impacts-i-for-the-whole-sample-and-ii-for-all-48-subgroups" class="section level4 hasAnchor" number="6.3.1.1">
+<h4><span class="header-section-number">6.3.1.1</span> Calculate Daily Mean Environment and Social Impacts, (i) For The Whole Sample, and (ii) For All 48 Subgroups<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-daily-mean-environment-and-social-impacts-i-for-the-whole-sample-and-ii-for-all-48-subgroups" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="greenhouse-gas-emissions-ghg" class="section level5 hasAnchor" number="6.3.1.1.1">
+<h5><span class="header-section-number">6.3.1.1.1</span> Greenhouse Gas Emissions (GHG)<a href="calculate-cost-environment-and-social-impact-factors.html#greenhouse-gas-emissions-ghg" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-1" tabindex="-1"></a><span class="co"># CALCULATE GHG IMPACT (WHOLE SAMPLE)</span></span>
+<span id="cb407-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-2" tabindex="-1"></a>allfoods_ghg <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;ghg&quot;</span>)),</span>
+<span id="cb407-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-3" tabindex="-1"></a>                         my_enviro_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb407-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb407-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-5" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb407-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-6" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb407-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-7" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb407-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb407-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-9" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb407-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-10" tabindex="-1"></a></span>
+<span id="cb407-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-11" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb407-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_ghg) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_ghg))</span>
+<span id="cb407-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-13" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_ghg) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_ghg))</span>
+<span id="cb407-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-14" tabindex="-1"></a></span>
+<span id="cb407-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-15" tabindex="-1"></a><span class="co"># CALCULATE GHG IMPACT, BY SUBGROUP</span></span>
+<span id="cb407-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-16" tabindex="-1"></a>allfoods_ghg_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;ghg&quot;</span>)),</span>
+<span id="cb407-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-17" tabindex="-1"></a>                            <span class="sc">~</span>subgroup,</span>
+<span id="cb407-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-18" tabindex="-1"></a>                            my_enviro_svy_sub,</span>
+<span id="cb407-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-19" tabindex="-1"></a>                            svymean)</span>
+<span id="cb407-20"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-20" tabindex="-1"></a></span>
+<span id="cb407-21"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-21" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb407-22"><a href="calculate-cost-environment-and-social-impact-factors.html#cb407-22" tabindex="-1"></a>allfoods_ghg_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_ghg, allfoods_ghg_bysub)</span></code></pre></div>
+</div>
+<div id="cumulative-energy-demand-ced" class="section level5 hasAnchor" number="6.3.1.1.2">
+<h5><span class="header-section-number">6.3.1.1.2</span> Cumulative Energy Demand (CED)<a href="calculate-cost-environment-and-social-impact-factors.html#cumulative-energy-demand-ced" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-1" tabindex="-1"></a><span class="co"># CALCULATE CED IMPACT (WHOLE SAMPLE)</span></span>
+<span id="cb408-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-2" tabindex="-1"></a>allfoods_ced <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;ced&quot;</span>)),</span>
+<span id="cb408-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-3" tabindex="-1"></a>                        my_enviro_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb408-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb408-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-5" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb408-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-6" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb408-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-7" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb408-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb408-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-9" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb408-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-10" tabindex="-1"></a></span>
+<span id="cb408-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-11" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb408-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_ced) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_ced))</span>
+<span id="cb408-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-13" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_ced) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_ced))</span>
+<span id="cb408-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-14" tabindex="-1"></a></span>
+<span id="cb408-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-15" tabindex="-1"></a><span class="co"># CALCULATE CED IMPACT, BY SUBGROUP</span></span>
+<span id="cb408-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-16" tabindex="-1"></a>allfoods_ced_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;ced&quot;</span>)),</span>
+<span id="cb408-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-17" tabindex="-1"></a>                            <span class="sc">~</span>subgroup,</span>
+<span id="cb408-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-18" tabindex="-1"></a>                            my_enviro_svy_sub,</span>
+<span id="cb408-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-19" tabindex="-1"></a>                            svymean)</span>
+<span id="cb408-20"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-20" tabindex="-1"></a></span>
+<span id="cb408-21"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-21" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb408-22"><a href="calculate-cost-environment-and-social-impact-factors.html#cb408-22" tabindex="-1"></a>allfoods_ced_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_ced, allfoods_ced_bysub)</span></code></pre></div>
+</div>
+<div id="water-scarcity" class="section level5 hasAnchor" number="6.3.1.1.3">
+<h5><span class="header-section-number">6.3.1.1.3</span> Water Scarcity<a href="calculate-cost-environment-and-social-impact-factors.html#water-scarcity" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-1" tabindex="-1"></a><span class="co"># CALCULATE WATER IMPACT (WHOLE SAMPLE)</span></span>
+<span id="cb409-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-2" tabindex="-1"></a>allfoods_water <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;^water&quot;</span>)),</span>
+<span id="cb409-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-3" tabindex="-1"></a>                        my_enviro_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb409-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb409-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-5" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb409-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-6" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb409-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-7" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb409-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb409-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-9" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb409-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-10" tabindex="-1"></a></span>
+<span id="cb409-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-11" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb409-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_water) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_water))</span>
+<span id="cb409-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-13" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_water) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_water))</span>
+<span id="cb409-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-14" tabindex="-1"></a></span>
+<span id="cb409-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-15" tabindex="-1"></a><span class="co"># CALCULATE WATER IMPACT, BY SUBGROUP</span></span>
+<span id="cb409-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-16" tabindex="-1"></a>allfoods_water_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;^water&quot;</span>)),</span>
+<span id="cb409-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-17" tabindex="-1"></a>                            <span class="sc">~</span>subgroup,</span>
+<span id="cb409-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-18" tabindex="-1"></a>                            my_enviro_svy_sub,</span>
+<span id="cb409-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-19" tabindex="-1"></a>                            svymean)</span>
+<span id="cb409-20"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-20" tabindex="-1"></a></span>
+<span id="cb409-21"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-21" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb409-22"><a href="calculate-cost-environment-and-social-impact-factors.html#cb409-22" tabindex="-1"></a>allfoods_water_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_water, allfoods_water_bysub)</span></code></pre></div>
+</div>
+<div id="bluewater-use" class="section level5 hasAnchor" number="6.3.1.1.4">
+<h5><span class="header-section-number">6.3.1.1.4</span> Bluewater Use<a href="calculate-cost-environment-and-social-impact-factors.html#bluewater-use" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb410"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb410-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-1" tabindex="-1"></a><span class="co"># CALCULATE BLUEWATER IMPACT (WHOLE SAMPLE)</span></span>
+<span id="cb410-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-2" tabindex="-1"></a>allfoods_bluewater <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;bluewater&quot;</span>)),</span>
+<span id="cb410-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-3" tabindex="-1"></a>                          my_enviro_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb410-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb410-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-5" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb410-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-6" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb410-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-7" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb410-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb410-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-9" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb410-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-10" tabindex="-1"></a></span>
+<span id="cb410-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-11" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb410-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_bluewater) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_bluewater))</span>
+<span id="cb410-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-13" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_bluewater) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_bluewater))</span>
+<span id="cb410-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-14" tabindex="-1"></a></span>
+<span id="cb410-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-15" tabindex="-1"></a><span class="co"># CALCULATE BLUEWATER IMPACT, BY SUBGROUP</span></span>
+<span id="cb410-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-16" tabindex="-1"></a>allfoods_bluewater_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;bluewater&quot;</span>)),</span>
+<span id="cb410-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-17" tabindex="-1"></a>                              <span class="sc">~</span>subgroup,</span>
+<span id="cb410-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-18" tabindex="-1"></a>                              my_enviro_svy_sub,</span>
+<span id="cb410-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-19" tabindex="-1"></a>                              svymean)</span>
+<span id="cb410-20"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-20" tabindex="-1"></a></span>
+<span id="cb410-21"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-21" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb410-22"><a href="calculate-cost-environment-and-social-impact-factors.html#cb410-22" tabindex="-1"></a>allfoods_bluewater_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_bluewater, allfoods_bluewater_bysub)</span></code></pre></div>
+</div>
+<div id="forced-labor-risk-fl" class="section level5 hasAnchor" number="6.3.1.1.5">
+<h5><span class="header-section-number">6.3.1.1.5</span> Forced Labor Risk (FL)<a href="calculate-cost-environment-and-social-impact-factors.html#forced-labor-risk-fl" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-1" tabindex="-1"></a><span class="co"># CALCULATE FL IMPACT (WHOLE SAMPLE)</span></span>
+<span id="cb411-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-2" tabindex="-1"></a>allfoods_fl <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;fl&quot;</span>)),</span>
+<span id="cb411-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-3" tabindex="-1"></a>                        my_enviro_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb411-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb411-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-5" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb411-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-6" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb411-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-7" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb411-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb411-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-9" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb411-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-10" tabindex="-1"></a></span>
+<span id="cb411-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-11" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb411-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_fl) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_fl))</span>
+<span id="cb411-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-13" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_fl) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_fl))</span>
+<span id="cb411-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-14" tabindex="-1"></a></span>
+<span id="cb411-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-15" tabindex="-1"></a><span class="co"># CALCULATE FL IMPACT, BY SUBGROUP</span></span>
+<span id="cb411-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-16" tabindex="-1"></a>allfoods_fl_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;fl&quot;</span>)),</span>
+<span id="cb411-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-17" tabindex="-1"></a>                            <span class="sc">~</span>subgroup,</span>
+<span id="cb411-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-18" tabindex="-1"></a>                            my_enviro_svy_sub,</span>
+<span id="cb411-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-19" tabindex="-1"></a>                            svymean)</span>
+<span id="cb411-20"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-20" tabindex="-1"></a></span>
+<span id="cb411-21"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-21" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb411-22"><a href="calculate-cost-environment-and-social-impact-factors.html#cb411-22" tabindex="-1"></a>allfoods_fl_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_fl, allfoods_fl_bysub)</span></code></pre></div>
+</div>
+</div>
+<div id="calculate-daily-mean-consumed-inedible-and-wasted-amounts-fcid-level-for-the-whole-sample" class="section level4 hasAnchor" number="6.3.1.2">
+<h4><span class="header-section-number">6.3.1.2</span> Calculate Daily Mean Consumed, Inedible, and Wasted Amounts (FCID-Level), For The Whole Sample<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-daily-mean-consumed-inedible-and-wasted-amounts-fcid-level-for-the-whole-sample" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Apply the ‘svymean’ function in order to calculate the mean daily consumed, inedible, and wasted amounts of each food group, using the entire sample.</p>
+<div id="consumed-2" class="section level5 hasAnchor" number="6.3.1.2.1">
+<h5><span class="header-section-number">6.3.1.2.1</span> Consumed<a href="calculate-cost-environment-and-social-impact-factors.html#consumed-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb412-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-1" tabindex="-1"></a><span class="co"># consumed</span></span>
+<span id="cb412-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-2" tabindex="-1"></a>allfoods_enviro_consumed <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;consumed&quot;</span>)),</span>
+<span id="cb412-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-3" tabindex="-1"></a>                                  my_enviro_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb412-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb412-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-5" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb412-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-6" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb412-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-7" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb412-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb412-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-9" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb412-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-10" tabindex="-1"></a></span>
+<span id="cb412-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-11" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb412-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_enviro_consumed) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_enviro_consumed))</span>
+<span id="cb412-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb412-13" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_enviro_consumed) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_enviro_consumed))</span></code></pre></div>
+</div>
+<div id="inedible-2" class="section level5 hasAnchor" number="6.3.1.2.2">
+<h5><span class="header-section-number">6.3.1.2.2</span> Inedible<a href="calculate-cost-environment-and-social-impact-factors.html#inedible-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-1" tabindex="-1"></a><span class="co"># inedible</span></span>
+<span id="cb413-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-2" tabindex="-1"></a>allfoods_enviro_inedible <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;inedible&quot;</span>)),</span>
+<span id="cb413-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-3" tabindex="-1"></a>                                  my_enviro_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb413-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb413-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-5" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb413-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-6" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb413-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-7" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb413-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb413-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-9" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb413-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-10" tabindex="-1"></a></span>
+<span id="cb413-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-11" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb413-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_enviro_inedible) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_enviro_inedible))</span>
+<span id="cb413-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb413-13" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_enviro_inedible) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_enviro_inedible))</span></code></pre></div>
+</div>
+<div id="wasted-2" class="section level5 hasAnchor" number="6.3.1.2.3">
+<h5><span class="header-section-number">6.3.1.2.3</span> Wasted<a href="calculate-cost-environment-and-social-impact-factors.html#wasted-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-1" tabindex="-1"></a><span class="co"># wasted</span></span>
+<span id="cb414-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-2" tabindex="-1"></a>allfoods_enviro_wasted <span class="ot">&lt;-</span> <span class="fu">svymean</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;wasted&quot;</span>)),</span>
+<span id="cb414-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-3" tabindex="-1"></a>                                    my_enviro_svy_sub) <span class="sc">%&gt;%</span> </span>
+<span id="cb414-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb414-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-5" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;var&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb414-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-6" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var,</span>
+<span id="cb414-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-7" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="fu">c</span>(mean, SE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb414-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subgroup =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb414-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-9" tabindex="-1"></a>  <span class="fu">relocate</span>(subgroup)</span>
+<span id="cb414-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-10" tabindex="-1"></a></span>
+<span id="cb414-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-11" tabindex="-1"></a><span class="co"># fix colnames</span></span>
+<span id="cb414-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-12" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_enviro_wasted) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;mean_&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(allfoods_enviro_wasted))</span>
+<span id="cb414-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb414-13" tabindex="-1"></a><span class="fu">colnames</span>(allfoods_enviro_wasted) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;SE_&quot;</span>, <span class="st">&quot;se.&quot;</span>, <span class="fu">colnames</span>(allfoods_enviro_wasted))</span></code></pre></div>
+</div>
+</div>
+<div id="calculate-daily-mean-consumed-inedible-and-wasted-amounts-fcid-level-for-all-48-subgroups" class="section level4 hasAnchor" number="6.3.1.3">
+<h4><span class="header-section-number">6.3.1.3</span> Calculate Daily Mean Consumed, Inedible, and Wasted Amounts (FCID-Level), For All 48 Subgroups<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-daily-mean-consumed-inedible-and-wasted-amounts-fcid-level-for-all-48-subgroups" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Apply the ‘svyby’ function in order to calculate the mean daily consumed, inedible, and wasted amounts of each food group, separately for each of the 48 population subgroups.</p>
+<p>Then, combine the mean values for the whole sample (i.e., subgroup 0) with the mean values for subgroups 1-48.</p>
+<div id="consumed-3" class="section level5 hasAnchor" number="6.3.1.3.1">
+<h5><span class="header-section-number">6.3.1.3.1</span> Consumed<a href="calculate-cost-environment-and-social-impact-factors.html#consumed-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb415-1" tabindex="-1"></a>allfoods_enviro_consumed_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;consumed&quot;</span>)),</span>
+<span id="cb415-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb415-2" tabindex="-1"></a>                                    <span class="sc">~</span>subgroup,</span>
+<span id="cb415-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb415-3" tabindex="-1"></a>                                    my_enviro_svy_sub,</span>
+<span id="cb415-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb415-4" tabindex="-1"></a>                                    svymean)</span>
+<span id="cb415-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb415-5" tabindex="-1"></a></span>
+<span id="cb415-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb415-6" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb415-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb415-7" tabindex="-1"></a>allfoods_enviro_consumed_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_enviro_consumed, allfoods_enviro_consumed_bysub)</span></code></pre></div>
+</div>
+<div id="inedible-3" class="section level5 hasAnchor" number="6.3.1.3.2">
+<h5><span class="header-section-number">6.3.1.3.2</span> Inedible<a href="calculate-cost-environment-and-social-impact-factors.html#inedible-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb416-1" tabindex="-1"></a><span class="co"># inedible</span></span>
+<span id="cb416-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb416-2" tabindex="-1"></a>allfoods_enviro_inedible_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;inedible&quot;</span>)),</span>
+<span id="cb416-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb416-3" tabindex="-1"></a>                                      <span class="sc">~</span>subgroup,</span>
+<span id="cb416-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb416-4" tabindex="-1"></a>                                      my_enviro_svy_sub,</span>
+<span id="cb416-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb416-5" tabindex="-1"></a>                                      svymean)</span>
+<span id="cb416-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb416-6" tabindex="-1"></a></span>
+<span id="cb416-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb416-7" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb416-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb416-8" tabindex="-1"></a>allfoods_enviro_inedible_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_enviro_inedible, allfoods_enviro_inedible_bysub)</span></code></pre></div>
+</div>
+<div id="wasted-3" class="section level5 hasAnchor" number="6.3.1.3.3">
+<h5><span class="header-section-number">6.3.1.3.3</span> Wasted<a href="calculate-cost-environment-and-social-impact-factors.html#wasted-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb417-1" tabindex="-1"></a><span class="co"># wasted</span></span>
+<span id="cb417-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb417-2" tabindex="-1"></a>allfoods_enviro_wasted_bysub <span class="ot">&lt;-</span> <span class="fu">svyby</span>(<span class="fu">reformulate</span>(<span class="fu">names</span>(enviro_dat1) <span class="sc">%&gt;%</span> <span class="fu">str_subset</span>(<span class="st">&quot;wasted&quot;</span>)),</span>
+<span id="cb417-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb417-3" tabindex="-1"></a>                                        <span class="sc">~</span>subgroup,</span>
+<span id="cb417-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb417-4" tabindex="-1"></a>                                        my_enviro_svy_sub,</span>
+<span id="cb417-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb417-5" tabindex="-1"></a>                                        svymean)</span>
+<span id="cb417-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb417-6" tabindex="-1"></a></span>
+<span id="cb417-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb417-7" tabindex="-1"></a><span class="co"># bind with subgroup 0</span></span>
+<span id="cb417-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb417-8" tabindex="-1"></a>allfoods_enviro_wasted_bysub1 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(allfoods_enviro_wasted, allfoods_enviro_wasted_bysub)</span></code></pre></div>
+</div>
+</div>
+<div id="clean-output-data-1" class="section level4 hasAnchor" number="6.3.1.4">
+<h4><span class="header-section-number">6.3.1.4</span> Clean Output Data<a href="calculate-cost-environment-and-social-impact-factors.html#clean-output-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Apply the cleaning function (defined above) to the mean enviro datasets.</p>
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb418-1" tabindex="-1"></a><span class="co"># APPLY TO ENVIRO DATA</span></span>
+<span id="cb418-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb418-2" tabindex="-1"></a>ghg_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_ghg_bysub1, <span class="at">y =</span> <span class="st">&quot;ghg&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>food_type)</span></code></pre></div>
+<pre><code>## # A tibble: 1,176 × 5
+##    subgroup food                     ghg_mean   ghg_se food_type
+##       &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;    
+##  1        0 Consumed_added_sugar      0.0504  0.000994 &lt;NA&gt;     
+##  2        0 Consumed_babyfood         0       0        &lt;NA&gt;     
+##  3        0 Consumed_coffee_tea       0.0453  0.00142  &lt;NA&gt;     
+##  4        0 Consumed_dairy_cow        0.326   0.00671  &lt;NA&gt;     
+##  5        0 Consumed_dairy_soy        0.00251 0.000218 &lt;NA&gt;     
+##  6        0 Consumed_fruit_exc_juice  0.0617  0.00371  &lt;NA&gt;     
+##  7        0 Consumed_fruit_juice      0.0536  0.00199  &lt;NA&gt;     
+##  8        0 Consumed_gr_refined       0.0620  0.00107  &lt;NA&gt;     
+##  9        0 Consumed_gr_whole         0.0169  0.000426 &lt;NA&gt;     
+## 10        0 Consumed_leg_tot          0.0158  0.000514 &lt;NA&gt;     
+## # ℹ 1,166 more rows</code></pre>
+<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb420-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb420-1" tabindex="-1"></a>ced_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_ced_bysub1, <span class="at">y =</span> <span class="st">&quot;ced&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>food_type)</span></code></pre></div>
+<pre><code>## # A tibble: 1,176 × 5
+##    subgroup food                     ced_mean  ced_se food_type
+##       &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;    
+##  1        0 Consumed_added_sugar       0.492  0.0111  &lt;NA&gt;     
+##  2        0 Consumed_babyfood          0      0       &lt;NA&gt;     
+##  3        0 Consumed_coffee_tea        0.470  0.0146  &lt;NA&gt;     
+##  4        0 Consumed_dairy_cow         1.76   0.0362  &lt;NA&gt;     
+##  5        0 Consumed_dairy_soy         0.0164 0.00142 &lt;NA&gt;     
+##  6        0 Consumed_fruit_exc_juice   0.468  0.0204  &lt;NA&gt;     
+##  7        0 Consumed_fruit_juice       0.422  0.0143  &lt;NA&gt;     
+##  8        0 Consumed_gr_refined        0.354  0.00559 &lt;NA&gt;     
+##  9        0 Consumed_gr_whole          0.107  0.00230 &lt;NA&gt;     
+## 10        0 Consumed_leg_tot           0.0956 0.00270 &lt;NA&gt;     
+## # ℹ 1,166 more rows</code></pre>
+<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb422-1" tabindex="-1"></a>water_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_water_bysub1, <span class="at">y =</span> <span class="st">&quot;water&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>food_type)</span></code></pre></div>
+<pre><code>## # A tibble: 1,176 × 5
+##    subgroup food                     water_mean water_se food_type
+##       &lt;dbl&gt; &lt;chr&gt;                         &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;    
+##  1        0 Consumed_added_sugar         35.8     0.719  &lt;NA&gt;     
+##  2        0 Consumed_babyfood             0       0      &lt;NA&gt;     
+##  3        0 Consumed_coffee_tea          51.5     1.62   &lt;NA&gt;     
+##  4        0 Consumed_dairy_cow           91.4     1.88   &lt;NA&gt;     
+##  5        0 Consumed_dairy_soy            0.219   0.0190 &lt;NA&gt;     
+##  6        0 Consumed_fruit_exc_juice    217.     11.2    &lt;NA&gt;     
+##  7        0 Consumed_fruit_juice        140.      3.93   &lt;NA&gt;     
+##  8        0 Consumed_gr_refined          96.5     1.48   &lt;NA&gt;     
+##  9        0 Consumed_gr_whole            32.3     1.09   &lt;NA&gt;     
+## 10        0 Consumed_leg_tot             24.6     1.07   &lt;NA&gt;     
+## # ℹ 1,166 more rows</code></pre>
+<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb424-1" tabindex="-1"></a>bluewater_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_bluewater_bysub1, <span class="at">y =</span> <span class="st">&quot;bluewater&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>food_type)</span></code></pre></div>
+<pre><code>## # A tibble: 1,176 × 5
+##    subgroup food                     bluewater_mean bluewater_se food_type
+##       &lt;dbl&gt; &lt;chr&gt;                             &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;    
+##  1        0 Consumed_added_sugar              9.68        0.193  &lt;NA&gt;     
+##  2        0 Consumed_babyfood                 0           0      &lt;NA&gt;     
+##  3        0 Consumed_coffee_tea               9.15        0.293  &lt;NA&gt;     
+##  4        0 Consumed_dairy_cow               21.8         0.449  &lt;NA&gt;     
+##  5        0 Consumed_dairy_soy                0.126       0.0109 &lt;NA&gt;     
+##  6        0 Consumed_fruit_exc_juice         29.4         1.49   &lt;NA&gt;     
+##  7        0 Consumed_fruit_juice             16.9         0.500  &lt;NA&gt;     
+##  8        0 Consumed_gr_refined              30.7         0.451  &lt;NA&gt;     
+##  9        0 Consumed_gr_whole                 6.66        0.171  &lt;NA&gt;     
+## 10        0 Consumed_leg_tot                  5.87        0.213  &lt;NA&gt;     
+## # ℹ 1,166 more rows</code></pre>
+<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb426-1" tabindex="-1"></a>fl_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_fl_bysub1, <span class="at">y =</span> <span class="st">&quot;fl&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>food_type)</span></code></pre></div>
+<pre><code>## # A tibble: 1,176 × 5
+##    subgroup food                     fl_mean     fl_se food_type
+##       &lt;dbl&gt; &lt;chr&gt;                      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+##  1        0 Consumed_added_sugar     0.0223  0.000390  &lt;NA&gt;     
+##  2        0 Consumed_babyfood        0       0         &lt;NA&gt;     
+##  3        0 Consumed_coffee_tea      0       0         &lt;NA&gt;     
+##  4        0 Consumed_dairy_cow       0.0412  0.000847  &lt;NA&gt;     
+##  5        0 Consumed_dairy_soy       0.00274 0.000238  &lt;NA&gt;     
+##  6        0 Consumed_fruit_exc_juice 0.0304  0.00147   &lt;NA&gt;     
+##  7        0 Consumed_fruit_juice     0.0264  0.000803  &lt;NA&gt;     
+##  8        0 Consumed_gr_refined      0.00801 0.000203  &lt;NA&gt;     
+##  9        0 Consumed_gr_whole        0.00205 0.0000627 &lt;NA&gt;     
+## 10        0 Consumed_leg_tot         0.00406 0.000141  &lt;NA&gt;     
+## # ℹ 1,166 more rows</code></pre>
+<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-1" tabindex="-1"></a><span class="co"># join cleaned datasets</span></span>
+<span id="cb428-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-2" tabindex="-1"></a>enviro_dat <span class="ot">&lt;-</span> </span>
+<span id="cb428-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-3" tabindex="-1"></a>  <span class="fu">left_join</span>(ghg_dat, ced_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb428-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-4" tabindex="-1"></a>  <span class="fu">left_join</span>(water_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb428-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-5" tabindex="-1"></a>  <span class="fu">left_join</span>(bluewater_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb428-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-6" tabindex="-1"></a>  <span class="fu">left_join</span>(fl_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>))</span>
+<span id="cb428-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-7" tabindex="-1"></a></span>
+<span id="cb428-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-8" tabindex="-1"></a><span class="co"># more cleaning</span></span>
+<span id="cb428-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-9" tabindex="-1"></a>enviro_dat1 <span class="ot">&lt;-</span> </span>
+<span id="cb428-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-10" tabindex="-1"></a>  enviro_dat <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">intake_type =</span> <span class="fu">case_when</span>(<span class="fu">grepl</span>(<span class="st">&quot;Consumed&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Consumed&quot;</span>,</span>
+<span id="cb428-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-11" tabindex="-1"></a>                                              <span class="fu">grepl</span>(<span class="st">&quot;Wasted&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Wasted&quot;</span>,</span>
+<span id="cb428-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-12" tabindex="-1"></a>                                              <span class="fu">grepl</span>(<span class="st">&quot;Inedible&quot;</span>, food) <span class="sc">~</span> <span class="st">&quot;Inedible&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb428-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-13" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">food =</span> <span class="fu">gsub</span>(<span class="st">&quot;Consumed_|Wasted_|Inedible_&quot;</span>, <span class="st">&quot;&quot;</span>, food))</span>
+<span id="cb428-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-14" tabindex="-1"></a></span>
+<span id="cb428-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-15" tabindex="-1"></a><span class="co"># pivot to wide</span></span>
+<span id="cb428-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-16" tabindex="-1"></a>enviro_dat2 <span class="ot">&lt;-</span></span>
+<span id="cb428-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-17" tabindex="-1"></a>  enviro_dat1 <span class="sc">%&gt;%</span> <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> intake_type,</span>
+<span id="cb428-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-18" tabindex="-1"></a>                            <span class="at">values_from =</span> <span class="sc">!</span><span class="fu">c</span>(subgroup, food, intake_type)) <span class="sc">%&gt;%</span> </span>
+<span id="cb428-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb428-19" tabindex="-1"></a>  <span class="fu">arrange</span>(subgroup, food)</span></code></pre></div>
+<p>Apply the cleaning function (defined above) to the mean consumed, inedible, and wasted datasets.</p>
+<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb429-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb429-1" tabindex="-1"></a><span class="co"># APPLY FUNCTION TO INTAKE DAT</span></span>
+<span id="cb429-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb429-2" tabindex="-1"></a>enviro_consumed_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_enviro_consumed_bysub1, <span class="at">y =</span> <span class="st">&quot;consumed&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>food_type)</span></code></pre></div>
+<pre><code>## # A tibble: 1,176 × 5
+##    subgroup food            consumed_mean consumed_se food_type
+##       &lt;dbl&gt; &lt;chr&gt;                   &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;    
+##  1        0 added_sugar             81.1        1.71  &lt;NA&gt;     
+##  2        0 babyfood                 1.09       0.176 &lt;NA&gt;     
+##  3        0 coffee_tea               6.84       0.223 &lt;NA&gt;     
+##  4        0 dairy_cow              189.         5.04  &lt;NA&gt;     
+##  5        0 dairy_soy                9.72       0.843 &lt;NA&gt;     
+##  6        0 fruit_exc_juice        107.         4.03  &lt;NA&gt;     
+##  7        0 fruit_juice             57.0        1.80  &lt;NA&gt;     
+##  8        0 gr_refined             108.         1.31  &lt;NA&gt;     
+##  9        0 gr_whole                33.6        0.831 &lt;NA&gt;     
+## 10        0 leg_tot                 21.5        0.577 &lt;NA&gt;     
+## # ℹ 1,166 more rows</code></pre>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb431-1" tabindex="-1"></a>enviro_wasted_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_enviro_wasted_bysub1, <span class="at">y =</span> <span class="st">&quot;wasted&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>food_type)</span></code></pre></div>
+<pre><code>## # A tibble: 1,176 × 5
+##    subgroup food            wasted_mean wasted_se food_type
+##       &lt;dbl&gt; &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+##  1        0 added_sugar          41.3      0.887  &lt;NA&gt;     
+##  2        0 babyfood              0.153    0.0461 &lt;NA&gt;     
+##  3        0 coffee_tea            0        0      &lt;NA&gt;     
+##  4        0 dairy_cow            60.4      1.51   &lt;NA&gt;     
+##  5        0 dairy_soy             2.64     0.229  &lt;NA&gt;     
+##  6        0 fruit_exc_juice      84.4      5.04   &lt;NA&gt;     
+##  7        0 fruit_juice           8.06     0.326  &lt;NA&gt;     
+##  8        0 gr_refined           31.3      0.418  &lt;NA&gt;     
+##  9        0 gr_whole              8.20     0.189  &lt;NA&gt;     
+## 10        0 leg_tot               4.91     0.149  &lt;NA&gt;     
+## # ℹ 1,166 more rows</code></pre>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb433-1" tabindex="-1"></a>enviro_inedible_dat <span class="ot">&lt;-</span> <span class="fu">clean_func</span>(<span class="at">x =</span> allfoods_enviro_inedible_bysub1, <span class="at">y =</span> <span class="st">&quot;inedible&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>food_type)</span></code></pre></div>
+<pre><code>## # A tibble: 1,176 × 5
+##    subgroup food            inedible_mean inedible_se food_type
+##       &lt;dbl&gt; &lt;chr&gt;                   &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;    
+##  1        0 added_sugar            0           0      &lt;NA&gt;     
+##  2        0 babyfood               0.0475      0.0473 &lt;NA&gt;     
+##  3        0 coffee_tea             0           0      &lt;NA&gt;     
+##  4        0 dairy_cow              0           0      &lt;NA&gt;     
+##  5        0 dairy_soy              0           0      &lt;NA&gt;     
+##  6        0 fruit_exc_juice       87.3         6.06   &lt;NA&gt;     
+##  7        0 fruit_juice            0           0      &lt;NA&gt;     
+##  8        0 gr_refined             0           0      &lt;NA&gt;     
+##  9        0 gr_whole               5.30        0.245  &lt;NA&gt;     
+## 10        0 leg_tot                1.18        0.0663 &lt;NA&gt;     
+## # ℹ 1,166 more rows</code></pre>
+<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb435-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-1" tabindex="-1"></a><span class="co"># join</span></span>
+<span id="cb435-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-2" tabindex="-1"></a>enviro_intake_dat <span class="ot">&lt;-</span> <span class="fu">left_join</span>(enviro_consumed_dat, enviro_wasted_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb435-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-3" tabindex="-1"></a>  <span class="fu">left_join</span>(enviro_inedible_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>))</span>
+<span id="cb435-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-4" tabindex="-1"></a></span>
+<span id="cb435-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-5" tabindex="-1"></a><span class="co"># join enviro and intake dat</span></span>
+<span id="cb435-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-6" tabindex="-1"></a>enviro_final_dat <span class="ot">&lt;-</span> </span>
+<span id="cb435-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-7" tabindex="-1"></a>  <span class="fu">left_join</span>(enviro_dat2, enviro_intake_dat, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;subgroup&quot;</span>, <span class="st">&quot;food&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb435-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-8" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">fcid_consumed_mean =</span> consumed_mean,</span>
+<span id="cb435-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-9" tabindex="-1"></a>         <span class="at">fcid_consumed_se =</span> consumed_se,</span>
+<span id="cb435-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-10" tabindex="-1"></a>         <span class="at">fcid_wasted_mean =</span> wasted_mean,</span>
+<span id="cb435-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-11" tabindex="-1"></a>         <span class="at">fcid_wasted_se =</span> wasted_se,</span>
+<span id="cb435-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-12" tabindex="-1"></a>         <span class="at">fcid_inedible_mean =</span> inedible_mean,</span>
+<span id="cb435-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-13" tabindex="-1"></a>         <span class="at">fcid_inedible_se =</span> inedible_se)</span>
+<span id="cb435-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-14" tabindex="-1"></a></span>
+<span id="cb435-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-15" tabindex="-1"></a><span class="co"># look at just inedible and wasted</span></span>
+<span id="cb435-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-16" tabindex="-1"></a>enviro_final_dat <span class="sc">%&gt;%</span> </span>
+<span id="cb435-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-17" tabindex="-1"></a>  <span class="fu">filter</span>(subgroup <span class="sc">==</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb435-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-18" tabindex="-1"></a>  <span class="fu">select</span>(food, fcid_consumed_mean, fcid_wasted_mean, fcid_inedible_mean) <span class="sc">%&gt;%</span> </span>
+<span id="cb435-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb435-19" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 4
+##   food            fcid_consumed_mean fcid_wasted_mean fcid_inedible_mean
+##   &lt;chr&gt;                        &lt;dbl&gt;            &lt;dbl&gt;              &lt;dbl&gt;
+## 1 added_sugar                  81.1            41.3               0     
+## 2 babyfood                      1.09            0.153             0.0475
+## 3 coffee_tea                    6.84            0                 0     
+## 4 dairy_cow                   189.             60.4               0     
+## 5 dairy_soy                     9.72            2.64              0     
+## 6 fruit_exc_juice             107.             84.4              87.3</code></pre>
+<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb437-1" tabindex="-1"></a><span class="co"># something funky happening with inedible amts of meat</span></span>
+<span id="cb437-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb437-2" tabindex="-1"></a><span class="co"># update: this is correct, fcid weight basis for meat is boneless meat so inedible=0</span></span></code></pre></div>
+</div>
+</div>
+<div id="environmentsocial-impact-factors-per-100-grams-and-per-1-dga-serving" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Environment/Social Impact Factors, Per 100 Grams and Per 1 DGA Serving<a href="calculate-cost-environment-and-social-impact-factors.html#environmentsocial-impact-factors-per-100-grams-and-per-1-dga-serving" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First, join with the conversion units.</p>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb438-1" tabindex="-1"></a><span class="co"># merge with units</span></span>
+<span id="cb438-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb438-2" tabindex="-1"></a>enviro_final_dat1 <span class="ot">&lt;-</span> enviro_final_dat <span class="sc">%&gt;%</span> </span>
+<span id="cb438-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb438-3" tabindex="-1"></a>  <span class="fu">left_join</span>(units, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;food&quot;</span> <span class="ot">=</span> <span class="st">&quot;Food_group&quot;</span>))</span>
+<span id="cb438-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb438-4" tabindex="-1"></a></span>
+<span id="cb438-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb438-5" tabindex="-1"></a>enviro_final_dat1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">is.na</span>(Conversion_to_grams)) <span class="co">#good</span></span></code></pre></div>
+<pre><code>## # A tibble: 0 × 19
+## # ℹ 19 variables: subgroup &lt;dbl&gt;, food &lt;chr&gt;, ghg_mean_Consumed &lt;dbl&gt;, ghg_se_Consumed &lt;dbl&gt;, ced_mean_Consumed &lt;dbl&gt;,
+## #   ced_se_Consumed &lt;dbl&gt;, water_mean_Consumed &lt;dbl&gt;, water_se_Consumed &lt;dbl&gt;, bluewater_mean_Consumed &lt;dbl&gt;,
+## #   bluewater_se_Consumed &lt;dbl&gt;, fl_mean_Consumed &lt;dbl&gt;, fl_se_Consumed &lt;dbl&gt;, fcid_consumed_mean &lt;dbl&gt;,
+## #   fcid_consumed_se &lt;dbl&gt;, fcid_wasted_mean &lt;dbl&gt;, fcid_wasted_se &lt;dbl&gt;, fcid_inedible_mean &lt;dbl&gt;,
+## #   fcid_inedible_se &lt;dbl&gt;, Conversion_to_grams &lt;dbl&gt;</code></pre>
+<p>Then, calculate the environment/social impact factors (i) per 100 grams and (ii) per DGA unit.</p>
+<p>To calculate the impacts (e.g., GHG) per 100 grams, you divide the daily mean GHG of the food group by the daily amount of food consumed AND inedible, and then multiply by 100.</p>
+<p>Note: The variable “ghg_mean_Consumed” represents the GHG impact of consumed and inedible food (because the impact of both the consumed and inedible amounts is included in the original datafield impact factors). Therefore, the denominator of the equation is the sum of consumed food AND inedible food.</p>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-1" tabindex="-1"></a>enviro_final_dat2 <span class="ot">&lt;-</span> enviro_final_dat1 <span class="sc">%&gt;%</span> </span>
+<span id="cb440-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-2" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb440-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="co">#GHG</span></span>
+<span id="cb440-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-4" tabindex="-1"></a>         <span class="at">GHGper100gram_consumed =</span> <span class="fu">ifelse</span>(fcid_consumed_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, (ghg_mean_Consumed <span class="sc">/</span> <span class="fu">sum</span>(fcid_consumed_mean, fcid_inedible_mean)) <span class="sc">*</span> <span class="dv">100</span>),</span>
+<span id="cb440-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-5" tabindex="-1"></a>         <span class="at">GHGperDGA_consumed =</span> GHGper100gram_consumed <span class="sc">*</span> (Conversion_to_grams <span class="sc">/</span> <span class="dv">100</span>),</span>
+<span id="cb440-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-6" tabindex="-1"></a>         </span>
+<span id="cb440-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-7" tabindex="-1"></a>         <span class="co">#CED</span></span>
+<span id="cb440-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-8" tabindex="-1"></a>         <span class="at">CEDper100gram_consumed =</span> <span class="fu">ifelse</span>(fcid_consumed_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, (ced_mean_Consumed <span class="sc">/</span> <span class="fu">sum</span>(fcid_consumed_mean, fcid_inedible_mean)) <span class="sc">*</span> <span class="dv">100</span>),</span>
+<span id="cb440-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-9" tabindex="-1"></a>         <span class="at">CEDperDGA_consumed =</span> CEDper100gram_consumed <span class="sc">*</span> (Conversion_to_grams <span class="sc">/</span> <span class="dv">100</span>),</span>
+<span id="cb440-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-10" tabindex="-1"></a>         </span>
+<span id="cb440-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-11" tabindex="-1"></a>         <span class="co">#WATER</span></span>
+<span id="cb440-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-12" tabindex="-1"></a>         <span class="at">WATERper100gram_consumed =</span> <span class="fu">ifelse</span>(fcid_consumed_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, (water_mean_Consumed <span class="sc">/</span> <span class="fu">sum</span>(fcid_consumed_mean, fcid_inedible_mean)) <span class="sc">*</span> <span class="dv">100</span>),</span>
+<span id="cb440-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-13" tabindex="-1"></a>         <span class="at">WATERperDGA_consumed =</span> WATERper100gram_consumed <span class="sc">*</span> (Conversion_to_grams <span class="sc">/</span> <span class="dv">100</span>),</span>
+<span id="cb440-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-14" tabindex="-1"></a>         </span>
+<span id="cb440-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-15" tabindex="-1"></a>         <span class="co">#BLUEWATER</span></span>
+<span id="cb440-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-16" tabindex="-1"></a>         <span class="at">BLUEWATERper100gram_consumed =</span> <span class="fu">ifelse</span>(fcid_consumed_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, (bluewater_mean_Consumed <span class="sc">/</span> <span class="fu">sum</span>(fcid_consumed_mean, fcid_inedible_mean)) <span class="sc">*</span> <span class="dv">100</span>),</span>
+<span id="cb440-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-17" tabindex="-1"></a>         <span class="at">BLUEWATERperDGA_consumed =</span> BLUEWATERper100gram_consumed <span class="sc">*</span> (Conversion_to_grams <span class="sc">/</span> <span class="dv">100</span>),</span>
+<span id="cb440-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-18" tabindex="-1"></a>         </span>
+<span id="cb440-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-19" tabindex="-1"></a>         <span class="co">#FORCED LABOR</span></span>
+<span id="cb440-20"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-20" tabindex="-1"></a>         <span class="at">FLper100gram_consumed =</span> <span class="fu">ifelse</span>(fcid_consumed_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, (fl_mean_Consumed <span class="sc">/</span> <span class="fu">sum</span>(fcid_consumed_mean, fcid_inedible_mean)) <span class="sc">*</span> <span class="dv">100</span>),</span>
+<span id="cb440-21"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-21" tabindex="-1"></a>         <span class="at">FLperDGA_consumed =</span> FLper100gram_consumed <span class="sc">*</span> (Conversion_to_grams <span class="sc">/</span> <span class="dv">100</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb440-22"><a href="calculate-cost-environment-and-social-impact-factors.html#cb440-22" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Conversion_to_grams)</span></code></pre></div>
+</div>
+</div>
+<div id="finalize-impact-factors" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Finalize Impact Factors<a href="calculate-cost-environment-and-social-impact-factors.html#finalize-impact-factors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="merge-cost-environment-and-social-impact-factors" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Merge Cost, Environment, and Social Impact Factors<a href="calculate-cost-environment-and-social-impact-factors.html#merge-cost-environment-and-social-impact-factors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Merge all of the impact factors into one dataset.</p>
+<div class="sourceCode" id="cb441"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb441-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-1" tabindex="-1"></a><span class="co"># cost impact factors</span></span>
+<span id="cb441-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-2" tabindex="-1"></a>cost_IFs <span class="ot">&lt;-</span> cost_final_dat2 <span class="sc">%&gt;%</span> </span>
+<span id="cb441-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">costper100g =</span> costper100gram_consumed,</span>
+<span id="cb441-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-4" tabindex="-1"></a>         <span class="at">costperDGA =</span> costperDGA_consumed) <span class="sc">%&gt;%</span> </span>
+<span id="cb441-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-5" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(food <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;babyfood&quot;</span>, <span class="st">&quot;coffee_tea&quot;</span>, <span class="st">&quot;other&quot;</span>, <span class="st">&quot;water&quot;</span>)))</span>
+<span id="cb441-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-6" tabindex="-1"></a></span>
+<span id="cb441-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-7" tabindex="-1"></a><span class="co"># environment impact factors</span></span>
+<span id="cb441-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-8" tabindex="-1"></a>enviro_IFs <span class="ot">&lt;-</span> enviro_final_dat2 <span class="sc">%&gt;%</span> </span>
+<span id="cb441-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-9" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(food <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;babyfood&quot;</span>, <span class="st">&quot;coffee_tea&quot;</span>, <span class="st">&quot;other&quot;</span>, <span class="st">&quot;water&quot;</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb441-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-10" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">GHGperDGA =</span> GHGperDGA_consumed,</span>
+<span id="cb441-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-11" tabindex="-1"></a>         <span class="at">GHGper100g =</span> GHGper100gram_consumed,</span>
+<span id="cb441-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-12" tabindex="-1"></a>         </span>
+<span id="cb441-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-13" tabindex="-1"></a>         <span class="at">CEDperDGA =</span> CEDperDGA_consumed,</span>
+<span id="cb441-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-14" tabindex="-1"></a>         <span class="at">CEDper100g =</span> CEDper100gram_consumed,</span>
+<span id="cb441-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-15" tabindex="-1"></a>         </span>
+<span id="cb441-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-16" tabindex="-1"></a>         <span class="at">WATERperDGA =</span> WATERperDGA_consumed,</span>
+<span id="cb441-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-17" tabindex="-1"></a>         <span class="at">WATERper100g =</span> WATERper100gram_consumed,</span>
+<span id="cb441-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-18" tabindex="-1"></a>         </span>
+<span id="cb441-19"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-19" tabindex="-1"></a>         <span class="at">BLUEWATERperDGA =</span> BLUEWATERperDGA_consumed,</span>
+<span id="cb441-20"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-20" tabindex="-1"></a>         <span class="at">BLUEWATERper100g =</span> BLUEWATERper100gram_consumed,</span>
+<span id="cb441-21"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-21" tabindex="-1"></a>         </span>
+<span id="cb441-22"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-22" tabindex="-1"></a>         <span class="at">FLperDGA =</span> FLperDGA_consumed,</span>
+<span id="cb441-23"><a href="calculate-cost-environment-and-social-impact-factors.html#cb441-23" tabindex="-1"></a>         <span class="at">FLper100g =</span> FLper100gram_consumed)</span></code></pre></div>
+</div>
+</div>
+<div id="calculate-inedible-and-wasted-proportions" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Calculate Inedible and Wasted Proportions<a href="calculate-cost-environment-and-social-impact-factors.html#calculate-inedible-and-wasted-proportions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="environmentsocial" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Environment/Social<a href="calculate-cost-environment-and-social-impact-factors.html#environmentsocial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The following proportions were calculated at the FCID-level:</p>
+<ul>
+<li>Wasted Proportion = Mean Wasted Amount / Mean Edible Amount</li>
+<li>Inedible Proportion = Mean Inedible Amount / Mean Purchased Amount</li>
+</ul>
+<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-1" tabindex="-1"></a>enviro_IFs1 <span class="ot">&lt;-</span> enviro_IFs <span class="sc">%&gt;%</span> </span>
+<span id="cb442-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-2" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb442-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="co"># coefficients</span></span>
+<span id="cb442-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-4" tabindex="-1"></a>         <span class="at">wasted_coef_fcid =</span> fcid_wasted_mean <span class="sc">/</span> fcid_consumed_mean,</span>
+<span id="cb442-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-5" tabindex="-1"></a>         <span class="at">inedible_coef_fcid =</span> fcid_inedible_mean <span class="sc">/</span> fcid_consumed_mean,</span>
+<span id="cb442-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-6" tabindex="-1"></a>         </span>
+<span id="cb442-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-7" tabindex="-1"></a>         <span class="co"># amounts</span></span>
+<span id="cb442-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-8" tabindex="-1"></a>         <span class="at">fcid_purchased_mean =</span> <span class="fu">sum</span>(fcid_consumed_mean, fcid_wasted_mean, fcid_inedible_mean),</span>
+<span id="cb442-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-9" tabindex="-1"></a>         <span class="at">fcid_edible_mean =</span> <span class="fu">sum</span>(fcid_consumed_mean, fcid_wasted_mean),</span>
+<span id="cb442-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-10" tabindex="-1"></a>         </span>
+<span id="cb442-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-11" tabindex="-1"></a>         <span class="co"># proportions</span></span>
+<span id="cb442-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-12" tabindex="-1"></a>         <span class="at">wasted_prop_fcid =</span> fcid_wasted_mean <span class="sc">/</span> fcid_edible_mean,</span>
+<span id="cb442-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-13" tabindex="-1"></a>         <span class="at">inedible_prop_fcid =</span> fcid_inedible_mean <span class="sc">/</span> fcid_purchased_mean,</span>
+<span id="cb442-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-14" tabindex="-1"></a>         <span class="at">consumed_prop_fcid =</span> fcid_consumed_mean <span class="sc">/</span> fcid_edible_mean,</span>
+<span id="cb442-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-15" tabindex="-1"></a>         <span class="at">prop_sum =</span> <span class="fu">sum</span>(wasted_prop_fcid, consumed_prop_fcid)) <span class="do">## change to summing wasted/edible and consumed/edible so that this sums to one, and can use as a check</span></span>
+<span id="cb442-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-16" tabindex="-1"></a></span>
+<span id="cb442-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-17" tabindex="-1"></a><span class="co"># is sum = 1?</span></span>
+<span id="cb442-18"><a href="calculate-cost-environment-and-social-impact-factors.html#cb442-18" tabindex="-1"></a><span class="fu">table</span>(enviro_IFs1<span class="sc">$</span>prop_sum, <span class="at">useNA =</span> <span class="st">&quot;always&quot;</span>) <span class="co">#good</span></span></code></pre></div>
+<pre><code>## 
+##    1 &lt;NA&gt; 
+##  980    0</code></pre>
+<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-1" tabindex="-1"></a><span class="co"># create dataset with just IFs</span></span>
+<span id="cb444-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-2" tabindex="-1"></a>enviro_IFs_sub <span class="ot">&lt;-</span> enviro_IFs1 <span class="sc">%&gt;%</span> </span>
+<span id="cb444-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-3" tabindex="-1"></a>  <span class="fu">select</span>(subgroup, food, </span>
+<span id="cb444-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-4" tabindex="-1"></a>         wasted_coef_fcid,</span>
+<span id="cb444-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-5" tabindex="-1"></a>         wasted_prop_fcid,</span>
+<span id="cb444-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-6" tabindex="-1"></a>         inedible_coef_fcid,</span>
+<span id="cb444-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-7" tabindex="-1"></a>         inedible_prop_fcid,</span>
+<span id="cb444-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-8" tabindex="-1"></a>         <span class="fu">contains</span>(<span class="st">&quot;perDGA&quot;</span>))</span>
+<span id="cb444-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-9" tabindex="-1"></a></span>
+<span id="cb444-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-10" tabindex="-1"></a><span class="co"># look at a few foods</span></span>
+<span id="cb444-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb444-11" tabindex="-1"></a>enviro_IFs_sub <span class="sc">%&gt;%</span> <span class="fu">filter</span>(food <span class="sc">==</span> <span class="st">&quot;gr_whole&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 11
+## # Rowwise: 
+##   subgroup food  wasted_coef_fcid wasted_prop_fcid inedible_coef_fcid inedible_prop_fcid GHGperDGA CEDperDGA WATERperDGA
+##      &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;            &lt;dbl&gt;              &lt;dbl&gt;              &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+## 1        0 gr_w…            0.244            0.196              0.158             0.113     0.0222     0.141        42.4
+## 2        1 gr_w…            0.256            0.204              0.115             0.0841    0.0256     0.157        44.4
+## 3        2 gr_w…            0.256            0.204              0.106             0.0778    0.0267     0.179        35.7
+## 4        3 gr_w…            0.249            0.199              0.141             0.101     0.0248     0.168        37.2
+## 5        4 gr_w…            0.255            0.203              0.168             0.118     0.0250     0.140        47.7
+## 6        5 gr_w…            0.240            0.194              0.181             0.127     0.0210     0.135        45.5
+## # ℹ 2 more variables: BLUEWATERperDGA &lt;dbl&gt;, FLperDGA &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb446-1" tabindex="-1"></a>enviro_IFs_sub <span class="sc">%&gt;%</span> <span class="fu">filter</span>(food <span class="sc">==</span> <span class="st">&quot;pf_redm_tot&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 11
+## # Rowwise: 
+##   subgroup food  wasted_coef_fcid wasted_prop_fcid inedible_coef_fcid inedible_prop_fcid GHGperDGA CEDperDGA WATERperDGA
+##      &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;            &lt;dbl&gt;              &lt;dbl&gt;              &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+## 1        0 pf_r…            0.306            0.234                  0                  0     0.717      1.65        212.
+## 2        1 pf_r…            0.310            0.237                  0                  0     0.693      1.62        205.
+## 3        2 pf_r…            0.314            0.239                  0                  0     0.682      1.60        203.
+## 4        3 pf_r…            0.295            0.228                  0                  0     0.784      1.76        232.
+## 5        4 pf_r…            0.305            0.234                  0                  0     0.732      1.64        216.
+## 6        5 pf_r…            0.306            0.234                  0                  0     0.723      1.67        214.
+## # ℹ 2 more variables: BLUEWATERperDGA &lt;dbl&gt;, FLperDGA &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb448-1" tabindex="-1"></a>enviro_IFs_sub <span class="sc">%&gt;%</span> <span class="fu">filter</span>(food <span class="sc">==</span> <span class="st">&quot;veg_dg&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 11
+## # Rowwise: 
+##   subgroup food  wasted_coef_fcid wasted_prop_fcid inedible_coef_fcid inedible_prop_fcid GHGperDGA CEDperDGA WATERperDGA
+##      &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;            &lt;dbl&gt;              &lt;dbl&gt;              &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+## 1        0 veg_…            0.381            0.276              0.757              0.354    0.0449     0.390        284.
+## 2        1 veg_…            0.288            0.223              0.568              0.306    0.0445     0.385        227.
+## 3        2 veg_…            0.595            0.373              0.967              0.377    0.0338     0.280        201.
+## 4        3 veg_…            0.317            0.241              0.828              0.386    0.0600     0.537        471.
+## 5        4 veg_…            0.398            0.285              0.793              0.362    0.0466     0.406        311.
+## 6        5 veg_…            0.304            0.233              0.722              0.356    0.0472     0.413        279.
+## # ℹ 2 more variables: BLUEWATERperDGA &lt;dbl&gt;, FLperDGA &lt;dbl&gt;</code></pre>
+</div>
+<div id="cost" class="section level3 hasAnchor" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Cost<a href="calculate-cost-environment-and-social-impact-factors.html#cost" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The following proportions were calculated at the FNDDS-level:</p>
+<ul>
+<li>Wasted Proportion = Mean Wasted Amount / Mean Edible Amount</li>
+<li>Inedible Proportion = Mean Inedible Amount / Mean Purchased Amount</li>
+</ul>
+<div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb450-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-1" tabindex="-1"></a>cost_IFs1 <span class="ot">&lt;-</span> cost_IFs <span class="sc">%&gt;%</span> </span>
+<span id="cb450-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-2" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb450-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="co"># coefficients</span></span>
+<span id="cb450-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-4" tabindex="-1"></a>         <span class="at">wasted_coef_fndds =</span> fndds_wasted_mean <span class="sc">/</span> fndds_consumed_mean,</span>
+<span id="cb450-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-5" tabindex="-1"></a>         <span class="at">inedible_coef_fndds =</span> fndds_inedible_mean <span class="sc">/</span> fndds_consumed_mean,</span>
+<span id="cb450-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-6" tabindex="-1"></a>         </span>
+<span id="cb450-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-7" tabindex="-1"></a>         <span class="co"># amounts</span></span>
+<span id="cb450-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-8" tabindex="-1"></a>         <span class="at">fndds_purchased_mean =</span> <span class="fu">sum</span>(fndds_consumed_mean, fndds_wasted_mean, fndds_inedible_mean),</span>
+<span id="cb450-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-9" tabindex="-1"></a>         <span class="at">fndds_edible_mean =</span> <span class="fu">sum</span>(fndds_consumed_mean, fndds_wasted_mean),</span>
+<span id="cb450-10"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-10" tabindex="-1"></a>         </span>
+<span id="cb450-11"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-11" tabindex="-1"></a>         <span class="co"># proportions</span></span>
+<span id="cb450-12"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-12" tabindex="-1"></a>         <span class="at">wasted_prop_fndds =</span> <span class="fu">ifelse</span>(fndds_edible_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, fndds_wasted_mean <span class="sc">/</span> fndds_edible_mean), </span>
+<span id="cb450-13"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-13" tabindex="-1"></a>         <span class="at">inedible_prop_fndds =</span> <span class="fu">ifelse</span>(fndds_purchased_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, fndds_inedible_mean <span class="sc">/</span> fndds_purchased_mean),</span>
+<span id="cb450-14"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-14" tabindex="-1"></a>         <span class="at">consumed_prop_fndds =</span> <span class="fu">ifelse</span>(fndds_edible_mean <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, fndds_consumed_mean <span class="sc">/</span> fndds_edible_mean),</span>
+<span id="cb450-15"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-15" tabindex="-1"></a>         <span class="at">prop_sum_fndds =</span> <span class="fu">sum</span>(wasted_prop_fndds, consumed_prop_fndds))  <span class="do">##c hange to summing wasted/edible and consumed/edible so that this sums to one, and can use as a check</span></span>
+<span id="cb450-16"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-16" tabindex="-1"></a></span>
+<span id="cb450-17"><a href="calculate-cost-environment-and-social-impact-factors.html#cb450-17" tabindex="-1"></a><span class="fu">table</span>(cost_IFs1<span class="sc">$</span>prop_sum_fndds, <span class="at">useNA =</span> <span class="st">&quot;always&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+##    0    1 &lt;NA&gt; 
+##  363 4194    0</code></pre>
+<div class="sourceCode" id="cb452"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb452-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb452-1" tabindex="-1"></a><span class="co"># check</span></span>
+<span id="cb452-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb452-2" tabindex="-1"></a>cost_IFs1 <span class="sc">%&gt;%</span> </span>
+<span id="cb452-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb452-3" tabindex="-1"></a>  <span class="fu">filter</span>(wasted_prop_fndds <span class="sc">==</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 23
+## # Rowwise: 
+##   subgroup food        food_type  mixed_dish price_mean_Consumed price_se_Consumed fndds_consumed_mean fndds_consumed_se
+##      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;                    &lt;dbl&gt;             &lt;dbl&gt;               &lt;dbl&gt;             &lt;dbl&gt;
+## 1        1 fruit_juice Non-Groce… Mixed                        0                 0                   0                 0
+## 2        1 veg_oth     Grocery    Mixed                        0                 0                   0                 0
+## 3        1 veg_oth     Non-Groce… Mixed                        0                 0                   0                 0
+## 4        1 veg_oth     Total      Mixed                        0                 0                   0                 0
+## 5        2 fruit_juice Grocery    Mixed                        0                 0                   0                 0
+## 6        2 fruit_juice Non-Groce… Mixed                        0                 0                   0                 0
+## # ℹ 15 more variables: fndds_wasted_mean &lt;dbl&gt;, fndds_wasted_se &lt;dbl&gt;, fndds_inedible_mean &lt;dbl&gt;,
+## #   fndds_inedible_se &lt;dbl&gt;, Conversion_to_grams &lt;dbl&gt;, costper100g &lt;dbl&gt;, costperDGA &lt;dbl&gt;, wasted_coef_fndds &lt;dbl&gt;,
+## #   inedible_coef_fndds &lt;dbl&gt;, fndds_purchased_mean &lt;dbl&gt;, fndds_edible_mean &lt;dbl&gt;, wasted_prop_fndds &lt;dbl&gt;,
+## #   inedible_prop_fndds &lt;dbl&gt;, consumed_prop_fndds &lt;dbl&gt;, prop_sum_fndds &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb454-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-1" tabindex="-1"></a><span class="co"># subset</span></span>
+<span id="cb454-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-2" tabindex="-1"></a>cost_IFs_sub <span class="ot">&lt;-</span> cost_IFs1 <span class="sc">%&gt;%</span> </span>
+<span id="cb454-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-3" tabindex="-1"></a>  <span class="fu">select</span>(subgroup, food, food_type, mixed_dish, </span>
+<span id="cb454-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-4" tabindex="-1"></a>         wasted_coef_fndds, wasted_prop_fndds,</span>
+<span id="cb454-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-5" tabindex="-1"></a>         inedible_coef_fndds, inedible_prop_fndds,</span>
+<span id="cb454-6"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-6" tabindex="-1"></a>         costperDGA) </span>
+<span id="cb454-7"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-7" tabindex="-1"></a></span>
+<span id="cb454-8"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-8" tabindex="-1"></a><span class="co"># check a few</span></span>
+<span id="cb454-9"><a href="calculate-cost-environment-and-social-impact-factors.html#cb454-9" tabindex="-1"></a>cost_IFs_sub <span class="sc">%&gt;%</span> <span class="fu">filter</span>(food <span class="sc">==</span> <span class="st">&quot;gr_whole&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 9
+## # Rowwise: 
+##   subgroup food     food_type   mixed_dish wasted_coef_fndds wasted_prop_fndds inedible_coef_fndds inedible_prop_fndds
+##      &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;                  &lt;dbl&gt;             &lt;dbl&gt;               &lt;dbl&gt;               &lt;dbl&gt;
+## 1        0 gr_whole Grocery     Mixed                  0.287             0.223              0.111               0.0792
+## 2        0 gr_whole Grocery     Non-Mixed              0.174             0.148              0.0406              0.0334
+## 3        0 gr_whole Non-Grocery Mixed                  0.527             0.345              0.713               0.318 
+## 4        0 gr_whole Non-Grocery Non-Mixed              0.172             0.147              0.0239              0.0200
+## 5        0 gr_whole Total       Mixed                  0.325             0.245              0.207               0.135 
+## 6        0 gr_whole Total       Non-Mixed              0.174             0.148              0.0388              0.0320
+## # ℹ 1 more variable: costperDGA &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb456-1" tabindex="-1"></a>cost_IFs_sub <span class="sc">%&gt;%</span> <span class="fu">filter</span>(food <span class="sc">==</span> <span class="st">&quot;pf_redm&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 9
+## # Rowwise: 
+##   subgroup food    food_type   mixed_dish wasted_coef_fndds wasted_prop_fndds inedible_coef_fndds inedible_prop_fndds
+##      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;                  &lt;dbl&gt;             &lt;dbl&gt;               &lt;dbl&gt;               &lt;dbl&gt;
+## 1        0 pf_redm Grocery     Mixed                  0.297             0.229            0.0781              0.0568  
+## 2        0 pf_redm Grocery     Non-Mixed              0.346             0.257            0.000443            0.000329
+## 3        0 pf_redm Non-Grocery Mixed                  0.285             0.222            0.0548              0.0409  
+## 4        0 pf_redm Non-Grocery Non-Mixed              0.330             0.248            0.000421            0.000316
+## 5        0 pf_redm Total       Mixed                  0.292             0.226            0.0676              0.0498  
+## 6        0 pf_redm Total       Non-Mixed              0.340             0.254            0.000435            0.000325
+## # ℹ 1 more variable: costperDGA &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div id="export-data" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Export Data<a href="calculate-cost-environment-and-social-impact-factors.html#export-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb458-1"><a href="calculate-cost-environment-and-social-impact-factors.html#cb458-1" tabindex="-1"></a><span class="co"># cost IFs</span></span>
+<span id="cb458-2"><a href="calculate-cost-environment-and-social-impact-factors.html#cb458-2" tabindex="-1"></a><span class="fu">write_csv</span>(cost_IFs_sub, <span class="fu">paste</span>(<span class="st">&quot;data_inputs/IMPACT_FACTORS/output_data/Impacts_cost_&quot;</span>, my_date, <span class="st">&quot;.csv&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>))</span>
+<span id="cb458-3"><a href="calculate-cost-environment-and-social-impact-factors.html#cb458-3" tabindex="-1"></a></span>
+<span id="cb458-4"><a href="calculate-cost-environment-and-social-impact-factors.html#cb458-4" tabindex="-1"></a><span class="co"># enviro IFs</span></span>
+<span id="cb458-5"><a href="calculate-cost-environment-and-social-impact-factors.html#cb458-5" tabindex="-1"></a><span class="fu">write_csv</span>(enviro_IFs_sub, <span class="fu">paste</span>(<span class="st">&quot;data_inputs/IMPACT_FACTORS/output_data/Impacts_enviro_&quot;</span>, my_date, <span class="st">&quot;.csv&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>))</span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cleaning-code-for-cost-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-calculate-impact-factors.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

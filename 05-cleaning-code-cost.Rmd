@@ -101,7 +101,7 @@ Then, combine the "day 1" and "day 2" datasets to get a "both_days" dataset.
 both_days <- rbind(day1_sub1, day2_sub1) %>% arrange(seqn, dayrec, line)
 
 # check to make sure the formatting worked
-both_days %>% filter(description == "Meat, NFS") %>% View() #looks good!
+both_days %>% filter(description == "Meat, NFS") %>% head() #looks good!
 
 ```
 
@@ -185,11 +185,11 @@ Check SSB by comparing the "ssb" indicator variable and the data when the foodgr
 
 ```{r}
 
-both_days1 %>% filter(ssb == 1) %>% View()
-both_days1 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% View()
-both_days1 %>% filter(ssb == 1 & Foodgroup != "ssb") %>% View() # need to change these to ssb
-both_days1 %>% filter(ssb == 0 & Foodgroup == "ssb") %>% View() # need to change these to other
-both_days1 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% View()
+both_days1 %>% filter(ssb == 1) %>% head()
+both_days1 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% head()
+both_days1 %>% filter(ssb == 1 & Foodgroup != "ssb") %>% head() # need to change these to ssb
+both_days1 %>% filter(ssb == 0 & Foodgroup == "ssb") %>% head() # need to change these to other
+both_days1 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% head()
 
 ```
 
@@ -207,10 +207,10 @@ Check again. Looks good.
 
 ```{r}
 
-both_days2 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% View()
-both_days2 %>% filter(ssb == 1 & Foodgroup != "ssb") %>% View() # none-good
-both_days2 %>% filter(ssb == 0 & Foodgroup == "ssb") %>% View() # none-good
-both_days2 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% View()
+both_days2 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% head()
+both_days2 %>% filter(ssb == 1 & Foodgroup != "ssb") %>% head() # none-good
+both_days2 %>% filter(ssb == 0 & Foodgroup == "ssb") %>% head() # none-good
+both_days2 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% head()
 
 ```
 
@@ -250,7 +250,7 @@ both_days4 <- both_days3 %>%
   rename(Foodgroup_FNDDS = Foodgroup)
 
 # any missing ratios?
-both_days4 %>% filter(is.na(ratio_FAFH_FAH)) %>% View()
+both_days4 %>% filter(is.na(ratio_FAFH_FAH)) %>% head()
 both_days4 %>% filter(is.na(ratio_FAFH_FAH)) %>% select(Foodgroup_FNDDS) %>% distinct()
 
 # assign ratio to 1 for water and babyfood just as a placeholder
@@ -310,11 +310,11 @@ both_days7 <- left_join(both_days6, price_comb, by = c("foodcode" = "food_code",
          three_digits = as.numeric(substr(foodcode, 1, 3))) #first three digits of fndds foodcode
 
 # how many are missing price data?
-both_days7 %>% filter(is.na(price_per_gram)) %>% View()
+both_days7 %>% filter(is.na(price_per_gram)) %>% head()
 both_days7 %>% filter(is.na(price_100gm)) %>% 
   select(foodcode, description, Foodgroup_FNDDS) %>% 
   distinct() %>% 
-  View()
+  head()
 
 ```
 
@@ -505,7 +505,6 @@ Because some participants have 2 days of dietary recall, we need to calculate an
 
 To calculate the average, we first need to determine how many days of recall each particpant has.
 
-
 ```{r}
 
 # calculate # days of recall
@@ -518,7 +517,7 @@ price_wide_total1 <- price_wide_total %>%
   left_join(daysofintake, by = "seqn")
 
 # check missing
-price_wide_total1 %>% filter(daysintake == 1 & is.na(consumed_per_day_1)) %>% View()
+price_wide_total1 %>% filter(daysintake == 1 & is.na(consumed_per_day_1)) %>% head()
 
 ```
 
@@ -562,7 +561,6 @@ price_wide_total3 <- price_wide_total2 %>%
 ```
 
 We also want to calculate the same thing as above, but additionally stratified by food source (grocery vs. non-grocery). So we do the same calculations above, but additionally group by "foodsource".
-
 
 ```{r}
 

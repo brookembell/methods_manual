@@ -1,0 +1,36 @@
+Risk_factor,TMRED,SD,Unit
+added_sugar,NA,NA,tsp eq
+dairy_tot,2.89,0.289,cup eq
+dairy_cow,2.89,0.289,cup eq
+dairy_soy,2.89,0.289,cup eq
+fruit_tot,1.79,0.179,cup eq
+fruit_exc_juice,2.14,0.214,cup eq
+fruit_juice,NA,NA,cup eq
+gr_refined,NA,NA,oz eq
+gr_whole,2.94,0.294,oz eq
+oil,NA,NA,g
+pf_egg,NA,NA,oz eq
+pf_leg,NA,NA,oz eq
+pf_ns,0.967,0.0967,oz eq
+pf_pm,0,0,oz eq
+pf_poultry,NA,NA,oz eq
+pf_poultry_tot,NA,NA,oz eq
+pf_redm,0,0,oz eq
+pf_redm_tot,0,0,oz eq
+pf_seafood,1.72,0.172,oz eq
+pf_soy,NA,NA,oz eq
+sat_fat,NA,NA,g
+veg_dg,NA,NA,cup eq
+veg_leg,NA,NA,cup eq
+veg_oth,NA,NA,cup eq
+veg_ro,NA,NA,cup eq
+veg_sta,NA,NA,cup eq
+veg_exc_sta,2.16,0.216,cup eq
+leg_tot,2.57,0.257,oz eq
+ssb,0,0,cup (8 fl oz)
+sea_omega3_fa,450,45,mg
+sodium,2000,200,mg
+fiber,21.5,2.15,g
+pufa_rep_carb,8,0.8,%E
+pufa_rep_sfa,8,0.8,%E
+pufa_rep_carbsfa,8,0.8,%E

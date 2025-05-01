@@ -999,7 +999,7 @@ cvd_real <-
 join1 <- left_join(final_dat1, cvd_real, by = c("outcome", "risk_factor", "Age"))
 
 # test
-join1 %>% filter(outcome == "OSTK" & risk_factor == "fruit_tot") %>% View() # looks good
+join1 %>% filter(outcome == "OSTK" & risk_factor == "fruit_tot") %>% head() # looks good
 
 # Retrieve cancer dataset
 cancer_real <- 
@@ -1011,10 +1011,10 @@ cancer_real <-
 join2 <- left_join(final_dat1, cancer_real, by = c("outcome", "risk_factor"))
 
 # test
-join2 %>% filter(outcome == "CC" & risk_factor == "dairy_tot") %>% View() #good
-join2 %>% filter(outcome == "CC" & risk_factor == "dairy_cow") %>% View() #good
-join2 %>% filter(outcome == "CC" & risk_factor == "dairy_soy") %>% View() #good
-join2 %>% filter(outcome == "MLPC" & risk_factor == "fruit_tot") %>% View() #good
+join2 %>% filter(outcome == "CC" & risk_factor == "dairy_tot") %>% head() #good
+join2 %>% filter(outcome == "CC" & risk_factor == "dairy_cow") %>% head() #good
+join2 %>% filter(outcome == "CC" & risk_factor == "dairy_soy") %>% head() #good
+join2 %>% filter(outcome == "MLPC" & risk_factor == "fruit_tot") %>% head() #good
 
 # need to merge join1 and join2
 
@@ -1110,7 +1110,7 @@ day_func <- function(x, y, u){
 }
 
 # test
-day_func(x=rr, y="pf_redm", u="g/day") %>% filter(risk_factor=="pf_redm" & logRR != 0) %>% View()
+day_func(x=rr, y="pf_redm", u="g/day") %>% filter(risk_factor=="pf_redm" & logRR != 0) %>% head()
 
 # apply to the RRs that are in week unit
 
@@ -1127,8 +1127,8 @@ rr1 <- rr %>%
 
 
 # check
-rr1 %>% filter(risk_factor=="pf_seafood" & logRR != 0) %>% View() #good
-rr1 %>% filter(risk_factor=="pf_redm_tot" & logRR != 0) %>% View() #good
+rr1 %>% filter(risk_factor=="pf_seafood" & logRR != 0) %>% head() #good
+rr1 %>% filter(risk_factor=="pf_redm_tot" & logRR != 0) %>% head() #good
 
 
 # Function 2: Convert function
@@ -1152,9 +1152,9 @@ convert_func <- function(x, y){
 }
 
 # test
-rr1 %>% convert_func(y="pf_poultry") %>% filter(risk_factor=="pf_poultry") %>% View()
-rr1 %>% convert_func(y="dairy") %>% filter(risk_factor=="dairy") %>% View()
-rr1 %>% convert_func(y="fruit_juice") %>% filter(risk_factor=="fruit_juice") %>% View()
+rr1 %>% convert_func(y="pf_poultry") %>% filter(risk_factor=="pf_poultry") %>% head()
+rr1 %>% convert_func(y="dairy") %>% filter(risk_factor=="dairy") %>% head()
+rr1 %>% convert_func(y="fruit_juice") %>% filter(risk_factor=="fruit_juice") %>% head()
 
 
 # APPLY FUNCTION TO DIET FACTORS 
@@ -1203,9 +1203,9 @@ rr2 <- rr1 %>%
   convert_func(y="water")
 
 # check
-rr2 %>% filter(risk_factor=="leg_tot" & RR_converted !=0) %>% View()
-rr2 %>% filter(risk_factor=="sodium") %>% View()
-rr2 %>% filter(risk_factor=="water") %>% View()
+rr2 %>% filter(risk_factor=="leg_tot" & RR_converted !=0) %>% head()
+rr2 %>% filter(risk_factor=="sodium") %>% head()
+rr2 %>% filter(risk_factor=="water") %>% head()
 
   
 # Function 3: Divide function
@@ -1240,8 +1240,8 @@ rr3 <- rr2 %>%
   divide_func(y="sat_fat") # want to get unit 1%E/day
 
 # check
-rr3 %>% filter(risk_factor=="sea_omega3_fa" & RR_converted !=0) %>% View()
-rr3 %>% filter(risk_factor=="fiber" & RR_converted !=0) %>% View()
+rr3 %>% filter(risk_factor=="sea_omega3_fa" & RR_converted !=0) %>% head()
+rr3 %>% filter(risk_factor=="fiber" & RR_converted !=0) %>% head()
 
 
 # Function 4: No changes needed
@@ -1272,8 +1272,8 @@ rr4 <- rr3 %>%
   nochange_func(y="pf_ns")
 
 # check
-rr4 %>% filter(risk_factor=="ssb" & RR_converted !=0) %>% View()
-rr4 %>% filter(risk_factor=="pf_ns" & RR_converted !=0) %>% View()
+rr4 %>% filter(risk_factor=="ssb" & RR_converted !=0) %>% head()
+rr4 %>% filter(risk_factor=="pf_ns" & RR_converted !=0) %>% head()
 
 # determine if any RRs have not been converted yet
 rr4 %>% filter(is.na(RR_converted)) %>% select(risk_factor) %>% unique() #none-good
@@ -1447,8 +1447,8 @@ nhanes.dat1 <- nhanes.dat %>% rename(diet = Foodgroup,
 # sea_omega3_fa is in grams and we want it in milligrams
 
 # first, look at data
-nhanes.dat1 %>% filter(diet == "ssb") %>% View() #this is fine
-nhanes.dat1 %>% filter(diet == "sea_omega3_fa") %>% View()
+nhanes.dat1 %>% filter(diet == "ssb") %>% head() #this is fine
+nhanes.dat1 %>% filter(diet == "sea_omega3_fa") %>% head()
 
 # fix sea_omega3_fa
 # g -> mg
@@ -1462,8 +1462,8 @@ nhanes.dat2 <- nhanes.dat1 %>%
   bind_rows()
 
 # look at data
-# nhanes.dat2 %>% filter(diet == "ssb") %>% View()
-nhanes.dat2 %>% filter(diet == "sea_omega3_fa") %>% View()
+# nhanes.dat2 %>% filter(diet == "ssb") %>% head()
+nhanes.dat2 %>% filter(diet == "sea_omega3_fa") %>% head()
 
 # read in counterfactual data
 counterfactuals <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/counterfactual_intake", my_date))
@@ -1509,7 +1509,7 @@ other_healh <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/other_health"
 dat1 <- left_join(nhanes.dat2, counterfactuals1, by = "diet")
 
 # check pf_seafood to make sure all 5 dietary patterns were merged
-dat1 %>% filter(diet == "pf_seafood") %>% select(subgroup, diet, diet_pattern, CF_mean_intake) %>% View()
+dat1 %>% filter(diet == "pf_seafood") %>% select(subgroup, diet, diet_pattern, CF_mean_intake) %>% head()
 #looks good
 
 # merge dat1 with tmred
@@ -1527,7 +1527,7 @@ merged1 <- merged %>%
   relocate(c(agecat, Age_label, female, Sex, race, Race_label), .after = subgroup)
 
 # check data
-merged1 %>% select(subgroup, overweight_rate) %>% View()
+merged1 %>% select(subgroup, overweight_rate) %>% head()
 
 # export file
 write_csv(merged1, paste0("data_inputs/FINAL/model_data/nhanes1518_agesexrace_merged", my_date))
@@ -1566,7 +1566,7 @@ nhanes1 <- nhanes %>% rename(subgroup_id = subgroup,
   relocate(pro_nongro, .after = pro_gro)
 
 # remove extra ssb rows
-nhanes1 %>% filter(Foodgroup == "ssb") %>% View()
+nhanes1 %>% filter(Foodgroup == "ssb") %>% head()
 
 nhanes2 <- nhanes1 %>% filter(!(is.na(subgroup_id)))
 
