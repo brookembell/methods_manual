@@ -1,0 +1,899 @@
+# Cleaning Code for Environment Data
+
+This chapter walks you through all of the R code used to clean the raw **ENVIRONMENT**-related data inputs. The resulting cleaned dataset is then used to calculate the environment impact factors (see **Chapter XXX**).
+
+## Clean and Restructure Intermediary Datasets
+
+This script imports all of raw cost-related data inputs, and then cleans and merges them so that the cost impact factors can later be calculated.
+
+Note that you must first open the 'methods_manual' R project before running this script or else it will not work.
+
+First, let's set up our environment.
+
+```{r}
+
+# check working directory
+getwd()
+
+# SET UP -----
+
+rm(list = ls())
+
+options(scipen=999)
+
+library(tidyverse)
+library(readxl)
+library(survey)
+
+my_date <- Sys.Date()
+
+```
+
+### Import and Merge Data Inputs
+
+#### NHANES Diet Intake {-}
+
+**The following code is the same code used in Section XXX**.
+
+First, read in the NHANES food-level datasets. The data were split into "day 1" and "day 2" earlier, and here we are going to merge them into "both days". There also are different datasets containing just sugar sweetened beverage (SSB) data, so we have to import those in separately, and then merge with the rest of the day1/day2 diet datasets.
+
+Import all of the "day 1" datasets first. 
+
+```{r}
+
+# import
+day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
+
+# only select needed variables
+day1_sub <- day1 %>% select(SEQN, DRDINT, DR1DRSTZ, DR1ILINE, DR1IFDCD, 
+                            DR1IGRMS, DESCRIPTION, foodsource, nhanes_cycle, dayrec, added_sugar) %>% 
+  rename(seqn = SEQN,
+         line = DR1ILINE,
+         foodcode = DR1IFDCD,
+         grams = DR1IGRMS,
+         description = DESCRIPTION,
+         daysintake = DRDINT,
+         reliable = DR1DRSTZ)
+
+# ssb
+ssb_1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_ssb.rds")
+
+# merge food and ssb
+day1_sub1 <- left_join(day1_sub, ssb_1, by = c("seqn" = "SEQN",
+                                               "line" = "DR1ILINE",
+                                               "foodcode" = "DR1IFDCD",
+                                               "description" = "DESCRIPTION",
+                                               "grams" = "DR1IGRMS"))
+
+```
+
+Then import all of "day 2" datasets.
+
+```{r}
+
+# import
+day2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds")
+
+# only select needed variables
+day2_sub <- day2 %>% select(SEQN, DRDINT, DR2DRSTZ, DR2ILINE, DR2IFDCD, 
+                            DR2IGRMS, DESCRIPTION, foodsource, nhanes_cycle, dayrec, added_sugar) %>% 
+  rename(seqn = SEQN,
+         line = DR2ILINE,
+         foodcode = DR2IFDCD,
+         grams = DR2IGRMS,
+         description = DESCRIPTION,
+         daysintake = DRDINT,
+         reliable = DR2DRSTZ)
+
+# ssb
+ssb_2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_ssb.rds")
+
+# merge food and ssb
+day2_sub1 <- left_join(day2_sub, ssb_2, by = c("seqn" = "SEQN",
+                                               "line" = "DR2ILINE",
+                                               "foodcode" = "DR2IFDCD",
+                                               "description" = "DESCRIPTION",
+                                               "grams" = "DR2IGRMS"))
+```
+
+Then, combine the "day 1" and "day 2" datasets to get a "both_days" dataset.
+
+```{r}
+
+both_days <- rbind(day1_sub1, day2_sub1) %>% arrange(seqn, dayrec, line)
+
+# check to make sure the formatting worked
+both_days %>% filter(description == "Meat, NFS") %>% View() #looks good!
+
+```
+
+Lastly, remove the original diet datasets becuase they are very large and we don't need them anymore.
+
+```{r}
+
+rm(list=setdiff(ls(), c("both_days", "my_date")))
+
+```
+
+#### Mapping from Dietary Factor to FNDDS Food Code {-}
+
+This mapping is needed to handle some data processing in later code chunks.
+
+First, create an empty dataset template that contains all of the foodcodes that exist in the diet dataset (both_days).
+
+```{r}
+
+all_foodcodes <- both_days %>% select(foodcode) %>% distinct()
+
+```
+
+Then, import the non-grain food mapping (labeled as "map_a").
+
+```{r}
+
+map_a <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FNDDS_mapping_detailed_04-06-25.csv")
+
+```
+
+Then, join the template and the first mapping.
+
+```{r}
+
+my_join <- full_join(mutate(all_foodcodes, i=1), 
+                     mutate(map_a, i=1)) %>% 
+  select(-i) %>% 
+  filter(str_detect(foodcode, paste0("^", foodcode_prefix))) %>% 
+  select(-foodcode_prefix)
+
+```
+
+Import the grain-only mapping (labeled as "map_b").
+
+```{r}
+
+map_b <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FNDDS_mapping_WHOLE_GRAINS_ONLY_09-05-23.csv")
+
+```
+
+Merge my_join with the second mapping.
+
+```{r}
+
+my_join1 <- rbind(my_join, map_b) %>% arrange(foodcode)
+
+```
+
+Lastly, merge back with both_days.
+
+```{r}
+
+both_days1 <- left_join(both_days, my_join1, by = "foodcode")
+
+```
+
+Check how many FNDDS codes in the dataset don't have a mapping to a dietary factor (i.e., food group category)
+
+```{r}
+
+both_days1 %>% 
+  filter(is.na(Foodgroup)) %>% 
+  select(foodcode, description) %>% 
+  distinct() %>% 
+  arrange(foodcode)
+
+```
+
+Check SSB by comparing the "ssb" indicator variable and the data when the foodgroup is set to "ssb".
+
+```{r}
+
+both_days1 %>% filter(ssb == 1) %>% View()
+both_days1 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% View()
+both_days1 %>% filter(ssb == 1 & Foodgroup != "ssb") %>% View() # need to change these to ssb
+both_days1 %>% filter(ssb == 0 & Foodgroup == "ssb") %>% View() # need to change these to other
+both_days1 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% View()
+
+```
+
+We see that, for some of the rows, ssb is labeled incorrectly, so we need to fix it.
+
+```{r}
+
+both_days2 <- both_days1 %>% 
+  mutate(Foodgroup = ifelse(ssb == 1 & Foodgroup != "ssb", "ssb", Foodgroup)) %>% 
+  mutate(Foodgroup = ifelse(ssb == 0 & Foodgroup == "ssb", "other", Foodgroup))
+
+```
+
+Check again. Looks good.
+
+```{r}
+
+both_days2 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% View()
+both_days2 %>% filter(ssb == 1 & Foodgroup != "ssb") %>% View() # none-good
+both_days2 %>% filter(ssb == 0 & Foodgroup == "ssb") %>% View() # none-good
+both_days2 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% View()
+
+```
+
+Rename variable.
+
+```{r}
+
+both_days3 <- both_days2 %>% 
+  rename(Foodgroup_FNDDS = Foodgroup)
+
+```
+
+Tidy up the global environment and only keep the datasets we currently need.
+
+```{r}
+
+rm(list=setdiff(ls(), c("both_days3", "my_date")))
+
+```
+
+
+This dataset containing the FNDDS foodcodes that represent seafood dishes will then be used in the following code chunk.
+
+#### Mapping from FNDDS Food Code to FCID Code {-}
+
+Import the mapping and join with the both_days dataset.
+
+```{r}
+
+# import 
+map <- read_csv("data_inputs/OTHER/fndds_to_fcid_mapping/DATA/FCID_0118_LASTING.csv")
+
+map1 <- map %>% select(foodcode, fcidcode, fcid_desc, wt)
+
+# combine with food data
+both_days4 <- full_join(both_days3, map1, by = "foodcode")
+
+# if SEQN (subject ID) is missing, remove from dataset
+both_days5 <- both_days4 %>% 
+  filter(!(is.na(seqn))) %>% 
+  arrange(seqn, dayrec, line) %>% 
+  relocate(c(foodsource, nhanes_cycle, dayrec), .after = last_col())
+
+# look at ssb
+both_days5 %>% filter(ssb == 1) %>% View()
+both_days5 %>% filter(ssb==1) %>% select(fcid_desc) %>% table()
+
+```
+
+#### Food Loss and Waste Data {-}
+
+Import the food loss & waste coefficients and join with the both_days dataset.
+
+```{r}
+
+# import losswaste data
+# losswaste <- read_csv("data_inputs/OTHER/food_waste/DATA/losswaste.csv")
+
+# import the proxy data for missing loss/waste data
+losswaste_complete <- read_csv("data_inputs/OTHER/food_waste/DATA/missing_data/resolved/Missing waste coefficients (full)_090523.csv") %>% 
+  select(-c(fcid_desc, Foodgroup, Proxy, Notes))
+
+# merge with bothdays
+both_days6 <- left_join(both_days5, losswaste_complete, by = "fcidcode")
+
+```
+
+#### Mapping From FCID Food Code to Dietary Factor {-}
+
+First, we import the original mapping.
+
+```{r}
+
+# import fcid-diet factor mapping
+new_map <- read_xlsx("data_inputs/OTHER/dietfactor_to_fcid_mapping/DATA/FCID_to_dietaryfactor_mapping_01-09-2024_final.xlsx") %>% 
+  select(FCID_Code, Foodgroup) %>% 
+  rename(fcidcode = FCID_Code,
+         Foodgroup_FCID = Foodgroup)
+
+# merge
+both_days7 <- left_join(both_days6, new_map, by = "fcidcode")
+
+# which FNDDS foodcodes have missing FCID food group?
+both_days7 %>% filter(is.na(Foodgroup_FCID)) %>% View()
+both_days7 %>% filter(is.na(Foodgroup_FCID)) %>% select(foodcode, description) %>% distinct()
+
+```
+
+But, we can see that there's some missing so our team went and manually updated the mapping, which is imported in the following code chunk.
+
+```{r}
+
+# import updated mapping
+fcids_new <- read_csv("data_inputs/OTHER/dietfactor_to_fcid_mapping/DATA/missing_data/resolved/Missing FCIDS_mapped.csv") %>% 
+  select(-description) %>% 
+  rename(Foodgroup_FCID = Foodgroup)
+
+# row patch new mapping with both days
+both_days8 <- rows_patch(both_days7, fcids_new, unmatched = "ignore")
+
+# which ones have missing fcid?
+both_days8 %>% filter(is.na(fcidcode)) %>% View()
+both_days8 %>% filter(is.na(fcidcode)) %>% select(foodcode, description, fcidcode) %>% distinct() %>% View()
+
+```
+There are now fewer missing coefficients, but still some. In some of these cases, the FNDDS foodcode can represent the FCID code (i.e., single ingredient foods). Below, I manually add these waste coefficents for dasheen and corn.
+
+```{r}
+
+# dasheen
+dash <- losswaste_complete %>% filter(fcidcode == "103139000") %>% 
+  #change the fcidcode
+  mutate(foodcode = 71962020,
+         wt = 100)
+
+# corn
+corn <- losswaste_complete %>% filter(fcidcode == "1500127000") %>% 
+  #change the fcidcode
+  mutate(foodcode = 75215990, 
+         wt = 100)
+
+# combine
+comb <- rbind(dash, corn) %>% select(-fcidcode)
+
+# row patch with bothdays
+both_days9 <- rows_patch(both_days8, comb, by = "foodcode")
+
+# check missing fcid
+both_days9 %>% filter(is.na(fcidcode)) %>% View()
+
+# check missing waste coef
+both_days9 %>% filter(is.na(waste_coef)) %>% View()
+
+```
+
+There's still a few FCID codes that don't have waste and inedible coefficients, but it's not very many, so we will leave for now.
+
+Calculate the FCID-level consumed, inedible, and wasted amounts of food.
+
+```{r}
+
+both_days10 <- both_days9 %>% 
+  mutate(consumed_amt_FCID = grams * (wt / 100),
+         inedible_amt_FCID = consumed_amt_FCID * ined_coef,
+         wasted_amt_FCID = consumed_amt_FCID * waste_coef)
+
+```
+
+Calculate the FNDDS-level consumed, inedible, and wasted amounts of food. This isn't needed for the environmental impact factors, but it is needed for the cost impact factors in the next section.
+
+```{r}
+
+both_days11 <-
+  both_days10 %>% 
+  group_by(seqn, dayrec, line, foodcode) %>% 
+  mutate(consumed_amt_FNDDS = grams,
+         inedible_amt_FNDDS = sum(inedible_amt_FCID, na.rm = TRUE),
+         wasted_amt_FNDDS = sum(wasted_amt_FCID, na.rm = TRUE)) %>% 
+  ungroup()
+
+# get distinct dataset
+fndds_flw <- both_days11 %>% 
+  select(seqn, dayrec, line, foodcode, description, consumed_amt_FNDDS, 
+         inedible_amt_FNDDS, wasted_amt_FNDDS) %>% 
+  distinct() %>% 
+  arrange(seqn, dayrec, line)
+
+# export to use in next section
+saveRDS(fndds_flw, "data_inputs/IMPACT_FACTORS/temp_data/fndds_flw.rds")
+
+```
+
+Tidy up the global environment.
+
+```{r}
+
+rm(list=setdiff(ls(), c("both_days11", "my_date")))
+
+```
+
+#### FCID-Level Environmental Impact Factors (dataField) {-}
+
+There are two environmental datasets that need to be imported. The first dataset contains greenhouse gas (GHG) and cummulative energy demand (CED) impact factors. The second contains water scarcity (WATER) and bluewater use (BLUEWATER) impact factors.
+
+```{r}
+
+# import datafield (non-water)
+datafield <- read_xlsx("data_inputs/ENVIRONMENT/ghg_ced_impacts/DATA/dataFIELDv1.0_LASTING_120723.xlsx",
+                sheet = "FCID linkages",
+                skip = 2)
+
+datafield_sub <- datafield %>% 
+  select(FCID_Code, `MJ / kg`, `CO2 eq / kg`) %>% 
+  rename(GHG_mn = `CO2 eq / kg`,
+         CED_mn = `MJ / kg`,
+         fcidcode = FCID_Code) %>% 
+  mutate(fcidcode = as.character(fcidcode))
+
+# import datafield (water impacts)
+datafield_water <- read_xlsx("data_inputs/ENVIRONMENT/water_impacts/DATA/dataFIELD_water public v1_LASTING_120723.xlsx",
+                             sheet = "FCID Codes",
+                             skip = 2)
+
+datafield_water_sub <- datafield_water %>% 
+  select(FCID_Code, `liter eq. / kg`, `L /kg`) %>% 
+  rename(WATER_mn = `liter eq. / kg`,
+         BLUEWATER_mn = `L /kg`,
+         fcidcode = FCID_Code) %>% 
+  mutate(fcidcode = as.character(fcidcode))
+
+# merge the two datafield datasets together
+datafield_comb <- left_join(datafield_sub, datafield_water_sub, by = "fcidcode")
+
+# now merge with bothdays
+both_days12 <- both_days11 %>% 
+  mutate(fcidcode = as.character(fcidcode)) %>% 
+  left_join(datafield_comb, by = "fcidcode")
+
+```
+
+Below, we check the dataset for missing impact factors.
+
+```{r}
+
+both_days12 %>% filter(is.na(GHG_mn)) %>% View()
+both_days12 %>% filter(is.na(GHG_mn) & ssb == 1) %>% View()
+both_days12 %>% filter(is.na(GHG_mn) & Foodgroup_FNDDS == "ssb") %>% View()
+both_days12 %>% filter(is.na(GHG_mn) & Foodgroup_FNDDS == "ssb") %>% 
+  select(description, Foodgroup_FNDDS) %>% distinct() %>% View() # these are all diet drinks and not ssb
+
+both_days12 %>% filter(is.na(GHG_mn)) %>% select(Foodgroup_FNDDS) %>% table()
+both_days12 %>% filter(is.na(GHG_mn)) %>% select(Foodgroup_FCID) %>% table()
+```
+
+Our team manually assigned proxies for some of these FCID codes with missing environmental impact factors. 
+
+```{r}
+
+# import proxies for missing enviro data
+ghg_proxies <- read_csv("data_inputs/ENVIRONMENT/ghg_ced_impacts/DATA/missing_data/resolved/Missing environmental impacts_mapped.csv")
+
+ghg_proxies_sub <- ghg_proxies %>% 
+  select(foodcode, description, proxy_fcidcode, proxy_desc) %>% 
+  rename(fcidcode = proxy_fcidcode,
+         fcid_desc = proxy_desc) %>% 
+  mutate(fcidcode = as.character(fcidcode))
+
+# update rows with proxies
+both_days13 <- rows_update(both_days12, ghg_proxies_sub, by = c("foodcode", "description"))
+
+# check corn
+both_days13 %>% filter(foodcode == 75215990) %>% View() # good
+
+# fcid should be herb
+both_days13 %>% filter(foodcode == 72133200) %>% View() # good!
+
+# insert enviro data for fcids that were originally missing
+both_days14 <- both_days13 %>% 
+  rows_patch(datafield_comb, by = "fcidcode", unmatched = "ignore") %>% 
+  ungroup()
+
+# check corn
+both_days14 %>% filter(foodcode == 75215990) %>% View()
+
+# confirm there are no more missing FCIDs
+both_days14 %>% filter(is.na(fcidcode)) %>% View() # good
+
+# confirm there are no more missing GHG
+both_days14 %>% filter(is.na(GHG_mn)) %>% View() 
+both_days14 %>% filter(is.na(GHG_mn)) %>% select(description, Foodgroup_FCID) %>% distinct() %>% View()
+both_days14 %>% filter(is.na(GHG_mn)) %>% select(Foodgroup_FCID) %>% distinct()
+both_days14 %>% filter(is.na(WATER_mn)) %>% select(Foodgroup_FCID) %>% distinct()
+
+```
+
+At this point, most of the missing is for babyfood and other foods, so we will move on.
+
+Tidy up the global environment.
+
+```{r}
+
+rm(list=setdiff(ls(), c("both_days14", "my_date")))
+
+```
+
+#### FCID-Level Social Impact Factors (i.e., Forced Labor Risk) {-}
+
+Import the forced labor (FL) risk scores (excluding seafood for now) and join with both_days.
+
+```{r}
+
+# import fl scores
+fl <- read_csv("data_inputs/SOCIAL/forced_labor/DATA/FL_scores_FCID_062124.csv") %>% 
+  select(FCID_Code_chr, Weight_Conversion, FL_Score_Value_grams) %>% 
+  mutate(FCID_Code_chr = as.character(FCID_Code_chr))
+
+# now merge
+both_days15 <- left_join(both_days14, fl, by = c("fcidcode" = "FCID_Code_chr"))
+
+# any missing fl scores?
+both_days15 %>% filter(is.na(FL_Score_Value_grams)) %>% View() #fine
+both_days15 %>% filter(is.na(FL_Score_Value_grams)) %>% select(Foodgroup_FCID) %>% distinct() #fine
+
+```
+
+Now we have to handle the seafood scores. First, look at the rows where either the FNDDS- or FCID-level food group is seafood.
+
+```{r}
+
+both_days15 %>% filter(Foodgroup_FNDDS == "pf_seafood") %>% View()
+both_days15 %>% filter(Foodgroup_FCID == "pf_seafood") %>% View()
+both_days15 %>% filter(Foodgroup_FNDDS == "pf_seafood" & Foodgroup_FCID == "pf_seafood") %>% View()
+
+```
+
+Split both_days into two distinct datasets so that we can work with them separately: one containing all rows where both the FNDDS- and FCID-level food group is seafood, and the second containing the remaining rows.
+
+```{r}
+
+seafood <- both_days15 %>% filter(Foodgroup_FNDDS == "pf_seafood" & Foodgroup_FCID == "pf_seafood") %>% 
+  select(-c(Weight_Conversion, FL_Score_Value_grams))
+
+no_seafood <- both_days15 %>% filter(!(Foodgroup_FNDDS == "pf_seafood" & Foodgroup_FCID == "pf_seafood"))
+
+# check
+nrow(seafood) + nrow(no_seafood)
+nrow(both_days15)
+nrow(seafood) + nrow(no_seafood) == nrow(both_days15)
+
+```
+
+PICK UP HERE!!
+
+```{r}
+(nrow(seafood) + nrow(no_seafood)) == nrow(both_days19) #good
+
+# import seafood scores
+sea_scores <- read_csv("data_inputs/SOCIAL/forced_labor/DATA/seafood_FL_scores_FNDDS_062124.csv") %>% 
+  select(FNDDS_Code, FL_Score_Value_grams)
+
+# join
+sea_join <- left_join(seafood, sea_scores, by = c("foodcode" = "FNDDS_Code"))
+
+# missing
+sea_join %>% filter(is.na(FL_Score_Value_grams)) # bouillabaise
+
+# import bouillabaise scores
+bou <- read_xlsx("data_inputs/SOCIAL/forced_labor/DATA/Seafood_mapping_06-04-24.xlsx",
+                 sheet = "Bouillabaisse_scores") %>% 
+  select(FNDDS_code, FCID_code, FL_Score_FCID) %>% 
+  rename(foodcode = FNDDS_code,
+         fcidcode = FCID_code) %>% 
+  mutate(FL_Score_Value_bou = FL_Score_FCID / 1000000,
+         fcidcode = as.character(fcidcode)) %>% 
+  select(-FL_Score_FCID)
+
+# join
+sea_join1 <- left_join(sea_join, bou)
+
+sea_join2 <- sea_join1 %>% 
+  mutate(FL_Score_Value_grams = ifelse(foodcode == 27350110 & is.na(FL_Score_Value_grams), FL_Score_Value_bou, FL_Score_Value_grams),
+         # set weight conversion to 1 for seafood
+         Weight_Conversion = 1) %>% 
+  select(-FL_Score_Value_bou)
+
+# any missing?
+sea_join2 %>% filter(is.na(FL_Score_Value_grams)) #none-woo!
+
+# combine back with no seafood
+both_days12 <- rbind(no_seafood, sea_join2) %>% arrange(seqn, dayrec, line)
+
+# check missing
+both_days12 %>% filter(is.na(Weight_Conversion)) %>% View() #fine
+both_days12 %>% filter(is.na(FL_Score_Value_grams)) %>% View() 
+both_days12 %>% filter(is.na(FL_Score_Value_grams)) %>% select(fcid_desc) %>% distinct() %>% View()
+
+missing_fl <- both_days12 %>% filter(is.na(FL_Score_Value_grams)) %>% 
+  select(description, Foodgroup_FNDDS, fcid_desc, Foodgroup_FCID) %>% 
+  filter(!(Foodgroup_FCID %in% c("water", "coffee_tea", "babyfood", "other"))) %>% 
+  distinct()
+
+# export
+write_csv(missing_fl, paste("data_inputs/SOCIAL/forced_labor/DATA/missing_data/Missing FL scores_", my_date, ".csv", sep=""))
+
+# create impute median
+both_days12 %>% 
+  select(seqn, line, dayrec, fcidcode, Foodgroup_FCID, fcid_desc, FL_Score_Value_grams) %>% 
+  filter(Foodgroup_FCID == "pf_seafood") %>% 
+  distinct() %>% 
+  View()
+
+both_days12 %>% 
+  select(fcidcode, fcid_desc, Foodgroup_FCID, FL_Score_Value_grams) %>% 
+  filter(Foodgroup_FCID == "pf_seafood")  %>% 
+  distinct() %>%
+  arrange(fcidcode) %>% 
+  View()
+
+imputed_fl <-
+  both_days12 %>% 
+  select(seqn, line, dayrec, fcidcode, Foodgroup_FCID, fcid_desc, FL_Score_Value_grams) %>% 
+  filter(Foodgroup_FCID == "pf_seafood") %>% 
+  distinct() %>% 
+  group_by(fcidcode, fcid_desc) %>% 
+  summarise(FL_g_group_median = median(FL_Score_Value_grams, na.rm = TRUE)) %>% 
+  filter(!(is.na(fcidcode)))
+
+# join imputed fl scores with food data
+both_days13 <- left_join(both_days12, imputed_fl, by = c("fcidcode", "fcid_desc"))
+
+# insert food_group median price if missing
+both_days14 <- both_days13 %>% 
+  mutate(FL_Score_Value_grams = ifelse(is.na(FL_Score_Value_grams) & Foodgroup_FCID == "pf_seafood", FL_g_group_median, FL_Score_Value_grams)) %>% 
+  ungroup()
+
+# check if any missing price per gram (shouldn't be)
+both_days14 %>% filter(is.na(FL_Score_Value_grams)) %>% select(fcid_desc) %>% distinct() %>% View()
+both_days14 %>% filter(is.na(FL_Score_Value_grams) & Foodgroup_FCID == "pf_seafood") #none-good
+
+# check cocoa bean
+both_days14 %>% filter(fcid_desc == "Cocoa bean, chocolate") %>% View()
+
+# create new nhanes cycle variable
+both_days15 <- both_days14 %>%
+  mutate(nhanes1516 = ifelse(nhanes_cycle == "2015-2016", 1, 0))
+
+```
+
+PICK UP HERE!!!!!
+
+### Calculate Average Environmental and Social Impact, Per FCID Code
+
+```{r}
+# select variables we need to calculate impact factors
+my_enviro_table <- 
+  both_days29 %>% 
+  mutate(
+    GHG_impact_per_gram = GHG_mn / 1000,
+    GHG_impact_per_FCID_Consumed = GHG_impact_per_gram * consumed_amt_FCID,
+    
+    CED_impact_per_gram = CED_mn / 1000,
+    CED_impact_per_FCID_Consumed = CED_impact_per_gram * consumed_amt_FCID,
+    
+    WATER_impact_per_gram = WATER_mn / 1000,
+    WATER_impact_per_FCID_Consumed = WATER_impact_per_gram * consumed_amt_FCID,
+    
+    BLUEWATER_impact_per_gram = BLUEWATER_mn / 1000,
+    BLUEWATER_impact_per_FCID_Consumed = BLUEWATER_impact_per_gram * consumed_amt_FCID,
+    
+    FL_impact_per_gram = FL_Score_Value_grams * Weight_Conversion,
+    FL_impact_per_FCID_Consumed = FL_impact_per_gram * consumed_amt_FCID)
+
+# what food groups have missing impact factors?
+my_enviro_table %>% filter(is.na(GHG_impact_per_gram)) %>% 
+  select(fcidcode, fcid_desc, Foodgroup_FCID) %>% distinct() %>% View()
+# this is fine
+
+my_enviro_table %>% filter(is.na(GHG_impact_per_gram)) %>% 
+  select(Foodgroup_FCID) %>% distinct()
+
+my_enviro_table %>% filter(is.na(FL_impact_per_gram)) %>% 
+  select(fcidcode, fcid_desc, Foodgroup_FCID) %>% distinct() %>% View()
+
+# Calculate total enviro impact per day, per person
+enviro_impact <- my_enviro_table %>% 
+  group_by(seqn, fcidcode, dayrec) %>% 
+  summarise(GHG_per_day_Consumed = sum(GHG_impact_per_FCID_Consumed, na.rm = TRUE),
+            CED_per_day_Consumed = sum(CED_impact_per_FCID_Consumed, na.rm = TRUE),
+            WATER_per_day_Consumed = sum(WATER_impact_per_FCID_Consumed, na.rm = TRUE),
+            BLUEWATER_per_day_Consumed = sum(BLUEWATER_impact_per_FCID_Consumed, na.rm = TRUE),
+            FL_per_day_Consumed = sum(FL_impact_per_FCID_Consumed, na.rm = TRUE),
+            
+            consumed_per_day = sum(consumed_amt_FCID, na.rm = TRUE),
+            inedible_per_day = sum(inedible_amt_FCID, na.rm = TRUE),
+            wasted_per_day = sum(wasted_amt_FCID, na.rm = TRUE)) %>% 
+  filter(!(is.na(fcidcode)))  # this is needed bc there are some na fcidcodes
+# replace(is.na(.), 0) #this is not necessary
+
+# now do ssb
+ssb_impact <- my_enviro_table %>% 
+  group_by(seqn, fcidcode, dayrec, ssb) %>% 
+  summarise(GHG_per_day_Consumed = sum(GHG_impact_per_FCID_Consumed, na.rm = TRUE),
+            CED_per_day_Consumed = sum(CED_impact_per_FCID_Consumed, na.rm = TRUE),
+            WATER_per_day_Consumed = sum(WATER_impact_per_FCID_Consumed, na.rm = TRUE),
+            BLUEWATER_per_day_Consumed = sum(BLUEWATER_impact_per_FCID_Consumed, na.rm = TRUE),
+            FL_per_day_Consumed = sum(FL_impact_per_FCID_Consumed, na.rm = TRUE),
+            
+            consumed_per_day = sum(consumed_amt_FCID, na.rm = TRUE),
+            inedible_per_day = sum(inedible_amt_FCID, na.rm = TRUE),
+            wasted_per_day = sum(wasted_amt_FCID, na.rm = TRUE)) %>% 
+  filter(!(is.na(fcidcode)))
+
+# calculate sum of fcid codes for ssb
+ssb_impact %>% filter(ssb == 1) %>% View()
+
+# calculate summed ssb impact for each seqn and day
+ssb_impact1 <- ssb_impact %>% 
+  ungroup() %>% 
+  filter(ssb == 1) %>% 
+  group_by(seqn, dayrec) %>% 
+  summarise(GHG_per_day_Consumed_ssb = sum(GHG_per_day_Consumed, na.rm = TRUE),
+            CED_per_day_Consumed_ssb = sum(CED_per_day_Consumed, na.rm = TRUE),
+            WATER_per_day_Consumed_ssb = sum(WATER_per_day_Consumed, na.rm = TRUE),
+            BLUEWATER_per_day_Consumed_ssb = sum(BLUEWATER_per_day_Consumed, na.rm = TRUE),
+            FL_per_day_Consumed_ssb = sum(FL_per_day_Consumed, na.rm = TRUE),
+            
+            consumed_per_day_ssb = sum(consumed_per_day, na.rm = TRUE),
+            inedible_per_day_ssb = sum(inedible_per_day, na.rm = TRUE),
+            wasted_per_day_ssb = sum(wasted_per_day, na.rm = TRUE))
+
+# go back to non-ssb
+
+# check missing
+enviro_impact %>% filter(is.na(consumed_per_day)) #none-good
+enviro_impact %>% filter(is.na(fcidcode))
+
+# average day 1 and day 2 impacts  for each fcid code
+enviro_wide <- pivot_wider(enviro_impact, 
+                           names_from = dayrec,
+                           values_from = c(contains("per_day"))) #%>% 
+# replace(is.na(.), 0) # do'nt do this 12/7/23
+
+# join
+enviro_wide1 <- enviro_wide %>% 
+  left_join(daysofintake, by = "seqn")
+
+# check
+enviro_wide1 %>% filter(daysintake == 1 & is.na(consumed_per_day_1)) #good
+
+# add 0s when appropriate
+# added 12/7/23
+enviro_wide2 <- enviro_wide1 %>% 
+  mutate(# day 2
+    GHG_per_day_Consumed_2 = ifelse(daysintake == 2 & is.na(GHG_per_day_Consumed_2), 0, GHG_per_day_Consumed_2),
+    CED_per_day_Consumed_2 = ifelse(daysintake == 2 & is.na(CED_per_day_Consumed_2), 0, CED_per_day_Consumed_2),
+    WATER_per_day_Consumed_2 = ifelse(daysintake == 2 & is.na(WATER_per_day_Consumed_2), 0, WATER_per_day_Consumed_2),
+    BLUEWATER_per_day_Consumed_2 = ifelse(daysintake == 2 & is.na(BLUEWATER_per_day_Consumed_2), 0, BLUEWATER_per_day_Consumed_2),
+    FL_per_day_Consumed_2 = ifelse(daysintake == 2 & is.na(FL_per_day_Consumed_2), 0, FL_per_day_Consumed_2),
+    
+    consumed_per_day_2 = ifelse(daysintake == 2 & is.na(consumed_per_day_2), 0, consumed_per_day_2),
+    wasted_per_day_2 = ifelse(daysintake == 2 & is.na(wasted_per_day_2), 0, wasted_per_day_2),
+    inedible_per_day_2 = ifelse(daysintake == 2 & is.na(inedible_per_day_2), 0, inedible_per_day_2),
+    
+    # day1
+    GHG_per_day_Consumed_1 = ifelse(daysintake == 2 & is.na(GHG_per_day_Consumed_1), 0, GHG_per_day_Consumed_1),
+    CED_per_day_Consumed_1 = ifelse(daysintake == 2 & is.na(CED_per_day_Consumed_1), 0, CED_per_day_Consumed_1),
+    WATER_per_day_Consumed_1 = ifelse(daysintake == 2 & is.na(WATER_per_day_Consumed_1), 0, WATER_per_day_Consumed_1),
+    BLUEWATER_per_day_Consumed_1 = ifelse(daysintake == 2 & is.na(BLUEWATER_per_day_Consumed_1), 0, BLUEWATER_per_day_Consumed_1),
+    FL_per_day_Consumed_1 = ifelse(daysintake == 2 & is.na(FL_per_day_Consumed_1), 0, FL_per_day_Consumed_1),
+    
+    consumed_per_day_1 = ifelse(daysintake == 2 & is.na(consumed_per_day_1), 0, consumed_per_day_1),
+    wasted_per_day_1 = ifelse(daysintake == 2 & is.na(wasted_per_day_1), 0, wasted_per_day_1),
+    inedible_per_day_1 = ifelse(daysintake == 2 & is.na(inedible_per_day_1), 0, inedible_per_day_1))
+
+# summarize DAY1 AND DAY2
+enviro_wide3 <- enviro_wide2 %>% 
+  ungroup() %>% 
+  rowwise() %>% 
+  mutate(ghg_impact_avg_Consumed = mean(c(GHG_per_day_Consumed_1, GHG_per_day_Consumed_2), na.rm = TRUE),
+         ced_impact_avg_Consumed = mean(c(CED_per_day_Consumed_1, CED_per_day_Consumed_2), na.rm = TRUE),
+         water_impact_avg_Consumed = mean(c(WATER_per_day_Consumed_1, WATER_per_day_Consumed_2), na.rm = TRUE),
+         bluewater_impact_avg_Consumed = mean(c(BLUEWATER_per_day_Consumed_1, BLUEWATER_per_day_Consumed_2), na.rm = TRUE),
+         fl_impact_avg_Consumed = mean(c(FL_per_day_Consumed_1, FL_per_day_Consumed_2), na.rm = TRUE),
+         
+         consumed_avg = mean(c(consumed_per_day_1, consumed_per_day_2), na.rm = TRUE),
+         inedible_avg = mean(c(inedible_per_day_1, inedible_per_day_2), na.rm = TRUE),
+         wasted_avg = mean(c(wasted_per_day_1, wasted_per_day_2), na.rm = TRUE)) %>% 
+  select(seqn, fcidcode, starts_with(c("ghg_impact_avg_", "ced_impact_avg_", "water_impact_avg_", "bluewater_impact_avg_", "fl_impact_avg_")),
+         consumed_avg, inedible_avg, wasted_avg)
+
+# import fcid-diet factor mapping
+new_map <- read_xlsx("data_inputs/OTHER/dietfactor_to_fcid_mapping/DATA/FCID_to_dietaryfactor_mapping_01-09-2024_final.xlsx") %>% 
+  select(FCID_Code, Foodgroup) %>% 
+  rename(fcidcode = FCID_Code,
+         Foodgroup_FCID = Foodgroup) %>% 
+  mutate(fcidcode = as.character(fcidcode))
+
+enviro_wide4 <- enviro_wide3 %>% left_join(new_map, by = "fcidcode")
+
+# CHECK NA
+enviro_wide4 %>% filter(is.na(consumed_avg)) #none-good
+enviro_wide4 %>% filter(is.na(ghg_impact_avg_Consumed)) #none-good
+enviro_wide4 %>% filter(is.na(fl_impact_avg_Consumed)) #none-good
+
+# add up enviro impacts, by food group
+enviro_wide5 <- enviro_wide4 %>% 
+  group_by(seqn, Foodgroup_FCID) %>% 
+  summarise(ghg_impact_sum_Consumed = sum(ghg_impact_avg_Consumed),
+            ced_impact_sum_Consumed = sum(ced_impact_avg_Consumed),
+            water_impact_sum_Consumed = sum(water_impact_avg_Consumed),
+            bluewater_impact_sum_Consumed = sum(bluewater_impact_avg_Consumed),
+            fl_impact_sum_Consumed = sum(fl_impact_avg_Consumed),
+            
+            consumed_sum = sum(consumed_avg),
+            inedible_sum = sum(inedible_avg),
+            wasted_sum = sum(wasted_avg))
+
+# now go back to SSB
+
+# average day 1 and day 2 impacts 
+ssb_wide <- pivot_wider(ssb_impact1, 
+                        id_cols = seqn,
+                        names_from = dayrec,
+                        values_from = c(contains("per_day")))
+
+# join
+ssb_wide1 <- ssb_wide %>% 
+  left_join(daysofintake, by = "seqn")
+
+# fix 2 participants with duplicated data
+ssb_wide1 %>% filter(seqn == "87444") %>% View()
+ssb_wide1 %>% filter(seqn == "95147") %>% View()
+
+ssb_wide2 <- 
+  ssb_wide1 %>% 
+  filter(!(seqn == "87444" & reliable == 4)) %>% 
+  filter(!(seqn == "95147" & reliable == 4))
+
+# add 0s when appropriate
+ssb_wide3 <- ssb_wide2 %>% 
+  mutate(# day 2
+    GHG_per_day_Consumed_ssb_2 = ifelse(daysintake == 2 & is.na(GHG_per_day_Consumed_ssb_2), 0, GHG_per_day_Consumed_ssb_2),
+    CED_per_day_Consumed_ssb_2 = ifelse(daysintake == 2 & is.na(CED_per_day_Consumed_ssb_2), 0, CED_per_day_Consumed_ssb_2),
+    WATER_per_day_Consumed_ssb_2 = ifelse(daysintake == 2 & is.na(WATER_per_day_Consumed_ssb_2), 0, WATER_per_day_Consumed_ssb_2),
+    BLUEWATER_per_day_Consumed_ssb_2 = ifelse(daysintake == 2 & is.na(BLUEWATER_per_day_Consumed_ssb_2), 0, BLUEWATER_per_day_Consumed_ssb_2),
+    FL_per_day_Consumed_ssb_2 = ifelse(daysintake == 2 & is.na(FL_per_day_Consumed_ssb_2), 0, FL_per_day_Consumed_ssb_2),
+    
+    consumed_per_day_ssb_2 = ifelse(daysintake == 2 & is.na(consumed_per_day_ssb_2), 0, consumed_per_day_ssb_2),
+    wasted_per_day_ssb_2 = ifelse(daysintake == 2 & is.na(wasted_per_day_ssb_2), 0, wasted_per_day_ssb_2),
+    inedible_per_day_ssb_2 = ifelse(daysintake == 2 & is.na(inedible_per_day_ssb_2), 0, inedible_per_day_ssb_2),
+    
+    # day1
+    GHG_per_day_Consumed_ssb_1 = ifelse(daysintake == 2 & is.na(GHG_per_day_Consumed_ssb_1), 0, GHG_per_day_Consumed_ssb_1),
+    CED_per_day_Consumed_ssb_1 = ifelse(daysintake == 2 & is.na(CED_per_day_Consumed_ssb_1), 0, CED_per_day_Consumed_ssb_1),
+    WATER_per_day_Consumed_ssb_1 = ifelse(daysintake == 2 & is.na(WATER_per_day_Consumed_ssb_1), 0, WATER_per_day_Consumed_ssb_1),
+    BLUEWATER_per_day_Consumed_ssb_1 = ifelse(daysintake == 2 & is.na(BLUEWATER_per_day_Consumed_ssb_1), 0, BLUEWATER_per_day_Consumed_ssb_1),
+    FL_per_day_Consumed_ssb_1 = ifelse(daysintake == 2 & is.na(FL_per_day_Consumed_ssb_1), 0, FL_per_day_Consumed_ssb_1),
+    
+    consumed_per_day_ssb_1 = ifelse(daysintake == 2 & is.na(consumed_per_day_ssb_1), 0, consumed_per_day_ssb_1),
+    wasted_per_day_ssb_1 = ifelse(daysintake == 2 & is.na(wasted_per_day_ssb_1), 0, wasted_per_day_ssb_1),
+    inedible_per_day_ssb_1 = ifelse(daysintake == 2 & is.na(inedible_per_day_ssb_1), 0, inedible_per_day_ssb_1))
+
+# summarize DAY1 AND DAY2
+ssb_wide4 <- ssb_wide3 %>% 
+  ungroup() %>% 
+  rowwise() %>% 
+  mutate(ghg_impact_sum_Consumed = mean(c(GHG_per_day_Consumed_ssb_1, GHG_per_day_Consumed_ssb_2), na.rm = TRUE),
+         ced_impact_sum_Consumed = mean(c(CED_per_day_Consumed_ssb_1, CED_per_day_Consumed_ssb_2), na.rm = TRUE),
+         water_impact_sum_Consumed = mean(c(WATER_per_day_Consumed_ssb_1, WATER_per_day_Consumed_ssb_2), na.rm = TRUE),
+         bluewater_impact_sum_Consumed = mean(c(BLUEWATER_per_day_Consumed_ssb_1, BLUEWATER_per_day_Consumed_ssb_2), na.rm = TRUE),
+         fl_impact_sum_Consumed = mean(c(FL_per_day_Consumed_ssb_1, FL_per_day_Consumed_ssb_2), na.rm = TRUE),
+         
+         consumed_sum = mean(c(consumed_per_day_ssb_1, consumed_per_day_ssb_2), na.rm = TRUE),
+         inedible_sum = mean(c(inedible_per_day_ssb_1, inedible_per_day_ssb_2), na.rm = TRUE),
+         wasted_sum = mean(c(wasted_per_day_ssb_1, wasted_per_day_ssb_2), na.rm = TRUE)) %>% 
+  select(seqn, ghg_impact_sum_Consumed, ced_impact_sum_Consumed, water_impact_sum_Consumed, bluewater_impact_sum_Consumed, fl_impact_sum_Consumed,
+         consumed_sum, inedible_sum, wasted_sum) %>% 
+  mutate(Foodgroup_FCID = "ssb") %>% 
+  relocate(Foodgroup_FCID, .after = "seqn")
+
+# rbind with rest of data
+enviro_wide6 <- 
+  rbind(enviro_wide5, ssb_wide4) %>% 
+  arrange(seqn, Foodgroup_FCID)
+
+# transform to wide
+enviro_wide7 <- enviro_wide6 %>% 
+  pivot_wider(id_cols = seqn,
+              names_from = Foodgroup_FCID,
+              values_from = !c(seqn, Foodgroup_FCID)) %>% 
+  replace(is.na(.), 0) #this is correct 12/7/23
+
+enviro_wide7 %>% select(contains("ssb")) %>% View()
+
+rm(list=setdiff(ls(), c("both_days29", "price_wide_comb3", "enviro_wide7", "my_date")))
+
+# save for later
+saveRDS(both_days29, "data_inputs/IMPACT_FACTORS/temp_data/both_days29.rds")
+saveRDS(price_wide_comb3, "data_inputs/IMPACT_FACTORS/temp_data/price_wide_comb.rds")
+saveRDS(enviro_wide7, "data_inputs/IMPACT_FACTORS/temp_data/enviro_wide7.rds")
+
+
+```
+
