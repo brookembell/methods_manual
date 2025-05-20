@@ -1,16 +1,29 @@
 # Summary of Data Inputs
 
+## Overview
+
 This chapter describes all of the data inputs that are used in the model. All data inputs fall into one of the following categories: diet, health, environment, economic, social, and other.
 
 In the "methods_manual" folder, there is a "data_inputs" subfolder that contains the following subfolders that correspond with each data input:
 
+**Diet:**
+
 - methods_manual/data_inputs/DIET/counterfactual_intake ([Box](https://tufts.box.com/s/2zhv1ugq6o0cd0ivts9cctyqto3or0du))
 - methods_manual/data_inputs/DIET/dietary_intake ([Box](https://tufts.box.com/s/o8btvxrqaqskx8vztfecrr5tou2c1d6k))
+
+**Economic:**
+
 - methods_manual/data_inputs/ECONOMIC/fah_fafh_ratio
 - methods_manual/data_inputs/ECONOMIC/food_prices
+
+**Environment:**
+
 - methods_manual/data_inputs/ENVIRONMENT/ghg_ced_impacts
 - methods_manual/data_inputs/ENVIRONMENT/land_use
 - methods_manual/data_inputs/ENVIRONMENT/water_impacts
+
+**Health:**
+
 - methods_manual/data_inputs/HEALTH/cancer_incidence
 - methods_manual/data_inputs/HEALTH/cvd_mortality
 - methods_manual/data_inputs/HEALTH/effect_sizes_dietfactor_bmi
@@ -22,13 +35,21 @@ In the "methods_manual" folder, there is a "data_inputs" subfolder that contains
 - methods_manual/data_inputs/HEALTH/rr_sbp_cvd
 - methods_manual/data_inputs/HEALTH/systolic_blood_pressure
 - methods_manual/data_inputs/HEALTH/tmred
+
+**Social:**
+
 - methods_manual/data_inputs/SOCIAL/forced_labor
+
+**Other:**
+
 - methods_manual/data_inputs/OTHER/dietfactor_to_fcid_mapping
 - methods_manual/data_inputs/OTHER/dietfactor_to_fndds_mapping
 - methods_manual/data_inputs/OTHER/food_waste
 - methods_manual/data_inputs/OTHER/labels
 - methods_manual/data_inputs/OTHER/unit_conversions
 - methods_manual/data_inputs/OTHER/us_population
+
+\newpage
 
 ## Diet Inputs
 
@@ -77,3 +98,223 @@ The NHANES proportions are located in:
 #### Raw data (pre-processed) location {-}
 
 - methods_manual/data_inputs/DIET/counterfactual_intake/DATA/counterfactual_intake_050724.csv
+
+\newpage
+
+### Dietary Intake
+
+Come back to
+
+\newpage
+
+## Economic Inputs
+
+### Food Prices
+
+\newpage
+
+### Food-At-Home (FAH) vs. Food-Away-From-Home (FAFH) Ratio
+
+\newpage
+
+## Environment Inputs
+
+### Greenhouse Gas Emissions (GHG) and Cumulative Energy Demand (CED) Impact Factors
+
+\newpage
+
+### Water Scarcity (WS) and Bluewater Use (BWU) Impact Factors
+
+\newpage
+
+### Land Use Impact Factors
+
+\newpage
+
+## Health Inputs
+
+### Cancer Incidence
+
+#### Purpose {-}
+
+This dataset contains U.S. disease-specific cancer incidence rates from 2018, by age, sex, and race/ethnicity.
+
+The following cancers were included in the analysis:
+
+- Colon and rectum (CC)
+- Corpus uteri (UC)
+- Esophagus: adenomas and adenocarcinomas (ECA) (Note: this is a subset of esophagus cancer)
+- Female breast (post-menopause) (BC)*
+- Gallbladder (GC)
+- Kidney and renal pelvis (KC)
+- Liver and intrahepatic bile duct (LVC)
+- Lung and bronchus (LC)
+- Meningiomas: meningiomas (MC)
+- Myeloma: Multiple myeloma/plasma-cell leukemia (MMC)
+- Mouth, larynx, and pharynx cancers (MLPC)
+- Ovary (OC)
+- Pancreas (PC)
+- Prostate (advanced) (APCA) (Note: this is a subset of prostate cancer)
+- Stomach cardia (SCC)
+- Stomach non-cardia (SCNC)
+- Thyroid (TC)
+
+*We only included breast cancer cases from women who were diagnosed at ages 51 years or older to estimate the number of post-menopausal breast cancer cases.
+
+#### Raw Data Sources {-}
+
+- NCI Surveillance, Epidemiology, and End Results (SEER) Database, 2018 Cancer Incidence [data]
+
+#### Raw Data Location {-}
+
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/txt/cancerrate2018_0213.txt
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/txt/esophagus2018_0213.txt
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/txt/multiplemyeloma2018_0213.txt
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/txt/prostate2018_0213.txt
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/txt/stomach2018_0213.txt
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/txt/postmenopausal2018_1115.txt
+
+#### Raw Data Processing Notes {-}
+
+The following SAS codes were used to transform the raw .txt files into SAS datasets:
+
+- methods_manual/data_inputs/HEALTH/cancer_incidence/CODE/cancerrate_wide2018_0213.sas
+- methods_manual/data_inputs/HEALTH/cancer_incidence/CODE/esophagus2018_0213.sas
+- methods_manual/data_inputs/HEALTH/cancer_incidence/CODE/multiplemyeloma2018_0213.sas
+- methods_manual/data_inputs/HEALTH/cancer_incidence/CODE/prostate2018_0213.sas
+- methods_manual/data_inputs/HEALTH/cancer_incidence/CODE/stomach2018_0213.sas
+- methods_manual/data_inputs/HEALTH/cancer_incidence/CODE/postmenopausal2018_1115.sas
+
+The resulting SAS dataset files are located here:
+
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/cancerrate2018.sas7bdat
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/cancer.sas7bdat
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/esophagus.sas7bdat
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/myeloma.sas7bdat
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/prostate.sas7bdat
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/stomach.sas7bdat
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/raw_data/postbreast.sas7bdat
+
+Then, the following two SAS codes were used to calculate the estimated number of cancer cases per demographic subgroup in 2018:
+
+- data_final/in/HEALTH PILLAR/Cancer incidence/Cancerrate2018CRUDE_1115.sas
+- data_final/in/HEALTH PILLAR/Cancer incidence/cancerNHANES 1718POP_0212.sas (generates subgroup population number from NHANES)
+
+First, the crude rate for each cancer for each demographic subgroup is calculated by dividing the number of cancer cases reported by the sample population size:
+
+$$ Crude rate = count of cancer cases / sample population size $$
+
+Then, this rate is applied to the 2018 subgroup population numbers (from the US Census Bureau—described in previous section):
+
+$$ No. of cases = crude rate * population size $$
+
+The number of post-menopausal breast cancer cases was calculated slightly differently than the others because we only wanted to estimate breast cancer cases from women who were diagnosed at ages 51 years or older. Specifically, for the demographic subgroups that were female and aged 45-54 (subgroups 17, 18, 19, 20), we applied the crude rate to the U.S. population size of those aged 51-54 (rather than aged 45-54).
+
+#### Processed Raw Data Location {-}
+
+The resulting processed dataset is located here:
+
+- methods_manual/data_inputs/HEALTH/cancer_incidence/DATA/2018CANCERRATE_0327.xls
+
+#### Cleaning Code Location {-}
+
+The cleaning codes for this data input are located in Chapter 3.1.2 - Health Data Inputs [link] and Chapter 3.2.1 (1) Cancer incidence and (2) CVD mortality [link].
+
+#### Data Cleaning Notes {-}
+
+The standard error of the cancer counts is calculated as:
+
+$$count_se = (crude_se / 100000) * population)$$
+
+Also, the cancer and CMD datasets are merged into one combined "disease" dataset.
+
+#### Clean Data Location {-}
+
+The final cleaned dataset is located here:
+
+- methods_manual/data_inputs/FINAL/cleaned_data/disease_incidence_YYYY-MM-DD_FINAL.csv
+
+where "YYYY-MM-DD" is the most recent export date.
+
+\newpage
+
+### Cardiometabolic Disease (CMD) Mortality
+
+\newpage
+
+### Effect Sizes for Diet and Body Mass Index (BMI)
+
+\newpage
+
+### Effect Sizes for Diet and Systolic Blood Pressure (SBP)
+
+\newpage
+
+### Log Relative Risks (LogRR) for Diet-Cancer
+
+\newpage
+
+### Overweight Prevalence
+
+\newpage
+
+### Relative Risks (RR) for BMI and Cancer
+
+\newpage
+
+### Relative Risks (RR) for BMI and CMD
+
+\newpage
+
+### Relative Risks (RR) for SBP and CMD
+
+\newpage
+
+### Systolic Blood Pressure
+
+\newpage
+
+### TMRED
+
+\newpage
+
+
+
+
+## Social Inputs
+
+### Forced Labor Risk
+
+\newpage
+
+## Other Inputs
+
+### Mapping from Food Group to FCID Code
+
+\newpage
+
+### Mapping from Food Group to FNDDS Code
+
+\newpage
+
+### Inedible and Wasted Food Proportions
+
+\newpage
+
+### Labels
+
+\newpage
+
+### Weight Conversion Units
+
+\newpage
+
+### U.S. Population Size
+
+
+
+
+
+
+
+

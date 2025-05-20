@@ -1,0 +1,525 @@
+# Finalize Model Data Inputs
+
+This chapter walks you through the final cleaning process for the model inputs.
+
+Set up the working environment.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+rm(list = ls())
+
+options(scipen=999)
+
+library(tidyverse)
+
+# create date value
+date <- Sys.Date()
+
+```
+
+## Clean and Merge All Inputs
+
+Import the diet/health dataset (i.e., mega_costenv).
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+nhanes <- read_csv(paste0("data_inputs/FINAL/cleaned_data/mega_costenv_structure_temp_", date, "_FINAL.csv"))
+
+```
+
+Here is where you specify the substitution effects. For the four-pillar paper, we set these to 0. However, if you will take into account substituion effects (Kyra, I mean you), you will need to update these numbers. Please consult Fred and/or Nicole as to what these values should be for your analysis. 
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+# add in substitution effects, currently set to 0
+nhanes1 <- nhanes %>% 
+  mutate(Mean_substitution_Food_price = 0,
+         SE_substitution_Food_price = 0,
+         Mean_substitution_CED = 0,
+         SE_substitution_CED = 0,
+         Mean_substitution_GHG = 0,
+         SE_substitution_GHG = 0,
+         Mean_substitution_WATER = 0,
+         SE_substitution_WATER = 0,
+         Mean_substitution_BLUEWATER = 0,
+         SE_substitution_BLUEWATER = 0,
+         Mean_substitution_FL = 0,
+         SE_substitution_FL = 0)
+
+```
+
+Import the impact factors.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+enviro_IFs <- read_csv(paste0("data_inputs/IMPACT_FACTORS/output_data/Impacts_enviro_", date, ".csv"))
+cost_IFs <- read_csv(paste0("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost_", date, ".csv"))
+
+```
+
+For the cost impact factors, we made the decsion to use the factors for the "non-mixed" dishes, as we thought these were the best representation of the food groups in the DGA (which is what our analysis focused on). Again, you may need to consult Nicole on what the best decision is for your analysis.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+# use the 'non-mixed' dishes for impact factors
+cost_IFs1 <- cost_IFs %>% 
+  filter(mixed_dish == "Non-Mixed") %>% 
+  select(-mixed_dish) %>% 
+  filter(subgroup != 0) # remove subgroup 0
+  
+enviro_IFs1 <- enviro_IFs %>% 
+  filter(subgroup != 0) # remove subgroup 0
+
+```
+
+To match the format of the cost impact factors, we need to duplicate the environmental impact factors three times to account for the different food types (i.e., grocery, non-grocery, and total). We don't have different environmental factors for these different food types, so we just use the exact same values across all three types (hence why we just duplicate).
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+enviro_IFs_tot <- enviro_IFs1 %>% mutate(food_type = "Total")
+enviro_IFs_gro <- enviro_IFs1 %>% mutate(food_type = "Grocery")
+enviro_IFs_non <- enviro_IFs1 %>% mutate(food_type = "Non-Grocery")
+
+# bind together
+enviro_IFs2 <- rbind(enviro_IFs_tot, enviro_IFs_gro, enviro_IFs_non) %>% 
+  relocate(food_type, .after = food) %>% 
+  arrange(subgroup, food, food_type)
+
+```
+
+Merge the environmental and cost impact factors.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+# compare
+table(cost_IFs1$subgroup, useNA = "always")
+table(enviro_IFs2$subgroup, useNA = "always") #same
+
+table(cost_IFs1$food, useNA = "always")
+table(enviro_IFs2$food, useNA = "always") #diff food groups
+
+table(cost_IFs1$food_type, useNA = "always")
+table(enviro_IFs2$food_type, useNA = "always") #same
+
+# merge enviro and cost impact factors
+impact_factors <- full_join(cost_IFs1, enviro_IFs2, by = c("subgroup", "food", "food_type")) %>% 
+  arrange(subgroup, food, food_type)
+
+```
+
+Below, we set the standard errors for the environmental (and social) impact factors to 0 since we don't have any variability values from dataField to use. 
+
+We also create the "counterfactual" impact factors, which are just the same. This is mostly redundant, it's just a necessary thing to do based on the way the model code is set up to run.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+impact_factors1 <- impact_factors %>% 
+  rename(
+         Mean_CED = CEDperDGA,
+         Mean_GHG = GHGperDGA,
+         Mean_WATER = WATERperDGA,
+         Mean_BLUEWATER = BLUEWATERperDGA,
+         Mean_Food_price = costperDGA,
+         Mean_FL = FLperDGA
+         ) %>% 
+  mutate(
+         # set SE to 0
+    
+         SE_CED = 0,
+         SE_GHG = 0,
+         SE_WATER = 0,
+         SE_BLUEWATER = 0,
+         SE_Food_price = 0,
+         SE_FL = 0,
+         
+         # set counterfactual impact factors
+         
+         # CED
+         CF_Mean_CED = Mean_CED,
+         CF_SE_CED = SE_CED,
+         
+         #GHG
+         CF_Mean_GHG = Mean_GHG,
+         CF_SE_GHG = SE_GHG, 
+         
+         # Water
+         CF_Mean_WATER = Mean_WATER,
+         CF_SE_WATER = SE_WATER,
+         
+         # Bluewater
+         CF_Mean_BLUEWATER = Mean_BLUEWATER,
+         CF_SE_BLUEWATER = SE_BLUEWATER,
+         
+         # Price
+         CF_Mean_Food_price = Mean_Food_price, 
+         CF_SE_Food_price = SE_Food_price,
+         
+         # Forced labor
+         CF_Mean_FL = Mean_FL,
+         CF_SE_FL = SE_FL)
+
+```
+
+Join impact factors with diet/health data.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+comb <- left_join(nhanes1, impact_factors1, by = c("subgroup_id" = "subgroup",
+                                                                "Foodgroup" = "food",
+                                                                "datatype" = "food_type"))
+
+```
+
+The impact factor units are manually defined below. We also set all the conversions to 1 for the four-pillar analysis (consult Nicole for this).
+
+We also set all of the inedible and wasted proportions. For the environmental impact factors, they're set to "inedible_prop_fcid" and "wasted_prop_fcid", and for the economic impact factor, it's set to "inedible_prop_fndds" and "wasted_prop_fndds". Similar to above, the standard errors are set to 0.
+
+Lastly, similar to above, the counterfactual versions of the inedible/wasted proportions are set to their non-counterfactual counterparts.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+comb1 <- 
+  comb %>% 
+  mutate(Food_price_unit = "USD",
+         Food_price_impact_unit = paste0(Food_price_unit, "/", TMRED_intake_unit),
+         CED_unit = "MJ",
+         CED_impact_unit = paste0(CED_unit, "/", TMRED_intake_unit),
+         GHG_unit = "kgCO2-eq",
+         GHG_impact_unit = paste0(GHG_unit, "/", TMRED_intake_unit),
+         WATER_unit = "L-eq",
+         WATER_impact_unit = paste0(WATER_unit, "/", TMRED_intake_unit),
+         BLUEWATER_unit = "L",
+         BLUEWATER_impact_unit = paste0(BLUEWATER_unit, "/", TMRED_intake_unit),
+         FL_unit = "mrh-eq",
+         FL_impact_unit = paste0(FL_unit, "/", TMRED_intake_unit),
+         
+         # set to 1 for now
+         Food_price_to_intake_conversion = 1,
+         CED_to_intake_conversion	= 1,
+         GHG_to_intake_conversion = 1,
+         WATER_to_intake_conversion = 1,
+         BLUEWATER_to_intake_conversion = 1,
+         FL_to_intake_conversion = 1,
+         substitution_unit = 1,
+         
+         # WASTE AND INEDIBLE PROPORTIONS
+         
+         # i) inedible
+         CED_inedible_p	= inedible_prop_fcid,
+         GHG_inedible_p	= inedible_prop_fcid,
+         WATER_inedible_p = inedible_prop_fcid,
+         BLUEWATER_inedible_p = inedible_prop_fcid,
+         FL_inedible_p = inedible_prop_fcid,
+         Food_price_inedible_p = inedible_prop_fndds,
+         CED_inedible_p_se	= 0,
+         GHG_inedible_p_se = 0,
+         WATER_inedible_p_se = 0,
+         BLUEWATER_inedible_p_se = 0,
+         FL_inedible_p_se = 0,
+         Food_price_inedible_p_se = 0,
+         
+         # ii) wasted
+         CED_foodwaste_p = wasted_prop_fcid,
+         GHG_foodwaste_p = wasted_prop_fcid,
+         WATER_foodwaste_p = wasted_prop_fcid,
+         BLUEWATER_foodwaste_p = wasted_prop_fcid,
+         FL_foodwaste_p = wasted_prop_fcid,
+         Food_price_foodwaste_p	= wasted_prop_fndds,
+         CED_foodwaste_p_se	= 0,
+         GHG_foodwaste_p_se	= 0,
+         WATER_foodwaste_p_se = 0,
+         BLUEWATER_foodwaste_p_se = 0,
+         FL_foodwaste_p_se	= 0,
+         Food_price_foodwaste_p_se = 0,
+         
+         # WASTE AND INEDIBLE (COUNTERFACTUALS)
+         
+         # i) inedible
+         CF_CED_inedible_p = CED_inedible_p,
+         CF_GHG_inedible_p = GHG_inedible_p,
+         CF_WATER_inedible_p = WATER_inedible_p,
+         CF_BLUEWATER_inedible_p = BLUEWATER_inedible_p,
+         CF_Food_price_inedible_p	= Food_price_inedible_p,
+         CF_FL_inedible_p = FL_inedible_p,
+         
+         CF_CED_inedible_p_se	= CED_inedible_p_se,
+         CF_GHG_inedible_p_se	= GHG_inedible_p_se,
+         CF_WATER_inedible_p_se = WATER_inedible_p_se,
+         CF_BLUEWATER_inedible_p_se = BLUEWATER_inedible_p_se,
+         CF_Food_price_inedible_p_se = Food_price_inedible_p_se,
+         CF_FL_inedible_p_se = FL_inedible_p_se,
+         
+         # ii) wasted
+         CF_CED_foodwaste_p = CED_foodwaste_p,
+         CF_GHG_foodwaste_p = GHG_foodwaste_p,
+         CF_WATER_foodwaste_p = WATER_foodwaste_p,
+         CF_BLUEWATER_foodwaste_p = BLUEWATER_foodwaste_p,
+         CF_Food_price_foodwaste_p = Food_price_foodwaste_p,
+         CF_FL_foodwaste_p = FL_foodwaste_p,
+         
+         CF_CED_foodwaste_p_se = CED_foodwaste_p_se,
+         CF_GHG_foodwaste_p_se = GHG_foodwaste_p_se,
+         CF_WATER_foodwaste_p_se = WATER_foodwaste_p_se,
+         CF_BLUEWATER_foodwaste_p_se = BLUEWATER_foodwaste_p_se,
+         CF_Food_price_foodwaste_p_se = Food_price_foodwaste_p_se,
+         CF_FL_foodwaste_p_se = FL_foodwaste_p_se)
+
+```
+
+Change some variables names.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+comb2 <- comb1 %>% 
+  rename(Population_size = population) %>% 
+  mutate(Sex_label = ifelse(Sex == 1, "Female", "Male"),
+         Intake_unit = paste0(TMRED_intake_unit, "/day"))
+
+```
+
+List out the final order your want for the variables.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+final.order <- c(
+               "subgroup_id",
+               "Age",
+               "Age_label",
+               "Sex",
+               "Sex_label",
+               "Race",
+               "Race_label",
+               
+               "Foodgroup",
+               "datatype",
+               "diet_pattern",
+               
+               "Mean_Intake",
+               "SE_Intake",
+               "sigma_u_wgt",
+               "Intake_unit",
+               "pro_gro",
+               "pro_nongro",
+               "diet_label",
+               "Food_desc",
+
+               "CF_Mean_Intake",
+               "CF_SE_Intake",
+               "CF_sd_intake",
+               "CF_intake_unit",
+               
+               "TMRED_Mean_Intake",
+               "TMRED_SD_Intake",
+               "TMRED_intake_unit",
+               
+               "Population_size",
+               "overweight_rate",
+               "overweight_rate_se",
+               "hbp",
+               "hbp_se",
+               "nhb",
+               "nhb_se",
+               "sbp_mean",
+               "sbp_se",
+               "highSBP_rate",
+               "highSBP_rate_se",
+               
+               "Mean_GHG", 
+               "SE_GHG", 
+               "GHG_unit",
+               "GHG_impact_unit",
+               
+               "Mean_CED", 
+               "SE_CED", 
+               "CED_unit",
+               "CED_impact_unit",
+               
+               "Mean_WATER",
+               "SE_WATER",
+               "WATER_unit",
+               "WATER_impact_unit",
+
+               "Mean_BLUEWATER",
+               "SE_BLUEWATER",
+               "BLUEWATER_unit",
+               "BLUEWATER_impact_unit",
+               
+               "Mean_FL", 
+               "SE_FL", 
+               "FL_unit",
+               "FL_impact_unit",
+               
+               "Mean_Food_price", 
+               "SE_Food_price",  
+               "Food_price_unit",
+               "Food_price_impact_unit",
+               
+               "CF_Mean_GHG",
+               "CF_SE_GHG",
+               
+               "CF_Mean_CED",
+               "CF_SE_CED",
+               
+               "CF_Mean_WATER",
+               "CF_SE_WATER",
+               
+               "CF_Mean_BLUEWATER",
+               "CF_SE_BLUEWATER",
+               
+               "CF_Mean_FL",
+               "CF_SE_FL",
+               
+               "CF_Mean_Food_price",
+               "CF_SE_Food_price",
+               
+               "Mean_substitution_GHG",
+               "SE_substitution_GHG",
+               
+               "Mean_substitution_CED",
+               "SE_substitution_CED",
+               
+               "Mean_substitution_WATER",
+               "SE_substitution_WATER",
+               
+               "Mean_substitution_BLUEWATER",
+               "SE_substitution_BLUEWATER",
+               
+               "Mean_substitution_FL",
+               "SE_substitution_FL",
+               
+               "Mean_substitution_Food_price",
+               "SE_substitution_Food_price",
+               
+               "GHG_to_intake_conversion",
+               "CED_to_intake_conversion",
+               "WATER_to_intake_conversion",
+               "BLUEWATER_to_intake_conversion",
+               "FL_to_intake_conversion",
+               "Food_price_to_intake_conversion",
+               "substitution_unit",
+               
+               "GHG_inedible_p",
+               "GHG_inedible_p_se",
+               "CED_inedible_p",
+               "CED_inedible_p_se",
+               "WATER_inedible_p",
+               "WATER_inedible_p_se",
+               "BLUEWATER_inedible_p",
+               "BLUEWATER_inedible_p_se",
+               "FL_inedible_p",
+               "FL_inedible_p_se",
+               "Food_price_inedible_p",
+               "Food_price_inedible_p_se",
+               
+               "GHG_foodwaste_p",
+               "GHG_foodwaste_p_se",
+               "CED_foodwaste_p",
+               "CED_foodwaste_p_se",
+               "WATER_foodwaste_p",
+               "WATER_foodwaste_p_se",
+               "BLUEWATER_foodwaste_p",
+               "BLUEWATER_foodwaste_p_se",
+               "FL_foodwaste_p",
+               "FL_foodwaste_p_se",
+               "Food_price_foodwaste_p",
+               "Food_price_foodwaste_p_se",
+               
+               "CF_GHG_inedible_p",
+               "CF_GHG_inedible_p_se",
+               "CF_CED_inedible_p",
+               "CF_CED_inedible_p_se",
+               "CF_WATER_inedible_p",
+               "CF_WATER_inedible_p_se",
+               "CF_BLUEWATER_inedible_p",
+               "CF_BLUEWATER_inedible_p_se",
+               "CF_FL_inedible_p",
+               "CF_FL_inedible_p_se",
+               "CF_Food_price_inedible_p",
+               "CF_Food_price_inedible_p_se",
+               
+               "CF_GHG_foodwaste_p",
+               "CF_GHG_foodwaste_p_se",
+               "CF_CED_foodwaste_p",
+               "CF_CED_foodwaste_p_se",
+               "CF_WATER_foodwaste_p",
+               "CF_WATER_foodwaste_p_se",
+               "CF_BLUEWATER_foodwaste_p",
+               "CF_BLUEWATER_foodwaste_p_se",
+               "CF_FL_foodwaste_p",
+               "CF_FL_foodwaste_p_se",
+               "CF_Food_price_foodwaste_p",
+               "CF_Food_price_foodwaste_p_se")
+```
+
+Apply the final order. 
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+# apply
+final <- comb2[,final.order]
+```
+
+Filter out diet variables you don't want included in your dataset/analysis.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+final1 <- final %>% filter(!(Foodgroup %in% c("fiber", "kcal", "pf_animal", "pf_leg", "pf_plant",
+                                  "pf_soy", "pufa_energy", "sfat_energy", "sea_omega3_fa",
+                                  "veg_leg")))
+
+```
+
+Lastly, we decided as a team to utilize the inedible/wasted proportions that were calculated at the FCID-level (i.e., environmental impact factors).
+
+Below, we replace the cost inedible/wasted proportions with the GHG inedible/wasted proportions when they're not missing. If they're alrady NA, then they remain NA. 
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+final2 <- final1 %>% 
+  # renaming with _new to compare old vs. new values
+  mutate(Food_price_inedible_p_new = ifelse(!(is.na(Food_price_inedible_p)) & !(is.na(GHG_inedible_p)), GHG_inedible_p, Food_price_inedible_p),
+         Food_price_inedible_p_se_new = ifelse(!(is.na(Food_price_inedible_p)) & !(is.na(GHG_inedible_p)), GHG_inedible_p_se, Food_price_inedible_p_se),
+         Food_price_foodwaste_p_new = ifelse(!(is.na(Food_price_foodwaste_p)) & !(is.na(GHG_foodwaste_p)), GHG_foodwaste_p, Food_price_foodwaste_p),
+         Food_price_foodwaste_p_se_new = ifelse(!(is.na(Food_price_foodwaste_p)) & !(is.na(GHG_foodwaste_p)), GHG_foodwaste_p_se, Food_price_foodwaste_p_se))
+
+
+# replacing the old inedible/ replacing with new, and getting rid of "new" to reduce confusion
+final3 <- final2 %>% 
+  mutate(Food_price_inedible_p = Food_price_inedible_p_new,
+         Food_price_inedible_p_se = Food_price_inedible_p_se_new,
+         Food_price_foodwaste_p = Food_price_foodwaste_p_new,
+         Food_price_foodwaste_p_se = Food_price_foodwaste_p_se_new,
+         CF_Food_price_inedible_p	= Food_price_inedible_p_new,
+         CF_Food_price_inedible_p_se = Food_price_inedible_p_se_new,
+         CF_Food_price_foodwaste_p = Food_price_foodwaste_p_new,
+         CF_Food_price_foodwaste_p_se = Food_price_foodwaste_p_se_new,
+         Food_price_inedible_p_new=NULL,
+         Food_price_inedible_p_se_new=NULL,
+         Food_price_foodwaste_p_new=NULL,
+         Food_price_foodwaste_p_se_new=NULL)
+
+```
+
+Export to the "FINAL" folder.
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+
+write_csv(final3, paste0("data_inputs/FINAL/model_data/mega_costenv_structure_", date, "_FINAL.csv"))
+
+```
+
+## Copy Model Inputs to GitHub
+
+All of the model input files are currently located in the "FINAL" folder on Box. Below, we copy them to GitHub so that we can access them on the cluster.
+
+```{r}
+
+current_folder <- "data_inputs/FINAL/model_data" # where files currently live on Box
+
+new_folder <- "/Users/bmb73/Documents/GitHub/LASTING/in/FINAL" # Github repo on Brooke's laptop
+# new_folder <- "/Users/fcudhe01/Documents/GitHub/LASTING/in/FINAL" # Github repo on Fred's laptop
+
+list_of_files <- list.files(current_folder, ".csv") 
+
+file.copy(file.path(current_folder, list_of_files), new_folder)
+
+```
+

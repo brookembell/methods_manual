@@ -8,7 +8,7 @@ To start, we need to disaggregate "procecessed meat" into "processed red meat" a
 
 This is done using a SAS MACRO written by the USDA, located here:
 
--   TBD/Processed Meat Categories NHANES day 1_revised_121123.sas
+-   data_inputs/DIET/dietary_intake/CODE/0. Processed Meat Categories NHANES day 1_revised_121123.sas
 
 This code produces four SAS datasets:
 
@@ -23,7 +23,7 @@ We also have to disaggregate the organ meat food codes into "red meat" or "poult
 
 Then, I merged this mapping with the processed meat data.
 
-```{r, results='hide', warning=FALSE, message=FALSE}
+```{r, message=FALSE, warning=FALSE, results='hide'}
 
 library(tidyverse)
 library(haven)
@@ -82,7 +82,6 @@ meat_day2_3 <- meat_day2_2 %>%
 write_rds(meat_day2_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.rds")
 
 ```
-
 
 ## Clean Raw NHANES Data
 
@@ -708,4 +707,858 @@ write_rds(nhanes_final1,
 ```
 
 Finally, the cleaned dataset is exported to use later.
+
+## Create Sugar Sweetened Beverage (SSB) Variables
+
+Now we must separately deal with the beverage data in NHANES. Because SSB can be defined many different ways, there is no "SSB" variable that comes with the NHANES dataset. We must use the raw data to create our own. Our goal is to create SSB variables that we can use in our analysis.
+
+### Import and Merge Data Inputs
+
+Set up the working directory.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list=ls())
+
+# load packages
+library(tidyverse)
+library(readxl)
+library(haven)
+
+```
+
+Import the WWEIA 2015-2016 and 2017-2018 datasets. These contain categorizations of the FNDDS food codes that we will utilize later on.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+wweia1516 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1516_foodcat_FNDDS.xlsx")
+wweia1718 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1718_foodcat_FNDDS.xlsx")
+
+```
+
+Then import these other categorizations (GL1, GL2, GL3) that are used. Not really sure what these are for...
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+gl1 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+                 sheet = "GL1")
+
+gl2 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+                 sheet = "GL2")
+
+gl2b <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+                  sheet = "GL2b")
+
+gl3 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+                 sheet = "GL3")
+
+```
+
+Then, import a mapping from the WWEIA categories to these GL categories; and then join everything together.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+map <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+                 sheet = "Mapping")
+
+# join
+map_join <- 
+  map %>% 
+  left_join(gl1) %>% 
+  left_join(gl2) %>% 
+  left_join(gl2b) %>% 
+  left_join(gl3)
+
+# merge with wweia datasets
+wweia1516_1 <- wweia1516 %>% left_join(map_join, by = "category_number")
+wweia1718_1 <- wweia1718 %>% left_join(map_join, by = "category_number")
+
+```
+
+Import FPED 2015-2016 and 2017-2018 datasets.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+fped1516 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1516.sas7bdat")
+fped1718 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1718.sas7bdat")
+
+```
+
+Calculate the number of grams of added sugar (add_sugars_g), originally provided in teaspoons (ADD_SUGARS), in one serving of each FNDDS food code.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+fped1516_1 <- 
+  fped1516 %>% 
+  rename(food_code = FOODCODE) %>% 
+  # convert tsp to gram using 1 tsp=4.2g sugar
+  mutate(add_sugars_g = ADD_SUGARS * 4.2) %>%
+  select(food_code, add_sugars_g) 
+
+fped1718_1 <- 
+  fped1718 %>% 
+  rename(food_code = FOODCODE) %>% 
+  # convert tsp to gram using 1 tsp=4.2g sugar
+  mutate(add_sugars_g = ADD_SUGARS * 4.2) %>%
+  select(food_code, add_sugars_g)
+
+```
+
+Import the NHANES individual-level food data (cleaned in Chapter XX), and merge with the FPED and WWEIA datasets.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# read in nhanes individual food data
+foods_day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
+foods_day2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds")
+
+# split up by NHANES cycle x Day of intake
+nhanes1516_day1 <- foods_day1 %>% filter(nhanes_cycle == "2015-2016")
+nhanes1718_day1 <- foods_day1 %>% filter(nhanes_cycle == "2017-2018")
+nhanes1516_day2 <- foods_day2 %>% filter(nhanes_cycle == "2015-2016")
+nhanes1718_day2 <- foods_day2 %>% filter(nhanes_cycle == "2017-2018")
+
+# merge fped and wweia datasets
+merge1516 <- left_join(wweia1516_1, fped1516_1, by = "food_code")
+merge1718 <- left_join(wweia1718_1, fped1718_1, by = "food_code")
+
+# merge "merge" datasets with nhanes datasets
+nhanes1516_day1_join <- left_join(nhanes1516_day1, merge1516, by = c("DR1IFDCD" = "food_code"))
+nhanes1516_day2_join <- left_join(nhanes1516_day2, merge1516, by = c("DR2IFDCD" = "food_code"))
+nhanes1718_day1_join <- left_join(nhanes1718_day1, merge1718, by = c("DR1IFDCD" = "food_code"))
+nhanes1718_day2_join <- left_join(nhanes1718_day2, merge1718, by = c("DR2IFDCD" = "food_code"))
+
+```
+
+### Create SSB Indicator Variable
+
+Our team decided that a beverage would only be considered an "SSB" if it contained more than 5 grams of added sugar per serving.
+
+We set the indicator vairable "ssb" equal to 1 if the number of grams of added sugar per serving ("add_sugars_g") was greater than or equal to 5 AND if the GL1 category was equal to 151 ("Sugar-sweetened beverages"), 152 ("Sugar-sweetened beverages (diet vs. SSB)"), 153 ("Nutritional beverages (diet vs. SSB)), 154 ("Smoothies and grain drinks (diet vs. SSB)"), 155 ("Coffee"), or 156 ("Tea").
+
+We set "ssb" equal to 0 in all other cases.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# work on Day 1 of NHANES '15-'16 first
+nhanes1516_day1_join_1 <-
+  nhanes1516_day1_join %>% 
+  mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0))
+
+# Day 1 of NHANES '17--18
+nhanes1718_day1_join_1 <-
+  nhanes1718_day1_join %>% 
+  mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0)) 
+
+# only select necessary vars
+nhanes1516_day1_join_2 <- nhanes1516_day1_join_1 %>% select(SEQN, DR1ILINE, DR1IFDCD, DESCRIPTION, DR1IGRMS, ssb)
+nhanes15718_day1_join_2 <- nhanes1718_day1_join_1 %>% select(SEQN, DR1ILINE, DR1IFDCD, DESCRIPTION, DR1IGRMS, ssb)
+
+# bind Day 1 of NHANES '15-'16 and '17-'18 together
+day1_final <- rbind(nhanes1516_day1_join_2, nhanes15718_day1_join_2)
+
+# now work on Day 2 of NHANES '15-'16
+nhanes1516_day2_join_1 <-
+  nhanes1516_day2_join %>% 
+  mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0)) 
+
+# Day 2 of NHANES '17-'18
+nhanes1718_day2_join_1 <-
+  nhanes1718_day2_join %>% 
+  mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0))
+
+# only select necessary vars
+nhanes1516_day2_join_2 <- nhanes1516_day2_join_1 %>% select(SEQN, DR2ILINE, DR2IFDCD, DESCRIPTION, DR2IGRMS, ssb)
+nhanes1718_day2_join_2 <- nhanes1718_day2_join_1 %>% select(SEQN, DR2ILINE, DR2IFDCD, DESCRIPTION, DR2IGRMS, ssb)
+
+# bind Day 2 of NHANES '15-'16 and '17-'18 together
+day2_final <- rbind(nhanes1516_day2_join_2, nhanes1718_day2_join_2)
+
+```
+
+Export the datasets to use in the next Chapter section.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+write_rds(day1_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_ssb.rds")
+write_rds(day2_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_ssb.rds")
+
+```
+
+### Calculate SSB Intake
+
+Now that we know which foodcodes are sugar-sweetened beverages, we want to calculate how much SSB each participant consumed (in grams), per day.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# Day 1
+ssb_day1 <- day1_final %>% 
+  mutate(ssb = as.character(ssb)) %>% 
+  group_by(SEQN, ssb) %>% 
+  summarise(grams = sum(DR1IGRMS)) %>% #calculate grams of intake by person
+  arrange(SEQN, ssb)
+
+ssb_day1_wide <-
+  pivot_wider(ssb_day1,
+            id_cols = SEQN,
+            names_from = ssb,
+            values_from = grams,
+            names_prefix = "ssb")
+
+ssb_day1_wide1 <- 
+  ssb_day1_wide %>% 
+  mutate(ssb1 = ifelse(!is.na(ssb0) & is.na(ssb1), 0, ssb1)) %>% 
+  select(SEQN, ssb1) %>% 
+  rename(ssb_1 = ssb1)
+
+# Day 2
+ssb_day2 <- day2_final %>% 
+  mutate(ssb = as.character(ssb)) %>% 
+  group_by(SEQN, ssb) %>% 
+  summarise(grams = sum(DR2IGRMS)) %>% #calculate grams of intake by person
+  arrange(SEQN, ssb)
+
+ssb_day2_wide <-
+  pivot_wider(ssb_day2,
+              id_cols = SEQN,
+              names_from = ssb,
+              values_from = grams,
+              names_prefix = "ssb")
+
+ssb_day2_wide1 <- 
+  ssb_day2_wide %>% 
+  mutate(ssb1 = ifelse(!is.na(ssb0) & is.na(ssb1), 0, ssb1)) %>% 
+  select(SEQN, ssb1) %>% 
+  rename(ssb_2 = ssb1)
+
+# combine
+ssb_bothdays <- full_join(ssb_day1_wide1, ssb_day2_wide1, by = "SEQN")
+
+```
+
+Next, calculate the each participant's average intake across 2 days of intake.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# check
+# are there any where both are missing? no
+ssb_bothdays %>% filter(is.na(ssb_1) & is.na(ssb_2))
+
+# calculate day1/day2 ssb intake average
+ssb_bothdays_1 <-
+  ssb_bothdays %>%
+  rowwise() %>%
+  mutate(ssb = mean(c(ssb_1, ssb_2), na.rm=TRUE))
+
+# get rid of NaN
+ssb_bothdays_1[ssb_bothdays_1 == "NaN"] <- NA
+
+```
+
+Now merge with the main NHANES intake dataset.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# read in clean nhanes dataset
+nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_clean.rds")
+
+# merge
+nhanes_1 <- left_join(nhanes, ssb_bothdays_1, by = "SEQN")
+
+# which ones where ssb (in grams) is more than 0 but lower than 10 grams? (maybe a sip?)
+nhanes_1 %>% filter(ssb_1 > 0 & ssb_1 < 11) %>% head()
+nhanes_1 %>% filter(ssb_2 > 0 & ssb_2 < 11) %>% head()
+
+# look at just one person - 84956
+foods_day2 %>% filter(SEQN == 84956) %>% head()
+foods_day1 %>% filter(SEQN == 84997) %>% head()
+
+# it looks fine
+
+```
+
+Export.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+write_rds(nhanes_1,
+          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_incl_ssb_clean.rds")
+
+```
+
+## Energy Adjustement
+
+This next section describes the process of conducting energy adjustment.
+
+Energy adjustment is an analytic method by which nutrient and food group intakes are evaluated in relation to total energy intake. Energy adjustment methods are used for two primary reasons:
+
+- They account for the fact that total energy requirements are related to body size, metabolic efficiency, and physical activity, thereby providing a measure of diet composition.
+- They are useful in mitigating the effects of [glossary term:]measurement error in data collected using self-reported dietary assessment instruments.
+
+One frequently used energy adjustment method is the **residual method**. In this method, the energy-adjusted intake estimate is the residual from a regression model in which total energy intake is the independent variable and absolute nutrient intake is the dependent variable. Thus, the residual is an estimate of nutrient intake uncorrelated with total energy intake and directly related to overall variation in food choice and composition.
+
+You can find more information about this on the NCI website [here](https://dietassessmentprimer.cancer.gov/learn/adjustment.html).
+
+Additionally, you can refer to Willett WC, Howe GR, Kushi LH. Adjustment for total energy intake in epidemiologic studies. Am J Clin Nutr. 1997 Apr;65(4 Suppl):1220S-1228S; discussion 1229S-1231S. doi: 10.1093/ajcn/65.4.1220S. PMID: 9094926.
+
+#### Step 1: Set up workspace {.unnumbered}
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list=ls())
+
+# load packages
+library(tidyverse)
+library(modelr)
+library(survey)
+
+```
+
+#### Step 2: Import and prepare cleaned NHANES dataset  {.unnumbered}
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_incl_ssb_clean.rds") %>% 
+  ungroup() # get rid of rowwise formatting
+
+nhanes1 <- nhanes %>% 
+  select(-c(kcal:pf_plant, ssb)) %>%
+  relocate(c(wtnew:inAnalysis), .before = fruit_juice_1)
+
+# wide to long
+nhanes_long <- pivot_longer(nhanes1, 
+                            cols = ends_with(c("_1", "_2")),
+                            names_to = "names_temp",
+                            values_to = "values_temp")
+
+
+nhanes_long1 <- nhanes_long %>% separate(names_temp, into=c("name", "day"), sep = "_(?=[^_]+$)")
+
+nhanes_long2 <- nhanes_long1 %>% 
+  pivot_wider(names_from = "name", values_from = "values_temp")
+
+```
+
+#### Step 3: Conduct energy adjustment using the residual method
+
+Calculate the mean calorie intake across all participants and days ("meancalories"), each observation's log(calories), the log of "meancalories", and the log of 2000 kcals.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+nhanes2 <- nhanes_long2 %>% mutate(calories = kcal,
+                         meancalories = mean(calories, na.rm = TRUE),
+                         log_calories = log(calories),
+                         log_meancalories = log(meancalories),
+                         log_2000 = log(2000))
+
+```
+
+There are a few people who have kcal intake = 0, and the log of this value is -Inf. We need to change this to NA so that the function will run.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# 7 people have kcal=0
+nhanes2 %>% filter(log_calories == "-Inf" & inAnalysis == "TRUE") %>% head()
+
+# if logcalories is -Inf, change to NA
+nhanes3 <- nhanes2 %>% 
+  mutate(log_calories = ifelse(log_calories == "-Inf", NA, log_calories)) %>% 
+  arrange(SEQN, day)
+
+# check
+nhanes3 %>% filter(log_calories == "-Inf" & inAnalysis == "TRUE") #good
+
+```
+
+Below is a function that we can apply to all dietary factors in order to calculate the residual method for each.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+resid_function <- function(x, y){
+  
+  dat <- x
+  
+  dat[["var_tem"]] <- dat[[y]] 
+  
+  dat1 <- dat %>% mutate(log_var_tem = ifelse(var_tem > 0, log(var_tem), NA))
+  
+  mod <- lm(log_var_tem ~ log_calories, data = dat1)
+  
+  a = summary(mod)$coefficients["(Intercept)", "Estimate"]
+  b = summary(mod)$coefficients["log_calories", "Estimate"]
+  
+  dat_new <- dat1 %>% 
+    add_residuals(mod) %>% 
+    rowwise() %>% 
+    mutate(log_cons_var_tem = a + (b * log_2000),
+           a_log_var_tem = log_cons_var_tem + resid,
+           a_var_tem = ifelse(var_tem == 0, 0,exp(a_log_var_tem)),
+           "{y}_adj" := a_var_tem)
+  
+  dat_new1 <- dat_new %>% arrange(SEQN, day) %>% select(paste0(y, "_adj"))
+
+  print(dat_new1)  
+  
+}
+
+# test
+resid_function(nhanes3, "pf_pm")      
+resid_function(nhanes3, "fruit_exc_juice") 
+resid_function(nhanes3, "sodium")  
+
+```
+
+Create a vector of dietary factors we want to use.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+diet_vars <- read_csv("data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv") %>%
+  select(Food_group) %>%
+  unlist() %>%
+  as.vector()
+
+nums <- which(variable.names(nhanes3) %in% diet_vars)
+
+new_diet_vars <- variable.names(nhanes3[nums])
+
+```
+
+Apply the function of all dietary factors of interest.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# create empty list
+resid_list <- list()
+
+# loop through all diet factors
+for (i in new_diet_vars) {
+  
+  resid_list[[i]] <- resid_function(nhanes3, i)
+  
+}
+
+```
+
+Create a dataset that contains all of the adjusted values, and export.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# nhanes with adjusted vars
+nhanes_adj <- nhanes3 %>% 
+  cbind(bind_cols(resid_list))
+
+# check a few diet vars
+nhanes_adj %>% select(ssb, ssb_adj) %>% head()
+nhanes_adj %>% select(fruit_exc_juice, fruit_exc_juice_adj) %>% head()
+nhanes_adj %>% select(pf_ns, pf_ns_adj) %>% head()
+nhanes_adj %>% select(pf_redm_tot, pf_redm_tot_adj) %>% head()
+nhanes_adj %>% select(pf_poultry_tot, pf_poultry_tot_adj) %>% head()
+
+# export data
+write_rds(nhanes_adj,
+          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.rds")
+
+write_csv(nhanes_adj,
+          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.csv")
+
+```
+
+#### Step 4: Calculate average daily intake of adjusted variables
+
+Pivot to wide format, then calculate the average daily intake by taking the mean of Day 1 and Day 2 values.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# pivot to wide
+nhanes_adj_wide <- nhanes_adj %>% pivot_wider(id_cols = SEQN:inAnalysis,
+                           names_from = day,
+                           values_from = ends_with("_adj"))
+
+# calculate averages
+nhanes_adj_wide1 <- nhanes_adj_wide %>%
+  rowwise() %>%
+  mutate(
+         # fruits
+         fruit_tot_adj = mean(c(fruit_tot_adj_1, fruit_tot_adj_2), na.rm = TRUE),
+         fruit_exc_juice_adj = mean(c(fruit_exc_juice_adj_1, fruit_exc_juice_adj_2), na.rm = TRUE),
+         fruit_juice_adj = mean(c(fruit_juice_adj_1, fruit_juice_adj_2), na.rm = TRUE),
+         
+         # vegs
+         veg_dg_adj = mean(c(veg_dg_adj_1, veg_dg_adj_2), na.rm = TRUE),
+         veg_oth_adj = mean(c(veg_oth_adj_1, veg_oth_adj_2), na.rm = TRUE),
+         veg_ro_adj = mean(c(veg_ro_adj_1, veg_ro_adj_2), na.rm = TRUE),
+         veg_sta_adj = mean(c(veg_sta_adj_1, veg_sta_adj_2), na.rm = TRUE),
+         veg_leg_adj = mean(c(veg_leg_adj_1, veg_leg_adj_2), na.rm = TRUE),
+         veg_exc_sta_adj = mean(c(veg_exc_sta_adj_1, veg_exc_sta_adj_2), na.rm = TRUE),
+         
+         # grains
+         gr_refined_adj = mean(c(gr_refined_adj_1, gr_refined_adj_2), na.rm = TRUE),
+         gr_whole_adj = mean(c(gr_whole_adj_1, gr_whole_adj_2), na.rm = TRUE),
+         
+         # plant based proteins
+         pf_ns_adj = mean(c(pf_ns_adj_1, pf_ns_adj_2), na.rm = TRUE),
+         pf_soy_adj = mean(c(pf_soy_adj_1, pf_soy_adj_2), na.rm = TRUE),
+         pf_leg_adj = mean(c(pf_leg_adj_1, pf_leg_adj_2), na.rm = TRUE),
+         leg_tot_adj = mean(c(leg_tot_adj_1, leg_tot_adj_2), na.rm = TRUE),
+         pf_plant_adj = mean(c(pf_plant_adj_1, pf_plant_adj_2), na.rm = TRUE),
+         
+         # animal proteins
+         pf_egg_adj = mean(c(pf_egg_adj_1, pf_egg_adj_2), na.rm = TRUE),
+         pf_seafood_adj = mean(c(pf_seafood_adj_1, pf_seafood_adj_2), na.rm = TRUE),
+         pf_poultry_adj = mean(c(pf_poultry_adj_1, pf_poultry_adj_2), na.rm = TRUE),
+         pf_poultry_tot_adj = mean(c(pf_poultry_tot_adj_1, pf_poultry_tot_adj_2), na.rm = TRUE),
+         pf_pm_adj = mean(c(pf_pm_adj_1, pf_pm_adj_2), na.rm = TRUE),
+         pf_redm_adj = mean(c(pf_redm_adj_1, pf_redm_adj_2), na.rm = TRUE),
+         pf_redm_tot_adj = mean(c(pf_redm_tot_adj_1, pf_redm_tot_adj_2), na.rm = TRUE),
+         pf_animal_adj = mean(c(pf_animal_adj_1, pf_animal_adj_2), na.rm = TRUE),
+         
+         # ssb
+         ssb_adj = mean(c(ssb_adj_1, ssb_adj_2), na.rm=TRUE),
+         
+         # dairy
+         dairy_tot_adj = mean(c(dairy_tot_adj_1, dairy_tot_adj_2), na.rm = TRUE),
+         dairy_cow_adj = mean(c(dairy_cow_adj_1, dairy_cow_adj_2), na.rm = TRUE),
+         dairy_soy_adj = mean(c(dairy_soy_adj_1, dairy_soy_adj_2), na.rm = TRUE),
+         
+         # other foods
+         oil_adj = mean(c(oil_adj_1, oil_adj_2), na.rm = TRUE),
+         sodium_adj = mean(c(sodium_adj_1, sodium_adj_2), na.rm = TRUE),
+         added_sugar_adj = mean(c(added_sugar_adj_1, added_sugar_adj_2), na.rm = TRUE),
+         
+         # other nutrients
+         sea_omega3_fa_adj = mean(c(sea_omega3_fa_adj_1, sea_omega3_fa_adj_2), na.rm = TRUE),
+         pufa_energy_adj = mean(c(pufa_energy_adj_1, pufa_energy_adj_2), na.rm = TRUE),
+         sfat_energy_adj = mean(c(sfat_energy_adj_1, sfat_energy_adj_2), na.rm = TRUE),
+         sat_fat_adj = mean(c(sat_fat_adj_1, sat_fat_adj_2), na.rm = TRUE),
+         fiber_adj = mean(c(fiber_adj_1, fiber_adj_2), na.rm = TRUE))
+
+```
+
+Change unit to grams. Use the conversion units from the following file:
+
+- data_inputs/OTHER/unit_conversions/DATA/Unit_conversions_1.4.24.csv
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# calculate food group means in grams
+nhanes_adj_wide2 <- nhanes_adj_wide1 %>% 
+  rowwise() %>% 
+  mutate(veg_dg_adj_grams = veg_dg_adj * 118 ,
+         veg_oth_adj_grams = veg_oth_adj * 140,
+         veg_ro_adj_grams = veg_ro_adj * 144,
+         veg_sta_adj_grams = veg_sta_adj * 134,
+         veg_tot_adj_grams = sum(veg_dg_adj_grams, 
+                                 veg_oth_adj_grams,
+                                 veg_ro_adj_grams,
+                                 veg_sta_adj_grams),
+         
+         gr_refined_adj_grams = gr_refined_adj * 36,
+         gr_whole_adj_grams = gr_whole_adj * 51,
+         gr_tot_adj_grams = sum(gr_refined_adj_grams,
+                                gr_whole_adj_grams),
+         
+         pf_egg_adj_grams = pf_egg_adj * 50,
+         pf_poultry_tot_adj_grams = pf_poultry_tot_adj * 29,
+         pf_redm_tot_adj_grams = pf_redm_tot_adj * 31,
+         pf_seafood_adj_grams = pf_seafood_adj * 29,
+         pf_ns_adj_grams = pf_ns_adj * 15,
+         leg_tot_adj_grams = leg_tot_adj * 37,
+         pf_tot_adj_grams = sum(pf_egg_adj_grams,
+                                pf_poultry_tot_adj_grams,
+                                pf_redm_tot_adj_grams,
+                                pf_seafood_adj_grams,
+                                pf_ns_adj_grams,
+                                leg_tot_adj_grams),
+         
+         fruit_exc_juice_adj_grams = fruit_exc_juice_adj * 152,
+         fruit_juice_adj_grams = fruit_juice_adj * 251,
+         fruit_tot_adj_grams = sum(fruit_exc_juice_adj_grams,
+                                   fruit_juice_adj_grams))
+
+# get rid of NaN
+nhanes_adj_wide2[nhanes_adj_wide2 == "NaN"] <- NA
+
+```
+
+Export.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+write_rds(nhanes_adj_wide2,
+          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.rds")
+
+write_csv(nhanes_adj_wide2,
+          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.csv",
+          na = "")
+```
+
+## Calculating Standard Deviations Using SAS Macros
+
+When we estimate the average intakes, by demographic subgroup, in the previous section XX, the mean and standard error are calculated. 
+
+We also need to calculate the standard deviations of the mean intake for each dietary factor. This can be done using the [NCI Method](https://epi.grants.cancer.gov/diet/usualintakes/method.html) SAS macros.
+
+We use a modified version of the SIMPLE macro, which is a single macro that links 3 NCI macros, the MIXTRAN, DISTRIB, and BRR_PVALUE_CI, to facilitate estimation of usual intake distributions for food and nutrients consumed “nearly-daily.” 
+
+The SIMPLE macro documentation is provided [here](https://osf.io/ytd34/). An updated version of the macro was provided to our team by Hanqi Luo. The publication describing the macro is located [here](https://pubmed.ncbi.nlm.nih.gov/33693802/).
+
+The NCI macro documentation is provided [here](https://epi.grants.cancer.gov/diet/usualintakes/macros_single.html).
+
+I highly recommend you read all of the aforementioned documentation before your proceed.
+
+The SIMPLE macro was modified by Brooke Bell (the person writing this!). She added code to the macro to additionally calculate the standard deviation of the mean intake. The version that she modified is located in the LASTING GitHub repo here:
+
+- GitHub/LASTING/standard-deviations/macros/simple_macro_v3.4_bmb.sas
+
+This macro is run on the Tufts cluster because it uses a lot of processing power. 
+
+The following sections will describe the data inputs that are used in the macro, and how to run the macro on the cluster.
+
+### Prepare NHANES Data for SAS Macros
+
+We need to make some minor adjustments to the diet dataset's structure in order to properly use the SAS macro.
+
+First, import the adjusted intake dataset (long format) that was created in the previous section.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list = ls())
+
+library(tidyverse)
+library(fastDummies)
+
+# Import data
+nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.rds")
+
+# only select certain variables
+nhanes1 <- nhanes %>% 
+  select(SEQN, age, sex, race, subgroup, DRDINT, SDMVPSU, SDMVSTRA, wtnew, reliable_yes, inAnalysis, day, ends_with("adj"))
+
+```
+
+Then, we need to create a new variable ("subgroup_new") that only has a non-missing subgroup number if that participant's data is reliable (i.e., inAnalysis == TRUE). This essentially changes any subgroup number to NA if the participant's data is unreliable.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+nhanes2 <- nhanes1 %>% 
+  mutate(subgroup_new = ifelse(inAnalysis == "TRUE", subgroup, NA)) %>% 
+  relocate(subgroup_new, .after = subgroup)
+
+# check
+nhanes2 %>% filter(!(is.na(subgroup)) & !(is.na(subgroup_new))) %>% head()
+
+```
+
+Next, create dummy variables for the variables "day", "inAnalysis", "subgroup", and "subgroup_new". We utilize the "dummy_cols" function from the "fastDummies" package to do this quickly. You can learn more about this function by running the command "?dummy_cols".
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+nhanes3 <- nhanes2 %>% 
+  dummy_cols(select_columns = c("day", "inAnalysis", "subgroup", "subgroup_new"),
+             remove_first_dummy = TRUE) %>% 
+  relocate(day_2, .after = day)
+
+```
+
+We need to remove the rows where a participant's number of days of intake is 1 (DRDINT == 1) and day == 2 (since they don't have any data for this day).
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# check
+nhanes3 %>% filter(DRDINT == 1 & day == 2) %>% head()
+
+nhanes4 <- nhanes3 %>% 
+  filter(!(DRDINT == 1 & day == 2))
+  
+# check
+nhanes4 %>% filter(is.na(fruit_tot_adj)) %>% head() #good
+nhanes4 %>% filter(is.na(fruit_tot_adj) & inAnalysis == "TRUE") %>% head() #good
+
+```
+
+Export to Box. 
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+write_csv(nhanes4,
+          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes_incl_ssb_adj_clean_long.csv",
+          na = "")
+
+```
+
+Export to the LASTING Github repository. **Note that you will need to replace this file path with your own in order for this code to run.**
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+write_csv(nhanes4,
+          "/Users/bmb73/Documents/GitHub/LASTING/standard-deviations/in/nhanes_incl_ssb_adj_clean_long.csv",
+          na = "")
+
+```
+
+### Fill Out Macro Template
+
+Before running the SIMPLE macro, I **highly** suggest that you read the following documentation:
+
+- data_inputs/DIET/dietary_intake/RESOURCES/SAS MACRO User Guides/SIMPLE_macro_user_manual_10-30-2020.pdf
+ 
+The Simulating Intake of Micronutrients for Policy Learning and Engagement (SIMPLE) macro is a ‘wrapper’ for the National Cancer Institute MIXTRAN, DISTRIB, and BOXCOX_SURVEY macros to facilitate estimation of usual intake distributions for food and nutrients consumed ‘nearly-daily’.
+
+You must first fill out a CSV file that lists all of the diet variables that you want the SIMPLE macro to run.
+
+If you would like to run all the diet variables that were included in the four-pillar paper analysis, then you can use the following file: 
+
+- /Users/bmb73/Documents/GitHub/LASTING/standard-deviations/in/macro_input_LASTING_ALL_VARS.csv
+
+I will refer you to the above documentation if you want to make any modifications to the input file that already exists.
+
+### Log In to Tufts HPC
+
+The next step is to actually run the macro on the cluster ("HPC").
+
+The file that you will be running is the following:
+
+- GitHub/LASTING/standard-deviations/cluster_code/Calculate_SD_nci_method_05-19-25_cluster_loop.sas
+
+**Please read the SAS file first before running it on the cluster so that you understand what is happening in the code.**
+
+You should save a new version of the SAS code for your own project, so that you don't accidentally write over the orignial one.
+
+You must first log into the cluster computer via [OnDemand](https://ondemand.pax.tufts.edu/).
+
+See Chapter XX for information on how to gain access to OnDemand, and how to get a GitHub access token.
+
+### Run SAS Macro
+
+Once logged in to OnDemand, navigate to /cluster/tufts/lasting/shared/LASTING.
+
+Then, open the terminal.
+
+Type "git pull" into the command prompt.
+
+It will ask you to log into Github with your username and token.
+
+Then, it will start to sync with the most updated version of the LASTING repo.
+
+**NOTE: NEVER use the "git push" command. Just trust me. Ask Fred if you're really curious.**
+
+Then, type "exit" and close the terminal.
+
+Now, navigate to /cluster/tufts/lasting/shared/LASTING/standard-devations/cluster_code.
+
+The batch file you're going to be running is "Run_SDs_cluster.sh".
+
+I also recommend saving a new version of this for your own project. You will also need to edit some of the parameters in the file, such as time requested and email. You can edit the file by clicking the button "Edit". Don't forget to click "Save" when you're done.
+
+Then, open the terminal again.
+
+Type "sbatch Run_SDs_cluster" into the command prompt.
+
+Once you see that the job was submitted, you can exit the terminal.
+
+### Export Output to Box
+
+When the code is done running, the output is saved to the following folders:
+
+- /cluster/tufts/lasting/shared/model_development/data/outputs/CRA/
+- /cluster/tufts/lasting/shared/model_development/data/outputs/cost_env/
+
+You will need to use a file transfer software to copy the output files to Box.
+
+Fred and I use [FileZilla](https://filezilla-project.org/), but it looks like Tufts IT recommends [Globus](https://rtguides.it.tufts.edu/hpc/access/globus/index.html)). I'd go with that. Follow IT's instructions on how to set up the connection.
+
+Anyway, using whatever software you decide on, you will simply copy the files to the following Box folder:
+
+- /Box/lasting_aim_3/model development/methods_manual/outputs/intake/
+
+Create a folder named "output_INSERTDATE_ncimethod" and put the files in there.
+
+### Clean Output from Cluster
+
+Lastly (phew), we need to clean the output to use in the following chapters. You will need to update the file path when running this.
+
+First, retrieve all the output file names.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+rm(list=ls())
+
+my_date <- Sys.Date()
+
+# Specify the directory containing the CSV files
+directory <- "outputs/intake/output_031025_ncimethod"
+
+# Get the list of all CSV files in the directory
+file_list <- list.files(path = directory, pattern = "*.csv", full.names = TRUE)
+
+```
+
+Then, import the files and clean.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+# Read each CSV file and store them in a list of data frames
+data_list <- lapply(file_list, read_csv)
+
+# Combine all data frames into one data frame
+combined_data <- bind_rows(data_list)
+
+# Clean
+intake <- combined_data %>% 
+  select(note, subgroup_new, N, mean, mean_SE, StdDev) %>% 
+  # only select subgroups 1-48
+  filter(subgroup_new %in% c(1:48)) %>% 
+  rename(food = note, 
+         subgroup = subgroup_new,
+         SE = mean_SE) %>% 
+  arrange(subgroup, food)
+
+# fix food name
+intake1 <- intake %>% 
+  mutate(food = str_remove(food, "_adj$"))
+
+# fix poultry name
+intake2 <- intake1 %>% 
+  mutate(food = ifelse(food == "poult_tot", "pf_poultry_tot", food))
+
+```
+
+Read in two datasets (food labels and % grocery intake) and merge with intake data.
+
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+# merge with food labels
+labels <- read_csv("data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv")
+
+labels1 <- labels %>% 
+  rename(food = Food_group) %>% 
+  relocate(food)
+
+# read in pro_gro from original output
+ratio <- read_csv("data_inputs/DIET/dietary_intake/DATA/output_data/NHANES_1518_summary_allfoods_adj_bysub_bysource_02-03-2025.csv") %>% 
+  select(subgroup, food, pro_gro) %>% 
+  mutate(subgroup = as.character(subgroup))
+
+# join
+intake3 <- left_join(intake2, labels1, by = "food") %>% 
+  left_join(ratio, by = c("subgroup", "food"))
+
+intake4 <- intake3 %>% 
+  relocate(subgroup) %>% 
+  rename(food_label = Var_label,
+         food_desc = Var_desc) %>% 
+  arrange(subgroup, food)
+
+```
+
+Export.
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+write_csv(intake4, 
+          paste0("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_", my_date, ".csv"))
+
+
+```
+
 

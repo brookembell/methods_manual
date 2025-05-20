@@ -378,7 +378,7 @@ tab3_dat <- bind_rows(tab3_list)
 # apply ceiling function to all values
 # calcuate 1/10th impact
 tab3_dat1 <- tab3_dat %>% 
-  mutate(across(total_impact_median:total_impact_UB, ~ .x / 10),
+  mutate(across(total_impact_median:total_impact_UB, ~ (.x * 365) / 10),
          diet_pattern = recode(diet_pattern,
                                "US" = "HUS",
                                "Med" = "MED",
@@ -463,7 +463,7 @@ tab3_dat_wide1 <- tab3_dat_wide %>%
 
 
 # export
-write_csv(tab3_dat_wide1, "manuscript_materials/tables/formatted_tables/Table 3 (10% shift).csv")
+write_csv(tab3_dat_wide1, "manuscript_materials/tables/formatted_tables/Table 3 (10% shift)_new.csv")
 
 # html table
 tab3 <- tab3_dat_wide1 %>% 
@@ -479,7 +479,7 @@ tab3 <- tab3_dat_wide1 %>%
   # pack_rows("Cancer", 4, 6) %>% 
   footnote(general = "Median (95% UI)")
 
-save_kable(x = tab3, file = "manuscript_materials/tables/formatted_tables/table3.html", self_contained = T)
+save_kable(x = tab3, file = "manuscript_materials/tables/formatted_tables/table3_new.html", self_contained = T)
 save_kable(x = tab3, file = "manuscript_materials/tables/formatted_tables/table3.pdf", density = 400)
 
 
