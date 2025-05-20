@@ -1479,14 +1479,13 @@ counterfactuals <- counterfactuals %>%
 # pf_leg (cup -> oz)
 
 counterfactuals1 <- counterfactuals %>% 
-  mutate(#added sugar
-    
-         CF_mean_intake = round(ifelse(diet == "added_sugar", CF_mean_intake / 4.2, CF_mean_intake), digits = 2),
-         CF_sd_intake = round(ifelse(diet == "added_sugar", CF_sd_intake / 4.2, CF_sd_intake), digits = 3),
-         CF_intake_unit = ifelse(diet == "added_sugar", "tsp eq/day", CF_intake_unit),
+  mutate(# added sugar
+         # Brooke updated this on 5/20/25 - values are already in tsp
+         # CF_mean_intake = round(ifelse(diet == "added_sugar", CF_mean_intake / 4.2, CF_mean_intake), digits = 2),
+         # CF_sd_intake = round(ifelse(diet == "added_sugar", CF_sd_intake / 4.2, CF_sd_intake), digits = 3),
+         # CF_intake_unit = ifelse(diet == "added_sugar", "tsp eq/day", CF_intake_unit),
          
          # pf_leg
-         
          CF_mean_intake = round(ifelse(diet == "pf_leg", CF_mean_intake * 4, CF_mean_intake), digits = 2),
          CF_sd_intake = round(ifelse(diet == "pf_leg", CF_sd_intake * 4, CF_sd_intake), digits = 3),
          CF_intake_unit = ifelse(diet == "pf_leg", "ounce eq/day", CF_intake_unit))

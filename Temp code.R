@@ -21,3 +21,8 @@ preview_chapter(input = "01-summary-data-inputs.Rmd",
 
 preview_chapter(input = "02-cleaning-code-diet.Rmd",
                 output_dir = "previews")
+
+
+render_book()
+
+
