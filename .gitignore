@@ -2,3 +2,16 @@
 .Rhistory
 .RData
 .Ruserdata
+data_inputs/DIET/dietary_intake/RESOURCES/NHANES Data Dictionaries/DATA_DICTIONARY_DEMO_I.pdf
+data_inputs/DIET/dietary_intake/RESOURCES/NHANES Data Dictionaries/DATA_DICTIONARY_DEMO_J.pdf
+data_inputs/DIET/dietary_intake/RESOURCES/NHANES Data Dictionaries/DATA_DICTIONARY_DR1IFF_I.pdf
+data_inputs/DIET/dietary_intake/RESOURCES/NHANES Data Dictionaries/DATA_DICTIONARY_DR1IFF_J.pdf
+data_inputs/DIET/dietary_intake/RESOURCES/NHANES Data Dictionaries/DATA_DICTIONARY_DR1TOT_I.pdf
+data_inputs/DIET/dietary_intake/RESOURCES/NHANES Data Dictionaries/DATA_DICTIONARY_DR2IFF_I.pdf
+data_inputs/DIET/dietary_intake/RESOURCES/NHANES Data Dictionaries/DATA_DICTIONARY_DR2IFF_J.pdf
+data_inputs/IMPACT_FACTORS/output_data/archive/All_impacts_by_fcidcode.rds
+data_inputs/IMPACT_FACTORS/output_data/archive/All_impacts_by_fcidcode_08042023.rds
+data_inputs/IMPACT_FACTORS/output_data/archive/All_impacts_by_fcidcode_08212023.rds
+data_inputs/IMPACT_FACTORS/output_data/archive/Enviromental_impact_by_fcidcode_day1_07272023.csv
+data_inputs/IMPACT_FACTORS/output_data/archive/Enviromental_impact_by_fcidcode_day2_07272023.csv
+/outputs/model/output_032025_1000sims
