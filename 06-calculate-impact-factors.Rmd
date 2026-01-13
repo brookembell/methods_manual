@@ -94,7 +94,7 @@ enviro_dat <- read_rds("data_inputs/IMPACT_FACTORS/temp_data/enviro_input_dat.rd
 
 ```
 
-## Cost Impact Factors {#cost-impact-factors}
+## Cost Impact Factors {#sec:cost-impact-factors}
 
 ### Cost Impact Factors, by Food, by Subgroup
 
