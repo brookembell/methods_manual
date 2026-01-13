@@ -1,5 +1,5 @@
 # Create data for Tableau
-# 04-23-25
+# 06-29-25
 
 # SET UP -----
 
@@ -7,22 +7,20 @@ rm(list = ls())
 
 library(tidyverse)
 library(stringr)
-# library(gtsummary)
 options(scipen=999)
 
 ##### MUST OPEN 'METHODS_MANUAL' R PROJECT FIRST BEFORE RUNNING #####
 
 # create vectors
-output_folder_name <- "output_032025_1000sims"
+output_folder_name <- "output_052025_1000sims"
 cra_folder_name <- dir(paste0("outputs/model/", output_folder_name, "/CRA"))
 costenv_folder_name <- dir(paste0("outputs/model/", output_folder_name, "/cost_env"))
 costenv_both_folder_name <- costenv_folder_name %>% str_subset(pattern = "both")
 
 # today's date
-export_date <- "042325"
+export_date <- "062925"
 
-# ABSOLUTE CHANGE RESULTS, BY FOOD GROUP, ANNUAL TOTAL (FIGURE 2) -----
-
+# PER CAPITA RESULTS, BY FOOD GROUP (FIGURE 2) -----
 # (i) Health (Annual) -----
 
 my_health_list <- list()
@@ -66,7 +64,7 @@ my_health_dat1 <- my_health_dat_ %>%
   relocate(food_group, .after = diet_pattern) %>% 
   arrange(diet_pattern, food_group, outcome)
 
-# (ii) Cost & Environment (Annual) -----
+# (ii) Cost & Environment (per capita) -----
 
 my_costenv_list <- list()
 
@@ -76,7 +74,7 @@ for (i in costenv_both_folder_name) {
                          output_folder_name ,
                          "/cost_env/", 
                          i, 
-                         "/By_SubGroup/summary.output_by_Foodgroup.costenv.csv")) %>% 
+                         "/per_capita/By_SubGroup/summary.output_by_Foodgroup.costenv.csv")) %>% 
       select(Foodgroup, outcome, outcome_unit, 
              impact_median,	
              `impact_lower_bound (2.5th percentile)`,
@@ -133,12 +131,12 @@ my_costenv_dat1_ <- rbind(my_costenv_dat1, moo_sum) %>%
 # add per day results
 my_costenv_dat2 <- my_costenv_dat1_ %>% 
   select(diet_pattern, food_group, outcome, impact_median, impact_LB, impact_UB) %>%
-  rename(impact_median_year = impact_median,
-         LB_year = impact_LB,
-         UB_year = impact_UB) %>% 
-  mutate(impact_median_day = impact_median_year / 365,
-         LB_day = LB_year / 365,
-         UB_day = UB_year / 365)
+  rename(impact_median_day = impact_median,
+         LB_day = impact_LB,
+         UB_day = impact_UB) %>% 
+  mutate(impact_median_year = impact_median_day * 365,
+         LB_year = LB_day * 365,
+         UB_year = UB_day * 365)
 
 # (iii) Combine all -----
 
@@ -184,30 +182,10 @@ full_comb3 <- full_comb2 %>%
   rows_update(veg_temp, by = c("diet_pattern", "outcome", "food_group"))
 
 # export
-write_csv(full_comb3, paste0("manuscript_materials/figures/tableau_data/abs_change_by_foodgroup_tableau_", export_date, ".csv"))
+write_csv(full_comb3, paste0("manuscript_materials/figures/tableau_data/per_capita_change_by_foodgroup_tableau_", export_date, ".csv"))
 
 # export without date
-write_csv(full_comb3, "manuscript_materials/figures/tableau_data/abs_change_by_foodgroup_tableau_final.csv")
-
-# # export manuscript table
-# comb1 <- comb %>% 
-#   group_by(diet_pattern, outcome) %>% 
-#   summarise(impact = sum(impact_median_year),
-#             impact_LB = sum(LB_year),
-#             impact_UB = sum(UB_year)) %>% 
-#   mutate(impact = ifelse(outcome == "Cancer (cases)" | outcome == "CVD (deaths)", impact * -1, impact))
-# 
-# comb2 <- comb1 %>% 
-#   pivot_wider(names_from = diet_pattern,
-#               values_from = c(impact, impact_LB, impact_UB))
-# 
-# # whole numbers
-# comb3 <- comb2 %>% mutate(across(where(is.numeric), round, 0))
-# 
-# # fix order
-# comb4 <- comb3 %>% select(outcome, ends_with("Med"), ends_with("US"), ends_with("Veg"), ends_with("Vegan"))
-# 
-# write_csv(comb4, "tables_figures/manuscript/Table- Absolute change.csv")
+write_csv(full_comb3, "manuscript_materials/figures/tableau_data/per_capita_change_by_foodgroup_tableau_final.csv")
 
 # PERCENT CHANGE RESULTS, TOTAL (FIGURE 1) -----
 
@@ -325,25 +303,6 @@ pc_health_joint1 <- pc_health_joint %>%
 pc_health_joint2 <- pc_health_joint1 %>% 
   select(diet_pattern, outcome, perc_change, perc_change_UB, perc_change_LB)
 
-# by subgroup
-# pc_health1 <- pc_health %>% 
-#   rowwise() %>% 
-#   mutate(total_impact_current = ifelse(outcome == "Cancer (cases)", cancer1, cvd1),
-#          total_LB_current = total_impact_current,
-#          total_UB_current = total_impact_current,
-#          
-#          total_impact_CF = total_impact_current - total_impact_shift,
-#          total_LB_CF = total_impact_current - total_LB_shift,
-#          total_UB_CF = total_impact_current - total_UB_shift,
-# 
-#          perc_change = ((total_impact_CF - total_impact_current) / total_impact_current) * 100,
-#          perc_change_LB = ((total_LB_CF - total_LB_current) / total_LB_current) * 100,
-#          perc_change_UB = ((total_UB_CF - total_UB_current) / total_UB_current) * 100)
-# 
-# 
-# pc_health2 <- pc_health1 %>% 
-#   select(diet_pattern, outcome, perc_change, perc_change_UB, perc_change_LB)
-
 # (iii) combine costenv and health -----
 
 # use joint health effects for this dataset
@@ -359,34 +318,6 @@ all1 <- all %>%
 # export
 write_csv(all1, paste0("manuscript_materials/figures/tableau_data/perc_change_tableau_", export_date, ".csv"))
 write_csv(all1, "manuscript_materials/figures/tableau_data/perc_change_tableau_final.csv")
-
-# PERCENT CHANGE RESULTS, BY FOOD GROUP -----
-
-# NOT SURE WHAT THIS WAS USED FOR?
-
-# a <- comb %>% 
-#   select(-c(impact_median_day, LB_day, UB_day)) %>% 
-#   group_by(diet_pattern, outcome) %>% 
-#   mutate(sum = sum(impact_median_year),
-#          sum_LB = sum(LB_year),
-#          sum_UB = sum(UB_year)) %>% 
-#   arrange(diet_pattern, outcome)
-# 
-# a1 <- a %>% 
-#   mutate(prop = impact_median_year / sum * 100,
-#          prop_LB = LB_year / sum_LB * 100,
-#          prop_UB = UB_year / sum_UB * 100)
-# 
-# # check
-# a1 %>% 
-#   group_by(diet_pattern, outcome) %>% 
-#   summarise(sum(prop),
-#             sum(prop_LB),
-#             sum(prop_UB))
-# 
-# # export
-# write_csv(a1, paste0("manuscript_materials/figures/tableau_data/perc_change_byfood_tableau_", export_date, ".csv"))
-# write_csv(a1, "manuscript_materials/figures/tableau_data/perc_change_byfood_tableau_final.csv")
 
 # PERCENT CHANGE RESULTS, BY POP SUBGROUP (FIGURE 3) -----
 
@@ -577,113 +508,3 @@ new1 <- new %>%
 write_csv(new1, paste0("manuscript_materials/figures/tableau_data/perc_change_bysubgroup_tableau_", export_date, ".csv"))
 write_csv(new1, "manuscript_materials/figures/tableau_data/perc_change_bysubgroup_tableau_final.csv")
 
-
-
-# ABSOLUTE COST/ENVIRO/HEALTH CHANGE RESULTS (10% SHIFT) -----
-
-# (i) cost/enviro -----
-
-my_costenv_tot_list <- list()
-
-for (i in costenv_both_folder_name) {
-  
-  x <- read_csv(paste0("outputs/model/", 
-                       output_folder_name ,
-                       "/cost_env/", 
-                       i, 
-                       "/By_SubGroup/summary.output_by_all.costenv.csv")) %>% 
-    select(outcome, outcome_unit, 
-           impact_median,	
-           `impact_lower_bound (2.5th percentile)`,
-           `impact_upper_bound (97.5th percentile)`) %>% 
-    mutate(diet_pattern = paste0(i)) %>% 
-    relocate(diet_pattern)
-  
-  my_costenv_tot_list[[i]] <- x
-  
-}
-
-my_costenv_tot_dat <- bind_rows(my_costenv_tot_list)
-
-my_costenv_tot_dat1 <- my_costenv_tot_dat %>% 
-  arrange(diet_pattern) %>% 
-  mutate(outcome_new = paste0(outcome, " (", outcome_unit, ")"),
-         diet_pattern_new = str_extract(diet_pattern, "[^_]+")) %>% 
-  arrange(diet_pattern_new, outcome)
-
-my_costenv_tot_dat2 <- my_costenv_tot_dat1 %>% 
-  select(-c(diet_pattern, outcome, outcome_unit)) %>% 
-  rename(impact_LB = `impact_lower_bound (2.5th percentile)`,
-         impact_UB = `impact_upper_bound (97.5th percentile)`,
-         diet_pattern = diet_pattern_new,
-         outcome = outcome_new) %>% 
-  relocate(diet_pattern, outcome) %>% 
-  mutate(impact_median_10perc = (impact_median / 10) * 365,
-         impact_LB_10perc = (impact_LB / 10) * 365,
-         impact_UB_10perc = (impact_UB / 10) * 365) 
-
-# (ii) health
-
-my_health_tot_list <- list()
-
-for (i in cra_folder_name) {
-  
-  x <- read_csv(paste0("outputs/model/", 
-                       output_folder_name ,
-                       "/CRA/", 
-                       i, 
-                       "/summarystats_attributable_USmortality_by_disease_type_2015_",
-                       i,
-                       ".csv")) %>% 
-    select(disease_type, riskfactor, medians, LB, UB) %>% 
-    mutate(diet_pattern = paste0(i)) %>% 
-    relocate(diet_pattern)
-  
-  my_health_tot_list[[i]] <- x
-  
-}
-
-my_health_tot_dat <- bind_rows(my_health_tot_list)
-
-my_health_tot_dat1 <- my_health_tot_dat %>% 
-  mutate(disease_type = ifelse(disease_type == "CVD", paste0(disease_type, " (deaths)"), paste0(disease_type, " (cases)"))) %>% 
-  rename(outcome = disease_type, 
-         food_group = riskfactor,
-         impact_median = medians,
-         impact_LB = LB,
-         impact_UB = UB) %>% 
-  mutate(impact_median_day = NA) %>% 
-  relocate(food_group, .after = diet_pattern) %>% 
-  arrange(diet_pattern, food_group, outcome)
-
-my_health_tot_dat2 <- my_health_tot_dat1 %>% 
-  group_by(diet_pattern, outcome) %>% 
-  summarise(impact_median = sum(impact_median),
-            impact_LB = sum(impact_LB),
-            impact_UB = sum(impact_UB)) %>% 
-  mutate(impact_median_10perc = (impact_median / 10),
-         impact_LB_10perc = (impact_LB / 10),
-         impact_UB_10perc = (impact_UB / 10)) 
-
-# (iii) combine costenv and health
-comb_new <- rbind(my_costenv_tot_dat2, my_health_tot_dat2) %>% 
-  arrange(diet_pattern, outcome)
-
-# export
-write_csv(comb_new, paste0("manuscript_materials/figures/tableau_data/abs_change_10perc_tableau_long_", export_date, ".csv"))
-write_csv(comb_new, "manuscript_materials/figures/tableau_data/abs_change_10perc_tableau_long_final.csv")
-
-# pivot wider
-results_10perc <- comb_new %>% 
-  select(-c(impact_median, impact_UB, impact_LB)) %>% 
-  pivot_wider(id_cols = c(outcome),
-              names_from = diet_pattern,
-              values_from = starts_with("impact")) %>% 
-  select(outcome, ends_with("Med"), ends_with("US"), ends_with("Veg"), ends_with("Vegan"))
-
-# export
-write_csv(results_10perc, paste0("manuscript_materials/figures/tableau_data/abs_change_10perc_tableau_", export_date, ".csv"))
-write_csv(results_10perc, "manuscript_materials/figures/tableau_data/abs_change_10perc_tableau_final.csv")
-
-# prepare manuscript table
-# write_csv(results_10perc, paste0("tables_figures/manuscript/Table- Absolute change (10% shift).csv"))

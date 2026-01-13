@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+pf_pm_adj,Overall,16147,0.90,0.03,0.49,0.03,0.80,0.03,1.20,0.03,0.55,0.00,0.31,0.03,0.00,0.03,36
+pf_pm_adj,1,9759,0.94,0.03,0.51,0.03,0.83,0.04,1.25,0.04,0.57,,,0.03,,,36
+pf_pm_adj,2,6388,0.81,0.02,0.44,0.03,0.71,0.03,1.07,0.03,0.50,,,0.03,,,36

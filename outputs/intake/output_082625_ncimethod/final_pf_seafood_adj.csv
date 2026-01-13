@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+pf_seafood_adj,Overall,16147,0.48,0.03,0.15,0.02,0.31,0.03,0.62,0.04,0.52,0.00,0.27,0.04,0.00,0.04,36
+pf_seafood_adj,1,9759,0.52,0.03,0.16,0.02,0.34,0.03,0.67,0.04,0.55,,,0.04,,,36
+pf_seafood_adj,2,6388,0.36,0.02,0.11,0.02,0.23,0.02,0.47,0.03,0.40,,,0.03,,,36

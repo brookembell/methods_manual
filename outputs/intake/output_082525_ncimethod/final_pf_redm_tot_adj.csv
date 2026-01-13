@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+pf_redm_tot_adj,Overall,16147,2.05,0.04,1.36,0.04,1.94,0.05,2.62,0.06,0.95,0.00,0.91,0.05,0.00,0.09,36
+pf_redm_tot_adj,1,9759,2.17,0.05,1.48,0.05,2.08,0.05,2.77,0.06,0.97,,,0.05,,,36
+pf_redm_tot_adj,2,6388,1.68,0.04,1.12,0.04,1.60,0.04,2.15,0.05,0.78,,,0.05,,,36

@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+veg_sta_adj,Overall,16147,0.41,0.01,0.27,0.01,0.38,0.01,0.53,0.01,0.20,0.00,0.04,0.01,0.00,0.00,36
+veg_sta_adj,1,9759,0.43,0.01,0.28,0.01,0.40,0.01,0.54,0.01,0.20,,,0.01,,,36
+veg_sta_adj,2,6388,0.37,0.01,0.24,0.01,0.34,0.01,0.47,0.01,0.18,,,0.01,,,36

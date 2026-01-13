@@ -1,0 +1,41 @@
+﻿Food_group,Var_label,DGA_unit,Conversion_to_grams,Equation,Source,Included_foods
+added_sugar,Added sugars,1 tsp eq,4.2,1 tsp = 4.2 g,FPED Chapter 8,Granulated sugar
+dairy,Dairy,1 cup eq,149,1 cup eq = 149 g,Blackstone & Conrad 2020,"Cottage cheese, Mexican cheese, mozzarella, processed cheese, ice cream, milk, soymilk, frozen yogurt, yogurt"
+fruit,Fruits,1 cup eq,182,1 cup eq = 182 g,Blackstone & Conrad 2020,"Apple juice, apples, applesauce, apricots, bananas, blackberries, blueberries, cantaloupe melons, cherries, cranberries, cranberry juice, cranberry sauce, dates, grape juice, grapefruit juice, grapefruit, grapes, honeydew melon, kiwifruit, lemon juice, lime juice, mango juice, mango, nectarine, orange juice, unknown fruit juice, oranges, papaya juice, papaya, peaches, pears, japanese pears, persimmons, pineapple juice, pineapple, plums, pomegranate juice, prune juice, plums, raisins, raspberries, unknown citrus fruit, strawberries, tangerine, watermelon"
+fruit_exc_juice,Fruit excluding juice,1 cup eq,152,1 cup eq = 152 g,Own calculations based on Blackstone & Conrad 2020,"Apples, applesauce, apricots, bananas, blackberries, blueberries, cantaloupe melons, cherries, cranberries, cranberry sauce, dates, grapefruit, grapes, honeydew melon, kiwifruit, mango, nectarine, oranges, papaya, peaches, pears, japanese pears, persimmons, pineapple, plums, plums, raisins, raspberries, unknown citrus fruit, strawberries, tangerine, watermelon"
+fruit_juice,Fruit juice,1 cup eq,251,1 cup eq = 251 g,Own calculations based on Blackstone & Conrad 2020,"Apple juice, unknown other fruit juice, mixed fruit juice (NOT citrus), cranberry juice, grape juice, grapefruit juice, lemon juice, lime juice, mango juice/nectar, orange juice (incl. tangerine & acerola), unknown citrus fruit juice, papaya juice/nectar, pineapple juice, pomegranate juice, prune juice"
+gr_refined,Refined Grains,1 oz eq,36,1 oz eq = 36 g,Blackstone & Conrad 2020,"Bagels and English Muffins, biscuits, french bread, pizza crust, breadings and stuffings/dressings, white bread, refined grained RTE cereal, flour-based desserts (cakes, cookies, etc.), snack bars containing refined grains, refined grain as thickener, cooked cereal, quick breads, pie and pastry crusts, pretzels and crackers, white rice, other foods containing refined grains, white rolls and buns, pasta and nodles, corn tortilla, flour tortilla"
+gr_whole,Whole Grains,1 oz eq,51,1 oz eq = 51 g,Blackstone & Conrad 2020,"Whole wheat bread, whole oat RTE cereals, whole grain corn RTE cereals, snack bars containing whole grains, whole wheat crackers, whoe grain bagels and english muffins, oatmeal and other cooked cereals, whole grains in other foods including desserts, whole wheat quick bread, popcorn, brown rice, whole grain rolls (not sweet), whole wheat RTE cereals, whole grain pasta"
+oil,Oils,1 g,1,1 g = 1 g,NA,"Canola oil, corn oil, cottonseed oil, olive oil, peanut oil, unhydrogenated soy oil, sunflower oil, margarine"
+pf_egg,Eggs,1 oz eq,50,1 oz eq = 50 g,Blackstone & Conrad 2020,Egg
+pf_leg,"Beans, Peas, Lentils (protein)",1 oz eq,44,1 oz eq = 44 g,Blackstone & Conrad 2020,"Black beans, chickpeas, split peas, lentils, lima beans, pinto beans, kidney beans, white beans"
+pf_ns,Nuts and seeds,1 oz eq,15,1 oz eq = 15 g,Blackstone & Conrad 2020,"Almonds, cashew nuts, chestnuts, filberts/hazelnuts, flax seeds, mixed nuts, peanut butter, peanuts, pecans, pine nuts, pistachio nuts, pumpkin/squash seed kernels, sesame seeds, sunflower seeds, walnuts"
+pf_pm,Processed meat,1 oz eq,31,1 oz eq = 31 g,Blackstone & Conrad 2020,Same as red meat
+pf_poultry,Poultry,1 oz eq,29,1 oz eq = 29 g,Blackstone & Conrad 2020,"Luncheon meats (poultry), chicken, turkey"
+pf_redm,Red meat,1 oz eq,31,1 oz eq = 31 g,Blackstone & Conrad 2020,"Beef liver, ground beef, beef steak, luncheon meats (beef), luncheon meats (pork), pork, ham, lamb, sausage, game meat"
+pf_seafood,Seafood,1 oz eq,29,1 oz eq = 29 g,Blackstone & Conrad 2020,"Anchovy, catfish, clams, cod, crab, crayfish, croaker, unknown fish, flounder, halibut, fish stickets, haddock, restructured fish, herring, lobster, mackerel, mussels, perch, octopus/squid, oysters, pike, pompano, porgy, snapper, salmon, sardines, scallops, sea bas, shrimp, swardfish, filapia, trout, tuna, whiting"
+pf_soy,Soy foods,1 oz eq,24,1 oz eq = 24 g,Blackstone & Conrad 2020,"Processed soy, tofu"
+sat_fat,Saturated fats,1 g,1,1 g = 1 g,NA,
+veg_dg,Dark-Green Vegetables,1 cup eq,118,1 cup eq = 118 g,Blackstone & Conrad 2020,"Broccoli, bok choy, cilantro, collard greens, mixed dark leafy greens (includes Romaine, Chicory, Escarole, and Endive), kale (includes lambsquarters, mustard cabbage, raw & ckd beet greens, bitter melon leaves, horseradish leaves, jute leaves, rad), arugula, mustard greens (includes dandelion and poke greens), spinach, turnip greens"
+veg_leg,"Beans, Peas, Lentils (vegetables)",1 cup eq,175,1 cup eq = 175 g,Blackstone & Conrad 2020,"Black beans, chickpeas, split peas, lentils, lima beans, pinto beans, kidney beans, white beans"
+veg_oth,Other Vegetables,1 cup eq,140,1 cup eq = 140 g,Blackstone & Conrad 2020,"Artichoke, asparagus, avocado, bamboo shoots, mungbeans, green beans, beets, brussel sprouts, green cabbage, red cabbage, cactus, cauliflower, celery, cucumber pickles, cucumber, eggplant, garlic, horseradish, lettuce, mushrooms, okra, olives, unknown other vegetable, onions, spring onions/scallions, green peppers, chili peppers, radishes, edible-pod green peas (includes snowpeas, fern shoots), summer squash, tomatillos, turnips"
+veg_ro,Red and Orange Vegetables,1 cup eq,144,1 cup eq = 144 g,Blackstone & Conrad 2020,"Carrots, chili peppers, red peppers, pumpkin, winter squash, sweet potatoes/orange yams, tomato juice, tomatoes"
+veg_sta,Starchy Vegetables,1 cup eq,134,1 cup eq = 134 g,Blackstone & Conrad 2020,"Lima beans (immature), cassava (tapioca, white corn, yellow corn, cooked cowpeas, field peas, blackeye peas (NOT dried), green peas, plantains, waterchestnuts, potatoes, vegetable starches, potato chips/puffs/sticks, french fries, home fries/hash browns"
+veg_exc_sta,Vegetables excluding starchy,1 cup eq,139,1 cup eq = 139 g,Own calculations based on Blackstone & Conrad 2020,"Broccoli, bok choy, cilantro, collard greens, mixed dark leafy greens (includes Romaine, Chicory, Escarole, and Endive), kale (includes lambsquarters, mustard cabbage, raw & ckd beet greens, bitter melon leaves, horseradish leaves, jute leaves, rad), arugula, mustard greens (includes dandelion and poke greens), spinach, turnip greens;
+Black beans, chickpeas, split peas, lentils, lima beans, pinto beans, kidney beans, white beans;
+Artichoke, asparagus, avocado, bamboo shoots, mungbeans, green beans, beets, brussel sprouts, green cabbage, red cabbage, cactus, cauliflower, celery, cucumber pickles, cucumber, eggplant, garlic, horseradish, lettuce, mushrooms, okra, olives, unknown other vegetable, onions, spring onions/scallions, green peppers, chili peppers, radishes, edible-pod green peas (includes snowpeas, fern shoots), summer squash, tomatillos, turnips;
+Carrots, chili peppers, red peppers, pumpkin, winter squash, sweet potatoes/orange yams, tomato juice, tomatoes"
+leg_tot,"Beans, Peas, Lentils (TOTAL)",1 oz eq,37,1 oz eq = 37 g,Own calculations based on Blackstone & Conrad 2020,"Black beans, chickpeas, split peas, lentils, lima beans, pinto beans, kidney beans, white beans; Processed soy, tofu"
+ssb,Sugar sweetened beverages,1 cup (8 fl oz),240,1 cup (8 fl oz) = 240 g,FPED,
+sea_omega3_fa,Seafood omega-3 fats,1 mg,1,1 mg = 1 mg,NA,
+sodium,Sodium,1 mg,1,1 mg = 1 mg,NA,
+fiber,Fiber,1 g,1,1 g = 1 g,NA,
+pf_animal,Animal-protein foods,1 oz eq,0,,,
+pf_plant,Plant-protein foods,1 oz eq,0,,,
+pufa_rep_carb,PUFA replace carbs,1 %E,1,1 %E = 1%E,,
+pufa_rep_sfa,PUFA replace sfa,1 %E,1,1 %E = 1%E,,
+pufa_rep_carbsfa,PUFA replace carbs or sfa,1 %E,1,1 %E = 1%E,,
+babyfood,Baby food,1 oz eq,0,,,
+coffee_tea,Coffee and tea,1 cup eq,0,,,
+other,Other,1 cup eq,0,,,
+water,Water,1 oz eq,0,,,

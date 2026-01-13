@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+added_sugar_adj,Overall,16147,15.90,0.24,9.69,0.22,14.51,0.24,20.60,0.31,8.44,0.18,71.31,0.20,0.06,3.43,36
+added_sugar_adj,1,9759,15.70,0.28,9.55,0.23,14.31,0.27,20.36,0.36,8.37,,,0.22,,,36
+added_sugar_adj,2,6388,16.48,0.23,10.13,0.24,15.08,0.25,21.28,0.28,8.64,,,0.19,,,36

@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+pf_poultry_adj,Overall,16147,1.46,0.05,0.89,0.04,1.33,0.05,1.90,0.06,0.76,0.00,0.58,0.03,0.00,0.05,36
+pf_poultry_adj,1,9759,1.53,0.05,0.94,0.05,1.40,0.05,1.98,0.06,0.78,,,0.04,,,36
+pf_poultry_adj,2,6388,1.26,0.05,0.77,0.04,1.16,0.05,1.64,0.06,0.66,,,0.03,,,36

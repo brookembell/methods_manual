@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+dairy_soy_adj,Overall,16147,0.04,0.02,0.00,0.00,0.00,0.00,0.00,0.00,0.21,0.00,0.04,0.07,0.00,0.02,36
+dairy_soy_adj,1,9759,0.04,0.02,0.00,0.00,0.00,0.00,0.00,0.00,0.20,,,0.06,,,36
+dairy_soy_adj,2,6388,0.04,0.02,0.00,0.00,0.00,0.00,0.00,0.00,0.22,,,0.07,,,36

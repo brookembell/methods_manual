@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+gr_whole_adj,Overall,16147,0.85,0.03,0.41,0.02,0.74,0.03,1.17,0.04,0.58,0.00,0.34,0.02,0.00,0.03,36
+gr_whole_adj,1,9759,0.87,0.03,0.42,0.02,0.76,0.03,1.19,0.04,0.59,,,0.03,,,36
+gr_whole_adj,2,6388,0.81,0.02,0.39,0.02,0.70,0.02,1.11,0.03,0.55,,,0.02,,,36

@@ -1,0 +1,22 @@
+﻿FAH_var,FAFH_var,Diet_var,Diet_label
+cost_fah1,cost_fafh1,dairy,Dairy
+cost_fah2,cost_fafh2,pf_redm,Red meat
+cost_fah3,cost_fafh3,pf_poultry,Poultry
+cost_fah4,cost_fafh4,pf_pm,Processed meat
+cost_fah5,cost_fafh5,pf_seafood,Seafood
+cost_fah6,cost_fafh6,pf_egg,Eggs
+cost_fah7,cost_fafh7,leg_tot,Legumes (including soy)
+cost_fah8,cost_fafh8,pf_ns,Nuts and seeds
+cost_fah9,cost_fafh9,gr_total,All grains (including refined and whole)
+cost_fah10,cost_fafh10,sat_fat,Saturated fats
+cost_fah11,cost_fafh11,oil,Oils
+cost_fah12,cost_fafh12,added_sugar,Added sugars
+cost_fah13,cost_fafh13,ssb,Sugar sweetened beverages
+cost_fah14,cost_fafh14,fruit_exc_juice,Fruit excluding juice
+cost_fah15,cost_fafh15,fruit_juice,Fruit juice
+cost_fah16,cost_fafh16,veg_sta,Starchy vegetables
+cost_fah17,cost_fafh17,veg_dg,Dark-green vegetables
+cost_fah18,cost_fafh18,veg_ro,Red and orange vegetables
+cost_fah19,cost_fafh19,veg_oth,Other vegetables
+cost_fah20,cost_fafh20,other,Everything else
+cost_tot_fah,cost_tot_fafh,total,Total

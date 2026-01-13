@@ -1,0 +1,109 @@
+food_group,var_label,diet_pattern,CF_mean_intake,CF_se_intake,CF_sd_intake,intake_units,conversion_unit,CF_mean_intake_original,intake_units_original
+added_sugar,Added sugars,US,7.14,0,0.714,tsp/day,UNKNOWN,6,kcal%/day
+dairy,Dairy,US,3,0,0.3,cups/day,,,
+fruit,Fruits,US,2,0,0.2,cups/day,,,
+fruit_exc_juice,Fruit excluding juice,US,1.55,0,0.155,cups/day,,,
+gr_refined,Refined Grains,US,3,0,0.3,oz eq/day,,,
+gr_whole,Whole Grains,US,3,0,0.3,oz eq/day,,,
+oil,Oils,US,27,0,2.7,grams/day,,,
+pf_egg,Eggs,US,0.86,0,0.086,oz eq/day,7,6,oz eq/week
+pf_leg,"Beans, Peas, Lentils (protein)",US,0,0,0,oz eq/day,,,
+pf_ns,Nuts and seeds,US,0.64,0,0.064,oz eq/day,7,4.5,oz eq/week
+pf_pm,Processed meat,US,0,0,0,oz eq/day,7,0,oz eq/week
+pf_poultry,Poultry,US,2.29,0,0.229,oz eq/day,7,16,oz eq/week
+pf_redm,Red meat,US,0.57,0,0.057,oz eq/day,7,4,oz eq/week
+pf_seafood,Seafood,US,1.14,0,0.114,oz eq/day,7,8,oz eq/week
+pf_soy,Soy foods,US,0.07,0,0.007,oz eq/day,7,0.5,oz eq/week
+sat_fat,Saturated fats,US,13.33,0,1.333,grams/day,UNKNOWN,6,kcal%/day
+veg_dg,Dark-Green Vegetables,US,0.21,0,0.021,cups/day,7,1.5,cups/week
+veg_leg,"Beans, Peas, Lentils (vegetables)",US,0.21,0,0.021,cups/day,7,1.5,cups/week
+veg_oth,Other Vegetables,US,0.57,0,0.057,cups/day,7,4,cups/week
+veg_ro,Red and Orange Vegetables,US,0.79,0,0.079,cups/day,7,5.5,cups/week
+veg_sta,Starchy Vegetables,US,0.71,0,0.071,cups/day,7,5,cups/week
+veg_exc_sta,Vegetables excluding starchy,US,1.78,0,0.178,cups/day,,,
+leg_tot,"Beans, Peas, Lentils (TOTAL)",US,0.91,0,0.091,oz eq/day,,,
+ssb,Sugar sweetened beverages,US,0,0,0,grams/day,,,
+sea_omega3_fa,Seafood omega-3 fats,US,250,0,25,mg/day,,,
+sodium,Sodium,US,2000,0,200,mg/day,,,
+fiber,Fiber,US,30,0,3,g/day,,,
+pf_animal,Animal-protein foods,US,4.86,0,0.486,oz eq/day,,,
+pf_plant,Plant-protein foods,US,0.71,0,0.071,oz eq/day,,,
+pufa_rep_carb,PUFA replace carbs,US,6,0,0.6,%E,,,
+pufa_rep_sfa,PUFA replace sfa,US,5,0,0.5,%E,,,
+pufa_rep_carbsfa,PUFA replace carbs or sfa,US,11,0,1.1,%E,,,
+babyfood,Baby food,US,0,0,0,oz eq/day,,,
+coffee_tea,Coffee and tea,US,0,0,0,cups/day,,,
+other,Other,US,0,0,0,cups/day,,,
+water,Water,US,88,0,0.88,oz eq/day,,,
+added_sugar,Added sugars,Vegetarian,7.14,0,0.714,tsp/day,UNKNOWN,6,kcal%/day
+dairy,Dairy,Vegetarian,3,0,0.3,cups/day,,,
+fruit,Fruits,Vegetarian,2,0,0.2,cups/day,,,
+fruit_exc_juice,Fruit excluding juice,Vegetarian,1.55,0,0.155,cups/day,,,
+gr_refined,Refined Grains,Vegetarian,3,0,0.3,oz eq/day,,,
+gr_whole,Whole Grains,Vegetarian,3.5,0,0.35,oz eq/day,,,
+oil,Oils,Vegetarian,27,0,2.7,grams/day,,,
+pf_egg,Eggs,Vegetarian,0.43,0,0.043,oz eq/day,7,3,oz eq/week
+pf_leg,"Beans, Peas, Lentils (protein)",Vegetarian,0.86,0,0.086,oz eq/day,7,6,oz eq/week
+pf_ns,Nuts and seeds,Vegetarian,1,0,0.1,oz eq/day,7,7,oz eq/week
+pf_pm,Processed meat,Vegetarian,0,0,0,oz eq/day,7,0,oz eq/week
+pf_poultry,Poultry,Vegetarian,0,0,0,oz eq/day,7,0,oz eq/week
+pf_redm,Red meat,Vegetarian,0,0,0,oz eq/day,7,0,oz eq/week
+pf_seafood,Seafood,Vegetarian,0,0,0,oz eq/day,7,0,oz eq/week
+pf_soy,Soy foods,Vegetarian,1.14,0,0.114,oz eq/day,7,8,oz eq/week
+sat_fat,Saturated fats,Vegetarian,13.33,0,1.333,grams/day,UNKNOWN,6,kcal%/day
+veg_dg,Dark-Green Vegetables,Vegetarian,0.21,0,0.021,cups/day,7,1.5,cups/week
+veg_leg,"Beans, Peas, Lentils (vegetables)",Vegetarian,0.21,0,0.021,cups/day,7,1.5,cups/week
+veg_oth,Other Vegetables,Vegetarian,0.57,0,0.057,cups/day,7,4,cups/week
+veg_ro,Red and Orange Vegetables,Vegetarian,0.79,0,0.079,cups/day,7,5.5,cups/week
+veg_sta,Starchy Vegetables,Vegetarian,0.71,0,0.071,cups/day,7,5,cups/week
+veg_exc_sta,Vegetables excluding starchy,Vegetarian,1.78,0,0.178,cups/day,,,
+leg_tot,"Beans, Peas, Lentils (TOTAL)",Vegetarian,2.84,0,0.284,oz eq/day,,,
+ssb,Sugar sweetened beverages,Vegetarian,0,0,0,grams/day,,,
+sea_omega3_fa,Seafood omega-3 fats,Vegetarian,0,0,0,mg/day,,,
+sodium,Sodium,Vegetarian,2000,0,200,mg/day,,,
+fiber,Fiber,Vegetarian,30,0,3,g/day,,,
+pf_animal,Animal-protein foods,Vegetarian,0.43,0,0.043,oz eq/day,,,
+pf_plant,Plant-protein foods,Vegetarian,3,0,0.3,oz eq/day,,,
+pufa_rep_carb,PUFA replace carbs,Vegetarian,6,0,0.6,%E,,,
+pufa_rep_sfa,PUFA replace sfa,Vegetarian,5,0,0.5,%E,,,
+pufa_rep_carbsfa,PUFA replace carbs or sfa,Vegetarian,11,0,1.1,%E,,,
+babyfood,Baby food,Vegetarian,0,0,0,oz eq/day,,,
+coffee_tea,Coffee and tea,Vegetarian,0,0,0,cups/day,,,
+other,Other,Vegetarian,0,0,0,cups/day,,,
+water,Water,Vegetarian,88,0,0.88,oz eq/day,,,
+added_sugar,Added sugars,Med,7.14,0,0.714,tsp/day,UNKNOWN,6,kcal%/day
+dairy,Dairy,Med,2,0,0.2,cups/day,,,
+fruit,Fruits,Med,2.5,0,0.25,cups/day,,,
+fruit_exc_juice,Fruit excluding juice,Med,1.94,0,0.194,cups/day,,,
+gr_refined,Refined Grains,Med,3,0,0.3,oz eq/day,,,
+gr_whole,Whole Grains,Med,3,0,0.3,oz eq/day,,,
+oil,Oils,Med,27,0,2.7,grams/day,,,
+pf_egg,Eggs,Med,0.86,0,0.086,oz eq/day,7,6,oz eq/week
+pf_leg,"Beans, Peas, Lentils (protein)",Med,0,0,0,oz eq/day,,,
+pf_ns,Nuts and seeds,Med,0.64,0,0.064,oz eq/day,7,4.5,oz eq/week
+pf_pm,Processed meat,Med,0,0,0,oz eq/day,7,0,oz eq/week
+pf_poultry,Poultry,Med,2.29,0,0.229,oz eq/day,7,16,oz eq/week
+pf_redm,Red meat,Med,0.57,0,0.057,oz eq/day,7,4,oz eq/week
+pf_seafood,Seafood,Med,2.14,0,0.214,oz eq/day,7,15,oz eq/week
+pf_soy,Soy foods,Med,0.07,0,0.007,oz eq/day,7,0.5,oz eq/week
+sat_fat,Saturated fats,Med,13.33,0,1.333,grams/day,UNKNOWN,6,kcal%/day
+veg_dg,Dark-Green Vegetables,Med,0.21,0,0.021,cups/day,7,1.5,cups/week
+veg_leg,"Beans, Peas, Lentils (vegetables)",Med,0.21,0,0.021,cups/day,7,1.5,cups/week
+veg_oth,Other Vegetables,Med,0.57,0,0.057,cups/day,7,4,cups/week
+veg_ro,Red and Orange Vegetables,Med,0.79,0,0.079,cups/day,7,5.5,cups/week
+veg_sta,Starchy Vegetables,Med,0.71,0,0.071,cups/day,7,5,cups/week
+veg_exc_sta,Vegetables excluding starchy,Med,1.78,0,0.178,cups/day,,,
+leg_tot,"Beans, Peas, Lentils (TOTAL)",Med,0.91,0,0.091,oz eq/day,,,
+ssb,Sugar sweetened beverages,Med,0,0,0,grams/day,,,
+sea_omega3_fa,Seafood omega-3 fats,Med,250,0,25,mg/day,,,
+sodium,Sodium,Med,2000,0,200,mg/day,,,
+fiber,Fiber,Med,30,0,3,g/day,,,
+pf_animal,Animal-protein foods,Med,5.86,0,0.586,oz eq/day,,,
+pf_plant,Plant-protein foods,Med,0.71,0,0.071,oz eq/day,,,
+pufa_rep_carb,PUFA replace carbs,Med,6,0,0.6,%E,,,
+pufa_rep_sfa,PUFA replace sfa,Med,5,0,0.5,%E,,,
+pufa_rep_carbsfa,PUFA replace carbs or sfa,Med,11,0,1.1,%E,,,
+babyfood,Baby food,Med,0,0,0,oz eq/day,,,
+coffee_tea,Coffee and tea,Med,0,0,0,cups/day,,,
+other,Other,Med,0,0,0,cups/day,,,
+water,Water,Med,88,0,0.88,oz eq/day,,,

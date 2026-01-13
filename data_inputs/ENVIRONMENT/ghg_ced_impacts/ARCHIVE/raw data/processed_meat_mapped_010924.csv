@@ -1,0 +1,83 @@
+foodcode,description,Foodgroup,Foodgroup_new
+25110120,"Beef liver, braised",pf_pm,pf_redm_tot
+25110140,"Beef liver, fried",pf_pm,pf_redm_tot
+25220105,Beef sausage,pf_pm,pf_redm_tot
+25220150,Beef sausage with cheese,pf_pm,pf_redm_tot
+25220106,"Beef sausage, reduced fat",pf_pm,pf_redm_tot
+25220108,"Beef sausage, reduced sodium",pf_pm,pf_redm_tot
+25231110,"Beef, prepackaged or deli, luncheon meat",pf_pm,pf_redm_tot
+25231120,"Beef, prepackaged or deli, luncheon meat, reduced sodium",pf_pm,pf_redm_tot
+25220210,Blood sausage,pf_pm,pf_redm_tot
+25220425,"Bologna, made from any kind of meat, reduced fat",pf_pm,pf_redm_tot
+25220445,"Bologna, made from any kind of meat, reduced fat and reduced sodium",pf_pm,pf_redm_tot
+25220435,"Bologna, made from any kind of meat, reduced sodium",pf_pm,pf_redm_tot
+25220410,"Bologna, NFS",pf_pm,pf_redm_tot
+25220350,Bratwurst,pf_pm,pf_redm_tot
+25220360,"Bratwurst, with cheese",pf_pm,pf_redm_tot
+25110420,"Chicken liver, braised",pf_pm,pf_poultry_tot
+25110450,"Chicken liver, fried",pf_pm,pf_poultry_tot
+25240110,Chicken salad spread,pf_pm,pf_poultry_tot
+25230320,"Chicken, prepackaged or deli, luncheon meat",pf_pm,pf_poultry_tot
+25230340,"Chicken, prepackaged or deli, luncheon meat, reduced sodium",pf_pm,pf_poultry_tot
+25170210,"Chitterlings, cooked",pf_pm,pf_redm_tot
+25220710,Chorizo,pf_pm,
+25210210,"Frankfurter or hot dog, beef",pf_pm,pf_redm_tot
+25210220,"Frankfurter or hot dog, beef and pork",pf_pm,pf_redm_tot
+25210240,"Frankfurter or hot dog, beef and pork, reduced fat or light",pf_pm,pf_redm_tot
+25210620,"Frankfurter or hot dog, beef, reduced fat or light",pf_pm,pf_redm_tot
+25210150,"Frankfurter or hot dog, cheese-filled",pf_pm,
+25210310,"Frankfurter or hot dog, chicken",pf_pm,pf_poultry_tot
+25210280,"Frankfurter or hot dog, meat and poultry",pf_pm,
+25210250,"Frankfurter or hot dog, meat and poultry, fat free",pf_pm,
+25210290,"Frankfurter or hot dog, meat and poultry, reduced fat or light",pf_pm,pf_poultry_tot
+25210110,"Frankfurter or hot dog, NFS",pf_pm,
+25210410,"Frankfurter or hot dog, turkey",pf_pm,pf_poultry_tot
+25210110,"Frankfurter, wiener, or hot dog, NFS",pf_pm,
+25170420,"Gizzard, cooked",pf_pm,pf_redm_tot
+25230530,"Ham and pork, canned luncheon meat, chopped, minced, pressed, spiced",pf_pm,pf_redm_tot
+25230420,"Ham luncheon meat, loaf type",pf_pm,pf_redm_tot
+25240220,Ham salad spread,pf_pm,pf_redm_tot
+25230540,"Ham, pork and chicken, canned luncheon meat, chopped, minced, pressed, spiced, reduced fat and reduced sodium",pf_pm,
+25230550,"Ham, pork, and chicken, canned luncheon meat, chopped, minced, pressed, spiced, reduced sodium",pf_pm,
+25230210,"Ham, prepackaged or deli, luncheon meat",pf_pm,pf_redm_tot
+25230220,"Ham, prepackaged or deli, luncheon meat, reduced sodium",pf_pm,pf_redm_tot
+25120000,"Heart, cooked",pf_pm,pf_redm_tot
+25170310,"Hog maws, cooked",pf_pm,pf_redm_tot
+25221350,Italian sausage,pf_pm,
+25112200,"Liver paste or pate, chicken",pf_pm,pf_poultry_tot
+25230560,Liverwurst,pf_pm,
+25230610,"Luncheon meat, loaf type",pf_pm,
+25230110,"Luncheon meat, NFS",pf_pm,
+25240000,"Meat spread or potted meat, NFS",pf_pm,
+25221210,Mortadella,pf_pm,
+25221220,"Pastrami, made from any kind of meat, reduced fat",pf_pm,
+25221215,"Pastrami, NFS",pf_pm,pf_redm_tot
+25221250,"Pepperoni, NFS",pf_pm,pf_redm_tot
+25221255,"Pepperoni, reduced fat",pf_pm,pf_redm_tot
+25221260,"Pepperoni, reduced sodium",pf_pm,pf_redm_tot
+25221950,Pickled sausage,pf_pm,
+25221310,Polish sausage,pf_pm,
+25221460,Pork and beef sausage,pf_pm,pf_redm_tot
+25221405,Pork sausage,pf_pm,pf_redm_tot
+25221450,Pork sausage rice links,pf_pm,pf_redm_tot
+25221406,"Pork sausage, reduced fat",pf_pm,pf_redm_tot
+25221408,"Pork sausage, reduced sodium",pf_pm,pf_redm_tot
+25221505,"Salami, made from any type of meat, reduced fat",pf_pm,
+25221515,"Salami, made from any type of meat, reduced sodium",pf_pm,
+25221500,"Salami, NFS",pf_pm,
+25221400,"Sausage, NFS",pf_pm,
+25221610,"Scrapple, cooked",pf_pm,
+25221810,Thuringer,pf_pm,
+25160000,"Tongue, cooked",pf_pm,pf_redm_tot
+25160110,"Tongue, smoked, cured, or pickled, cooked",pf_pm,pf_redm_tot
+25170110,"Tripe, cooked",pf_pm,pf_redm_tot
+25230800,"Turkey ham, prepackaged or deli, luncheon meat",pf_pm,pf_poultry_tot
+25220650,Turkey or chicken and beef sausage,pf_pm,
+25221870,Turkey or chicken and pork sausage,pf_pm,
+25221830,Turkey or chicken sausage,pf_pm,pf_poultry_tot
+25221860,"Turkey or chicken sausage, reduced fat",pf_pm,pf_poultry_tot
+25221855,"Turkey or chicken sausage, reduced sodium",pf_pm,pf_poultry_tot
+25221875,"Turkey or chicken, pork, and beef sausage, reduced sodium",pf_pm,
+25230780,"Turkey, prepackaged or deli, luncheon meat",pf_pm,pf_poultry_tot
+25230785,"Turkey, prepackaged or deli, luncheon meat, reduced sodium",pf_pm,pf_poultry_tot
+25221910,"Vienna sausage, canned",pf_pm,

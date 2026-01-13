@@ -15,6 +15,8 @@ library(tidyverse)
 # create date value
 date <- Sys.Date()
 
+date <- "2025-05-20"
+
 ```
 
 ## Clean and Merge All Inputs
@@ -27,7 +29,7 @@ nhanes <- read_csv(paste0("data_inputs/FINAL/cleaned_data/mega_costenv_structure
 
 ```
 
-Here is where you specify the substitution effects. For the four-pillar paper, we set these to 0. However, if you will take into account substituion effects (Kyra, I mean you), you will need to update these numbers. Please consult Fred and/or Nicole as to what these values should be for your analysis. 
+Here is where you specify the substitution effects. For the four-pillar paper, we set these to 0. However, if you will take into account substitution effects (Kyra, I mean you), you will need to update these numbers. Please consult Fred and/or Nicole as to what these values should be for your analysis. 
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 
@@ -57,7 +59,7 @@ cost_IFs <- read_csv(paste0("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost
 
 ```
 
-For the cost impact factors, we made the decsion to use the factors for the "non-mixed" dishes, as we thought these were the best representation of the food groups in the DGA (which is what our analysis focused on). Again, you may need to consult Nicole on what the best decision is for your analysis.
+For the cost impact factors, we made the decision to use the factors for the "non-mixed" dishes, as we thought these were the best representation of the food groups in the DGA (which is what our analysis focused on). Again, you may need to consult Nicole on what the best decision is for your analysis.
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 

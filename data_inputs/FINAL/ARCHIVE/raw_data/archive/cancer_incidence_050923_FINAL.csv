@@ -1,0 +1,817 @@
+subgroup,diseases,diseases_label,crude_rate,crude_se,population,count,Age,Age_label,Sex,Sex_label,Race,Race_label
+1,ALL,All Invasive Cancer Sites Combined,89.63,1.48,18192633,16306,1,20-34,1,Female,1,NHW
+2,ALL,All Invasive Cancer Sites Combined,61.14,2.3,4596338,2811,1,20-34,1,Female,2,NHB
+3,ALL,All Invasive Cancer Sites Combined,68.04,1.64,6549965,4457,1,20-34,1,Female,3,HIS
+4,ALL,All Invasive Cancer Sites Combined,77.63,2.55,3878604,3011,1,20-34,1,Female,4,OTH
+5,ALL,All Invasive Cancer Sites Combined,57.96,1.16,19295314,11184,1,20-34,2,Male,1,NHW
+6,ALL,All Invasive Cancer Sites Combined,31.06,1.63,4186659,1301,1,20-34,2,Male,2,NHB
+7,ALL,All Invasive Cancer Sites Combined,49.42,1.34,6886181,3404,1,20-34,2,Male,3,HIS
+8,ALL,All Invasive Cancer Sites Combined,45.12,1.94,3785306,1709,1,20-34,2,Male,4,OTH
+9,ALL,All Invasive Cancer Sites Combined,265.46,3.17,10789518,28642,2,35-44,1,Female,1,NHW
+10,ALL,All Invasive Cancer Sites Combined,236.5,5.95,2841551,6721,2,35-44,1,Female,2,NHB
+11,ALL,All Invasive Cancer Sites Combined,216.43,3.81,4706043,10186,2,35-44,1,Female,3,HIS
+12,ALL,All Invasive Cancer Sites Combined,259.54,5.54,2705155,7021,2,35-44,1,Female,4,OTH
+13,ALL,All Invasive Cancer Sites Combined,143.09,2.3,10698668,15309,2,35-44,2,Male,1,NHW
+14,ALL,All Invasive Cancer Sites Combined,119.05,4.42,2373836,2826,2,35-44,2,Male,2,NHB
+15,ALL,All Invasive Cancer Sites Combined,85.86,2.34,4477083,3845,2,35-44,2,Male,3,HIS
+16,ALL,All Invasive Cancer Sites Combined,110.3,3.82,2268050,2502,2,35-44,2,Male,4,OTH
+17,ALL,All Invasive Cancer Sites Combined,567.84,4.41,12961330,73599,3,45-54,1,Female,1,NHW
+18,ALL,All Invasive Cancer Sites Combined,483.14,8.55,2294986,11089,3,45-54,1,Female,2,NHB
+19,ALL,All Invasive Cancer Sites Combined,430.14,5.82,2981376,12825,3,45-54,1,Female,3,HIS
+20,ALL,All Invasive Cancer Sites Combined,526.23,8.32,1908325,10043,3,45-54,1,Female,4,OTH
+21,ALL,All Invasive Cancer Sites Combined,414.87,3.76,10622756,44071,3,45-54,2,Male,1,NHW
+22,ALL,All Invasive Cancer Sites Combined,458.95,8.8,2323392,10664,3,45-54,2,Male,2,NHB
+23,ALL,All Invasive Cancer Sites Combined,245.36,4.35,3207152,7869,3,45-54,2,Male,3,HIS
+24,ALL,All Invasive Cancer Sites Combined,310.78,6.83,2807268,8725,3,45-54,2,Male,4,OTH
+25,ALL,All Invasive Cancer Sites Combined,942.58,5.29,16626401,156717,4,55-64,1,Female,1,NHW
+26,ALL,All Invasive Cancer Sites Combined,927.39,12.21,3005374,27872,4,55-64,1,Female,2,NHB
+27,ALL,All Invasive Cancer Sites Combined,738.83,8.94,2911586,21512,4,55-64,1,Female,3,HIS
+28,ALL,All Invasive Cancer Sites Combined,785.03,10.83,2629488,20643,4,55-64,1,Female,4,OTH
+29,ALL,All Invasive Cancer Sites Combined,1118.06,5.85,15564860,174024,4,55-64,2,Male,1,NHW
+30,ALL,All Invasive Cancer Sites Combined,1373.35,16,2050599,28162,4,55-64,2,Male,2,NHB
+31,ALL,All Invasive Cancer Sites Combined,726.62,9.08,2832735,20584,4,55-64,2,Male,3,HIS
+32,ALL,All Invasive Cancer Sites Combined,890.98,12.58,2195076,19558,4,55-64,2,Male,4,OTH
+33,ALL,All Invasive Cancer Sites Combined,1541.05,7.63,11513863,177434,5,65-74,1,Female,1,NHW
+34,ALL,All Invasive Cancer Sites Combined,1494.27,19.59,1390166,20773,5,65-74,1,Female,2,NHB
+35,ALL,All Invasive Cancer Sites Combined,1178.1,15.09,1616432,19044,5,65-74,1,Female,3,HIS
+36,ALL,All Invasive Cancer Sites Combined,1151.07,15.57,1089947,12547,5,65-74,1,Female,4,OTH
+37,ALL,All Invasive Cancer Sites Combined,2148.86,9.47,10345066,222301,5,65-74,2,Male,1,NHW
+38,ALL,All Invasive Cancer Sites Combined,2489.93,29.07,1099252,27371,5,65-74,2,Male,2,NHB
+39,ALL,All Invasive Cancer Sites Combined,1520.36,18.61,1168063,17759,5,65-74,2,Male,3,HIS
+40,ALL,All Invasive Cancer Sites Combined,1701.58,21.19,989548,16838,5,65-74,2,Male,4,OTH
+41,ALL,All Invasive Cancer Sites Combined,1940.16,9.44,9145660,177441,6,75+,1,Female,1,NHW
+42,ALL,All Invasive Cancer Sites Combined,1682.29,25.44,1249362,21018,6,75+,1,Female,2,NHB
+43,ALL,All Invasive Cancer Sites Combined,1420.96,19.71,737080,10474,6,75+,1,Female,3,HIS
+44,ALL,All Invasive Cancer Sites Combined,1352.25,19.4,689818,9329,6,75+,1,Female,4,OTH
+45,ALL,All Invasive Cancer Sites Combined,2896.14,13.61,6831819,197860,6,75+,2,Male,1,NHW
+46,ALL,All Invasive Cancer Sites Combined,2504.26,40.59,670963,16803,6,75+,2,Male,2,NHB
+47,ALL,All Invasive Cancer Sites Combined,2042.45,28.82,548525,11204,6,75+,2,Male,3,HIS
+48,ALL,All Invasive Cancer Sites Combined,2088.56,28.87,638884,13344,6,75+,2,Male,4,OTH
+1,APCA,Prostate (advanced),0,NA,18192633,0,1,20-34,1,Female,1,NHW
+2,APCA,Prostate (advanced),0,NA,4596338,0,1,20-34,1,Female,2,NHB
+3,APCA,Prostate (advanced),0,NA,6549965,0,1,20-34,1,Female,3,HIS
+4,APCA,Prostate (advanced),0,NA,3878604,0,1,20-34,1,Female,4,OTH
+5,APCA,Prostate (advanced),0.02,0.02,19295314,5,1,20-34,2,Male,1,NHW
+6,APCA,Prostate (advanced),0,NA,4186659,0,1,20-34,2,Male,2,NHB
+7,APCA,Prostate (advanced),0.04,0.04,6886181,3,1,20-34,2,Male,3,HIS
+8,APCA,Prostate (advanced),0,NA,3785306,0,1,20-34,2,Male,4,OTH
+9,APCA,Prostate (advanced),0,NA,10789518,0,2,35-44,1,Female,1,NHW
+10,APCA,Prostate (advanced),0,NA,2841551,0,2,35-44,1,Female,2,NHB
+11,APCA,Prostate (advanced),0,NA,4706043,0,2,35-44,1,Female,3,HIS
+12,APCA,Prostate (advanced),0,NA,2705155,0,2,35-44,1,Female,4,OTH
+13,APCA,Prostate (advanced),0.41,0.12,10698668,44,2,35-44,2,Male,1,NHW
+14,APCA,Prostate (advanced),1.64,0.52,2373836,39,2,35-44,2,Male,2,NHB
+15,APCA,Prostate (advanced),0.51,0.18,4477083,23,2,35-44,2,Male,3,HIS
+16,APCA,Prostate (advanced),0.27,0.19,2268050,7,2,35-44,2,Male,4,OTH
+17,APCA,Prostate (advanced),0,NA,12961330,0,3,45-54,1,Female,1,NHW
+18,APCA,Prostate (advanced),0,NA,2294986,0,3,45-54,1,Female,2,NHB
+19,APCA,Prostate (advanced),0,NA,2981376,0,3,45-54,1,Female,3,HIS
+20,APCA,Prostate (advanced),0,NA,1908325,0,3,45-54,1,Female,4,OTH
+21,APCA,Prostate (advanced),16.21,0.74,10622756,1722,3,45-54,2,Male,1,NHW
+22,APCA,Prostate (advanced),30.74,2.28,2323392,715,3,45-54,2,Male,2,NHB
+23,APCA,Prostate (advanced),10.04,0.88,3207152,322,3,45-54,2,Male,3,HIS
+24,APCA,Prostate (advanced),5.7,0.92,2807268,160,3,45-54,2,Male,4,OTH
+25,APCA,Prostate (advanced),0,NA,16626401,0,4,55-64,1,Female,1,NHW
+26,APCA,Prostate (advanced),0,NA,3005374,0,4,55-64,1,Female,2,NHB
+27,APCA,Prostate (advanced),0,NA,2911586,0,4,55-64,1,Female,3,HIS
+28,APCA,Prostate (advanced),0,NA,2629488,0,4,55-64,1,Female,4,OTH
+29,APCA,Prostate (advanced),70.47,1.47,15564860,10969,4,55-64,2,Male,1,NHW
+30,APCA,Prostate (advanced),123.97,4.81,2050599,2543,4,55-64,2,Male,2,NHB
+31,APCA,Prostate (advanced),52.36,2.44,2832735,1484,4,55-64,2,Male,3,HIS
+32,APCA,Prostate (advanced),41.92,2.73,2195076,921,4,55-64,2,Male,4,OTH
+33,APCA,Prostate (advanced),0,NA,11513863,0,5,65-74,1,Female,1,NHW
+34,APCA,Prostate (advanced),0,NA,1390166,0,5,65-74,1,Female,2,NHB
+35,APCA,Prostate (advanced),0,NA,1616432,0,5,65-74,1,Female,3,HIS
+36,APCA,Prostate (advanced),0,NA,1089947,0,5,65-74,1,Female,4,OTH
+37,APCA,Prostate (advanced),136.63,2.39,10345066,14135,5,65-74,2,Male,1,NHW
+38,APCA,Prostate (advanced),182.31,7.87,1099252,2005,5,65-74,2,Male,2,NHB
+39,APCA,Prostate (advanced),110.76,5.02,1168063,1294,5,65-74,2,Male,3,HIS
+40,APCA,Prostate (advanced),104.24,5.24,989548,1032,5,65-74,2,Male,4,OTH
+41,APCA,Prostate (advanced),0,NA,9145660,0,6,75+,1,Female,1,NHW
+42,APCA,Prostate (advanced),0,NA,1249362,0,6,75+,1,Female,2,NHB
+43,APCA,Prostate (advanced),0,NA,737080,0,6,75+,1,Female,3,HIS
+44,APCA,Prostate (advanced),0,NA,689818,0,6,75+,1,Female,4,OTH
+45,APCA,Prostate (advanced),134.62,2.93,6831819,9197,6,75+,2,Male,1,NHW
+46,APCA,Prostate (advanced),152.65,10.02,670963,1025,6,75+,2,Male,2,NHB
+47,APCA,Prostate (advanced),126.51,7.17,548525,694,6,75+,2,Male,3,HIS
+48,APCA,Prostate (advanced),101.39,6.36,638884,648,6,75+,2,Male,4,OTH
+1,BC,Female Breast (post-menopause),NA,NA,18192633,0,1,20-34,1,Female,1,NHW
+2,BC,Female Breast (post-menopause),NA,NA,4596338,0,1,20-34,1,Female,2,NHB
+3,BC,Female Breast (post-menopause),NA,NA,6549965,0,1,20-34,1,Female,3,HIS
+4,BC,Female Breast (post-menopause),NA,NA,3878604,0,1,20-34,1,Female,4,OTH
+5,BC,Female Breast (post-menopause),NA,NA,19295314,0,1,20-34,2,Male,1,NHW
+6,BC,Female Breast (post-menopause),NA,NA,4186659,0,1,20-34,2,Male,2,NHB
+7,BC,Female Breast (post-menopause),NA,NA,6886181,0,1,20-34,2,Male,3,HIS
+8,BC,Female Breast (post-menopause),NA,NA,3785306,0,1,20-34,2,Male,4,OTH
+9,BC,Female Breast (post-menopause),NA,NA,10789518,0,2,35-44,1,Female,1,NHW
+10,BC,Female Breast (post-menopause),NA,NA,2841551,0,2,35-44,1,Female,2,NHB
+11,BC,Female Breast (post-menopause),NA,NA,4706043,0,2,35-44,1,Female,3,HIS
+12,BC,Female Breast (post-menopause),NA,NA,2705155,0,2,35-44,1,Female,4,OTH
+13,BC,Female Breast (post-menopause),NA,NA,10698668,0,2,35-44,2,Male,1,NHW
+14,BC,Female Breast (post-menopause),NA,NA,2373836,0,2,35-44,2,Male,2,NHB
+15,BC,Female Breast (post-menopause),NA,NA,4477083,0,2,35-44,2,Male,3,HIS
+16,BC,Female Breast (post-menopause),NA,NA,2268050,0,2,35-44,2,Male,4,OTH
+17,BC,Female Breast (post-menopause),246.42,4.47,5566236,13717,3,45-54,1,Female,1,NHW
+18,BC,Female Breast (post-menopause),217.22,8.99,1107108,2405,3,45-54,1,Female,2,NHB
+19,BC,Female Breast (post-menopause),178.72,6.17,1275696,2280,3,45-54,1,Female,3,HIS
+20,BC,Female Breast (post-menopause),245.28,9.28,698327,1713,3,45-54,1,Female,4,OTH
+21,BC,Female Breast (post-menopause),NA,NA,10622756,0,3,45-54,2,Male,1,NHW
+22,BC,Female Breast (post-menopause),NA,NA,2323392,0,3,45-54,2,Male,2,NHB
+23,BC,Female Breast (post-menopause),NA,NA,3207152,0,3,45-54,2,Male,3,HIS
+24,BC,Female Breast (post-menopause),NA,NA,2807268,0,3,45-54,2,Male,4,OTH
+25,BC,Female Breast (post-menopause),318.64,3.07,16626401,52979,4,55-64,1,Female,1,NHW
+26,BC,Female Breast (post-menopause),307.04,7.03,3005374,9228,4,55-64,1,Female,2,NHB
+27,BC,Female Breast (post-menopause),242.85,5.13,2911586,7071,4,55-64,1,Female,3,HIS
+28,BC,Female Breast (post-menopause),295.02,6.64,2629488,7758,4,55-64,1,Female,4,OTH
+29,BC,Female Breast (post-menopause),NA,NA,15564860,0,4,55-64,2,Male,1,NHW
+30,BC,Female Breast (post-menopause),NA,NA,2050599,0,4,55-64,2,Male,2,NHB
+31,BC,Female Breast (post-menopause),NA,NA,2832735,0,4,55-64,2,Male,3,HIS
+32,BC,Female Breast (post-menopause),NA,NA,2195076,0,4,55-64,2,Male,4,OTH
+33,BC,Female Breast (post-menopause),476.57,4.24,11513863,54872,5,65-74,1,Female,1,NHW
+34,BC,Female Breast (post-menopause),441.68,10.65,1390166,6141,5,65-74,1,Female,2,NHB
+35,BC,Female Breast (post-menopause),355.67,8.29,1616432,5750,5,65-74,1,Female,3,HIS
+36,BC,Female Breast (post-menopause),406.36,9.25,1089947,4430,5,65-74,1,Female,4,OTH
+37,BC,Female Breast (post-menopause),NA,NA,10345066,0,5,65-74,2,Male,1,NHW
+38,BC,Female Breast (post-menopause),NA,NA,1099252,0,5,65-74,2,Male,2,NHB
+39,BC,Female Breast (post-menopause),NA,NA,1168063,0,5,65-74,2,Male,3,HIS
+40,BC,Female Breast (post-menopause),NA,NA,989548,0,5,65-74,2,Male,4,OTH
+41,BC,Female Breast (post-menopause),449.29,4.54,9145660,41091,6,75+,1,Female,1,NHW
+42,BC,Female Breast (post-menopause),409.32,12.55,1249362,5114,6,75+,1,Female,2,NHB
+43,BC,Female Breast (post-menopause),274.63,8.66,737080,2025,6,75+,1,Female,3,HIS
+44,BC,Female Breast (post-menopause),292.27,9.02,689818,2017,6,75+,1,Female,4,OTH
+45,BC,Female Breast (post-menopause),NA,NA,6831819,0,6,75+,2,Male,1,NHW
+46,BC,Female Breast (post-menopause),NA,NA,670963,0,6,75+,2,Male,2,NHB
+47,BC,Female Breast (post-menopause),NA,NA,548525,0,6,75+,2,Male,3,HIS
+48,BC,Female Breast (post-menopause),NA,NA,638884,0,6,75+,2,Male,4,OTH
+1,CC,Colon and Rectum,4.41,0.33,18192633,803,1,20-34,1,Female,1,NHW
+2,CC,Colon and Rectum,3.46,0.55,4596338,160,1,20-34,1,Female,2,NHB
+3,CC,Colon and Rectum,4.42,0.42,6549965,290,1,20-34,1,Female,3,HIS
+4,CC,Colon and Rectum,3.34,0.53,3878604,130,1,20-34,1,Female,4,OTH
+5,CC,Colon and Rectum,4.28,0.31,19295314,827,1,20-34,2,Male,1,NHW
+6,CC,Colon and Rectum,2.64,0.47,4186659,111,1,20-34,2,Male,2,NHB
+7,CC,Colon and Rectum,3.66,0.37,6886181,253,1,20-34,2,Male,3,HIS
+8,CC,Colon and Rectum,2.66,0.47,3785306,101,1,20-34,2,Male,4,OTH
+9,CC,Colon and Rectum,16.14,0.78,10789518,1742,2,35-44,1,Female,1,NHW
+10,CC,Colon and Rectum,20.66,1.76,2841551,587,2,35-44,1,Female,2,NHB
+11,CC,Colon and Rectum,12.46,0.91,4706043,587,2,35-44,1,Female,3,HIS
+12,CC,Colon and Rectum,11.96,1.19,2705155,324,2,35-44,1,Female,4,OTH
+13,CC,Colon and Rectum,19.33,0.84,10698668,2069,2,35-44,2,Male,1,NHW
+14,CC,Colon and Rectum,18.67,1.75,2373836,444,2,35-44,2,Male,2,NHB
+15,CC,Colon and Rectum,13.05,0.91,4477083,585,2,35-44,2,Male,3,HIS
+16,CC,Colon and Rectum,16.17,1.46,2268050,367,2,35-44,2,Male,4,OTH
+17,CC,Colon and Rectum,41.78,1.2,12961330,5415,3,45-54,1,Female,1,NHW
+18,CC,Colon and Rectum,50.71,2.77,2294986,1164,3,45-54,1,Female,2,NHB
+19,CC,Colon and Rectum,37.43,1.72,2981376,1116,3,45-54,1,Female,3,HIS
+20,CC,Colon and Rectum,41.69,2.34,1908325,796,3,45-54,1,Female,4,OTH
+21,CC,Colon and Rectum,57.24,1.4,10622756,6081,3,45-54,2,Male,1,NHW
+22,CC,Colon and Rectum,63.51,3.28,2323392,1476,3,45-54,2,Male,2,NHB
+23,CC,Colon and Rectum,43.08,1.82,3207152,1382,3,45-54,2,Male,3,HIS
+24,CC,Colon and Rectum,62.52,3.06,2807268,1756,3,45-54,2,Male,4,OTH
+25,CC,Colon and Rectum,59.83,1.33,16626401,9947,4,55-64,1,Female,1,NHW
+26,CC,Colon and Rectum,82.79,3.65,3005374,2489,4,55-64,1,Female,2,NHB
+27,CC,Colon and Rectum,60.63,2.56,2911586,1766,4,55-64,1,Female,3,HIS
+28,CC,Colon and Rectum,67.29,3.17,2629488,1770,4,55-64,1,Female,4,OTH
+29,CC,Colon and Rectum,89.75,1.66,15564860,13970,4,55-64,2,Male,1,NHW
+30,CC,Colon and Rectum,112.6,4.58,2050599,2309,4,55-64,2,Male,2,NHB
+31,CC,Colon and Rectum,84.16,3.09,2832735,2384,4,55-64,2,Male,3,HIS
+32,CC,Colon and Rectum,99.47,4.2,2195076,2184,4,55-64,2,Male,4,OTH
+33,CC,Colon and Rectum,103.27,1.97,11513863,11891,5,65-74,1,Female,1,NHW
+34,CC,Colon and Rectum,134.05,5.87,1390166,1864,5,65-74,1,Female,2,NHB
+35,CC,Colon and Rectum,92.15,4.22,1616432,1490,5,65-74,1,Female,3,HIS
+36,CC,Colon and Rectum,84.01,4.21,1089947,916,5,65-74,1,Female,4,OTH
+37,CC,Colon and Rectum,140.17,2.42,10345066,14501,5,65-74,2,Male,1,NHW
+38,CC,Colon and Rectum,193.18,8.1,1099252,2124,5,65-74,2,Male,2,NHB
+39,CC,Colon and Rectum,146.77,5.78,1168063,1715,5,65-74,2,Male,3,HIS
+40,CC,Colon and Rectum,147.52,6.24,989548,1460,5,65-74,2,Male,4,OTH
+41,CC,Colon and Rectum,196.85,3.01,9145660,18004,6,75+,1,Female,1,NHW
+42,CC,Colon and Rectum,180.42,8.33,1249362,2255,6,75+,1,Female,2,NHB
+43,CC,Colon and Rectum,148.11,6.36,737080,1092,6,75+,1,Female,3,HIS
+44,CC,Colon and Rectum,149.2,6.44,689818,1030,6,75+,1,Female,4,OTH
+45,CC,Colon and Rectum,225.06,3.79,6831819,15376,6,75+,2,Male,1,NHW
+46,CC,Colon and Rectum,251.35,12.86,670963,1687,6,75+,2,Male,2,NHB
+47,CC,Colon and Rectum,206.65,9.17,548525,1134,6,75+,2,Male,3,HIS
+48,CC,Colon and Rectum,182.43,8.53,638884,1166,6,75+,2,Male,4,OTH
+1,ECA,Esophagus: Adenomas and adenocarcinomas,0.05,0.03,18192633,9,1,20-34,1,Female,1,NHW
+2,ECA,Esophagus: Adenomas and adenocarcinomas,0,NA,4596338,0,1,20-34,1,Female,2,NHB
+3,ECA,Esophagus: Adenomas and adenocarcinomas,0.04,0.04,6549965,3,1,20-34,1,Female,3,HIS
+4,ECA,Esophagus: Adenomas and adenocarcinomas,0,NA,3878604,0,1,20-34,1,Female,4,OTH
+5,ECA,Esophagus: Adenomas and adenocarcinomas,0.18,0.07,19295314,36,1,20-34,2,Male,1,NHW
+6,ECA,Esophagus: Adenomas and adenocarcinomas,0,NA,4186659,0,1,20-34,2,Male,2,NHB
+7,ECA,Esophagus: Adenomas and adenocarcinomas,0.15,0.07,6886181,11,1,20-34,2,Male,3,HIS
+8,ECA,Esophagus: Adenomas and adenocarcinomas,0,NA,3785306,0,1,20-34,2,Male,4,OTH
+9,ECA,Esophagus: Adenomas and adenocarcinomas,0,NA,10789518,0,2,35-44,1,Female,1,NHW
+10,ECA,Esophagus: Adenomas and adenocarcinomas,0.15,0.15,2841551,5,2,35-44,1,Female,2,NHB
+11,ECA,Esophagus: Adenomas and adenocarcinomas,0,NA,4706043,0,2,35-44,1,Female,3,HIS
+12,ECA,Esophagus: Adenomas and adenocarcinomas,0.12,0.12,2705155,4,2,35-44,1,Female,4,OTH
+13,ECA,Esophagus: Adenomas and adenocarcinomas,1.29,0.22,10698668,139,2,35-44,2,Male,1,NHW
+14,ECA,Esophagus: Adenomas and adenocarcinomas,0.33,0.23,2373836,8,2,35-44,2,Male,2,NHB
+15,ECA,Esophagus: Adenomas and adenocarcinomas,0.51,0.18,4477083,23,2,35-44,2,Male,3,HIS
+16,ECA,Esophagus: Adenomas and adenocarcinomas,0.53,0.27,2268050,13,2,35-44,2,Male,4,OTH
+17,ECA,Esophagus: Adenomas and adenocarcinomas,0.86,0.17,12961330,111,3,45-54,1,Female,1,NHW
+18,ECA,Esophagus: Adenomas and adenocarcinomas,0.15,0.15,2294986,4,3,45-54,1,Female,2,NHB
+19,ECA,Esophagus: Adenomas and adenocarcinomas,0.39,0.18,2981376,12,3,45-54,1,Female,3,HIS
+20,ECA,Esophagus: Adenomas and adenocarcinomas,0.26,0.19,1908325,6,3,45-54,1,Female,4,OTH
+21,ECA,Esophagus: Adenomas and adenocarcinomas,5.82,0.45,10622756,619,3,45-54,2,Male,1,NHW
+22,ECA,Esophagus: Adenomas and adenocarcinomas,0.68,0.34,2323392,16,3,45-54,2,Male,2,NHB
+23,ECA,Esophagus: Adenomas and adenocarcinomas,2.01,0.39,3207152,65,3,45-54,2,Male,3,HIS
+24,ECA,Esophagus: Adenomas and adenocarcinomas,0.45,0.26,2807268,13,3,45-54,2,Male,4,OTH
+25,ECA,Esophagus: Adenomas and adenocarcinomas,1.75,0.23,16626401,291,4,55-64,1,Female,1,NHW
+26,ECA,Esophagus: Adenomas and adenocarcinomas,0.8,0.36,3005374,25,4,55-64,1,Female,2,NHB
+27,ECA,Esophagus: Adenomas and adenocarcinomas,0.54,0.24,2911586,16,4,55-64,1,Female,3,HIS
+28,ECA,Esophagus: Adenomas and adenocarcinomas,0.3,0.21,2629488,8,4,55-64,1,Female,4,OTH
+29,ECA,Esophagus: Adenomas and adenocarcinomas,14.9,0.68,15564860,2319,4,55-64,2,Male,1,NHW
+30,ECA,Esophagus: Adenomas and adenocarcinomas,3.73,0.83,2050599,77,4,55-64,2,Male,2,NHB
+31,ECA,Esophagus: Adenomas and adenocarcinomas,5.56,0.79,2832735,158,4,55-64,2,Male,3,HIS
+32,ECA,Esophagus: Adenomas and adenocarcinomas,3.02,0.73,2195076,67,4,55-64,2,Male,4,OTH
+33,ECA,Esophagus: Adenomas and adenocarcinomas,3.24,0.35,11513863,374,5,65-74,1,Female,1,NHW
+34,ECA,Esophagus: Adenomas and adenocarcinomas,1.28,0.57,1390166,18,5,65-74,1,Female,2,NHB
+35,ECA,Esophagus: Adenomas and adenocarcinomas,2.13,0.64,1616432,35,5,65-74,1,Female,3,HIS
+36,ECA,Esophagus: Adenomas and adenocarcinomas,0.21,0.21,1089947,3,5,65-74,1,Female,4,OTH
+37,ECA,Esophagus: Adenomas and adenocarcinomas,28.23,1.08,10345066,2921,5,65-74,2,Male,1,NHW
+38,ECA,Esophagus: Adenomas and adenocarcinomas,5.43,1.36,1099252,60,5,65-74,2,Male,2,NHB
+39,ECA,Esophagus: Adenomas and adenocarcinomas,13.45,1.75,1168063,158,5,65-74,2,Male,3,HIS
+40,ECA,Esophagus: Adenomas and adenocarcinomas,6.33,1.29,989548,63,5,65-74,2,Male,4,OTH
+41,ECA,Esophagus: Adenomas and adenocarcinomas,5.83,0.52,9145660,534,6,75+,1,Female,1,NHW
+42,ECA,Esophagus: Adenomas and adenocarcinomas,1.92,0.86,1249362,25,6,75+,1,Female,2,NHB
+43,ECA,Esophagus: Adenomas and adenocarcinomas,3.01,0.91,737080,23,6,75+,1,Female,3,HIS
+44,ECA,Esophagus: Adenomas and adenocarcinomas,1.95,0.74,689818,14,6,75+,1,Female,4,OTH
+45,ECA,Esophagus: Adenomas and adenocarcinomas,33.56,1.46,6831819,2293,6,75+,2,Male,1,NHW
+46,ECA,Esophagus: Adenomas and adenocarcinomas,9.87,2.55,670963,67,6,75+,2,Male,2,NHB
+47,ECA,Esophagus: Adenomas and adenocarcinomas,12.2,2.23,548525,67,6,75+,2,Male,3,HIS
+48,ECA,Esophagus: Adenomas and adenocarcinomas,7.98,1.79,638884,52,6,75+,2,Male,4,OTH
+1,GC,Gallbladder,0,NA,18192633,0,1,20-34,1,Female,1,NHW
+2,GC,Gallbladder,0.09,0.09,4596338,4,1,20-34,1,Female,2,NHB
+3,GC,Gallbladder,0.04,0.04,6549965,3,1,20-34,1,Female,3,HIS
+4,GC,Gallbladder,0.08,0.08,3878604,4,1,20-34,1,Female,4,OTH
+5,GC,Gallbladder,0.02,0.02,19295314,5,1,20-34,2,Male,1,NHW
+6,GC,Gallbladder,0,NA,4186659,0,1,20-34,2,Male,2,NHB
+7,GC,Gallbladder,0,NA,6886181,0,1,20-34,2,Male,3,HIS
+8,GC,Gallbladder,0,NA,3785306,0,1,20-34,2,Male,4,OTH
+9,GC,Gallbladder,0.19,0.08,10789518,21,2,35-44,1,Female,1,NHW
+10,GC,Gallbladder,0.45,0.26,2841551,13,2,35-44,1,Female,2,NHB
+11,GC,Gallbladder,0.74,0.22,4706043,35,2,35-44,1,Female,3,HIS
+12,GC,Gallbladder,0.71,0.29,2705155,20,2,35-44,1,Female,4,OTH
+13,GC,Gallbladder,0.18,0.08,10698668,20,2,35-44,2,Male,1,NHW
+14,GC,Gallbladder,0,NA,2373836,0,2,35-44,2,Male,2,NHB
+15,GC,Gallbladder,0.13,0.09,4477083,6,2,35-44,2,Male,3,HIS
+16,GC,Gallbladder,0.27,0.19,2268050,7,2,35-44,2,Male,4,OTH
+17,GC,Gallbladder,0.82,0.17,12961330,107,3,45-54,1,Female,1,NHW
+18,GC,Gallbladder,1.82,0.52,2294986,42,3,45-54,1,Female,2,NHB
+19,GC,Gallbladder,2.36,0.43,2981376,71,3,45-54,1,Female,3,HIS
+20,GC,Gallbladder,0.66,0.29,1908325,13,3,45-54,1,Female,4,OTH
+21,GC,Gallbladder,0.31,0.1,10622756,33,3,45-54,2,Male,1,NHW
+22,GC,Gallbladder,0.68,0.34,2323392,16,3,45-54,2,Male,2,NHB
+23,GC,Gallbladder,1.47,0.34,3207152,48,3,45-54,2,Male,3,HIS
+24,GC,Gallbladder,1.2,0.42,2807268,34,3,45-54,2,Male,4,OTH
+25,GC,Gallbladder,1.72,0.23,16626401,287,4,55-64,1,Female,1,NHW
+26,GC,Gallbladder,4.34,0.84,3005374,131,4,55-64,1,Female,2,NHB
+27,GC,Gallbladder,4.76,0.72,2911586,139,4,55-64,1,Female,3,HIS
+28,GC,Gallbladder,2.84,0.65,2629488,75,4,55-64,1,Female,4,OTH
+29,GC,Gallbladder,0.74,0.15,15564860,115,4,55-64,2,Male,1,NHW
+30,GC,Gallbladder,2.24,0.65,2050599,46,4,55-64,2,Male,2,NHB
+31,GC,Gallbladder,1.48,0.41,2832735,42,4,55-64,2,Male,3,HIS
+32,GC,Gallbladder,1.42,0.5,2195076,32,4,55-64,2,Male,4,OTH
+33,GC,Gallbladder,4.34,0.4,11513863,500,5,65-74,1,Female,1,NHW
+34,GC,Gallbladder,6.68,1.31,1390166,93,5,65-74,1,Female,2,NHB
+35,GC,Gallbladder,10.63,1.43,1616432,172,5,65-74,1,Female,3,HIS
+36,GC,Gallbladder,6.53,1.17,1089947,72,5,65-74,1,Female,4,OTH
+37,GC,Gallbladder,2.25,0.31,10345066,233,5,65-74,2,Male,1,NHW
+38,GC,Gallbladder,6.45,1.48,1099252,71,5,65-74,2,Male,2,NHB
+39,GC,Gallbladder,5.47,1.12,1168063,64,5,65-74,2,Male,3,HIS
+40,GC,Gallbladder,5.81,1.24,989548,58,5,65-74,2,Male,4,OTH
+41,GC,Gallbladder,8.27,0.62,9145660,757,6,75+,1,Female,1,NHW
+42,GC,Gallbladder,9.23,1.88,1249362,116,6,75+,1,Female,2,NHB
+43,GC,Gallbladder,12.3,1.83,737080,91,6,75+,1,Female,3,HIS
+44,GC,Gallbladder,10.58,1.72,689818,73,6,75+,1,Female,4,OTH
+45,GC,Gallbladder,5.56,0.6,6831819,380,6,75+,2,Male,1,NHW
+46,GC,Gallbladder,5.26,1.86,670963,36,6,75+,2,Male,2,NHB
+47,GC,Gallbladder,11.39,2.15,548525,63,6,75+,2,Male,3,HIS
+48,GC,Gallbladder,5.19,1.44,638884,34,6,75+,2,Male,4,OTH
+1,KC,Kidney and Renal Pelvis,1.34,0.18,18192633,244,1,20-34,1,Female,1,NHW
+2,KC,Kidney and Renal Pelvis,1.3,0.34,4596338,60,1,20-34,1,Female,2,NHB
+3,KC,Kidney and Renal Pelvis,1.42,0.24,6549965,94,1,20-34,1,Female,3,HIS
+4,KC,Kidney and Renal Pelvis,0.83,0.26,3878604,33,1,20-34,1,Female,4,OTH
+5,KC,Kidney and Renal Pelvis,2.03,0.22,19295314,392,1,20-34,2,Male,1,NHW
+6,KC,Kidney and Renal Pelvis,1.36,0.34,4186659,58,1,20-34,2,Male,2,NHB
+7,KC,Kidney and Renal Pelvis,1.46,0.23,6886181,101,1,20-34,2,Male,3,HIS
+8,KC,Kidney and Renal Pelvis,1.58,0.36,3785306,60,1,20-34,2,Male,4,OTH
+9,KC,Kidney and Renal Pelvis,6.57,0.5,10789518,709,2,35-44,1,Female,1,NHW
+10,KC,Kidney and Renal Pelvis,6.44,0.98,2841551,183,2,35-44,1,Female,2,NHB
+11,KC,Kidney and Renal Pelvis,8.98,0.78,4706043,423,2,35-44,1,Female,3,HIS
+12,KC,Kidney and Renal Pelvis,3.55,0.65,2705155,97,2,35-44,1,Female,4,OTH
+13,KC,Kidney and Renal Pelvis,10.51,0.62,10698668,1125,2,35-44,2,Male,1,NHW
+14,KC,Kidney and Renal Pelvis,11.3,1.36,2373836,269,2,35-44,2,Male,2,NHB
+15,KC,Kidney and Renal Pelvis,10.06,0.8,4477083,451,2,35-44,2,Male,3,HIS
+16,KC,Kidney and Renal Pelvis,9.41,1.12,2268050,214,2,35-44,2,Male,4,OTH
+17,KC,Kidney and Renal Pelvis,15.23,0.72,12961330,1974,3,45-54,1,Female,1,NHW
+18,KC,Kidney and Renal Pelvis,13.32,1.42,2294986,306,3,45-54,1,Female,2,NHB
+19,KC,Kidney and Renal Pelvis,16.7,1.15,2981376,499,3,45-54,1,Female,3,HIS
+20,KC,Kidney and Renal Pelvis,8.55,1.06,1908325,164,3,45-54,1,Female,4,OTH
+21,KC,Kidney and Renal Pelvis,28.84,0.99,10622756,3064,3,45-54,2,Male,1,NHW
+22,KC,Kidney and Renal Pelvis,32.26,2.33,2323392,750,3,45-54,2,Male,2,NHB
+23,KC,Kidney and Renal Pelvis,24.09,1.36,3207152,773,3,45-54,2,Male,3,HIS
+24,KC,Kidney and Renal Pelvis,19.49,1.71,2807268,548,3,45-54,2,Male,4,OTH
+25,KC,Kidney and Renal Pelvis,25.18,0.86,16626401,4187,4,55-64,1,Female,1,NHW
+26,KC,Kidney and Renal Pelvis,32.79,2.3,3005374,986,4,55-64,1,Female,2,NHB
+27,KC,Kidney and Renal Pelvis,34.65,1.94,2911586,1009,4,55-64,1,Female,3,HIS
+28,KC,Kidney and Renal Pelvis,18.54,1.67,2629488,488,4,55-64,1,Female,4,OTH
+29,KC,Kidney and Renal Pelvis,57.41,1.33,15564860,8936,4,55-64,2,Male,1,NHW
+30,KC,Kidney and Renal Pelvis,64.31,3.46,2050599,1319,4,55-64,2,Male,2,NHB
+31,KC,Kidney and Renal Pelvis,55.08,2.5,2832735,1561,4,55-64,2,Male,3,HIS
+32,KC,Kidney and Renal Pelvis,42.81,2.76,2195076,940,4,55-64,2,Male,4,OTH
+33,KC,Kidney and Renal Pelvis,42.11,1.26,11513863,4849,5,65-74,1,Female,1,NHW
+34,KC,Kidney and Renal Pelvis,53.41,3.7,1390166,743,5,65-74,1,Female,2,NHB
+35,KC,Kidney and Renal Pelvis,44.05,2.92,1616432,713,5,65-74,1,Female,3,HIS
+36,KC,Kidney and Renal Pelvis,25.48,2.32,1089947,278,5,65-74,1,Female,4,OTH
+37,KC,Kidney and Renal Pelvis,93.18,1.97,10345066,9640,5,65-74,2,Male,1,NHW
+38,KC,Kidney and Renal Pelvis,96.76,5.73,1099252,1064,5,65-74,2,Male,2,NHB
+39,KC,Kidney and Renal Pelvis,90.48,4.54,1168063,1057,5,65-74,2,Male,3,HIS
+40,KC,Kidney and Renal Pelvis,48.03,3.56,989548,476,5,65-74,2,Male,4,OTH
+41,KC,Kidney and Renal Pelvis,45.62,1.45,9145660,4173,6,75+,1,Female,1,NHW
+42,KC,Kidney and Renal Pelvis,55.01,4.6,1249362,688,6,75+,1,Female,2,NHB
+43,KC,Kidney and Renal Pelvis,50.83,3.73,737080,375,6,75+,1,Female,3,HIS
+44,KC,Kidney and Renal Pelvis,26.72,2.73,689818,185,6,75+,1,Female,4,OTH
+45,KC,Kidney and Renal Pelvis,102.46,2.56,6831819,7001,6,75+,2,Male,1,NHW
+46,KC,Kidney and Renal Pelvis,94.09,7.87,670963,632,6,75+,2,Male,2,NHB
+47,KC,Kidney and Renal Pelvis,94.78,6.21,548525,520,6,75+,2,Male,3,HIS
+48,KC,Kidney and Renal Pelvis,49.9,4.46,638884,319,6,75+,2,Male,4,OTH
+1,LC,Lung and Bronchus,0.49,0.11,18192633,89,1,20-34,1,Female,1,NHW
+2,LC,Lung and Bronchus,0.78,0.26,4596338,36,1,20-34,1,Female,2,NHB
+3,LC,Lung and Bronchus,0.63,0.16,6549965,42,1,20-34,1,Female,3,HIS
+4,LC,Lung and Bronchus,0.83,0.26,3878604,33,1,20-34,1,Female,4,OTH
+5,LC,Lung and Bronchus,0.55,0.11,19295314,107,1,20-34,2,Male,1,NHW
+6,LC,Lung and Bronchus,0.34,0.17,4186659,15,1,20-34,2,Male,2,NHB
+7,LC,Lung and Bronchus,0.66,0.16,6886181,46,1,20-34,2,Male,3,HIS
+8,LC,Lung and Bronchus,0.58,0.22,3785306,23,1,20-34,2,Male,4,OTH
+9,LC,Lung and Bronchus,3.72,0.38,10789518,402,2,35-44,1,Female,1,NHW
+10,LC,Lung and Bronchus,6.14,0.96,2841551,175,2,35-44,1,Female,2,NHB
+11,LC,Lung and Bronchus,3.22,0.46,4706043,152,2,35-44,1,Female,3,HIS
+12,LC,Lung and Bronchus,7.1,0.92,2705155,193,2,35-44,1,Female,4,OTH
+13,LC,Lung and Bronchus,4.65,0.41,10698668,498,2,35-44,2,Male,1,NHW
+14,LC,Lung and Bronchus,6.71,1.05,2373836,160,2,35-44,2,Male,2,NHB
+15,LC,Lung and Bronchus,2.29,0.38,4477083,103,2,35-44,2,Male,3,HIS
+16,LC,Lung and Bronchus,3.45,0.68,2268050,79,2,35-44,2,Male,4,OTH
+17,LC,Lung and Bronchus,31.41,1.04,12961330,4072,3,45-54,1,Female,1,NHW
+18,LC,Lung and Bronchus,20.59,1.77,2294986,473,3,45-54,1,Female,2,NHB
+19,LC,Lung and Bronchus,10.16,0.89,2981376,304,3,45-54,1,Female,3,HIS
+20,LC,Lung and Bronchus,21.44,1.68,1908325,410,3,45-54,1,Female,4,OTH
+21,LC,Lung and Bronchus,25.91,0.94,10622756,2753,3,45-54,2,Male,1,NHW
+22,LC,Lung and Bronchus,28.38,2.19,2323392,660,3,45-54,2,Male,2,NHB
+23,LC,Lung and Bronchus,8.26,0.8,3207152,265,3,45-54,2,Male,3,HIS
+24,LC,Lung and Bronchus,19.34,1.7,2807268,543,3,45-54,2,Male,4,OTH
+25,LC,Lung and Bronchus,109.51,1.8,16626401,18207,4,55-64,1,Female,1,NHW
+26,LC,Lung and Bronchus,111.56,4.23,3005374,3353,4,55-64,1,Female,2,NHB
+27,LC,Lung and Bronchus,37.46,2.01,2911586,1091,4,55-64,1,Female,3,HIS
+28,LC,Lung and Bronchus,55.33,2.88,2629488,1455,4,55-64,1,Female,4,OTH
+29,LC,Lung and Bronchus,121.35,1.93,15564860,18889,4,55-64,2,Male,1,NHW
+30,LC,Lung and Bronchus,153.42,5.35,2050599,3147,4,55-64,2,Male,2,NHB
+31,LC,Lung and Bronchus,42.59,2.2,2832735,1207,4,55-64,2,Male,3,HIS
+32,LC,Lung and Bronchus,80.11,3.77,2195076,1759,4,55-64,2,Male,4,OTH
+33,LC,Lung and Bronchus,238.34,3,11513863,27443,5,65-74,1,Female,1,NHW
+34,LC,Lung and Bronchus,216.48,7.46,1390166,3010,5,65-74,1,Female,2,NHB
+35,LC,Lung and Bronchus,99.3,4.38,1616432,1606,5,65-74,1,Female,3,HIS
+36,LC,Lung and Bronchus,127.17,5.17,1089947,1387,5,65-74,1,Female,4,OTH
+37,LC,Lung and Bronchus,269.71,3.35,10345066,27902,5,65-74,2,Male,1,NHW
+38,LC,Lung and Bronchus,342.56,10.78,1099252,3766,5,65-74,2,Male,2,NHB
+39,LC,Lung and Bronchus,133.55,5.52,1168063,1560,5,65-74,2,Male,3,HIS
+40,LC,Lung and Bronchus,199.24,7.25,989548,1972,5,65-74,2,Male,4,OTH
+41,LC,Lung and Bronchus,325.94,3.87,9145660,29810,6,75+,1,Female,1,NHW
+42,LC,Lung and Bronchus,258.52,9.97,1249362,3230,6,75+,1,Female,2,NHB
+43,LC,Lung and Bronchus,159.31,6.6,737080,1175,6,75+,1,Female,3,HIS
+44,LC,Lung and Bronchus,206.82,7.59,689818,1427,6,75+,1,Female,4,OTH
+45,LC,Lung and Bronchus,430.63,5.25,6831819,29420,6,75+,2,Male,1,NHW
+46,LC,Lung and Bronchus,467.16,17.53,670963,3135,6,75+,2,Male,2,NHB
+47,LC,Lung and Bronchus,266.85,10.42,548525,1464,6,75+,2,Male,3,HIS
+48,LC,Lung and Bronchus,320.15,11.3,638884,2046,6,75+,2,Male,4,OTH
+1,LVC,Liver and Intrahepatic Bile Duct,0.2,0.07,18192633,36,1,20-34,1,Female,1,NHW
+2,LVC,Liver and Intrahepatic Bile Duct,0.52,0.21,4596338,24,1,20-34,1,Female,2,NHB
+3,LVC,Liver and Intrahepatic Bile Duct,0.32,0.11,6549965,21,1,20-34,1,Female,3,HIS
+4,LVC,Liver and Intrahepatic Bile Duct,0.25,0.14,3878604,10,1,20-34,1,Female,4,OTH
+5,LVC,Liver and Intrahepatic Bile Duct,0.35,0.09,19295314,67,1,20-34,2,Male,1,NHW
+6,LVC,Liver and Intrahepatic Bile Duct,0.34,0.17,4186659,15,1,20-34,2,Male,2,NHB
+7,LVC,Liver and Intrahepatic Bile Duct,0.33,0.11,6886181,23,1,20-34,2,Male,3,HIS
+8,LVC,Liver and Intrahepatic Bile Duct,0.67,0.24,3785306,26,1,20-34,2,Male,4,OTH
+9,LVC,Liver and Intrahepatic Bile Duct,0.99,0.19,10789518,107,2,35-44,1,Female,1,NHW
+10,LVC,Liver and Intrahepatic Bile Duct,1.35,0.45,2841551,39,2,35-44,1,Female,2,NHB
+11,LVC,Liver and Intrahepatic Bile Duct,0.47,0.18,4706043,23,2,35-44,1,Female,3,HIS
+12,LVC,Liver and Intrahepatic Bile Duct,0.83,0.31,2705155,23,2,35-44,1,Female,4,OTH
+13,LVC,Liver and Intrahepatic Bile Duct,1,0.19,10698668,107,2,35-44,2,Male,1,NHW
+14,LVC,Liver and Intrahepatic Bile Duct,1.47,0.49,2373836,35,2,35-44,2,Male,2,NHB
+15,LVC,Liver and Intrahepatic Bile Duct,0.95,0.25,4477083,43,2,35-44,2,Male,3,HIS
+16,LVC,Liver and Intrahepatic Bile Duct,4.51,0.77,2268050,103,2,35-44,2,Male,4,OTH
+17,LVC,Liver and Intrahepatic Bile Duct,2.77,0.31,12961330,360,3,45-54,1,Female,1,NHW
+18,LVC,Liver and Intrahepatic Bile Duct,3.03,0.68,2294986,70,3,45-54,1,Female,2,NHB
+19,LVC,Liver and Intrahepatic Bile Duct,3.62,0.53,2981376,109,3,45-54,1,Female,3,HIS
+20,LVC,Liver and Intrahepatic Bile Duct,3.42,0.67,1908325,66,3,45-54,1,Female,4,OTH
+21,LVC,Liver and Intrahepatic Bile Duct,7.29,0.5,10622756,775,3,45-54,2,Male,1,NHW
+22,LVC,Liver and Intrahepatic Bile Duct,9.46,1.26,2323392,220,3,45-54,2,Male,2,NHB
+23,LVC,Liver and Intrahepatic Bile Duct,13.59,1.02,3207152,436,3,45-54,2,Male,3,HIS
+24,LVC,Liver and Intrahepatic Bile Duct,14.24,1.46,2807268,400,3,45-54,2,Male,4,OTH
+25,LVC,Liver and Intrahepatic Bile Duct,9.14,0.52,16626401,1519,4,55-64,1,Female,1,NHW
+26,LVC,Liver and Intrahepatic Bile Duct,14.79,1.54,3005374,445,4,55-64,1,Female,2,NHB
+27,LVC,Liver and Intrahepatic Bile Duct,19.6,1.46,2911586,571,4,55-64,1,Female,3,HIS
+28,LVC,Liver and Intrahepatic Bile Duct,13.91,1.44,2629488,366,4,55-64,1,Female,4,OTH
+29,LVC,Liver and Intrahepatic Bile Duct,36.94,1.06,15564860,5749,4,55-64,2,Male,1,NHW
+30,LVC,Liver and Intrahepatic Bile Duct,58.91,3.31,2050599,1208,4,55-64,2,Male,2,NHB
+31,LVC,Liver and Intrahepatic Bile Duct,55.42,2.51,2832735,1570,4,55-64,2,Male,3,HIS
+32,LVC,Liver and Intrahepatic Bile Duct,52.93,3.07,2195076,1162,4,55-64,2,Male,4,OTH
+33,LVC,Liver and Intrahepatic Bile Duct,17.17,0.8,11513863,1977,5,65-74,1,Female,1,NHW
+34,LVC,Liver and Intrahepatic Bile Duct,27.22,2.64,1390166,379,5,65-74,1,Female,2,NHB
+35,LVC,Liver and Intrahepatic Bile Duct,42.31,2.86,1616432,684,5,65-74,1,Female,3,HIS
+36,LVC,Liver and Intrahepatic Bile Duct,30.53,2.54,1089947,333,5,65-74,1,Female,4,OTH
+37,LVC,Liver and Intrahepatic Bile Duct,54.37,1.51,10345066,5625,5,65-74,2,Male,1,NHW
+38,LVC,Liver and Intrahepatic Bile Duct,104.57,5.96,1099252,1150,5,65-74,2,Male,2,NHB
+39,LVC,Liver and Intrahepatic Bile Duct,101.65,4.81,1168063,1188,5,65-74,2,Male,3,HIS
+40,LVC,Liver and Intrahepatic Bile Duct,77.06,4.51,989548,763,5,65-74,2,Male,4,OTH
+41,LVC,Liver and Intrahepatic Bile Duct,23.29,1.03,9145660,2131,6,75+,1,Female,1,NHW
+42,LVC,Liver and Intrahepatic Bile Duct,24.62,3.08,1249362,308,6,75+,1,Female,2,NHB
+43,LVC,Liver and Intrahepatic Bile Duct,60.94,4.08,737080,450,6,75+,1,Female,3,HIS
+44,LVC,Liver and Intrahepatic Bile Duct,46.49,3.6,689818,321,6,75+,1,Female,4,OTH
+45,LVC,Liver and Intrahepatic Bile Duct,53.37,1.85,6831819,3647,6,75+,2,Male,1,NHW
+46,LVC,Liver and Intrahepatic Bile Duct,59.88,6.28,670963,402,6,75+,2,Male,2,NHB
+47,LVC,Liver and Intrahepatic Bile Duct,94.37,6.2,548525,518,6,75+,2,Male,3,HIS
+48,LVC,Liver and Intrahepatic Bile Duct,88.22,5.93,638884,564,6,75+,2,Male,4,OTH
+1,MLPC,"Mouth, Larynx, and Pharynx Cancers",1.19,0.17,18192633,218,1,20-34,1,Female,1,NHW
+2,MLPC,"Mouth, Larynx, and Pharynx Cancers",0.95,0.29,4596338,44,1,20-34,1,Female,2,NHB
+3,MLPC,"Mouth, Larynx, and Pharynx Cancers",0.99,0.2,6549965,65,1,20-34,1,Female,3,HIS
+4,MLPC,"Mouth, Larynx, and Pharynx Cancers",1.84,0.39,3878604,72,1,20-34,1,Female,4,OTH
+5,MLPC,"Mouth, Larynx, and Pharynx Cancers",1.24,0.17,19295314,240,1,20-34,2,Male,1,NHW
+6,MLPC,"Mouth, Larynx, and Pharynx Cancers",0.94,0.28,4186659,40,1,20-34,2,Male,2,NHB
+7,MLPC,"Mouth, Larynx, and Pharynx Cancers",0.92,0.18,6886181,64,1,20-34,2,Male,3,HIS
+8,MLPC,"Mouth, Larynx, and Pharynx Cancers",2.91,0.49,3785306,111,1,20-34,2,Male,4,OTH
+9,MLPC,"Mouth, Larynx, and Pharynx Cancers",3.68,0.37,10789518,398,2,35-44,1,Female,1,NHW
+10,MLPC,"Mouth, Larynx, and Pharynx Cancers",2.54,0.62,2841551,73,2,35-44,1,Female,2,NHB
+11,MLPC,"Mouth, Larynx, and Pharynx Cancers",1.88,0.35,4706043,89,2,35-44,1,Female,3,HIS
+12,MLPC,"Mouth, Larynx, and Pharynx Cancers",4.03,0.69,2705155,109,2,35-44,1,Female,4,OTH
+13,MLPC,"Mouth, Larynx, and Pharynx Cancers",7.16,0.51,10698668,766,2,35-44,2,Male,1,NHW
+14,MLPC,"Mouth, Larynx, and Pharynx Cancers",5.89,0.98,2373836,140,2,35-44,2,Male,2,NHB
+15,MLPC,"Mouth, Larynx, and Pharynx Cancers",2.93,0.43,4477083,132,2,35-44,2,Male,3,HIS
+16,MLPC,"Mouth, Larynx, and Pharynx Cancers",8.62,1.07,2268050,196,2,35-44,2,Male,4,OTH
+17,MLPC,"Mouth, Larynx, and Pharynx Cancers",11.67,0.63,12961330,1513,3,45-54,1,Female,1,NHW
+18,MLPC,"Mouth, Larynx, and Pharynx Cancers",8.02,1.1,2294986,185,3,45-54,1,Female,2,NHB
+19,MLPC,"Mouth, Larynx, and Pharynx Cancers",6.07,0.69,2981376,181,3,45-54,1,Female,3,HIS
+20,MLPC,"Mouth, Larynx, and Pharynx Cancers",8.81,1.08,1908325,169,3,45-54,1,Female,4,OTH
+21,MLPC,"Mouth, Larynx, and Pharynx Cancers",33.85,1.07,10622756,3596,3,45-54,2,Male,1,NHW
+22,MLPC,"Mouth, Larynx, and Pharynx Cancers",26.01,2.1,2323392,605,3,45-54,2,Male,2,NHB
+23,MLPC,"Mouth, Larynx, and Pharynx Cancers",14.21,1.05,3207152,456,3,45-54,2,Male,3,HIS
+24,MLPC,"Mouth, Larynx, and Pharynx Cancers",23.69,1.88,2807268,665,3,45-54,2,Male,4,OTH
+25,MLPC,"Mouth, Larynx, and Pharynx Cancers",22.36,0.81,16626401,3719,4,55-64,1,Female,1,NHW
+26,MLPC,"Mouth, Larynx, and Pharynx Cancers",16.72,1.64,3005374,503,4,55-64,1,Female,2,NHB
+27,MLPC,"Mouth, Larynx, and Pharynx Cancers",12.02,1.14,2911586,350,4,55-64,1,Female,3,HIS
+28,MLPC,"Mouth, Larynx, and Pharynx Cancers",14.21,1.46,2629488,374,4,55-64,1,Female,4,OTH
+29,MLPC,"Mouth, Larynx, and Pharynx Cancers",77.21,1.54,15564860,12018,4,55-64,2,Male,1,NHW
+30,MLPC,"Mouth, Larynx, and Pharynx Cancers",61.52,3.39,2050599,1262,4,55-64,2,Male,2,NHB
+31,MLPC,"Mouth, Larynx, and Pharynx Cancers",32.14,1.91,2832735,911,4,55-64,2,Male,3,HIS
+32,MLPC,"Mouth, Larynx, and Pharynx Cancers",45.65,2.85,2195076,1003,4,55-64,2,Male,4,OTH
+33,MLPC,"Mouth, Larynx, and Pharynx Cancers",29.13,1.05,11513863,3354,5,65-74,1,Female,1,NHW
+34,MLPC,"Mouth, Larynx, and Pharynx Cancers",24.65,2.52,1390166,343,5,65-74,1,Female,2,NHB
+35,MLPC,"Mouth, Larynx, and Pharynx Cancers",17.77,1.85,1616432,288,5,65-74,1,Female,3,HIS
+36,MLPC,"Mouth, Larynx, and Pharynx Cancers",16.21,1.85,1089947,177,5,65-74,1,Female,4,OTH
+37,MLPC,"Mouth, Larynx, and Pharynx Cancers",100.98,2.05,10345066,10447,5,65-74,2,Male,1,NHW
+38,MLPC,"Mouth, Larynx, and Pharynx Cancers",87.25,5.44,1099252,960,5,65-74,2,Male,2,NHB
+39,MLPC,"Mouth, Larynx, and Pharynx Cancers",57.89,3.63,1168063,677,5,65-74,2,Male,3,HIS
+40,MLPC,"Mouth, Larynx, and Pharynx Cancers",56.47,3.86,989548,559,5,65-74,2,Male,4,OTH
+41,MLPC,"Mouth, Larynx, and Pharynx Cancers",38.13,1.32,9145660,3488,6,75+,1,Female,1,NHW
+42,MLPC,"Mouth, Larynx, and Pharynx Cancers",22.31,2.93,1249362,279,6,75+,1,Female,2,NHB
+43,MLPC,"Mouth, Larynx, and Pharynx Cancers",27.6,2.75,737080,204,6,75+,1,Female,3,HIS
+44,MLPC,"Mouth, Larynx, and Pharynx Cancers",24.77,2.63,689818,171,6,75+,1,Female,4,OTH
+45,MLPC,"Mouth, Larynx, and Pharynx Cancers",103.68,2.57,6831819,7084,6,75+,2,Male,1,NHW
+46,MLPC,"Mouth, Larynx, and Pharynx Cancers",72.38,6.9,670963,486,6,75+,2,Male,2,NHB
+47,MLPC,"Mouth, Larynx, and Pharynx Cancers",68.34,5.27,548525,375,6,75+,2,Male,3,HIS
+48,MLPC,"Mouth, Larynx, and Pharynx Cancers",64.27,5.07,638884,411,6,75+,2,Male,4,OTH
+1,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.12,0.05,18192633,23,1,20-34,1,Female,1,NHW
+2,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.35,0.17,4596338,16,1,20-34,1,Female,2,NHB
+3,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.04,0.04,6549965,3,1,20-34,1,Female,3,HIS
+4,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.17,0.12,3878604,7,1,20-34,1,Female,4,OTH
+5,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.12,0.05,19295314,23,1,20-34,2,Male,1,NHW
+6,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.43,0.19,4186659,18,1,20-34,2,Male,2,NHB
+7,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.18,0.08,6886181,13,1,20-34,2,Male,3,HIS
+8,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.33,0.17,3785306,13,1,20-34,2,Male,4,OTH
+9,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,1.14,0.21,10789518,123,2,35-44,1,Female,1,NHW
+10,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,3.74,0.75,2841551,107,2,35-44,1,Female,2,NHB
+11,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,1.54,0.32,4706043,73,2,35-44,1,Female,3,HIS
+12,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,0.83,0.31,2705155,23,2,35-44,1,Female,4,OTH
+13,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,1.66,0.25,10698668,178,2,35-44,2,Male,1,NHW
+14,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,4.26,0.83,2373836,102,2,35-44,2,Male,2,NHB
+15,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,1.08,0.26,4477083,49,2,35-44,2,Male,3,HIS
+16,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,1.59,0.46,2268050,37,2,35-44,2,Male,4,OTH
+17,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,3.83,0.36,12961330,497,3,45-54,1,Female,1,NHW
+18,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,13.93,1.45,2294986,320,3,45-54,1,Female,2,NHB
+19,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,5.2,0.64,2981376,156,3,45-54,1,Female,3,HIS
+20,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,2.37,0.56,1908325,46,3,45-54,1,Female,4,OTH
+21,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,5.62,0.44,10622756,597,3,45-54,2,Male,1,NHW
+22,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,14.86,1.58,2323392,346,3,45-54,2,Male,2,NHB
+23,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,6.33,0.7,3207152,204,3,45-54,2,Male,3,HIS
+24,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,4.35,0.81,2807268,123,3,45-54,2,Male,4,OTH
+25,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,9.14,0.52,16626401,1519,4,55-64,1,Female,1,NHW
+26,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,26.52,2.06,3005374,798,4,55-64,1,Female,2,NHB
+27,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,11.69,1.13,2911586,341,4,55-64,1,Female,3,HIS
+28,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,5.83,0.93,2629488,154,4,55-64,1,Female,4,OTH
+29,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,13.58,0.65,15564860,2114,4,55-64,2,Male,1,NHW
+30,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,32.25,2.45,2050599,662,4,55-64,2,Male,2,NHB
+31,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,14.88,1.3,2832735,422,4,55-64,2,Male,3,HIS
+32,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,9.24,1.28,2195076,203,4,55-64,2,Male,4,OTH
+33,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,18.71,0.84,11513863,2155,5,65-74,1,Female,1,NHW
+34,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,53.41,3.7,1390166,743,5,65-74,1,Female,2,NHB
+35,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,20.48,1.99,1616432,332,5,65-74,1,Female,3,HIS
+36,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,14.11,1.72,1089947,154,5,65-74,1,Female,4,OTH
+37,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,31.94,1.15,10345066,3304,5,65-74,2,Male,1,NHW
+38,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,73.67,5,1099252,810,5,65-74,2,Male,2,NHB
+39,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,29.4,2.59,1168063,344,5,65-74,2,Male,3,HIS
+40,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,22.17,2.42,989548,220,5,65-74,2,Male,4,OTH
+41,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,28.21,1.14,9145660,2580,6,75+,1,Female,1,NHW
+42,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,67.71,5.1,1249362,846,6,75+,1,Female,2,NHB
+43,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,34.43,3.07,737080,254,6,75+,1,Female,3,HIS
+44,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,22.55,2.51,689818,156,6,75+,1,Female,4,OTH
+45,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,50.75,1.8,6831819,3468,6,75+,2,Male,1,NHW
+46,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,97.38,8,670963,654,6,75+,2,Male,2,NHB
+47,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,47.59,4.4,548525,262,6,75+,2,Male,3,HIS
+48,MMC,Myeloma: Multiple myeloma/plasma-cell leuk,28.34,3.36,638884,182,6,75+,2,Male,4,OTH
+1,OC,Ovary,2.51,0.25,18192633,457,1,20-34,1,Female,1,NHW
+2,OC,Ovary,1.82,0.4,4596338,84,1,20-34,1,Female,2,NHB
+3,OC,Ovary,2.72,0.33,6549965,179,1,20-34,1,Female,3,HIS
+4,OC,Ovary,2.92,0.49,3878604,114,1,20-34,1,Female,4,OTH
+5,OC,Ovary,0,NA,19295314,0,1,20-34,2,Male,1,NHW
+6,OC,Ovary,0,NA,4186659,0,1,20-34,2,Male,2,NHB
+7,OC,Ovary,0,NA,6886181,0,1,20-34,2,Male,3,HIS
+8,OC,Ovary,0,NA,3785306,0,1,20-34,2,Male,4,OTH
+9,OC,Ovary,5.28,0.45,10789518,570,2,35-44,1,Female,1,NHW
+10,OC,Ovary,5.39,0.9,2841551,154,2,35-44,1,Female,2,NHB
+11,OC,Ovary,6.5,0.66,4706043,306,2,35-44,1,Female,3,HIS
+12,OC,Ovary,7.1,0.92,2705155,193,2,35-44,1,Female,4,OTH
+13,OC,Ovary,0,NA,10698668,0,2,35-44,2,Male,1,NHW
+14,OC,Ovary,0,NA,2373836,0,2,35-44,2,Male,2,NHB
+15,OC,Ovary,0,NA,4477083,0,2,35-44,2,Male,3,HIS
+16,OC,Ovary,0,NA,2268050,0,2,35-44,2,Male,4,OTH
+17,OC,Ovary,13.75,0.69,12961330,1783,3,45-54,1,Female,1,NHW
+18,OC,Ovary,11.81,1.34,2294986,271,3,45-54,1,Female,2,NHB
+19,OC,Ovary,16,1.12,2981376,477,3,45-54,1,Female,3,HIS
+20,OC,Ovary,18.15,1.55,1908325,347,3,45-54,1,Female,4,OTH
+21,OC,Ovary,0,NA,10622756,0,3,45-54,2,Male,1,NHW
+22,OC,Ovary,0,NA,2323392,0,3,45-54,2,Male,2,NHB
+23,OC,Ovary,0,NA,3207152,0,3,45-54,2,Male,3,HIS
+24,OC,Ovary,0,NA,2807268,0,3,45-54,2,Male,4,OTH
+25,OC,Ovary,23.22,0.83,16626401,3862,4,55-64,1,Female,1,NHW
+26,OC,Ovary,18.81,1.74,3005374,566,4,55-64,1,Female,2,NHB
+27,OC,Ovary,23.17,1.58,2911586,675,4,55-64,1,Female,3,HIS
+28,OC,Ovary,20.93,1.77,2629488,551,4,55-64,1,Female,4,OTH
+29,OC,Ovary,0,NA,15564860,0,4,55-64,2,Male,1,NHW
+30,OC,Ovary,0,NA,2050599,0,4,55-64,2,Male,2,NHB
+31,OC,Ovary,0,NA,2832735,0,4,55-64,2,Male,3,HIS
+32,OC,Ovary,0,NA,2195076,0,4,55-64,2,Male,4,OTH
+33,OC,Ovary,33.92,1.13,11513863,3906,5,65-74,1,Female,1,NHW
+34,OC,Ovary,27.48,2.66,1390166,382,5,65-74,1,Female,2,NHB
+35,OC,Ovary,31.88,2.48,1616432,516,5,65-74,1,Female,3,HIS
+36,OC,Ovary,25.48,2.32,1089947,278,5,65-74,1,Female,4,OTH
+37,OC,Ovary,0,NA,10345066,0,5,65-74,2,Male,1,NHW
+38,OC,Ovary,0,NA,1099252,0,5,65-74,2,Male,2,NHB
+39,OC,Ovary,0,NA,1168063,0,5,65-74,2,Male,3,HIS
+40,OC,Ovary,0,NA,989548,0,5,65-74,2,Male,4,OTH
+41,OC,Ovary,40.7,1.37,9145660,3723,6,75+,1,Female,1,NHW
+42,OC,Ovary,34.62,3.65,1249362,433,6,75+,1,Female,2,NHB
+43,OC,Ovary,29.79,2.85,737080,220,6,75+,1,Female,3,HIS
+44,OC,Ovary,26.72,2.73,689818,185,6,75+,1,Female,4,OTH
+45,OC,Ovary,0,NA,6831819,0,6,75+,2,Male,1,NHW
+46,OC,Ovary,0,NA,670963,0,6,75+,2,Male,2,NHB
+47,OC,Ovary,0,NA,548525,0,6,75+,2,Male,3,HIS
+48,OC,Ovary,0,NA,638884,0,6,75+,2,Male,4,OTH
+1,PC,Pancreas,0.49,0.11,18192633,89,1,20-34,1,Female,1,NHW
+2,PC,Pancreas,0.95,0.29,4596338,44,1,20-34,1,Female,2,NHB
+3,PC,Pancreas,0.91,0.19,6549965,60,1,20-34,1,Female,3,HIS
+4,PC,Pancreas,0.58,0.22,3878604,23,1,20-34,1,Female,4,OTH
+5,PC,Pancreas,0.44,0.1,19295314,85,1,20-34,2,Male,1,NHW
+6,PC,Pancreas,0.17,0.12,4186659,8,1,20-34,2,Male,2,NHB
+7,PC,Pancreas,0.33,0.11,6886181,23,1,20-34,2,Male,3,HIS
+8,PC,Pancreas,0.08,0.08,3785306,4,1,20-34,2,Male,4,OTH
+9,PC,Pancreas,2.24,0.29,10789518,242,2,35-44,1,Female,1,NHW
+10,PC,Pancreas,2.99,0.67,2841551,86,2,35-44,1,Female,2,NHB
+11,PC,Pancreas,2.14,0.38,4706043,101,2,35-44,1,Female,3,HIS
+12,PC,Pancreas,1.54,0.43,2705155,42,2,35-44,1,Female,4,OTH
+13,PC,Pancreas,2.47,0.3,10698668,265,2,35-44,2,Male,1,NHW
+14,PC,Pancreas,1.96,0.57,2373836,47,2,35-44,2,Male,2,NHB
+15,PC,Pancreas,1.78,0.34,4477083,80,2,35-44,2,Male,3,HIS
+16,PC,Pancreas,1.19,0.4,2268050,28,2,35-44,2,Male,4,OTH
+17,PC,Pancreas,6.84,0.48,12961330,887,3,45-54,1,Female,1,NHW
+18,PC,Pancreas,9.38,1.19,2294986,216,3,45-54,1,Female,2,NHB
+19,PC,Pancreas,6.46,0.71,2981376,193,3,45-54,1,Female,3,HIS
+20,PC,Pancreas,8.15,1.04,1908325,156,3,45-54,1,Female,4,OTH
+21,PC,Pancreas,11.1,0.61,10622756,1180,3,45-54,2,Male,1,NHW
+22,PC,Pancreas,11.15,1.37,2323392,260,3,45-54,2,Male,2,NHB
+23,PC,Pancreas,7.95,0.78,3207152,256,3,45-54,2,Male,3,HIS
+24,PC,Pancreas,8.25,1.11,2807268,232,3,45-54,2,Male,4,OTH
+25,PC,Pancreas,21.15,0.79,16626401,3517,4,55-64,1,Female,1,NHW
+26,PC,Pancreas,34.08,2.34,3005374,1025,4,55-64,1,Female,2,NHB
+27,PC,Pancreas,19.27,1.44,2911586,562,4,55-64,1,Female,3,HIS
+28,PC,Pancreas,17.2,1.6,2629488,453,4,55-64,1,Female,4,OTH
+29,PC,Pancreas,33.59,1.01,15564860,5229,4,55-64,2,Male,1,NHW
+30,PC,Pancreas,41.2,2.77,2050599,845,4,55-64,2,Male,2,NHB
+31,PC,Pancreas,27.37,1.76,2832735,776,4,55-64,2,Male,3,HIS
+32,PC,Pancreas,24.34,2.08,2195076,535,4,55-64,2,Male,4,OTH
+33,PC,Pancreas,48.94,1.36,11513863,5635,5,65-74,1,Female,1,NHW
+34,PC,Pancreas,65.23,4.09,1390166,907,5,65-74,1,Female,2,NHB
+35,PC,Pancreas,47.53,3.03,1616432,769,5,65-74,1,Female,3,HIS
+36,PC,Pancreas,37.9,2.82,1089947,414,5,65-74,1,Female,4,OTH
+37,PC,Pancreas,67.08,1.67,10345066,6940,5,65-74,2,Male,1,NHW
+38,PC,Pancreas,83.86,5.34,1099252,922,5,65-74,2,Male,2,NHB
+39,PC,Pancreas,51.96,3.44,1168063,607,5,65-74,2,Male,3,HIS
+40,PC,Pancreas,54.36,3.79,989548,538,5,65-74,2,Male,4,OTH
+41,PC,Pancreas,83.66,1.96,9145660,7651,6,75+,1,Female,1,NHW
+42,PC,Pancreas,96.17,6.08,1249362,1202,6,75+,1,Female,2,NHB
+43,PC,Pancreas,83.34,4.77,737080,615,6,75+,1,Female,3,HIS
+44,PC,Pancreas,77.66,4.65,689818,536,6,75+,1,Female,4,OTH
+45,PC,Pancreas,106.43,2.61,6831819,7271,6,75+,2,Male,1,NHW
+46,PC,Pancreas,111.86,8.58,670963,751,6,75+,2,Male,2,NHB
+47,PC,Pancreas,91.53,6.1,548525,503,6,75+,2,Male,3,HIS
+48,PC,Pancreas,77.84,5.57,638884,498,6,75+,2,Male,4,OTH
+1,SCC,Stomach Cardia,0.1,0.05,18192633,18,1,20-34,1,Female,1,NHW
+2,SCC,Stomach Cardia,0,NA,4596338,0,1,20-34,1,Female,2,NHB
+3,SCC,Stomach Cardia,0.04,0.04,6549965,3,1,20-34,1,Female,3,HIS
+4,SCC,Stomach Cardia,0.08,0.08,3878604,4,1,20-34,1,Female,4,OTH
+5,SCC,Stomach Cardia,0.14,0.06,19295314,27,1,20-34,2,Male,1,NHW
+6,SCC,Stomach Cardia,0.09,0.09,4186659,4,1,20-34,2,Male,2,NHB
+7,SCC,Stomach Cardia,0.22,0.09,6886181,16,1,20-34,2,Male,3,HIS
+8,SCC,Stomach Cardia,0.33,0.17,3785306,13,1,20-34,2,Male,4,OTH
+9,SCC,Stomach Cardia,0.23,0.09,10789518,25,2,35-44,1,Female,1,NHW
+10,SCC,Stomach Cardia,0.75,0.33,2841551,22,2,35-44,1,Female,2,NHB
+11,SCC,Stomach Cardia,0.4,0.16,4706043,19,2,35-44,1,Female,3,HIS
+12,SCC,Stomach Cardia,0.36,0.21,2705155,10,2,35-44,1,Female,4,OTH
+13,SCC,Stomach Cardia,1.03,0.2,10698668,111,2,35-44,2,Male,1,NHW
+14,SCC,Stomach Cardia,0.49,0.28,2373836,12,2,35-44,2,Male,2,NHB
+15,SCC,Stomach Cardia,1.02,0.25,4477083,46,2,35-44,2,Male,3,HIS
+16,SCC,Stomach Cardia,0.93,0.35,2268050,22,2,35-44,2,Male,4,OTH
+17,SCC,Stomach Cardia,0.51,0.13,12961330,67,3,45-54,1,Female,1,NHW
+18,SCC,Stomach Cardia,0.3,0.21,2294986,7,3,45-54,1,Female,2,NHB
+19,SCC,Stomach Cardia,1.42,0.33,2981376,43,3,45-54,1,Female,3,HIS
+20,SCC,Stomach Cardia,1.05,0.37,1908325,21,3,45-54,1,Female,4,OTH
+21,SCC,Stomach Cardia,3.37,0.34,10622756,359,3,45-54,2,Male,1,NHW
+22,SCC,Stomach Cardia,1.35,0.48,2323392,32,3,45-54,2,Male,2,NHB
+23,SCC,Stomach Cardia,2.01,0.39,3207152,65,3,45-54,2,Male,3,HIS
+24,SCC,Stomach Cardia,2.1,0.56,2807268,59,3,45-54,2,Male,4,OTH
+25,SCC,Stomach Cardia,1.75,0.23,16626401,291,4,55-64,1,Female,1,NHW
+26,SCC,Stomach Cardia,1.13,0.43,3005374,34,4,55-64,1,Female,2,NHB
+27,SCC,Stomach Cardia,1.3,0.38,2911586,38,4,55-64,1,Female,3,HIS
+28,SCC,Stomach Cardia,1.64,0.5,2629488,44,4,55-64,1,Female,4,OTH
+29,SCC,Stomach Cardia,8.86,0.52,15564860,1379,4,55-64,2,Male,1,NHW
+30,SCC,Stomach Cardia,3.91,0.85,2050599,81,4,55-64,2,Male,2,NHB
+31,SCC,Stomach Cardia,3.52,0.63,2832735,100,4,55-64,2,Male,3,HIS
+32,SCC,Stomach Cardia,3.2,0.75,2195076,71,4,55-64,2,Male,4,OTH
+33,SCC,Stomach Cardia,3.24,0.35,11513863,374,5,65-74,1,Female,1,NHW
+34,SCC,Stomach Cardia,2.82,0.85,1390166,40,5,65-74,1,Female,2,NHB
+35,SCC,Stomach Cardia,1.93,0.61,1616432,32,5,65-74,1,Female,3,HIS
+36,SCC,Stomach Cardia,3.16,0.82,1089947,35,5,65-74,1,Female,4,OTH
+37,SCC,Stomach Cardia,17.05,0.84,10345066,1765,5,65-74,2,Male,1,NHW
+38,SCC,Stomach Cardia,11.54,1.98,1099252,127,5,65-74,2,Male,2,NHB
+39,SCC,Stomach Cardia,8.2,1.37,1168063,96,5,65-74,2,Male,3,HIS
+40,SCC,Stomach Cardia,11.35,1.73,989548,113,5,65-74,2,Male,4,OTH
+41,SCC,Stomach Cardia,5.19,0.49,9145660,475,6,75+,1,Female,1,NHW
+42,SCC,Stomach Cardia,4.62,1.33,1249362,58,6,75+,1,Female,2,NHB
+43,SCC,Stomach Cardia,4.92,1.16,737080,37,6,75+,1,Female,3,HIS
+44,SCC,Stomach Cardia,5.29,1.21,689818,37,6,75+,1,Female,4,OTH
+45,SCC,Stomach Cardia,21.22,1.16,6831819,1450,6,75+,2,Male,1,NHW
+46,SCC,Stomach Cardia,15.13,3.16,670963,102,6,75+,2,Male,2,NHB
+47,SCC,Stomach Cardia,13.02,2.3,548525,72,6,75+,2,Male,3,HIS
+48,SCC,Stomach Cardia,13.17,2.29,638884,85,6,75+,2,Male,4,OTH
+1,SCNC,Stomach Non-Cardia,0.22,0.07,18192633,40,1,20-34,1,Female,1,NHW
+2,SCNC,Stomach Non-Cardia,0.35,0.17,4596338,16,1,20-34,1,Female,2,NHB
+3,SCNC,Stomach Non-Cardia,0.55,0.15,6549965,37,1,20-34,1,Female,3,HIS
+4,SCNC,Stomach Non-Cardia,0.25,0.14,3878604,10,1,20-34,1,Female,4,OTH
+5,SCNC,Stomach Non-Cardia,0.07,0.04,19295314,14,1,20-34,2,Male,1,NHW
+6,SCNC,Stomach Non-Cardia,0.17,0.12,4186659,8,1,20-34,2,Male,2,NHB
+7,SCNC,Stomach Non-Cardia,0.59,0.15,6886181,41,1,20-34,2,Male,3,HIS
+8,SCNC,Stomach Non-Cardia,0.17,0.12,3785306,7,1,20-34,2,Male,4,OTH
+9,SCNC,Stomach Non-Cardia,1.1,0.2,10789518,119,2,35-44,1,Female,1,NHW
+10,SCNC,Stomach Non-Cardia,2.69,0.64,2841551,77,2,35-44,1,Female,2,NHB
+11,SCNC,Stomach Non-Cardia,2.81,0.43,4706043,133,2,35-44,1,Female,3,HIS
+12,SCNC,Stomach Non-Cardia,2.25,0.52,2705155,61,2,35-44,1,Female,4,OTH
+13,SCNC,Stomach Non-Cardia,0.7,0.16,10698668,75,2,35-44,2,Male,1,NHW
+14,SCNC,Stomach Non-Cardia,1.64,0.52,2373836,39,2,35-44,2,Male,2,NHB
+15,SCNC,Stomach Non-Cardia,1.85,0.34,4477083,83,2,35-44,2,Male,3,HIS
+16,SCNC,Stomach Non-Cardia,1.59,0.46,2268050,37,2,35-44,2,Male,4,OTH
+17,SCNC,Stomach Non-Cardia,1.78,0.25,12961330,231,3,45-54,1,Female,1,NHW
+18,SCNC,Stomach Non-Cardia,3.18,0.69,2294986,73,3,45-54,1,Female,2,NHB
+19,SCNC,Stomach Non-Cardia,5.36,0.65,2981376,160,3,45-54,1,Female,3,HIS
+20,SCNC,Stomach Non-Cardia,3.16,0.64,1908325,61,3,45-54,1,Female,4,OTH
+21,SCNC,Stomach Non-Cardia,2.11,0.27,10622756,225,3,45-54,2,Male,1,NHW
+22,SCNC,Stomach Non-Cardia,3.89,0.81,2323392,91,3,45-54,2,Male,2,NHB
+23,SCNC,Stomach Non-Cardia,4.25,0.57,3207152,137,3,45-54,2,Male,3,HIS
+24,SCNC,Stomach Non-Cardia,4.35,0.81,2807268,123,3,45-54,2,Male,4,OTH
+25,SCNC,Stomach Non-Cardia,3.03,0.3,16626401,504,4,55-64,1,Female,1,NHW
+26,SCNC,Stomach Non-Cardia,9.48,1.23,3005374,286,4,55-64,1,Female,2,NHB
+27,SCNC,Stomach Non-Cardia,9.42,1.01,2911586,275,4,55-64,1,Female,3,HIS
+28,SCNC,Stomach Non-Cardia,8.52,1.13,2629488,225,4,55-64,1,Female,4,OTH
+29,SCNC,Stomach Non-Cardia,3.95,0.35,15564860,616,4,55-64,2,Male,1,NHW
+30,SCNC,Stomach Non-Cardia,14.17,1.63,2050599,291,4,55-64,2,Male,2,NHB
+31,SCNC,Stomach Non-Cardia,12.95,1.21,2832735,367,4,55-64,2,Male,3,HIS
+32,SCNC,Stomach Non-Cardia,13.32,1.54,2195076,293,4,55-64,2,Male,4,OTH
+33,SCNC,Stomach Non-Cardia,6.87,0.51,11513863,791,5,65-74,1,Female,1,NHW
+34,SCNC,Stomach Non-Cardia,15.41,1.99,1390166,215,5,65-74,1,Female,2,NHB
+35,SCNC,Stomach Non-Cardia,18.16,1.87,1616432,294,5,65-74,1,Female,3,HIS
+36,SCNC,Stomach Non-Cardia,18.53,1.98,1089947,202,5,65-74,1,Female,4,OTH
+37,SCNC,Stomach Non-Cardia,8.67,0.6,10345066,898,5,65-74,2,Male,1,NHW
+38,SCNC,Stomach Non-Cardia,25.8,2.96,1099252,284,5,65-74,2,Male,2,NHB
+39,SCNC,Stomach Non-Cardia,25.3,2.4,1168063,296,5,65-74,2,Male,3,HIS
+40,SCNC,Stomach Non-Cardia,27.71,2.7,989548,275,5,65-74,2,Male,4,OTH
+41,SCNC,Stomach Non-Cardia,11.03,0.71,9145660,1009,6,75+,1,Female,1,NHW
+42,SCNC,Stomach Non-Cardia,29.24,3.35,1249362,366,6,75+,1,Female,2,NHB
+43,SCNC,Stomach Non-Cardia,25.69,2.65,737080,190,6,75+,1,Female,3,HIS
+44,SCNC,Stomach Non-Cardia,26.44,2.71,689818,183,6,75+,1,Female,4,OTH
+45,SCNC,Stomach Non-Cardia,17.51,1.06,6831819,1197,6,75+,2,Male,1,NHW
+46,SCNC,Stomach Non-Cardia,46.72,5.54,670963,314,6,75+,2,Male,2,NHB
+47,SCNC,Stomach Non-Cardia,44.34,4.25,548525,244,6,75+,2,Male,3,HIS
+48,SCNC,Stomach Non-Cardia,53.09,4.6,638884,340,6,75+,2,Male,4,OTH
+1,TC,Thyroid,21.43,0.72,18192633,3899,1,20-34,1,Female,1,NHW
+2,TC,Thyroid,8.23,0.84,4596338,379,1,20-34,1,Female,2,NHB
+3,TC,Thyroid,17.97,0.84,6549965,1177,1,20-34,1,Female,3,HIS
+4,TC,Thyroid,20.45,1.31,3878604,794,1,20-34,1,Female,4,OTH
+5,TC,Thyroid,4.77,0.33,19295314,920,1,20-34,2,Male,1,NHW
+6,TC,Thyroid,1.19,0.32,4186659,50,1,20-34,2,Male,2,NHB
+7,TC,Thyroid,3.44,0.35,6886181,237,1,20-34,2,Male,3,HIS
+8,TC,Thyroid,3.5,0.54,3785306,133,1,20-34,2,Male,4,OTH
+9,TC,Thyroid,35.35,1.16,10789518,3815,2,35-44,1,Female,1,NHW
+10,TC,Thyroid,17.06,1.6,2841551,485,2,35-44,1,Female,2,NHB
+11,TC,Thyroid,30.62,1.43,4706043,1442,2,35-44,1,Female,3,HIS
+12,TC,Thyroid,42.03,2.23,2705155,1138,2,35-44,1,Female,4,OTH
+13,TC,Thyroid,10.22,0.61,10698668,1094,2,35-44,2,Male,1,NHW
+14,TC,Thyroid,2.46,0.63,2373836,59,2,35-44,2,Male,2,NHB
+15,TC,Thyroid,6.05,0.62,4477083,271,2,35-44,2,Male,3,HIS
+16,TC,Thyroid,10.34,1.17,2268050,235,2,35-44,2,Male,4,OTH
+17,TC,Thyroid,35.82,1.11,12961330,4644,3,45-54,1,Female,1,NHW
+18,TC,Thyroid,21.49,1.8,2294986,494,3,45-54,1,Female,2,NHB
+19,TC,Thyroid,36.72,1.7,2981376,1095,3,45-54,1,Female,3,HIS
+20,TC,Thyroid,38.67,2.26,1908325,738,3,45-54,1,Female,4,OTH
+21,TC,Thyroid,12.67,0.66,10622756,1346,3,45-54,2,Male,1,NHW
+22,TC,Thyroid,3.72,0.79,2323392,87,3,45-54,2,Male,2,NHB
+23,TC,Thyroid,8.34,0.8,3207152,268,3,45-54,2,Male,3,HIS
+24,TC,Thyroid,14.39,1.47,2807268,405,3,45-54,2,Male,4,OTH
+25,TC,Thyroid,31.56,0.97,16626401,5248,4,55-64,1,Female,1,NHW
+26,TC,Thyroid,23.95,1.96,3005374,720,4,55-64,1,Female,2,NHB
+27,TC,Thyroid,34.21,1.92,2911586,997,4,55-64,1,Female,3,HIS
+28,TC,Thyroid,38.28,2.39,2629488,1007,4,55-64,1,Female,4,OTH
+29,TC,Thyroid,17.69,0.74,15564860,2753,4,55-64,2,Male,1,NHW
+30,TC,Thyroid,10.81,1.42,2050599,222,4,55-64,2,Male,2,NHB
+31,TC,Thyroid,11.58,1.15,2832735,329,4,55-64,2,Male,3,HIS
+32,TC,Thyroid,15.45,1.66,2195076,340,4,55-64,2,Male,4,OTH
+33,TC,Thyroid,32.3,1.1,11513863,3719,5,65-74,1,Female,1,NHW
+34,TC,Thyroid,29.79,2.77,1390166,415,5,65-74,1,Female,2,NHB
+35,TC,Thyroid,36.32,2.65,1616432,588,5,65-74,1,Female,3,HIS
+36,TC,Thyroid,37.69,2.82,1089947,411,5,65-74,1,Female,4,OTH
+37,TC,Thyroid,20.76,0.93,10345066,2148,5,65-74,2,Male,1,NHW
+38,TC,Thyroid,13.24,2.12,1099252,146,5,65-74,2,Male,2,NHB
+39,TC,Thyroid,13.22,1.74,1168063,155,5,65-74,2,Male,3,HIS
+40,TC,Thyroid,13.72,1.9,989548,136,5,65-74,2,Male,4,OTH
+41,TC,Thyroid,18.74,0.93,9145660,1715,6,75+,1,Female,1,NHW
+42,TC,Thyroid,15.77,2.46,1249362,198,6,75+,1,Female,2,NHB
+43,TC,Thyroid,23.77,2.55,737080,176,6,75+,1,Female,3,HIS
+44,TC,Thyroid,16.7,2.16,689818,116,6,75+,1,Female,4,OTH
+45,TC,Thyroid,15.92,1.01,6831819,1088,6,75+,2,Male,1,NHW
+46,TC,Thyroid,6.58,2.08,670963,45,6,75+,2,Male,2,NHB
+47,TC,Thyroid,14.64,2.44,548525,81,6,75+,2,Male,3,HIS
+48,TC,Thyroid,14.77,2.43,638884,95,6,75+,2,Male,4,OTH
+1,UC,Corpus Uteri,2.27,0.24,18192633,413,1,20-34,1,Female,1,NHW
+2,UC,Corpus Uteri,1.73,0.39,4596338,80,1,20-34,1,Female,2,NHB
+3,UC,Corpus Uteri,3.99,0.4,6549965,262,1,20-34,1,Female,3,HIS
+4,UC,Corpus Uteri,3.67,0.55,3878604,143,1,20-34,1,Female,4,OTH
+5,UC,Corpus Uteri,0,NA,19295314,0,1,20-34,2,Male,1,NHW
+6,UC,Corpus Uteri,0,NA,4186659,0,1,20-34,2,Male,2,NHB
+7,UC,Corpus Uteri,0,NA,6886181,0,1,20-34,2,Male,3,HIS
+8,UC,Corpus Uteri,0,NA,3785306,0,1,20-34,2,Male,4,OTH
+9,UC,Corpus Uteri,10.48,0.63,10789518,1131,2,35-44,1,Female,1,NHW
+10,UC,Corpus Uteri,10.63,1.26,2841551,302,2,35-44,1,Female,2,NHB
+11,UC,Corpus Uteri,16.28,1.04,4706043,767,2,35-44,1,Female,3,HIS
+12,UC,Corpus Uteri,19.3,1.51,2705155,523,2,35-44,1,Female,4,OTH
+13,UC,Corpus Uteri,0,NA,10698668,0,2,35-44,2,Male,1,NHW
+14,UC,Corpus Uteri,0,NA,2373836,0,2,35-44,2,Male,2,NHB
+15,UC,Corpus Uteri,0,NA,4477083,0,2,35-44,2,Male,3,HIS
+16,UC,Corpus Uteri,0,NA,2268050,0,2,35-44,2,Male,4,OTH
+17,UC,Corpus Uteri,37.02,1.13,12961330,4799,3,45-54,1,Female,1,NHW
+18,UC,Corpus Uteri,24.82,1.94,2294986,570,3,45-54,1,Female,2,NHB
+19,UC,Corpus Uteri,34.91,1.66,2981376,1041,3,45-54,1,Female,3,HIS
+20,UC,Corpus Uteri,50.11,2.57,1908325,957,3,45-54,1,Female,4,OTH
+21,UC,Corpus Uteri,0,NA,10622756,0,3,45-54,2,Male,1,NHW
+22,UC,Corpus Uteri,0,NA,2323392,0,3,45-54,2,Male,2,NHB
+23,UC,Corpus Uteri,0,NA,3207152,0,3,45-54,2,Male,3,HIS
+24,UC,Corpus Uteri,0,NA,2807268,0,3,45-54,2,Male,4,OTH
+25,UC,Corpus Uteri,88.98,1.62,16626401,14795,4,55-64,1,Female,1,NHW
+26,UC,Corpus Uteri,86.81,3.74,3005374,2609,4,55-64,1,Female,2,NHB
+27,UC,Corpus Uteri,82.07,2.98,2911586,2390,4,55-64,1,Female,3,HIS
+28,UC,Corpus Uteri,80.6,3.47,2629488,2120,4,55-64,1,Female,4,OTH
+29,UC,Corpus Uteri,0,NA,15564860,0,4,55-64,2,Male,1,NHW
+30,UC,Corpus Uteri,0,NA,2050599,0,4,55-64,2,Male,2,NHB
+31,UC,Corpus Uteri,0,NA,2832735,0,4,55-64,2,Male,3,HIS
+32,UC,Corpus Uteri,0,NA,2195076,0,4,55-64,2,Male,4,OTH
+33,UC,Corpus Uteri,112.85,2.06,11513863,12994,5,65-74,1,Female,1,NHW
+34,UC,Corpus Uteri,130.96,5.8,1390166,1821,5,65-74,1,Female,2,NHB
+35,UC,Corpus Uteri,96.98,4.33,1616432,1568,5,65-74,1,Female,3,HIS
+36,UC,Corpus Uteri,76.22,4.01,1089947,831,5,65-74,1,Female,4,OTH
+37,UC,Corpus Uteri,0,NA,10345066,0,5,65-74,2,Male,1,NHW
+38,UC,Corpus Uteri,0,NA,1099252,0,5,65-74,2,Male,2,NHB
+39,UC,Corpus Uteri,0,NA,1168063,0,5,65-74,2,Male,3,HIS
+40,UC,Corpus Uteri,0,NA,989548,0,5,65-74,2,Male,4,OTH
+41,UC,Corpus Uteri,74.24,1.85,9145660,6790,6,75+,1,Female,1,NHW
+42,UC,Corpus Uteri,87.33,5.8,1249362,1092,6,75+,1,Female,2,NHB
+43,UC,Corpus Uteri,52.74,3.8,737080,389,6,75+,1,Female,3,HIS
+44,UC,Corpus Uteri,47.6,3.64,689818,329,6,75+,1,Female,4,OTH
+45,UC,Corpus Uteri,0,NA,6831819,0,6,75+,2,Male,1,NHW
+46,UC,Corpus Uteri,0,NA,670963,0,6,75+,2,Male,2,NHB
+47,UC,Corpus Uteri,0,NA,548525,0,6,75+,2,Male,3,HIS
+48,UC,Corpus Uteri,0,NA,638884,0,6,75+,2,Male,4,OTH

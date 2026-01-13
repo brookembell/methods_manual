@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+fruit_tot_adj,Overall,16147,0.92,0.03,0.42,0.02,0.76,0.03,1.24,0.03,0.67,0.00,0.45,0.02,0.00,0.02,36
+fruit_tot_adj,1,9759,0.90,0.03,0.41,0.02,0.75,0.03,1.22,0.03,0.66,,,0.02,,,36
+fruit_tot_adj,2,6388,0.98,0.03,0.46,0.02,0.82,0.03,1.32,0.04,0.71,,,0.02,,,36

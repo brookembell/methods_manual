@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+dairy_tot_adj,Overall,16147,1.54,0.03,1.02,0.02,1.44,0.02,1.95,0.03,0.71,0.00,0.51,0.02,0.00,0.03,36
+dairy_tot_adj,1,9759,1.39,0.02,0.94,0.02,1.31,0.02,1.75,0.03,0.62,,,0.02,,,36
+dairy_tot_adj,2,6388,1.98,0.04,1.42,0.03,1.90,0.04,2.45,0.04,0.78,,,0.02,,,36

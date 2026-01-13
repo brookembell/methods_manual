@@ -15,3 +15,505 @@ data_inputs/IMPACT_FACTORS/output_data/archive/All_impacts_by_fcidcode_08212023.
 data_inputs/IMPACT_FACTORS/output_data/archive/Enviromental_impact_by_fcidcode_day1_07272023.csv
 data_inputs/IMPACT_FACTORS/output_data/archive/Enviromental_impact_by_fcidcode_day2_07272023.csv
 /outputs/model/output_032025_1000sims
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/3.6ProcessingPackaging_Peanuts_081020.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/alfalfa, grass silage production, alfalfa-grass silage, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Almond oil, refined - mod - soybean oil refinery operation, soybean oil, refined, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/almond production, almond, Cutoff, U - US Mid.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/apple production, apple, Cutoff, U - US_monte_061620.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/apricot production, apricot, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/aubergine production, open field, aubergine, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/avocado production, avocado, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/banana production, banana, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Barley flour - mod - US electricity - mod - wheat grain processing, dry milling, wheat flour, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/barley production, barley grain, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/beef cattle production on pasture and feedlot cattle for slaughtering, live weight Cutoff, U -Row_monte_061420.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/beet sugar production molasses, from sugar beet Cutoff, U - RoW.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/beet sugar production, sugar, from sugar beet, Cutoff, U - RoW.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/bell pepper production, open field, bell pepper, Cutoff, U_1.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/bell pepper production, open field, bell pepper, Cutoff, U_2.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/broccoli production, broccoli, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/cabbage white production, cabbage white, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/carrot production, carrot, Cutoff, U - CN Mid.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/cashew production, cashew, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/cauliflower production, cauliflower, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/celery675 production, celery, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/chicken production chicken for slaughtering, live weight Cutoff, U-GLO_monte_061120.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Chickpea flour - mod - US electricity - mod - wheat grain processing, dry milling, wheat flour, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/chickpea production, chickpea, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Citrus oil - mod - soybean meal and crude oil production, soybean oil, crude, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/cocoa bean production, sun-dried, cocoa bean, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/coconut oil production, crude, coconut oil, crude, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/coconut production, dehusked, coconut, dehusked, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/coffee green bean production, arabica, coffee, green bean, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/coriander production, coriander, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Corn oil, refined - mod - soybean oil refinery operation, soybean oil, refined, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/cottonseed oil refinery operation, cottonseed oil, refined, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/cucumber production, cucumber, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Egg-conventional cage layer - CA.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/fava bean production, organic, fava bean, organic, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/fennel production, fennel, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Flax seed oil - mod - US electricity - mod - rape oil mill operation, rape oil, crude, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/grape production, grape, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/green asparagus production, green asparagus, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/hake, capture by long liner and landing whole, fresh, landed hake, fresh, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/iceberg lettuce production iceberg lettuce Cutoff, U- GLO_monte_061520.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/kiwi production, kiwi, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/lemon production, lemon, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/lettuce361 production, lettuce, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/linseed production, linseed, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/mandarin production, sorted and graded, mandarin, fresh grade, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/mango production, mango, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/melon production, melon, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/milk production, from cow, cow milk, Cutoff, U - CA-QC_montemid_061720.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Mint oil - mod - US electricity - mod - rape oil mill operation, rape oil, crude, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/mint production, mint, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/mulberry production, mulberry leaves, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Oat flour - mod - US electricity - mod - wheat grain processing, dry milling,  wheat flour, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/oat production, oat grain, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Olive oil - mod - US electricity - mod - rape oil mill operation, rape oil, crude, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/olive production, olive, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/onion production, onion, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/orange production, fresh grade orange, fresh grade Cutoff, U - US_monte_061520.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/orange production, processing grade, orange, processing grade, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/palm date production, conditioned and dried, palm date, conditioned and dried, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/palm fruit bunch production, palm fruit bunch, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/palm oil refinery operation, palm oil, refined, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/papaya production, papaya, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/peach production, peach, Cutoff, U, CN.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/peach production, peach, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Peanut oil, refined - mod - soybean oil refinery operation, soybean oil, refined, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/peanut production, peanut, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/pear production, pear, Cutoff, U, AR.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/pear production, pear, Cutoff, U-CN.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/pineapple production, pineapple, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/pomegranate production, pomegranate, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Potato flour - mod - US electricity - mod - wheat grain processing, dry milling, wheat flour, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/potato production potato Cutoff, U - US_monte_061520.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/protein pea production, protein pea, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/analysis_w_proxies_connected_FCID_011421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/analysis_w_proxies_connected_FCID_012221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/analysis_w_proxies_connected_FCID_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_dairy_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_egg_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_fish_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_fruit_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_grain_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_meat_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_nut_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_oil_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_other_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_sweet_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg1_veg_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_beanpea_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_beef_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_dargre_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_juice_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_pork_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_poul_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_redorg_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_seed_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_starch_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_imp_fg2_Vother_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_w_proxies_connected_FCID_110420.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_w_proxies_connected_FCID_111020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_w_proxies_connected_FCID_111020_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_w_proxies_connected_FCID_111220.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/analysis_w_proxies_connected_FCID_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoinvent_analysis_impact110420.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoinvent_analysis_impact110420_edited.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoinvent_analysis_impact111020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoinvent_analysis_impact111020_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoinvent_analysis_impact111020_2_edited.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoinvent_analysis_impact111020_edited.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoinvent_process_impact101520.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoQUERY_analysis_impact010521.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoQUERY_analysis_impact010521.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/ecoquery_analysis_w_proxies_connected_FCID_012121.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/monte_w_proxies_connected_FCID_102720.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/monte_w_proxies_connected_FCID_102720_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/monte_w_proxies_connected_FCID_102720_3.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/Archive/monte_w_proxies_connected_FCID_102720_4.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/eco_quick_aligned_101320.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_analysis_impact_011421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_analysis_impact_011421_edited.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_analysis_impact_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_analysis_impact_043021_edited.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_analysis_impact_HellerBW_20210727.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_recipeMONTE_5thper_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_recipeMONTE_95thper_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_recipeMONTE_mean_030921.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_recipeMONTE_mean_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoinvent_recipeMONTE_median_030921.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoquery_analysis_w_proxies_connected_FCID_010521.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/ecoquery_analysis_w_proxies_connected_FCID_010621.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/emv.RData
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/envMC.RData
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/explore_lunch_impacts_highlow_111020.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/monte5th_w_proxies_connected_FCID_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/monte95th_w_proxies_connected_FCID_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/R_output/montemean_w_proxies_connected_FCID_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/radish production, radish, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Rape oil - mod - US electricity - mod - rape oil mill operation, rape oil, crude, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/rape seed production, rape seed, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Rice flour - mod - US electricity - mod - wheat grain processing, dry milling, wheat flour, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/rice production, non-basmati, rice, non-basmati, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Rye flour - mod - US electricity - mod - wheat grain processing, dry milling, wheat flour, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/rye production, rye grain, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_010521.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_010521_lowercase.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_042420.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_081420.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_083120.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_090220.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_090320.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_090420.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_092120.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_092820_detailsonconversions.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/archive/ecoinvent3.6_processes_fcid_100620.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/ecoinvent3.6_processes_fcid_010621.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/ecoinvent3.6_processes_fcid_010621_ecoquery.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/ecoinvent3.6_processes_fcid_011421.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/ecoinvent3.6_processes_fcid_043021.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/ecoinvent3.6_processes_fcid_072821.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/ecoinvent3.6_processes_fcid_092920.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/ecoinvent3.6_processes_fcid_092920_updated_010621.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/selecting_ecoinvent_processes/ecoinvent3.6_processes_fcid_100920.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Sesame oil - mod - US electricity - mod - rape oil mill operation, rape oil, crude, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/sesame seed production, sesame seed, Cutoff, U - row.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/sesame seed production, sesame seed, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/sheep production, for meat, sheep for slaughtering, live weight, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/soybean meal and crude oil production, soybean meal, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/soybean oil refinery operation, soybean oil, refined, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/soybean production, soybean, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/spinach production, spinach, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/strawberry production, open field, macro tunnel, strawberry, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/sugar beet production, sugar beet, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/sugarcane processing, modern annexed plant, sugar, from sugarcane, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/Sunflower oil - mod - US electricity - mod - rape oil mill operation, rape oil, crude, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/sunflower production, sunflower seed, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/sweet corn production, sweet corn, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/swine production, swine for slaughtering, live weight, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/tap water production, conventional treatment, tap water, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/tea production, dried, tea, dried, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/tilapia production, extensive aquaculture, in pond, tilapia, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/tomato production, fresh grade, open field, tomato, fresh grade, Cutoff, U_monte_061620.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/tomato production, processing grade, open field, tomato, processing grade, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/trout, production in semi-intensive system, in lake, trout, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/tuna, capture by purse seiner and landing whole, frozen, small pelagic fish, fresh, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/US electricity - mod - maize grain processing, dry milling, maize flour, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/wheat production wheat grain Cutoff, U - US_monte_061320.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoinvent/zucchini production, zucchini, Cutoff, U.xlsx
+data_inputs/ENVIRONMENT/land_use/code_adapted_from_alex/analysis_connecting_FCID.Rmd
+data_inputs/ENVIRONMENT/land_use/ConnectEcoInvent_FNDDS2010_062521.R
+data_inputs/ENVIRONMENT/land_use/recipe_analysis_impacts_fndds_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/1.Import_ENVS_data/curateanalysisenvironmental_110320.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/1.Import_ENVS_data/curateMCenvironmental.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/1.Import_ENVS_data/monte_carlo_imports.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/1.Import_ENVS_data/quick_analysis_imports.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/1.Import_ENVS_data/recipe_curateanalysisenvironmental_011421.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/1.Import_ENVS_data/recipe_curateMONTEenvironmental_030921.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/2.ENVS_to_FCID/analysis_connecting_FCID_110420.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/2.ENVS_to_FCID/ecoquery_analysis_connecting_FCID_010521.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/2.ENVS_to_FCID/monte_connecting_FCID_102220.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/2.ENVS_to_FCID/recipe_connecting_FCID_110420.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/archive/Code_envs_datafield_fndds2010_092720.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/archive/Code_envs_datafield_fndds2010_092720_copy.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/archive/Code_envs_ecoquick_fndds2010_101320.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/archive/Code_envs_ecoquick_fndds2010_101420.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/Code_ecoQUERY_analysis_fndds2010_010521.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/Code_envs_analysis_fndds2010_110420.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/Code_envs_ecoMONTE_fndds2010_102220.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/FCID_to_FNDDS_only_foodgroups_110420.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/3.FCID_to_FNDDS/FCID_to_FNDDS_only_proxy_foodgroups_102920.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/FNDDS2010key_join_SNMCS_072820.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/issues_RMC_served_schooldayimpacts_111020.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinAndEnvironImpacts_JointDKAS.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinAndEvironImpacts_ReplacementCode (Daniel.Keliher@tufts.edu).R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinAndEvironImpacts_ReplacementCode.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinSNMCEnviromental.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinSNMCEnviromental_101420.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinSNMCEnviromental_102720.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinSNMCEnviromental_110420.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinSNMCEnviromental_122220.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinSurveyFNDDS.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/JoinSurveyFNDDS_alex072820.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/SNMCS_connectFNDDScodes_042920.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/archieve/SNMCS_connectFNDDScodes_051120.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/JoinSNMCEnviromental_010521.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/JoinSNMCEnviromental_datafield_010521.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/4.FNDDS_to_SNMCS/JoinSNMCSEnvironmental_foodgroups_111220.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Aim1_Tables_Figures_012121.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/Aim1_Tables_Figures_102920.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/Aim1_Tables_Figures_111120.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/AveragingInSNMCS_020221.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/food_group_contribution_table_102220.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/FoodGroupComposition_1st5thQuin.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/FoodGroupComposition_1st5thQuin_032321.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/FoodGroupComposition_1st5thQuin_032321_2.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/FoodGroupComposition_1st5thQuin_050721.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/percent_contr_food_groups_111620.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/percent_contr_food_groups_111620_ADDITION.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/percent_contr_food_groups_quintiles_111620.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/PremliminaryTableCSVs.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/PremliminaryTableCSVs_102820.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/ProxyImpacts_021221.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/QuintileContents_All1All5.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Archive/QuintilesTable_020421.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/commodity_proportionsSNMCS_022321.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Daily_Lunch_Composition_082321.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/EnvsImpactTable_020821.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/FoodGroupImpacts_022421.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/ProxyImpacts_050421.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/5.Data_Analysis/Quintiles_051821.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/6.Aligning_SNMCS_FNDDS/CompareDescsInSurvey.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/7.Other/ecoinvent_quick_compared_WFLDB_101520.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/7.Other/FindFoodsForWeightConversion.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/7.Other/snmcs_commodity_proportions_051120.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/7.Other/snmcs_deleteing_duplicates_081720.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/AvgCalNutNSLPServed_120820.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/ConnectEcoInvent_FNDDS2010_062521.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/fcid_recipe_merge_120320.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/forMAC.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/Log_code_files.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/practice.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/practice_writing_functions121420.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/snmcs_lunch_averages.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Code/updateSNMCSnuterror.R
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Conversions_092920.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/dataFIELDv1.0.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/eco_quick_aligned_101320.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoMonte_impacts102020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoMonte_impacts102720.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ecoMonte_impacts102720_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ghg_100g_FNDDS_codes_datafield.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/ghg_100g_FNDDS_codes_datafield.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/monte_proxies_FCID_102620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/monte_w_proxies_connected_FCID_102720.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/monte_w_proxies_connected_FCID_102720_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/monte_w_proxies_connected_FCID_102720_3.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/monte_w_proxies_connected_FCID_102720_4.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/wfldb3.1_envsimpacts_perFNDDS2010_final_080420.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/Environment/wfldb3.1_envsimpacts_perFNDDS2010_final_080420.dta
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FCID/FCID_Code_Description.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FCID/FCID_description_042120.dta
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FCID/FCID_FNDDS_Recipes_Fulldata_031420.dta
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FCID/FCID_Recipes_withGHGE_datafield_042120.dta
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FCID/Food_Code_Description.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FCID/Recipes_WWEIA_FCID_0510.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/addfooddesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/documentation.pdf
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/download_instructions.pdf
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/fndds5_doc.pdf
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/FNDDS5_SAS.EXE
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/fnddsnutval.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/fnddsreccount.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/fnddssrlinks.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/foodportiondesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/foodsubcodelinks.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/foodweights.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/mainfooddesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/moddesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/modnutval.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/moistnfatadjust.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/nutdesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/Nutrient_Values_For_Ingredients_Not_Released_In_SR24.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2010/subcodedesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/addfooddesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/FNDDS_2011-2012_SAS.EXE
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/fndds_2011_2012_doc.pdf
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/fnddsnutval.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/fnddsreccount.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/fnddssrlinks.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/FNDSS_2011-2012.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/Food_Code_Description.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/foodportiondesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/foodsubcodelinks.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/foodweights.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/mainfooddesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/moddesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/modnutval.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/moistnfatadjust.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/nutdesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/Nutrient_Values_For_Ingredients_Not_Released_In_SR26.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/FNDDS_2011/subcodedesc.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Code/export_content_code.sas
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_breakfastlunch.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_collapse_bl.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_collapse_snack.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_menuday.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_obj2_mv.dta
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_obj2_mv.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_schday_bl.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_schday_snack.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Analysis/snmcs_analysis_snack.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Raw/snmcs_raw_barsfood.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Raw/snmcs_raw_barstot.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Raw/snmcs_raw_breakfastlunch - Copy.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/Raw/snmcs_raw_snack.sas7bdat
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Data/SpecialConversionFoods.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Duplicates to remove_to_UIC.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Duplicates to remove_to_UIC.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/SNMCS Report Vol 2 Documentation Guide - Public Use Files.pdf
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Analysis/snmcs_analysis_breakfastlunch_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Analysis/snmcs_analysis_collapse_bl_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Analysis/snmcs_analysis_collapse_snack_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Analysis/snmcs_analysis_menuday_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Analysis/snmcs_analysis_obj2_mv_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Analysis/snmcs_analysis_schday_bl_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Analysis/snmcs_analysis_schday_snack_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Analysis/snmcs_analysis_snack_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Raw/snmcs_raw_barsfood_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Raw/snmcs_raw_barstot_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Raw/snmcs_raw_breakfastlunch_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SNMCS_Vol2/Supporting Materials/Codebooks/Raw/snmcs_raw_snack_codebook.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Data/SpecialConversionFoods.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ FNDDS1112-to-0910-code-key.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ foodcode.key.12to10.possibleerrors.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/alttoFNDDScodes.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Archive/fndds2010_key_reassigned_072320.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Archive/match_data_raw_AS071320.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/bls_lunch_110420.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/bls_lunch_122220.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/bls_raw.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/CALADJFoodServingAmountsQuintiles_050721.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/change_toFCID.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/check_imp_agre.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/CorrMatrix_Impacts_LunchContent_051321.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/CorrMatrix_Impacts_LunchContent_051321.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/data8_foodgroup_grams_111220.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/data8_foodgroup_grams_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/data8_updated_120920.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/datafield_envs_impacts_092920.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist4_102920.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist4_111020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist4_116020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist_091620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist_102720.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist_102720_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist_102720_3.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist_110420.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist_111020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/dist_111620.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/duplicates_identified_102720.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ecoinvent_analysis_impacts_fndds_110220.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ecoinvent_analysis_impacts_fndds_111020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ecoinvent_analysis_impacts_fndds_111020_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ecoinvent_quick_impacts_fndds_101420.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ecoQUERY_analysis_impacts_fndds_010521.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ecoQUERY_analysis_impacts_fndds_010621.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/ecoQUERY_analysis_impacts_fndds_012121.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/FCID_recipes_121020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Fixing_Key/keep_sur_cod_mod_072420.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Fixing_Key/keynotsnmcs_desc.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Fixing_Key/snmcs_unidesc.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Fixing_Key/snmcsnotkey_desc.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/foodcode.key.12to10.duplicatedists.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/foodcode.key.12to10.duplicatedists_AS073020_toremovesurcodmod.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/FoodServingAmountsQuintiles_032321.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/FoodServingAmountsQuintiles_050521.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/FoodServingAmountsQuintiles_051321.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/join2_052021_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/join2_052121.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/join2_052521_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/join3_joinedenvs_snmvs_102920.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/join_SNMCSkey_noENVS_010521.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/join_SNMCSkey_noENVS_052521.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/join_SNMCSkey_noENVS_111220.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/key_072820.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/long_ghgimpact_082520.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/LunchDayImpacts_recipe_021221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/monte_aligned_fndds_102720.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/monte_aligned_fndds_102720_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/monte_aligned_fndds_102720_3.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/README.txt
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/addtokey.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/addtokey2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/Archive/match_data_collapse_editeddesc_lunch.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/Archive/match_data_collapse_editeddesc_lunch_AS071520.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/Archive/match_data_collapse_origddesc_073020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/Archive/match_data_collapse_origddesc_073020.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/Archive/match_data_collapse_origddesc_started072920.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/Archive/match_data_raw.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/foodcode.key.12to10.duplicatedists_AS_072220.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/keep_survey_cod_mod.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/match_data_collapse_origddesc.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/match_data_collapse_origddesc_LUNCH_073020.xlsx
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/snmcs_foodcodes.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Reassigning/unassigned_fndds_072320.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_analysis_impacts_fndds_011421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_analysis_impacts_fndds_012221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_analysis_impacts_fndds_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_allprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_allprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_beanspea_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_beanspea_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_beef_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_beef_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_dairy_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_dairy_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_darkdg_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_darkdg_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_egg_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_egg_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_fish_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_fish_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_fishprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_fishprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_fruit_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_fruit_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_fruitprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_fruitprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_grain_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_grain_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_grainprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_grainprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_juice_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_juice_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_meat_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_meat_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_meatprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_meatprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_nut_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_nut_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_nutprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_nutprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_oil_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_oil_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_oilprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_oilprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_other_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_other_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_otherprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_otherprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_pork_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_pork_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_poultry_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_poultry_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_redor_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_redor_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_seed_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_seed_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_starchy_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_starchy_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_sweetener_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_sweetener_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_sweetenerprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_sweetenerprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_veg_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_veg_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_vegother_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_vegother_043021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_vegprox_022221.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_data5_vegprox_050421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_impact_joined_051821.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_monte5_impacts_fndds_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_monte95_impacts_fndds_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/recipe_monteMEAN_impacts_fndds_032421.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/SNMCS_Impacts_aligned_052021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/SNMCS_Impacts_aligned_052121.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/SNMCS_Impacts_aligned_052521_2.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/summary_monte_fndds_102720.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/survey.env.dist__snmcs_impacts_analysis_data110420.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/survey.env.dist__snmcs_impacts_analysis_data111020.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Unique_SNMCS_Impacts_aligned_052021.csv
+data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Unique_SNMCS_Impacts_aligned_052121.csv

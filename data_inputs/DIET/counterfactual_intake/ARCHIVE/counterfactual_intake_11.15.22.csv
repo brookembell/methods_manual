@@ -1,0 +1,106 @@
+﻿food_group,var_label,diet_pattern,CF_mean_intake,CF_sd_intake,intake_units,source
+added_sugar,Added sugars,US,7.14,0.714,tsp/day,???
+dairy,Dairy,US,3,0.3,cups/day,DGA 2020
+fruit,Fruits,US,2,0.2,cups/day,DGA 2020
+gr_refined,Refined Grains,US,3,0.3,oz eq/day,DGA 2020
+gr_whole,Whole Grains,US,3,0.3,oz eq/day,DGA 2020
+oil,Oils,US,27,2.7,grams/day,DGA 2020
+pf_egg,Eggs,US,0.86,0.086,oz eq/day,DGA 2020
+pf_leg,"Beans, Peas, Lentils (protein)",US,0,0,oz eq/day,DGA 2020
+pf_ns,Nuts and seeds,US,0.64,0.064,oz eq/day,DGA 2020
+pf_pm,Processed meat,US,0,0,oz eq/day,Zhang 2019
+pf_poultry,Poultry,US,2.29,0.229,oz eq/day,DGA 2020
+pf_redm,Red meat,US,0.57,0.057,oz eq/day,DGA 2020
+pf_seafood,Seafood,US,1.14,0.114,oz eq/day,DGA 2020
+pf_soy,Soy foods,US,0.07,0.007,oz eq/day,DGA 2020
+sat_fat,Saturated fats,US,13.33,1.333,grams/day,???
+veg_dg,Dark-Green Vegetables,US,0.21,0.021,cups/day,DGA 2020
+veg_leg,"Beans, Peas, Lentils (vegetables)",US,0.21,0.021,cups/day,DGA 2020
+veg_oth,Other Vegetables,US,0.57,0.057,cups/day,DGA 2020
+veg_ro,Red and Orange Vegetables,US,0.79,0.079,cups/day,DGA 2020
+veg_sta,Starchy Vegetables,US,0.71,0.071,cups/day,DGA 2020
+veg_exc_sta,Vegetables excluding starchy,US,1.78,0.178,cups/day,DGA 2020 (sum from above)
+fruit_exc_juice,Fruit excluding juice,US,1,0.1,cups/day,???
+ssb,Sugar sweetened beverages,US,0,0,grams/day,Zhang 2019
+sea_omega3_fa,Seafood omega-3 fats,US,250,25,mg/day,Micha 2017 (eTable 3)
+sodium,Sodium,US,2000,200,mg/day,Zhang 2019
+fiber,Fiber,US,30,3,g/day,GBD 2010
+pf_animal,Animal-protein foods,US,4.86,0.486,oz eq/day,DGA 2020 (sum from above)
+pf_plant,Plant-protein foods,US,0.71,0.071,oz eq/day,DGA 2020 (sum from above)
+pufa_rep_carb,PUFA replace carbs,US,6,0.6,%E,made up
+pufa_rep_sfa,PUFA replace sfa,US,5,0.5,%E,made up
+pufa_rep_carbsfa,PUFA replace carbs or sfa,US,11,1.1,%E,Micha 2017 (eTable 3)
+babyfood,Baby food,US,0,0,oz eq/day,none
+coffee_tea,Coffee and tea,US,0,0,cups/day,none
+other,Other,US,0,0,cups/day,none
+water,Water,US,88,0.88,oz eq/day,National Academy of Medicine (averaged for men and women)
+added_sugar,Added sugars,Vegetarian,7.14,0.714,tsp/day,???
+dairy,Dairy,Vegetarian,3,0.3,cups/day,DGA 2020
+fruit,Fruits,Vegetarian,2,0.2,cups/day,DGA 2020
+gr_refined,Refined Grains,Vegetarian,3,0.3,oz eq/day,DGA 2020
+gr_whole,Whole Grains,Vegetarian,3.5,0.35,oz eq/day,DGA 2020
+oil,Oils,Vegetarian,27,2.7,grams/day,DGA 2020
+pf_egg,Eggs,Vegetarian,0.43,0.043,oz eq/day,DGA 2020
+pf_leg,"Beans, Peas, Lentils (protein)",Vegetarian,0.86,0.086,oz eq/day,DGA 2020
+pf_ns,Nuts and seeds,Vegetarian,1,0.1,oz eq/day,DGA 2020
+pf_pm,Processed meat,Vegetarian,0,0,oz eq/day,none - vegetarian
+pf_poultry,Poultry,Vegetarian,0,0,oz eq/day,none - vegetarian
+pf_redm,Red meat,Vegetarian,0,0,oz eq/day,none - vegetarian
+pf_seafood,Seafood,Vegetarian,0,0,oz eq/day,none - vegetarian
+pf_soy,Soy foods,Vegetarian,1.14,0.114,oz eq/day,DGA 2020
+sat_fat,Saturated fats,Vegetarian,13.33,1.333,grams/day,???
+veg_dg,Dark-Green Vegetables,Vegetarian,0.21,0.021,cups/day,DGA 2020
+veg_leg,"Beans, Peas, Lentils (vegetables)",Vegetarian,0.21,0.021,cups/day,DGA 2020
+veg_oth,Other Vegetables,Vegetarian,0.57,0.057,cups/day,DGA 2020
+veg_ro,Red and Orange Vegetables,Vegetarian,0.79,0.079,cups/day,DGA 2020
+veg_sta,Starchy Vegetables,Vegetarian,0.71,0.071,cups/day,DGA 2020
+veg_exc_sta,Vegetables excluding starchy,Vegetarian,1.78,0.178,cups/day,DGA 2020 (sum from above)
+fruit_exc_juice,Fruit excluding juice,Vegetarian,1,0.1,cups/day,???
+ssb,Sugar sweetened beverages,Vegetarian,0,0,grams/day,Zhang 2019
+sea_omega3_fa,Seafood omega-3 fats,Vegetarian,0,0,mg/day,none - vegetarian
+sodium,Sodium,Vegetarian,2000,200,mg/day,Zhang 2019
+fiber,Fiber,Vegetarian,30,3,g/day,GBD 2010
+pf_animal,Animal-protein foods,Vegetarian,0.43,0.043,oz eq/day,DGA 2020 (sum from above)
+pf_plant,Plant-protein foods,Vegetarian,3,0.3,oz eq/day,DGA 2020 (sum from above)
+pufa_rep_carb,PUFA replace carbs,Vegetarian,6,0.6,%E,made up
+pufa_rep_sfa,PUFA replace sfa,Vegetarian,5,0.5,%E,made up
+pufa_rep_carbsfa,PUFA replace carbs or sfa,Vegetarian,11,1.1,%E,Micha 2017 (eTable 3)
+babyfood,Baby food,Vegetarian,0,0,oz eq/day,none
+coffee_tea,Coffee and tea,Vegetarian,0,0,cups/day,none
+other,Other,Vegetarian,0,0,cups/day,none
+water,Water,Vegetarian,88,0.88,oz eq/day,National Academy of Medicine (averaged for men and women)
+added_sugar,Added sugars,Med,7.14,0.714,tsp/day,???
+dairy,Dairy,Med,2,0.2,cups/day,DGA 2020
+fruit,Fruits,Med,2.5,0.25,cups/day,DGA 2020
+gr_refined,Refined Grains,Med,3,0.3,oz eq/day,DGA 2020
+gr_whole,Whole Grains,Med,3,0.3,oz eq/day,DGA 2020
+oil,Oils,Med,27,2.7,grams/day,DGA 2020
+pf_egg,Eggs,Med,0.86,0.086,oz eq/day,DGA 2020
+pf_leg,"Beans, Peas, Lentils (protein)",Med,0,0,oz eq/day,DGA 2020
+pf_ns,Nuts and seeds,Med,0.64,0.064,oz eq/day,DGA 2020
+pf_pm,Processed meat,Med,0,0,oz eq/day,Zhang 2019
+pf_poultry,Poultry,Med,2.29,0.229,oz eq/day,DGA 2020
+pf_redm,Red meat,Med,0.57,0.057,oz eq/day,DGA 2020
+pf_seafood,Seafood,Med,2.14,0.214,oz eq/day,DGA 2020
+pf_soy,Soy foods,Med,0.07,0.007,oz eq/day,DGA 2020
+sat_fat,Saturated fats,Med,13.33,1.333,grams/day,???
+veg_dg,Dark-Green Vegetables,Med,0.21,0.021,cups/day,DGA 2020
+veg_leg,"Beans, Peas, Lentils (vegetables)",Med,0.21,0.021,cups/day,DGA 2020
+veg_oth,Other Vegetables,Med,0.57,0.057,cups/day,DGA 2020
+veg_ro,Red and Orange Vegetables,Med,0.79,0.079,cups/day,DGA 2020
+veg_sta,Starchy Vegetables,Med,0.71,0.071,cups/day,DGA 2020
+veg_exc_sta,Vegetables excluding starchy,Med,1.78,0.178,cups/day,DGA 2020 (sum from above)
+fruit_exc_juice,Fruit excluding juice,Med,1,0.1,cups/day,???
+ssb,Sugar sweetened beverages,Med,0,0,grams/day,Zhang 2019
+sea_omega3_fa,Seafood omega-3 fats,Med,250,25,mg/day,Micha 2017 (eTable 3)
+sodium,Sodium,Med,2000,200,mg/day,Zhang 2019
+fiber,Fiber,Med,30,3,g/day,GBD 2010
+pf_animal,Animal-protein foods,Med,5.86,0.586,oz eq/day,DGA 2020 (sum from above)
+pf_plant,Plant-protein foods,Med,0.71,0.071,oz eq/day,DGA 2020 (sum from above)
+pufa_rep_carb,PUFA replace carbs,Med,6,0.6,%E,made up
+pufa_rep_sfa,PUFA replace sfa,Med,5,0.5,%E,made up
+pufa_rep_carbsfa,PUFA replace carbs or sfa,Med,11,1.1,%E,Micha 2017 (eTable 3)
+babyfood,Baby food,Med,0,0,oz eq/day,none
+coffee_tea,Coffee and tea,Med,0,0,cups/day,none
+other,Other,Med,0,0,cups/day,none
+water,Water,Med,88,0.88,oz eq/day,National Academy of Medicine (averaged for men and women)

@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+fruit_exc_juice_adj,Overall,16147,0.68,0.02,0.28,0.02,0.54,0.02,0.93,0.03,0.54,0.00,0.30,0.02,0.00,0.02,36
+fruit_exc_juice_adj,1,9759,0.68,0.02,0.28,0.02,0.54,0.02,0.93,0.03,0.54,,,0.02,,,36
+fruit_exc_juice_adj,2,6388,0.68,0.03,0.28,0.02,0.54,0.03,0.93,0.04,0.55,,,0.02,,,36

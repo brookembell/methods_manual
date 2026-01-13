@@ -1,0 +1,4 @@
+note,inAnalysis_num,N,mean,mean_SE,P_25,P_25_SE,median,median_SE,P_75,P_75_SE,StdDev,z_StdDev,z_Sum,StdDev_SE,z_StdDev_SE,z_Sum_SE,No_replicates
+dairy_cow_adj,Overall,16147,1.53,0.03,1.01,0.02,1.43,0.02,1.94,0.03,0.72,0.00,0.51,0.02,0.00,0.03,36
+dairy_cow_adj,1,9759,1.38,0.02,0.93,0.02,1.30,0.02,1.74,0.03,0.62,,,0.02,,,36
+dairy_cow_adj,2,6388,1.97,0.04,1.40,0.03,1.88,0.04,2.44,0.04,0.78,,,0.02,,,36

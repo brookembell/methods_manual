@@ -8,7 +8,7 @@ To start, we need to disaggregate "procecessed meat" into "processed red meat" a
 
 This is done using a SAS MACRO written by the USDA, located here:
 
--   data_inputs/DIET/dietary_intake/CODE/0. Processed Meat Categories NHANES day 1_revised_121123.sas
+-   data_inputs/DIET/dietary_intake/CODE/1. Processed Meat Categories NHANES day 1_revised_121123.sas
 
 This code produces four SAS datasets:
 
@@ -83,7 +83,7 @@ write_rds(meat_day2_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day
 
 ```
 
-## Clean Raw NHANES Data
+## Clean Raw NHANES Data {#id}
 
 Now that I have dealt with processed and organ meat, I can start to clean the raw NHANES data. We use data from the 2015-2016 and 2017-2018 cycles.
 
@@ -736,7 +736,7 @@ wweia1718 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1718_
 
 ```
 
-Then import these other categorizations (GL1, GL2, GL3) that are used. Not really sure what these are for...
+Then import these other categorizations (GL1, GL2, GL3) that are used. 
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
@@ -804,7 +804,7 @@ fped1718_1 <-
 
 ```
 
-Import the NHANES individual-level food data (cleaned in Chapter XX), and merge with the FPED and WWEIA datasets.
+Import the NHANES individual-level food data (cleaned in [Section 2.2](#clean-raw-nhanes-data)), and merge with the FPED and WWEIA datasets.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
@@ -876,7 +876,7 @@ day2_final <- rbind(nhanes1516_day2_join_2, nhanes1718_day2_join_2)
 
 ```
 
-Export the datasets to use in the next Chapter section.
+Export the datasets to use in the next section.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
@@ -986,7 +986,7 @@ write_rds(nhanes_1,
 
 ```
 
-## Energy Adjustement
+## Energy Adjustment
 
 This next section describes the process of conducting energy adjustment.
 
@@ -1292,11 +1292,9 @@ write_csv(nhanes_adj_wide2,
           na = "")
 ```
 
-## Calculating Standard Deviations Using SAS Macros
+## Calculating Mean and Standard Deviation Using SAS Macros
 
-When we estimate the average intakes, by demographic subgroup, in the previous section XX, the mean and standard error are calculated. 
-
-We also need to calculate the standard deviations of the mean intake for each dietary factor. This can be done using the [NCI Method](https://epi.grants.cancer.gov/diet/usualintakes/method.html) SAS macros.
+We need to calculate the (i) mean intake and (ii) standard deviation of the mean intake for each dietary factor and demographic subgroup. This can be done using the [NCI Method](https://epi.grants.cancer.gov/diet/usualintakes/method.html) SAS macros.
 
 We use a modified version of the SIMPLE macro, which is a single macro that links 3 NCI macros, the MIXTRAN, DISTRIB, and BRR_PVALUE_CI, to facilitate estimation of usual intake distributions for food and nutrients consumed “nearly-daily.” 
 
@@ -1341,8 +1339,10 @@ Then, we need to create a new variable ("subgroup_new") that only has a non-miss
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
 nhanes2 <- nhanes1 %>% 
-  mutate(subgroup_new = ifelse(inAnalysis == "TRUE", subgroup, NA)) %>% 
-  relocate(subgroup_new, .after = subgroup)
+  mutate(subgroup_new = ifelse(inAnalysis == "TRUE", subgroup, NA),
+         inAnalysis_num = ifelse(inAnalysis == "TRUE", 1, 2)) %>% 
+  relocate(subgroup_new, .after = subgroup) %>% 
+  relocate(inAnalysis_num, .after = inAnalysis)
 
 # check
 nhanes2 %>% filter(!(is.na(subgroup)) & !(is.na(subgroup_new))) %>% head()
@@ -1354,7 +1354,7 @@ Next, create dummy variables for the variables "day", "inAnalysis", "subgroup", 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
 nhanes3 <- nhanes2 %>% 
-  dummy_cols(select_columns = c("day", "inAnalysis", "subgroup", "subgroup_new"),
+  dummy_cols(select_columns = c("day", "inAnalysis", "inAnalysis_num", "subgroup", "subgroup_new"),
              remove_first_dummy = TRUE) %>% 
   relocate(day_2, .after = day)
 
@@ -1376,11 +1376,20 @@ nhanes4 %>% filter(is.na(fruit_tot_adj) & inAnalysis == "TRUE") %>% head() #good
 
 ```
 
+Need to change poultry variable name because it's too long for SAS (this is why SAS is inferior to R - insert poop emoji).
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+
+nhanes5 <- nhanes4 %>% 
+  rename(poult_tot_adj = pf_poultry_tot_adj)
+
+```
+
 Export to Box. 
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-write_csv(nhanes4,
+write_csv(nhanes5,
           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes_incl_ssb_adj_clean_long.csv",
           na = "")
 
@@ -1390,7 +1399,7 @@ Export to the LASTING Github repository. **Note that you will need to replace th
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-write_csv(nhanes4,
+write_csv(nhanes5,
           "/Users/bmb73/Documents/GitHub/LASTING/standard-deviations/in/nhanes_incl_ssb_adj_clean_long.csv",
           na = "")
 
@@ -1426,7 +1435,7 @@ You should save a new version of the SAS code for your own project, so that you 
 
 You must first log into the cluster computer via [OnDemand](https://ondemand.pax.tufts.edu/).
 
-See Chapter XX for information on how to gain access to OnDemand, and how to get a GitHub access token.
+See the [Section Code](#code) for information on how to gain access to OnDemand, and how to get a GitHub access token.
 
 ### Run SAS Macro
 
@@ -1475,7 +1484,7 @@ Create a folder named "output_INSERTDATE_ncimethod" and put the files in there.
 
 ### Clean Output from Cluster
 
-Lastly (phew), we need to clean the output to use in the following chapters. You will need to update the file path when running this.
+Lastly (phew), we need to clean the output to use in the following sections. You will need to update the file path when running this.
 
 First, retrieve all the output file names.
 
@@ -1486,7 +1495,7 @@ rm(list=ls())
 my_date <- Sys.Date()
 
 # Specify the directory containing the CSV files
-directory <- "outputs/intake/output_031025_ncimethod"
+directory <- "outputs/intake/output_082625_ncimethod"
 
 # Get the list of all CSV files in the directory
 file_list <- list.files(path = directory, pattern = "*.csv", full.names = TRUE)
@@ -1503,11 +1512,18 @@ data_list <- lapply(file_list, read_csv)
 # Combine all data frames into one data frame
 combined_data <- bind_rows(data_list)
 
+# for subgroup 0 only
+# leave commented out
+# combined_data1 <-
+#   combined_data %>% 
+#   filter(inAnalysis_num == 1) %>% 
+#   mutate(subgroup_new = 0)
+
 # Clean
-intake <- combined_data %>% 
+intake <- combined_data1 %>% 
   select(note, subgroup_new, N, mean, mean_SE, StdDev) %>% 
   # only select subgroups 1-48
-  filter(subgroup_new %in% c(1:48)) %>% 
+  filter(subgroup_new %in% c(1:48)) %>%
   rename(food = note, 
          subgroup = subgroup_new,
          SE = mean_SE) %>% 
@@ -1521,10 +1537,14 @@ intake1 <- intake %>%
 intake2 <- intake1 %>% 
   mutate(food = ifelse(food == "poult_tot", "pf_poultry_tot", food))
 
+# for subgroup 0 only
+# leave commented out
+write_csv(intake2, 
+          paste0("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_WHOLE_SAMPLE_", my_date, ".csv"))
+
 ```
 
 Read in two datasets (food labels and % grocery intake) and merge with intake data.
-
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 # merge with food labels
