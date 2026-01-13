@@ -1,6 +1,6 @@
 # Cleaning Code for Cost Data
 
-This chapter walks you through all of the R code used to clean the raw **COST**-related data inputs. The resulting cleaned dataset is then used to calculate the cost impact factors (see [Chapter 6.2](calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors)).
+This chapter walks you through all of the R code used to clean the raw **COST**-related data inputs. The resulting cleaned dataset is then used to calculate the cost impact factors (see Chapter 6.2 \@ref(cost-impact-factors)).
 
 ## Clean and Restructure Intermediary Datasets
 
