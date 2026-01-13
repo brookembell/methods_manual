@@ -1,6 +1,6 @@
 # Cleaning Code for Cost Data
 
-This chapter walks you through all of the R code used to clean the raw **COST**-related data inputs. The resulting cleaned dataset is then used to calculate the cost impact factors (see Chapter 6.2 \@ref(sec:cost-impact-factors)).
+This chapter walks you through all of the R code used to clean the raw **COST**-related data inputs. The resulting cleaned dataset is then used to calculate the cost impact factors (see (Chapter 6.2 \@ref(cost-impact-factors))).
 
 ## Clean and Restructure Intermediary Datasets
 
@@ -31,11 +31,11 @@ my_date <- Sys.Date()
 
 ### Import and Merge Data Inputs
 
-#### NHANES Diet Intake {-}
+#### NHANES Diet Intake {.unnumbered}
 
 First, read in the NHANES food-level datasets. The data were split into "day 1" and "day 2" earlier, and here we are going to merge them into "both days". There also are different datasets containing just sugar sweetened beverage (SSB) data, so we have to import those in separately, and then merge with the rest of the day1/day2 diet datasets.
 
-Import all of the "day 1" datasets first. 
+Import all of the "day 1" datasets first.
 
 ```{r}
 
@@ -113,7 +113,7 @@ rm(list=setdiff(ls(), c("both_days", "my_date")))
 
 ```
 
-#### Mappings from Dietary Factor to FNDDS Food Code {-}
+#### Mappings from Dietary Factor to FNDDS Food Code {.unnumbered}
 
 There are two mappings from dietary factor to FNDDS Food Code. There is one specifically just for whole and refined grains - see [Chapter 1.7.2](summary-of-data-inputs.html#mapping-from-food-group-to-fndds-code) on how the whole vs. refined grains designation was determined. And the second one is for all other non-grain foods.
 
@@ -222,7 +222,7 @@ rm(list=setdiff(ls(), c("both_days2", "my_date")))
 
 ```
 
-#### Food-At-Home (FAH) to Food-Away-Fram-Home (FAFH) Ratios {-}
+#### Food-At-Home (FAH) to Food-Away-Fram-Home (FAFH) Ratios {.unnumbered}
 
 Import the FAH to FAFH ratios, whcih are later used to calculate the price of food purchased at grocery stores (i.e., food at home) vs. food bought outside of grocery stores (i.e., food away from home).
 
@@ -269,7 +269,7 @@ both_days5 %>% filter(is.na(ratio_FAFH_FAH)) # none-good
 
 ```
 
-#### Food Cost Data {-}
+#### Food Cost Data {.unnumbered}
 
 There are two cost datasets: one for the years 2015-2016 and the other for the years 2017-2018. We need to merge these with the corresponding NHANES cohorts (2015-2016 and 2017-2018).
 
@@ -360,7 +360,7 @@ rm(list=setdiff(ls(), c("both_days9", "my_date")))
 
 ```
 
-#### Mixed Dishes {-}
+#### Mixed Dishes {.unnumbered}
 
 We want to obtain the food price of whole foods that correspond with the food groups in the DGA dietary patterns. Therefore, we do not want to use the prices of "mixed foods" that typically represent larger dishes that incorporate many different food groups and is thus not a good representation of whole foods.
 
@@ -719,5 +719,3 @@ Export dataset to the temporary folder, so it can be used to calculate the impac
 write_rds(price_wide_comb3, "data_inputs/IMPACT_FACTORS/temp_data/price_input_dat.rds")
 
 ```
-
-
