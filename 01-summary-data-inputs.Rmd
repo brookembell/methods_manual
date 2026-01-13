@@ -103,13 +103,121 @@ The NHANES proportions are located in:
 
 ### Dietary Intake
 
-Come back to
+#### Purpose {-}
+
+This dataset contains an estimate of the U.S. population-level average daily intake, stratified by food subgroup, age group, and sex.
+
+#### Raw data sources {-}
+
+- National Health and Nutrition Examination Survey (NHANES), 2015-2016 cycle ([data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015))
+- National Health and Nutrition Examination Survey (NHANES), 2017-2018 cycle ([data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2017))
+- Food Patterns Equivalents Database per 100 grams of FNDDS 2015-2016 foods ([data](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/fped-databases/))
+- Food Patterns Equivalents Database per 100 grams of FNDDS 2017-2018 foods ([data](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/fped-databases/))
+- Food Patterns equivalents for foods in the WWEIA, NHANES 2015-2016 ([data](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/fped-databases/))
+- Food Patterns equivalents for foods in the WWEIA, NHANES 2017-2018 ([data](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/fped-databases/))
+- WWEIA Food Categories, 2015-2016 ([data](https://www.ars.usda.gov/ARSUserFiles/80400530/apps/WWEIA1516_foodcat_FNDDS.xlsx))
+- WWEIA Food Categories, 2017-2018 ([data](https://www.ars.usda.gov/ARSUserFiles/80400530/apps/WWEIA1718_foodcat_FNDDS.xlsx))
+
+#### Raw data location {-}
+
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/dr1iff_i.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/dr2iff_i.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/dr1iff_j.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/dr2iff_j.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1iff_1516.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2iff_1516.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1iff_1718.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2iff_1718.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/demo_i.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/demo_j.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1tot_1516.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2tot_1516.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1tot_1718.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/dr1tot_i.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/dr2tot_i.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/dr1tot_j.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/dr2tot_j.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1516_foodcat_FNDDS.xlsx
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1718_foodcat_FNDDS.xlsx
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1516.sas7bdat
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1718.sas7bdat
+
+#### Data pre-processing notes {-}
+
+We estimated the average intake of the following food groups:
+
+Vegetables:
+
+1. Dark-green vegetables (“veg_dg”): Dark green vegetables (cup eq.)
+2. Red and orange vegetables (“veg_ro”): Other red and orange vegetables, excluding tomatoes and tomato products (cup eq.)
+3. Starchy vegetables (“veg_sta”): Total starchy vegetables (white potatoes and other starchy vegetables) (cup eq.)
+4. Other vegetables (“veg_oth”): Other vegetables not in the vegetable components listed above (cup eq.)
+5. Vegetables, excluding starchy (“veg_exc_sta”): dark green vegetables; other red and orange vegetables, excluding tomatoes and tomato products; and other vegetables not in the vegetable components listed above (cup eq.)
+
+Fruit:
+
+6. Total fruit (“fruit_tot”): Total intact fruits (whole or cut) and fruit juices (cup eq.)
+7. Whole fruit, excluding juice (“fruit_exc_juice”): Intact fruits (whole or cut) of citrus, melons, and berries; and intact fruits (whole or cut) excluding citrus, melons, and berries (cup eq.)
+8. Fruit juice, 100% (“fruit_juice”): Fruit juices, citrus and non-citrus (cup eq.)
+
+Grains:
+
+9. Whole grains: Grains defined as whole grains and contain the entire grain kernel ― the bran, germ, and endosperm (oz. eq.)
+10. Refined grains: Refined grains that do not contain all of the components of the entire grain kernel (oz. eq.)
+
+Dairy:
+
+11. Total dairy: Total milk, yogurt, cheese, and whey; and calcium-fortified soy milk (cup ep.)
+12. Animal-based dairy (“dairy_cow”): Milk, yogurt, cheese, and whey (cup ep.)
+13. Soy-based dairy (“dairy_soy”): Calcium fortified soy milk (soymilk) (cup ep.)
+
+Animal-sourced protein:
+
+14. Eggs: Eggs (chicken, duck, goose, quail) and egg substitutes (oz. eq.)
+15. Seafood: Seafood (finfish, shellfish, and other seafood) high in n-3 fatty acids; and seafood (finfish, shellfish, and other seafood) low in n-3 fatty acids (oz. eq.)
+16. Unprocessed poultry (“pf_poultry”): Chicken, turkey, Cornish hens, duck, goose, quail, and pheasant (game birds) (oz. eq.)
+17. Unprocessed and processed poultry (“pf_poultry_tot”): Chicken, turkey, Cornish hens, duck, goose, quail, and pheasant (game birds) (unprocessed poultry); and frankfurters, sausages, corned beef, cured ham and luncheon meat that are made from poultry (processed poultry) (oz. eq.)
+18. Unprocessed red meat (“pf_redm”): Beef, veal, pork, lamb, and game meat (oz. eq.)
+19. Unprocessed and processed red meat (“pf_redm_tot”): Beef, veal, pork, lamb, and game meat (unprocessed red meat); and frankfurters, sausages, corned beef, cured ham and luncheon meat that are made from beef or pork (processed red meat) (oz. eq.)
+20. Processed red meat and poultry (“pf_pm”): Frankfurters, sausages, corned beef, cured ham and luncheon meat that are made from beef, pork, or poultry (oz. eq.)
+
+Plant-sourced protein:
+
+21. Nuts and seeds (“pf_ns”): Peanuts, tree nuts, and seeds; excludes coconut (oz. eq.)
+22. Total legumes (“leg_tot”): Beans, peas, and lentils; and soy products, excluding calciumfortified soy milk and raw soybean products (oz. eq.)
+23. Unsaturated fat (oil) (“oil”): Fats naturally present in nuts, seeds, and seafood; all unhydrogenated vegetable oils, except palm oil, palm kernel oil, and coconut oils; the fat present in avocado and olives above the allowable amount; and 50% of the fat present in stick and tub margarines and margarine spreads (g)
+
+Added fat and sugar:
+
+24. Saturated fats (“sat_fat”): Total saturated fatty acids; includes saturated fat from animal foods and some plant foods, including coconut, coconut oil, palm oil, and palm kernel oil (g)
+25. Added sugar (“added_sugar”): Foods defined as added sugars; includes sugars (free, mono-, and disaccharides), sugars from syrups and honey, and sugars from concentrated fruit or vegetable juices that are in excess of what would be expected from the same volume of 100% fruit or vegetable juices of the same type (tsp. eq.)
+26. Sugar-sweetened beverages (“ssb”): Beverages containing 5 or more grams of added sugar
+
+##### Sugar-sweetened beverages {-}
+
+Since the FPED dataset does not report intake of sugar-sweetened beverages (SSB), we constructed our own SSB variable. If any reported food item in the NHANES dataset was assigned the WWEIA category code 151=Sugar-sweetened beverages, 152=Sugar-sweetened beverages (diet vs. SSB), 153=Nutritional beverages (diet vs. SSB), 154=Smoothies and grain drinks (diet vs. SSB), 155=Coffee, or 156=Tea AND contained 5 or more grams of added sugar, then it was considered an SSB.
+
+##### Processed meat {-}
+
+Because the environmental impact factors don’t take “processed” into consideration, we needed to create two new food subgroups to use in the environment analysis: “total red meat” and “total poultry”, which include both unprocessed and processed meats. We disaggregated the "processed meat” category into “processed red meat” and “processed poultry” categories using SAS macros developed by the USDA1. Then, we summed the intake amounts of unprocessed red meat and processed red meat to obtain “total red meat”; and summed the intake amounts of unprocessed poultry and processed poultry to obtain “total poultry”.
+
+##### Legumes {-}
+
+The Dietary Guidelines provides two separate intake recommendations for “Beans, Peas, and Lentils” for the Vegetarian dietary pattern: 0.21 cups/day (as part of the vegetables food group) and 0.21 cups/day (as part of the protein food group), resulting in a total of 0.42 cups/day. Ultimately, beans/legumes as vegetables and beans/legumes as protein are the same food item, and thus the CRA cannot model these separately. Therefore, we decided to treat legumes as one food subgroup. We summed the intake amounts of beans, peas, lentils, and soy products, excluding calcium-fortified soy milk and raw soybean products to obtain “total legumes”. Note that this category does not include peanuts.
+
+##### Standard deviations
+
+The SIMPLE macro was adapted to additionally estimate the standard deviations of intake means. See more info in Chapter \@ref(sas-macro).
+
+#### Raw data (pre-processed) location {-}
+
+- methods_manual/data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_2025-05-20.csv
 
 \newpage
 
 ## Economic Inputs
 
-### Food Prices
+### Food Cost {#food-cost}
 
 \newpage
 
@@ -124,10 +232,6 @@ Come back to
 \newpage
 
 ### Water Scarcity (WS) and Bluewater Use (BWU) Impact Factors
-
-\newpage
-
-### Land Use Impact Factors
 
 \newpage
 
@@ -293,7 +397,7 @@ where "YYYY-MM-DD" is the most recent export date.
 
 \newpage
 
-### Mapping from Food Group to FNDDS Code
+### Mapping from Food Group to FNDDS Code {#mapping-from-food-group-to-fndds-code}
 
 \newpage
 

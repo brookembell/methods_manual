@@ -1,6 +1,6 @@
 # Cleaning Code for Environment Data
 
-This chapter walks you through all of the R code used to clean the raw **ENVIRONMENT**-related data inputs. The resulting cleaned dataset is then used to calculate the environment impact factors (see [Chapter 6.3](#environmental-social-impact-factors).
+This chapter walks you through all of the R code used to clean the raw **ENVIRONMENT**-related data inputs. The resulting cleaned dataset is then used to calculate the environment impact factors (see Chapter  \@ref(environmental-social-impact-factors).
 
 ## Clean and Restructure Intermediary Datasets
 
@@ -32,8 +32,6 @@ my_date <- Sys.Date()
 ### Import and Merge Data Inputs
 
 #### NHANES Diet Intake {-}
-
-**The following code is the same code used in Section XXX**.
 
 First, read in the NHANES food-level datasets. The data were split into "day 1" and "day 2" earlier, and here we are going to merge them into "both days". There also are different datasets containing just sugar sweetened beverage (SSB) data, so we have to import those in separately, and then merge with the rest of the day1/day2 diet datasets.
 
@@ -280,7 +278,7 @@ both_days6 <- left_join(both_days5, losswaste_complete, by = "fcidcode")
 
 ```
 
-#### Mapping From FCID Food Code to Dietary Factor {-}
+#### Mapping From FCID Food Code to Dietary Factor {#mapping-from-fcid-food-code-to-dietary-factor} {-}
 
 First, we import the original mapping.
 

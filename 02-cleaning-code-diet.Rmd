@@ -656,7 +656,7 @@ nhanes_final %>%
 
 ```
 
-#### Step 7: Examine cleaned NHANES data {.unnumbered}
+#### Step 7: Examine cleaned NHANES data {#step-seven} {.unnumbered}
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
@@ -1292,7 +1292,7 @@ write_csv(nhanes_adj_wide2,
           na = "")
 ```
 
-## Calculating Mean and Standard Deviation Using SAS Macros
+## Calculating Mean and Standard Deviation Using SAS Macros {#sas-macro}
 
 We need to calculate the (i) mean intake and (ii) standard deviation of the mean intake for each dietary factor and demographic subgroup. This can be done using the [NCI Method](https://epi.grants.cancer.gov/diet/usualintakes/method.html) SAS macros.
 
@@ -1437,7 +1437,7 @@ You must first log into the cluster computer via [OnDemand](https://ondemand.pax
 
 See the [Code](index.html#code) section for information on how to gain access to OnDemand, and how to get a GitHub access token.
 
-### Run SAS Macro
+### Run SAS Macro {#run-sas-macro}
 
 Once logged in to OnDemand, navigate to /cluster/tufts/lasting/shared/LASTING.
 

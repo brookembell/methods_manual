@@ -109,7 +109,7 @@ price_dat1 <- full_join(price_dat, subgroup_dat, by = c("seqn" = "SEQN"))
 
 Define the "survey design" for the cost dataset. Survey designs are a unique part of the R 'survey' package. Set the appropriate weight variables.
 
-Then, subset the dataset to only include participants who are eligible to be in the sample (i.e., inAnalysis == 1). [Chapter 2.2](cleaning-code-for-nhanes-diet-data.html#step-7-examine-cleaned-nhanes-data) explains more about these weight and inAnalysis variables.
+Then, subset the dataset to only include participants who are eligible to be in the sample (i.e., inAnalysis == 1). Chapter \@ref(step-seven) explains more about these weight and inAnalysis variables.
 
 ```{r}
 
@@ -377,7 +377,7 @@ cost_final_dat2 %>% select(subgroup, food, food_type, mixed_dish, costperDGA_con
 
 ```
 
-## Environmental & Social Impact Factors
+## Environmental & Social Impact Factors {#environmental-social-impact-factors}
 
 ### Environmental & Social Impact Factors, by Food, by Subgroup
 
@@ -385,7 +385,7 @@ Essentially the same steps that were used to calculate the cost impact factors a
 
 First, define the "survey design" for the enviro dataset. Survey designs are a unique part of the R 'survey' package. Set the appropriate weight variables.
 
-Then, subset the dataset to only include participants who are eligible to be in the sample (i.e., inAnalysis == 1). [Chapter 2.2](cleaning-code-for-nhanes-diet-data.html#step-7-examine-cleaned-nhanes-data) explains more about these weight and inAnalysis variables.
+Then, subset the dataset to only include participants who are eligible to be in the sample (i.e., inAnalysis == 1). Chapter \@ref(step-seven) explains more about these weight and inAnalysis variables.
 
 ```{r}
 
