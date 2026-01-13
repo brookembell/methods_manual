@@ -1,6 +1,6 @@
 # Cleaning Code for Cost Data
 
-This chapter walks you through all of the R code used to clean the raw **COST**-related data inputs. The resulting cleaned dataset is then used to calculate the cost impact factors (see **Chapter XXX**).
+This chapter walks you through all of the R code used to clean the raw **COST**-related data inputs. The resulting cleaned dataset is then used to calculate the cost impact factors (see [Chapter 6.2](calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors)).
 
 ## Clean and Restructure Intermediary Datasets
 
@@ -115,7 +115,7 @@ rm(list=setdiff(ls(), c("both_days", "my_date")))
 
 #### Mappings from Dietary Factor to FNDDS Food Code {-}
 
-There are two mappings from dietary factor to FNDDS Food Code. There is one specifically just for whole and refined grains - see **section XXX**  on how the whole vs. refined grains designation was determined. And the second one is for all other non-grain foods.
+There are two mappings from dietary factor to FNDDS Food Code. There is one specifically just for whole and refined grains - see [Chapter 1.7.2](summary-of-data-inputs.html#mapping-from-food-group-to-fndds-code) on how the whole vs. refined grains designation was determined. And the second one is for all other non-grain foods.
 
 First, create an empty dataset template that contains all of the foodcodes that exist in the diet dataset (both_days).
 
@@ -364,7 +364,7 @@ rm(list=setdiff(ls(), c("both_days9", "my_date")))
 
 We want to obtain the food price of whole foods that correspond with the food groups in the DGA dietary patterns. Therefore, we do not want to use the prices of "mixed foods" that typically represent larger dishes that incorporate many different food groups and is thus not a good representation of whole foods.
 
-To deal with this, we use a dataset that identifies FNDDS food code prefixes that represent "mixed dishes". We use this data to categorize food codes into mixed vs. non-mixed foods, and then later stratify our results by this categorization. See **Section XX** to see how these mixed dish codes were determined.
+To deal with this, we use a dataset that identifies FNDDS food code prefixes that represent "mixed dishes". We use this data to categorize food codes into mixed vs. non-mixed foods, and then later stratify our results by this categorization. See [Chapter 1.3.1](summary-of-data-inputs.html#food-prices) to see how these mixed dish codes were determined.
 
 ```{r}
 
@@ -444,7 +444,7 @@ my_price_table <- both_days11 %>%
 
 ```
 
-Then, import the food-level consumed, inedible, and wasted amounts that was calculated in the previous **Section XXX** and join with my_price table. These values were calculated in the previous section because the inedible and wasted coefficients are at the FCID-level, which is the same level that the environmental impacts are at.
+Then, import the food-level consumed, inedible, and wasted amounts that was calculated in the previous [Chapter 4.1.1](cleaning-code-for-environment-data.html#mapping-from-fcid-food-code-to-dietary-factor) and join with my_price table. These values were calculated in the previous chapter because the inedible and wasted coefficients are at the FCID-level, which is the same level that the environmental impacts are at.
 
 ```{r}
 
@@ -544,7 +544,7 @@ price_wide_total2 <- price_wide_total1 %>%
 
 ```
 
-Calculate the **average** total price of consumed food at the FNDDS foodcode-level for each person. This will give us the data we need to calculate the cost impact factors in the next section.
+Calculate the **average** total price of consumed food at the FNDDS foodcode-level for each person. This will give us the data we need to calculate the cost impact factors in the next chapter.
 
 ```{r}
 
@@ -712,7 +712,7 @@ price_wide_comb3 <- price_wide_comb2 %>%
 
 ```
 
-Export dataset to the temporary folder, so it can be used to calculate the impact factors in the next section.
+Export dataset to the temporary folder, so it can be used to calculate the impact factors in the next chapter.
 
 ```{r}
 

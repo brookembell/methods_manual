@@ -1,6 +1,6 @@
 # Cleaning Code for Health Data
 
-This chapter walks you through all of the R code used to clean the raw **HEALTH**-related data inputs. The resulting cleaned datasets are then used in the modeling (see next Chapter).
+This chapter walks you through all of the R code used to clean the raw **HEALTH**-related data inputs. The resulting cleaned datasets are then used in the modeling (see [Chapter 7](finalize-model-data-inputs.html#finalize-model-data-inputs).
 
 ## Create Final Data Inputs
 

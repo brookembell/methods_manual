@@ -1,6 +1,6 @@
 # Cleaning Code for Environment Data
 
-This chapter walks you through all of the R code used to clean the raw **ENVIRONMENT**-related data inputs. The resulting cleaned dataset is then used to calculate the environment impact factors (see **Chapter XXX**).
+This chapter walks you through all of the R code used to clean the raw **ENVIRONMENT**-related data inputs. The resulting cleaned dataset is then used to calculate the environment impact factors (see [Chapter 6.3](#environmental-social-impact-factors).
 
 ## Clean and Restructure Intermediary Datasets
 
@@ -318,6 +318,7 @@ both_days8 %>% filter(is.na(fcidcode)) %>% head()
 both_days8 %>% filter(is.na(fcidcode)) %>% select(foodcode, description, fcidcode) %>% distinct() %>% head()
 
 ```
+
 There are now fewer missing coefficients, but still some. In some of these cases, the FNDDS foodcode can represent the FCID code (i.e., single ingredient foods). Below, I manually add these waste coefficents for dasheen and corn.
 
 ```{r}

@@ -804,7 +804,7 @@ fped1718_1 <-
 
 ```
 
-Import the NHANES individual-level food data (cleaned in [Section 2.2](#clean-raw-nhanes-data)), and merge with the FPED and WWEIA datasets.
+Import the NHANES individual-level food data (cleaned in [Chapter 2.2](cleaning-code-for-nhanes-diet-data.html#clean-raw-nhanes-data)), and merge with the FPED and WWEIA datasets.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
@@ -1435,7 +1435,7 @@ You should save a new version of the SAS code for your own project, so that you 
 
 You must first log into the cluster computer via [OnDemand](https://ondemand.pax.tufts.edu/).
 
-See the [Section Code](#code) for information on how to gain access to OnDemand, and how to get a GitHub access token.
+See the [Code](index.html#code) section for information on how to gain access to OnDemand, and how to get a GitHub access token.
 
 ### Run SAS Macro
 
