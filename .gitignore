@@ -517,3 +517,10 @@ data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/survey.env.dist__snmcs_
 data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/survey.env.dist__snmcs_impacts_analysis_data111020.csv
 data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Unique_SNMCS_Impacts_aligned_052021.csv
 data_inputs/ENVIRONMENT/land_use/Shared_Code_Data/Output/Unique_SNMCS_Impacts_aligned_052121.csv
+data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds
+data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds
+data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.sas7bdat
+data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.sas7bdat
+data_inputs/ECONOMIC/fah_fafh_ratio/DATA/raw_data/faps_fafhnutrient_PUF.dta
+data_inputs/ECONOMIC/fah_fafh_ratio/DATA/raw_data/faps_fahnutrients_bmb.dta
+data_inputs/ECONOMIC/fah_fafh_ratio/DATA/raw_data/faps_fahnutrients.dta
