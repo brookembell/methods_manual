@@ -25,7 +25,7 @@
 # intermediate outputs needed to calculate the PIFs.
 
 # list of diseases draws, one element per dietary factor
-disease.list <- list()  
+disease.list <- list()
 
 # a list of lists, giving the calculated PAFs by riskfactor, disease, strata, and iteration
 PIF.list <- list() 

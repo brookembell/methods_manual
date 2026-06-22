@@ -1,0 +1,58 @@
+---
+title: "Convert Rmds file to R files"
+author: "Fred Cudhea & Brooke Bell"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      results = "hide", 
+                      message = FALSE,
+                      warning = TRUE)
+
+```
+
+The final step is to convert all of the Rmd files to R files so that you can run on the cluster.
+
+```{r convert, include=TRUE}
+
+library(knitr)
+
+# start with 02 since 01 is just text
+purl(input = "02-cleaning-code-diet.Rmd",
+     output = paste0(code_location, "02-cleaning-code-diet.R"),
+     documentation = 2)
+
+purl(input = "03-cleaning-code-health.Rmd",
+     output = paste0(code_location, "03-cleaning-code-health.R"),
+     documentation = 2)
+
+purl(input = "04-cleaning-code-enviro.Rmd",
+     output = paste0(code_location, "04-cleaning-code-enviro.R"),
+     documentation = 2)
+
+purl(input = "05-cleaning-code-cost.Rmd",
+     output = paste0(code_location, "05-cleaning-code-cost.R"),
+     documentation = 2)
+
+purl(input = "05-cleaning-code-cost.Rmd",
+     output = paste0(code_location, "05-cleaning-code-cost.R"),
+     documentation = 2)
+
+purl(input = "06-calculate-impact-factors.Rmd",
+     output = paste0(code_location, "06-calculate-impact-factors.R"),
+     documentation = 2)
+
+purl(input = "07-finalize-inputs.Rmd",
+     output = paste0(code_location, "07-finalize-inputs.R"),
+     documentation = 2)
+
+purl(input = "08-run-models.Rmd",
+     output = paste0(code_location, "run-models.R"),
+     documentation = 2)
+
+```

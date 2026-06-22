@@ -1,0 +1,17 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdftex 2022.1.18)  21 JUN 2026 19:01
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**README.md
+(./README.md
+./README.md:1: You can't use `macro parameter character #' in vertical mode.
+l.1 #
+      Repository for U.S. Diet Shifts Paper
+? 
+./README.md:1: Emergency stop.
+l.1 #
+      Repository for U.S. Diet Shifts Paper
+End of file on the terminal!
+
+./README.md:1:  ==> Fatal error occurred, no output PDF file produced!

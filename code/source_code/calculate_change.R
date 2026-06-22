@@ -18,9 +18,13 @@
 
 source(paste0(code_location, "functions/change_functions.r"))
 
-# Define output location.
+# Create directory if it doesn't already exist
+ifelse(!dir.exists(file.path(paste0(output_dir, "/envecosoc/", envecosoc_output_loc.vec[k]))),
+       dir.create(file.path(paste0(output_dir, "/envecosoc/", envecosoc_output_loc.vec[k]))),
+       "Directory Exists")
 
-output_location <- paste0("output/envecosoc/", envecosoc_output_loc.vec[k], "/")
+# Define output location.
+output_location <- paste0(output_dir, "envecosoc/", envecosoc_output_loc.vec[k], "/")
 
 print(output_location)
 
@@ -613,6 +617,8 @@ ifelse(!dir.exists(file.path(output_location)),
        dir.create(file.path(output_location)),
        "Directory Exists")
 
+print(output_location)
+
 # export as CSVs
 
 fwrite(x = impact.sims.total.allgroups, 
@@ -889,6 +895,8 @@ CF.intake.impact.sims.percapita.wasted.allgroups <-
 # Save them into csv files.
 
 output_capita_location <- paste0(output_location, "per_capita/")
+
+print(output_capita_location)
 
 # first create directory if it doesn't already exist
 ifelse(!dir.exists(file.path(output_capita_location)),
@@ -1201,6 +1209,8 @@ summ.stats.by.strata.CF.intake.wasted.envecosoc <-
 # to future changes). 
 
 output_subgroup_location <- paste0(output_location, "By_SubGroup/")
+
+print(output_subgroup_location)
 
 # create 'By_SubGroup' output directory
 ifelse(!dir.exists(file.path(output_subgroup_location)),

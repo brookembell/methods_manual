@@ -1,10 +1,10 @@
-# Finalize Model Data Inputs {#finalize-model-data-inputs}
-
-This chapter walks you through the final cleaning process for the model inputs.
-
-Set up the working environment.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' # Finalize Model Data Inputs {#finalize-model-data-inputs}
+#' 
+#' This chapter walks you through the final cleaning process for the model inputs.
+#' 
+#' Set up the working environment.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 rm(list = ls())
 
@@ -17,21 +17,21 @@ date <- Sys.Date()
 
 date <- "2025-05-20"
 
-```
 
-## Clean and Merge All Inputs
-
-Import the diet/health dataset (i.e., mega_costenv).
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' ## Clean and Merge All Inputs
+#' 
+#' Import the diet/health dataset (i.e., mega_costenv).
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 nhanes <- read_csv(paste0("data_inputs/FINAL/cleaned_data/mega_costenv_structure_temp_", date, "_FINAL.csv"))
 
-```
 
-Here is where you specify the substitution effects. For the four-pillar paper, we set these to 0. However, if you will take into account substitution effects (Kyra, I mean you), you will need to update these numbers. Please consult Fred and/or Nicole as to what these values should be for your analysis. 
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Here is where you specify the substitution effects. For the four-pillar paper, we set these to 0. However, if you will take into account substitution effects (Kyra, I mean you), you will need to update these numbers. Please consult Fred and/or Nicole as to what these values should be for your analysis. 
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 # add in substitution effects, currently set to 0
 nhanes1 <- nhanes %>% 
@@ -48,20 +48,20 @@ nhanes1 <- nhanes %>%
          Mean_substitution_FL = 0,
          SE_substitution_FL = 0)
 
-```
 
-Import the impact factors.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Import the impact factors.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 enviro_IFs <- read_csv(paste0("data_inputs/IMPACT_FACTORS/output_data/Impacts_enviro_", date, ".csv"))
 cost_IFs <- read_csv(paste0("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost_", date, ".csv"))
 
-```
 
-For the cost impact factors, we made the decision to use the factors for the "non-mixed" dishes, as we thought these were the best representation of the food groups in the DGA (which is what our analysis focused on). Again, you may need to consult Nicole on what the best decision is for your analysis.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' For the cost impact factors, we made the decision to use the factors for the "non-mixed" dishes, as we thought these were the best representation of the food groups in the DGA (which is what our analysis focused on). Again, you may need to consult Nicole on what the best decision is for your analysis.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 # use the 'non-mixed' dishes for impact factors
 cost_IFs1 <- cost_IFs %>% 
@@ -72,11 +72,11 @@ cost_IFs1 <- cost_IFs %>%
 enviro_IFs1 <- enviro_IFs %>% 
   filter(subgroup != 0) # remove subgroup 0
 
-```
 
-To match the format of the cost impact factors, we need to duplicate the environmental impact factors three times to account for the different food types (i.e., grocery, non-grocery, and total). We don't have different environmental factors for these different food types, so we just use the exact same values across all three types (hence why we just duplicate).
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' To match the format of the cost impact factors, we need to duplicate the environmental impact factors three times to account for the different food types (i.e., grocery, non-grocery, and total). We don't have different environmental factors for these different food types, so we just use the exact same values across all three types (hence why we just duplicate).
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 enviro_IFs_tot <- enviro_IFs1 %>% mutate(food_type = "Total")
 enviro_IFs_gro <- enviro_IFs1 %>% mutate(food_type = "Grocery")
@@ -87,11 +87,11 @@ enviro_IFs2 <- rbind(enviro_IFs_tot, enviro_IFs_gro, enviro_IFs_non) %>%
   relocate(food_type, .after = food) %>% 
   arrange(subgroup, food, food_type)
 
-```
 
-Merge the environmental and cost impact factors.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Merge the environmental and cost impact factors.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 # compare
 table(cost_IFs1$subgroup, useNA = "always")
@@ -107,13 +107,13 @@ table(enviro_IFs2$food_type, useNA = "always") #same
 impact_factors <- full_join(cost_IFs1, enviro_IFs2, by = c("subgroup", "food", "food_type")) %>% 
   arrange(subgroup, food, food_type)
 
-```
 
-Below, we set the standard errors for the environmental (and social) impact factors to 0 since we don't have any variability values from dataField to use. 
-
-We also create the "counterfactual" impact factors, which are just the same. This is mostly redundant, it's just a necessary thing to do based on the way the model code is set up to run.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Below, we set the standard errors for the environmental (and social) impact factors to 0 since we don't have any variability values from dataField to use. 
+#' 
+#' We also create the "counterfactual" impact factors, which are just the same. This is mostly redundant, it's just a necessary thing to do based on the way the model code is set up to run.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 impact_factors1 <- impact_factors %>% 
   rename(
@@ -160,25 +160,25 @@ impact_factors1 <- impact_factors %>%
          CF_Mean_FL = Mean_FL,
          CF_SE_FL = SE_FL)
 
-```
 
-Join impact factors with diet/health data.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Join impact factors with diet/health data.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 comb <- left_join(nhanes1, impact_factors1, by = c("subgroup_id" = "subgroup",
                                                                 "Foodgroup" = "food",
                                                                 "datatype" = "food_type"))
 
-```
 
-The impact factor units are manually defined below. We also set all the conversions to 1 for the four-pillar analysis (consult Nicole for this).
-
-We also set all of the inedible and wasted proportions. For the environmental impact factors, they're set to "inedible_prop_fcid" and "wasted_prop_fcid", and for the economic impact factor, it's set to "inedible_prop_fndds" and "wasted_prop_fndds". Similar to above, the standard errors are set to 0.
-
-Lastly, similar to above, the counterfactual versions of the inedible/wasted proportions are set to their non-counterfactual counterparts.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' The impact factor units are manually defined below. We also set all the conversions to 1 for the four-pillar analysis (consult Nicole for this).
+#' 
+#' We also set all of the inedible and wasted proportions. For the environmental impact factors, they're set to "inedible_prop_fcid" and "wasted_prop_fcid", and for the economic impact factor, it's set to "inedible_prop_fndds" and "wasted_prop_fndds". Similar to above, the standard errors are set to 0.
+#' 
+#' Lastly, similar to above, the counterfactual versions of the inedible/wasted proportions are set to their non-counterfactual counterparts.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 comb1 <- 
   comb %>% 
@@ -266,22 +266,22 @@ comb1 <-
          CF_Food_price_foodwaste_p_se = Food_price_foodwaste_p_se,
          CF_FL_foodwaste_p_se = FL_foodwaste_p_se)
 
-```
 
-Change some variables names.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Change some variables names.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 comb2 <- comb1 %>% 
   rename(Population_size = population) %>% 
   mutate(Sex_label = ifelse(Sex == 1, "Female", "Male"),
          Intake_unit = paste0(TMRED_intake_unit, "/day"))
 
-```
 
-List out the final order your want for the variables.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' List out the final order your want for the variables.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 final.order <- c(
                "subgroup_id",
                "Age",
@@ -450,30 +450,30 @@ final.order <- c(
                "CF_FL_foodwaste_p_se",
                "CF_Food_price_foodwaste_p",
                "CF_Food_price_foodwaste_p_se")
-```
 
-Apply the final order. 
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Apply the final order. 
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 # apply
 final <- comb2[,final.order]
-```
 
-Filter out diet variables you don't want included in your dataset/analysis.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Filter out diet variables you don't want included in your dataset/analysis.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 final1 <- final %>% filter(!(Foodgroup %in% c("fiber", "kcal", "pf_animal", "pf_leg", "pf_plant",
                                   "pf_soy", "pufa_energy", "sfat_energy", "sea_omega3_fa",
                                   "veg_leg")))
 
-```
 
-Lastly, we decided as a team to utilize the inedible/wasted proportions that were calculated at the FCID-level (i.e., environmental impact factors).
-
-Below, we replace the cost inedible/wasted proportions with the GHG inedible/wasted proportions when they're not missing. If they're alrady NA, then they remain NA. 
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Lastly, we decided as a team to utilize the inedible/wasted proportions that were calculated at the FCID-level (i.e., environmental impact factors).
+#' 
+#' Below, we replace the cost inedible/wasted proportions with the GHG inedible/wasted proportions when they're not missing. If they're alrady NA, then they remain NA. 
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 final2 <- final1 %>% 
   # renaming with _new to compare old vs. new values
@@ -498,21 +498,21 @@ final3 <- final2 %>%
          Food_price_foodwaste_p_new=NULL,
          Food_price_foodwaste_p_se_new=NULL)
 
-```
 
-Export to the "FINAL" folder.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+#' 
+#' Export to the "FINAL" folder.
+#' 
+## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
 
 write_csv(final3, paste0("data_inputs/FINAL/model_data/input_data_", date, "_FINAL.csv"))
 
-```
 
-## Copy Model Inputs to GitHub
-
-All of the model input files are currently located in the "FINAL" folder on Box. Below, we copy them to GitHub so that we can access them on the cluster.
-
-```{r}
+#' 
+#' ## Copy Model Inputs to GitHub
+#' 
+#' All of the model input files are currently located in the "FINAL" folder on Box. Below, we copy them to GitHub so that we can access them on the cluster.
+#' 
+## ------------------------------------------------------------------------------------------------
 
 current_folder <- "data_inputs/FINAL/model_data" # where files currently live on Box
 
@@ -523,5 +523,5 @@ list_of_files <- list.files(current_folder, ".csv")
 
 file.copy(file.path(current_folder, list_of_files), new_folder)
 
-```
 
+#' 
