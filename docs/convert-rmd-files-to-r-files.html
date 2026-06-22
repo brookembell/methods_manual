@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | LASTING Four-Pillar Model Methodology</title>
+  <title>Chapter 9 Convert RMD Files to R Files | LASTING Four-Pillar Model Methodology</title>
   <meta name="description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | LASTING Four-Pillar Model Methodology" />
+  <meta property="og:title" content="Chapter 9 Convert RMD Files to R Files | LASTING Four-Pillar Model Methodology" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | LASTING Four-Pillar Model Methodology" />
+  <meta name="twitter:title" content="Chapter 9 Convert RMD Files to R Files | LASTING Four-Pillar Model Methodology" />
   
   <meta name="twitter:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="run-the-models.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -305,18 +305,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="convert-rmd-files-to-r-files" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Convert RMD Files to R Files<a href="convert-rmd-files-to-r-files.html#convert-rmd-files-to-r-files" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The final step is to convert all of the Rmd files to R files so that you can run on the cluster.</p>
+<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="convert-rmd-files-to-r-files.html#cb275-1" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb275-2"><a href="convert-rmd-files-to-r-files.html#cb275-2" tabindex="-1"></a></span>
+<span id="cb275-3"><a href="convert-rmd-files-to-r-files.html#cb275-3" tabindex="-1"></a><span class="co"># start with 02 since 01 is just text</span></span>
+<span id="cb275-4"><a href="convert-rmd-files-to-r-files.html#cb275-4" tabindex="-1"></a><span class="fu">purl</span>(<span class="at">input =</span> <span class="st">&quot;02-cleaning-code-diet.Rmd&quot;</span>,</span>
+<span id="cb275-5"><a href="convert-rmd-files-to-r-files.html#cb275-5" tabindex="-1"></a>     <span class="at">output =</span> <span class="fu">paste0</span>(code_location, <span class="st">&quot;02-cleaning-code-diet.R&quot;</span>),</span>
+<span id="cb275-6"><a href="convert-rmd-files-to-r-files.html#cb275-6" tabindex="-1"></a>     <span class="at">documentation =</span> <span class="dv">2</span>)</span>
+<span id="cb275-7"><a href="convert-rmd-files-to-r-files.html#cb275-7" tabindex="-1"></a></span>
+<span id="cb275-8"><a href="convert-rmd-files-to-r-files.html#cb275-8" tabindex="-1"></a><span class="fu">purl</span>(<span class="at">input =</span> <span class="st">&quot;03-cleaning-code-health.Rmd&quot;</span>,</span>
+<span id="cb275-9"><a href="convert-rmd-files-to-r-files.html#cb275-9" tabindex="-1"></a>     <span class="at">output =</span> <span class="fu">paste0</span>(code_location, <span class="st">&quot;03-cleaning-code-health.R&quot;</span>),</span>
+<span id="cb275-10"><a href="convert-rmd-files-to-r-files.html#cb275-10" tabindex="-1"></a>     <span class="at">documentation =</span> <span class="dv">2</span>)</span>
+<span id="cb275-11"><a href="convert-rmd-files-to-r-files.html#cb275-11" tabindex="-1"></a></span>
+<span id="cb275-12"><a href="convert-rmd-files-to-r-files.html#cb275-12" tabindex="-1"></a><span class="fu">purl</span>(<span class="at">input =</span> <span class="st">&quot;04-cleaning-code-enviro.Rmd&quot;</span>,</span>
+<span id="cb275-13"><a href="convert-rmd-files-to-r-files.html#cb275-13" tabindex="-1"></a>     <span class="at">output =</span> <span class="fu">paste0</span>(code_location, <span class="st">&quot;04-cleaning-code-enviro.R&quot;</span>),</span>
+<span id="cb275-14"><a href="convert-rmd-files-to-r-files.html#cb275-14" tabindex="-1"></a>     <span class="at">documentation =</span> <span class="dv">2</span>)</span>
+<span id="cb275-15"><a href="convert-rmd-files-to-r-files.html#cb275-15" tabindex="-1"></a></span>
+<span id="cb275-16"><a href="convert-rmd-files-to-r-files.html#cb275-16" tabindex="-1"></a><span class="fu">purl</span>(<span class="at">input =</span> <span class="st">&quot;05-cleaning-code-cost.Rmd&quot;</span>,</span>
+<span id="cb275-17"><a href="convert-rmd-files-to-r-files.html#cb275-17" tabindex="-1"></a>     <span class="at">output =</span> <span class="fu">paste0</span>(code_location, <span class="st">&quot;05-cleaning-code-cost.R&quot;</span>),</span>
+<span id="cb275-18"><a href="convert-rmd-files-to-r-files.html#cb275-18" tabindex="-1"></a>     <span class="at">documentation =</span> <span class="dv">2</span>)</span>
+<span id="cb275-19"><a href="convert-rmd-files-to-r-files.html#cb275-19" tabindex="-1"></a></span>
+<span id="cb275-20"><a href="convert-rmd-files-to-r-files.html#cb275-20" tabindex="-1"></a><span class="fu">purl</span>(<span class="at">input =</span> <span class="st">&quot;05-cleaning-code-cost.Rmd&quot;</span>,</span>
+<span id="cb275-21"><a href="convert-rmd-files-to-r-files.html#cb275-21" tabindex="-1"></a>     <span class="at">output =</span> <span class="fu">paste0</span>(code_location, <span class="st">&quot;05-cleaning-code-cost.R&quot;</span>),</span>
+<span id="cb275-22"><a href="convert-rmd-files-to-r-files.html#cb275-22" tabindex="-1"></a>     <span class="at">documentation =</span> <span class="dv">2</span>)</span>
+<span id="cb275-23"><a href="convert-rmd-files-to-r-files.html#cb275-23" tabindex="-1"></a></span>
+<span id="cb275-24"><a href="convert-rmd-files-to-r-files.html#cb275-24" tabindex="-1"></a><span class="fu">purl</span>(<span class="at">input =</span> <span class="st">&quot;06-calculate-impact-factors.Rmd&quot;</span>,</span>
+<span id="cb275-25"><a href="convert-rmd-files-to-r-files.html#cb275-25" tabindex="-1"></a>     <span class="at">output =</span> <span class="fu">paste0</span>(code_location, <span class="st">&quot;06-calculate-impact-factors.R&quot;</span>),</span>
+<span id="cb275-26"><a href="convert-rmd-files-to-r-files.html#cb275-26" tabindex="-1"></a>     <span class="at">documentation =</span> <span class="dv">2</span>)</span>
+<span id="cb275-27"><a href="convert-rmd-files-to-r-files.html#cb275-27" tabindex="-1"></a></span>
+<span id="cb275-28"><a href="convert-rmd-files-to-r-files.html#cb275-28" tabindex="-1"></a><span class="fu">purl</span>(<span class="at">input =</span> <span class="st">&quot;07-finalize-inputs.Rmd&quot;</span>,</span>
+<span id="cb275-29"><a href="convert-rmd-files-to-r-files.html#cb275-29" tabindex="-1"></a>     <span class="at">output =</span> <span class="fu">paste0</span>(code_location, <span class="st">&quot;07-finalize-inputs.R&quot;</span>),</span>
+<span id="cb275-30"><a href="convert-rmd-files-to-r-files.html#cb275-30" tabindex="-1"></a>     <span class="at">documentation =</span> <span class="dv">2</span>)</span>
+<span id="cb275-31"><a href="convert-rmd-files-to-r-files.html#cb275-31" tabindex="-1"></a></span>
+<span id="cb275-32"><a href="convert-rmd-files-to-r-files.html#cb275-32" tabindex="-1"></a><span class="fu">purl</span>(<span class="at">input =</span> <span class="st">&quot;08-run-models.Rmd&quot;</span>,</span>
+<span id="cb275-33"><a href="convert-rmd-files-to-r-files.html#cb275-33" tabindex="-1"></a>     <span class="at">output =</span> <span class="fu">paste0</span>(code_location, <span class="st">&quot;08-run-models.R&quot;</span>),</span>
+<span id="cb275-34"><a href="convert-rmd-files-to-r-files.html#cb275-34" tabindex="-1"></a>     <span class="at">documentation =</span> <span class="dv">2</span>)</span></code></pre></div>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="run-the-models.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -348,7 +381,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09-convert-rmd-to-r.Rmd",
 "text": "Edit"
 },
 "history": {

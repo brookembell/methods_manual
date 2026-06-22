@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Run the Models | LASTING Four-Pillar Model Methodology</title>
+  <meta name="description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Run the Models | LASTING Four-Pillar Model Methodology" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Run the Models | LASTING Four-Pillar Model Methodology" />
+  
+  <meta name="twitter:description" content="This is the comprehensive manual that describes all data inputs and methods used for the 4-pillar LASTING model." />
+  
+
+<meta name="author" content="Brooke M. Bell" />
+
+
+<meta name="date" content="2026-06-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="finalize-model-data-inputs.html"/>
+<link rel="next" href="convert-rmd-files-to-r-files.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">LASTING Methods Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#github-repository"><i class="fa fa-check"></i>Github Repository</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#data-inputs"><i class="fa fa-check"></i>Data Inputs</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#model-output"><i class="fa fa-check"></i>Model Output</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html"><i class="fa fa-check"></i><b>1</b> Summary of Data Inputs</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#diet-inputs"><i class="fa fa-check"></i><b>1.2</b> Diet Inputs</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#counterfactual-intake"><i class="fa fa-check"></i><b>1.2.1</b> Counterfactual Intake</a></li>
+<li class="chapter" data-level="1.2.2" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#dietary-intake"><i class="fa fa-check"></i><b>1.2.2</b> Dietary Intake</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#economic-inputs"><i class="fa fa-check"></i><b>1.3</b> Economic Inputs</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#food-cost"><i class="fa fa-check"></i><b>1.3.1</b> Food Cost</a></li>
+<li class="chapter" data-level="1.3.2" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#food-at-home-fah-vs.-food-away-from-home-fafh-ratio"><i class="fa fa-check"></i><b>1.3.2</b> Food-At-Home (FAH) vs. Food-Away-From-Home (FAFH) Ratio</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#environment-inputs"><i class="fa fa-check"></i><b>1.4</b> Environment Inputs</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#greenhouse-gas-emissions-ghg-and-cumulative-energy-demand-ced-impact-factors"><i class="fa fa-check"></i><b>1.4.1</b> Greenhouse Gas Emissions (GHG) and Cumulative Energy Demand (CED) Impact Factors</a></li>
+<li class="chapter" data-level="1.4.2" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#water-scarcity-ws-and-bluewater-use-bwu-impact-factors"><i class="fa fa-check"></i><b>1.4.2</b> Water Scarcity (WS) and Bluewater Use (BWU) Impact Factors</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#health-inputs"><i class="fa fa-check"></i><b>1.5</b> Health Inputs</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#cancer-incidence"><i class="fa fa-check"></i><b>1.5.1</b> Cancer Incidence</a></li>
+<li class="chapter" data-level="1.5.2" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#cardiometabolic-disease-cmd-mortality"><i class="fa fa-check"></i><b>1.5.2</b> Cardiometabolic Disease (CMD) Mortality</a></li>
+<li class="chapter" data-level="1.5.3" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#effect-sizes-for-diet-and-body-mass-index-bmi"><i class="fa fa-check"></i><b>1.5.3</b> Effect Sizes for Diet and Body Mass Index (BMI)</a></li>
+<li class="chapter" data-level="1.5.4" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#effect-sizes-for-diet-and-systolic-blood-pressure-sbp"><i class="fa fa-check"></i><b>1.5.4</b> Effect Sizes for Diet and Systolic Blood Pressure (SBP)</a></li>
+<li class="chapter" data-level="1.5.5" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#log-relative-risks-logrr-for-diet-cancer"><i class="fa fa-check"></i><b>1.5.5</b> Log Relative Risks (LogRR) for Diet-Cancer</a></li>
+<li class="chapter" data-level="1.5.6" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#overweight-prevalence"><i class="fa fa-check"></i><b>1.5.6</b> Overweight Prevalence</a></li>
+<li class="chapter" data-level="1.5.7" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#relative-risks-rr-for-bmi-and-cancer"><i class="fa fa-check"></i><b>1.5.7</b> Relative Risks (RR) for BMI and Cancer</a></li>
+<li class="chapter" data-level="1.5.8" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#relative-risks-rr-for-bmi-and-cmd"><i class="fa fa-check"></i><b>1.5.8</b> Relative Risks (RR) for BMI and CMD</a></li>
+<li class="chapter" data-level="1.5.9" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#relative-risks-rr-for-sbp-and-cmd"><i class="fa fa-check"></i><b>1.5.9</b> Relative Risks (RR) for SBP and CMD</a></li>
+<li class="chapter" data-level="1.5.10" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#systolic-blood-pressure"><i class="fa fa-check"></i><b>1.5.10</b> Systolic Blood Pressure</a></li>
+<li class="chapter" data-level="1.5.11" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#tmred"><i class="fa fa-check"></i><b>1.5.11</b> TMRED</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#social-inputs"><i class="fa fa-check"></i><b>1.6</b> Social Inputs</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#forced-labor-risk"><i class="fa fa-check"></i><b>1.6.1</b> Forced Labor Risk</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#other-inputs"><i class="fa fa-check"></i><b>1.7</b> Other Inputs</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#mapping-from-food-group-to-fcid-code"><i class="fa fa-check"></i><b>1.7.1</b> Mapping from Food Group to FCID Code</a></li>
+<li class="chapter" data-level="1.7.2" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#mapping-from-food-group-to-fndds-code"><i class="fa fa-check"></i><b>1.7.2</b> Mapping from Food Group to FNDDS Code</a></li>
+<li class="chapter" data-level="1.7.3" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#inedible-and-wasted-food-proportions"><i class="fa fa-check"></i><b>1.7.3</b> Inedible and Wasted Food Proportions</a></li>
+<li class="chapter" data-level="1.7.4" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#labels"><i class="fa fa-check"></i><b>1.7.4</b> Labels</a></li>
+<li class="chapter" data-level="1.7.5" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#weight-conversion-units"><i class="fa fa-check"></i><b>1.7.5</b> Weight Conversion Units</a></li>
+<li class="chapter" data-level="1.7.6" data-path="summary-of-data-inputs.html"><a href="summary-of-data-inputs.html#u.s.-population-size"><i class="fa fa-check"></i><b>1.7.6</b> U.S. Population Size</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html"><i class="fa fa-check"></i><b>2</b> Cleaning Code for NHANES Diet Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#processed-and-organ-meat"><i class="fa fa-check"></i><b>2.1</b> Processed and Organ Meat</a></li>
+<li class="chapter" data-level="2.2" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#id"><i class="fa fa-check"></i><b>2.2</b> Clean Raw NHANES Data</a></li>
+<li class="chapter" data-level="2.3" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#create-sugar-sweetened-beverage-ssb-variables"><i class="fa fa-check"></i><b>2.3</b> Create Sugar Sweetened Beverage (SSB) Variables</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#import-and-merge-data-inputs"><i class="fa fa-check"></i><b>2.3.1</b> Import and Merge Data Inputs</a></li>
+<li class="chapter" data-level="2.3.2" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#create-ssb-indicator-variable"><i class="fa fa-check"></i><b>2.3.2</b> Create SSB Indicator Variable</a></li>
+<li class="chapter" data-level="2.3.3" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#calculate-ssb-intake"><i class="fa fa-check"></i><b>2.3.3</b> Calculate SSB Intake</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#energy-adjustment"><i class="fa fa-check"></i><b>2.4</b> Energy Adjustment</a></li>
+<li class="chapter" data-level="2.5" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#sas-macro"><i class="fa fa-check"></i><b>2.5</b> Calculating Mean and Standard Deviation Using SAS Macros</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#prepare-nhanes-data-for-sas-macros"><i class="fa fa-check"></i><b>2.5.1</b> Prepare NHANES Data for SAS Macros</a></li>
+<li class="chapter" data-level="2.5.2" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#fill-out-macro-template"><i class="fa fa-check"></i><b>2.5.2</b> Fill Out Macro Template</a></li>
+<li class="chapter" data-level="2.5.3" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#log-in-to-tufts-hpc"><i class="fa fa-check"></i><b>2.5.3</b> Log In to Tufts HPC</a></li>
+<li class="chapter" data-level="2.5.4" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#run-sas-macro"><i class="fa fa-check"></i><b>2.5.4</b> Run SAS Macro</a></li>
+<li class="chapter" data-level="2.5.5" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#export-output-to-box"><i class="fa fa-check"></i><b>2.5.5</b> Export Output to Box</a></li>
+<li class="chapter" data-level="2.5.6" data-path="cleaning-code-for-nhanes-diet-data.html"><a href="cleaning-code-for-nhanes-diet-data.html#clean-output-from-cluster"><i class="fa fa-check"></i><b>2.5.6</b> Clean Output from Cluster</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html"><i class="fa fa-check"></i><b>3</b> Cleaning Code for Health Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#create-final-data-inputs"><i class="fa fa-check"></i><b>3.1</b> Create Final Data Inputs</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#other-data-inputs"><i class="fa fa-check"></i><b>3.1.1</b> Other Data Inputs</a></li>
+<li class="chapter" data-level="3.1.2" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#health-data-inputs"><i class="fa fa-check"></i><b>3.1.2</b> Health Data Inputs</a></li>
+<li class="chapter" data-level="3.1.3" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#diet-data-inputs"><i class="fa fa-check"></i><b>3.1.3</b> Diet Data Inputs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#clean-health-datasets"><i class="fa fa-check"></i><b>3.2</b> Clean Health Datasets</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#cancer-incidence-and-2-cvd-mortality"><i class="fa fa-check"></i><b>3.2.1</b> (1) Cancer incidence and (2) CVD mortality</a></li>
+<li class="chapter" data-level="3.2.2" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#effect-sizes-for-diet-and-bmi-and-4-diet-and-sbp"><i class="fa fa-check"></i><b>3.2.2</b> (3) Effect sizes for diet and BMI and (4) diet and SBP</a></li>
+<li class="chapter" data-level="3.2.3" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#rrs-for-bmi-and-cancer-and-6-for-bmi-and-cvd"><i class="fa fa-check"></i><b>3.2.3</b> (5) RRs for BMI and cancer and (6) for BMI and CVD</a></li>
+<li class="chapter" data-level="3.2.4" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#logrrs-for-diet-and-cancer-and-8-for-diet-and-cvd"><i class="fa fa-check"></i><b>3.2.4</b> (7) LogRRs for diet and cancer and (8) for diet and CVD</a></li>
+<li class="chapter" data-level="3.2.5" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#rrs-for-sbp-and-cvd"><i class="fa fa-check"></i><b>3.2.5</b> (9) RRs for SBP and CVD</a></li>
+<li class="chapter" data-level="3.2.6" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#current-intake-nhanes-11-tmred-12-counterfactual-and-13-other-health-data"><i class="fa fa-check"></i><b>3.2.6</b> (10) Current intake (NHANES), (11) TMRED, (12) Counterfactual, and (13) Other health data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="cleaning-code-for-health-data.html"><a href="cleaning-code-for-health-data.html#restructure-data"><i class="fa fa-check"></i><b>3.3</b> Restructure data</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cleaning-code-for-environment-data.html"><a href="cleaning-code-for-environment-data.html"><i class="fa fa-check"></i><b>4</b> Cleaning Code for Environment Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cleaning-code-for-environment-data.html"><a href="cleaning-code-for-environment-data.html#clean-and-restructure-intermediary-datasets"><i class="fa fa-check"></i><b>4.1</b> Clean and Restructure Intermediary Datasets</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="cleaning-code-for-environment-data.html"><a href="cleaning-code-for-environment-data.html#import-and-merge-data-inputs-1"><i class="fa fa-check"></i><b>4.1.1</b> Import and Merge Data Inputs</a></li>
+<li class="chapter" data-level="4.1.2" data-path="cleaning-code-for-environment-data.html"><a href="cleaning-code-for-environment-data.html#calculate-average-environmental-and-social-impact-per-fcid-code"><i class="fa fa-check"></i><b>4.1.2</b> Calculate Average Environmental and Social Impact, Per FCID Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cleaning-code-for-cost-data.html"><a href="cleaning-code-for-cost-data.html"><i class="fa fa-check"></i><b>5</b> Cleaning Code for Cost Data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cleaning-code-for-cost-data.html"><a href="cleaning-code-for-cost-data.html#clean-and-restructure-intermediary-datasets-1"><i class="fa fa-check"></i><b>5.1</b> Clean and Restructure Intermediary Datasets</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="cleaning-code-for-cost-data.html"><a href="cleaning-code-for-cost-data.html#import-and-merge-data-inputs-2"><i class="fa fa-check"></i><b>5.1.1</b> Import and Merge Data Inputs</a></li>
+<li class="chapter" data-level="5.1.2" data-path="cleaning-code-for-cost-data.html"><a href="cleaning-code-for-cost-data.html#calculate-average-food-cost-per-fndds-food-code"><i class="fa fa-check"></i><b>5.1.2</b> Calculate Average Food Cost, Per FNDDS Food Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html"><i class="fa fa-check"></i><b>6</b> Calculate Cost, Environment, and Social Impact Factors</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#prepare-data"><i class="fa fa-check"></i><b>6.1</b> Prepare Data</a></li>
+<li class="chapter" data-level="6.2" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors"><i class="fa fa-check"></i><b>6.2</b> Cost Impact Factors</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors-by-food-by-subgroup"><i class="fa fa-check"></i><b>6.2.1</b> Cost Impact Factors, by Food, by Subgroup</a></li>
+<li class="chapter" data-level="6.2.2" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#cost-impact-factors-per-100-grams-and-per-1-dga-serving"><i class="fa fa-check"></i><b>6.2.2</b> Cost Impact Factors, Per 100 Grams and Per 1 DGA Serving</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#environmental-social-impact-factors"><i class="fa fa-check"></i><b>6.3</b> Environmental &amp; Social Impact Factors</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#environmental-social-impact-factors-by-food-by-subgroup"><i class="fa fa-check"></i><b>6.3.1</b> Environmental &amp; Social Impact Factors, by Food, by Subgroup</a></li>
+<li class="chapter" data-level="6.3.2" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#environmentsocial-impact-factors-per-100-grams-and-per-1-dga-serving"><i class="fa fa-check"></i><b>6.3.2</b> Environment/Social Impact Factors, Per 100 Grams and Per 1 DGA Serving</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#finalize-impact-factors"><i class="fa fa-check"></i><b>6.4</b> Finalize Impact Factors</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#merge-cost-environment-and-social-impact-factors"><i class="fa fa-check"></i><b>6.4.1</b> Merge Cost, Environment, and Social Impact Factors</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#calculate-inedible-and-wasted-proportions"><i class="fa fa-check"></i><b>6.5</b> Calculate Inedible and Wasted Proportions</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#environmentsocial"><i class="fa fa-check"></i><b>6.5.1</b> Environment/Social</a></li>
+<li class="chapter" data-level="6.5.2" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#cost"><i class="fa fa-check"></i><b>6.5.2</b> Cost</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="calculate-cost-environment-and-social-impact-factors.html"><a href="calculate-cost-environment-and-social-impact-factors.html#export-data"><i class="fa fa-check"></i><b>6.6</b> Export Data</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="finalize-model-data-inputs.html"><a href="finalize-model-data-inputs.html"><i class="fa fa-check"></i><b>7</b> Finalize Model Data Inputs</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="finalize-model-data-inputs.html"><a href="finalize-model-data-inputs.html#clean-and-merge-all-inputs"><i class="fa fa-check"></i><b>7.1</b> Clean and Merge All Inputs</a></li>
+<li class="chapter" data-level="7.2" data-path="finalize-model-data-inputs.html"><a href="finalize-model-data-inputs.html#copy-model-inputs-to-github"><i class="fa fa-check"></i><b>7.2</b> Copy Model Inputs to GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="run-the-models.html"><a href="run-the-models.html"><i class="fa fa-check"></i><b>8</b> Run the Models</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="run-the-models.html"><a href="run-the-models.html#set-up"><i class="fa fa-check"></i><b>8.1</b> Set up</a></li>
+<li class="chapter" data-level="8.2" data-path="run-the-models.html"><a href="run-the-models.html#environmental-economic-and-social-env-eco-soc-models"><i class="fa fa-check"></i><b>8.2</b> Environmental, Economic, and Social (“env-eco-soc”) Models</a></li>
+<li class="chapter" data-level="8.3" data-path="run-the-models.html"><a href="run-the-models.html#health-models"><i class="fa fa-check"></i><b>8.3</b> Health Models</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="convert-rmd-files-to-r-files.html"><a href="convert-rmd-files-to-r-files.html"><i class="fa fa-check"></i><b>9</b> Convert RMD Files to R Files</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LASTING Four-Pillar Model Methodology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="run-the-models" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Run the Models<a href="run-the-models.html#run-the-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="set-up" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Set up<a href="run-the-models.html#set-up" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First, we clean the environment, load necessary R packages, set up pathways for code and input files.</p>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="run-the-models.html#cb246-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>(<span class="at">all =</span> <span class="cn">TRUE</span>)) <span class="co"># remove all data from memory</span></span>
+<span id="cb246-2"><a href="run-the-models.html#cb246-2" tabindex="-1"></a></span>
+<span id="cb246-3"><a href="run-the-models.html#cb246-3" tabindex="-1"></a><span class="co"># load packages</span></span>
+<span id="cb246-4"><a href="run-the-models.html#cb246-4" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb246-5"><a href="run-the-models.html#cb246-5" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb246-6"><a href="run-the-models.html#cb246-6" tabindex="-1"></a><span class="fu">library</span>(foreach)</span>
+<span id="cb246-7"><a href="run-the-models.html#cb246-7" tabindex="-1"></a><span class="fu">library</span>(doParallel)</span>
+<span id="cb246-8"><a href="run-the-models.html#cb246-8" tabindex="-1"></a></span>
+<span id="cb246-9"><a href="run-the-models.html#cb246-9" tabindex="-1"></a><span class="co"># File location</span></span>
+<span id="cb246-10"><a href="run-the-models.html#cb246-10" tabindex="-1"></a>file_location <span class="ot">=</span> <span class="st">&quot;data_inputs/FINAL/model_data/&quot;</span></span>
+<span id="cb246-11"><a href="run-the-models.html#cb246-11" tabindex="-1"></a></span>
+<span id="cb246-12"><a href="run-the-models.html#cb246-12" tabindex="-1"></a><span class="co"># Code location</span></span>
+<span id="cb246-13"><a href="run-the-models.html#cb246-13" tabindex="-1"></a>code_location <span class="ot">=</span> <span class="st">&quot;code/&quot;</span></span>
+<span id="cb246-14"><a href="run-the-models.html#cb246-14" tabindex="-1"></a></span>
+<span id="cb246-15"><a href="run-the-models.html#cb246-15" tabindex="-1"></a><span class="co"># Set the seed</span></span>
+<span id="cb246-16"><a href="run-the-models.html#cb246-16" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3172023</span>)</span>
+<span id="cb246-17"><a href="run-the-models.html#cb246-17" tabindex="-1"></a></span>
+<span id="cb246-18"><a href="run-the-models.html#cb246-18" tabindex="-1"></a><span class="co"># set data version date</span></span>
+<span id="cb246-19"><a href="run-the-models.html#cb246-19" tabindex="-1"></a><span class="co"># set manually in case the day you calculated the input files is not today</span></span>
+<span id="cb246-20"><a href="run-the-models.html#cb246-20" tabindex="-1"></a>version.date <span class="ot">&lt;-</span> <span class="st">&quot;2026-06-21&quot;</span></span>
+<span id="cb246-21"><a href="run-the-models.html#cb246-21" tabindex="-1"></a></span>
+<span id="cb246-22"><a href="run-the-models.html#cb246-22" tabindex="-1"></a><span class="co"># Create parent output directory with today&#39;s date</span></span>
+<span id="cb246-23"><a href="run-the-models.html#cb246-23" tabindex="-1"></a><span class="co"># Create directory if it doesn&#39;t already exist</span></span>
+<span id="cb246-24"><a href="run-the-models.html#cb246-24" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="st">&quot;outputs/model/output_&quot;</span>, <span class="fu">Sys.Date</span>()))),</span>
+<span id="cb246-25"><a href="run-the-models.html#cb246-25" tabindex="-1"></a>       <span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="st">&quot;outputs/model/output_&quot;</span>, <span class="fu">Sys.Date</span>()))),</span>
+<span id="cb246-26"><a href="run-the-models.html#cb246-26" tabindex="-1"></a>       <span class="st">&quot;Directory Exists&quot;</span>)</span>
+<span id="cb246-27"><a href="run-the-models.html#cb246-27" tabindex="-1"></a></span>
+<span id="cb246-28"><a href="run-the-models.html#cb246-28" tabindex="-1"></a><span class="co"># set output directory</span></span>
+<span id="cb246-29"><a href="run-the-models.html#cb246-29" tabindex="-1"></a>output_dir <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;outputs/model/output_&quot;</span>, <span class="fu">Sys.Date</span>(), <span class="st">&quot;/&quot;</span>)</span></code></pre></div>
+<p>Start clock so you can get an idea of how long the code takes to run.</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="run-the-models.html#cb247-1" tabindex="-1"></a>start_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span></code></pre></div>
+<p>Create output folders.</p>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="run-the-models.html#cb248-1" tabindex="-1"></a><span class="co"># output from environmental, economic, and social (`envecosoc`) models</span></span>
+<span id="cb248-2"><a href="run-the-models.html#cb248-2" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(output_dir, <span class="st">&quot;envecosoc&quot;</span>))),</span>
+<span id="cb248-3"><a href="run-the-models.html#cb248-3" tabindex="-1"></a>       <span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(output_dir, <span class="st">&quot;envecosoc&quot;</span>))),</span>
+<span id="cb248-4"><a href="run-the-models.html#cb248-4" tabindex="-1"></a>       <span class="st">&quot;Directory Exists&quot;</span>)</span>
+<span id="cb248-5"><a href="run-the-models.html#cb248-5" tabindex="-1"></a></span>
+<span id="cb248-6"><a href="run-the-models.html#cb248-6" tabindex="-1"></a><span class="co"># output from comparative risk assessments (`cra`)</span></span>
+<span id="cb248-7"><a href="run-the-models.html#cb248-7" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(output_dir, <span class="st">&quot;CRA&quot;</span>))),</span>
+<span id="cb248-8"><a href="run-the-models.html#cb248-8" tabindex="-1"></a>       <span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(output_dir, <span class="st">&quot;CRA&quot;</span>))),</span>
+<span id="cb248-9"><a href="run-the-models.html#cb248-9" tabindex="-1"></a>       <span class="st">&quot;Directory Exists&quot;</span>)</span></code></pre></div>
+<p><code>year.vec.string</code> allows us to include the specified years of interest as part of the output names. Note that this is strictly for naming output files. The code itself only uses input files that correspond to a particular time point. It does not calculate estimates for multiple time points nor should you be feeding it input files with multiple time points. If you are doing analyses for multiple time points, the easiest way to do it is to have input files for each time point of interest, and then the rerunning the code, making sure to change “year.vec” here so that the output file names differ by year.</p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="run-the-models.html#cb249-1" tabindex="-1"></a>year.vec <span class="ot">&lt;-</span> <span class="dv">2015</span></span>
+<span id="cb249-2"><a href="run-the-models.html#cb249-2" tabindex="-1"></a></span>
+<span id="cb249-3"><a href="run-the-models.html#cb249-3" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">length</span>(year.vec) <span class="sc">&gt;</span> <span class="dv">1</span>) {</span>
+<span id="cb249-4"><a href="run-the-models.html#cb249-4" tabindex="-1"></a>  </span>
+<span id="cb249-5"><a href="run-the-models.html#cb249-5" tabindex="-1"></a>  year.vec.string <span class="ot">&lt;-</span> <span class="fu">paste</span>(year.vec[<span class="dv">1</span>], <span class="st">&quot;-&quot;</span>, year.vec[<span class="fu">length</span>(year.vec)], <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb249-6"><a href="run-the-models.html#cb249-6" tabindex="-1"></a>  </span>
+<span id="cb249-7"><a href="run-the-models.html#cb249-7" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb249-8"><a href="run-the-models.html#cb249-8" tabindex="-1"></a>  </span>
+<span id="cb249-9"><a href="run-the-models.html#cb249-9" tabindex="-1"></a>  year.vec.string <span class="ot">&lt;-</span> <span class="fu">as.character</span>(year.vec)</span>
+<span id="cb249-10"><a href="run-the-models.html#cb249-10" tabindex="-1"></a>  </span>
+<span id="cb249-11"><a href="run-the-models.html#cb249-11" tabindex="-1"></a>  }</span></code></pre></div>
+<p>Set number of simulations to 1,000.</p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="run-the-models.html#cb250-1" tabindex="-1"></a><span class="co"># Number of simulations</span></span>
+<span id="cb250-2"><a href="run-the-models.html#cb250-2" tabindex="-1"></a><span class="co"># Set to 3 for testing</span></span>
+<span id="cb250-3"><a href="run-the-models.html#cb250-3" tabindex="-1"></a></span>
+<span id="cb250-4"><a href="run-the-models.html#cb250-4" tabindex="-1"></a>nsim1 <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb250-5"><a href="run-the-models.html#cb250-5" tabindex="-1"></a>n.sims <span class="ot">&lt;-</span> nsim1</span></code></pre></div>
+<p>Specify the demographic subgroups of interest. The names used for the subgroups should match what is used in the primary input file.</p>
+<p>For the purposes of this project, let’s formalize some of the terms to reduce confusion. “Subgroup” will denote the 48 unique age/sex/race combinations that we divide the population into. The “strata” are the variables used to divide up a data set. For example, the 48 subgroups are a result of dividing up the population using three strata: age, sex, race. Age/sex/race is one example of a “strata combination”.</p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="run-the-models.html#cb251-1" tabindex="-1"></a><span class="co"># Covariates vector</span></span>
+<span id="cb251-2"><a href="run-the-models.html#cb251-2" tabindex="-1"></a>covar.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Age&quot;</span>, <span class="st">&quot;Sex&quot;</span>, <span class="st">&quot;Race&quot;</span>) <span class="co"># Don&#39;t mess with the order age, sex, race</span></span>
+<span id="cb251-3"><a href="run-the-models.html#cb251-3" tabindex="-1"></a>covar.vec.string <span class="ot">&lt;-</span> <span class="fu">paste</span>(covar.vec, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb251-4"><a href="run-the-models.html#cb251-4" tabindex="-1"></a>n.covar <span class="ot">&lt;-</span> <span class="fu">length</span>(covar.vec)</span></code></pre></div>
+<p>Identify all dietary patterns of interest here. Names should match “diet_pattern” column in the input data file (input_data.csv).</p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="run-the-models.html#cb252-1" tabindex="-1"></a><span class="co"># Vector of dietary patterns</span></span>
+<span id="cb252-2"><a href="run-the-models.html#cb252-2" tabindex="-1"></a>diet.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;US&quot;</span>,</span>
+<span id="cb252-3"><a href="run-the-models.html#cb252-3" tabindex="-1"></a>              <span class="st">&quot;Med&quot;</span>)</span>
+<span id="cb252-4"><a href="run-the-models.html#cb252-4" tabindex="-1"></a>              <span class="co"># ,</span></span>
+<span id="cb252-5"><a href="run-the-models.html#cb252-5" tabindex="-1"></a>              <span class="co"># &quot;Vegetarian&quot;,</span></span>
+<span id="cb252-6"><a href="run-the-models.html#cb252-6" tabindex="-1"></a>              <span class="co"># &quot;Vegan&quot;, </span></span>
+<span id="cb252-7"><a href="run-the-models.html#cb252-7" tabindex="-1"></a>              <span class="co"># &quot;DGAplus&quot;</span></span>
+<span id="cb252-8"><a href="run-the-models.html#cb252-8" tabindex="-1"></a>              <span class="co"># )</span></span>
+<span id="cb252-9"><a href="run-the-models.html#cb252-9" tabindex="-1"></a></span>
+<span id="cb252-10"><a href="run-the-models.html#cb252-10" tabindex="-1"></a><span class="co"># eventually change to prettier labels: HUS, Med, Veg, Vegan, CDP</span></span></code></pre></div>
+</div>
+<div id="environmental-economic-and-social-env-eco-soc-models" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Environmental, Economic, and Social (“env-eco-soc”) Models<a href="run-the-models.html#environmental-economic-and-social-env-eco-soc-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Identify all environmental, economic, social pillar outcomes.</p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="run-the-models.html#cb253-1" tabindex="-1"></a><span class="co"># here is where you specify the outcomes you want to run</span></span>
+<span id="cb253-2"><a href="run-the-models.html#cb253-2" tabindex="-1"></a>envecosoc.outcomes.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb253-3"><a href="run-the-models.html#cb253-3" tabindex="-1"></a>                     <span class="co"># &quot;CED&quot;, # environmental</span></span>
+<span id="cb253-4"><a href="run-the-models.html#cb253-4" tabindex="-1"></a>                     <span class="st">&quot;GHG&quot;</span></span>
+<span id="cb253-5"><a href="run-the-models.html#cb253-5" tabindex="-1"></a>                     <span class="co"># , # environmental</span></span>
+<span id="cb253-6"><a href="run-the-models.html#cb253-6" tabindex="-1"></a>                     <span class="co"># &quot;WATER&quot;, # environmental</span></span>
+<span id="cb253-7"><a href="run-the-models.html#cb253-7" tabindex="-1"></a>                     <span class="co"># &quot;Food_price&quot;, # economic</span></span>
+<span id="cb253-8"><a href="run-the-models.html#cb253-8" tabindex="-1"></a>                     <span class="co"># &quot;FL&quot; # social</span></span>
+<span id="cb253-9"><a href="run-the-models.html#cb253-9" tabindex="-1"></a>                     )</span>
+<span id="cb253-10"><a href="run-the-models.html#cb253-10" tabindex="-1"></a></span>
+<span id="cb253-11"><a href="run-the-models.html#cb253-11" tabindex="-1"></a><span class="co"># don&#39;t change this</span></span>
+<span id="cb253-12"><a href="run-the-models.html#cb253-12" tabindex="-1"></a><span class="co"># you must list all possible outcomes here for the code to run </span></span>
+<span id="cb253-13"><a href="run-the-models.html#cb253-13" tabindex="-1"></a>all.outcomes.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb253-14"><a href="run-the-models.html#cb253-14" tabindex="-1"></a>  <span class="st">&quot;CED&quot;</span>,</span>
+<span id="cb253-15"><a href="run-the-models.html#cb253-15" tabindex="-1"></a>  <span class="st">&quot;GHG&quot;</span>,</span>
+<span id="cb253-16"><a href="run-the-models.html#cb253-16" tabindex="-1"></a>  <span class="st">&quot;WATER&quot;</span>,</span>
+<span id="cb253-17"><a href="run-the-models.html#cb253-17" tabindex="-1"></a>  <span class="st">&quot;BLUEWATER&quot;</span>,</span>
+<span id="cb253-18"><a href="run-the-models.html#cb253-18" tabindex="-1"></a>  <span class="st">&quot;Food_price&quot;</span>,</span>
+<span id="cb253-19"><a href="run-the-models.html#cb253-19" tabindex="-1"></a>  <span class="st">&quot;FL&quot;</span></span>
+<span id="cb253-20"><a href="run-the-models.html#cb253-20" tabindex="-1"></a>  )</span></code></pre></div>
+<p>Create vectors to store outcomes.</p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="run-the-models.html#cb254-1" tabindex="-1"></a>n.envecosoc.outcomes <span class="ot">&lt;-</span> <span class="fu">length</span>(envecosoc.outcomes.vec)</span>
+<span id="cb254-2"><a href="run-the-models.html#cb254-2" tabindex="-1"></a>envecosoc.outcomes.vec.mn <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;Mean&quot;</span>, envecosoc.outcomes.vec,  <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span>
+<span id="cb254-3"><a href="run-the-models.html#cb254-3" tabindex="-1"></a>envecosoc.outcomes.vec.se <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;SE&quot;</span>, envecosoc.outcomes.vec, <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span>
+<span id="cb254-4"><a href="run-the-models.html#cb254-4" tabindex="-1"></a>envecosoc.current.inedible.p.mn <span class="ot">&lt;-</span> <span class="fu">paste</span>(envecosoc.outcomes.vec, <span class="st">&quot;_inedible_p&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb254-5"><a href="run-the-models.html#cb254-5" tabindex="-1"></a>envecosoc.current.inedible.p.se <span class="ot">&lt;-</span> <span class="fu">paste</span>(envecosoc.outcomes.vec, <span class="st">&quot;_inedible_p_se&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb254-6"><a href="run-the-models.html#cb254-6" tabindex="-1"></a>envecosoc.counterfactual.inedible.p.mn <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;CF_&quot;</span>,envecosoc.outcomes.vec, <span class="st">&quot;_inedible_p&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb254-7"><a href="run-the-models.html#cb254-7" tabindex="-1"></a>envecosoc.counterfactual.inedible.p.se <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;CF_&quot;</span>, envecosoc.outcomes.vec, <span class="st">&quot;_inedible_p_se&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb254-8"><a href="run-the-models.html#cb254-8" tabindex="-1"></a>envecosoc.current.foodwaste.p.mn <span class="ot">&lt;-</span> <span class="fu">paste</span>(envecosoc.outcomes.vec, <span class="st">&quot;_foodwaste_p&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb254-9"><a href="run-the-models.html#cb254-9" tabindex="-1"></a>envecosoc.current.foodwaste.p.se <span class="ot">&lt;-</span> <span class="fu">paste</span>(envecosoc.outcomes.vec, <span class="st">&quot;_foodwaste_p_se&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb254-10"><a href="run-the-models.html#cb254-10" tabindex="-1"></a>envecosoc.counterfactual.foodwaste.p.mn <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;CF_&quot;</span>, envecosoc.outcomes.vec, <span class="st">&quot;_foodwaste_p&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb254-11"><a href="run-the-models.html#cb254-11" tabindex="-1"></a>envecosoc.counterfactual.foodwaste.p.se <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;CF_&quot;</span>, envecosoc.outcomes.vec, <span class="st">&quot;_foodwaste_p_se&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb254-12"><a href="run-the-models.html#cb254-12" tabindex="-1"></a>num.envecosoc.outcomes <span class="ot">&lt;-</span> <span class="fu">length</span>(envecosoc.outcomes.vec.mn)</span>
+<span id="cb254-13"><a href="run-the-models.html#cb254-13" tabindex="-1"></a>envecosoc.outcomes.substitution.vec.mn <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;Mean_substitution&quot;</span>, envecosoc.outcomes.vec, <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span>
+<span id="cb254-14"><a href="run-the-models.html#cb254-14" tabindex="-1"></a>envecosoc.outcomes.substitution.vec.se <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;SE_substitution&quot;</span>, envecosoc.outcomes.vec, <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span></code></pre></div>
+<p>List dietary factors of interest here. Certain dietary factors are only of interest for environment/social (FCID-level), others only for economic (FNDDS-level). But all dietary factors of interest in those three pillars should be listed here. Names should match what is used in the data input file.</p>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="run-the-models.html#cb255-1" tabindex="-1"></a><span class="co"># Dietary factors vector (for env-eco-soc)</span></span>
+<span id="cb255-2"><a href="run-the-models.html#cb255-2" tabindex="-1"></a>rfvec_envecosoc <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="co"># Dairy</span></span>
+<span id="cb255-3"><a href="run-the-models.html#cb255-3" tabindex="-1"></a>               <span class="co">#     &quot;dairy_tot&quot;, # cost</span></span>
+<span id="cb255-4"><a href="run-the-models.html#cb255-4" tabindex="-1"></a>               <span class="co">#     &quot;dairy_cow&quot;, # enviro</span></span>
+<span id="cb255-5"><a href="run-the-models.html#cb255-5" tabindex="-1"></a>               <span class="co">#     &quot;dairy_soy&quot;, # enviro</span></span>
+<span id="cb255-6"><a href="run-the-models.html#cb255-6" tabindex="-1"></a>               <span class="co"># </span></span>
+<span id="cb255-7"><a href="run-the-models.html#cb255-7" tabindex="-1"></a>               <span class="co"># &quot;gr_whole&quot;,</span></span>
+<span id="cb255-8"><a href="run-the-models.html#cb255-8" tabindex="-1"></a>               <span class="co"># &quot;gr_refined&quot;,</span></span>
+<span id="cb255-9"><a href="run-the-models.html#cb255-9" tabindex="-1"></a>               <span class="co"># &quot;pf_egg&quot;,</span></span>
+<span id="cb255-10"><a href="run-the-models.html#cb255-10" tabindex="-1"></a>               <span class="co"># </span></span>
+<span id="cb255-11"><a href="run-the-models.html#cb255-11" tabindex="-1"></a>               <span class="co"># # Meat</span></span>
+<span id="cb255-12"><a href="run-the-models.html#cb255-12" tabindex="-1"></a>               <span class="co"># &quot;pf_pm&quot;, # cost</span></span>
+<span id="cb255-13"><a href="run-the-models.html#cb255-13" tabindex="-1"></a>               <span class="co"># &quot;pf_redm&quot;, # cost</span></span>
+<span id="cb255-14"><a href="run-the-models.html#cb255-14" tabindex="-1"></a>               <span class="co"># &quot;pf_redm_tot&quot;, # enviro</span></span>
+<span id="cb255-15"><a href="run-the-models.html#cb255-15" tabindex="-1"></a>               <span class="co"># &quot;pf_poultry&quot;, # cost</span></span>
+<span id="cb255-16"><a href="run-the-models.html#cb255-16" tabindex="-1"></a>               <span class="co"># &quot;pf_poultry_tot&quot;, # enviro</span></span>
+<span id="cb255-17"><a href="run-the-models.html#cb255-17" tabindex="-1"></a>               <span class="co"># </span></span>
+<span id="cb255-18"><a href="run-the-models.html#cb255-18" tabindex="-1"></a>               <span class="co"># &quot;pf_seafood&quot;,</span></span>
+<span id="cb255-19"><a href="run-the-models.html#cb255-19" tabindex="-1"></a>               <span class="co"># &quot;pf_ns&quot;,</span></span>
+<span id="cb255-20"><a href="run-the-models.html#cb255-20" tabindex="-1"></a>               <span class="co"># &quot;leg_tot&quot;,</span></span>
+<span id="cb255-21"><a href="run-the-models.html#cb255-21" tabindex="-1"></a>               <span class="co"># </span></span>
+<span id="cb255-22"><a href="run-the-models.html#cb255-22" tabindex="-1"></a>               <span class="co"># &quot;veg_dg&quot;,</span></span>
+<span id="cb255-23"><a href="run-the-models.html#cb255-23" tabindex="-1"></a>               <span class="co"># &quot;veg_ro&quot;,</span></span>
+<span id="cb255-24"><a href="run-the-models.html#cb255-24" tabindex="-1"></a>               <span class="co"># &quot;veg_oth&quot;,</span></span>
+<span id="cb255-25"><a href="run-the-models.html#cb255-25" tabindex="-1"></a>               <span class="co"># &quot;veg_sta&quot;,</span></span>
+<span id="cb255-26"><a href="run-the-models.html#cb255-26" tabindex="-1"></a>               <span class="co"># </span></span>
+<span id="cb255-27"><a href="run-the-models.html#cb255-27" tabindex="-1"></a>               <span class="st">&quot;fruit_exc_juice&quot;</span></span>
+<span id="cb255-28"><a href="run-the-models.html#cb255-28" tabindex="-1"></a>               <span class="co"># ,</span></span>
+<span id="cb255-29"><a href="run-the-models.html#cb255-29" tabindex="-1"></a>               <span class="co"># &quot;fruit_juice&quot;,</span></span>
+<span id="cb255-30"><a href="run-the-models.html#cb255-30" tabindex="-1"></a></span>
+<span id="cb255-31"><a href="run-the-models.html#cb255-31" tabindex="-1"></a>               <span class="co"># &quot;added_sugar&quot;,</span></span>
+<span id="cb255-32"><a href="run-the-models.html#cb255-32" tabindex="-1"></a>               <span class="co"># &quot;oil&quot;,</span></span>
+<span id="cb255-33"><a href="run-the-models.html#cb255-33" tabindex="-1"></a>               <span class="co"># &quot;sat_fat&quot;</span></span>
+<span id="cb255-34"><a href="run-the-models.html#cb255-34" tabindex="-1"></a>               )</span></code></pre></div>
+<p>Import data input file and rename some variables, subset for env-eco-soc analyses.</p>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="run-the-models.html#cb256-1" tabindex="-1"></a><span class="co"># Import exposure file</span></span>
+<span id="cb256-2"><a href="run-the-models.html#cb256-2" tabindex="-1"></a>primary_input <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">paste0</span>(file_location, <span class="st">&quot;input_data_&quot;</span>, version.date, <span class="st">&quot;.csv&quot;</span>))</span>
+<span id="cb256-3"><a href="run-the-models.html#cb256-3" tabindex="-1"></a></span>
+<span id="cb256-4"><a href="run-the-models.html#cb256-4" tabindex="-1"></a><span class="co"># rename vars</span></span>
+<span id="cb256-5"><a href="run-the-models.html#cb256-5" tabindex="-1"></a>primary_input1 <span class="ot">&lt;-</span> primary_input <span class="sc">%&gt;%</span> </span>
+<span id="cb256-6"><a href="run-the-models.html#cb256-6" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">population =</span> Population_size,</span>
+<span id="cb256-7"><a href="run-the-models.html#cb256-7" tabindex="-1"></a>           <span class="at">subgroup =</span> subgroup_id,</span>
+<span id="cb256-8"><a href="run-the-models.html#cb256-8" tabindex="-1"></a>           <span class="co"># fix veg name</span></span>
+<span id="cb256-9"><a href="run-the-models.html#cb256-9" tabindex="-1"></a>           <span class="at">diet_pattern =</span> <span class="fu">case_match</span>(diet_pattern,</span>
+<span id="cb256-10"><a href="run-the-models.html#cb256-10" tabindex="-1"></a>                                      <span class="st">&quot;Vegetarian&quot;</span> <span class="sc">~</span> <span class="st">&quot;Veg&quot;</span>,</span>
+<span id="cb256-11"><a href="run-the-models.html#cb256-11" tabindex="-1"></a>                                      <span class="at">.default =</span> diet_pattern))</span>
+<span id="cb256-12"><a href="run-the-models.html#cb256-12" tabindex="-1"></a></span>
+<span id="cb256-13"><a href="run-the-models.html#cb256-13" tabindex="-1"></a><span class="co"># subset to only include dietary factors for cost/env analysis</span></span>
+<span id="cb256-14"><a href="run-the-models.html#cb256-14" tabindex="-1"></a>primary_input_envecosoc <span class="ot">&lt;-</span> <span class="fu">subset</span>(primary_input1, Foodgroup <span class="sc">%in%</span> rfvec_envecosoc)</span></code></pre></div>
+<p>Create lists to store input and locations for output (by diet pattern and grocery/non-grocery). Each element of a list corresponds to a particular dietary pattern and “datatype” (grocery vs non-grocery).</p>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="run-the-models.html#cb257-1" tabindex="-1"></a><span class="co"># Create some more vectors</span></span>
+<span id="cb257-2"><a href="run-the-models.html#cb257-2" tabindex="-1"></a>envecosoc_inputs.vec <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb257-3"><a href="run-the-models.html#cb257-3" tabindex="-1"></a>envecosoc_output_loc.vec <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb257-4"><a href="run-the-models.html#cb257-4" tabindex="-1"></a></span>
+<span id="cb257-5"><a href="run-the-models.html#cb257-5" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(diet.vec)) {</span>
+<span id="cb257-6"><a href="run-the-models.html#cb257-6" tabindex="-1"></a></span>
+<span id="cb257-7"><a href="run-the-models.html#cb257-7" tabindex="-1"></a>  envecosoc_inputs.vec[[<span class="fu">paste0</span>(diet.vec[[i]], <span class="st">&quot;_fah&quot;</span>)]] <span class="ot">&lt;-</span> </span>
+<span id="cb257-8"><a href="run-the-models.html#cb257-8" tabindex="-1"></a>    <span class="fu">subset</span>(primary_input_envecosoc, diet_pattern <span class="sc">==</span> diet.vec[[i]] <span class="sc">&amp;</span> datatype <span class="sc">==</span> <span class="st">&quot;Grocery&quot;</span>)</span>
+<span id="cb257-9"><a href="run-the-models.html#cb257-9" tabindex="-1"></a>  </span>
+<span id="cb257-10"><a href="run-the-models.html#cb257-10" tabindex="-1"></a>  envecosoc_inputs.vec[[<span class="fu">paste0</span>(diet.vec[[i]], <span class="st">&quot;_fafh&quot;</span>)]] <span class="ot">&lt;-</span> </span>
+<span id="cb257-11"><a href="run-the-models.html#cb257-11" tabindex="-1"></a>    <span class="fu">subset</span>(primary_input_envecosoc, diet_pattern <span class="sc">==</span> diet.vec[[i]] <span class="sc">&amp;</span> datatype <span class="sc">==</span> <span class="st">&quot;Non-Grocery&quot;</span>)</span>
+<span id="cb257-12"><a href="run-the-models.html#cb257-12" tabindex="-1"></a></span>
+<span id="cb257-13"><a href="run-the-models.html#cb257-13" tabindex="-1"></a>  <span class="co"># Output locations vector</span></span>
+<span id="cb257-14"><a href="run-the-models.html#cb257-14" tabindex="-1"></a>  envecosoc_output_loc.vec[[<span class="fu">paste0</span>(diet.vec[[i]], <span class="st">&quot;_fah&quot;</span>)]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(diet.vec[[i]], <span class="st">&quot;_diet_Gro&quot;</span>)</span>
+<span id="cb257-15"><a href="run-the-models.html#cb257-15" tabindex="-1"></a>  envecosoc_output_loc.vec[[<span class="fu">paste0</span>(diet.vec[[i]], <span class="st">&quot;_fafh&quot;</span>)]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(diet.vec[[i]], <span class="st">&quot;_diet_Oth&quot;</span>)</span>
+<span id="cb257-16"><a href="run-the-models.html#cb257-16" tabindex="-1"></a></span>
+<span id="cb257-17"><a href="run-the-models.html#cb257-17" tabindex="-1"></a>}</span></code></pre></div>
+<p>Read in subgroup-specific population numbers.</p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="run-the-models.html#cb258-1" tabindex="-1"></a><span class="co"># Population</span></span>
+<span id="cb258-2"><a href="run-the-models.html#cb258-2" tabindex="-1"></a>pop <span class="ot">&lt;-</span> envecosoc_inputs.vec[[<span class="dv">1</span>]] <span class="sc">%&gt;%</span> </span>
+<span id="cb258-3"><a href="run-the-models.html#cb258-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Sex =</span> <span class="fu">as.character</span>(Sex)) <span class="sc">%&gt;%</span></span>
+<span id="cb258-4"><a href="run-the-models.html#cb258-4" tabindex="-1"></a>  <span class="fu">filter</span>(datatype <span class="sc">==</span> <span class="st">&quot;Grocery&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb258-5"><a href="run-the-models.html#cb258-5" tabindex="-1"></a>  <span class="fu">select</span>(subgroup, Age, Age_label, Sex, Sex_label, Race, Race_label, population) <span class="sc">%&gt;%</span></span>
+<span id="cb258-6"><a href="run-the-models.html#cb258-6" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb258-7"><a href="run-the-models.html#cb258-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">population.se =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb258-8"><a href="run-the-models.html#cb258-8" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">is.na</span>(subgroup))) <span class="sc">%&gt;%</span> </span>
+<span id="cb258-9"><a href="run-the-models.html#cb258-9" tabindex="-1"></a>  <span class="fu">arrange</span>(subgroup)</span></code></pre></div>
+<p>Next, simulate distribution for total population numbers (in our cases, since population standard errors are set to 0, we’re just repeating the same pop count for each simulation).</p>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="run-the-models.html#cb259-1" tabindex="-1"></a><span class="co"># pre-simulate total population numbers</span></span>
+<span id="cb259-2"><a href="run-the-models.html#cb259-2" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">paste0</span>(code_location, <span class="st">&quot;source_code/presimulate_pop_draws.r&quot;</span>))</span></code></pre></div>
+<p>Run the env-eco-soc simulations via a for-loop (for each pair of dietary pattern and grocery/non-grocery combo).</p>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="run-the-models.html#cb260-1" tabindex="-1"></a><span class="co"># debug</span></span>
+<span id="cb260-2"><a href="run-the-models.html#cb260-2" tabindex="-1"></a><span class="co"># k=1</span></span>
+<span id="cb260-3"><a href="run-the-models.html#cb260-3" tabindex="-1"></a></span>
+<span id="cb260-4"><a href="run-the-models.html#cb260-4" tabindex="-1"></a><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(envecosoc_inputs.vec)) {</span>
+<span id="cb260-5"><a href="run-the-models.html#cb260-5" tabindex="-1"></a></span>
+<span id="cb260-6"><a href="run-the-models.html#cb260-6" tabindex="-1"></a>  <span class="fu">print</span>(k)</span>
+<span id="cb260-7"><a href="run-the-models.html#cb260-7" tabindex="-1"></a></span>
+<span id="cb260-8"><a href="run-the-models.html#cb260-8" tabindex="-1"></a>  <span class="fu">source</span>(<span class="fu">paste0</span>(code_location, <span class="st">&quot;source_code/calculate_change.r&quot;</span>))</span>
+<span id="cb260-9"><a href="run-the-models.html#cb260-9" tabindex="-1"></a></span>
+<span id="cb260-10"><a href="run-the-models.html#cb260-10" tabindex="-1"></a>}</span></code></pre></div>
+<p>Create vectors used to name output files and used to define variable names in summary output files.</p>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="run-the-models.html#cb261-1" tabindex="-1"></a>output.type.vec.sims <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;envecosoc.sims.granular&quot;</span>, </span>
+<span id="cb261-2"><a href="run-the-models.html#cb261-2" tabindex="-1"></a>                          <span class="st">&quot;substitution.envecosoc.sims.granular&quot;</span>, </span>
+<span id="cb261-3"><a href="run-the-models.html#cb261-3" tabindex="-1"></a>                          <span class="st">&quot;combined.envecosoc.sims.granular&quot;</span>,</span>
+<span id="cb261-4"><a href="run-the-models.html#cb261-4" tabindex="-1"></a>                          <span class="st">&quot;delta.envecosoc.sims.granular&quot;</span>,</span>
+<span id="cb261-5"><a href="run-the-models.html#cb261-5" tabindex="-1"></a>                          <span class="st">&quot;combined.envecosoc.sims.granular.consumed&quot;</span>,</span>
+<span id="cb261-6"><a href="run-the-models.html#cb261-6" tabindex="-1"></a>                          <span class="st">&quot;combined.envecosoc.sims.granular.unconsumed&quot;</span>,</span>
+<span id="cb261-7"><a href="run-the-models.html#cb261-7" tabindex="-1"></a>                          <span class="st">&quot;current.intake.envecosoc.sims.granular&quot;</span>, </span>
+<span id="cb261-8"><a href="run-the-models.html#cb261-8" tabindex="-1"></a>                          <span class="st">&quot;CF.envecosoc.intake.sims.granular&quot;</span>, </span>
+<span id="cb261-9"><a href="run-the-models.html#cb261-9" tabindex="-1"></a>                          <span class="st">&quot;current.intake.envecosoc.sims.granular.consumed&quot;</span>,</span>
+<span id="cb261-10"><a href="run-the-models.html#cb261-10" tabindex="-1"></a>                          <span class="st">&quot;CF.intake.envecosoc.sims.granular.consumed&quot;</span>, </span>
+<span id="cb261-11"><a href="run-the-models.html#cb261-11" tabindex="-1"></a>                          <span class="st">&quot;current.intake.envecosoc.sims.granular.unconsumed&quot;</span>, </span>
+<span id="cb261-12"><a href="run-the-models.html#cb261-12" tabindex="-1"></a>                          <span class="st">&quot;CF.intake.envecosoc.sims.granular.unconsumed&quot;</span>,</span>
+<span id="cb261-13"><a href="run-the-models.html#cb261-13" tabindex="-1"></a>                          <span class="st">&quot;envecosoc.sims.granular.inedible&quot;</span>, </span>
+<span id="cb261-14"><a href="run-the-models.html#cb261-14" tabindex="-1"></a>                          <span class="st">&quot;envecosoc.sims.granular.wasted&quot;</span>,</span>
+<span id="cb261-15"><a href="run-the-models.html#cb261-15" tabindex="-1"></a>                          <span class="st">&quot;current.intake.envecosoc.sims.granular.inedible&quot;</span>, </span>
+<span id="cb261-16"><a href="run-the-models.html#cb261-16" tabindex="-1"></a>                          <span class="st">&quot;CF.intake.envecosoc.sims.granular.inedible&quot;</span>,</span>
+<span id="cb261-17"><a href="run-the-models.html#cb261-17" tabindex="-1"></a>                          <span class="st">&quot;current.intake.envecosoc.sims.granular.wasted&quot;</span>, </span>
+<span id="cb261-18"><a href="run-the-models.html#cb261-18" tabindex="-1"></a>                          <span class="st">&quot;CF.intake.envecosoc.sims.granular.wasted&quot;</span></span>
+<span id="cb261-19"><a href="run-the-models.html#cb261-19" tabindex="-1"></a>                          )</span>
+<span id="cb261-20"><a href="run-the-models.html#cb261-20" tabindex="-1"></a></span>
+<span id="cb261-21"><a href="run-the-models.html#cb261-21" tabindex="-1"></a>output.type.vec.summary <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;envecosoc.summary.granular&quot;</span>, </span>
+<span id="cb261-22"><a href="run-the-models.html#cb261-22" tabindex="-1"></a>                             <span class="st">&quot;substitution.envecosoc.summary.granular&quot;</span>, </span>
+<span id="cb261-23"><a href="run-the-models.html#cb261-23" tabindex="-1"></a>                             <span class="st">&quot;combined.envecosoc.summary.granular&quot;</span>,</span>
+<span id="cb261-24"><a href="run-the-models.html#cb261-24" tabindex="-1"></a>                             <span class="st">&quot;delta.envecosoc.summary.granular&quot;</span>,</span>
+<span id="cb261-25"><a href="run-the-models.html#cb261-25" tabindex="-1"></a>                             <span class="st">&quot;combined.envecosoc.summary.granular.consumed&quot;</span>,</span>
+<span id="cb261-26"><a href="run-the-models.html#cb261-26" tabindex="-1"></a>                             <span class="st">&quot;combined.envecosoc.summary.granular.unconsumed&quot;</span>,</span>
+<span id="cb261-27"><a href="run-the-models.html#cb261-27" tabindex="-1"></a>                             <span class="st">&quot;current.intake.envecosoc.summary.granular&quot;</span>, </span>
+<span id="cb261-28"><a href="run-the-models.html#cb261-28" tabindex="-1"></a>                             <span class="st">&quot;CF.envecosoc.intake.summary.granular&quot;</span>, </span>
+<span id="cb261-29"><a href="run-the-models.html#cb261-29" tabindex="-1"></a>                             <span class="st">&quot;current.intake.envecosoc.summary.granular.consumed&quot;</span>,</span>
+<span id="cb261-30"><a href="run-the-models.html#cb261-30" tabindex="-1"></a>                             <span class="st">&quot;CF.intake.envecosoc.summary.granular.consumed&quot;</span>, </span>
+<span id="cb261-31"><a href="run-the-models.html#cb261-31" tabindex="-1"></a>                             <span class="st">&quot;current.intake.envecosoc.summary.granular.unconsumed&quot;</span>, </span>
+<span id="cb261-32"><a href="run-the-models.html#cb261-32" tabindex="-1"></a>                             <span class="st">&quot;CF.intake.envecosoc.summary.granular.unconsumed&quot;</span>,</span>
+<span id="cb261-33"><a href="run-the-models.html#cb261-33" tabindex="-1"></a>                             <span class="st">&quot;envecosoc.summary.granular.inedible&quot;</span>, </span>
+<span id="cb261-34"><a href="run-the-models.html#cb261-34" tabindex="-1"></a>                             <span class="st">&quot;envecosoc.summary.granular.wasted&quot;</span>,</span>
+<span id="cb261-35"><a href="run-the-models.html#cb261-35" tabindex="-1"></a>                             <span class="st">&quot;current.intake.envecosoc.summary.granular.inedible&quot;</span>, </span>
+<span id="cb261-36"><a href="run-the-models.html#cb261-36" tabindex="-1"></a>                             <span class="st">&quot;CF.intake.envecosoc.summary.granular.inedible&quot;</span>,</span>
+<span id="cb261-37"><a href="run-the-models.html#cb261-37" tabindex="-1"></a>                             <span class="st">&quot;current.intake.envecosoc.summary.granular.wasted&quot;</span>, </span>
+<span id="cb261-38"><a href="run-the-models.html#cb261-38" tabindex="-1"></a>                             <span class="st">&quot;CF.intake.envecosoc.summary.granular.wasted&quot;</span></span>
+<span id="cb261-39"><a href="run-the-models.html#cb261-39" tabindex="-1"></a>                             )</span>
+<span id="cb261-40"><a href="run-the-models.html#cb261-40" tabindex="-1"></a></span>
+<span id="cb261-41"><a href="run-the-models.html#cb261-41" tabindex="-1"></a>output.type.vec.sims.bystrata <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;envecosoc.sims&quot;</span>, </span>
+<span id="cb261-42"><a href="run-the-models.html#cb261-42" tabindex="-1"></a>                                   <span class="st">&quot;substitution.envecosoc.sims&quot;</span>, </span>
+<span id="cb261-43"><a href="run-the-models.html#cb261-43" tabindex="-1"></a>                                   <span class="st">&quot;combined.envecosoc.sims&quot;</span>,</span>
+<span id="cb261-44"><a href="run-the-models.html#cb261-44" tabindex="-1"></a>                                   <span class="st">&quot;delta.envecosoc.sims&quot;</span>,</span>
+<span id="cb261-45"><a href="run-the-models.html#cb261-45" tabindex="-1"></a>                                   <span class="st">&quot;combined.envecosoc.sims.consumed&quot;</span>,</span>
+<span id="cb261-46"><a href="run-the-models.html#cb261-46" tabindex="-1"></a>                                   <span class="st">&quot;combined.envecosoc.sims.unconsumed&quot;</span>,</span>
+<span id="cb261-47"><a href="run-the-models.html#cb261-47" tabindex="-1"></a>                                   <span class="st">&quot;current.intake.envecosoc.sims&quot;</span>, </span>
+<span id="cb261-48"><a href="run-the-models.html#cb261-48" tabindex="-1"></a>                                   <span class="st">&quot;CF.envecosoc.intake.sims&quot;</span>, </span>
+<span id="cb261-49"><a href="run-the-models.html#cb261-49" tabindex="-1"></a>                                   <span class="st">&quot;current.intake.envecosoc.sims.consumed&quot;</span>,</span>
+<span id="cb261-50"><a href="run-the-models.html#cb261-50" tabindex="-1"></a>                                   <span class="st">&quot;CF.intake.envecosoc.sims.consumed&quot;</span>, </span>
+<span id="cb261-51"><a href="run-the-models.html#cb261-51" tabindex="-1"></a>                                   <span class="st">&quot;current.intake.envecosoc.sims.unconsumed&quot;</span>, </span>
+<span id="cb261-52"><a href="run-the-models.html#cb261-52" tabindex="-1"></a>                                   <span class="st">&quot;CF.intake.envecosoc.sims.unconsumed&quot;</span>,</span>
+<span id="cb261-53"><a href="run-the-models.html#cb261-53" tabindex="-1"></a>                                   <span class="st">&quot;inedible.envecosoc.sims&quot;</span>, </span>
+<span id="cb261-54"><a href="run-the-models.html#cb261-54" tabindex="-1"></a>                                   <span class="st">&quot;wasted.envecosoc.sims&quot;</span>,</span>
+<span id="cb261-55"><a href="run-the-models.html#cb261-55" tabindex="-1"></a>                                   <span class="st">&quot;current.intake.envecosoc.sims.inedible&quot;</span>, </span>
+<span id="cb261-56"><a href="run-the-models.html#cb261-56" tabindex="-1"></a>                                   <span class="st">&quot;CF.intake.envecosoc.sims.inedible&quot;</span>,</span>
+<span id="cb261-57"><a href="run-the-models.html#cb261-57" tabindex="-1"></a>                                   <span class="st">&quot;current.intake.envecosoc.sims.wasted&quot;</span>, </span>
+<span id="cb261-58"><a href="run-the-models.html#cb261-58" tabindex="-1"></a>                                   <span class="st">&quot;CF.intake.envecosoc.sims.wasted&quot;</span></span>
+<span id="cb261-59"><a href="run-the-models.html#cb261-59" tabindex="-1"></a>                                   )</span>
+<span id="cb261-60"><a href="run-the-models.html#cb261-60" tabindex="-1"></a></span>
+<span id="cb261-61"><a href="run-the-models.html#cb261-61" tabindex="-1"></a>output.type.vec.summary.bystrata <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;envecosoc.summary&quot;</span>, </span>
+<span id="cb261-62"><a href="run-the-models.html#cb261-62" tabindex="-1"></a>                                      <span class="st">&quot;substitution.envecosoc.summary&quot;</span>, </span>
+<span id="cb261-63"><a href="run-the-models.html#cb261-63" tabindex="-1"></a>                                      <span class="st">&quot;combined.envecosoc.summary&quot;</span>,</span>
+<span id="cb261-64"><a href="run-the-models.html#cb261-64" tabindex="-1"></a>                                      <span class="st">&quot;delta.envecosoc.summary&quot;</span>,</span>
+<span id="cb261-65"><a href="run-the-models.html#cb261-65" tabindex="-1"></a>                                      <span class="st">&quot;combined.envecosoc.summary.consumed&quot;</span>,</span>
+<span id="cb261-66"><a href="run-the-models.html#cb261-66" tabindex="-1"></a>                                      <span class="st">&quot;combined.envecosoc.summary.unconsumed&quot;</span>,</span>
+<span id="cb261-67"><a href="run-the-models.html#cb261-67" tabindex="-1"></a>                                      <span class="st">&quot;current.intake.envecosoc.summary&quot;</span>, </span>
+<span id="cb261-68"><a href="run-the-models.html#cb261-68" tabindex="-1"></a>                                      <span class="st">&quot;CF.envecosoc.intake.summary&quot;</span>, </span>
+<span id="cb261-69"><a href="run-the-models.html#cb261-69" tabindex="-1"></a>                                      <span class="st">&quot;current.intake.envecosoc.summary.consumed&quot;</span>,</span>
+<span id="cb261-70"><a href="run-the-models.html#cb261-70" tabindex="-1"></a>                                      <span class="st">&quot;CF.intake.envecosoc.summary.consumed&quot;</span>, </span>
+<span id="cb261-71"><a href="run-the-models.html#cb261-71" tabindex="-1"></a>                                      <span class="st">&quot;current.intake.envecosoc.summary.unconsumed&quot;</span>, </span>
+<span id="cb261-72"><a href="run-the-models.html#cb261-72" tabindex="-1"></a>                                      <span class="st">&quot;CF.intake.envecosoc.summary.unconsumed&quot;</span>,</span>
+<span id="cb261-73"><a href="run-the-models.html#cb261-73" tabindex="-1"></a>                                      <span class="st">&quot;inedible.envecosoc.summary&quot;</span>, </span>
+<span id="cb261-74"><a href="run-the-models.html#cb261-74" tabindex="-1"></a>                                      <span class="st">&quot;wasted.envecosoc.summary&quot;</span>,</span>
+<span id="cb261-75"><a href="run-the-models.html#cb261-75" tabindex="-1"></a>                                      <span class="st">&quot;current.intake.envecosoc.summary.inedible&quot;</span>, </span>
+<span id="cb261-76"><a href="run-the-models.html#cb261-76" tabindex="-1"></a>                                      <span class="st">&quot;CF.intake.envecosoc.summary.inedible&quot;</span>,</span>
+<span id="cb261-77"><a href="run-the-models.html#cb261-77" tabindex="-1"></a>                                      <span class="st">&quot;current.intake.envecosoc.summary.wasted&quot;</span>, </span>
+<span id="cb261-78"><a href="run-the-models.html#cb261-78" tabindex="-1"></a>                                      <span class="st">&quot;CF.intake.envecosoc.summary.wasted&quot;</span></span>
+<span id="cb261-79"><a href="run-the-models.html#cb261-79" tabindex="-1"></a>                                      )</span>
+<span id="cb261-80"><a href="run-the-models.html#cb261-80" tabindex="-1"></a></span>
+<span id="cb261-81"><a href="run-the-models.html#cb261-81" tabindex="-1"></a>LB.name.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-82"><a href="run-the-models.html#cb261-82" tabindex="-1"></a>                 <span class="st">&quot;substitution_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-83"><a href="run-the-models.html#cb261-83" tabindex="-1"></a>                 <span class="st">&quot;combined_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-84"><a href="run-the-models.html#cb261-84" tabindex="-1"></a>                 </span>
+<span id="cb261-85"><a href="run-the-models.html#cb261-85" tabindex="-1"></a>                 <span class="st">&quot;delta_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-86"><a href="run-the-models.html#cb261-86" tabindex="-1"></a>                 <span class="st">&quot;combined_consumed_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-87"><a href="run-the-models.html#cb261-87" tabindex="-1"></a>                 <span class="st">&quot;combined_unconsumed_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-88"><a href="run-the-models.html#cb261-88" tabindex="-1"></a>                 </span>
+<span id="cb261-89"><a href="run-the-models.html#cb261-89" tabindex="-1"></a>                 <span class="st">&quot;current_intake_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-90"><a href="run-the-models.html#cb261-90" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-91"><a href="run-the-models.html#cb261-91" tabindex="-1"></a>                 <span class="st">&quot;current_intake_consumed_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-92"><a href="run-the-models.html#cb261-92" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_consumed_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-93"><a href="run-the-models.html#cb261-93" tabindex="-1"></a>                 <span class="st">&quot;current_intake_unconsumed_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-94"><a href="run-the-models.html#cb261-94" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_unconsumed_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-95"><a href="run-the-models.html#cb261-95" tabindex="-1"></a>                 </span>
+<span id="cb261-96"><a href="run-the-models.html#cb261-96" tabindex="-1"></a>                 <span class="st">&quot;inedible_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-97"><a href="run-the-models.html#cb261-97" tabindex="-1"></a>                 <span class="st">&quot;wasted_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-98"><a href="run-the-models.html#cb261-98" tabindex="-1"></a>                 <span class="st">&quot;current_intake_inedible_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-99"><a href="run-the-models.html#cb261-99" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_inedible_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-100"><a href="run-the-models.html#cb261-100" tabindex="-1"></a>                 <span class="st">&quot;current_intake_wasted_impact_lower_bound (2.5th percentile)&quot;</span>,</span>
+<span id="cb261-101"><a href="run-the-models.html#cb261-101" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_wasted_impact_lower_bound (2.5th percentile)&quot;</span></span>
+<span id="cb261-102"><a href="run-the-models.html#cb261-102" tabindex="-1"></a>                 )</span>
+<span id="cb261-103"><a href="run-the-models.html#cb261-103" tabindex="-1"></a></span>
+<span id="cb261-104"><a href="run-the-models.html#cb261-104" tabindex="-1"></a>median.name.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;impact_median&quot;</span>,</span>
+<span id="cb261-105"><a href="run-the-models.html#cb261-105" tabindex="-1"></a>                     <span class="st">&quot;substitution_impact_median&quot;</span>,</span>
+<span id="cb261-106"><a href="run-the-models.html#cb261-106" tabindex="-1"></a>                     <span class="st">&quot;combined_impact_median&quot;</span>,</span>
+<span id="cb261-107"><a href="run-the-models.html#cb261-107" tabindex="-1"></a>                     </span>
+<span id="cb261-108"><a href="run-the-models.html#cb261-108" tabindex="-1"></a>                     <span class="st">&quot;delta_median&quot;</span>,</span>
+<span id="cb261-109"><a href="run-the-models.html#cb261-109" tabindex="-1"></a>                     </span>
+<span id="cb261-110"><a href="run-the-models.html#cb261-110" tabindex="-1"></a>                     <span class="st">&quot;combined_consumed_impact_median&quot;</span>,</span>
+<span id="cb261-111"><a href="run-the-models.html#cb261-111" tabindex="-1"></a>                     <span class="st">&quot;combined_unconsumed_impact_median&quot;</span>,</span>
+<span id="cb261-112"><a href="run-the-models.html#cb261-112" tabindex="-1"></a>                     </span>
+<span id="cb261-113"><a href="run-the-models.html#cb261-113" tabindex="-1"></a>                     <span class="st">&quot;current_intake_impact_median&quot;</span>,</span>
+<span id="cb261-114"><a href="run-the-models.html#cb261-114" tabindex="-1"></a>                     <span class="st">&quot;CF_intake_impact_median&quot;</span>,</span>
+<span id="cb261-115"><a href="run-the-models.html#cb261-115" tabindex="-1"></a>                     <span class="st">&quot;current_intake_consumed_impact_median&quot;</span>,</span>
+<span id="cb261-116"><a href="run-the-models.html#cb261-116" tabindex="-1"></a>                     <span class="st">&quot;CF_intake_consumed_impact_median&quot;</span>,</span>
+<span id="cb261-117"><a href="run-the-models.html#cb261-117" tabindex="-1"></a>                     <span class="st">&quot;current_intake_unconsumed_impact_median&quot;</span>,</span>
+<span id="cb261-118"><a href="run-the-models.html#cb261-118" tabindex="-1"></a>                     <span class="st">&quot;CF_intake_unconsumed_impact_median&quot;</span>,</span>
+<span id="cb261-119"><a href="run-the-models.html#cb261-119" tabindex="-1"></a>                     </span>
+<span id="cb261-120"><a href="run-the-models.html#cb261-120" tabindex="-1"></a>                     <span class="st">&quot;inedible_impact_median&quot;</span>,</span>
+<span id="cb261-121"><a href="run-the-models.html#cb261-121" tabindex="-1"></a>                     <span class="st">&quot;wasted_impact_median&quot;</span>,</span>
+<span id="cb261-122"><a href="run-the-models.html#cb261-122" tabindex="-1"></a>                     <span class="st">&quot;current_intake_inedible_impact_median&quot;</span>,</span>
+<span id="cb261-123"><a href="run-the-models.html#cb261-123" tabindex="-1"></a>                     <span class="st">&quot;CF_intake_inedible_impact_median&quot;</span>,</span>
+<span id="cb261-124"><a href="run-the-models.html#cb261-124" tabindex="-1"></a>                     <span class="st">&quot;current_intake_wasted_impact_median&quot;</span>,</span>
+<span id="cb261-125"><a href="run-the-models.html#cb261-125" tabindex="-1"></a>                     <span class="st">&quot;CF_intake_wasted_impact_median&quot;</span></span>
+<span id="cb261-126"><a href="run-the-models.html#cb261-126" tabindex="-1"></a>                     )</span>
+<span id="cb261-127"><a href="run-the-models.html#cb261-127" tabindex="-1"></a></span>
+<span id="cb261-128"><a href="run-the-models.html#cb261-128" tabindex="-1"></a>UB.name.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;impact_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-129"><a href="run-the-models.html#cb261-129" tabindex="-1"></a>                 <span class="st">&quot;substitution_impact_upper_bound  (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-130"><a href="run-the-models.html#cb261-130" tabindex="-1"></a>                 <span class="st">&quot;combined_impact_upper_bound  (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-131"><a href="run-the-models.html#cb261-131" tabindex="-1"></a>                 </span>
+<span id="cb261-132"><a href="run-the-models.html#cb261-132" tabindex="-1"></a>                 <span class="st">&quot;delta_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-133"><a href="run-the-models.html#cb261-133" tabindex="-1"></a>                 </span>
+<span id="cb261-134"><a href="run-the-models.html#cb261-134" tabindex="-1"></a>                 <span class="st">&quot;combined_consumed_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-135"><a href="run-the-models.html#cb261-135" tabindex="-1"></a>                 <span class="st">&quot;combined_unconsumed_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-136"><a href="run-the-models.html#cb261-136" tabindex="-1"></a>                 </span>
+<span id="cb261-137"><a href="run-the-models.html#cb261-137" tabindex="-1"></a>                 <span class="st">&quot;current_intake_impact_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-138"><a href="run-the-models.html#cb261-138" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_impact_upper_bound  (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-139"><a href="run-the-models.html#cb261-139" tabindex="-1"></a>                 <span class="st">&quot;current_intake_consumed_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-140"><a href="run-the-models.html#cb261-140" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_consumed_impact_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-141"><a href="run-the-models.html#cb261-141" tabindex="-1"></a>                 <span class="st">&quot;current_intake_unconsumed_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-142"><a href="run-the-models.html#cb261-142" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_unconsumed_impact_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-143"><a href="run-the-models.html#cb261-143" tabindex="-1"></a>                 </span>
+<span id="cb261-144"><a href="run-the-models.html#cb261-144" tabindex="-1"></a>                 <span class="st">&quot;inedible_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-145"><a href="run-the-models.html#cb261-145" tabindex="-1"></a>                 <span class="st">&quot;wasted_unconsumed_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-146"><a href="run-the-models.html#cb261-146" tabindex="-1"></a>                 <span class="st">&quot;current_intake_inedible_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-147"><a href="run-the-models.html#cb261-147" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_inedible_impact_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-148"><a href="run-the-models.html#cb261-148" tabindex="-1"></a>                 <span class="st">&quot;current_intake_wasted_upper_bound (97.5th percentile)&quot;</span>,</span>
+<span id="cb261-149"><a href="run-the-models.html#cb261-149" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_unconsumed_wasted_upper_bound (97.5th percentile)&quot;</span></span>
+<span id="cb261-150"><a href="run-the-models.html#cb261-150" tabindex="-1"></a>                 )</span>
+<span id="cb261-151"><a href="run-the-models.html#cb261-151" tabindex="-1"></a></span>
+<span id="cb261-152"><a href="run-the-models.html#cb261-152" tabindex="-1"></a>mean.name.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;impact_mean&quot;</span>,</span>
+<span id="cb261-153"><a href="run-the-models.html#cb261-153" tabindex="-1"></a>                   <span class="st">&quot;substitution_impact_mean&quot;</span>,</span>
+<span id="cb261-154"><a href="run-the-models.html#cb261-154" tabindex="-1"></a>                   <span class="st">&quot;combined_impact_mean&quot;</span>,</span>
+<span id="cb261-155"><a href="run-the-models.html#cb261-155" tabindex="-1"></a></span>
+<span id="cb261-156"><a href="run-the-models.html#cb261-156" tabindex="-1"></a>                   <span class="st">&quot;delta_mean&quot;</span>,</span>
+<span id="cb261-157"><a href="run-the-models.html#cb261-157" tabindex="-1"></a></span>
+<span id="cb261-158"><a href="run-the-models.html#cb261-158" tabindex="-1"></a>                   <span class="st">&quot;combined_consumed_impact_mean&quot;</span>,</span>
+<span id="cb261-159"><a href="run-the-models.html#cb261-159" tabindex="-1"></a>                   <span class="st">&quot;combined_unconsumed_impact_mean&quot;</span>,</span>
+<span id="cb261-160"><a href="run-the-models.html#cb261-160" tabindex="-1"></a></span>
+<span id="cb261-161"><a href="run-the-models.html#cb261-161" tabindex="-1"></a>                   <span class="st">&quot;current_intake_impact_mean&quot;</span>,</span>
+<span id="cb261-162"><a href="run-the-models.html#cb261-162" tabindex="-1"></a>                   <span class="st">&quot;CF_intake_impact_mean&quot;</span>,</span>
+<span id="cb261-163"><a href="run-the-models.html#cb261-163" tabindex="-1"></a>                   <span class="st">&quot;current_intake_consumed_impact_mean&quot;</span>,</span>
+<span id="cb261-164"><a href="run-the-models.html#cb261-164" tabindex="-1"></a>                   <span class="st">&quot;CF_intake_consumed_impact_mean&quot;</span>,</span>
+<span id="cb261-165"><a href="run-the-models.html#cb261-165" tabindex="-1"></a>                   <span class="st">&quot;current_intake_unconsumed_impact_mean&quot;</span>,</span>
+<span id="cb261-166"><a href="run-the-models.html#cb261-166" tabindex="-1"></a>                   <span class="st">&quot;CF_intake_unconsumed_impact_mean&quot;</span>,</span>
+<span id="cb261-167"><a href="run-the-models.html#cb261-167" tabindex="-1"></a>                 </span>
+<span id="cb261-168"><a href="run-the-models.html#cb261-168" tabindex="-1"></a>                   <span class="st">&quot;inedible_consumed_impact_mean&quot;</span>,</span>
+<span id="cb261-169"><a href="run-the-models.html#cb261-169" tabindex="-1"></a>                   <span class="st">&quot;wasted_unconsumed_impact_mean&quot;</span>,</span>
+<span id="cb261-170"><a href="run-the-models.html#cb261-170" tabindex="-1"></a>                   <span class="st">&quot;current_intake_inedible_impact_mean&quot;</span>,</span>
+<span id="cb261-171"><a href="run-the-models.html#cb261-171" tabindex="-1"></a>                   <span class="st">&quot;CF_intake_inedible_impact_mean&quot;</span>,</span>
+<span id="cb261-172"><a href="run-the-models.html#cb261-172" tabindex="-1"></a>                   <span class="st">&quot;current_intake_wasted_impact_mean&quot;</span>,</span>
+<span id="cb261-173"><a href="run-the-models.html#cb261-173" tabindex="-1"></a>                   <span class="st">&quot;CF_intake_wasted_impact_mean&quot;</span></span>
+<span id="cb261-174"><a href="run-the-models.html#cb261-174" tabindex="-1"></a>                   )</span>
+<span id="cb261-175"><a href="run-the-models.html#cb261-175" tabindex="-1"></a></span>
+<span id="cb261-176"><a href="run-the-models.html#cb261-176" tabindex="-1"></a>SD.name.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;impact_SD&quot;</span>,</span>
+<span id="cb261-177"><a href="run-the-models.html#cb261-177" tabindex="-1"></a>                 <span class="st">&quot;substitution_impact_SD&quot;</span>,</span>
+<span id="cb261-178"><a href="run-the-models.html#cb261-178" tabindex="-1"></a>                 <span class="st">&quot;combined_impact_SD&quot;</span>,</span>
+<span id="cb261-179"><a href="run-the-models.html#cb261-179" tabindex="-1"></a>                 </span>
+<span id="cb261-180"><a href="run-the-models.html#cb261-180" tabindex="-1"></a>                 <span class="st">&quot;delta_SD&quot;</span>,</span>
+<span id="cb261-181"><a href="run-the-models.html#cb261-181" tabindex="-1"></a></span>
+<span id="cb261-182"><a href="run-the-models.html#cb261-182" tabindex="-1"></a>                 <span class="st">&quot;combined_consumed_impact_SD&quot;</span>,</span>
+<span id="cb261-183"><a href="run-the-models.html#cb261-183" tabindex="-1"></a>                 <span class="st">&quot;combined_unconsumed_impact_SD&quot;</span>,</span>
+<span id="cb261-184"><a href="run-the-models.html#cb261-184" tabindex="-1"></a></span>
+<span id="cb261-185"><a href="run-the-models.html#cb261-185" tabindex="-1"></a>                 <span class="st">&quot;current_intake_impact_SD&quot;</span>,</span>
+<span id="cb261-186"><a href="run-the-models.html#cb261-186" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_impact_SD&quot;</span>,</span>
+<span id="cb261-187"><a href="run-the-models.html#cb261-187" tabindex="-1"></a>                 <span class="st">&quot;current_intake_consumed_impact_SD&quot;</span>,</span>
+<span id="cb261-188"><a href="run-the-models.html#cb261-188" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_consumed_impact_SD&quot;</span>,</span>
+<span id="cb261-189"><a href="run-the-models.html#cb261-189" tabindex="-1"></a>                 <span class="st">&quot;current_intake_unconsumed_impact_SD&quot;</span>,</span>
+<span id="cb261-190"><a href="run-the-models.html#cb261-190" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_unconsumed_impact_SD&quot;</span>,</span>
+<span id="cb261-191"><a href="run-the-models.html#cb261-191" tabindex="-1"></a>                 </span>
+<span id="cb261-192"><a href="run-the-models.html#cb261-192" tabindex="-1"></a>                 <span class="st">&quot;inedible_impact_SD&quot;</span>,</span>
+<span id="cb261-193"><a href="run-the-models.html#cb261-193" tabindex="-1"></a>                 <span class="st">&quot;wasted_impact_SD&quot;</span>,</span>
+<span id="cb261-194"><a href="run-the-models.html#cb261-194" tabindex="-1"></a>                 <span class="st">&quot;current_intake_inedible_impact_SD&quot;</span>,</span>
+<span id="cb261-195"><a href="run-the-models.html#cb261-195" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_inedible_impact_SD&quot;</span>,</span>
+<span id="cb261-196"><a href="run-the-models.html#cb261-196" tabindex="-1"></a>                 <span class="st">&quot;current_intake_wasted_impact_SD&quot;</span>,</span>
+<span id="cb261-197"><a href="run-the-models.html#cb261-197" tabindex="-1"></a>                 <span class="st">&quot;CF_intake_wasted_impact_SD&quot;</span></span>
+<span id="cb261-198"><a href="run-the-models.html#cb261-198" tabindex="-1"></a>                 )</span></code></pre></div>
+<p>Create function to revert list structure.</p>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="run-the-models.html#cb262-1" tabindex="-1"></a>revert_list_str_4 <span class="ot">&lt;-</span> <span class="cf">function</span>(ls) {</span>
+<span id="cb262-2"><a href="run-the-models.html#cb262-2" tabindex="-1"></a>  <span class="co"># get sub-elements in same order</span></span>
+<span id="cb262-3"><a href="run-the-models.html#cb262-3" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">lapply</span>(ls, <span class="st">`</span><span class="at">[</span><span class="st">`</span>, <span class="fu">names</span>(ls[[<span class="dv">1</span>]]))</span>
+<span id="cb262-4"><a href="run-the-models.html#cb262-4" tabindex="-1"></a>  <span class="co"># stack and reslice</span></span>
+<span id="cb262-5"><a href="run-the-models.html#cb262-5" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="fu">do.call</span>(rbind, x), <span class="dv">2</span>, as.list)</span>
+<span id="cb262-6"><a href="run-the-models.html#cb262-6" tabindex="-1"></a>}</span></code></pre></div>
+<p>For each dietary pattern and grocery/non-grocery combo, for each output type (specified in output.type.vec.sims), combine grocery and non-grocery output and save, and, for each strata combination, save summary output files (both absolute and per-capita).</p>
+<p>First, start the for-loop (through the dietary patterns). For each dietary pattern, we create lists (summary.list and summary.list.percapita) to store summary stats for that dietary pattern. Note that each element of the list is itself a list containing summaries for all strata combos for a given output type.</p>
+<p>Within ll loop, loop through the different output types and extract sims and summary stats. Combine food at home (FAH) and food away from home (FAFH) output and populate the lists. See “combine_FAH_FAFH.r” for details.</p>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="run-the-models.html#cb263-1" tabindex="-1"></a><span class="co"># debug</span></span>
+<span id="cb263-2"><a href="run-the-models.html#cb263-2" tabindex="-1"></a><span class="co"># ll=1</span></span>
+<span id="cb263-3"><a href="run-the-models.html#cb263-3" tabindex="-1"></a></span>
+<span id="cb263-4"><a href="run-the-models.html#cb263-4" tabindex="-1"></a><span class="co"># start ll loop</span></span>
+<span id="cb263-5"><a href="run-the-models.html#cb263-5" tabindex="-1"></a><span class="cf">for</span>(ll <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(diet.vec)) {</span>
+<span id="cb263-6"><a href="run-the-models.html#cb263-6" tabindex="-1"></a>  </span>
+<span id="cb263-7"><a href="run-the-models.html#cb263-7" tabindex="-1"></a>  diet <span class="ot">&lt;-</span> diet.vec[ll]</span>
+<span id="cb263-8"><a href="run-the-models.html#cb263-8" tabindex="-1"></a></span>
+<span id="cb263-9"><a href="run-the-models.html#cb263-9" tabindex="-1"></a>  <span class="co"># each element of the list is itself a list containing summaries for all </span></span>
+<span id="cb263-10"><a href="run-the-models.html#cb263-10" tabindex="-1"></a>  <span class="co"># strata combos, for output type j</span></span>
+<span id="cb263-11"><a href="run-the-models.html#cb263-11" tabindex="-1"></a>  summary.list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb263-12"><a href="run-the-models.html#cb263-12" tabindex="-1"></a>  summary.list.percapita <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb263-13"><a href="run-the-models.html#cb263-13" tabindex="-1"></a>  </span>
+<span id="cb263-14"><a href="run-the-models.html#cb263-14" tabindex="-1"></a>  <span class="co"># k=1</span></span>
+<span id="cb263-15"><a href="run-the-models.html#cb263-15" tabindex="-1"></a>  <span class="co"># start k loop</span></span>
+<span id="cb263-16"><a href="run-the-models.html#cb263-16" tabindex="-1"></a>  <span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(output.type.vec.sims)) {</span>
+<span id="cb263-17"><a href="run-the-models.html#cb263-17" tabindex="-1"></a>    </span>
+<span id="cb263-18"><a href="run-the-models.html#cb263-18" tabindex="-1"></a>    summary.list[[k]] <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb263-19"><a href="run-the-models.html#cb263-19" tabindex="-1"></a>    summary.list.percapita[[k]] <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb263-20"><a href="run-the-models.html#cb263-20" tabindex="-1"></a>    </span>
+<span id="cb263-21"><a href="run-the-models.html#cb263-21" tabindex="-1"></a>    output.type.sims <span class="ot">&lt;-</span> output.type.vec.sims[k]</span>
+<span id="cb263-22"><a href="run-the-models.html#cb263-22" tabindex="-1"></a>    output.type.summary <span class="ot">&lt;-</span> output.type.vec.summary[k]</span>
+<span id="cb263-23"><a href="run-the-models.html#cb263-23" tabindex="-1"></a>    output.type.sims.bystrata <span class="ot">&lt;-</span> output.type.vec.sims.bystrata[k]</span>
+<span id="cb263-24"><a href="run-the-models.html#cb263-24" tabindex="-1"></a>    output.type.summary.bystrata <span class="ot">&lt;-</span> output.type.vec.summary.bystrata[k]</span>
+<span id="cb263-25"><a href="run-the-models.html#cb263-25" tabindex="-1"></a>    LB.name <span class="ot">&lt;-</span> LB.name.vec[k]</span>
+<span id="cb263-26"><a href="run-the-models.html#cb263-26" tabindex="-1"></a>    median.name <span class="ot">&lt;-</span> median.name.vec[k]</span>
+<span id="cb263-27"><a href="run-the-models.html#cb263-27" tabindex="-1"></a>    UB.name <span class="ot">&lt;-</span> UB.name.vec[k]</span>
+<span id="cb263-28"><a href="run-the-models.html#cb263-28" tabindex="-1"></a></span>
+<span id="cb263-29"><a href="run-the-models.html#cb263-29" tabindex="-1"></a>    mean.name <span class="ot">&lt;-</span> mean.name.vec[k]</span>
+<span id="cb263-30"><a href="run-the-models.html#cb263-30" tabindex="-1"></a>    SD.name <span class="ot">&lt;-</span> SD.name.vec[k]</span>
+<span id="cb263-31"><a href="run-the-models.html#cb263-31" tabindex="-1"></a></span>
+<span id="cb263-32"><a href="run-the-models.html#cb263-32" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(code_location, <span class="st">&quot;source_code/combine_FAH_FAFH.r&quot;</span>))</span>
+<span id="cb263-33"><a href="run-the-models.html#cb263-33" tabindex="-1"></a>    </span>
+<span id="cb263-34"><a href="run-the-models.html#cb263-34" tabindex="-1"></a>    }</span>
+<span id="cb263-35"><a href="run-the-models.html#cb263-35" tabindex="-1"></a>  </span>
+<span id="cb263-36"><a href="run-the-models.html#cb263-36" tabindex="-1"></a>  summary.list.by.strata.combo <span class="ot">&lt;-</span> <span class="fu">revert_list_str_4</span>(summary.list)</span>
+<span id="cb263-37"><a href="run-the-models.html#cb263-37" tabindex="-1"></a>  summary.list.percapita.by.strata.combo <span class="ot">&lt;-</span> <span class="fu">revert_list_str_4</span>(summary.list.percapita)</span>
+<span id="cb263-38"><a href="run-the-models.html#cb263-38" tabindex="-1"></a></span>
+<span id="cb263-39"><a href="run-the-models.html#cb263-39" tabindex="-1"></a>  output_location <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_dir, <span class="st">&quot;envecosoc/&quot;</span>, diet, <span class="st">&quot;_diet_both/&quot;</span>)</span>
+<span id="cb263-40"><a href="run-the-models.html#cb263-40" tabindex="-1"></a>  </span>
+<span id="cb263-41"><a href="run-the-models.html#cb263-41" tabindex="-1"></a>  <span class="fu">print</span>(output_location)</span>
+<span id="cb263-42"><a href="run-the-models.html#cb263-42" tabindex="-1"></a></span>
+<span id="cb263-43"><a href="run-the-models.html#cb263-43" tabindex="-1"></a>  <span class="cf">for</span>(mm <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(<span class="fu">names</span>(summary.list[[<span class="dv">1</span>]]))) {</span>
+<span id="cb263-44"><a href="run-the-models.html#cb263-44" tabindex="-1"></a>    </span>
+<span id="cb263-45"><a href="run-the-models.html#cb263-45" tabindex="-1"></a>    list.names.intersect <span class="ot">&lt;-</span> </span>
+<span id="cb263-46"><a href="run-the-models.html#cb263-46" tabindex="-1"></a>      <span class="fu">Reduce</span>(intersect, <span class="fu">lapply</span>(summary.list.by.strata.combo[[mm]], colnames))</span>
+<span id="cb263-47"><a href="run-the-models.html#cb263-47" tabindex="-1"></a>    </span>
+<span id="cb263-48"><a href="run-the-models.html#cb263-48" tabindex="-1"></a>    merged <span class="ot">&lt;-</span> </span>
+<span id="cb263-49"><a href="run-the-models.html#cb263-49" tabindex="-1"></a>      <span class="fu">Reduce</span>(<span class="cf">function</span>(...) <span class="fu">merge</span>(..., <span class="at">by =</span> list.names.intersect), </span>
+<span id="cb263-50"><a href="run-the-models.html#cb263-50" tabindex="-1"></a>             summary.list.by.strata.combo[[mm]])</span>
+<span id="cb263-51"><a href="run-the-models.html#cb263-51" tabindex="-1"></a>    </span>
+<span id="cb263-52"><a href="run-the-models.html#cb263-52" tabindex="-1"></a>    <span class="fu">write_csv</span>(<span class="at">x =</span> merged, </span>
+<span id="cb263-53"><a href="run-the-models.html#cb263-53" tabindex="-1"></a>              <span class="at">file =</span> <span class="fu">paste0</span>(output_location, </span>
+<span id="cb263-54"><a href="run-the-models.html#cb263-54" tabindex="-1"></a>                          <span class="st">&quot;By_SubGroup/&quot;</span>, <span class="st">&quot;summary.output_by_&quot;</span>, </span>
+<span id="cb263-55"><a href="run-the-models.html#cb263-55" tabindex="-1"></a>                          <span class="fu">names</span>(summary.list[[<span class="dv">1</span>]])[mm], <span class="st">&quot;.envecosoc.csv&quot;</span>))</span>
+<span id="cb263-56"><a href="run-the-models.html#cb263-56" tabindex="-1"></a>    </span>
+<span id="cb263-57"><a href="run-the-models.html#cb263-57" tabindex="-1"></a>    list.names.intersect <span class="ot">&lt;-</span> </span>
+<span id="cb263-58"><a href="run-the-models.html#cb263-58" tabindex="-1"></a>      <span class="fu">Reduce</span>(intersect, <span class="fu">lapply</span>(summary.list.percapita.by.strata.combo[[mm]], colnames))</span>
+<span id="cb263-59"><a href="run-the-models.html#cb263-59" tabindex="-1"></a>    </span>
+<span id="cb263-60"><a href="run-the-models.html#cb263-60" tabindex="-1"></a>    merged.percapita <span class="ot">&lt;-</span> </span>
+<span id="cb263-61"><a href="run-the-models.html#cb263-61" tabindex="-1"></a>      <span class="fu">Reduce</span>(<span class="cf">function</span>(...) <span class="fu">merge</span>(..., <span class="at">by =</span> list.names.intersect), </span>
+<span id="cb263-62"><a href="run-the-models.html#cb263-62" tabindex="-1"></a>             summary.list.percapita.by.strata.combo[[mm]])</span>
+<span id="cb263-63"><a href="run-the-models.html#cb263-63" tabindex="-1"></a>    </span>
+<span id="cb263-64"><a href="run-the-models.html#cb263-64" tabindex="-1"></a>    <span class="fu">write.csv</span>(<span class="at">x =</span> merged.percapita, </span>
+<span id="cb263-65"><a href="run-the-models.html#cb263-65" tabindex="-1"></a>              <span class="at">file =</span> <span class="fu">paste0</span>(output_location, </span>
+<span id="cb263-66"><a href="run-the-models.html#cb263-66" tabindex="-1"></a>                          <span class="st">&quot;per_capita/By_SubGroup/&quot;</span>, <span class="st">&quot;summary.output_by_&quot;</span>, </span>
+<span id="cb263-67"><a href="run-the-models.html#cb263-67" tabindex="-1"></a>                          <span class="fu">names</span>(summary.list[[<span class="dv">1</span>]])[mm], <span class="st">&quot;.envecosoc.csv&quot;</span>))</span>
+<span id="cb263-68"><a href="run-the-models.html#cb263-68" tabindex="-1"></a>    </span>
+<span id="cb263-69"><a href="run-the-models.html#cb263-69" tabindex="-1"></a>  }</span>
+<span id="cb263-70"><a href="run-the-models.html#cb263-70" tabindex="-1"></a>  </span>
+<span id="cb263-71"><a href="run-the-models.html#cb263-71" tabindex="-1"></a>}</span></code></pre></div>
+<p>Calculate how much time it took run the env-eco-soc portion of the code.</p>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="run-the-models.html#cb264-1" tabindex="-1"></a> end_time1 <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb264-2"><a href="run-the-models.html#cb264-2" tabindex="-1"></a></span>
+<span id="cb264-3"><a href="run-the-models.html#cb264-3" tabindex="-1"></a> <span class="fu">print</span>(<span class="st">&quot;time it takes to run environmental, economic, and social models: &quot;</span>)</span>
+<span id="cb264-4"><a href="run-the-models.html#cb264-4" tabindex="-1"></a> <span class="fu">print</span>(end_time1 <span class="sc">-</span> start_time)</span></code></pre></div>
+</div>
+<div id="health-models" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Health Models<a href="run-the-models.html#health-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now we start with CRA portion of the code.</p>
+<p>List out dietary factors of interest and subset the primary input file by them.</p>
+<p><em>Note</em> that you must include at least two dietary factors in the CRA analysis in order for the code to run properly.</p>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="run-the-models.html#cb265-1" tabindex="-1"></a><span class="co"># Dietary factors vector (for CRA)</span></span>
+<span id="cb265-2"><a href="run-the-models.html#cb265-2" tabindex="-1"></a>rfvec_cra <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb265-3"><a href="run-the-models.html#cb265-3" tabindex="-1"></a>               <span class="co"># &quot;dairy_tot&quot;,</span></span>
+<span id="cb265-4"><a href="run-the-models.html#cb265-4" tabindex="-1"></a>               <span class="co"># &quot;gr_whole&quot;,</span></span>
+<span id="cb265-5"><a href="run-the-models.html#cb265-5" tabindex="-1"></a>               <span class="co"># &quot;pf_ns&quot;,</span></span>
+<span id="cb265-6"><a href="run-the-models.html#cb265-6" tabindex="-1"></a>               <span class="co"># &quot;pf_pm&quot;,</span></span>
+<span id="cb265-7"><a href="run-the-models.html#cb265-7" tabindex="-1"></a>               <span class="co"># &quot;pf_redm&quot;,</span></span>
+<span id="cb265-8"><a href="run-the-models.html#cb265-8" tabindex="-1"></a>               <span class="co"># &quot;pf_seafood&quot;,</span></span>
+<span id="cb265-9"><a href="run-the-models.html#cb265-9" tabindex="-1"></a>               <span class="st">&quot;veg_exc_sta&quot;</span>,</span>
+<span id="cb265-10"><a href="run-the-models.html#cb265-10" tabindex="-1"></a>               <span class="co"># &quot;ssb&quot;,</span></span>
+<span id="cb265-11"><a href="run-the-models.html#cb265-11" tabindex="-1"></a>               <span class="co"># &quot;sodium&quot;,</span></span>
+<span id="cb265-12"><a href="run-the-models.html#cb265-12" tabindex="-1"></a>               <span class="st">&quot;fruit_exc_juice&quot;</span></span>
+<span id="cb265-13"><a href="run-the-models.html#cb265-13" tabindex="-1"></a>               <span class="co"># ,</span></span>
+<span id="cb265-14"><a href="run-the-models.html#cb265-14" tabindex="-1"></a>               <span class="co"># &quot;leg_tot&quot;</span></span>
+<span id="cb265-15"><a href="run-the-models.html#cb265-15" tabindex="-1"></a>               )</span>
+<span id="cb265-16"><a href="run-the-models.html#cb265-16" tabindex="-1"></a></span>
+<span id="cb265-17"><a href="run-the-models.html#cb265-17" tabindex="-1"></a><span class="co"># subset to only include dietary factors for CRA</span></span>
+<span id="cb265-18"><a href="run-the-models.html#cb265-18" tabindex="-1"></a>primary_input_cra <span class="ot">&lt;-</span> <span class="fu">subset</span>(primary_input, Foodgroup <span class="sc">%in%</span> rfvec_cra)</span></code></pre></div>
+<p>List out all of the cancer and cardiometabolic diseases in the disease vector, and create a corresponding disease type vector (Cancer or CMD).</p>
+<p>Also, we wanted to summarize the results in two additional ways: first, by breaking down “CMD” into seven subgroups (IHD, ISTK, HSTK, OSTK, DIAB, HHD, Other_CVD), and second, by breaking down “CMD” into five subgroups (All_HD, All_STK, DIAB, All_HD, Other_CVD).</p>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="run-the-models.html#cb266-1" tabindex="-1"></a><span class="co"># Diseases vector</span></span>
+<span id="cb266-2"><a href="run-the-models.html#cb266-2" tabindex="-1"></a>diseases.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="co"># Cancers</span></span>
+<span id="cb266-3"><a href="run-the-models.html#cb266-3" tabindex="-1"></a>                  <span class="st">&quot;CC&quot;</span>, <span class="st">&quot;MLPC&quot;</span>, <span class="st">&quot;LC&quot;</span>, <span class="st">&quot;UC&quot;</span>, <span class="st">&quot;BC&quot;</span>, <span class="st">&quot;KC&quot;</span>,</span>
+<span id="cb266-4"><a href="run-the-models.html#cb266-4" tabindex="-1"></a>                  <span class="st">&quot;SCC&quot;</span>, <span class="st">&quot;SCNC&quot;</span>, <span class="st">&quot;LVC&quot;</span>, <span class="st">&quot;PC&quot;</span>, <span class="st">&quot;ECA&quot;</span>, <span class="st">&quot;TC&quot;</span>,</span>
+<span id="cb266-5"><a href="run-the-models.html#cb266-5" tabindex="-1"></a>                  <span class="st">&quot;APCA&quot;</span>, <span class="st">&quot;MMC&quot;</span>, <span class="st">&quot;OC&quot;</span>, <span class="st">&quot;GC&quot;</span>,</span>
+<span id="cb266-6"><a href="run-the-models.html#cb266-6" tabindex="-1"></a>                  </span>
+<span id="cb266-7"><a href="run-the-models.html#cb266-7" tabindex="-1"></a>                  <span class="co"># Cardiometabolic diseases</span></span>
+<span id="cb266-8"><a href="run-the-models.html#cb266-8" tabindex="-1"></a>                  <span class="st">&quot;IHD&quot;</span>, <span class="st">&quot;ISTK&quot;</span>, <span class="st">&quot;HSTK&quot;</span>, <span class="st">&quot;OSTK&quot;</span>, <span class="st">&quot;DIAB&quot;</span>, <span class="st">&quot;HHD&quot;</span>,</span>
+<span id="cb266-9"><a href="run-the-models.html#cb266-9" tabindex="-1"></a>                  <span class="st">&quot;AA&quot;</span>, <span class="st">&quot;RHD&quot;</span>, <span class="st">&quot;ENDO&quot;</span>, <span class="st">&quot;OTH&quot;</span>, <span class="st">&quot;CM&quot;</span>, <span class="st">&quot;AFF&quot;</span>, <span class="st">&quot;PVD&quot;</span></span>
+<span id="cb266-10"><a href="run-the-models.html#cb266-10" tabindex="-1"></a>                  )</span>
+<span id="cb266-11"><a href="run-the-models.html#cb266-11" tabindex="-1"></a></span>
+<span id="cb266-12"><a href="run-the-models.html#cb266-12" tabindex="-1"></a><span class="co"># Diseases type vector</span></span>
+<span id="cb266-13"><a href="run-the-models.html#cb266-13" tabindex="-1"></a>disease.type.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-14"><a href="run-the-models.html#cb266-14" tabindex="-1"></a>                       <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-15"><a href="run-the-models.html#cb266-15" tabindex="-1"></a>                       <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-16"><a href="run-the-models.html#cb266-16" tabindex="-1"></a>                       <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>,</span>
+<span id="cb266-17"><a href="run-the-models.html#cb266-17" tabindex="-1"></a>                       <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span>, <span class="st">&quot;CMD&quot;</span></span>
+<span id="cb266-18"><a href="run-the-models.html#cb266-18" tabindex="-1"></a>                      )</span>
+<span id="cb266-19"><a href="run-the-models.html#cb266-19" tabindex="-1"></a></span>
+<span id="cb266-20"><a href="run-the-models.html#cb266-20" tabindex="-1"></a><span class="co"># option 1</span></span>
+<span id="cb266-21"><a href="run-the-models.html#cb266-21" tabindex="-1"></a>disease.type1.vec <span class="ot">&lt;-</span> disease.type.vec</span>
+<span id="cb266-22"><a href="run-the-models.html#cb266-22" tabindex="-1"></a></span>
+<span id="cb266-23"><a href="run-the-models.html#cb266-23" tabindex="-1"></a><span class="co"># option 2</span></span>
+<span id="cb266-24"><a href="run-the-models.html#cb266-24" tabindex="-1"></a>disease.type2.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-25"><a href="run-the-models.html#cb266-25" tabindex="-1"></a>                       <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-26"><a href="run-the-models.html#cb266-26" tabindex="-1"></a>                       <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-27"><a href="run-the-models.html#cb266-27" tabindex="-1"></a>                       <span class="st">&quot;IHD&quot;</span>, <span class="st">&quot;ISTK&quot;</span>, <span class="st">&quot;HSTK&quot;</span>, <span class="st">&quot;OSTK&quot;</span>, <span class="st">&quot;DIAB&quot;</span>, <span class="st">&quot;HHD&quot;</span>,</span>
+<span id="cb266-28"><a href="run-the-models.html#cb266-28" tabindex="-1"></a>                       <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span>, </span>
+<span id="cb266-29"><a href="run-the-models.html#cb266-29" tabindex="-1"></a>                       <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span></span>
+<span id="cb266-30"><a href="run-the-models.html#cb266-30" tabindex="-1"></a>)</span>
+<span id="cb266-31"><a href="run-the-models.html#cb266-31" tabindex="-1"></a></span>
+<span id="cb266-32"><a href="run-the-models.html#cb266-32" tabindex="-1"></a><span class="co"># option 3</span></span>
+<span id="cb266-33"><a href="run-the-models.html#cb266-33" tabindex="-1"></a>disease.type3.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-34"><a href="run-the-models.html#cb266-34" tabindex="-1"></a>                       <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-35"><a href="run-the-models.html#cb266-35" tabindex="-1"></a>                       <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>, <span class="st">&quot;Cancer&quot;</span>,</span>
+<span id="cb266-36"><a href="run-the-models.html#cb266-36" tabindex="-1"></a>                       <span class="st">&quot;All_HD&quot;</span>, <span class="st">&quot;All_STK&quot;</span>, <span class="st">&quot;All_STK&quot;</span>, <span class="st">&quot;All_STK&quot;</span>, <span class="st">&quot;DIAB&quot;</span>, <span class="st">&quot;All_HD&quot;</span>,</span>
+<span id="cb266-37"><a href="run-the-models.html#cb266-37" tabindex="-1"></a>                       <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span>, </span>
+<span id="cb266-38"><a href="run-the-models.html#cb266-38" tabindex="-1"></a>                       <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span>, <span class="st">&quot;Other_CVD&quot;</span></span>
+<span id="cb266-39"><a href="run-the-models.html#cb266-39" tabindex="-1"></a>)</span></code></pre></div>
+<p>Create variable for number of diseases, and create various vectors and matrices for the “expanded” disease list, meaning each disease, but repeated three times for the three pathways: Direct effect, mediated by SBP, and mediated by BMI.</p>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="run-the-models.html#cb267-1" tabindex="-1"></a><span class="co"># Create some vectors</span></span>
+<span id="cb267-2"><a href="run-the-models.html#cb267-2" tabindex="-1"></a>n.diseases <span class="ot">&lt;-</span> <span class="fu">length</span>(diseases.vec)</span>
+<span id="cb267-3"><a href="run-the-models.html#cb267-3" tabindex="-1"></a></span>
+<span id="cb267-4"><a href="run-the-models.html#cb267-4" tabindex="-1"></a>pathway.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;direct&quot;</span>, <span class="st">&quot;medBMI&quot;</span>, <span class="st">&quot;medSBP&quot;</span>)</span>
+<span id="cb267-5"><a href="run-the-models.html#cb267-5" tabindex="-1"></a>pathway <span class="ot">&lt;-</span> <span class="fu">rep</span>(pathway.vec, <span class="at">each =</span> <span class="fu">length</span>(diseases.vec))</span>
+<span id="cb267-6"><a href="run-the-models.html#cb267-6" tabindex="-1"></a></span>
+<span id="cb267-7"><a href="run-the-models.html#cb267-7" tabindex="-1"></a>disease.table <span class="ot">&lt;-</span> <span class="fu">cbind</span>(diseases.vec, </span>
+<span id="cb267-8"><a href="run-the-models.html#cb267-8" tabindex="-1"></a>                       disease.type.vec, </span>
+<span id="cb267-9"><a href="run-the-models.html#cb267-9" tabindex="-1"></a>                       disease.type1.vec, </span>
+<span id="cb267-10"><a href="run-the-models.html#cb267-10" tabindex="-1"></a>                       disease.type2.vec, </span>
+<span id="cb267-11"><a href="run-the-models.html#cb267-11" tabindex="-1"></a>                       disease.type3.vec)</span>
+<span id="cb267-12"><a href="run-the-models.html#cb267-12" tabindex="-1"></a></span>
+<span id="cb267-13"><a href="run-the-models.html#cb267-13" tabindex="-1"></a>diseases_medBMI.vec <span class="ot">&lt;-</span> <span class="fu">paste</span>(diseases.vec, <span class="st">&quot;_medBMI&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb267-14"><a href="run-the-models.html#cb267-14" tabindex="-1"></a>diseases_medSBP.vec <span class="ot">&lt;-</span> <span class="fu">paste</span>(diseases.vec, <span class="st">&quot;_medSBP&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb267-15"><a href="run-the-models.html#cb267-15" tabindex="-1"></a></span>
+<span id="cb267-16"><a href="run-the-models.html#cb267-16" tabindex="-1"></a>diseases.vec <span class="ot">&lt;-</span> <span class="fu">c</span>(diseases.vec, diseases_medBMI.vec, diseases_medSBP.vec)</span>
+<span id="cb267-17"><a href="run-the-models.html#cb267-17" tabindex="-1"></a>diseases.vec.mn <span class="ot">&lt;-</span> <span class="fu">paste</span>(diseases.vec, <span class="st">&quot;mn&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb267-18"><a href="run-the-models.html#cb267-18" tabindex="-1"></a>diseases.vec.se <span class="ot">&lt;-</span> <span class="fu">paste</span>(diseases.vec, <span class="st">&quot;se&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb267-19"><a href="run-the-models.html#cb267-19" tabindex="-1"></a>num.diseases <span class="ot">&lt;-</span> <span class="fu">length</span>(diseases.vec.mn)</span>
+<span id="cb267-20"><a href="run-the-models.html#cb267-20" tabindex="-1"></a></span>
+<span id="cb267-21"><a href="run-the-models.html#cb267-21" tabindex="-1"></a>disease.total.vec <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;_medBMI|_medSBP&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;&quot;</span>, <span class="at">x =</span> diseases.vec)</span>
+<span id="cb267-22"><a href="run-the-models.html#cb267-22" tabindex="-1"></a></span>
+<span id="cb267-23"><a href="run-the-models.html#cb267-23" tabindex="-1"></a>disease.type.total.vec <span class="ot">&lt;-</span> disease.type.vec[<span class="fu">match</span>(disease.total.vec, disease.table)]</span>
+<span id="cb267-24"><a href="run-the-models.html#cb267-24" tabindex="-1"></a>disease.type1.total.vec <span class="ot">&lt;-</span> disease.type1.vec[<span class="fu">match</span>(disease.total.vec, disease.table)]</span>
+<span id="cb267-25"><a href="run-the-models.html#cb267-25" tabindex="-1"></a>disease.type2.total.vec <span class="ot">&lt;-</span> disease.type2.vec[<span class="fu">match</span>(disease.total.vec, disease.table)]</span>
+<span id="cb267-26"><a href="run-the-models.html#cb267-26" tabindex="-1"></a>disease.type3.total.vec <span class="ot">&lt;-</span> disease.type3.vec[<span class="fu">match</span>(disease.total.vec, disease.table)]</span></code></pre></div>
+<p>Set number of exposure files and mediated effects. These should not change unless you are considering adding more mediation effects (You’d have to edit the code to add those effects those, not just this line).</p>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="run-the-models.html#cb268-1" tabindex="-1"></a>nsim3 <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co"># number of exposure files</span></span>
+<span id="cb268-2"><a href="run-the-models.html#cb268-2" tabindex="-1"></a>n.mediated.effects <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="co"># number of mediated effects</span></span></code></pre></div>
+<p>Read in RRs, food to BMI effects, food to SBP effects, and TMREDs, and do a little data processing. (These inputs may also be in the primary data input file for the sake of completeness, but the actual inputs for the code are from the files listed below.</p>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="run-the-models.html#cb269-1" tabindex="-1"></a><span class="co"># Import relative risk (RR) data input</span></span>
+<span id="cb269-2"><a href="run-the-models.html#cb269-2" tabindex="-1"></a>rrtotal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">paste0</span>(file_location, <span class="st">&quot;rr_agesexrace_&quot;</span>, version.date, <span class="st">&quot;.csv&quot;</span>))</span>
+<span id="cb269-3"><a href="run-the-models.html#cb269-3" tabindex="-1"></a></span>
+<span id="cb269-4"><a href="run-the-models.html#cb269-4" tabindex="-1"></a><span class="co"># Import effect data inputs</span></span>
+<span id="cb269-5"><a href="run-the-models.html#cb269-5" tabindex="-1"></a>Food.to.BMI.effects <span class="ot">&lt;-</span> </span>
+<span id="cb269-6"><a href="run-the-models.html#cb269-6" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">paste0</span>(file_location, <span class="st">&quot;food_to_bmi_effects_converted_&quot;</span>, version.date, <span class="st">&quot;.csv&quot;</span>))</span>
+<span id="cb269-7"><a href="run-the-models.html#cb269-7" tabindex="-1"></a></span>
+<span id="cb269-8"><a href="run-the-models.html#cb269-8" tabindex="-1"></a>Food.to.SBP.effects <span class="ot">&lt;-</span> </span>
+<span id="cb269-9"><a href="run-the-models.html#cb269-9" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">paste0</span>(file_location, <span class="st">&quot;food_to_sbp_effects_converted_&quot;</span>, version.date, <span class="st">&quot;.csv&quot;</span>))</span>
+<span id="cb269-10"><a href="run-the-models.html#cb269-10" tabindex="-1"></a></span>
+<span id="cb269-11"><a href="run-the-models.html#cb269-11" tabindex="-1"></a><span class="co"># Create theoretical minimum (&#39;theomin&#39;) (TMRED) from data input file</span></span>
+<span id="cb269-12"><a href="run-the-models.html#cb269-12" tabindex="-1"></a>theomin <span class="ot">&lt;-</span> primary_input_cra <span class="sc">%&gt;%</span></span>
+<span id="cb269-13"><a href="run-the-models.html#cb269-13" tabindex="-1"></a>  <span class="fu">filter</span>(datatype <span class="sc">==</span> <span class="st">&quot;Total&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb269-14"><a href="run-the-models.html#cb269-14" tabindex="-1"></a>  <span class="fu">select</span>(Foodgroup, TMRED_Mean_Intake, TMRED_SD_Intake, TMRED_intake_unit) <span class="sc">%&gt;%</span></span>
+<span id="cb269-15"><a href="run-the-models.html#cb269-15" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb269-16"><a href="run-the-models.html#cb269-16" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Risk_factor =</span> Foodgroup,</span>
+<span id="cb269-17"><a href="run-the-models.html#cb269-17" tabindex="-1"></a>         <span class="at">TMRED =</span> TMRED_Mean_Intake,</span>
+<span id="cb269-18"><a href="run-the-models.html#cb269-18" tabindex="-1"></a>         <span class="at">SD =</span> TMRED_SD_Intake,</span>
+<span id="cb269-19"><a href="run-the-models.html#cb269-19" tabindex="-1"></a>         <span class="at">Unit =</span> TMRED_intake_unit)</span></code></pre></div>
+<p>Create mortality/incidence simulations.</p>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="run-the-models.html#cb270-1" tabindex="-1"></a><span class="co"># pre-simulate mortality/incidence numbers, to be used in CRA simulations, as well for calculating reverse-engineered PAFs</span></span>
+<span id="cb270-2"><a href="run-the-models.html#cb270-2" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">paste0</span>(code_location, <span class="st">&quot;source_code/presimulate_observed_disease_draws.r&quot;</span>))</span></code></pre></div>
+<p>Create new output file path.</p>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="run-the-models.html#cb271-1" tabindex="-1"></a>output_location <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_dir, <span class="st">&quot;CRA/&quot;</span>)</span>
+<span id="cb271-2"><a href="run-the-models.html#cb271-2" tabindex="-1"></a></span>
+<span id="cb271-3"><a href="run-the-models.html#cb271-3" tabindex="-1"></a><span class="fu">print</span>(output_location)</span></code></pre></div>
+<p>Next, we set up parallel processing so we can run all five diet patterns at the same time.</p>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="run-the-models.html#cb272-1" tabindex="-1"></a><span class="co"># Set up parallel processing</span></span>
+<span id="cb272-2"><a href="run-the-models.html#cb272-2" tabindex="-1"></a><span class="co"># Detect system type</span></span>
+<span id="cb272-3"><a href="run-the-models.html#cb272-3" tabindex="-1"></a>get_os <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb272-4"><a href="run-the-models.html#cb272-4" tabindex="-1"></a>  sysinf <span class="ot">&lt;-</span> <span class="fu">Sys.info</span>()</span>
+<span id="cb272-5"><a href="run-the-models.html#cb272-5" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(sysinf)){</span>
+<span id="cb272-6"><a href="run-the-models.html#cb272-6" tabindex="-1"></a>    os <span class="ot">&lt;-</span> sysinf[<span class="st">&#39;sysname&#39;</span>]</span>
+<span id="cb272-7"><a href="run-the-models.html#cb272-7" tabindex="-1"></a>    <span class="cf">if</span> (os <span class="sc">==</span> <span class="st">&#39;Darwin&#39;</span>)</span>
+<span id="cb272-8"><a href="run-the-models.html#cb272-8" tabindex="-1"></a>      os <span class="ot">&lt;-</span> <span class="st">&quot;osx&quot;</span></span>
+<span id="cb272-9"><a href="run-the-models.html#cb272-9" tabindex="-1"></a>    <span class="cf">if</span> (os <span class="sc">==</span> <span class="st">&quot;windows&quot;</span>)</span>
+<span id="cb272-10"><a href="run-the-models.html#cb272-10" tabindex="-1"></a>      os <span class="ot">&lt;-</span> <span class="st">&quot;windows&quot;</span></span>
+<span id="cb272-11"><a href="run-the-models.html#cb272-11" tabindex="-1"></a>  } <span class="cf">else</span> { <span class="co"># if we still don&#39;t know</span></span>
+<span id="cb272-12"><a href="run-the-models.html#cb272-12" tabindex="-1"></a>    os <span class="ot">&lt;-</span> .Platform<span class="sc">$</span>OS.type</span>
+<span id="cb272-13"><a href="run-the-models.html#cb272-13" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">grepl</span>(<span class="st">&quot;^darwin&quot;</span>, R.version<span class="sc">$</span>os))</span>
+<span id="cb272-14"><a href="run-the-models.html#cb272-14" tabindex="-1"></a>      os <span class="ot">&lt;-</span> <span class="st">&quot;osx&quot;</span></span>
+<span id="cb272-15"><a href="run-the-models.html#cb272-15" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">grepl</span>(<span class="st">&quot;linux-gnu&quot;</span>, R.version<span class="sc">$</span>os))</span>
+<span id="cb272-16"><a href="run-the-models.html#cb272-16" tabindex="-1"></a>      os <span class="ot">&lt;-</span> <span class="st">&quot;linux&quot;</span></span>
+<span id="cb272-17"><a href="run-the-models.html#cb272-17" tabindex="-1"></a>  }</span>
+<span id="cb272-18"><a href="run-the-models.html#cb272-18" tabindex="-1"></a>  <span class="fu">tolower</span>(os)</span>
+<span id="cb272-19"><a href="run-the-models.html#cb272-19" tabindex="-1"></a>}</span>
+<span id="cb272-20"><a href="run-the-models.html#cb272-20" tabindex="-1"></a></span>
+<span id="cb272-21"><a href="run-the-models.html#cb272-21" tabindex="-1"></a><span class="co"># Check if we are on Windows or Mac using our function.</span></span>
+<span id="cb272-22"><a href="run-the-models.html#cb272-22" tabindex="-1"></a>cluster_type <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">get_os</span>() <span class="sc">==</span> <span class="st">&quot;windows&quot;</span>) {<span class="st">&quot;PSOCK&quot;</span>} <span class="cf">else</span> {<span class="st">&quot;FORK&quot;</span>}</span>
+<span id="cb272-23"><a href="run-the-models.html#cb272-23" tabindex="-1"></a></span>
+<span id="cb272-24"><a href="run-the-models.html#cb272-24" tabindex="-1"></a>no_cores <span class="ot">&lt;-</span> <span class="fu">detectCores</span>() <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb272-25"><a href="run-the-models.html#cb272-25" tabindex="-1"></a>s <span class="ot">=</span> <span class="dv">1</span> <span class="co"># initialize iteration variable before forking</span></span>
+<span id="cb272-26"><a href="run-the-models.html#cb272-26" tabindex="-1"></a></span>
+<span id="cb272-27"><a href="run-the-models.html#cb272-27" tabindex="-1"></a>cl <span class="ot">&lt;-</span> <span class="fu">makeCluster</span>(no_cores, <span class="at">type =</span> cluster_type) <span class="co"># Make the cluster</span></span>
+<span id="cb272-28"><a href="run-the-models.html#cb272-28" tabindex="-1"></a><span class="fu">registerDoParallel</span>(cl)</span></code></pre></div>
+<p>Start the for-each loop. Inside the loop is the code to run the CRA. Recall that diet.vec is a vector listing all dietary patterns of interest. The for-each loop allows us to run the code (in this case, the CRA code) within the loop in parallel for each element in diet.vec.</p>
+<p>Read in data input file, subset by dietary pattern of interest, and do some data processing. Also set seed within the for-loop with the hope that any duplicated simulations will be consistent among dietary patterns.</p>
+<p>Add variable to specify number of risk factors, variable to specify length of exposure dataset for one risk factor (in our case, that’s the number of subgroups) and variable specifying name of dietary of pattern. Note some of these variables needed to be added to the global environment for the code to work with parallel processing.</p>
+<p>Once we have read in everything we need, next is running the model. Part 1 actually calculates the PIFs for all diet-disease pairs of interest for all subgroups, x times depending on what you set nsim to be. The entire simulation results will be saved. Part 2 creates summary results, for all possible subgroup combinations. Part 3 calculates joint PIFs (for all subgroups).</p>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="run-the-models.html#cb273-1" tabindex="-1"></a><span class="co"># This is the for loop that runs the CRA analysis for all dietary patterns</span></span>
+<span id="cb273-2"><a href="run-the-models.html#cb273-2" tabindex="-1"></a><span class="fu">foreach</span>(<span class="at">ss =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(diet.vec), <span class="at">.verbose =</span> <span class="cn">TRUE</span>) <span class="sc">%dopar%</span> {</span>
+<span id="cb273-3"><a href="run-the-models.html#cb273-3" tabindex="-1"></a></span>
+<span id="cb273-4"><a href="run-the-models.html#cb273-4" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">359</span>)</span>
+<span id="cb273-5"><a href="run-the-models.html#cb273-5" tabindex="-1"></a></span>
+<span id="cb273-6"><a href="run-the-models.html#cb273-6" tabindex="-1"></a>  <span class="co"># Read CSV file of exposure </span></span>
+<span id="cb273-7"><a href="run-the-models.html#cb273-7" tabindex="-1"></a>  expos <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">paste0</span>(file_location, <span class="st">&quot;input_data_&quot;</span>, version.date, <span class="st">&quot;.csv&quot;</span>))</span>
+<span id="cb273-8"><a href="run-the-models.html#cb273-8" tabindex="-1"></a>  </span>
+<span id="cb273-9"><a href="run-the-models.html#cb273-9" tabindex="-1"></a>  expos1 <span class="ot">&lt;-</span> expos <span class="sc">%&gt;%</span> </span>
+<span id="cb273-10"><a href="run-the-models.html#cb273-10" tabindex="-1"></a>    <span class="co"># fix veg</span></span>
+<span id="cb273-11"><a href="run-the-models.html#cb273-11" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">diet_pattern =</span> <span class="fu">case_match</span>(diet_pattern,</span>
+<span id="cb273-12"><a href="run-the-models.html#cb273-12" tabindex="-1"></a>                                     <span class="st">&quot;Vegetarian&quot;</span> <span class="sc">~</span> <span class="st">&quot;Veg&quot;</span>,</span>
+<span id="cb273-13"><a href="run-the-models.html#cb273-13" tabindex="-1"></a>                                     <span class="at">.default =</span> diet_pattern)) <span class="sc">%&gt;%</span> </span>
+<span id="cb273-14"><a href="run-the-models.html#cb273-14" tabindex="-1"></a>    <span class="co"># rename variable</span></span>
+<span id="cb273-15"><a href="run-the-models.html#cb273-15" tabindex="-1"></a>    <span class="fu">rename</span>(<span class="st">&quot;riskfactor&quot;</span> <span class="ot">=</span> <span class="st">&quot;Foodgroup&quot;</span>)</span>
+<span id="cb273-16"><a href="run-the-models.html#cb273-16" tabindex="-1"></a>  </span>
+<span id="cb273-17"><a href="run-the-models.html#cb273-17" tabindex="-1"></a>  <span class="co"># Fix a bunch of variable names</span></span>
+<span id="cb273-18"><a href="run-the-models.html#cb273-18" tabindex="-1"></a>  <span class="co"># renaming it in case name of variable ever changes in datafile.</span></span>
+<span id="cb273-19"><a href="run-the-models.html#cb273-19" tabindex="-1"></a>  <span class="co"># expos$riskfactor &lt;- expos$Foodgroup </span></span>
+<span id="cb273-20"><a href="run-the-models.html#cb273-20" tabindex="-1"></a>  </span>
+<span id="cb273-21"><a href="run-the-models.html#cb273-21" tabindex="-1"></a>  <span class="co"># renaming it in case name of variable ever changes in datafile.</span></span>
+<span id="cb273-22"><a href="run-the-models.html#cb273-22" tabindex="-1"></a>  <span class="co"># expos$diet &lt;- expos$Foodgroup</span></span>
+<span id="cb273-23"><a href="run-the-models.html#cb273-23" tabindex="-1"></a>    </span>
+<span id="cb273-24"><a href="run-the-models.html#cb273-24" tabindex="-1"></a>  <span class="co"># expos$diet_pattern[expos$diet_pattern == &quot;Vegetarian&quot;] &lt;- &quot;Veg&quot;</span></span>
+<span id="cb273-25"><a href="run-the-models.html#cb273-25" tabindex="-1"></a>  </span>
+<span id="cb273-26"><a href="run-the-models.html#cb273-26" tabindex="-1"></a>  expos2 <span class="ot">&lt;-</span> expos1 <span class="sc">%&gt;%</span> </span>
+<span id="cb273-27"><a href="run-the-models.html#cb273-27" tabindex="-1"></a>    <span class="co"># only keep food groups we specified above</span></span>
+<span id="cb273-28"><a href="run-the-models.html#cb273-28" tabindex="-1"></a>    <span class="fu">filter</span>(riskfactor <span class="sc">%in%</span> rfvec_cra) <span class="sc">%&gt;%</span> </span>
+<span id="cb273-29"><a href="run-the-models.html#cb273-29" tabindex="-1"></a>    <span class="co"># remove &#39;grocery&#39; and &#39;nongrocery&#39; data types</span></span>
+<span id="cb273-30"><a href="run-the-models.html#cb273-30" tabindex="-1"></a>    <span class="co"># only keep diet pattern that we specified above</span></span>
+<span id="cb273-31"><a href="run-the-models.html#cb273-31" tabindex="-1"></a>    <span class="fu">filter</span>(datatype <span class="sc">==</span> <span class="st">&quot;Total&quot;</span> <span class="sc">&amp;</span> diet_pattern <span class="sc">==</span> diet.vec[ss]) <span class="sc">%&gt;%</span> </span>
+<span id="cb273-32"><a href="run-the-models.html#cb273-32" tabindex="-1"></a>    <span class="fu">arrange</span>(riskfactor, subgroup_id)</span>
+<span id="cb273-33"><a href="run-the-models.html#cb273-33" tabindex="-1"></a>  </span>
+<span id="cb273-34"><a href="run-the-models.html#cb273-34" tabindex="-1"></a>  <span class="co"># expos &lt;- subset(expos, Foodgroup %in% rfvec_cra)</span></span>
+<span id="cb273-35"><a href="run-the-models.html#cb273-35" tabindex="-1"></a>  <span class="co"># expos &lt;- subset(expos, diet_pattern == diet.vec[ss] &amp; datatype == &quot;Total&quot;)</span></span>
+<span id="cb273-36"><a href="run-the-models.html#cb273-36" tabindex="-1"></a>  <span class="co"># expos &lt;- expos[order(expos$Foodgroup),]</span></span>
+<span id="cb273-37"><a href="run-the-models.html#cb273-37" tabindex="-1"></a></span>
+<span id="cb273-38"><a href="run-the-models.html#cb273-38" tabindex="-1"></a>  <span class="co"># check</span></span>
+<span id="cb273-39"><a href="run-the-models.html#cb273-39" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">as.data.frame</span>(<span class="fu">table</span>(expos2<span class="sc">$</span>riskfactor, <span class="at">useNA =</span> <span class="st">&quot;always&quot;</span>))) <span class="co"># good</span></span>
+<span id="cb273-40"><a href="run-the-models.html#cb273-40" tabindex="-1"></a>  </span>
+<span id="cb273-41"><a href="run-the-models.html#cb273-41" tabindex="-1"></a>  <span class="co"># change this line if you want to use total sd or unweighted sd or something else for sd.</span></span>
+<span id="cb273-42"><a href="run-the-models.html#cb273-42" tabindex="-1"></a>  <span class="co"># expos$sd &lt;- expos$sigma_u_wgt</span></span>
+<span id="cb273-43"><a href="run-the-models.html#cb273-43" tabindex="-1"></a>  </span>
+<span id="cb273-44"><a href="run-the-models.html#cb273-44" tabindex="-1"></a>  <span class="co"># note to self - this var doesn&#39;t exist??</span></span>
+<span id="cb273-45"><a href="run-the-models.html#cb273-45" tabindex="-1"></a>  <span class="co"># let&#39;s see if it runs without it</span></span>
+<span id="cb273-46"><a href="run-the-models.html#cb273-46" tabindex="-1"></a>  <span class="co"># change this line if you want to use total sd or unweighted sd or something else for sd.</span></span>
+<span id="cb273-47"><a href="run-the-models.html#cb273-47" tabindex="-1"></a>  <span class="co"># expos$sd.alt &lt;- expos$sigma_u_wgt.alt</span></span>
+<span id="cb273-48"><a href="run-the-models.html#cb273-48" tabindex="-1"></a>  </span>
+<span id="cb273-49"><a href="run-the-models.html#cb273-49" tabindex="-1"></a>  expos3 <span class="ot">&lt;-</span> expos2 <span class="sc">%&gt;%</span> </span>
+<span id="cb273-50"><a href="run-the-models.html#cb273-50" tabindex="-1"></a>    <span class="fu">rename</span>(<span class="at">mean =</span> Mean_Intake,</span>
+<span id="cb273-51"><a href="run-the-models.html#cb273-51" tabindex="-1"></a>           <span class="at">se =</span> SE_Intake,</span>
+<span id="cb273-52"><a href="run-the-models.html#cb273-52" tabindex="-1"></a>           <span class="at">sd =</span> sigma_u_wgt,</span>
+<span id="cb273-53"><a href="run-the-models.html#cb273-53" tabindex="-1"></a>           <span class="at">subgroup =</span> subgroup_id,</span>
+<span id="cb273-54"><a href="run-the-models.html#cb273-54" tabindex="-1"></a>           <span class="at">CF_mean_intake =</span> CF_Mean_Intake,</span>
+<span id="cb273-55"><a href="run-the-models.html#cb273-55" tabindex="-1"></a>           <span class="at">CF_se_intake =</span> CF_SE_Intake,</span>
+<span id="cb273-56"><a href="run-the-models.html#cb273-56" tabindex="-1"></a>           <span class="at">agecat =</span> Age,</span>
+<span id="cb273-57"><a href="run-the-models.html#cb273-57" tabindex="-1"></a>           <span class="at">race =</span> Race) <span class="sc">%&gt;%</span> </span>
+<span id="cb273-58"><a href="run-the-models.html#cb273-58" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">age =</span> <span class="fu">case_when</span>(agecat <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">25</span>,</span>
+<span id="cb273-59"><a href="run-the-models.html#cb273-59" tabindex="-1"></a>                           agecat <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">35</span>,</span>
+<span id="cb273-60"><a href="run-the-models.html#cb273-60" tabindex="-1"></a>                           agecat <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="dv">45</span>,</span>
+<span id="cb273-61"><a href="run-the-models.html#cb273-61" tabindex="-1"></a>                           agecat <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="dv">55</span>,</span>
+<span id="cb273-62"><a href="run-the-models.html#cb273-62" tabindex="-1"></a>                           agecat <span class="sc">==</span> <span class="dv">5</span> <span class="sc">~</span> <span class="dv">65</span>,</span>
+<span id="cb273-63"><a href="run-the-models.html#cb273-63" tabindex="-1"></a>                           agecat <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="dv">75</span>),</span>
+<span id="cb273-64"><a href="run-the-models.html#cb273-64" tabindex="-1"></a>           <span class="at">age.mid =</span> <span class="fu">case_when</span>(agecat <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="fu">median</span>(<span class="fu">c</span>(<span class="dv">25</span>,<span class="dv">35</span>)),</span>
+<span id="cb273-65"><a href="run-the-models.html#cb273-65" tabindex="-1"></a>                               agecat <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="fu">median</span>(<span class="fu">c</span>(<span class="dv">35</span>,<span class="dv">45</span>)),</span>
+<span id="cb273-66"><a href="run-the-models.html#cb273-66" tabindex="-1"></a>                               agecat <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="fu">median</span>(<span class="fu">c</span>(<span class="dv">45</span>,<span class="dv">55</span>)),</span>
+<span id="cb273-67"><a href="run-the-models.html#cb273-67" tabindex="-1"></a>                               agecat <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="fu">median</span>(<span class="fu">c</span>(<span class="dv">55</span>,<span class="dv">65</span>)),</span>
+<span id="cb273-68"><a href="run-the-models.html#cb273-68" tabindex="-1"></a>                               agecat <span class="sc">==</span> <span class="dv">5</span> <span class="sc">~</span> <span class="fu">median</span>(<span class="fu">c</span>(<span class="dv">65</span>,<span class="dv">75</span>)),</span>
+<span id="cb273-69"><a href="run-the-models.html#cb273-69" tabindex="-1"></a>                               agecat <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="fu">median</span>(<span class="fu">c</span>(<span class="dv">75</span>,<span class="dv">100</span>))),</span>
+<span id="cb273-70"><a href="run-the-models.html#cb273-70" tabindex="-1"></a>           <span class="at">female =</span> <span class="fu">case_when</span>(Sex <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb273-71"><a href="run-the-models.html#cb273-71" tabindex="-1"></a>                              Sex <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">0</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb273-72"><a href="run-the-models.html#cb273-72" tabindex="-1"></a>    <span class="fu">relocate</span>(<span class="fu">c</span>(age, age.mid), <span class="at">.after =</span> agecat) <span class="sc">%&gt;%</span> </span>
+<span id="cb273-73"><a href="run-the-models.html#cb273-73" tabindex="-1"></a>    <span class="fu">relocate</span>(female, <span class="at">.before =</span> Sex)</span>
+<span id="cb273-74"><a href="run-the-models.html#cb273-74" tabindex="-1"></a>  </span>
+<span id="cb273-75"><a href="run-the-models.html#cb273-75" tabindex="-1"></a>  <span class="co"># expos$race[expos$Race_label == &quot;NHW&quot;] &lt;- 1</span></span>
+<span id="cb273-76"><a href="run-the-models.html#cb273-76" tabindex="-1"></a>  <span class="co"># expos$race[expos$Race_label == &quot;NHB&quot;] &lt;- 2</span></span>
+<span id="cb273-77"><a href="run-the-models.html#cb273-77" tabindex="-1"></a>  <span class="co"># expos$race[expos$Race_label == &quot;HIS&quot;] &lt;- 3</span></span>
+<span id="cb273-78"><a href="run-the-models.html#cb273-78" tabindex="-1"></a>  <span class="co"># expos$race[expos$Race_label == &quot;OTH&quot;] &lt;- 4</span></span>
+<span id="cb273-79"><a href="run-the-models.html#cb273-79" tabindex="-1"></a>  </span>
+<span id="cb273-80"><a href="run-the-models.html#cb273-80" tabindex="-1"></a>    <span class="co"># Assign age</span></span>
+<span id="cb273-81"><a href="run-the-models.html#cb273-81" tabindex="-1"></a>  <span class="co"># expos$age &lt;- 0</span></span>
+<span id="cb273-82"><a href="run-the-models.html#cb273-82" tabindex="-1"></a>  <span class="co"># expos$age[expos$agecat == 1] &lt;- 25</span></span>
+<span id="cb273-83"><a href="run-the-models.html#cb273-83" tabindex="-1"></a>  <span class="co"># expos$age[expos$agecat == 2] &lt;- 35</span></span>
+<span id="cb273-84"><a href="run-the-models.html#cb273-84" tabindex="-1"></a>  <span class="co"># expos$age[expos$agecat == 3] &lt;- 45</span></span>
+<span id="cb273-85"><a href="run-the-models.html#cb273-85" tabindex="-1"></a>  <span class="co"># expos$age[expos$agecat == 4] &lt;- 55</span></span>
+<span id="cb273-86"><a href="run-the-models.html#cb273-86" tabindex="-1"></a>  <span class="co"># expos$age[expos$agecat == 5] &lt;- 65</span></span>
+<span id="cb273-87"><a href="run-the-models.html#cb273-87" tabindex="-1"></a>  <span class="co"># expos$age[expos$agecat == 6] &lt;- 75</span></span>
+<span id="cb273-88"><a href="run-the-models.html#cb273-88" tabindex="-1"></a>  </span>
+<span id="cb273-89"><a href="run-the-models.html#cb273-89" tabindex="-1"></a>  <span class="co"># expos$age.mid &lt;- 0</span></span>
+<span id="cb273-90"><a href="run-the-models.html#cb273-90" tabindex="-1"></a>  <span class="co"># expos$age.mid[expos$agecat == 1] &lt;- median(c(25,35))</span></span>
+<span id="cb273-91"><a href="run-the-models.html#cb273-91" tabindex="-1"></a>  <span class="co"># expos$age.mid[expos$agecat == 2] &lt;- median(c(35,45))</span></span>
+<span id="cb273-92"><a href="run-the-models.html#cb273-92" tabindex="-1"></a>  <span class="co"># expos$age.mid[expos$agecat == 3] &lt;- median(c(45,55))</span></span>
+<span id="cb273-93"><a href="run-the-models.html#cb273-93" tabindex="-1"></a>  <span class="co"># expos$age.mid[expos$agecat == 4] &lt;- median(c(55,65))</span></span>
+<span id="cb273-94"><a href="run-the-models.html#cb273-94" tabindex="-1"></a>  <span class="co"># expos$age.mid[expos$agecat == 5] &lt;- median(c(65,75))</span></span>
+<span id="cb273-95"><a href="run-the-models.html#cb273-95" tabindex="-1"></a>  <span class="co"># expos$age.mid[expos$agecat == 6] &lt;- median(c(75,100))</span></span>
+<span id="cb273-96"><a href="run-the-models.html#cb273-96" tabindex="-1"></a>  </span>
+<span id="cb273-97"><a href="run-the-models.html#cb273-97" tabindex="-1"></a>  <span class="co"># add expos3 to global environment</span></span>
+<span id="cb273-98"><a href="run-the-models.html#cb273-98" tabindex="-1"></a>  .GlobalEnv<span class="sc">$</span>expos3 <span class="ot">&lt;-</span> expos3</span>
+<span id="cb273-99"><a href="run-the-models.html#cb273-99" tabindex="-1"></a>  </span>
+<span id="cb273-100"><a href="run-the-models.html#cb273-100" tabindex="-1"></a>  <span class="co"># expos$mean &lt;- expos$Mean_Intake</span></span>
+<span id="cb273-101"><a href="run-the-models.html#cb273-101" tabindex="-1"></a>  <span class="co"># expos$se &lt;- expos$SE_Intake</span></span>
+<span id="cb273-102"><a href="run-the-models.html#cb273-102" tabindex="-1"></a>  <span class="co"># expos$subgroup &lt;- expos$subgroup_id</span></span>
+<span id="cb273-103"><a href="run-the-models.html#cb273-103" tabindex="-1"></a>  <span class="co"># expos$CF_mean_intake &lt;- expos$CF_Mean_Intake</span></span>
+<span id="cb273-104"><a href="run-the-models.html#cb273-104" tabindex="-1"></a>  <span class="co"># expos$CF_se_intake &lt;- expos$CF_SE_Intake</span></span>
+<span id="cb273-105"><a href="run-the-models.html#cb273-105" tabindex="-1"></a>  <span class="co"># expos$age &lt;- expos$Age</span></span>
+<span id="cb273-106"><a href="run-the-models.html#cb273-106" tabindex="-1"></a>  <span class="co"># expos$agecat &lt;- expos$Age</span></span>
+<span id="cb273-107"><a href="run-the-models.html#cb273-107" tabindex="-1"></a>  <span class="co"># expos$race &lt;- 0</span></span>
+<span id="cb273-108"><a href="run-the-models.html#cb273-108" tabindex="-1"></a>  <span class="co"># expos$race[expos$Race_label == &quot;NHW&quot;] &lt;- 1</span></span>
+<span id="cb273-109"><a href="run-the-models.html#cb273-109" tabindex="-1"></a>  <span class="co"># expos$race[expos$Race_label == &quot;NHB&quot;] &lt;- 2</span></span>
+<span id="cb273-110"><a href="run-the-models.html#cb273-110" tabindex="-1"></a>  <span class="co"># expos$race[expos$Race_label == &quot;HIS&quot;] &lt;- 3</span></span>
+<span id="cb273-111"><a href="run-the-models.html#cb273-111" tabindex="-1"></a>  <span class="co"># expos$race[expos$Race_label == &quot;OTH&quot;] &lt;- 4</span></span>
+<span id="cb273-112"><a href="run-the-models.html#cb273-112" tabindex="-1"></a>  <span class="co"># expos$female &lt;- 0</span></span>
+<span id="cb273-113"><a href="run-the-models.html#cb273-113" tabindex="-1"></a>  <span class="co"># expos[expos$Sex == 1,]$female &lt;- 1</span></span>
+<span id="cb273-114"><a href="run-the-models.html#cb273-114" tabindex="-1"></a></span>
+<span id="cb273-115"><a href="run-the-models.html#cb273-115" tabindex="-1"></a>  <span class="co"># Create # of strata variable</span></span>
+<span id="cb273-116"><a href="run-the-models.html#cb273-116" tabindex="-1"></a>  n.strata <span class="ot">&lt;-</span> expos3 <span class="sc">%&gt;%</span> <span class="fu">select</span>(subgroup) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>() <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()</span>
+<span id="cb273-117"><a href="run-the-models.html#cb273-117" tabindex="-1"></a></span>
+<span id="cb273-118"><a href="run-the-models.html#cb273-118" tabindex="-1"></a>  <span class="co"># number of risk factors in the file (e.g., 1 if there is only one risk factor)</span></span>
+<span id="cb273-119"><a href="run-the-models.html#cb273-119" tabindex="-1"></a>  expos.rf <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(expos3<span class="sc">$</span>riskfactor)) </span>
+<span id="cb273-120"><a href="run-the-models.html#cb273-120" tabindex="-1"></a></span>
+<span id="cb273-121"><a href="run-the-models.html#cb273-121" tabindex="-1"></a>  <span class="co"># length of exposure dataset for one risk factor (i.e. rows in exposure dataset: sex * age-groups * coutries)</span></span>
+<span id="cb273-122"><a href="run-the-models.html#cb273-122" tabindex="-1"></a>  nsim2 <span class="ot">&lt;-</span> <span class="fu">length</span>(expos3<span class="sc">$</span>mean)<span class="sc">/</span>expos.rf </span>
+<span id="cb273-123"><a href="run-the-models.html#cb273-123" tabindex="-1"></a></span>
+<span id="cb273-124"><a href="run-the-models.html#cb273-124" tabindex="-1"></a>  <span class="co"># add var to global environment</span></span>
+<span id="cb273-125"><a href="run-the-models.html#cb273-125" tabindex="-1"></a>  .GlobalEnv<span class="sc">$</span>nsim2 <span class="ot">&lt;-</span> nsim2</span>
+<span id="cb273-126"><a href="run-the-models.html#cb273-126" tabindex="-1"></a></span>
+<span id="cb273-127"><a href="run-the-models.html#cb273-127" tabindex="-1"></a>  <span class="co"># set diet pattern</span></span>
+<span id="cb273-128"><a href="run-the-models.html#cb273-128" tabindex="-1"></a>  diet_pattern <span class="ot">&lt;-</span> diet.vec[ss]</span>
+<span id="cb273-129"><a href="run-the-models.html#cb273-129" tabindex="-1"></a></span>
+<span id="cb273-130"><a href="run-the-models.html#cb273-130" tabindex="-1"></a>  <span class="co"># add var to global environment</span></span>
+<span id="cb273-131"><a href="run-the-models.html#cb273-131" tabindex="-1"></a>  .GlobalEnv<span class="sc">$</span>diet_pattern <span class="ot">&lt;-</span> diet_pattern</span>
+<span id="cb273-132"><a href="run-the-models.html#cb273-132" tabindex="-1"></a></span>
+<span id="cb273-133"><a href="run-the-models.html#cb273-133" tabindex="-1"></a>  <span class="co"># Part 1</span></span>
+<span id="cb273-134"><a href="run-the-models.html#cb273-134" tabindex="-1"></a>  <span class="co"># Actually runs the simulations and calculates PIF for nsim1 simulations</span></span>
+<span id="cb273-135"><a href="run-the-models.html#cb273-135" tabindex="-1"></a>  <span class="fu">source</span>(<span class="fu">paste0</span>(code_location, <span class="st">&quot;source_code/PIF_analysis_part_1.r&quot;</span>)) </span>
+<span id="cb273-136"><a href="run-the-models.html#cb273-136" tabindex="-1"></a></span>
+<span id="cb273-137"><a href="run-the-models.html#cb273-137" tabindex="-1"></a>  <span class="co"># Part 2</span></span>
+<span id="cb273-138"><a href="run-the-models.html#cb273-138" tabindex="-1"></a>  <span class="fu">source</span>(<span class="fu">paste0</span>(code_location, <span class="st">&quot;source_code/PIF_analysis_part_2.r&quot;</span>))</span>
+<span id="cb273-139"><a href="run-the-models.html#cb273-139" tabindex="-1"></a></span>
+<span id="cb273-140"><a href="run-the-models.html#cb273-140" tabindex="-1"></a>  <span class="co"># Part 3</span></span>
+<span id="cb273-141"><a href="run-the-models.html#cb273-141" tabindex="-1"></a>  <span class="co"># Calculates Joint PIFs for each strata and each disease</span></span>
+<span id="cb273-142"><a href="run-the-models.html#cb273-142" tabindex="-1"></a>  <span class="fu">source</span>(<span class="fu">paste0</span>(code_location, <span class="st">&quot;source_code/PIF_analysis_part_3.r&quot;</span>)) </span>
+<span id="cb273-143"><a href="run-the-models.html#cb273-143" tabindex="-1"></a></span>
+<span id="cb273-144"><a href="run-the-models.html#cb273-144" tabindex="-1"></a>}</span></code></pre></div>
+<p>We’re done! End the timer, stop the set up to run simultaneously, and print how much time it took to run the code.</p>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="run-the-models.html#cb274-1" tabindex="-1"></a>end_time2 <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb274-2"><a href="run-the-models.html#cb274-2" tabindex="-1"></a></span>
+<span id="cb274-3"><a href="run-the-models.html#cb274-3" tabindex="-1"></a><span class="fu">stopCluster</span>(cl)</span>
+<span id="cb274-4"><a href="run-the-models.html#cb274-4" tabindex="-1"></a></span>
+<span id="cb274-5"><a href="run-the-models.html#cb274-5" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Time it takes to run health models: &quot;</span>)</span>
+<span id="cb274-6"><a href="run-the-models.html#cb274-6" tabindex="-1"></a></span>
+<span id="cb274-7"><a href="run-the-models.html#cb274-7" tabindex="-1"></a><span class="co"># print(end_time2 - end_time1)</span></span>
+<span id="cb274-8"><a href="run-the-models.html#cb274-8" tabindex="-1"></a><span class="fu">print</span>(end_time2 <span class="sc">-</span> start_time)</span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="finalize-model-data-inputs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="convert-rmd-files-to-r-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-run-models.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
