@@ -1,3 +1,13 @@
+```{r, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      results = "hide", 
+                      message = FALSE,
+                      warning = FALSE,
+                      eval = FALSE)
+
+```
+
 # Finalize Model Data Inputs {#finalize-model-data-inputs}
 
 This chapter walks you through the final cleaning process for the model inputs.
@@ -12,10 +22,7 @@ options(scipen=999)
 
 library(tidyverse)
 
-# create date value
-date <- Sys.Date()
-
-date <- "2025-05-20"
+source("code/version_date.R")
 
 ```
 
@@ -25,7 +32,7 @@ Import the diet/health dataset (i.e., mega_costenv).
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 
-nhanes <- read_csv(paste0("data_inputs/FINAL/cleaned_data/mega_costenv_structure_temp_", date, "_FINAL.csv"))
+nhanes <- read_csv(dated("data_inputs/FINAL/cleaned_data/mega_costenv_structure_temp"))
 
 ```
 
@@ -54,8 +61,8 @@ Import the impact factors.
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 
-enviro_IFs <- read_csv(paste0("data_inputs/IMPACT_FACTORS/output_data/Impacts_enviro_", date, ".csv"))
-cost_IFs <- read_csv(paste0("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost_", date, ".csv"))
+enviro_IFs <- read_csv(dated("data_inputs/IMPACT_FACTORS/output_data/Impacts_enviro"))
+cost_IFs <- read_csv(dated("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost"))
 
 ```
 
@@ -504,24 +511,6 @@ Export to the "FINAL" folder.
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 
-write_csv(final3, paste0("data_inputs/FINAL/model_data/input_data_", date, "_FINAL.csv"))
+write_csv(final3, dated("data_inputs/FINAL/model_data/input_data"))
 
 ```
-
-## Copy Model Inputs to GitHub
-
-All of the model input files are currently located in the "FINAL" folder on Box. Below, we copy them to GitHub so that we can access them on the cluster.
-
-```{r}
-
-current_folder <- "data_inputs/FINAL/model_data" # where files currently live on Box
-
-new_folder <- "/Users/bmb73/Documents/GitHub/LASTING/in/FINAL" # Github repo on Brooke's laptop
-# new_folder <- "/Users/fcudhe01/Documents/GitHub/LASTING/in/FINAL" # Github repo on Fred's laptop
-
-list_of_files <- list.files(current_folder, ".csv") 
-
-file.copy(file.path(current_folder, list_of_files), new_folder)
-
-```
-

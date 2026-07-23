@@ -1,3 +1,13 @@
+```{r, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      results = "hide", 
+                      message = FALSE,
+                      warning = FALSE,
+                      eval = FALSE)
+
+```
+
 # Cleaning Code for Health Data
 
 This chapter walks you through all of the R code used to clean the raw **HEALTH**-related data inputs. The resulting cleaned datasets are then used in the modeling (see Chapter \@ref(finalize-model-data-inputs).
@@ -29,7 +39,7 @@ Create a date string that will be appended to all data file names.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-my_date <- paste0("_", Sys.Date(), "_FINAL.csv")
+source("code/version_date.R")
 
 ```
 
@@ -47,7 +57,7 @@ pop1 <- pop %>% rename(subgroup = subgroup_id,
                        `2018_pop` = Pop_2018) %>% 
   mutate(`2018_pop` = ceiling(`2018_pop`)) # round up to next whole number
 
-write_csv(pop1, paste0("data_inputs/FINAL/cleaned_raw_data/population_distribution", my_date))
+write_csv(pop1, dated("data_inputs/FINAL/cleaned_raw_data/population_distribution"))
 
 ```
 
@@ -61,15 +71,15 @@ units <- read_csv("data_inputs/OTHER/unit_conversions/DATA/Unit_conversions_1.4.
 
 units1 <- units %>% select(Food_group, DGA_unit, Conversion_to_grams, Equation)
 
-write_csv(units1, paste0("data_inputs/FINAL/cleaned_raw_data/unit_conversions", my_date))
+write_csv(units1, dated("data_inputs/FINAL/cleaned_raw_data/unit_conversions"))
 
 ```
 
-Clear global environment expect for my_date.
+Clear global environment except for version_date/dated().
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-rm(list=setdiff(ls(), c("my_date")))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 
 ```
 
@@ -162,7 +172,7 @@ cancer6 <- cancer5 %>% mutate(crude_rate = ifelse(is.na(crude_rate), 0, crude_ra
                               count_se = ifelse(is.na(count_se), 0, count_se))
 
 # export final dataset
-write_csv(cancer6, paste0("data_inputs/FINAL/cleaned_raw_data/cancer_incidence", my_date))
+write_csv(cancer6, dated("data_inputs/FINAL/cleaned_raw_data/cancer_incidence"))
 
 ```
 
@@ -322,7 +332,7 @@ Export to FINAL folder.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-write_csv(cvd_final1, paste0("data_inputs/FINAL/cleaned_raw_data/cvd_mortality", my_date))
+write_csv(cvd_final1, dated("data_inputs/FINAL/cleaned_raw_data/cvd_mortality"))
 
 ```
 
@@ -397,7 +407,7 @@ Export to FINAL folder.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-write_csv(oth_health2, paste0("data_inputs/FINAL/cleaned_raw_data/other_health", my_date))
+write_csv(oth_health2, dated("data_inputs/FINAL/cleaned_raw_data/other_health"))
 
 ```
 
@@ -409,7 +419,7 @@ No changes are needed so just import the file then export to FINAL folder.
 
 bmi_effects <- read_csv("data_inputs/HEALTH/effect_sizes_dietfactor_bmi/DATA/food_to_BMI_effects_from_Dari_1.5.24.csv")
 
-write_csv(bmi_effects, paste0("data_inputs/FINAL/cleaned_raw_data/food_to_bmi_effects", my_date))
+write_csv(bmi_effects, dated("data_inputs/FINAL/cleaned_raw_data/food_to_bmi_effects"))
 
 ```
 
@@ -421,7 +431,7 @@ No changes are needed so just import the file then export to FINAL folder.
 
 sbp_effects <- read_csv("data_inputs/HEALTH/effect_sizes_dietfactor_sbp/DATA/food_to_sbp_effects_NOT_converted_1.5.24.csv")
 
-write_csv(sbp_effects, paste0("data_inputs/FINAL/cleaned_raw_data/food_to_sbp_effects", my_date))
+write_csv(sbp_effects, dated("data_inputs/FINAL/cleaned_raw_data/food_to_sbp_effects"))
 
 ```
 
@@ -433,7 +443,7 @@ No changes are needed so just import the file then export to FINAL folder.
 
 bmi_cancer <- read_csv("data_inputs/HEALTH/rr_bmi_cancer/DATA/RR_BMI_cancer_11.23.22.csv") 
 
-write_csv(bmi_cancer, paste0("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cancer", my_date))
+write_csv(bmi_cancer, dated("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cancer"))
 
 ```
 
@@ -445,7 +455,7 @@ No changes are needed so just import the file then export to FINAL folder.
 
 bmi_cvd <- read_csv("data_inputs/HEALTH/rr_bmi_cvd/DATA/RR_BMI_cvd_3.2.23.csv")
 
-write_csv(bmi_cvd, paste0("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cvd", my_date))
+write_csv(bmi_cvd, dated("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cvd"))
 
 ```
 
@@ -457,7 +467,7 @@ No changes are needed so just import the file then export to FINAL folder.
 
 sbp_cvd <- read_csv("data_inputs/HEALTH/rr_sbp_cvd/DATA/RR_sbp_cvd_2.16.23.csv")
 
-write_csv(sbp_cvd, paste0("data_inputs/FINAL/cleaned_raw_data/rr_sbp_cvd", my_date))
+write_csv(sbp_cvd, dated("data_inputs/FINAL/cleaned_raw_data/rr_sbp_cvd"))
 
 ```
 
@@ -471,7 +481,7 @@ rm(list=ls(pattern="^cvd"))
 
 cvd <- read_csv("data_inputs/HEALTH/logrr_dietfactor_disease/DATA/logRR_diet_cvd_byage_1.26.24.csv")
 
-write_csv(cvd, paste0("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cvd", my_date))
+write_csv(cvd, dated("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cvd"))
 
 ```
 
@@ -485,7 +495,7 @@ rm(list=ls(pattern="^cancer"))
 
 cancer <- read_csv("data_inputs/HEALTH/logrr_dietfactor_disease/DATA/logRR_diet_cancer_1.5.24.csv")
 
-write_csv(cancer, paste0("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cancer", my_date))
+write_csv(cancer, dated("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cancer"))
 
 ```
 
@@ -498,7 +508,7 @@ Import the TMRED values (in grams). Then, import the conversion units and join w
 tmred_g <- read_csv("data_inputs/HEALTH/tmred/DATA/TMRED_grams_1.5.24.csv")
 
 # import conversion units
-conversion <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/unit_conversions", my_date))
+conversion <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/unit_conversions"))
 
 # join with tmred dataset
 tmred_dga <- left_join(tmred_g, conversion, by = c("Risk_factor" = "Food_group"))
@@ -528,18 +538,18 @@ Then, export the conversion units in both grams and FPED units to be used later.
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
 # export grams dataset
-write_csv(tmred_g, paste0("data_inputs/FINAL/cleaned_raw_data/tmred_grams", my_date))
+write_csv(tmred_g, dated("data_inputs/FINAL/cleaned_raw_data/tmred_grams"))
 
 # export FPED units
-write_csv(tmred_dga2, paste0("data_inputs/FINAL/cleaned_raw_data/tmred_dga_units", my_date))
+write_csv(tmred_dga2, dated("data_inputs/FINAL/cleaned_raw_data/tmred_dga_units"))
 
 ```
 
-Clear global environment expect for my_date.
+Clear global environment except for version_date/dated().
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-rm(list=setdiff(ls(), c("my_date")))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 
 ```
 
@@ -590,7 +600,7 @@ nhanes4 <- nhanes3 %>%
   relocate(sigma_u_wgt, .after = "SE_Intake")
 
 # export
-write_csv(nhanes4, paste0("data_inputs/FINAL/cleaned_raw_data/nhanes1518_agesexrace", my_date))
+write_csv(nhanes4, dated("data_inputs/FINAL/cleaned_raw_data/nhanes1518_agesexrace"))
 
 ```
 
@@ -602,7 +612,7 @@ No changes are needed so just import the file then export to FINAL folder.
 
 cf <- read_csv("data_inputs/DIET/counterfactual_intake/DATA/counterfactual_intake_050724.csv")
 
-write_csv(cf, paste0("data_inputs/FINAL/cleaned_raw_data/counterfactual_intake", my_date))
+write_csv(cf, dated("data_inputs/FINAL/cleaned_raw_data/counterfactual_intake"))
 
 ```
 
@@ -616,7 +626,7 @@ First, let's set up our environment.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-rm(list = ls())
+rm(list=setdiff(ls(), c("version_date", "dated")))
 
 options(scipen=999)
 
@@ -629,14 +639,6 @@ getwd()
 
 ```
 
-Create a date string that will be appended to all data file names.
-
-```{r, results='hide', warning=FALSE, message=FALSE}
-
-my_date <- paste0("_", Sys.Date(), "_FINAL.csv")
-
-```
-
 There are 13 health-related datasets that we will clean.
 
 ### (1) Cancer incidence and (2) CVD mortality
@@ -646,8 +648,8 @@ In the code below, these two datasets get restructured and merged together into 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
 # import cvd mortality dataset
-cvd <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/cvd_mortality", my_date))
-cancer <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/cancer_incidence", my_date))
+cvd <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/cvd_mortality"))
+cancer <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/cancer_incidence"))
 
 # transform to long format (without se for now)
 cvd_long_mean <- cvd %>% 
@@ -683,23 +685,19 @@ cvd_cancer_merged <- rbind(cvd_long, cancer1) %>% rename(crude_se = count_se)
 cvd_cancer_merged1 <- cvd_cancer_merged %>% arrange(diseases, subgroup)
 
 # read in population distribution
-pop <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/population_distribution", my_date))
+pop <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/population_distribution"))
 
 cvd_cancer_merged2 <- left_join(cvd_cancer_merged1, pop, by = "subgroup") %>% 
   rename(population = `2018_pop`)
 
 # export merged dataset
-write_csv(cvd_cancer_merged2, paste0("data_inputs/FINAL/model_data/cvd_cancer_merged", my_date))
+write_csv(cvd_cancer_merged2, dated("data_inputs/FINAL/model_data/cvd_cancer_merged"))
 
 ```
 
 Then, we continue cleaning this merged disease dataset that is later appended to the NHANES dataset.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
-
-# FYI - this function is stored in the LASTING Github repo
-# This function was written by Fred
-source("/Users/bmb73/Documents/GitHub/LASTING/Code/swap.r")
 
 raw_file <- cvd_cancer_merged2
 
@@ -779,7 +777,7 @@ mort_wide6 <- mort_wide5 %>%
   arrange(subgroup)
 
 # export to FINAL folder
-write_csv(mort_wide6, paste0("data_inputs/FINAL/cleaned_data/disease_incidence", my_date))
+write_csv(mort_wide6, dated("data_inputs/FINAL/cleaned_data/disease_incidence"))
 
 ```
 
@@ -789,7 +787,7 @@ Clean up the global environment.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-rm(list=setdiff(ls(), "my_date"))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 
 ```
 
@@ -797,7 +795,7 @@ First, import the effect sizes for diet and BMI.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-ef <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/food_to_bmi_effects" , my_date))
+ef <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/food_to_bmi_effects"))
 
 ```
 
@@ -876,7 +874,7 @@ ef_model_dat <- ef_new %>%
          "effect_unit" = effect_unit_converted)
 
 # export to model folder
-write_csv(ef_model_dat, paste0("data_inputs/FINAL/model_data/food_to_bmi_effects_converted", my_date))
+write_csv(ef_model_dat, dated("data_inputs/FINAL/model_data/food_to_bmi_effects_converted"))
 
 ```
 
@@ -884,7 +882,7 @@ Next, import the effect sizes for diet and SBP.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-sbp_ef <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/food_to_sbp_effects", my_date))
+sbp_ef <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/food_to_sbp_effects"))
 
 ```
 
@@ -902,7 +900,7 @@ sbp_ef[,idx] <- sbp_ef[,idx] / 1000
 sbp_ef_model_dat <- sbp_ef %>% mutate(effect_unit = ifelse(food_group == "sodium", "1 mg/day", NA))
 
 # export to TEMP folder
-write_csv(sbp_ef_model_dat, paste0("data_inputs/FINAL/model_data/food_to_sbp_effects_converted", my_date))
+write_csv(sbp_ef_model_dat, dated("data_inputs/FINAL/model_data/food_to_sbp_effects_converted"))
 
 ```
 
@@ -912,17 +910,17 @@ No unit conversions need to be made, so we just need to join the files and expor
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-rm(list=setdiff(ls(), "my_date"))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 
 # import data
-bmi_cancer <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cancer", my_date))
-bmi_cvd <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cvd", my_date))
+bmi_cancer <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cancer"))
+bmi_cvd <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cvd"))
 
 # join 2 bmi datasets
 bmi_join <- left_join(bmi_cvd, bmi_cancer, by = c("risk_factor", "subgroup"))
 
 # export to cleaned data folder
-write_csv(bmi_join, paste0("data_inputs/FINAL/cleaned_data/rr_bmi_disease", my_date))
+write_csv(bmi_join, dated("data_inputs/FINAL/cleaned_data/rr_bmi_disease"))
 
 ```
 
@@ -933,7 +931,7 @@ write_csv(bmi_join, paste0("data_inputs/FINAL/cleaned_data/rr_bmi_disease", my_d
 The goal is to create a mega file that contains all diet and disease combinations (for all 48 subgroups).
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
-rm(list=setdiff(ls(), "my_date"))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 ```
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
@@ -992,7 +990,7 @@ final_dat1 <- final_dat %>% left_join(pop_dat1, by = "subgroup")
 
 # Retrieve cvd dataset
 cvd_real <- 
-  read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cvd", my_date)) %>% 
+  read_csv(dated("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cvd")) %>% 
   select(-c(outcome_label, Age_label))
 
 # join with final_dat1
@@ -1003,7 +1001,7 @@ join1 %>% filter(outcome == "OSTK" & risk_factor == "fruit_tot") %>% head() # lo
 
 # Retrieve cancer dataset
 cancer_real <- 
-  read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cancer", my_date)) %>% 
+  read_csv(dated("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cancer")) %>% 
   select(-c(outcome_label, RR, CI_lower, CI_upper, evidence)) %>% 
   mutate(logRR_se = (logCI_upper - logCI_lower) / 3.92)
 
@@ -1033,7 +1031,7 @@ my_join <- rbind(join1_sub, join2_sub)
 big_join <- left_join(final_dat1, my_join, by=NULL)
 
 # retrieve conversion units for diet factors
-convert <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/unit_conversions", my_date))
+convert <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/unit_conversions"))
 
 # fill in NA values with logRR = 0
 big_join1 <- big_join %>% 
@@ -1055,14 +1053,14 @@ big_join4 <- big_join3 %>%
 
 # export
 write_csv(big_join4, 
-          paste0("data_inputs/FINAL/cleaned_data/logRR_diet_disease", my_date))
+          dated("data_inputs/FINAL/cleaned_data/logRR_diet_disease"))
 
 # look at just the non-missing RRs
 join_subset <- big_join4 %>% filter(logRR != 0)
 
 # export
 write_csv(join_subset, 
-          paste0("data_inputs/FINAL/cleaned_data/logRR_diet_disease_SUBSET", my_date))
+          dated("data_inputs/FINAL/cleaned_data/logRR_diet_disease_SUBSET"))
 
 ```
 
@@ -1071,12 +1069,12 @@ write_csv(join_subset,
 Now we need to convert the units of the LogRR dataset we just created.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
-rm(list=setdiff(ls(), "my_date"))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 ```
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 # Read in diet-disease file
-rr <- read_csv(paste0("data_inputs/FINAL/cleaned_data/logRR_diet_disease", my_date),
+rr <- read_csv(dated("data_inputs/FINAL/cleaned_data/logRR_diet_disease"),
                col_types = "ddddccddccdc") %>% 
   select(-c(Age, Sex, Race))
 
@@ -1294,21 +1292,21 @@ rr6 <- rr5 %>%
 rr7 <- rr6 %>% mutate(SE = ifelse(RR == 0, 0, SE))
 
 # export to TEMP folder
-write_csv(rr7, paste0("data_inputs/FINAL/cleaned_data/logRR_diet_disease_converted", my_date))
+write_csv(rr7, dated("data_inputs/FINAL/cleaned_data/logRR_diet_disease_converted"))
 
 ```
 
 ### (9) RRs for SBP and CVD
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
-rm(list=setdiff(ls(), "my_date"))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 ```
 
 No conversions need to be made to the RRs for SBP and CVD, but we do need to merge and reformat all of the RRs into one file.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-raw.RRs <- read_csv(paste0("data_inputs/FINAL/cleaned_data/logRR_diet_disease_converted", my_date))
+raw.RRs <- read_csv(dated("data_inputs/FINAL/cleaned_data/logRR_diet_disease_converted"))
 
 # need to rename 2 vars
 raw.RRs <- raw.RRs %>% rename("logRR" = RR,
@@ -1364,7 +1362,7 @@ disease.names.BMImed.se <- paste(disease.names.BMImed, "se", sep="")
 
 col.names.BMI <- as.vector(rbind(disease.names.BMImed, disease.names.BMImed.se))  
 
-BMI_RRs<-read.csv(paste0("data_inputs/FINAL/cleaned_data/rr_bmi_disease", my_date)) 
+BMI_RRs<-read.csv(dated("data_inputs/FINAL/cleaned_data/rr_bmi_disease")) 
 
 BMI_RRs <- BMI_RRs %>% select(-c(ALL, ALLse))
 
@@ -1391,7 +1389,7 @@ col.names.SBP <- as.vector(rbind(disease.names.SBPmed, disease.names.SBPmed.se))
 
 # This dataset didn't need any changes
 # so it's in the raw data folder
-SBP_RRs <- read.csv(paste0("data_inputs/FINAL/cleaned_raw_data/rr_sbp_cvd", my_date))
+SBP_RRs <- read.csv(dated("data_inputs/FINAL/cleaned_raw_data/rr_sbp_cvd"))
 
 new.order <- c("risk_factor","subgroup", as.vector(rbind(disease.names, disease.names.se)))
 
@@ -1415,7 +1413,7 @@ allRRs <- Reduce(function(x, y) merge(x, y, by.x="subgroup"), list(RRs.wide, BMI
 allRRs <- allRRs[order(allRRs$RF, allRRs$subgroup), ]
 
 # export
-write_csv(allRRs, paste0("data_inputs/FINAL/model_data/rr_agesexrace", my_date))
+write_csv(allRRs, dated("data_inputs/FINAL/model_data/rr_agesexrace"))
 
 ```
 
@@ -1427,14 +1425,14 @@ The other health dataset does not need to be changed, but it needs to be merged 
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
-rm(list=setdiff(ls(), "my_date"))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 
 ```
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
 # import
-nhanes.dat <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/nhanes1518_agesexrace", my_date))
+nhanes.dat <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/nhanes1518_agesexrace"))
 
 # rename var
 nhanes.dat1 <- nhanes.dat %>% rename(diet = Foodgroup,
@@ -1466,7 +1464,7 @@ nhanes.dat2 <- nhanes.dat1 %>%
 nhanes.dat2 %>% filter(diet == "sea_omega3_fa") %>% head()
 
 # read in counterfactual data
-counterfactuals <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/counterfactual_intake", my_date))
+counterfactuals <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/counterfactual_intake"))
 
 # rename vars
 counterfactuals <- counterfactuals %>% 
@@ -1491,7 +1489,7 @@ counterfactuals1 <- counterfactuals %>%
          CF_intake_unit = ifelse(diet == "pf_leg", "ounce eq/day", CF_intake_unit))
 
 # read in TMRED data
-tmred <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/tmred_dga_units", my_date))
+tmred <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/tmred_dga_units"))
 
 # rename vars
 tmred <- tmred %>% rename(TMRED_mean_intake = TMRED,
@@ -1499,10 +1497,10 @@ tmred <- tmred %>% rename(TMRED_mean_intake = TMRED,
                  TMRED_intake_unit = Unit)
 
 # read in death data
-deaths.dat <- read_csv(paste0("data_inputs/FINAL/cleaned_data/disease_incidence", my_date))
+deaths.dat <- read_csv(dated("data_inputs/FINAL/cleaned_data/disease_incidence"))
 
 # read in other health data
-other_healh <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/other_health", my_date))
+other_healh <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/other_health"))
 
 # merge nhanes and counterfactual
 dat1 <- left_join(nhanes.dat2, counterfactuals1, by = "diet")
@@ -1529,17 +1527,17 @@ merged1 <- merged %>%
 merged1 %>% select(subgroup, overweight_rate) %>% head()
 
 # export file
-write_csv(merged1, paste0("data_inputs/FINAL/model_data/nhanes1518_agesexrace_merged", my_date))
+write_csv(merged1, dated("data_inputs/FINAL/model_data/nhanes1518_agesexrace_merged"))
 
 ```
 
-## Restructure data
+## Restructure Data
 
 This script transforms the NHANES dataset to match the structure of the cost/environment mega dataset.
 
 ```{r}
 
-rm(list=setdiff(ls(), "my_date"))
+rm(list=setdiff(ls(), c("version_date", "dated")))
 
 ```
 
@@ -1547,7 +1545,7 @@ rm(list=setdiff(ls(), "my_date"))
 
 # IMPORT NHANES DATA
 
-nhanes <- read_csv(paste0("data_inputs/FINAL/model_data/nhanes1518_agesexrace_merged", my_date))
+nhanes <- read_csv(dated("data_inputs/FINAL/model_data/nhanes1518_agesexrace_merged"))
 
 # update variable names
 
@@ -1604,14 +1602,14 @@ nhanes_comb1 <-
 # lastly, add 2018 population variable
 
 # read in population distribution
-pop <- read_csv(paste0("data_inputs/FINAL/cleaned_raw_data/population_distribution", my_date))
+pop <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/population_distribution"))
 
 nhanes_comb2 <- left_join(nhanes_comb1, pop, by = c("subgroup_id" = "subgroup")) %>% 
   rename(population = `2018_pop`) %>% 
   relocate(population, .before = overweight_rate)
 
 # export
-write_csv(nhanes_comb2, paste0("data_inputs/FINAL/cleaned_data/mega_costenv_structure_temp", my_date))
+write_csv(nhanes_comb2, dated("data_inputs/FINAL/cleaned_data/mega_costenv_structure_temp"))
 
 ```
 

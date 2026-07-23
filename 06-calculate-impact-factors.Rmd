@@ -1,3 +1,13 @@
+```{r, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      results = "hide", 
+                      message = FALSE,
+                      warning = FALSE,
+                      eval = FALSE)
+
+```
+
 # Calculate Cost, Environment, and Social Impact Factors
 
 This chapter walks you through all of the R code used to calculate the impact factors that are used in the final model. Additionally, the food group-level inedible and wasted proportions are calculated at the end.
@@ -22,7 +32,7 @@ library(readxl)
 library(survey)
 library(bookdown)
 
-my_date <- Sys.Date()
+source("code/version_date.R")
 
 ```
 
@@ -349,7 +359,7 @@ First, import the conversion units.
 
 ```{r}
 
-units <- read_csv(paste("data_inputs/FINAL/cleaned_raw_data/unit_conversions_", my_date, "_FINAL.csv", sep="")) %>% 
+units <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/unit_conversions")) %>%
   select(Food_group, Conversion_to_grams)
 
 # merge with units
@@ -899,10 +909,10 @@ cost_IFs_sub %>% filter(food == "pf_redm") %>% head()
 ```{r}
 
 # cost IFs
-write_csv(cost_IFs_sub, paste("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost_", my_date, ".csv", sep=""))
+write_csv(cost_IFs_sub, dated("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost"))
 
 # enviro IFs
-write_csv(enviro_IFs_sub, paste("data_inputs/IMPACT_FACTORS/output_data/Impacts_enviro_", my_date, ".csv", sep=""))
+write_csv(enviro_IFs_sub, dated("data_inputs/IMPACT_FACTORS/output_data/Impacts_enviro"))
 
 ```
 

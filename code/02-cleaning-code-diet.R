@@ -1,3 +1,13 @@
+## ----include=FALSE------------------------------------------
+## 
+## knitr::opts_chunk$set(echo = TRUE,
+##                       results = "hide",
+##                       message = FALSE,
+##                       warning = FALSE,
+##                       eval = FALSE)
+## 
+
+#' 
 #' # Cleaning Code for NHANES Diet Data
 #' 
 #' This chapter walks you through all of code used to clean the raw **NHANES dietary intake** datasets.
@@ -23,64 +33,64 @@
 #' 
 #' Then, I merged this mapping with the processed meat data.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------------------------------------------------
-
-library(tidyverse)
-library(haven)
-
-rm(list = ls())
-
-# read in meat data
-meat_day1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.sas7bdat")
-meat_day2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.sas7bdat")
-
-# read in organ mapping
-new_organ <- read_csv("data_inputs/DIET/dietary_intake/DATA/raw_data/meat/organ_meats_bothdays_mapped_121323.csv")
-
-# DAY 1 -----
-
-meat_day1_1 <- meat_day1 %>% filter(!(is.na(SEQN))) %>% select(SEQN, DESCRIPTION, FOODCODE, DR1ILINE, DR1IGRMS,
-                                                               DR1I_PF_ORGAN,
-                                                               total_redmeat, total_poultry) %>% 
-  arrange(SEQN, DR1ILINE)
-
-# filter to organ intake > 0
-meat_day1_1 %>% filter(DR1I_PF_ORGAN > 0)
-
-# join with day1
-meat_day1_2 <- left_join(meat_day1_1, new_organ, by = "DESCRIPTION")
-
-meat_day1_3 <- meat_day1_2 %>% 
-  rowwise() %>% 
-  mutate(new = ifelse(is.na(new), "No change", new),
-         total_redmeat_new = ifelse(new == "pf_redm", total_redmeat + DR1I_PF_ORGAN, total_redmeat),
-         total_poultry_new = ifelse(new == "pf_poultry", total_poultry + DR1I_PF_ORGAN, total_poultry)) %>% 
-  select(SEQN, DR1ILINE, total_redmeat_new, total_poultry_new)
-
-# export
-write_rds(meat_day1_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.rds")
-
-# DAY 2 -----
-
-meat_day2_1 <- meat_day2 %>% filter(!(is.na(SEQN))) %>% select(SEQN, DESCRIPTION2, FOODCODE2, DR2ILINE, DR2IGRMS,
-                                                               DR2I_PF_ORGAN, total_redmeat_day2, total_poultry_day2) %>% 
-  arrange(SEQN, DR2ILINE)
-
-meat_day2_1 %>% filter(DR2I_PF_ORGAN > 0)
-
-# join with day2
-meat_day2_2 <- left_join(meat_day2_1, new_organ, by = c("DESCRIPTION2" = "DESCRIPTION"))
-
-meat_day2_3 <- meat_day2_2 %>% 
-  rowwise() %>% 
-  mutate(new = ifelse(is.na(new), "No change", new),
-         total_redmeat_new = ifelse(new == "pf_redm", total_redmeat_day2 + DR2I_PF_ORGAN, total_redmeat_day2),
-         total_poultry_new = ifelse(new == "pf_poultry", total_poultry_day2 + DR2I_PF_ORGAN, total_poultry_day2)) %>% 
-  select(SEQN, DR2ILINE, total_redmeat_new, total_poultry_new)
-
-# export
-write_rds(meat_day2_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.rds")
-
+## ----message=FALSE, warning=FALSE, results='hide'-----------
+## 
+## library(tidyverse)
+## library(haven)
+## 
+## rm(list = ls())
+## 
+## # read in meat data
+## meat_day1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.sas7bdat")
+## meat_day2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.sas7bdat")
+## 
+## # read in organ mapping
+## new_organ <- read_csv("data_inputs/DIET/dietary_intake/DATA/raw_data/meat/organ_meats_bothdays_mapped_121323.csv")
+## 
+## # DAY 1 -----
+## 
+## meat_day1_1 <- meat_day1 %>% filter(!(is.na(SEQN))) %>% select(SEQN, DESCRIPTION, FOODCODE, DR1ILINE, DR1IGRMS,
+##                                                                DR1I_PF_ORGAN,
+##                                                                total_redmeat, total_poultry) %>%
+##   arrange(SEQN, DR1ILINE)
+## 
+## # filter to organ intake > 0
+## meat_day1_1 %>% filter(DR1I_PF_ORGAN > 0)
+## 
+## # join with day1
+## meat_day1_2 <- left_join(meat_day1_1, new_organ, by = "DESCRIPTION")
+## 
+## meat_day1_3 <- meat_day1_2 %>%
+##   rowwise() %>%
+##   mutate(new = ifelse(is.na(new), "No change", new),
+##          total_redmeat_new = ifelse(new == "pf_redm", total_redmeat + DR1I_PF_ORGAN, total_redmeat),
+##          total_poultry_new = ifelse(new == "pf_poultry", total_poultry + DR1I_PF_ORGAN, total_poultry)) %>%
+##   select(SEQN, DR1ILINE, total_redmeat_new, total_poultry_new)
+## 
+## # export
+## write_rds(meat_day1_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.rds")
+## 
+## # DAY 2 -----
+## 
+## meat_day2_1 <- meat_day2 %>% filter(!(is.na(SEQN))) %>% select(SEQN, DESCRIPTION2, FOODCODE2, DR2ILINE, DR2IGRMS,
+##                                                                DR2I_PF_ORGAN, total_redmeat_day2, total_poultry_day2) %>%
+##   arrange(SEQN, DR2ILINE)
+## 
+## meat_day2_1 %>% filter(DR2I_PF_ORGAN > 0)
+## 
+## # join with day2
+## meat_day2_2 <- left_join(meat_day2_1, new_organ, by = c("DESCRIPTION2" = "DESCRIPTION"))
+## 
+## meat_day2_3 <- meat_day2_2 %>%
+##   rowwise() %>%
+##   mutate(new = ifelse(is.na(new), "No change", new),
+##          total_redmeat_new = ifelse(new == "pf_redm", total_redmeat_day2 + DR2I_PF_ORGAN, total_redmeat_day2),
+##          total_poultry_new = ifelse(new == "pf_poultry", total_poultry_day2 + DR2I_PF_ORGAN, total_poultry_day2)) %>%
+##   select(SEQN, DR2ILINE, total_redmeat_new, total_poultry_new)
+## 
+## # export
+## write_rds(meat_day2_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.rds")
+## 
 
 #' 
 #' ## Clean Raw NHANES Data {#id}
@@ -89,621 +99,621 @@ write_rds(meat_day2_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day
 #' 
 #' #### Step 1: Set up workspace {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-rm(list=ls())
-
-# load packages
-library(foreign)
-library(survey)
-library(tidyverse)
-library(psych)
-library(haven)
-library(readxl)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## rm(list=ls())
+## 
+## # load packages
+## library(foreign)
+## library(survey)
+## library(tidyverse)
+## library(psych)
+## library(haven)
+## library(readxl)
+## 
 
 #' 
 #' #### Step 2: Clean individual-level food intake datasets {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# 2015-2016 diet data (i)
-
-# foods day 1
-foods_i1_nutrients <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr1iff_i.sas7bdat")
-
-foods_i1_whole <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1iff_1516.sas7bdat")
-
-# join
-foods_i1 <- left_join(foods_i1_whole, foods_i1_nutrients) %>% mutate(nhanes_cycle = "2015-2016")
-
-# foods day 2
-foods_i2_nutrients <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr2iff_i.sas7bdat")
-
-foods_i2_whole <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2iff_1516.sas7bdat")
-
-# join
-foods_i2 <- left_join(foods_i2_whole, foods_i2_nutrients) %>% mutate(nhanes_cycle = "2015-2016")
-
-# 2017-2018 diet data (j)
-
-# foods day 1
-foods_j1_nutrients <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr1iff_j.sas7bdat")
-
-foods_j1_whole <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1iff_1718.sas7bdat")
-
-#join
-foods_j1 <- left_join(foods_j1_whole, foods_j1_nutrients) %>% mutate(nhanes_cycle = "2017-2018")
-
-# foods day 2
-foods_j2_nutrients <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr2iff_j.sas7bdat")
-
-foods_j2_whole <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2iff_1718.sas7bdat")
-
-# join
-foods_j2 <- left_join(foods_j2_whole, foods_j2_nutrients) %>% mutate(nhanes_cycle = "2017-2018")
-
-# create day 1 and 2 datasets
-foods_day1 <- rbind(foods_i1, foods_j1) %>% 
-  mutate(foodsource = ifelse(DR1FS == 1, "Grocery", "Other"), # create food source variable
-         foodsource = replace_na(foodsource, "Other"), # replace NAs with "other" (applies to tap water and breast milk)
-         dayrec = 1) # day1
-
-foods_day2 <- rbind(foods_i2, foods_j2) %>% 
-  mutate(foodsource = ifelse(DR2FS == 1, "Grocery", "Other"), # create food source variable
-         foodsource = replace_na(foodsource, "Other"), # replace NAs with "other" (applies to tap water and breast milk)
-         dayrec = 2) 
-
-# read in meat data
-meat_day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.rds")
-meat_day2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.rds")
-
-foods_day1_ <- left_join(foods_day1, meat_day1, by = c("SEQN", "DR1ILINE"))
-foods_day2_ <- left_join(foods_day2, meat_day2, by = c("SEQN", "DR2ILINE"))
-
-# check
-foods_day1_ %>% select(SEQN, DR1ILINE, DR1I_PF_MPS_TOTAL, DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW, total_redmeat_new, total_poultry_new)
-
-foods_day1_ %>% filter(DR1I_PF_ORGAN > 0) %>% select(SEQN, DR1ILINE, DR1I_PF_MPS_TOTAL, DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW, total_redmeat_new, total_poultry_new)
-
-# Calculate amount of intake for each dietary factor
-# for day 1 and day 2
-# by SEQN and foodsource
-
-# first need to create diet variables that are combinations of 2+ vars
-
-# day 1
-foods_day1_1 <- foods_day1_ %>% 
-  
-  rowwise() %>% 
-  
-  rename(sat_fat = DR1ISFAT,
-         p_fat = DR1IPFAT,
-         sodium = DR1ISODI,
-         gr_refined = DR1I_G_REFINED,
-         gr_whole = DR1I_G_WHOLE,
-         added_sugar = DR1I_ADD_SUGARS,
-         fruit_tot = DR1I_F_TOTAL,
-         fruit_juice = DR1I_F_JUICE,
-         fiber = DR1IFIBE,
-         dairy_tot = DR1I_D_TOTAL,
-         veg_dg = DR1I_V_DRKGR,
-         veg_oth = DR1I_V_OTHER,
-         veg_ro = DR1I_V_REDOR_TOTAL,
-         veg_sta = DR1I_V_STARCHY_TOTAL,
-         veg_leg = DR1I_V_LEGUMES,
-         oil = DR1I_OILS,
-         pf_egg = DR1I_PF_EGGS,
-         pf_ns = DR1I_PF_NUTSDS,
-         pf_soy = DR1I_PF_SOY,
-         pf_poultry = DR1I_PF_POULT,
-         pf_redm = DR1I_PF_MEAT,
-         pf_redm_tot = total_redmeat_new,
-         pf_poultry_tot = total_poultry_new,
-         pf_leg = DR1I_PF_LEGUMES,
-         kcal = DR1IKCAL) %>% 
-  
-  mutate(sea_omega3_fa = sum(DR1IP226, DR1IP205),
-         veg_exc_sta = sum(veg_dg, veg_ro, veg_oth),
-         fruit_exc_juice = sum(DR1I_F_CITMLB, DR1I_F_OTHER),
-         pf_pm = sum(DR1I_PF_CUREDMEAT, DR1I_PF_ORGAN),
-         pf_seafood = sum(DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW),
-         leg_tot = sum(pf_leg, pf_soy), # doesn't include soy milk?
-         pf_animal = sum(DR1I_PF_MPS_TOTAL, pf_egg),
-         pf_plant = sum(pf_leg, pf_ns, pf_soy)) %>%
-  
-  ungroup()
-
-# create soy milk category
-foods_day1_2 <- 
-  foods_day1_1 %>% 
-  mutate(dairy_soy = ifelse(str_detect(DESCRIPTION, "Soy milk") & dairy_tot > 0,
-                                           dairy_tot, 
-                                           0),
-         dairy_cow = ifelse(str_detect(DESCRIPTION, "Soy milk", negate = TRUE) & dairy_tot > 0,
-                            dairy_tot, 
-                            0))
-# check
-foods_day1_2 %>% 
-  filter(dairy_tot > 0) %>% 
-  select(SEQN, DESCRIPTION, dairy_tot, dairy_soy, dairy_cow) #good
-
-# day 2
-
-foods_day2_1 <- foods_day2_ %>% 
-  
-  rowwise() %>% 
-  
-  rename(sat_fat = DR2ISFAT,
-         p_fat = DR2IPFAT,
-         sodium = DR2ISODI,
-         gr_refined = DR2I_G_REFINED,
-         gr_whole = DR2I_G_WHOLE,
-         added_sugar = DR2I_ADD_SUGARS,
-         fruit_tot = DR2I_F_TOTAL,
-         fruit_juice = DR2I_F_JUICE,
-         fiber = DR2IFIBE,
-         dairy_tot = DR2I_D_TOTAL,
-         veg_dg = DR2I_V_DRKGR,
-         veg_oth = DR2I_V_OTHER,
-         veg_ro = DR2I_V_REDOR_TOTAL,
-         veg_sta = DR2I_V_STARCHY_TOTAL,
-         veg_leg = DR2I_V_LEGUMES,
-         oil = DR2I_OILS,
-         pf_egg = DR2I_PF_EGGS,
-         pf_ns = DR2I_PF_NUTSDS,
-         pf_soy = DR2I_PF_SOY,
-         pf_poultry = DR2I_PF_POULT,
-         pf_redm = DR2I_PF_MEAT,
-         pf_redm_tot = total_redmeat_new,
-         pf_poultry_tot = total_poultry_new,
-         pf_leg = DR2I_PF_LEGUMES,
-         kcal = DR2IKCAL) %>% 
-  
-  mutate(sea_omega3_fa = sum(DR2IP226, DR2IP205),
-         veg_exc_sta = sum(veg_dg, veg_ro, veg_oth),
-         fruit_exc_juice = sum(DR2I_F_CITMLB, DR2I_F_OTHER),
-         pf_pm = sum(DR2I_PF_CUREDMEAT, DR2I_PF_ORGAN),
-         pf_seafood = sum(DR2I_PF_SEAFD_HI, DR2I_PF_SEAFD_LOW),
-         leg_tot = sum(pf_leg, pf_soy),
-         pf_animal = sum(DR2I_PF_MPS_TOTAL, pf_egg),
-         pf_plant = sum(pf_leg, pf_ns, pf_soy)) %>%
-  
-  ungroup()
-
-# create soy milk category
-foods_day2_2 <- 
-  foods_day2_1 %>% 
-  mutate(dairy_soy = ifelse(str_detect(DESCRIPTION, "Soy milk") & dairy_tot > 0,
-                            dairy_tot, 
-                            0),
-         dairy_cow = ifelse(str_detect(DESCRIPTION, "Soy milk", negate = TRUE) & dairy_tot > 0,
-                            dairy_tot, 
-                            0))
-# check
-foods_day2_2 %>% 
-  filter(dairy_tot > 0) %>% 
-  select(SEQN, DESCRIPTION, dairy_tot, dairy_soy, dairy_cow) #good
-
-
-# export foods day 1 and day 2 for later use
-write_rds(foods_day1_2, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
-write_rds(foods_day2_2, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds")
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # 2015-2016 diet data (i)
+## 
+## # foods day 1
+## foods_i1_nutrients <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr1iff_i.sas7bdat")
+## 
+## foods_i1_whole <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1iff_1516.sas7bdat")
+## 
+## # join
+## foods_i1 <- left_join(foods_i1_whole, foods_i1_nutrients) %>% mutate(nhanes_cycle = "2015-2016")
+## 
+## # foods day 2
+## foods_i2_nutrients <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr2iff_i.sas7bdat")
+## 
+## foods_i2_whole <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2iff_1516.sas7bdat")
+## 
+## # join
+## foods_i2 <- left_join(foods_i2_whole, foods_i2_nutrients) %>% mutate(nhanes_cycle = "2015-2016")
+## 
+## # 2017-2018 diet data (j)
+## 
+## # foods day 1
+## foods_j1_nutrients <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr1iff_j.sas7bdat")
+## 
+## foods_j1_whole <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1iff_1718.sas7bdat")
+## 
+## #join
+## foods_j1 <- left_join(foods_j1_whole, foods_j1_nutrients) %>% mutate(nhanes_cycle = "2017-2018")
+## 
+## # foods day 2
+## foods_j2_nutrients <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr2iff_j.sas7bdat")
+## 
+## foods_j2_whole <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2iff_1718.sas7bdat")
+## 
+## # join
+## foods_j2 <- left_join(foods_j2_whole, foods_j2_nutrients) %>% mutate(nhanes_cycle = "2017-2018")
+## 
+## # create day 1 and 2 datasets
+## foods_day1 <- rbind(foods_i1, foods_j1) %>%
+##   mutate(foodsource = ifelse(DR1FS == 1, "Grocery", "Other"), # create food source variable
+##          foodsource = replace_na(foodsource, "Other"), # replace NAs with "other" (applies to tap water and breast milk)
+##          dayrec = 1) # day1
+## 
+## foods_day2 <- rbind(foods_i2, foods_j2) %>%
+##   mutate(foodsource = ifelse(DR2FS == 1, "Grocery", "Other"), # create food source variable
+##          foodsource = replace_na(foodsource, "Other"), # replace NAs with "other" (applies to tap water and breast milk)
+##          dayrec = 2)
+## 
+## # read in meat data
+## meat_day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day1.rds")
+## meat_day2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day2.rds")
+## 
+## foods_day1_ <- left_join(foods_day1, meat_day1, by = c("SEQN", "DR1ILINE"))
+## foods_day2_ <- left_join(foods_day2, meat_day2, by = c("SEQN", "DR2ILINE"))
+## 
+## # check
+## foods_day1_ %>% select(SEQN, DR1ILINE, DR1I_PF_MPS_TOTAL, DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW, total_redmeat_new, total_poultry_new)
+## 
+## foods_day1_ %>% filter(DR1I_PF_ORGAN > 0) %>% select(SEQN, DR1ILINE, DR1I_PF_MPS_TOTAL, DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW, total_redmeat_new, total_poultry_new)
+## 
+## # Calculate amount of intake for each dietary factor
+## # for day 1 and day 2
+## # by SEQN and foodsource
+## 
+## # first need to create diet variables that are combinations of 2+ vars
+## 
+## # day 1
+## foods_day1_1 <- foods_day1_ %>%
+## 
+##   rowwise() %>%
+## 
+##   rename(sat_fat = DR1ISFAT,
+##          p_fat = DR1IPFAT,
+##          sodium = DR1ISODI,
+##          gr_refined = DR1I_G_REFINED,
+##          gr_whole = DR1I_G_WHOLE,
+##          added_sugar = DR1I_ADD_SUGARS,
+##          fruit_tot = DR1I_F_TOTAL,
+##          fruit_juice = DR1I_F_JUICE,
+##          fiber = DR1IFIBE,
+##          dairy_tot = DR1I_D_TOTAL,
+##          veg_dg = DR1I_V_DRKGR,
+##          veg_oth = DR1I_V_OTHER,
+##          veg_ro = DR1I_V_REDOR_TOTAL,
+##          veg_sta = DR1I_V_STARCHY_TOTAL,
+##          veg_leg = DR1I_V_LEGUMES,
+##          oil = DR1I_OILS,
+##          pf_egg = DR1I_PF_EGGS,
+##          pf_ns = DR1I_PF_NUTSDS,
+##          pf_soy = DR1I_PF_SOY,
+##          pf_poultry = DR1I_PF_POULT,
+##          pf_redm = DR1I_PF_MEAT,
+##          pf_redm_tot = total_redmeat_new,
+##          pf_poultry_tot = total_poultry_new,
+##          pf_leg = DR1I_PF_LEGUMES,
+##          kcal = DR1IKCAL) %>%
+## 
+##   mutate(sea_omega3_fa = sum(DR1IP226, DR1IP205),
+##          veg_exc_sta = sum(veg_dg, veg_ro, veg_oth),
+##          fruit_exc_juice = sum(DR1I_F_CITMLB, DR1I_F_OTHER),
+##          pf_pm = sum(DR1I_PF_CUREDMEAT, DR1I_PF_ORGAN),
+##          pf_seafood = sum(DR1I_PF_SEAFD_HI, DR1I_PF_SEAFD_LOW),
+##          leg_tot = sum(pf_leg, pf_soy), # doesn't include soy milk?
+##          pf_animal = sum(DR1I_PF_MPS_TOTAL, pf_egg),
+##          pf_plant = sum(pf_leg, pf_ns, pf_soy)) %>%
+## 
+##   ungroup()
+## 
+## # create soy milk category
+## foods_day1_2 <-
+##   foods_day1_1 %>%
+##   mutate(dairy_soy = ifelse(str_detect(DESCRIPTION, "Soy milk") & dairy_tot > 0,
+##                                            dairy_tot,
+##                                            0),
+##          dairy_cow = ifelse(str_detect(DESCRIPTION, "Soy milk", negate = TRUE) & dairy_tot > 0,
+##                             dairy_tot,
+##                             0))
+## # check
+## foods_day1_2 %>%
+##   filter(dairy_tot > 0) %>%
+##   select(SEQN, DESCRIPTION, dairy_tot, dairy_soy, dairy_cow) #good
+## 
+## # day 2
+## 
+## foods_day2_1 <- foods_day2_ %>%
+## 
+##   rowwise() %>%
+## 
+##   rename(sat_fat = DR2ISFAT,
+##          p_fat = DR2IPFAT,
+##          sodium = DR2ISODI,
+##          gr_refined = DR2I_G_REFINED,
+##          gr_whole = DR2I_G_WHOLE,
+##          added_sugar = DR2I_ADD_SUGARS,
+##          fruit_tot = DR2I_F_TOTAL,
+##          fruit_juice = DR2I_F_JUICE,
+##          fiber = DR2IFIBE,
+##          dairy_tot = DR2I_D_TOTAL,
+##          veg_dg = DR2I_V_DRKGR,
+##          veg_oth = DR2I_V_OTHER,
+##          veg_ro = DR2I_V_REDOR_TOTAL,
+##          veg_sta = DR2I_V_STARCHY_TOTAL,
+##          veg_leg = DR2I_V_LEGUMES,
+##          oil = DR2I_OILS,
+##          pf_egg = DR2I_PF_EGGS,
+##          pf_ns = DR2I_PF_NUTSDS,
+##          pf_soy = DR2I_PF_SOY,
+##          pf_poultry = DR2I_PF_POULT,
+##          pf_redm = DR2I_PF_MEAT,
+##          pf_redm_tot = total_redmeat_new,
+##          pf_poultry_tot = total_poultry_new,
+##          pf_leg = DR2I_PF_LEGUMES,
+##          kcal = DR2IKCAL) %>%
+## 
+##   mutate(sea_omega3_fa = sum(DR2IP226, DR2IP205),
+##          veg_exc_sta = sum(veg_dg, veg_ro, veg_oth),
+##          fruit_exc_juice = sum(DR2I_F_CITMLB, DR2I_F_OTHER),
+##          pf_pm = sum(DR2I_PF_CUREDMEAT, DR2I_PF_ORGAN),
+##          pf_seafood = sum(DR2I_PF_SEAFD_HI, DR2I_PF_SEAFD_LOW),
+##          leg_tot = sum(pf_leg, pf_soy),
+##          pf_animal = sum(DR2I_PF_MPS_TOTAL, pf_egg),
+##          pf_plant = sum(pf_leg, pf_ns, pf_soy)) %>%
+## 
+##   ungroup()
+## 
+## # create soy milk category
+## foods_day2_2 <-
+##   foods_day2_1 %>%
+##   mutate(dairy_soy = ifelse(str_detect(DESCRIPTION, "Soy milk") & dairy_tot > 0,
+##                             dairy_tot,
+##                             0),
+##          dairy_cow = ifelse(str_detect(DESCRIPTION, "Soy milk", negate = TRUE) & dairy_tot > 0,
+##                             dairy_tot,
+##                             0))
+## # check
+## foods_day2_2 %>%
+##   filter(dairy_tot > 0) %>%
+##   select(SEQN, DESCRIPTION, dairy_tot, dairy_soy, dairy_cow) #good
+## 
+## 
+## # export foods day 1 and day 2 for later use
+## write_rds(foods_day1_2, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
+## write_rds(foods_day2_2, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds")
 
 #' 
 #' #### Step 3: Clean the food and nutrient intake (summary) datasets {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-rm(list=setdiff(ls(), c("foods_day1_2", "foods_day2_2")))
-
-# QUICKLY HANDLE MEAT
-meat_sum_day1 <- 
-  foods_day1_2 %>% 
-  group_by(SEQN) %>% 
-  summarise(pf_redm_tot_1 = sum(pf_redm_tot),
-            pf_poultry_tot_1 = sum(pf_poultry_tot))
-
-meat_sum_day2 <- 
-  foods_day2_2 %>% 
-  group_by(SEQN) %>% 
-  summarise(pf_redm_tot_2 = sum(pf_redm_tot),
-            pf_poultry_tot_2 = sum(pf_poultry_tot))
-
-# 2015-2016 diet data (i)
-
-# demographic data
-demo_i <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/demo_i.sas7bdat") %>% 
-  select(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2, INDFMPIR, RIDAGEYR)
-
-# fped day 1
-fped_i1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1tot_1516.sas7bdat") 
-
-# fped day 2
-fped_i2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2tot_1516.sas7bdat")
-
-# join the two datasets
-fped_i <- left_join(fped_i1, fped_i2)
-
-# nutrients day 1
-nutrient_i1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr1tot_i.sas7bdat")
-
-# nutrients day 2
-nutrient_i2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr2tot_i.sas7bdat")
-
-# join the two datasets
-nutrient_i <- full_join(nutrient_i1, nutrient_i2)
-
-# Combine all datasets
-nhanes1516 <-  
-  fped_i %>% 
-  left_join(nutrient_i) %>% 
-  left_join(demo_i)
-
-# 2017-2018 diet data (j)
-
-# demographic data
-demo_j <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/demo_j.sas7bdat") %>% 
-  select(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2, INDFMPIR, RIDAGEYR)
-
-# fped day 1
-fped_j1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1tot_1718.sas7bdat") 
-
-# fped day 2
-fped_j2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2tot_1718.sas7bdat")
-
-# join the two datasets
-fped_j <- left_join(fped_j1, fped_j2)
-
-# nutrients day 1
-nutrient_j1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr1tot_j.sas7bdat")
-
-# nutrients day 2
-nutrient_j2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr2tot_j.sas7bdat")
-
-# join the two datasets
-nutrient_j <- full_join(nutrient_j1, nutrient_j2)
-
-# Combine all datasets
-nhanes1718 <- fped_j %>% 
-  left_join(nutrient_j) %>% 
-  left_join(demo_j) 
-
-# combine the two nhanes datasets
-
-# first, change 2 variable names that don't match
-nhanes1718 <- nhanes1718 %>% rename(DR1TWS = DR1TWSZ,
-                                    DR2TWS = DR2TWSZ)
-
-nhanes_comb <- rbind(nhanes1516, nhanes1718)
-
-# combine with meat
-nhanes_comb1 <- left_join(nhanes_comb, meat_sum_day1, by = "SEQN") %>% left_join(meat_sum_day2, by = "SEQN")
-
-# create dairy variables
-dairy_day1 <-
-  foods_day1_2 %>% 
-  group_by(SEQN) %>% 
-  summarise(dairy_cow_1 = sum(dairy_cow),
-            dairy_soy_1 = sum(dairy_soy))
-
-dairy_day2 <-
-  foods_day2_2 %>% 
-  group_by(SEQN) %>% 
-  summarise(dairy_cow_2 = sum(dairy_cow),
-            dairy_soy_2 = sum(dairy_soy))
-
-# merge with nhanes
-dairy_bothdays <- full_join(dairy_day1, dairy_day2)
-
-nhanes_comb2 <- nhanes_comb1 %>% left_join(dairy_bothdays, by = "SEQN")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## rm(list=setdiff(ls(), c("foods_day1_2", "foods_day2_2")))
+## 
+## # QUICKLY HANDLE MEAT
+## meat_sum_day1 <-
+##   foods_day1_2 %>%
+##   group_by(SEQN) %>%
+##   summarise(pf_redm_tot_1 = sum(pf_redm_tot),
+##             pf_poultry_tot_1 = sum(pf_poultry_tot))
+## 
+## meat_sum_day2 <-
+##   foods_day2_2 %>%
+##   group_by(SEQN) %>%
+##   summarise(pf_redm_tot_2 = sum(pf_redm_tot),
+##             pf_poultry_tot_2 = sum(pf_poultry_tot))
+## 
+## # 2015-2016 diet data (i)
+## 
+## # demographic data
+## demo_i <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/demo_i.sas7bdat") %>%
+##   select(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2, INDFMPIR, RIDAGEYR)
+## 
+## # fped day 1
+## fped_i1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1tot_1516.sas7bdat")
+## 
+## # fped day 2
+## fped_i2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2tot_1516.sas7bdat")
+## 
+## # join the two datasets
+## fped_i <- left_join(fped_i1, fped_i2)
+## 
+## # nutrients day 1
+## nutrient_i1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr1tot_i.sas7bdat")
+## 
+## # nutrients day 2
+## nutrient_i2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr2tot_i.sas7bdat")
+## 
+## # join the two datasets
+## nutrient_i <- full_join(nutrient_i1, nutrient_i2)
+## 
+## # Combine all datasets
+## nhanes1516 <-
+##   fped_i %>%
+##   left_join(nutrient_i) %>%
+##   left_join(demo_i)
+## 
+## # 2017-2018 diet data (j)
+## 
+## # demographic data
+## demo_j <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/demo_j.sas7bdat") %>%
+##   select(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2, INDFMPIR, RIDAGEYR)
+## 
+## # fped day 1
+## fped_j1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr1tot_1718.sas7bdat")
+## 
+## # fped day 2
+## fped_j2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_dr2tot_1718.sas7bdat")
+## 
+## # join the two datasets
+## fped_j <- left_join(fped_j1, fped_j2)
+## 
+## # nutrients day 1
+## nutrient_j1 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr1tot_j.sas7bdat")
+## 
+## # nutrients day 2
+## nutrient_j2 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/dr2tot_j.sas7bdat")
+## 
+## # join the two datasets
+## nutrient_j <- full_join(nutrient_j1, nutrient_j2)
+## 
+## # Combine all datasets
+## nhanes1718 <- fped_j %>%
+##   left_join(nutrient_j) %>%
+##   left_join(demo_j)
+## 
+## # combine the two nhanes datasets
+## 
+## # first, change 2 variable names that don't match
+## nhanes1718 <- nhanes1718 %>% rename(DR1TWS = DR1TWSZ,
+##                                     DR2TWS = DR2TWSZ)
+## 
+## nhanes_comb <- rbind(nhanes1516, nhanes1718)
+## 
+## # combine with meat
+## nhanes_comb1 <- left_join(nhanes_comb, meat_sum_day1, by = "SEQN") %>% left_join(meat_sum_day2, by = "SEQN")
+## 
+## # create dairy variables
+## dairy_day1 <-
+##   foods_day1_2 %>%
+##   group_by(SEQN) %>%
+##   summarise(dairy_cow_1 = sum(dairy_cow),
+##             dairy_soy_1 = sum(dairy_soy))
+## 
+## dairy_day2 <-
+##   foods_day2_2 %>%
+##   group_by(SEQN) %>%
+##   summarise(dairy_cow_2 = sum(dairy_cow),
+##             dairy_soy_2 = sum(dairy_soy))
+## 
+## # merge with nhanes
+## dairy_bothdays <- full_join(dairy_day1, dairy_day2)
+## 
+## nhanes_comb2 <- nhanes_comb1 %>% left_join(dairy_bothdays, by = "SEQN")
+## 
 
 #' 
 #' #### Step 4: Construct dietary factors {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-nhanes_comb3 <-
-  nhanes_comb2 %>% 
-  rename(kcal_1 = DR1TKCAL,
-         kcal_2 = DR2TKCAL,
-         
-         sat_fat_1 = DR1TSFAT,
-         sat_fat_2 = DR2TSFAT,
-         
-         sodium_1 = DR1TSODI,
-         sodium_2 = DR2TSODI,
-         
-         gr_refined_1 = DR1T_G_REFINED,
-         gr_refined_2 = DR2T_G_REFINED,
-         
-         gr_whole_1 = DR1T_G_WHOLE,
-         gr_whole_2 = DR2T_G_WHOLE,
-         
-         added_sugar_1 = DR1T_ADD_SUGARS,
-         added_sugar_2 = DR2T_ADD_SUGARS,
-         
-         fruit_tot_1 = DR1T_F_TOTAL,
-         fruit_tot_2 = DR2T_F_TOTAL,
-         
-         fruit_juice_1 = DR1T_F_JUICE,
-         fruit_juice_2 = DR2T_F_JUICE,
-         
-         fiber_1 = DR1TFIBE,
-         fiber_2 = DR2TFIBE,
-         
-         dairy_tot_1 = DR1T_D_TOTAL,
-         dairy_tot_2 = DR2T_D_TOTAL,
-         
-         veg_dg_1 = DR1T_V_DRKGR,
-         veg_dg_2 = DR2T_V_DRKGR,
-         
-         veg_oth_1 = DR1T_V_OTHER,
-         veg_oth_2 = DR2T_V_OTHER,
-         
-         veg_ro_1 = DR1T_V_REDOR_TOTAL,
-         veg_ro_2 = DR2T_V_REDOR_TOTAL,
-         
-         veg_sta_1 = DR1T_V_STARCHY_TOTAL,
-         veg_sta_2 = DR2T_V_STARCHY_TOTAL,
-         
-         # Beans, peas, and lentils  (legumes) computed as vegetables (cup eq.) 
-         veg_leg_1 = DR1T_V_LEGUMES,
-         veg_leg_2 = DR2T_V_LEGUMES,
-         
-         oil_1 = DR1T_OILS,
-         oil_2 = DR2T_OILS,
-         
-         pf_egg_1 = DR1T_PF_EGGS,
-         pf_egg_2 = DR2T_PF_EGGS,
-         
-         pf_ns_1 = DR1T_PF_NUTSDS,
-         pf_ns_2 = DR2T_PF_NUTSDS,
-         
-         # soy only
-         # Soy products, excluding calcium fortified soy milk (soymilk) 
-         # and raw soybeans products (oz. eq.) 
-         pf_soy_1 = DR1T_PF_SOY,
-         pf_soy_2 = DR2T_PF_SOY,
-         
-         pf_poultry_1 = DR1T_PF_POULT,
-         pf_poultry_2 = DR2T_PF_POULT,
-         
-         pf_redm_1 = DR1T_PF_MEAT,
-         pf_redm_2 = DR2T_PF_MEAT,
-         
-         pf_pm_1 = DR1T_PF_CUREDMEAT,
-         pf_pm_2 = DR2T_PF_CUREDMEAT,
-         
-         pf_organ_1 = DR1T_PF_ORGAN,
-         pf_organ_2 = DR2T_PF_ORGAN,
-         
-         # Beans and Peas (legumes) computed as protein foods (oz. eq.) 
-         pf_leg_1 = DR1T_PF_LEGUMES,
-         pf_leg_2 = DR2T_PF_LEGUMES) %>% 
-  
-  rowwise() %>% 
-  
-  mutate(sea_omega3_fa_1 = sum(DR1TP226, DR1TP205),
-         sea_omega3_fa_2 = sum(DR2TP226, DR2TP205),
-         
-         veg_exc_sta_1 = sum(veg_dg_1, veg_ro_1, veg_oth_1),
-         veg_exc_sta_2 = sum(veg_dg_2, veg_ro_2, veg_oth_2),
-         
-         fruit_exc_juice_1 = sum(DR1T_F_CITMLB, DR1T_F_OTHER),
-         fruit_exc_juice_2 = sum(DR2T_F_CITMLB, DR2T_F_OTHER),
-         
-         # pf_redm_tot_1 = sum(),
-         # pf_redm_tot_2 = sum(),
-         # 
-         # pf_poultry_tot_1 = sum(),
-         # pf_poultry_tot_2 = sum(),
-         
-         pufa_energy_1 = ((DR1TPFAT * 9) / kcal_1) * 100,
-         pufa_energy_2 = ((DR2TPFAT * 9) / kcal_2) * 100,
-         
-         sfat_energy_1 = ((sat_fat_1 * 9) / kcal_1) * 100,
-         sfat_energy_2 = ((sat_fat_2 * 9) / kcal_2) * 100,
-         
-         pf_seafood_1 = sum(DR1T_PF_SEAFD_HI, DR1T_PF_SEAFD_LOW),
-         pf_seafood_2 = sum(DR2T_PF_SEAFD_HI, DR2T_PF_SEAFD_LOW),
-         
-         # includes legumes and soy foods
-         leg_tot_1 = sum(pf_leg_1, pf_soy_1),
-         leg_tot_2 = sum(pf_leg_2, pf_soy_2),
-         
-         pf_animal_1 = sum(DR1T_PF_MPS_TOTAL, pf_egg_1),
-         pf_animal_2 = sum(DR2T_PF_MPS_TOTAL, pf_egg_2),
-         
-         pf_plant_1 = sum(pf_leg_1, pf_ns_1, pf_soy_1),
-         pf_plant_2 = sum(pf_leg_2, pf_ns_2, pf_soy_2)
-  )
-
-# select the variables we need
-nhanes_comb4 <- nhanes_comb3 %>% select(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2,
-                                        INDFMPIR, RIDAGEYR, SDMVPSU, SDMVSTRA,
-                                        WTDRD1, WTDR2D, DR1DRSTZ, DR2DRSTZ, 
-                                        DRDINT, ends_with("_1"), ends_with("_2")) %>% 
-  ungroup() # stop using rowwise
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## nhanes_comb3 <-
+##   nhanes_comb2 %>%
+##   rename(kcal_1 = DR1TKCAL,
+##          kcal_2 = DR2TKCAL,
+## 
+##          sat_fat_1 = DR1TSFAT,
+##          sat_fat_2 = DR2TSFAT,
+## 
+##          sodium_1 = DR1TSODI,
+##          sodium_2 = DR2TSODI,
+## 
+##          gr_refined_1 = DR1T_G_REFINED,
+##          gr_refined_2 = DR2T_G_REFINED,
+## 
+##          gr_whole_1 = DR1T_G_WHOLE,
+##          gr_whole_2 = DR2T_G_WHOLE,
+## 
+##          added_sugar_1 = DR1T_ADD_SUGARS,
+##          added_sugar_2 = DR2T_ADD_SUGARS,
+## 
+##          fruit_tot_1 = DR1T_F_TOTAL,
+##          fruit_tot_2 = DR2T_F_TOTAL,
+## 
+##          fruit_juice_1 = DR1T_F_JUICE,
+##          fruit_juice_2 = DR2T_F_JUICE,
+## 
+##          fiber_1 = DR1TFIBE,
+##          fiber_2 = DR2TFIBE,
+## 
+##          dairy_tot_1 = DR1T_D_TOTAL,
+##          dairy_tot_2 = DR2T_D_TOTAL,
+## 
+##          veg_dg_1 = DR1T_V_DRKGR,
+##          veg_dg_2 = DR2T_V_DRKGR,
+## 
+##          veg_oth_1 = DR1T_V_OTHER,
+##          veg_oth_2 = DR2T_V_OTHER,
+## 
+##          veg_ro_1 = DR1T_V_REDOR_TOTAL,
+##          veg_ro_2 = DR2T_V_REDOR_TOTAL,
+## 
+##          veg_sta_1 = DR1T_V_STARCHY_TOTAL,
+##          veg_sta_2 = DR2T_V_STARCHY_TOTAL,
+## 
+##          # Beans, peas, and lentils  (legumes) computed as vegetables (cup eq.)
+##          veg_leg_1 = DR1T_V_LEGUMES,
+##          veg_leg_2 = DR2T_V_LEGUMES,
+## 
+##          oil_1 = DR1T_OILS,
+##          oil_2 = DR2T_OILS,
+## 
+##          pf_egg_1 = DR1T_PF_EGGS,
+##          pf_egg_2 = DR2T_PF_EGGS,
+## 
+##          pf_ns_1 = DR1T_PF_NUTSDS,
+##          pf_ns_2 = DR2T_PF_NUTSDS,
+## 
+##          # soy only
+##          # Soy products, excluding calcium fortified soy milk (soymilk)
+##          # and raw soybeans products (oz. eq.)
+##          pf_soy_1 = DR1T_PF_SOY,
+##          pf_soy_2 = DR2T_PF_SOY,
+## 
+##          pf_poultry_1 = DR1T_PF_POULT,
+##          pf_poultry_2 = DR2T_PF_POULT,
+## 
+##          pf_redm_1 = DR1T_PF_MEAT,
+##          pf_redm_2 = DR2T_PF_MEAT,
+## 
+##          pf_pm_1 = DR1T_PF_CUREDMEAT,
+##          pf_pm_2 = DR2T_PF_CUREDMEAT,
+## 
+##          pf_organ_1 = DR1T_PF_ORGAN,
+##          pf_organ_2 = DR2T_PF_ORGAN,
+## 
+##          # Beans and Peas (legumes) computed as protein foods (oz. eq.)
+##          pf_leg_1 = DR1T_PF_LEGUMES,
+##          pf_leg_2 = DR2T_PF_LEGUMES) %>%
+## 
+##   rowwise() %>%
+## 
+##   mutate(sea_omega3_fa_1 = sum(DR1TP226, DR1TP205),
+##          sea_omega3_fa_2 = sum(DR2TP226, DR2TP205),
+## 
+##          veg_exc_sta_1 = sum(veg_dg_1, veg_ro_1, veg_oth_1),
+##          veg_exc_sta_2 = sum(veg_dg_2, veg_ro_2, veg_oth_2),
+## 
+##          fruit_exc_juice_1 = sum(DR1T_F_CITMLB, DR1T_F_OTHER),
+##          fruit_exc_juice_2 = sum(DR2T_F_CITMLB, DR2T_F_OTHER),
+## 
+##          # pf_redm_tot_1 = sum(),
+##          # pf_redm_tot_2 = sum(),
+##          #
+##          # pf_poultry_tot_1 = sum(),
+##          # pf_poultry_tot_2 = sum(),
+## 
+##          pufa_energy_1 = ((DR1TPFAT * 9) / kcal_1) * 100,
+##          pufa_energy_2 = ((DR2TPFAT * 9) / kcal_2) * 100,
+## 
+##          sfat_energy_1 = ((sat_fat_1 * 9) / kcal_1) * 100,
+##          sfat_energy_2 = ((sat_fat_2 * 9) / kcal_2) * 100,
+## 
+##          pf_seafood_1 = sum(DR1T_PF_SEAFD_HI, DR1T_PF_SEAFD_LOW),
+##          pf_seafood_2 = sum(DR2T_PF_SEAFD_HI, DR2T_PF_SEAFD_LOW),
+## 
+##          # includes legumes and soy foods
+##          leg_tot_1 = sum(pf_leg_1, pf_soy_1),
+##          leg_tot_2 = sum(pf_leg_2, pf_soy_2),
+## 
+##          pf_animal_1 = sum(DR1T_PF_MPS_TOTAL, pf_egg_1),
+##          pf_animal_2 = sum(DR2T_PF_MPS_TOTAL, pf_egg_2),
+## 
+##          pf_plant_1 = sum(pf_leg_1, pf_ns_1, pf_soy_1),
+##          pf_plant_2 = sum(pf_leg_2, pf_ns_2, pf_soy_2)
+##   )
+## 
+## # select the variables we need
+## nhanes_comb4 <- nhanes_comb3 %>% select(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2,
+##                                         INDFMPIR, RIDAGEYR, SDMVPSU, SDMVSTRA,
+##                                         WTDRD1, WTDR2D, DR1DRSTZ, DR2DRSTZ,
+##                                         DRDINT, ends_with("_1"), ends_with("_2")) %>%
+##   ungroup() # stop using rowwise
+## 
 
 #' 
 #' #### Step 5: Create sociodemographic subgroups {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-nhanes_comb5 <- nhanes_comb4 %>% mutate(
-  
-  female = ifelse(RIAGENDR == 2, 1, 0),
-  
-  sex = ifelse(female == 1, 1, 2),
-  
-  race = recode(RIDRETH1,
-                `3` = 1,
-                `4` = 2,
-                `1` = 3,
-                `2` = 3,
-                `5` = 4),
-  
-  age = case_when(RIDAGEYR >= 20 & RIDAGEYR < 35 ~ 1,
-                  RIDAGEYR >= 35 & RIDAGEYR < 45 ~ 2,
-                  RIDAGEYR >= 45 & RIDAGEYR < 55 ~ 3,
-                  RIDAGEYR >= 55 & RIDAGEYR < 65 ~ 4,
-                  RIDAGEYR >= 65 & RIDAGEYR < 75 ~ 5,
-                  RIDAGEYR >= 75 ~ 6),
-  
-  # create new weight variable
-  wtnew = WTDRD1/2)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## nhanes_comb5 <- nhanes_comb4 %>% mutate(
+## 
+##   female = ifelse(RIAGENDR == 2, 1, 0),
+## 
+##   sex = ifelse(female == 1, 1, 2),
+## 
+##   race = recode(RIDRETH1,
+##                 `3` = 1,
+##                 `4` = 2,
+##                 `1` = 3,
+##                 `2` = 3,
+##                 `5` = 4),
+## 
+##   age = case_when(RIDAGEYR >= 20 & RIDAGEYR < 35 ~ 1,
+##                   RIDAGEYR >= 35 & RIDAGEYR < 45 ~ 2,
+##                   RIDAGEYR >= 45 & RIDAGEYR < 55 ~ 3,
+##                   RIDAGEYR >= 55 & RIDAGEYR < 65 ~ 4,
+##                   RIDAGEYR >= 65 & RIDAGEYR < 75 ~ 5,
+##                   RIDAGEYR >= 75 ~ 6),
+## 
+##   # create new weight variable
+##   wtnew = WTDRD1/2)
+## 
 
 #' 
 #' #### Step 6: Create averages of dietary factors for Day 1 and Day 2 {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-nhanes_comb6 <- nhanes_comb5 %>%
-  rowwise() %>%
-  mutate(kcal = mean(c(kcal_1, kcal_2), na.rm = TRUE),
-         sat_fat = mean(c(sat_fat_1, sat_fat_2), na.rm = TRUE),
-         sodium = mean(c(sodium_1, sodium_2), na.rm = TRUE),
-         gr_refined = mean(c(gr_refined_1, gr_refined_2), na.rm = TRUE),
-         gr_whole = mean(c(gr_whole_1, gr_whole_2), na.rm = TRUE),
-         added_sugar = mean(c(added_sugar_1, added_sugar_2), na.rm = TRUE),
-         fruit_tot = mean(c(fruit_tot_1, fruit_tot_2), na.rm = TRUE),
-         fruit_exc_juice = mean(c(fruit_exc_juice_1, fruit_exc_juice_2), na.rm = TRUE),
-         fruit_juice = mean(c(fruit_juice_1, fruit_juice_2), na.rm = TRUE),
-         fiber = mean(c(fiber_1, fiber_2), na.rm = TRUE),
-         dairy_tot = mean(c(dairy_tot_1, dairy_tot_2), na.rm = TRUE),
-         dairy_cow = mean(c(dairy_cow_1, dairy_cow_2), na.rm = TRUE),
-         dairy_soy = mean(c(dairy_soy_1, dairy_soy_2), na.rm = TRUE),
-         veg_dg = mean(c(veg_dg_1, veg_dg_2), na.rm = TRUE),
-         veg_oth = mean(c(veg_oth_1, veg_oth_2), na.rm = TRUE),
-         veg_ro = mean(c(veg_ro_1, veg_ro_2), na.rm = TRUE),
-         veg_sta = mean(c(veg_sta_1, veg_sta_2), na.rm = TRUE),
-         veg_leg = mean(c(veg_leg_1, veg_leg_2), na.rm = TRUE),
-         veg_exc_sta = mean(c(veg_exc_sta_1, veg_exc_sta_2), na.rm = TRUE),
-         oil = mean(c(oil_1, oil_2), na.rm = TRUE),
-         pf_egg = mean(c(pf_egg_1, pf_egg_2), na.rm = TRUE),
-         pf_ns = mean(c(pf_ns_1, pf_ns_2), na.rm = TRUE),
-         pf_soy = mean(c(pf_soy_1, pf_soy_2), na.rm = TRUE),
-         pf_poultry = mean(c(pf_poultry_1, pf_poultry_2), na.rm = TRUE),
-         pf_poultry_tot = mean(c(pf_poultry_tot_1, pf_poultry_tot_2), na.rm = TRUE),
-         pf_pm = mean(c(pf_pm_1, pf_pm_2), na.rm = TRUE),
-         pf_redm = mean(c(pf_redm_1, pf_redm_2), na.rm = TRUE),
-         pf_redm_tot = mean(c(pf_redm_tot_1, pf_redm_tot_2), na.rm = TRUE),
-         pf_organ = mean(c(pf_organ_1, pf_organ_2), na.rm = TRUE),
-         pf_leg = mean(c(pf_leg_1, pf_leg_2), na.rm = TRUE),
-         sea_omega3_fa = mean(c(sea_omega3_fa_1, sea_omega3_fa_2), na.rm = TRUE),
-         pufa_energy = mean(c(pufa_energy_1, pufa_energy_2), na.rm = TRUE),
-         sfat_energy = mean(c(sfat_energy_1, sfat_energy_2), na.rm = TRUE),
-         pf_seafood = mean(c(pf_seafood_1, pf_seafood_2), na.rm = TRUE),
-         leg_tot = mean(c(leg_tot_1, leg_tot_2), na.rm = TRUE),
-         pf_animal = mean(c(pf_animal_1, pf_animal_2), na.rm = TRUE),
-         pf_plant = mean(c(pf_plant_1, pf_plant_2), na.rm = TRUE))
-
-# get rid of NaN
-nhanes_comb6[nhanes_comb6 == "NaN"] <- NA
-
-# ungroup
-nhanes_comb7 <- nhanes_comb6 %>% ungroup()
-
-# Merge with subgroup file
-subgroups <- read_csv("data_inputs/OTHER/labels/DATA/population_subgroups_48_060923_FINAL.csv")
-
-nhanes_comb8 <-
-  nhanes_comb7 %>% 
-  left_join(subgroups, by = c("age" = "Age", 
-                              "sex" = "Sex", 
-                              "race" = "Race"))
-
-# create final dataset
-nhanes_final <- nhanes_comb8
-
-# look at meat variables
-nhanes_final %>%
-  select(SEQN, starts_with(c("pf_redm", "pf_poultry", "pf_pm", "pf_organ"))) %>%
-  mutate(sumtot = (pf_redm + pf_poultry + pf_pm + pf_organ == pf_redm_tot + pf_poultry_tot),
-         sum1 = (pf_redm_1 + pf_poultry_1 + pf_pm_1 + pf_organ_1 == pf_redm_tot_1 + pf_poultry_tot_1),
-         sum2 = (pf_redm_2 + pf_poultry_2 + pf_pm_2 + pf_organ_2 == pf_redm_tot_2 + pf_poultry_tot_2))
-
-nhanes_final %>%
-  select(SEQN, starts_with(c("pf_redm", "pf_poultry", "pf_pm", "pf_organ"))) %>%
-  mutate(sum1 = (pf_redm + pf_poultry + pf_pm + pf_organ == pf_redm_tot + pf_poultry_tot)) %>%
-  filter(sum1 == "FALSE")
-
-# look at day 1
-nhanes_final %>%
-  rowwise() %>%
-  select(SEQN, pf_redm_1, pf_poultry_1, pf_pm_1, pf_organ_1, pf_redm_tot_1, pf_poultry_tot_1) %>%
-  mutate(sum1 = round(sum(pf_redm_1, pf_poultry_1, pf_pm_1, pf_organ_1), digits = 3),
-         sum2 = round(sum(pf_redm_tot_1, pf_poultry_tot_1), digits = 3),
-         my_test = (sum1 == sum2)) %>%
-  filter(my_test == "FALSE") %>%
-  mutate(my_subtract = sum2 - sum1) %>%
-  filter(my_subtract < -0.05 | my_subtract > 0.05) # not bad
-
-# look at day2
-nhanes_final %>%
-  rowwise() %>%
-  select(SEQN, pf_redm_2, pf_poultry_2, pf_pm_2, pf_organ_2, pf_redm_tot_2, pf_poultry_tot_2) %>%
-  mutate(sum1 = round(sum(pf_redm_2, pf_poultry_2, pf_pm_2, pf_organ_2), digits = 3),
-         sum2 = round(sum(pf_redm_tot_2, pf_poultry_tot_2), digits = 3),
-         my_test = (sum1 == sum2)) %>%
-  filter(my_test == "FALSE") %>%
-  mutate(my_subtract = sum2 - sum1) %>%
-  filter(my_subtract < -0.05 | my_subtract > 0.05) # not bad
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## nhanes_comb6 <- nhanes_comb5 %>%
+##   rowwise() %>%
+##   mutate(kcal = mean(c(kcal_1, kcal_2), na.rm = TRUE),
+##          sat_fat = mean(c(sat_fat_1, sat_fat_2), na.rm = TRUE),
+##          sodium = mean(c(sodium_1, sodium_2), na.rm = TRUE),
+##          gr_refined = mean(c(gr_refined_1, gr_refined_2), na.rm = TRUE),
+##          gr_whole = mean(c(gr_whole_1, gr_whole_2), na.rm = TRUE),
+##          added_sugar = mean(c(added_sugar_1, added_sugar_2), na.rm = TRUE),
+##          fruit_tot = mean(c(fruit_tot_1, fruit_tot_2), na.rm = TRUE),
+##          fruit_exc_juice = mean(c(fruit_exc_juice_1, fruit_exc_juice_2), na.rm = TRUE),
+##          fruit_juice = mean(c(fruit_juice_1, fruit_juice_2), na.rm = TRUE),
+##          fiber = mean(c(fiber_1, fiber_2), na.rm = TRUE),
+##          dairy_tot = mean(c(dairy_tot_1, dairy_tot_2), na.rm = TRUE),
+##          dairy_cow = mean(c(dairy_cow_1, dairy_cow_2), na.rm = TRUE),
+##          dairy_soy = mean(c(dairy_soy_1, dairy_soy_2), na.rm = TRUE),
+##          veg_dg = mean(c(veg_dg_1, veg_dg_2), na.rm = TRUE),
+##          veg_oth = mean(c(veg_oth_1, veg_oth_2), na.rm = TRUE),
+##          veg_ro = mean(c(veg_ro_1, veg_ro_2), na.rm = TRUE),
+##          veg_sta = mean(c(veg_sta_1, veg_sta_2), na.rm = TRUE),
+##          veg_leg = mean(c(veg_leg_1, veg_leg_2), na.rm = TRUE),
+##          veg_exc_sta = mean(c(veg_exc_sta_1, veg_exc_sta_2), na.rm = TRUE),
+##          oil = mean(c(oil_1, oil_2), na.rm = TRUE),
+##          pf_egg = mean(c(pf_egg_1, pf_egg_2), na.rm = TRUE),
+##          pf_ns = mean(c(pf_ns_1, pf_ns_2), na.rm = TRUE),
+##          pf_soy = mean(c(pf_soy_1, pf_soy_2), na.rm = TRUE),
+##          pf_poultry = mean(c(pf_poultry_1, pf_poultry_2), na.rm = TRUE),
+##          pf_poultry_tot = mean(c(pf_poultry_tot_1, pf_poultry_tot_2), na.rm = TRUE),
+##          pf_pm = mean(c(pf_pm_1, pf_pm_2), na.rm = TRUE),
+##          pf_redm = mean(c(pf_redm_1, pf_redm_2), na.rm = TRUE),
+##          pf_redm_tot = mean(c(pf_redm_tot_1, pf_redm_tot_2), na.rm = TRUE),
+##          pf_organ = mean(c(pf_organ_1, pf_organ_2), na.rm = TRUE),
+##          pf_leg = mean(c(pf_leg_1, pf_leg_2), na.rm = TRUE),
+##          sea_omega3_fa = mean(c(sea_omega3_fa_1, sea_omega3_fa_2), na.rm = TRUE),
+##          pufa_energy = mean(c(pufa_energy_1, pufa_energy_2), na.rm = TRUE),
+##          sfat_energy = mean(c(sfat_energy_1, sfat_energy_2), na.rm = TRUE),
+##          pf_seafood = mean(c(pf_seafood_1, pf_seafood_2), na.rm = TRUE),
+##          leg_tot = mean(c(leg_tot_1, leg_tot_2), na.rm = TRUE),
+##          pf_animal = mean(c(pf_animal_1, pf_animal_2), na.rm = TRUE),
+##          pf_plant = mean(c(pf_plant_1, pf_plant_2), na.rm = TRUE))
+## 
+## # get rid of NaN
+## nhanes_comb6[nhanes_comb6 == "NaN"] <- NA
+## 
+## # ungroup
+## nhanes_comb7 <- nhanes_comb6 %>% ungroup()
+## 
+## # Merge with subgroup file
+## subgroups <- read_csv("data_inputs/OTHER/labels/DATA/population_subgroups_48_060923_FINAL.csv")
+## 
+## nhanes_comb8 <-
+##   nhanes_comb7 %>%
+##   left_join(subgroups, by = c("age" = "Age",
+##                               "sex" = "Sex",
+##                               "race" = "Race"))
+## 
+## # create final dataset
+## nhanes_final <- nhanes_comb8
+## 
+## # look at meat variables
+## nhanes_final %>%
+##   select(SEQN, starts_with(c("pf_redm", "pf_poultry", "pf_pm", "pf_organ"))) %>%
+##   mutate(sumtot = (pf_redm + pf_poultry + pf_pm + pf_organ == pf_redm_tot + pf_poultry_tot),
+##          sum1 = (pf_redm_1 + pf_poultry_1 + pf_pm_1 + pf_organ_1 == pf_redm_tot_1 + pf_poultry_tot_1),
+##          sum2 = (pf_redm_2 + pf_poultry_2 + pf_pm_2 + pf_organ_2 == pf_redm_tot_2 + pf_poultry_tot_2))
+## 
+## nhanes_final %>%
+##   select(SEQN, starts_with(c("pf_redm", "pf_poultry", "pf_pm", "pf_organ"))) %>%
+##   mutate(sum1 = (pf_redm + pf_poultry + pf_pm + pf_organ == pf_redm_tot + pf_poultry_tot)) %>%
+##   filter(sum1 == "FALSE")
+## 
+## # look at day 1
+## nhanes_final %>%
+##   rowwise() %>%
+##   select(SEQN, pf_redm_1, pf_poultry_1, pf_pm_1, pf_organ_1, pf_redm_tot_1, pf_poultry_tot_1) %>%
+##   mutate(sum1 = round(sum(pf_redm_1, pf_poultry_1, pf_pm_1, pf_organ_1), digits = 3),
+##          sum2 = round(sum(pf_redm_tot_1, pf_poultry_tot_1), digits = 3),
+##          my_test = (sum1 == sum2)) %>%
+##   filter(my_test == "FALSE") %>%
+##   mutate(my_subtract = sum2 - sum1) %>%
+##   filter(my_subtract < -0.05 | my_subtract > 0.05) # not bad
+## 
+## # look at day2
+## nhanes_final %>%
+##   rowwise() %>%
+##   select(SEQN, pf_redm_2, pf_poultry_2, pf_pm_2, pf_organ_2, pf_redm_tot_2, pf_poultry_tot_2) %>%
+##   mutate(sum1 = round(sum(pf_redm_2, pf_poultry_2, pf_pm_2, pf_organ_2), digits = 3),
+##          sum2 = round(sum(pf_redm_tot_2, pf_poultry_tot_2), digits = 3),
+##          my_test = (sum1 == sum2)) %>%
+##   filter(my_test == "FALSE") %>%
+##   mutate(my_subtract = sum2 - sum1) %>%
+##   filter(my_subtract < -0.05 | my_subtract > 0.05) # not bad
+## 
 
 #' 
 #' #### Step 7: Examine cleaned NHANES data {#step-seven} {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# check missing
-summary(nhanes_final)
-
-# check for outliers
-
-# kcal < 500
-nhanes_final %>% filter(kcal_1 < 500) %>% nrow()  #233
-nhanes_final %>% filter(kcal_2 < 500) %>% nrow()  #301
-
-# kcal > 3500
-nhanes_final %>% filter(kcal_1 > 3500) %>% nrow()  #1028
-nhanes_final %>% filter(kcal_2 > 3500) %>% nrow()  #588
-
-# do not remove because I will filter out 
-# dietary recalls that are not valid later
-
-# diet recall status
-table(nhanes_final$DR1DRSTZ, useNA = "always") 
-table(nhanes_final$DR2DRSTZ, useNA = "always") 
-
-# first, create inAnalysis variable
-nhanes_final1 <- nhanes_final %>% 
-  rowwise() %>% 
-  mutate(
-    # Define sub-population of interest: 
-    # Adults aged 20+ with 1 or 2 days of reliable dietary recalls
-    
-    reliable_yes = ifelse((DRDINT == 1 & DR1DRSTZ == 1) | (DRDINT == 2 & DR1DRSTZ == 1 & DR2DRSTZ == 1), 1, 0),
-    
-    inAnalysis = (!(is.na(subgroup)) & reliable_yes == 1), # if subgroup ISN'T missing and reliable data
-    
-    # Change NAs to 0s, otherwise svydesign function below won't run
-    wtnew = ifelse(is.na(wtnew), 0, wtnew),
-    SDMVPSU = ifelse(is.na(SDMVPSU), 0, SDMVPSU),
-    SDMVSTRA = ifelse(is.na(SDMVSTRA), 0, SDMVSTRA)
-  )
-
-# check new survey weight
-nhanes_final1 %>% select(SEQN, wtnew, SDMVPSU, SDMVSTRA, inAnalysis) # looks good
-
-# export
-write_rds(nhanes_final1,
-          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_clean.rds")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # check missing
+## summary(nhanes_final)
+## 
+## # check for outliers
+## 
+## # kcal < 500
+## nhanes_final %>% filter(kcal_1 < 500) %>% nrow()  #233
+## nhanes_final %>% filter(kcal_2 < 500) %>% nrow()  #301
+## 
+## # kcal > 3500
+## nhanes_final %>% filter(kcal_1 > 3500) %>% nrow()  #1028
+## nhanes_final %>% filter(kcal_2 > 3500) %>% nrow()  #588
+## 
+## # do not remove because I will filter out
+## # dietary recalls that are not valid later
+## 
+## # diet recall status
+## table(nhanes_final$DR1DRSTZ, useNA = "always")
+## table(nhanes_final$DR2DRSTZ, useNA = "always")
+## 
+## # first, create inAnalysis variable
+## nhanes_final1 <- nhanes_final %>%
+##   rowwise() %>%
+##   mutate(
+##     # Define sub-population of interest:
+##     # Adults aged 20+ with 1 or 2 days of reliable dietary recalls
+## 
+##     reliable_yes = ifelse((DRDINT == 1 & DR1DRSTZ == 1) | (DRDINT == 2 & DR1DRSTZ == 1 & DR2DRSTZ == 1), 1, 0),
+## 
+##     inAnalysis = (!(is.na(subgroup)) & reliable_yes == 1), # if subgroup ISN'T missing and reliable data
+## 
+##     # Change NAs to 0s, otherwise svydesign function below won't run
+##     wtnew = ifelse(is.na(wtnew), 0, wtnew),
+##     SDMVPSU = ifelse(is.na(SDMVPSU), 0, SDMVPSU),
+##     SDMVSTRA = ifelse(is.na(SDMVSTRA), 0, SDMVSTRA)
+##   )
+## 
+## # check new survey weight
+## nhanes_final1 %>% select(SEQN, wtnew, SDMVPSU, SDMVSTRA, inAnalysis) # looks good
+## 
+## # export
+## write_rds(nhanes_final1,
+##           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_clean.rds")
+## 
 
 #' 
 #' Finally, the cleaned dataset is exported to use later.
@@ -716,118 +726,118 @@ write_rds(nhanes_final1,
 #' 
 #' Set up the working directory.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-rm(list=ls())
-
-# load packages
-library(tidyverse)
-library(readxl)
-library(haven)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## rm(list=ls())
+## 
+## # load packages
+## library(tidyverse)
+## library(readxl)
+## library(haven)
+## 
 
 #' 
 #' Import the WWEIA 2015-2016 and 2017-2018 datasets. These contain categorizations of the FNDDS food codes that we will utilize later on.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-wweia1516 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1516_foodcat_FNDDS.xlsx")
-wweia1718 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1718_foodcat_FNDDS.xlsx")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## wweia1516 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1516_foodcat_FNDDS.xlsx")
+## wweia1718 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1718_foodcat_FNDDS.xlsx")
+## 
 
 #' 
 #' Then import these other categorizations (GL1, GL2, GL3) that are used. 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-gl1 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
-                 sheet = "GL1")
-
-gl2 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
-                 sheet = "GL2")
-
-gl2b <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
-                  sheet = "GL2b")
-
-gl3 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
-                 sheet = "GL3")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## gl1 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+##                  sheet = "GL1")
+## 
+## gl2 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+##                  sheet = "GL2")
+## 
+## gl2b <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+##                   sheet = "GL2b")
+## 
+## gl3 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+##                  sheet = "GL3")
+## 
 
 #' 
 #' Then, import a mapping from the WWEIA categories to these GL categories; and then join everything together.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-map <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
-                 sheet = "Mapping")
-
-# join
-map_join <- 
-  map %>% 
-  left_join(gl1) %>% 
-  left_join(gl2) %>% 
-  left_join(gl2b) %>% 
-  left_join(gl3)
-
-# merge with wweia datasets
-wweia1516_1 <- wweia1516 %>% left_join(map_join, by = "category_number")
-wweia1718_1 <- wweia1718 %>% left_join(map_join, by = "category_number")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## map <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
+##                  sheet = "Mapping")
+## 
+## # join
+## map_join <-
+##   map %>%
+##   left_join(gl1) %>%
+##   left_join(gl2) %>%
+##   left_join(gl2b) %>%
+##   left_join(gl3)
+## 
+## # merge with wweia datasets
+## wweia1516_1 <- wweia1516 %>% left_join(map_join, by = "category_number")
+## wweia1718_1 <- wweia1718 %>% left_join(map_join, by = "category_number")
+## 
 
 #' 
 #' Import FPED 2015-2016 and 2017-2018 datasets.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-fped1516 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1516.sas7bdat")
-fped1718 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1718.sas7bdat")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## fped1516 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1516.sas7bdat")
+## fped1718 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1718.sas7bdat")
+## 
 
 #' 
 #' Calculate the number of grams of added sugar (add_sugars_g), originally provided in teaspoons (ADD_SUGARS), in one serving of each FNDDS food code.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-fped1516_1 <- 
-  fped1516 %>% 
-  rename(food_code = FOODCODE) %>% 
-  # convert tsp to gram using 1 tsp=4.2g sugar
-  mutate(add_sugars_g = ADD_SUGARS * 4.2) %>%
-  select(food_code, add_sugars_g) 
-
-fped1718_1 <- 
-  fped1718 %>% 
-  rename(food_code = FOODCODE) %>% 
-  # convert tsp to gram using 1 tsp=4.2g sugar
-  mutate(add_sugars_g = ADD_SUGARS * 4.2) %>%
-  select(food_code, add_sugars_g)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## fped1516_1 <-
+##   fped1516 %>%
+##   rename(food_code = FOODCODE) %>%
+##   # convert tsp to gram using 1 tsp=4.2g sugar
+##   mutate(add_sugars_g = ADD_SUGARS * 4.2) %>%
+##   select(food_code, add_sugars_g)
+## 
+## fped1718_1 <-
+##   fped1718 %>%
+##   rename(food_code = FOODCODE) %>%
+##   # convert tsp to gram using 1 tsp=4.2g sugar
+##   mutate(add_sugars_g = ADD_SUGARS * 4.2) %>%
+##   select(food_code, add_sugars_g)
+## 
 
 #' 
 #' Import the NHANES individual-level food data (cleaned in [Chapter 2.2](cleaning-code-for-nhanes-diet-data.html#clean-raw-nhanes-data)), and merge with the FPED and WWEIA datasets.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# read in nhanes individual food data
-foods_day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
-foods_day2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds")
-
-# split up by NHANES cycle x Day of intake
-nhanes1516_day1 <- foods_day1 %>% filter(nhanes_cycle == "2015-2016")
-nhanes1718_day1 <- foods_day1 %>% filter(nhanes_cycle == "2017-2018")
-nhanes1516_day2 <- foods_day2 %>% filter(nhanes_cycle == "2015-2016")
-nhanes1718_day2 <- foods_day2 %>% filter(nhanes_cycle == "2017-2018")
-
-# merge fped and wweia datasets
-merge1516 <- left_join(wweia1516_1, fped1516_1, by = "food_code")
-merge1718 <- left_join(wweia1718_1, fped1718_1, by = "food_code")
-
-# merge "merge" datasets with nhanes datasets
-nhanes1516_day1_join <- left_join(nhanes1516_day1, merge1516, by = c("DR1IFDCD" = "food_code"))
-nhanes1516_day2_join <- left_join(nhanes1516_day2, merge1516, by = c("DR2IFDCD" = "food_code"))
-nhanes1718_day1_join <- left_join(nhanes1718_day1, merge1718, by = c("DR1IFDCD" = "food_code"))
-nhanes1718_day2_join <- left_join(nhanes1718_day2, merge1718, by = c("DR2IFDCD" = "food_code"))
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # read in nhanes individual food data
+## foods_day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
+## foods_day2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds")
+## 
+## # split up by NHANES cycle x Day of intake
+## nhanes1516_day1 <- foods_day1 %>% filter(nhanes_cycle == "2015-2016")
+## nhanes1718_day1 <- foods_day1 %>% filter(nhanes_cycle == "2017-2018")
+## nhanes1516_day2 <- foods_day2 %>% filter(nhanes_cycle == "2015-2016")
+## nhanes1718_day2 <- foods_day2 %>% filter(nhanes_cycle == "2017-2018")
+## 
+## # merge fped and wweia datasets
+## merge1516 <- left_join(wweia1516_1, fped1516_1, by = "food_code")
+## merge1718 <- left_join(wweia1718_1, fped1718_1, by = "food_code")
+## 
+## # merge "merge" datasets with nhanes datasets
+## nhanes1516_day1_join <- left_join(nhanes1516_day1, merge1516, by = c("DR1IFDCD" = "food_code"))
+## nhanes1516_day2_join <- left_join(nhanes1516_day2, merge1516, by = c("DR2IFDCD" = "food_code"))
+## nhanes1718_day1_join <- left_join(nhanes1718_day1, merge1718, by = c("DR1IFDCD" = "food_code"))
+## nhanes1718_day2_join <- left_join(nhanes1718_day2, merge1718, by = c("DR2IFDCD" = "food_code"))
+## 
 
 #' 
 #' ### Create SSB Indicator Variable
@@ -838,152 +848,152 @@ nhanes1718_day2_join <- left_join(nhanes1718_day2, merge1718, by = c("DR2IFDCD" 
 #' 
 #' We set "ssb" equal to 0 in all other cases.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# work on Day 1 of NHANES '15-'16 first
-nhanes1516_day1_join_1 <-
-  nhanes1516_day1_join %>% 
-  mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0))
-
-# Day 1 of NHANES '17--18
-nhanes1718_day1_join_1 <-
-  nhanes1718_day1_join %>% 
-  mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0)) 
-
-# only select necessary vars
-nhanes1516_day1_join_2 <- nhanes1516_day1_join_1 %>% select(SEQN, DR1ILINE, DR1IFDCD, DESCRIPTION, DR1IGRMS, ssb)
-nhanes15718_day1_join_2 <- nhanes1718_day1_join_1 %>% select(SEQN, DR1ILINE, DR1IFDCD, DESCRIPTION, DR1IGRMS, ssb)
-
-# bind Day 1 of NHANES '15-'16 and '17-'18 together
-day1_final <- rbind(nhanes1516_day1_join_2, nhanes15718_day1_join_2)
-
-# now work on Day 2 of NHANES '15-'16
-nhanes1516_day2_join_1 <-
-  nhanes1516_day2_join %>% 
-  mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0)) 
-
-# Day 2 of NHANES '17-'18
-nhanes1718_day2_join_1 <-
-  nhanes1718_day2_join %>% 
-  mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0))
-
-# only select necessary vars
-nhanes1516_day2_join_2 <- nhanes1516_day2_join_1 %>% select(SEQN, DR2ILINE, DR2IFDCD, DESCRIPTION, DR2IGRMS, ssb)
-nhanes1718_day2_join_2 <- nhanes1718_day2_join_1 %>% select(SEQN, DR2ILINE, DR2IFDCD, DESCRIPTION, DR2IGRMS, ssb)
-
-# bind Day 2 of NHANES '15-'16 and '17-'18 together
-day2_final <- rbind(nhanes1516_day2_join_2, nhanes1718_day2_join_2)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # work on Day 1 of NHANES '15-'16 first
+## nhanes1516_day1_join_1 <-
+##   nhanes1516_day1_join %>%
+##   mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0))
+## 
+## # Day 1 of NHANES '17--18
+## nhanes1718_day1_join_1 <-
+##   nhanes1718_day1_join %>%
+##   mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0))
+## 
+## # only select necessary vars
+## nhanes1516_day1_join_2 <- nhanes1516_day1_join_1 %>% select(SEQN, DR1ILINE, DR1IFDCD, DESCRIPTION, DR1IGRMS, ssb)
+## nhanes15718_day1_join_2 <- nhanes1718_day1_join_1 %>% select(SEQN, DR1ILINE, DR1IFDCD, DESCRIPTION, DR1IGRMS, ssb)
+## 
+## # bind Day 1 of NHANES '15-'16 and '17-'18 together
+## day1_final <- rbind(nhanes1516_day1_join_2, nhanes15718_day1_join_2)
+## 
+## # now work on Day 2 of NHANES '15-'16
+## nhanes1516_day2_join_1 <-
+##   nhanes1516_day2_join %>%
+##   mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0))
+## 
+## # Day 2 of NHANES '17-'18
+## nhanes1718_day2_join_1 <-
+##   nhanes1718_day2_join %>%
+##   mutate(ssb = ifelse(add_sugars_g >= 5 & between(GL1, 151, 156), 1, 0))
+## 
+## # only select necessary vars
+## nhanes1516_day2_join_2 <- nhanes1516_day2_join_1 %>% select(SEQN, DR2ILINE, DR2IFDCD, DESCRIPTION, DR2IGRMS, ssb)
+## nhanes1718_day2_join_2 <- nhanes1718_day2_join_1 %>% select(SEQN, DR2ILINE, DR2IFDCD, DESCRIPTION, DR2IGRMS, ssb)
+## 
+## # bind Day 2 of NHANES '15-'16 and '17-'18 together
+## day2_final <- rbind(nhanes1516_day2_join_2, nhanes1718_day2_join_2)
+## 
 
 #' 
 #' Export the datasets to use in the next section.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-write_rds(day1_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_ssb.rds")
-write_rds(day2_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_ssb.rds")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## write_rds(day1_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_ssb.rds")
+## write_rds(day2_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_ssb.rds")
+## 
 
 #' 
 #' ### Calculate SSB Intake
 #' 
 #' Now that we know which foodcodes are sugar-sweetened beverages, we want to calculate how much SSB each participant consumed (in grams), per day.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# Day 1
-ssb_day1 <- day1_final %>% 
-  mutate(ssb = as.character(ssb)) %>% 
-  group_by(SEQN, ssb) %>% 
-  summarise(grams = sum(DR1IGRMS)) %>% #calculate grams of intake by person
-  arrange(SEQN, ssb)
-
-ssb_day1_wide <-
-  pivot_wider(ssb_day1,
-            id_cols = SEQN,
-            names_from = ssb,
-            values_from = grams,
-            names_prefix = "ssb")
-
-ssb_day1_wide1 <- 
-  ssb_day1_wide %>% 
-  mutate(ssb1 = ifelse(!is.na(ssb0) & is.na(ssb1), 0, ssb1)) %>% 
-  select(SEQN, ssb1) %>% 
-  rename(ssb_1 = ssb1)
-
-# Day 2
-ssb_day2 <- day2_final %>% 
-  mutate(ssb = as.character(ssb)) %>% 
-  group_by(SEQN, ssb) %>% 
-  summarise(grams = sum(DR2IGRMS)) %>% #calculate grams of intake by person
-  arrange(SEQN, ssb)
-
-ssb_day2_wide <-
-  pivot_wider(ssb_day2,
-              id_cols = SEQN,
-              names_from = ssb,
-              values_from = grams,
-              names_prefix = "ssb")
-
-ssb_day2_wide1 <- 
-  ssb_day2_wide %>% 
-  mutate(ssb1 = ifelse(!is.na(ssb0) & is.na(ssb1), 0, ssb1)) %>% 
-  select(SEQN, ssb1) %>% 
-  rename(ssb_2 = ssb1)
-
-# combine
-ssb_bothdays <- full_join(ssb_day1_wide1, ssb_day2_wide1, by = "SEQN")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # Day 1
+## ssb_day1 <- day1_final %>%
+##   mutate(ssb = as.character(ssb)) %>%
+##   group_by(SEQN, ssb) %>%
+##   summarise(grams = sum(DR1IGRMS)) %>% #calculate grams of intake by person
+##   arrange(SEQN, ssb)
+## 
+## ssb_day1_wide <-
+##   pivot_wider(ssb_day1,
+##             id_cols = SEQN,
+##             names_from = ssb,
+##             values_from = grams,
+##             names_prefix = "ssb")
+## 
+## ssb_day1_wide1 <-
+##   ssb_day1_wide %>%
+##   mutate(ssb1 = ifelse(!is.na(ssb0) & is.na(ssb1), 0, ssb1)) %>%
+##   select(SEQN, ssb1) %>%
+##   rename(ssb_1 = ssb1)
+## 
+## # Day 2
+## ssb_day2 <- day2_final %>%
+##   mutate(ssb = as.character(ssb)) %>%
+##   group_by(SEQN, ssb) %>%
+##   summarise(grams = sum(DR2IGRMS)) %>% #calculate grams of intake by person
+##   arrange(SEQN, ssb)
+## 
+## ssb_day2_wide <-
+##   pivot_wider(ssb_day2,
+##               id_cols = SEQN,
+##               names_from = ssb,
+##               values_from = grams,
+##               names_prefix = "ssb")
+## 
+## ssb_day2_wide1 <-
+##   ssb_day2_wide %>%
+##   mutate(ssb1 = ifelse(!is.na(ssb0) & is.na(ssb1), 0, ssb1)) %>%
+##   select(SEQN, ssb1) %>%
+##   rename(ssb_2 = ssb1)
+## 
+## # combine
+## ssb_bothdays <- full_join(ssb_day1_wide1, ssb_day2_wide1, by = "SEQN")
+## 
 
 #' 
 #' Next, calculate the each participant's average intake across 2 days of intake.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# check
-# are there any where both are missing? no
-ssb_bothdays %>% filter(is.na(ssb_1) & is.na(ssb_2))
-
-# calculate day1/day2 ssb intake average
-ssb_bothdays_1 <-
-  ssb_bothdays %>%
-  rowwise() %>%
-  mutate(ssb = mean(c(ssb_1, ssb_2), na.rm=TRUE))
-
-# get rid of NaN
-ssb_bothdays_1[ssb_bothdays_1 == "NaN"] <- NA
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # check
+## # are there any where both are missing? no
+## ssb_bothdays %>% filter(is.na(ssb_1) & is.na(ssb_2))
+## 
+## # calculate day1/day2 ssb intake average
+## ssb_bothdays_1 <-
+##   ssb_bothdays %>%
+##   rowwise() %>%
+##   mutate(ssb = mean(c(ssb_1, ssb_2), na.rm=TRUE))
+## 
+## # get rid of NaN
+## ssb_bothdays_1[ssb_bothdays_1 == "NaN"] <- NA
+## 
 
 #' 
 #' Now merge with the main NHANES intake dataset.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# read in clean nhanes dataset
-nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_clean.rds")
-
-# merge
-nhanes_1 <- left_join(nhanes, ssb_bothdays_1, by = "SEQN")
-
-# which ones where ssb (in grams) is more than 0 but lower than 10 grams? (maybe a sip?)
-nhanes_1 %>% filter(ssb_1 > 0 & ssb_1 < 11) %>% head()
-nhanes_1 %>% filter(ssb_2 > 0 & ssb_2 < 11) %>% head()
-
-# look at just one person - 84956
-foods_day2 %>% filter(SEQN == 84956) %>% head()
-foods_day1 %>% filter(SEQN == 84997) %>% head()
-
-# it looks fine
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # read in clean nhanes dataset
+## nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_clean.rds")
+## 
+## # merge
+## nhanes_1 <- left_join(nhanes, ssb_bothdays_1, by = "SEQN")
+## 
+## # which ones where ssb (in grams) is more than 0 but lower than 10 grams? (maybe a sip?)
+## nhanes_1 %>% filter(ssb_1 > 0 & ssb_1 < 11) %>% head()
+## nhanes_1 %>% filter(ssb_2 > 0 & ssb_2 < 11) %>% head()
+## 
+## # look at just one person - 84956
+## foods_day2 %>% filter(SEQN == 84956) %>% head()
+## foods_day1 %>% filter(SEQN == 84997) %>% head()
+## 
+## # it looks fine
+## 
 
 #' 
 #' Export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-write_rds(nhanes_1,
-          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_incl_ssb_clean.rds")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## write_rds(nhanes_1,
+##           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_incl_ssb_clean.rds")
+## 
 
 #' 
 #' ## Energy Adjustment
@@ -1003,293 +1013,293 @@ write_rds(nhanes_1,
 #' 
 #' #### Step 1: Set up workspace {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-rm(list=ls())
-
-# load packages
-library(tidyverse)
-library(modelr)
-library(survey)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## rm(list=ls())
+## 
+## # load packages
+## library(tidyverse)
+## library(modelr)
+## library(survey)
+## 
 
 #' 
 #' #### Step 2: Import and prepare cleaned NHANES dataset  {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_incl_ssb_clean.rds") %>% 
-  ungroup() # get rid of rowwise formatting
-
-nhanes1 <- nhanes %>% 
-  select(-c(kcal:pf_plant, ssb)) %>%
-  relocate(c(wtnew:inAnalysis), .before = fruit_juice_1)
-
-# wide to long
-nhanes_long <- pivot_longer(nhanes1, 
-                            cols = ends_with(c("_1", "_2")),
-                            names_to = "names_temp",
-                            values_to = "values_temp")
-
-
-nhanes_long1 <- nhanes_long %>% separate(names_temp, into=c("name", "day"), sep = "_(?=[^_]+$)")
-
-nhanes_long2 <- nhanes_long1 %>% 
-  pivot_wider(names_from = "name", values_from = "values_temp")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_incl_ssb_clean.rds") %>%
+##   ungroup() # get rid of rowwise formatting
+## 
+## nhanes1 <- nhanes %>%
+##   select(-c(kcal:pf_plant, ssb)) %>%
+##   relocate(c(wtnew:inAnalysis), .before = fruit_juice_1)
+## 
+## # wide to long
+## nhanes_long <- pivot_longer(nhanes1,
+##                             cols = ends_with(c("_1", "_2")),
+##                             names_to = "names_temp",
+##                             values_to = "values_temp")
+## 
+## 
+## nhanes_long1 <- nhanes_long %>% separate(names_temp, into=c("name", "day"), sep = "_(?=[^_]+$)")
+## 
+## nhanes_long2 <- nhanes_long1 %>%
+##   pivot_wider(names_from = "name", values_from = "values_temp")
+## 
 
 #' 
 #' #### Step 3: Conduct energy adjustment using the residual method
 #' 
 #' Calculate the mean calorie intake across all participants and days ("meancalories"), each observation's log(calories), the log of "meancalories", and the log of 2000 kcals.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-nhanes2 <- nhanes_long2 %>% mutate(calories = kcal,
-                         meancalories = mean(calories, na.rm = TRUE),
-                         log_calories = log(calories),
-                         log_meancalories = log(meancalories),
-                         log_2000 = log(2000))
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## nhanes2 <- nhanes_long2 %>% mutate(calories = kcal,
+##                          meancalories = mean(calories, na.rm = TRUE),
+##                          log_calories = log(calories),
+##                          log_meancalories = log(meancalories),
+##                          log_2000 = log(2000))
+## 
 
 #' 
 #' There are a few people who have kcal intake = 0, and the log of this value is -Inf. We need to change this to NA so that the function will run.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# 7 people have kcal=0
-nhanes2 %>% filter(log_calories == "-Inf" & inAnalysis == "TRUE") %>% head()
-
-# if logcalories is -Inf, change to NA
-nhanes3 <- nhanes2 %>% 
-  mutate(log_calories = ifelse(log_calories == "-Inf", NA, log_calories)) %>% 
-  arrange(SEQN, day)
-
-# check
-nhanes3 %>% filter(log_calories == "-Inf" & inAnalysis == "TRUE") #good
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # 7 people have kcal=0
+## nhanes2 %>% filter(log_calories == "-Inf" & inAnalysis == "TRUE") %>% head()
+## 
+## # if logcalories is -Inf, change to NA
+## nhanes3 <- nhanes2 %>%
+##   mutate(log_calories = ifelse(log_calories == "-Inf", NA, log_calories)) %>%
+##   arrange(SEQN, day)
+## 
+## # check
+## nhanes3 %>% filter(log_calories == "-Inf" & inAnalysis == "TRUE") #good
+## 
 
 #' 
 #' Below is a function that we can apply to all dietary factors in order to calculate the residual method for each.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-resid_function <- function(x, y){
-  
-  dat <- x
-  
-  dat[["var_tem"]] <- dat[[y]] 
-  
-  dat1 <- dat %>% mutate(log_var_tem = ifelse(var_tem > 0, log(var_tem), NA))
-  
-  mod <- lm(log_var_tem ~ log_calories, data = dat1)
-  
-  a = summary(mod)$coefficients["(Intercept)", "Estimate"]
-  b = summary(mod)$coefficients["log_calories", "Estimate"]
-  
-  dat_new <- dat1 %>% 
-    add_residuals(mod) %>% 
-    rowwise() %>% 
-    mutate(log_cons_var_tem = a + (b * log_2000),
-           a_log_var_tem = log_cons_var_tem + resid,
-           a_var_tem = ifelse(var_tem == 0, 0,exp(a_log_var_tem)),
-           "{y}_adj" := a_var_tem)
-  
-  dat_new1 <- dat_new %>% arrange(SEQN, day) %>% select(paste0(y, "_adj"))
-
-  print(dat_new1)  
-  
-}
-
-# test
-resid_function(nhanes3, "pf_pm")      
-resid_function(nhanes3, "fruit_exc_juice") 
-resid_function(nhanes3, "sodium")  
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## resid_function <- function(x, y){
+## 
+##   dat <- x
+## 
+##   dat[["var_tem"]] <- dat[[y]]
+## 
+##   dat1 <- dat %>% mutate(log_var_tem = ifelse(var_tem > 0, log(var_tem), NA))
+## 
+##   mod <- lm(log_var_tem ~ log_calories, data = dat1)
+## 
+##   a = summary(mod)$coefficients["(Intercept)", "Estimate"]
+##   b = summary(mod)$coefficients["log_calories", "Estimate"]
+## 
+##   dat_new <- dat1 %>%
+##     add_residuals(mod) %>%
+##     rowwise() %>%
+##     mutate(log_cons_var_tem = a + (b * log_2000),
+##            a_log_var_tem = log_cons_var_tem + resid,
+##            a_var_tem = ifelse(var_tem == 0, 0,exp(a_log_var_tem)),
+##            "{y}_adj" := a_var_tem)
+## 
+##   dat_new1 <- dat_new %>% arrange(SEQN, day) %>% select(paste0(y, "_adj"))
+## 
+##   print(dat_new1)
+## 
+## }
+## 
+## # test
+## resid_function(nhanes3, "pf_pm")
+## resid_function(nhanes3, "fruit_exc_juice")
+## resid_function(nhanes3, "sodium")
+## 
 
 #' 
 #' Create a vector of dietary factors we want to use.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-diet_vars <- read_csv("data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv") %>%
-  select(Food_group) %>%
-  unlist() %>%
-  as.vector()
-
-nums <- which(variable.names(nhanes3) %in% diet_vars)
-
-new_diet_vars <- variable.names(nhanes3[nums])
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## diet_vars <- read_csv("data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv") %>%
+##   select(Food_group) %>%
+##   unlist() %>%
+##   as.vector()
+## 
+## nums <- which(variable.names(nhanes3) %in% diet_vars)
+## 
+## new_diet_vars <- variable.names(nhanes3[nums])
+## 
 
 #' 
 #' Apply the function of all dietary factors of interest.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# create empty list
-resid_list <- list()
-
-# loop through all diet factors
-for (i in new_diet_vars) {
-  
-  resid_list[[i]] <- resid_function(nhanes3, i)
-  
-}
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # create empty list
+## resid_list <- list()
+## 
+## # loop through all diet factors
+## for (i in new_diet_vars) {
+## 
+##   resid_list[[i]] <- resid_function(nhanes3, i)
+## 
+## }
+## 
 
 #' 
 #' Create a dataset that contains all of the adjusted values, and export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# nhanes with adjusted vars
-nhanes_adj <- nhanes3 %>% 
-  cbind(bind_cols(resid_list))
-
-# check a few diet vars
-nhanes_adj %>% select(ssb, ssb_adj) %>% head()
-nhanes_adj %>% select(fruit_exc_juice, fruit_exc_juice_adj) %>% head()
-nhanes_adj %>% select(pf_ns, pf_ns_adj) %>% head()
-nhanes_adj %>% select(pf_redm_tot, pf_redm_tot_adj) %>% head()
-nhanes_adj %>% select(pf_poultry_tot, pf_poultry_tot_adj) %>% head()
-
-# export data
-write_rds(nhanes_adj,
-          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.rds")
-
-write_csv(nhanes_adj,
-          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.csv")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # nhanes with adjusted vars
+## nhanes_adj <- nhanes3 %>%
+##   cbind(bind_cols(resid_list))
+## 
+## # check a few diet vars
+## nhanes_adj %>% select(ssb, ssb_adj) %>% head()
+## nhanes_adj %>% select(fruit_exc_juice, fruit_exc_juice_adj) %>% head()
+## nhanes_adj %>% select(pf_ns, pf_ns_adj) %>% head()
+## nhanes_adj %>% select(pf_redm_tot, pf_redm_tot_adj) %>% head()
+## nhanes_adj %>% select(pf_poultry_tot, pf_poultry_tot_adj) %>% head()
+## 
+## # export data
+## write_rds(nhanes_adj,
+##           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.rds")
+## 
+## write_csv(nhanes_adj,
+##           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.csv")
+## 
 
 #' 
 #' #### Step 4: Calculate average daily intake of adjusted variables
 #' 
 #' Pivot to wide format, then calculate the average daily intake by taking the mean of Day 1 and Day 2 values.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# pivot to wide
-nhanes_adj_wide <- nhanes_adj %>% pivot_wider(id_cols = SEQN:inAnalysis,
-                           names_from = day,
-                           values_from = ends_with("_adj"))
-
-# calculate averages
-nhanes_adj_wide1 <- nhanes_adj_wide %>%
-  rowwise() %>%
-  mutate(
-         # fruits
-         fruit_tot_adj = mean(c(fruit_tot_adj_1, fruit_tot_adj_2), na.rm = TRUE),
-         fruit_exc_juice_adj = mean(c(fruit_exc_juice_adj_1, fruit_exc_juice_adj_2), na.rm = TRUE),
-         fruit_juice_adj = mean(c(fruit_juice_adj_1, fruit_juice_adj_2), na.rm = TRUE),
-         
-         # vegs
-         veg_dg_adj = mean(c(veg_dg_adj_1, veg_dg_adj_2), na.rm = TRUE),
-         veg_oth_adj = mean(c(veg_oth_adj_1, veg_oth_adj_2), na.rm = TRUE),
-         veg_ro_adj = mean(c(veg_ro_adj_1, veg_ro_adj_2), na.rm = TRUE),
-         veg_sta_adj = mean(c(veg_sta_adj_1, veg_sta_adj_2), na.rm = TRUE),
-         veg_leg_adj = mean(c(veg_leg_adj_1, veg_leg_adj_2), na.rm = TRUE),
-         veg_exc_sta_adj = mean(c(veg_exc_sta_adj_1, veg_exc_sta_adj_2), na.rm = TRUE),
-         
-         # grains
-         gr_refined_adj = mean(c(gr_refined_adj_1, gr_refined_adj_2), na.rm = TRUE),
-         gr_whole_adj = mean(c(gr_whole_adj_1, gr_whole_adj_2), na.rm = TRUE),
-         
-         # plant based proteins
-         pf_ns_adj = mean(c(pf_ns_adj_1, pf_ns_adj_2), na.rm = TRUE),
-         pf_soy_adj = mean(c(pf_soy_adj_1, pf_soy_adj_2), na.rm = TRUE),
-         pf_leg_adj = mean(c(pf_leg_adj_1, pf_leg_adj_2), na.rm = TRUE),
-         leg_tot_adj = mean(c(leg_tot_adj_1, leg_tot_adj_2), na.rm = TRUE),
-         pf_plant_adj = mean(c(pf_plant_adj_1, pf_plant_adj_2), na.rm = TRUE),
-         
-         # animal proteins
-         pf_egg_adj = mean(c(pf_egg_adj_1, pf_egg_adj_2), na.rm = TRUE),
-         pf_seafood_adj = mean(c(pf_seafood_adj_1, pf_seafood_adj_2), na.rm = TRUE),
-         pf_poultry_adj = mean(c(pf_poultry_adj_1, pf_poultry_adj_2), na.rm = TRUE),
-         pf_poultry_tot_adj = mean(c(pf_poultry_tot_adj_1, pf_poultry_tot_adj_2), na.rm = TRUE),
-         pf_pm_adj = mean(c(pf_pm_adj_1, pf_pm_adj_2), na.rm = TRUE),
-         pf_redm_adj = mean(c(pf_redm_adj_1, pf_redm_adj_2), na.rm = TRUE),
-         pf_redm_tot_adj = mean(c(pf_redm_tot_adj_1, pf_redm_tot_adj_2), na.rm = TRUE),
-         pf_animal_adj = mean(c(pf_animal_adj_1, pf_animal_adj_2), na.rm = TRUE),
-         
-         # ssb
-         ssb_adj = mean(c(ssb_adj_1, ssb_adj_2), na.rm=TRUE),
-         
-         # dairy
-         dairy_tot_adj = mean(c(dairy_tot_adj_1, dairy_tot_adj_2), na.rm = TRUE),
-         dairy_cow_adj = mean(c(dairy_cow_adj_1, dairy_cow_adj_2), na.rm = TRUE),
-         dairy_soy_adj = mean(c(dairy_soy_adj_1, dairy_soy_adj_2), na.rm = TRUE),
-         
-         # other foods
-         oil_adj = mean(c(oil_adj_1, oil_adj_2), na.rm = TRUE),
-         sodium_adj = mean(c(sodium_adj_1, sodium_adj_2), na.rm = TRUE),
-         added_sugar_adj = mean(c(added_sugar_adj_1, added_sugar_adj_2), na.rm = TRUE),
-         
-         # other nutrients
-         sea_omega3_fa_adj = mean(c(sea_omega3_fa_adj_1, sea_omega3_fa_adj_2), na.rm = TRUE),
-         pufa_energy_adj = mean(c(pufa_energy_adj_1, pufa_energy_adj_2), na.rm = TRUE),
-         sfat_energy_adj = mean(c(sfat_energy_adj_1, sfat_energy_adj_2), na.rm = TRUE),
-         sat_fat_adj = mean(c(sat_fat_adj_1, sat_fat_adj_2), na.rm = TRUE),
-         fiber_adj = mean(c(fiber_adj_1, fiber_adj_2), na.rm = TRUE))
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # pivot to wide
+## nhanes_adj_wide <- nhanes_adj %>% pivot_wider(id_cols = SEQN:inAnalysis,
+##                            names_from = day,
+##                            values_from = ends_with("_adj"))
+## 
+## # calculate averages
+## nhanes_adj_wide1 <- nhanes_adj_wide %>%
+##   rowwise() %>%
+##   mutate(
+##          # fruits
+##          fruit_tot_adj = mean(c(fruit_tot_adj_1, fruit_tot_adj_2), na.rm = TRUE),
+##          fruit_exc_juice_adj = mean(c(fruit_exc_juice_adj_1, fruit_exc_juice_adj_2), na.rm = TRUE),
+##          fruit_juice_adj = mean(c(fruit_juice_adj_1, fruit_juice_adj_2), na.rm = TRUE),
+## 
+##          # vegs
+##          veg_dg_adj = mean(c(veg_dg_adj_1, veg_dg_adj_2), na.rm = TRUE),
+##          veg_oth_adj = mean(c(veg_oth_adj_1, veg_oth_adj_2), na.rm = TRUE),
+##          veg_ro_adj = mean(c(veg_ro_adj_1, veg_ro_adj_2), na.rm = TRUE),
+##          veg_sta_adj = mean(c(veg_sta_adj_1, veg_sta_adj_2), na.rm = TRUE),
+##          veg_leg_adj = mean(c(veg_leg_adj_1, veg_leg_adj_2), na.rm = TRUE),
+##          veg_exc_sta_adj = mean(c(veg_exc_sta_adj_1, veg_exc_sta_adj_2), na.rm = TRUE),
+## 
+##          # grains
+##          gr_refined_adj = mean(c(gr_refined_adj_1, gr_refined_adj_2), na.rm = TRUE),
+##          gr_whole_adj = mean(c(gr_whole_adj_1, gr_whole_adj_2), na.rm = TRUE),
+## 
+##          # plant based proteins
+##          pf_ns_adj = mean(c(pf_ns_adj_1, pf_ns_adj_2), na.rm = TRUE),
+##          pf_soy_adj = mean(c(pf_soy_adj_1, pf_soy_adj_2), na.rm = TRUE),
+##          pf_leg_adj = mean(c(pf_leg_adj_1, pf_leg_adj_2), na.rm = TRUE),
+##          leg_tot_adj = mean(c(leg_tot_adj_1, leg_tot_adj_2), na.rm = TRUE),
+##          pf_plant_adj = mean(c(pf_plant_adj_1, pf_plant_adj_2), na.rm = TRUE),
+## 
+##          # animal proteins
+##          pf_egg_adj = mean(c(pf_egg_adj_1, pf_egg_adj_2), na.rm = TRUE),
+##          pf_seafood_adj = mean(c(pf_seafood_adj_1, pf_seafood_adj_2), na.rm = TRUE),
+##          pf_poultry_adj = mean(c(pf_poultry_adj_1, pf_poultry_adj_2), na.rm = TRUE),
+##          pf_poultry_tot_adj = mean(c(pf_poultry_tot_adj_1, pf_poultry_tot_adj_2), na.rm = TRUE),
+##          pf_pm_adj = mean(c(pf_pm_adj_1, pf_pm_adj_2), na.rm = TRUE),
+##          pf_redm_adj = mean(c(pf_redm_adj_1, pf_redm_adj_2), na.rm = TRUE),
+##          pf_redm_tot_adj = mean(c(pf_redm_tot_adj_1, pf_redm_tot_adj_2), na.rm = TRUE),
+##          pf_animal_adj = mean(c(pf_animal_adj_1, pf_animal_adj_2), na.rm = TRUE),
+## 
+##          # ssb
+##          ssb_adj = mean(c(ssb_adj_1, ssb_adj_2), na.rm=TRUE),
+## 
+##          # dairy
+##          dairy_tot_adj = mean(c(dairy_tot_adj_1, dairy_tot_adj_2), na.rm = TRUE),
+##          dairy_cow_adj = mean(c(dairy_cow_adj_1, dairy_cow_adj_2), na.rm = TRUE),
+##          dairy_soy_adj = mean(c(dairy_soy_adj_1, dairy_soy_adj_2), na.rm = TRUE),
+## 
+##          # other foods
+##          oil_adj = mean(c(oil_adj_1, oil_adj_2), na.rm = TRUE),
+##          sodium_adj = mean(c(sodium_adj_1, sodium_adj_2), na.rm = TRUE),
+##          added_sugar_adj = mean(c(added_sugar_adj_1, added_sugar_adj_2), na.rm = TRUE),
+## 
+##          # other nutrients
+##          sea_omega3_fa_adj = mean(c(sea_omega3_fa_adj_1, sea_omega3_fa_adj_2), na.rm = TRUE),
+##          pufa_energy_adj = mean(c(pufa_energy_adj_1, pufa_energy_adj_2), na.rm = TRUE),
+##          sfat_energy_adj = mean(c(sfat_energy_adj_1, sfat_energy_adj_2), na.rm = TRUE),
+##          sat_fat_adj = mean(c(sat_fat_adj_1, sat_fat_adj_2), na.rm = TRUE),
+##          fiber_adj = mean(c(fiber_adj_1, fiber_adj_2), na.rm = TRUE))
+## 
 
 #' 
 #' Change unit to grams. Use the conversion units from the following file:
 #' 
 #' - data_inputs/OTHER/unit_conversions/DATA/Unit_conversions_1.4.24.csv
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# calculate food group means in grams
-nhanes_adj_wide2 <- nhanes_adj_wide1 %>% 
-  rowwise() %>% 
-  mutate(veg_dg_adj_grams = veg_dg_adj * 118 ,
-         veg_oth_adj_grams = veg_oth_adj * 140,
-         veg_ro_adj_grams = veg_ro_adj * 144,
-         veg_sta_adj_grams = veg_sta_adj * 134,
-         veg_tot_adj_grams = sum(veg_dg_adj_grams, 
-                                 veg_oth_adj_grams,
-                                 veg_ro_adj_grams,
-                                 veg_sta_adj_grams),
-         
-         gr_refined_adj_grams = gr_refined_adj * 36,
-         gr_whole_adj_grams = gr_whole_adj * 51,
-         gr_tot_adj_grams = sum(gr_refined_adj_grams,
-                                gr_whole_adj_grams),
-         
-         pf_egg_adj_grams = pf_egg_adj * 50,
-         pf_poultry_tot_adj_grams = pf_poultry_tot_adj * 29,
-         pf_redm_tot_adj_grams = pf_redm_tot_adj * 31,
-         pf_seafood_adj_grams = pf_seafood_adj * 29,
-         pf_ns_adj_grams = pf_ns_adj * 15,
-         leg_tot_adj_grams = leg_tot_adj * 37,
-         pf_tot_adj_grams = sum(pf_egg_adj_grams,
-                                pf_poultry_tot_adj_grams,
-                                pf_redm_tot_adj_grams,
-                                pf_seafood_adj_grams,
-                                pf_ns_adj_grams,
-                                leg_tot_adj_grams),
-         
-         fruit_exc_juice_adj_grams = fruit_exc_juice_adj * 152,
-         fruit_juice_adj_grams = fruit_juice_adj * 251,
-         fruit_tot_adj_grams = sum(fruit_exc_juice_adj_grams,
-                                   fruit_juice_adj_grams))
-
-# get rid of NaN
-nhanes_adj_wide2[nhanes_adj_wide2 == "NaN"] <- NA
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # calculate food group means in grams
+## nhanes_adj_wide2 <- nhanes_adj_wide1 %>%
+##   rowwise() %>%
+##   mutate(veg_dg_adj_grams = veg_dg_adj * 118 ,
+##          veg_oth_adj_grams = veg_oth_adj * 140,
+##          veg_ro_adj_grams = veg_ro_adj * 144,
+##          veg_sta_adj_grams = veg_sta_adj * 134,
+##          veg_tot_adj_grams = sum(veg_dg_adj_grams,
+##                                  veg_oth_adj_grams,
+##                                  veg_ro_adj_grams,
+##                                  veg_sta_adj_grams),
+## 
+##          gr_refined_adj_grams = gr_refined_adj * 36,
+##          gr_whole_adj_grams = gr_whole_adj * 51,
+##          gr_tot_adj_grams = sum(gr_refined_adj_grams,
+##                                 gr_whole_adj_grams),
+## 
+##          pf_egg_adj_grams = pf_egg_adj * 50,
+##          pf_poultry_tot_adj_grams = pf_poultry_tot_adj * 29,
+##          pf_redm_tot_adj_grams = pf_redm_tot_adj * 31,
+##          pf_seafood_adj_grams = pf_seafood_adj * 29,
+##          pf_ns_adj_grams = pf_ns_adj * 15,
+##          leg_tot_adj_grams = leg_tot_adj * 37,
+##          pf_tot_adj_grams = sum(pf_egg_adj_grams,
+##                                 pf_poultry_tot_adj_grams,
+##                                 pf_redm_tot_adj_grams,
+##                                 pf_seafood_adj_grams,
+##                                 pf_ns_adj_grams,
+##                                 leg_tot_adj_grams),
+## 
+##          fruit_exc_juice_adj_grams = fruit_exc_juice_adj * 152,
+##          fruit_juice_adj_grams = fruit_juice_adj * 251,
+##          fruit_tot_adj_grams = sum(fruit_exc_juice_adj_grams,
+##                                    fruit_juice_adj_grams))
+## 
+## # get rid of NaN
+## nhanes_adj_wide2[nhanes_adj_wide2 == "NaN"] <- NA
+## 
 
 #' 
 #' Export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-write_rds(nhanes_adj_wide2,
-          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.rds")
-
-write_csv(nhanes_adj_wide2,
-          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.csv",
-          na = "")
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## write_rds(nhanes_adj_wide2,
+##           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.rds")
+## 
+## write_csv(nhanes_adj_wide2,
+##           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.csv",
+##           na = "")
 
 #' 
 #' ## Calculating Mean and Standard Deviation Using SAS Macros {#sas-macro}
@@ -1304,9 +1314,9 @@ write_csv(nhanes_adj_wide2,
 #' 
 #' I highly recommend you read all of the aforementioned documentation before your proceed.
 #' 
-#' The SIMPLE macro was modified by Brooke Bell (the person writing this!). She added code to the macro to additionally calculate the standard deviation of the mean intake. The version that she modified is located in the LASTING GitHub repo here:
+#' The SIMPLE macro was modified by Brooke Bell (the person writing this!). She added code to the macro to additionally calculate the standard deviation of the mean intake. The version that she modified is located here:
 #' 
-#' - GitHub/LASTING/standard-deviations/macros/simple_macro_v3.4_bmb.sas
+#' - data_inputs/DIET/standard_deviations/CODE/macros/simple_macro_v3.4_bmb.sas
 #' 
 #' This macro is run on the Tufts cluster because it uses a lot of processing power. 
 #' 
@@ -1318,91 +1328,91 @@ write_csv(nhanes_adj_wide2,
 #' 
 #' First, import the adjusted intake dataset (long format) that was created in the previous section.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-rm(list = ls())
-
-library(tidyverse)
-library(fastDummies)
-
-# Import data
-nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.rds")
-
-# only select certain variables
-nhanes1 <- nhanes %>% 
-  select(SEQN, age, sex, race, subgroup, DRDINT, SDMVPSU, SDMVSTRA, wtnew, reliable_yes, inAnalysis, day, ends_with("adj"))
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## rm(list = ls())
+## 
+## library(tidyverse)
+## library(fastDummies)
+## 
+## # Import data
+## nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_long.rds")
+## 
+## # only select certain variables
+## nhanes1 <- nhanes %>%
+##   select(SEQN, age, sex, race, subgroup, DRDINT, SDMVPSU, SDMVSTRA, wtnew, reliable_yes, inAnalysis, day, ends_with("adj"))
+## 
 
 #' 
 #' Then, we need to create a new variable ("subgroup_new") that only has a non-missing subgroup number if that participant's data is reliable (i.e., inAnalysis == TRUE). This essentially changes any subgroup number to NA if the participant's data is unreliable.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-nhanes2 <- nhanes1 %>% 
-  mutate(subgroup_new = ifelse(inAnalysis == "TRUE", subgroup, NA),
-         inAnalysis_num = ifelse(inAnalysis == "TRUE", 1, 2)) %>% 
-  relocate(subgroup_new, .after = subgroup) %>% 
-  relocate(inAnalysis_num, .after = inAnalysis)
-
-# check
-nhanes2 %>% filter(!(is.na(subgroup)) & !(is.na(subgroup_new))) %>% head()
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## nhanes2 <- nhanes1 %>%
+##   mutate(subgroup_new = ifelse(inAnalysis == "TRUE", subgroup, NA),
+##          inAnalysis_num = ifelse(inAnalysis == "TRUE", 1, 2)) %>%
+##   relocate(subgroup_new, .after = subgroup) %>%
+##   relocate(inAnalysis_num, .after = inAnalysis)
+## 
+## # check
+## nhanes2 %>% filter(!(is.na(subgroup)) & !(is.na(subgroup_new))) %>% head()
+## 
 
 #' 
 #' Next, create dummy variables for the variables "day", "inAnalysis", "subgroup", and "subgroup_new". We utilize the "dummy_cols" function from the "fastDummies" package to do this quickly. You can learn more about this function by running the command "?dummy_cols".
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-nhanes3 <- nhanes2 %>% 
-  dummy_cols(select_columns = c("day", "inAnalysis", "inAnalysis_num", "subgroup", "subgroup_new"),
-             remove_first_dummy = TRUE) %>% 
-  relocate(day_2, .after = day)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## nhanes3 <- nhanes2 %>%
+##   dummy_cols(select_columns = c("day", "inAnalysis", "inAnalysis_num", "subgroup", "subgroup_new"),
+##              remove_first_dummy = TRUE) %>%
+##   relocate(day_2, .after = day)
+## 
 
 #' 
 #' We need to remove the rows where a participant's number of days of intake is 1 (DRDINT == 1) and day == 2 (since they don't have any data for this day).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# check
-nhanes3 %>% filter(DRDINT == 1 & day == 2) %>% head()
-
-nhanes4 <- nhanes3 %>% 
-  filter(!(DRDINT == 1 & day == 2))
-  
-# check
-nhanes4 %>% filter(is.na(fruit_tot_adj)) %>% head() #good
-nhanes4 %>% filter(is.na(fruit_tot_adj) & inAnalysis == "TRUE") %>% head() #good
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # check
+## nhanes3 %>% filter(DRDINT == 1 & day == 2) %>% head()
+## 
+## nhanes4 <- nhanes3 %>%
+##   filter(!(DRDINT == 1 & day == 2))
+## 
+## # check
+## nhanes4 %>% filter(is.na(fruit_tot_adj)) %>% head() #good
+## nhanes4 %>% filter(is.na(fruit_tot_adj) & inAnalysis == "TRUE") %>% head() #good
+## 
 
 #' 
 #' Need to change poultry variable name because it's too long for SAS (this is why SAS is inferior to R - insert poop emoji).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-nhanes5 <- nhanes4 %>% 
-  rename(poult_tot_adj = pf_poultry_tot_adj)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## nhanes5 <- nhanes4 %>%
+##   rename(poult_tot_adj = pf_poultry_tot_adj)
+## 
 
 #' 
 #' Export to Box. 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-write_csv(nhanes5,
-          "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes_incl_ssb_adj_clean_long.csv",
-          na = "")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## write_csv(nhanes5,
+##           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes_incl_ssb_adj_clean_long.csv",
+##           na = "")
+## 
 
 #' 
-#' Export to the LASTING Github repository. **Note that you will need to replace this file path with your own in order for this code to run.**
+#' Export to the standard_deviations folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-write_csv(nhanes5,
-          "/Users/bmb73/Documents/GitHub/LASTING/standard-deviations/in/nhanes_incl_ssb_adj_clean_long.csv",
-          na = "")
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## write_csv(nhanes5,
+##           "data_inputs/DIET/standard_deviations/DATA/in/nhanes_incl_ssb_adj_clean_long.csv",
+##           na = "")
+## 
 
 #' 
 #' ### Fill Out Macro Template
@@ -1417,7 +1427,7 @@ write_csv(nhanes5,
 #' 
 #' If you would like to run all the diet variables that were included in the four-pillar paper analysis, then you can use the following file: 
 #' 
-#' - /Users/bmb73/Documents/GitHub/LASTING/standard-deviations/in/macro_input_LASTING_ALL_VARS.csv
+#' - data_inputs/DIET/standard_deviations/DATA/in/macro_input_LASTING_ALL_VARS.csv
 #' 
 #' I will refer you to the above documentation if you want to make any modifications to the input file that already exists.
 #' 
@@ -1488,95 +1498,88 @@ write_csv(nhanes5,
 #' 
 #' First, retrieve all the output file names.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-rm(list=ls())
-
-my_date <- Sys.Date()
-
-# Specify the directory containing the CSV files
-directory <- "outputs/intake/output_082625_ncimethod"
-
-# Get the list of all CSV files in the directory
-file_list <- list.files(path = directory, pattern = "*.csv", full.names = TRUE)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## rm(list=ls())
+## 
+## source("code/version_date.R")
+## 
+## # Specify the directory containing the CSV files
+## directory <- "outputs/intake/output_031025_ncimethod"
+## 
+## # Get the list of all CSV files in the directory
+## file_list <- list.files(path = directory, pattern = "*.csv", full.names = TRUE)
+## 
 
 #' 
 #' Then, import the files and clean.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-# Read each CSV file and store them in a list of data frames
-data_list <- lapply(file_list, read_csv)
-
-# Combine all data frames into one data frame
-combined_data <- bind_rows(data_list)
-
-# for subgroup 0 only
-# leave commented out
-# combined_data1 <-
-#   combined_data %>% 
-#   filter(inAnalysis_num == 1) %>% 
-#   mutate(subgroup_new = 0)
-
-# Clean
-intake <- combined_data1 %>% 
-  select(note, subgroup_new, N, mean, mean_SE, StdDev) %>% 
-  # only select subgroups 1-48
-  filter(subgroup_new %in% c(1:48)) %>%
-  rename(food = note, 
-         subgroup = subgroup_new,
-         SE = mean_SE) %>% 
-  arrange(subgroup, food)
-
-# fix food name
-intake1 <- intake %>% 
-  mutate(food = str_remove(food, "_adj$"))
-
-# fix poultry name
-intake2 <- intake1 %>% 
-  mutate(food = ifelse(food == "poult_tot", "pf_poultry_tot", food))
-
-# for subgroup 0 only
-# leave commented out
-write_csv(intake2, 
-          paste0("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_WHOLE_SAMPLE_", my_date, ".csv"))
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## # Read each CSV file and store them in a list of data frames
+## data_list <- lapply(file_list, read_csv)
+## 
+## # Combine all data frames into one data frame
+## combined_data <- bind_rows(data_list)
+## 
+## # Clean
+## intake <- combined_data %>%
+##   select(note, subgroup_new, N, mean, mean_SE, StdDev) %>%
+##   # only select subgroups 1-48
+##   filter(subgroup_new %in% c(1:48)) %>%
+##   rename(food = note,
+##          subgroup = subgroup_new,
+##          SE = mean_SE) %>%
+##   arrange(subgroup, food)
+## 
+## # fix food name
+## intake1 <- intake %>%
+##   mutate(food = str_remove(food, "_adj$"))
+## 
+## # fix poultry name
+## intake2 <- intake1 %>%
+##   mutate(food = ifelse(food == "poult_tot", "pf_poultry_tot", food))
+## 
+## # for subgroup 0 only
+## # leave commented out
+## # write_csv(intake2,
+## #           dated("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod"))
+## 
 
 #' 
 #' Read in two datasets (food labels and % grocery intake) and merge with intake data.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-# merge with food labels
-labels <- read_csv("data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv")
-
-labels1 <- labels %>% 
-  rename(food = Food_group) %>% 
-  relocate(food)
-
-# read in pro_gro from original output
-ratio <- read_csv("data_inputs/DIET/dietary_intake/DATA/output_data/NHANES_1518_summary_allfoods_adj_bysub_bysource_02-03-2025.csv") %>% 
-  select(subgroup, food, pro_gro) %>% 
-  mutate(subgroup = as.character(subgroup))
-
-# join
-intake3 <- left_join(intake2, labels1, by = "food") %>% 
-  left_join(ratio, by = c("subgroup", "food"))
-
-intake4 <- intake3 %>% 
-  relocate(subgroup) %>% 
-  rename(food_label = Var_label,
-         food_desc = Var_desc) %>% 
-  arrange(subgroup, food)
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## # merge with food labels
+## labels <- read_csv("data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv")
+## 
+## labels1 <- labels %>%
+##   rename(food = Food_group) %>%
+##   relocate(food)
+## 
+## # read in pro_gro from original output
+## ratio <- read_csv("data_inputs/DIET/dietary_intake/DATA/output_data/NHANES_1518_summary_allfoods_adj_bysub_bysource_02-03-2025.csv") %>%
+##   select(subgroup, food, pro_gro) %>%
+##   mutate(subgroup = as.character(subgroup))
+## 
+## # join
+## intake3 <- left_join(intake2, labels1, by = "food") %>%
+##   left_join(ratio, by = c("subgroup", "food"))
+## 
+## intake4 <- intake3 %>%
+##   relocate(subgroup) %>%
+##   rename(food_label = Var_label,
+##          food_desc = Var_desc) %>%
+##   arrange(subgroup, food)
+## 
 
 #' 
 #' Export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------------------------------------------------
-
-write_csv(intake4, 
-          paste0("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_", my_date, ".csv"))
-
-
+## ----results='hide', warning=FALSE, message=FALSE-----------
+## 
+## write_csv(intake4,
+##           dated("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod"))
+## 
+## 
 

@@ -1,3 +1,13 @@
+```{r, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      results = "hide", 
+                      message = FALSE,
+                      warning = FALSE,
+                      eval = FALSE)
+
+```
+
 # Cleaning Code for NHANES Diet Data
 
 This chapter walks you through all of code used to clean the raw **NHANES dietary intake** datasets.
@@ -1304,9 +1314,9 @@ The NCI macro documentation is provided [here](https://epi.grants.cancer.gov/die
 
 I highly recommend you read all of the aforementioned documentation before your proceed.
 
-The SIMPLE macro was modified by Brooke Bell (the person writing this!). She added code to the macro to additionally calculate the standard deviation of the mean intake. The version that she modified is located in the LASTING GitHub repo here:
+The SIMPLE macro was modified by Brooke Bell (the person writing this!). She added code to the macro to additionally calculate the standard deviation of the mean intake. The version that she modified is located here:
 
-- GitHub/LASTING/standard-deviations/macros/simple_macro_v3.4_bmb.sas
+- data_inputs/DIET/standard_deviations/CODE/macros/simple_macro_v3.4_bmb.sas
 
 This macro is run on the Tufts cluster because it uses a lot of processing power. 
 
@@ -1395,12 +1405,12 @@ write_csv(nhanes5,
 
 ```
 
-Export to the LASTING Github repository. **Note that you will need to replace this file path with your own in order for this code to run.**
+Export to the standard_deviations folder.
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
 write_csv(nhanes5,
-          "/Users/bmb73/Documents/GitHub/LASTING/standard-deviations/in/nhanes_incl_ssb_adj_clean_long.csv",
+          "data_inputs/DIET/standard_deviations/DATA/in/nhanes_incl_ssb_adj_clean_long.csv",
           na = "")
 
 ```
@@ -1417,7 +1427,7 @@ You must first fill out a CSV file that lists all of the diet variables that you
 
 If you would like to run all the diet variables that were included in the four-pillar paper analysis, then you can use the following file: 
 
-- /Users/bmb73/Documents/GitHub/LASTING/standard-deviations/in/macro_input_LASTING_ALL_VARS.csv
+- data_inputs/DIET/standard_deviations/DATA/in/macro_input_LASTING_ALL_VARS.csv
 
 I will refer you to the above documentation if you want to make any modifications to the input file that already exists.
 
@@ -1492,10 +1502,10 @@ First, retrieve all the output file names.
 
 rm(list=ls())
 
-my_date <- Sys.Date()
+source("code/version_date.R")
 
 # Specify the directory containing the CSV files
-directory <- "outputs/intake/output_082625_ncimethod"
+directory <- "outputs/intake/output_031025_ncimethod"
 
 # Get the list of all CSV files in the directory
 file_list <- list.files(path = directory, pattern = "*.csv", full.names = TRUE)
@@ -1512,15 +1522,8 @@ data_list <- lapply(file_list, read_csv)
 # Combine all data frames into one data frame
 combined_data <- bind_rows(data_list)
 
-# for subgroup 0 only
-# leave commented out
-# combined_data1 <-
-#   combined_data %>% 
-#   filter(inAnalysis_num == 1) %>% 
-#   mutate(subgroup_new = 0)
-
 # Clean
-intake <- combined_data1 %>% 
+intake <- combined_data %>% 
   select(note, subgroup_new, N, mean, mean_SE, StdDev) %>% 
   # only select subgroups 1-48
   filter(subgroup_new %in% c(1:48)) %>%
@@ -1539,8 +1542,8 @@ intake2 <- intake1 %>%
 
 # for subgroup 0 only
 # leave commented out
-write_csv(intake2, 
-          paste0("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_WHOLE_SAMPLE_", my_date, ".csv"))
+# write_csv(intake2, 
+#           dated("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod"))
 
 ```
 
@@ -1576,7 +1579,7 @@ Export.
 ```{r, results='hide', warning=FALSE, message=FALSE}
 
 write_csv(intake4, 
-          paste0("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_", my_date, ".csv"))
+          dated("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod"))
 
 
 ```

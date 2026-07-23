@@ -1,3 +1,13 @@
+```{r, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      results = "hide", 
+                      message = FALSE,
+                      warning = FALSE,
+                      eval = FALSE)
+
+```
+
 # Cleaning Code for Cost Data
 
 This chapter walks you through all of the R code used to clean the raw **COST**-related data inputs. The resulting cleaned dataset is then used to calculate the cost impact factors (see Chapter \@ref(cost-impact-factors)).
@@ -25,7 +35,7 @@ library(tidyverse)
 library(readxl)
 library(survey)
 
-my_date <- Sys.Date()
+source("code/version_date.R")
 
 ```
 
@@ -109,7 +119,7 @@ Lastly, remove the original diet datasets becuase they are very large and we don
 
 ```{r}
 
-rm(list=setdiff(ls(), c("both_days", "my_date")))
+rm(list=setdiff(ls(), c("both_days", "version_date", "dated")))
 
 ```
 
@@ -218,7 +228,7 @@ Tidy up the global environment and only keep the datasets we currently need.
 
 ```{r}
 
-rm(list=setdiff(ls(), c("both_days2", "my_date")))
+rm(list=setdiff(ls(), c("both_days2", "version_date", "dated")))
 
 ```
 
@@ -356,7 +366,7 @@ Tidy up the global environment.
 
 ```{r}
 
-rm(list=setdiff(ls(), c("both_days9", "my_date")))
+rm(list=setdiff(ls(), c("both_days9", "version_date", "dated")))
 
 ```
 
@@ -416,7 +426,7 @@ Tidy up the global environment.
 
 ```{r}
 
-rm(list=setdiff(ls(), c("both_days11", "my_date")))
+rm(list=setdiff(ls(), c("both_days11", "version_date", "dated")))
 
 ```
 
@@ -428,7 +438,7 @@ Now, we will calculate the average food cost per 1 gram for each FNDDS food code
 
 # keep this commented out unless you are starting the script from here
 # both_days11 <- read_rds("data_inputs/IMPACT_FACTORS/temp_data/both_days11_cost.rds")
-# my_date <- Sys.Date()
+# source("code/version_date.R")
 
 ```
 

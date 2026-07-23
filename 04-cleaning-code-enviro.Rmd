@@ -1,10 +1,20 @@
+```{r, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      results = "hide", 
+                      message = FALSE,
+                      warning = FALSE,
+                      eval = FALSE)
+
+```
+
 # Cleaning Code for Environment Data
 
 This chapter walks you through all of the R code used to clean the raw **ENVIRONMENT**-related data inputs. The resulting cleaned dataset is then used to calculate the environment impact factors (see Chapter  \@ref(environmental-social-impact-factors).
 
 ## Clean and Restructure Intermediary Datasets
 
-This script imports all of raw cost-related data inputs, and then cleans and merges them so that the cost impact factors can later be calculated.
+This script imports all of raw environment-related data inputs, and then cleans and merges them so that the environment impact factors can later be calculated.
 
 Note that you must first open the 'methods_manual' R project before running this script or else it will not work.
 
@@ -25,7 +35,7 @@ library(tidyverse)
 library(readxl)
 library(survey)
 
-my_date <- Sys.Date()
+source("code/version_date.R")
 
 ```
 
@@ -109,7 +119,7 @@ Lastly, remove the original diet datasets becuase they are very large and we don
 
 ```{r}
 
-rm(list=setdiff(ls(), c("both_days", "my_date")))
+rm(list=setdiff(ls(), c("both_days", "version_date", "dated")))
 
 ```
 
@@ -227,7 +237,7 @@ Tidy up the global environment and only keep the datasets we currently need.
 
 ```{r}
 
-rm(list=setdiff(ls(), c("both_days3", "my_date")))
+rm(list=setdiff(ls(), c("both_days3", "version_date", "dated")))
 
 ```
 
@@ -388,7 +398,7 @@ Tidy up the global environment.
 
 ```{r}
 
-rm(list=setdiff(ls(), c("both_days11", "my_date")))
+rm(list=setdiff(ls(), c("both_days11", "version_date", "dated")))
 
 ```
 
@@ -493,7 +503,7 @@ Tidy up the global environment.
 
 ```{r}
 
-rm(list=setdiff(ls(), c("both_days14", "my_date")))
+rm(list=setdiff(ls(), c("both_days14", "version_date", "dated")))
 
 ```
 
@@ -601,7 +611,7 @@ both_days12 %>% filter(is.na(FL_Score_Value_grams)) %>% select(fcid_desc) %>% di
 #   distinct()
 # 
 # # export
-# write_csv(missing_fl, paste("data_inputs/SOCIAL/forced_labor/DATA/missing_data/Missing FL scores_", my_date, ".csv", sep=""))
+# write_csv(missing_fl, dated("data_inputs/SOCIAL/forced_labor/DATA/missing_data/Missing FL scores"))
 
 ```
 

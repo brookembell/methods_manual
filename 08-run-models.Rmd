@@ -1,32 +1,16 @@
----
-title: "Run the models"
-author: "Fred Cudhea & Brooke Bell"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: html_document
-editor_options: 
-  chunk_output_type: console
----
-
-<style>
-pre {
-  overflow-x: auto;
-}
-pre code {
-  word-wrap: normal;
-  white-space: pre;
-}
-</style>
-
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = TRUE)
+                      warning = FALSE,
+                      eval = FALSE)
 
 ```
 
-## Set up
+# Run the Models
+
+## Set Up
 
 First, we clean the environment, load necessary R packages, set up pathways for code and input files.
 
@@ -49,8 +33,9 @@ code_location = "code/"
 # Set the seed
 set.seed(3172023)
 
-# set data version date
-version.date <- "2025-05-20_FINAL"
+# data version date -- set centrally in code/version_date.R
+# (defines `version_date` and the `dated()` filename helper)
+source("code/version_date.R")
 
 # Create parent output directory with today's date
 # Create directory if it doesn't already exist
@@ -243,7 +228,7 @@ Import data input file and rename some variables, subset for env-eco-soc analyse
 ```{r import_primary_data_file}
 
 # Import exposure file
-primary_input <- read_csv(file = paste0(file_location, "input_data_", version.date, ".csv"))
+primary_input <- read_csv(file = dated(paste0(file_location, "input_data")))
 
 # rename vars
 primary_input1 <- primary_input %>% 
@@ -763,14 +748,14 @@ Read in RRs, food to BMI effects, food to SBP effects, and TMREDs, and do a litt
 ```{r read_inputs}
 
 # Import relative risk (RR) data input
-rrtotal <- read_csv(file = paste0(file_location, "rr_agesexrace_", version.date, ".csv"))
+rrtotal <- read_csv(file = dated(paste0(file_location, "rr_agesexrace")))
 
 # Import effect data inputs
 Food.to.BMI.effects <- 
-  read_csv(file = paste0(file_location, "food_to_bmi_effects_converted_", version.date, ".csv"))
+  read_csv(file = dated(paste0(file_location, "food_to_bmi_effects_converted")))
 
 Food.to.SBP.effects <- 
-  read_csv(file = paste0(file_location, "food_to_sbp_effects_converted_", version.date, ".csv"))
+  read_csv(file = dated(paste0(file_location, "food_to_sbp_effects_converted")))
 
 # Create theoretical minimum ('theomin') (TMRED) from data input file
 theomin <- primary_input_cra %>%
@@ -854,7 +839,7 @@ foreach(ss = 1:length(diet.vec), .verbose = TRUE) %dopar% {
   set.seed(359)
 
   # Read CSV file of exposure 
-  expos <- read_csv(file = paste0(file_location, "input_data_", version.date, ".csv"))
+  expos <- read_csv(file = dated(paste0(file_location, "input_data")))
   
   expos1 <- expos %>% 
     # fix veg
@@ -864,15 +849,6 @@ foreach(ss = 1:length(diet.vec), .verbose = TRUE) %dopar% {
     # rename variable
     rename("riskfactor" = "Foodgroup")
   
-  # Fix a bunch of variable names
-  # renaming it in case name of variable ever changes in datafile.
-  # expos$riskfactor <- expos$Foodgroup 
-  
-  # renaming it in case name of variable ever changes in datafile.
-  # expos$diet <- expos$Foodgroup
-    
-  # expos$diet_pattern[expos$diet_pattern == "Vegetarian"] <- "Veg"
-  
   expos2 <- expos1 %>% 
     # only keep food groups we specified above
     filter(riskfactor %in% rfvec_cra) %>% 
@@ -880,21 +856,9 @@ foreach(ss = 1:length(diet.vec), .verbose = TRUE) %dopar% {
     # only keep diet pattern that we specified above
     filter(datatype == "Total" & diet_pattern == diet.vec[ss]) %>% 
     arrange(riskfactor, subgroup_id)
-  
-  # expos <- subset(expos, Foodgroup %in% rfvec_cra)
-  # expos <- subset(expos, diet_pattern == diet.vec[ss] & datatype == "Total")
-  # expos <- expos[order(expos$Foodgroup),]
 
   # check
   print(as.data.frame(table(expos2$riskfactor, useNA = "always"))) # good
-  
-  # change this line if you want to use total sd or unweighted sd or something else for sd.
-  # expos$sd <- expos$sigma_u_wgt
-  
-  # note to self - this var doesn't exist??
-  # let's see if it runs without it
-  # change this line if you want to use total sd or unweighted sd or something else for sd.
-  # expos$sd.alt <- expos$sigma_u_wgt.alt
   
   expos3 <- expos2 %>% 
     rename(mean = Mean_Intake,
@@ -922,45 +886,8 @@ foreach(ss = 1:length(diet.vec), .verbose = TRUE) %dopar% {
     relocate(c(age, age.mid), .after = agecat) %>% 
     relocate(female, .before = Sex)
   
-  # expos$race[expos$Race_label == "NHW"] <- 1
-  # expos$race[expos$Race_label == "NHB"] <- 2
-  # expos$race[expos$Race_label == "HIS"] <- 3
-  # expos$race[expos$Race_label == "OTH"] <- 4
-  
-    # Assign age
-  # expos$age <- 0
-  # expos$age[expos$agecat == 1] <- 25
-  # expos$age[expos$agecat == 2] <- 35
-  # expos$age[expos$agecat == 3] <- 45
-  # expos$age[expos$agecat == 4] <- 55
-  # expos$age[expos$agecat == 5] <- 65
-  # expos$age[expos$agecat == 6] <- 75
-  
-  # expos$age.mid <- 0
-  # expos$age.mid[expos$agecat == 1] <- median(c(25,35))
-  # expos$age.mid[expos$agecat == 2] <- median(c(35,45))
-  # expos$age.mid[expos$agecat == 3] <- median(c(45,55))
-  # expos$age.mid[expos$agecat == 4] <- median(c(55,65))
-  # expos$age.mid[expos$agecat == 5] <- median(c(65,75))
-  # expos$age.mid[expos$agecat == 6] <- median(c(75,100))
-  
   # add expos3 to global environment
   .GlobalEnv$expos3 <- expos3
-  
-  # expos$mean <- expos$Mean_Intake
-  # expos$se <- expos$SE_Intake
-  # expos$subgroup <- expos$subgroup_id
-  # expos$CF_mean_intake <- expos$CF_Mean_Intake
-  # expos$CF_se_intake <- expos$CF_SE_Intake
-  # expos$age <- expos$Age
-  # expos$agecat <- expos$Age
-  # expos$race <- 0
-  # expos$race[expos$Race_label == "NHW"] <- 1
-  # expos$race[expos$Race_label == "NHB"] <- 2
-  # expos$race[expos$Race_label == "HIS"] <- 3
-  # expos$race[expos$Race_label == "OTH"] <- 4
-  # expos$female <- 0
-  # expos[expos$Sex == 1,]$female <- 1
 
   # Create # of strata variable
   n.strata <- expos3 %>% select(subgroup) %>% distinct() %>% nrow()
