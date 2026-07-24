@@ -3,8 +3,7 @@
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 ```
 
@@ -17,6 +16,13 @@ The final step is to convert all of the Rmd files to R files so that you can run
 rm(list = ls())
 
 library(knitr)
+
+# Force eval = TRUE for tangling so purl() writes LIVE (uncommented) code.
+# opts_chunk settings persist for the whole R session, so if eval = FALSE is
+# lingering (e.g. from rendering the book, which sets it via index.Rmd), purl
+# would comment out every line. Setting it here guarantees runnable scripts
+# regardless of what happened earlier in the session.
+knitr::opts_chunk$set(eval = TRUE)
 
 # Code location
 code_location = "code/"
@@ -32,10 +38,6 @@ purl(input = "03-cleaning-code-health.Rmd",
 
 purl(input = "04-cleaning-code-enviro.Rmd",
      output = paste0(code_location, "04-cleaning-code-enviro.R"),
-     documentation = 2)
-
-purl(input = "05-cleaning-code-cost.Rmd",
-     output = paste0(code_location, "05-cleaning-code-cost.R"),
      documentation = 2)
 
 purl(input = "05-cleaning-code-cost.Rmd",

@@ -1,10 +1,9 @@
-## ----include=FALSE-------------------------------------
+## ----include=FALSE--------------------------------------
 
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 
 #' 
@@ -16,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #' 
 #' First, let's set up our environment.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # check working directory
 getwd()
@@ -40,7 +39,7 @@ source("code/version_date.R")
 #' 
 #' First, we need to import the NHANES dataset to get the survey weight variables that are necessary to incorporate when calculating mean estimates from NHANES data. See more information [here](https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import subgroup-seqn mapping
 nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.rds")
@@ -52,7 +51,7 @@ subgroup_dat <- nhanes %>% select(SEQN, subgroup, SDMVPSU, SDMVSTRA, wtnew, inAn
 #' 
 #' Then, create a cleaning function that will be used to clean the output summary data from the "svymean" function used below. 
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 clean_func <- function(x, y){
   
@@ -91,7 +90,7 @@ clean_func <- function(x, y){
 #' 
 #' Import the data that were cleaned in the last few chapters.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # diet intake data
 # both_days <- read_rds("data_inputs/IMPACT_FACTORS/temp_data/both_days15_env.rds")
@@ -110,7 +109,7 @@ enviro_dat <- read_rds("data_inputs/IMPACT_FACTORS/temp_data/enviro_input_dat.rd
 #' 
 #' Join the price data with the NHANES subgroup data.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # full join
 price_dat1 <- full_join(price_dat, subgroup_dat, by = c("seqn" = "SEQN"))
@@ -121,7 +120,7 @@ price_dat1 <- full_join(price_dat, subgroup_dat, by = c("seqn" = "SEQN"))
 #' 
 #' Then, subset the dataset to only include participants who are eligible to be in the sample (i.e., inAnalysis == 1). Chapter \@ref(step-seven) explains more about these weight and inAnalysis variables.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # Define survey design for cost dataset 
 my_cost_svy <- svydesign(data=price_dat1, 
@@ -139,7 +138,7 @@ my_cost_svy_sub <- subset(my_cost_svy, inAnalysis==1)
 #' 
 #' Apply the 'svymean' function in order to calculate the mean daily cost for each food group, using the entire sample. 
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_cost <- svymean(reformulate(names(price_dat1) %>% str_subset("price")),
                              my_cost_svy_sub) %>% 
@@ -162,7 +161,7 @@ colnames(allfoods_cost) <- gsub("SE_", "se.", colnames(allfoods_cost))
 #' 
 #' ##### Consumed
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_cost_consumed <- svymean(reformulate(names(price_dat1) %>% str_subset("consumed")),
                                   my_cost_svy_sub) %>% 
@@ -181,7 +180,7 @@ colnames(allfoods_cost_consumed) <- gsub("SE_", "se.", colnames(allfoods_cost_co
 #' 
 #' ##### Inedible
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_cost_inedible <- svymean(reformulate(names(price_dat1) %>% str_subset("inedible")),
                                   my_cost_svy_sub) %>% 
@@ -200,7 +199,7 @@ colnames(allfoods_cost_inedible) <- gsub("SE_", "se.", colnames(allfoods_cost_in
 #' 
 #' ##### Wasted
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_cost_wasted <- svymean(reformulate(names(price_dat1) %>% str_subset("wasted")),
                                 my_cost_svy_sub) %>% 
@@ -221,7 +220,7 @@ colnames(allfoods_cost_wasted) <- gsub("SE_", "se.", colnames(allfoods_cost_wast
 #' 
 #' Apply the 'svyby' function in order to calculate the mean daily cost for each food group, separately for each of the 48 population subgroups.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_cost_bysub <- svyby(reformulate(names(price_dat1) %>% str_subset("price")),
                             ~subgroup,
@@ -232,7 +231,7 @@ allfoods_cost_bysub <- svyby(reformulate(names(price_dat1) %>% str_subset("price
 #' 
 #' Combine the mean cost values for the whole sample (i.e., subgroup 0) with the mean cost values for subgroups 1-48.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # bind with subgroup 0
 allfoods_cost_bysub1 <- rbind(allfoods_cost, allfoods_cost_bysub)
@@ -247,7 +246,7 @@ allfoods_cost_bysub1 <- rbind(allfoods_cost, allfoods_cost_bysub)
 #' 
 #' ##### Consumed
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_cost_consumed_bysub <- svyby(reformulate(names(price_dat1) %>% str_subset("consumed")),
                              ~subgroup,
@@ -261,7 +260,7 @@ allfoods_cost_consumed_bysub1 <- rbind(allfoods_cost_consumed, allfoods_cost_con
 #' 
 #' ##### Inedible
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_cost_inedible_bysub <- svyby(reformulate(names(price_dat1) %>% str_subset("inedible")),
                                     ~subgroup,
@@ -275,7 +274,7 @@ allfoods_cost_inedible_bysub1 <- rbind(allfoods_cost_inedible, allfoods_cost_ine
 #' 
 #' ##### Wasted
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_cost_wasted_bysub <- svyby(reformulate(names(price_dat1) %>% str_subset("wasted")),
                                       ~subgroup,
@@ -291,7 +290,7 @@ allfoods_cost_wasted_bysub1 <- rbind(allfoods_cost_wasted, allfoods_cost_wasted_
 #' 
 #' Apply the cleaning function (defined above) to the mean cost dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # APPLY FUNCTION TO COST DAT
 cost_dat <- clean_func(x = allfoods_cost_bysub1, y = "price")
@@ -324,7 +323,7 @@ cost_dat3 <-
 #' 
 #' Apply the cleaning function (defined above) to the mean consumed, inedible, and wasted datasets.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # APPLY FUNCTION TO INTAKE DATASETS
 cost_consumed_dat <- clean_func(x = allfoods_cost_consumed_bysub1, y = "consumed")
@@ -357,7 +356,7 @@ cost_final_dat <-
 #' 
 #' First, import the conversion units.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 units <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/unit_conversions")) %>%
   select(Food_group, Conversion_to_grams)
@@ -374,7 +373,7 @@ cost_final_dat1 %>% filter(is.na(Conversion_to_grams)) %>% head()
 #' 
 #' To calculate the cost per 100 grams, you divide the daily mean cost of the food group by the daily amount of food consumed, and then multiply by 100.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # calculate impact factors
 cost_final_dat2 <- cost_final_dat1 %>% 
@@ -397,7 +396,7 @@ cost_final_dat2 %>% select(subgroup, food, food_type, mixed_dish, costperDGA_con
 #' 
 #' Then, subset the dataset to only include participants who are eligible to be in the sample (i.e., inAnalysis == 1). Chapter \@ref(step-seven) explains more about these weight and inAnalysis variables.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # join
 enviro_dat1 <- full_join(enviro_dat, subgroup_dat, by = c("seqn" = "SEQN"))
@@ -418,7 +417,7 @@ my_enviro_svy_sub <- subset(my_enviro_svy, inAnalysis==1)
 #' 
 #' ##### Greenhouse Gas Emissions (GHG)
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # CALCULATE GHG IMPACT (WHOLE SAMPLE)
 allfoods_ghg <- svymean(reformulate(names(enviro_dat1) %>% str_subset("ghg")),
@@ -446,7 +445,7 @@ allfoods_ghg_bysub1 <- rbind(allfoods_ghg, allfoods_ghg_bysub)
 #' 
 #' ##### Cumulative Energy Demand (CED)
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # CALCULATE CED IMPACT (WHOLE SAMPLE)
 allfoods_ced <- svymean(reformulate(names(enviro_dat1) %>% str_subset("ced")),
@@ -475,7 +474,7 @@ allfoods_ced_bysub1 <- rbind(allfoods_ced, allfoods_ced_bysub)
 #' 
 #' ##### Water Scarcity
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # CALCULATE WATER IMPACT (WHOLE SAMPLE)
 allfoods_water <- svymean(reformulate(names(enviro_dat1) %>% str_subset("^water")),
@@ -504,7 +503,7 @@ allfoods_water_bysub1 <- rbind(allfoods_water, allfoods_water_bysub)
 #' 
 #' ##### Bluewater Use
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # CALCULATE BLUEWATER IMPACT (WHOLE SAMPLE)
 allfoods_bluewater <- svymean(reformulate(names(enviro_dat1) %>% str_subset("bluewater")),
@@ -533,7 +532,7 @@ allfoods_bluewater_bysub1 <- rbind(allfoods_bluewater, allfoods_bluewater_bysub)
 #' 
 #' ##### Forced Labor Risk (FL)
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # CALCULATE FL IMPACT (WHOLE SAMPLE)
 allfoods_fl <- svymean(reformulate(names(enviro_dat1) %>% str_subset("fl")),
@@ -566,7 +565,7 @@ allfoods_fl_bysub1 <- rbind(allfoods_fl, allfoods_fl_bysub)
 #' 
 #' ##### Consumed
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 # consumed
 allfoods_enviro_consumed <- svymean(reformulate(names(enviro_dat1) %>% str_subset("consumed")),
                                   my_enviro_svy_sub) %>% 
@@ -584,7 +583,7 @@ colnames(allfoods_enviro_consumed) <- gsub("SE_", "se.", colnames(allfoods_envir
 #' 
 #' ##### Inedible
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 # inedible
 allfoods_enviro_inedible <- svymean(reformulate(names(enviro_dat1) %>% str_subset("inedible")),
                                   my_enviro_svy_sub) %>% 
@@ -602,7 +601,7 @@ colnames(allfoods_enviro_inedible) <- gsub("SE_", "se.", colnames(allfoods_envir
 #' 
 #' ##### Wasted
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 # wasted
 allfoods_enviro_wasted <- svymean(reformulate(names(enviro_dat1) %>% str_subset("wasted")),
                                     my_enviro_svy_sub) %>% 
@@ -626,7 +625,7 @@ colnames(allfoods_enviro_wasted) <- gsub("SE_", "se.", colnames(allfoods_enviro_
 #' 
 #' ##### Consumed
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 allfoods_enviro_consumed_bysub <- svyby(reformulate(names(enviro_dat1) %>% str_subset("consumed")),
                                     ~subgroup,
@@ -640,7 +639,7 @@ allfoods_enviro_consumed_bysub1 <- rbind(allfoods_enviro_consumed, allfoods_envi
 #' 
 #' ##### Inedible
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 # inedible
 allfoods_enviro_inedible_bysub <- svyby(reformulate(names(enviro_dat1) %>% str_subset("inedible")),
                                       ~subgroup,
@@ -653,7 +652,7 @@ allfoods_enviro_inedible_bysub1 <- rbind(allfoods_enviro_inedible, allfoods_envi
 #' 
 #' ##### Wasted
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 # wasted
 allfoods_enviro_wasted_bysub <- svyby(reformulate(names(enviro_dat1) %>% str_subset("wasted")),
                                         ~subgroup,
@@ -668,7 +667,7 @@ allfoods_enviro_wasted_bysub1 <- rbind(allfoods_enviro_wasted, allfoods_enviro_w
 #' 
 #' Apply the cleaning function (defined above) to the mean enviro datasets.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # APPLY TO ENVIRO DATA
 ghg_dat <- clean_func(x = allfoods_ghg_bysub1, y = "ghg") %>% select(-food_type)
@@ -701,7 +700,7 @@ enviro_dat2 <-
 #' 
 #' Apply the cleaning function (defined above) to the mean consumed, inedible, and wasted datasets.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # APPLY FUNCTION TO INTAKE DAT
 enviro_consumed_dat <- clean_func(x = allfoods_enviro_consumed_bysub1, y = "consumed") %>% select(-food_type)
@@ -737,7 +736,7 @@ enviro_final_dat %>%
 #' 
 #' First, join with the conversion units.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # merge with units
 enviro_final_dat1 <- enviro_final_dat %>% 
@@ -753,7 +752,7 @@ enviro_final_dat1 %>% filter(is.na(Conversion_to_grams)) #good
 #' 
 #' Note: The variable "ghg_mean_Consumed" represents the GHG impact of consumed and inedible food (because the impact of both the consumed and inedible amounts is included in the original datafield impact factors). Therefore, the denominator of the equation is the sum of consumed food AND inedible food.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 enviro_final_dat2 <- enviro_final_dat1 %>% 
   rowwise() %>% 
@@ -786,7 +785,7 @@ enviro_final_dat2 <- enviro_final_dat1 %>%
 #' 
 #' Merge all of the impact factors into one dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # cost impact factors
 cost_IFs <- cost_final_dat2 %>% 
@@ -823,7 +822,7 @@ enviro_IFs <- enviro_final_dat2 %>%
 #' - Wasted Proportion =  Mean Wasted Amount / Mean Edible Amount
 #' - Inedible Proportion = Mean Inedible Amount / Mean Purchased Amount 
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 enviro_IFs1 <- enviro_IFs %>% 
   rowwise() %>% 
@@ -867,7 +866,7 @@ enviro_IFs_sub %>% filter(food == "veg_dg") %>% head()
 #' - Wasted Proportion =  Mean Wasted Amount / Mean Edible Amount
 #' - Inedible Proportion = Mean Inedible Amount / Mean Purchased Amount 
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 cost_IFs1 <- cost_IFs %>% 
   rowwise() %>% 
@@ -906,7 +905,7 @@ cost_IFs_sub %>% filter(food == "pf_redm") %>% head()
 #' 
 #' ## Export Data
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # cost IFs
 write_csv(cost_IFs_sub, dated("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost"))

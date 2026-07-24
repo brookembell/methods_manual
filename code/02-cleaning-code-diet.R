@@ -1,10 +1,9 @@
-## ----include=FALSE-------------------------------------
+## ----include=FALSE--------------------------------------
 
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 
 #' 
@@ -33,7 +32,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #' 
 #' Then, I merged this mapping with the processed meat data.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 library(tidyverse)
 library(haven)
@@ -99,7 +98,7 @@ write_rds(meat_day2_3, "data_inputs/DIET/dietary_intake/DATA/clean_data/meat_day
 #' 
 #' #### Step 1: Set up workspace {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=ls())
 
@@ -115,7 +114,7 @@ library(readxl)
 #' 
 #' #### Step 2: Clean individual-level food intake datasets {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # 2015-2016 diet data (i)
 
@@ -303,7 +302,7 @@ write_rds(foods_day2_2, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_d
 #' 
 #' #### Step 3: Clean the food and nutrient intake (summary) datasets {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=setdiff(ls(), c("foods_day1_2", "foods_day2_2")))
 
@@ -412,7 +411,7 @@ nhanes_comb2 <- nhanes_comb1 %>% left_join(dairy_bothdays, by = "SEQN")
 #' 
 #' #### Step 4: Construct dietary factors {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes_comb3 <-
   nhanes_comb2 %>% 
@@ -541,7 +540,7 @@ nhanes_comb4 <- nhanes_comb3 %>% select(SEQN, RIAGENDR, RIDRETH1, DMDEDUC2,
 #' 
 #' #### Step 5: Create sociodemographic subgroups {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes_comb5 <- nhanes_comb4 %>% mutate(
   
@@ -570,7 +569,7 @@ nhanes_comb5 <- nhanes_comb4 %>% mutate(
 #' 
 #' #### Step 6: Create averages of dietary factors for Day 1 and Day 2 {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes_comb6 <- nhanes_comb5 %>%
   rowwise() %>%
@@ -668,7 +667,7 @@ nhanes_final %>%
 #' 
 #' #### Step 7: Examine cleaned NHANES data {#step-seven} {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # check missing
 summary(nhanes_final)
@@ -726,7 +725,7 @@ write_rds(nhanes_final1,
 #' 
 #' Set up the working directory.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=ls())
 
@@ -739,7 +738,7 @@ library(haven)
 #' 
 #' Import the WWEIA 2015-2016 and 2017-2018 datasets. These contain categorizations of the FNDDS food codes that we will utilize later on.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 wweia1516 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1516_foodcat_FNDDS.xlsx")
 wweia1718 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1718_foodcat_FNDDS.xlsx")
@@ -748,7 +747,7 @@ wweia1718 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA1718_
 #' 
 #' Then import these other categorizations (GL1, GL2, GL3) that are used. 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 gl1 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
                  sheet = "GL1")
@@ -766,7 +765,7 @@ gl3 <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category c
 #' 
 #' Then, import a mapping from the WWEIA categories to these GL categories; and then join everything together.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 map <- read_xlsx("data_inputs/DIET/dietary_intake/DATA/raw_data/WWEIA category codes.xlsx",
                  sheet = "Mapping")
@@ -787,7 +786,7 @@ wweia1718_1 <- wweia1718 %>% left_join(map_join, by = "category_number")
 #' 
 #' Import FPED 2015-2016 and 2017-2018 datasets.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 fped1516 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1516.sas7bdat")
 fped1718 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1718.sas7bdat")
@@ -796,7 +795,7 @@ fped1718 <- read_sas("data_inputs/DIET/dietary_intake/DATA/raw_data/fped_1718.sa
 #' 
 #' Calculate the number of grams of added sugar (add_sugars_g), originally provided in teaspoons (ADD_SUGARS), in one serving of each FNDDS food code.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 fped1516_1 <- 
   fped1516 %>% 
@@ -816,7 +815,7 @@ fped1718_1 <-
 #' 
 #' Import the NHANES individual-level food data (cleaned in [Chapter 2.2](cleaning-code-for-nhanes-diet-data.html#clean-raw-nhanes-data)), and merge with the FPED and WWEIA datasets.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # read in nhanes individual food data
 foods_day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
@@ -848,7 +847,7 @@ nhanes1718_day2_join <- left_join(nhanes1718_day2, merge1718, by = c("DR2IFDCD" 
 #' 
 #' We set "ssb" equal to 0 in all other cases.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # work on Day 1 of NHANES '15-'16 first
 nhanes1516_day1_join_1 <-
@@ -888,7 +887,7 @@ day2_final <- rbind(nhanes1516_day2_join_2, nhanes1718_day2_join_2)
 #' 
 #' Export the datasets to use in the next section.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 write_rds(day1_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_ssb.rds")
 write_rds(day2_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_ssb.rds")
@@ -899,7 +898,7 @@ write_rds(day2_final, "data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day
 #' 
 #' Now that we know which foodcodes are sugar-sweetened beverages, we want to calculate how much SSB each participant consumed (in grams), per day.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # Day 1
 ssb_day1 <- day1_final %>% 
@@ -948,7 +947,7 @@ ssb_bothdays <- full_join(ssb_day1_wide1, ssb_day2_wide1, by = "SEQN")
 #' 
 #' Next, calculate the each participant's average intake across 2 days of intake.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # check
 # are there any where both are missing? no
@@ -967,7 +966,7 @@ ssb_bothdays_1[ssb_bothdays_1 == "NaN"] <- NA
 #' 
 #' Now merge with the main NHANES intake dataset.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # read in clean nhanes dataset
 nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_clean.rds")
@@ -989,7 +988,7 @@ foods_day1 %>% filter(SEQN == 84997) %>% head()
 #' 
 #' Export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 write_rds(nhanes_1,
           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_incl_ssb_clean.rds")
@@ -1013,7 +1012,7 @@ write_rds(nhanes_1,
 #' 
 #' #### Step 1: Set up workspace {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=ls())
 
@@ -1026,7 +1025,7 @@ library(survey)
 #' 
 #' #### Step 2: Import and prepare cleaned NHANES dataset  {.unnumbered}
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_incl_ssb_clean.rds") %>% 
   ungroup() # get rid of rowwise formatting
@@ -1053,7 +1052,7 @@ nhanes_long2 <- nhanes_long1 %>%
 #' 
 #' Calculate the mean calorie intake across all participants and days ("meancalories"), each observation's log(calories), the log of "meancalories", and the log of 2000 kcals.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes2 <- nhanes_long2 %>% mutate(calories = kcal,
                          meancalories = mean(calories, na.rm = TRUE),
@@ -1065,7 +1064,7 @@ nhanes2 <- nhanes_long2 %>% mutate(calories = kcal,
 #' 
 #' There are a few people who have kcal intake = 0, and the log of this value is -Inf. We need to change this to NA so that the function will run.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # 7 people have kcal=0
 nhanes2 %>% filter(log_calories == "-Inf" & inAnalysis == "TRUE") %>% head()
@@ -1082,7 +1081,7 @@ nhanes3 %>% filter(log_calories == "-Inf" & inAnalysis == "TRUE") #good
 #' 
 #' Below is a function that we can apply to all dietary factors in order to calculate the residual method for each.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 resid_function <- function(x, y){
   
@@ -1120,7 +1119,7 @@ resid_function(nhanes3, "sodium")
 #' 
 #' Create a vector of dietary factors we want to use.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 diet_vars <- read_csv("data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv") %>%
   select(Food_group) %>%
@@ -1135,7 +1134,7 @@ new_diet_vars <- variable.names(nhanes3[nums])
 #' 
 #' Apply the function of all dietary factors of interest.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # create empty list
 resid_list <- list()
@@ -1151,7 +1150,7 @@ for (i in new_diet_vars) {
 #' 
 #' Create a dataset that contains all of the adjusted values, and export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # nhanes with adjusted vars
 nhanes_adj <- nhanes3 %>% 
@@ -1177,7 +1176,7 @@ write_csv(nhanes_adj,
 #' 
 #' Pivot to wide format, then calculate the average daily intake by taking the mean of Day 1 and Day 2 values.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # pivot to wide
 nhanes_adj_wide <- nhanes_adj %>% pivot_wider(id_cols = SEQN:inAnalysis,
@@ -1248,7 +1247,7 @@ nhanes_adj_wide1 <- nhanes_adj_wide %>%
 #' 
 #' - data_inputs/OTHER/unit_conversions/DATA/Unit_conversions_1.4.24.csv
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # calculate food group means in grams
 nhanes_adj_wide2 <- nhanes_adj_wide1 %>% 
@@ -1292,7 +1291,7 @@ nhanes_adj_wide2[nhanes_adj_wide2 == "NaN"] <- NA
 #' 
 #' Export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 write_rds(nhanes_adj_wide2,
           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes1518_adj_clean_wide.rds")
@@ -1328,7 +1327,7 @@ write_csv(nhanes_adj_wide2,
 #' 
 #' First, import the adjusted intake dataset (long format) that was created in the previous section.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list = ls())
 
@@ -1346,7 +1345,7 @@ nhanes1 <- nhanes %>%
 #' 
 #' Then, we need to create a new variable ("subgroup_new") that only has a non-missing subgroup number if that participant's data is reliable (i.e., inAnalysis == TRUE). This essentially changes any subgroup number to NA if the participant's data is unreliable.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes2 <- nhanes1 %>% 
   mutate(subgroup_new = ifelse(inAnalysis == "TRUE", subgroup, NA),
@@ -1361,7 +1360,7 @@ nhanes2 %>% filter(!(is.na(subgroup)) & !(is.na(subgroup_new))) %>% head()
 #' 
 #' Next, create dummy variables for the variables "day", "inAnalysis", "subgroup", and "subgroup_new". We utilize the "dummy_cols" function from the "fastDummies" package to do this quickly. You can learn more about this function by running the command "?dummy_cols".
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes3 <- nhanes2 %>% 
   dummy_cols(select_columns = c("day", "inAnalysis", "inAnalysis_num", "subgroup", "subgroup_new"),
@@ -1372,7 +1371,7 @@ nhanes3 <- nhanes2 %>%
 #' 
 #' We need to remove the rows where a participant's number of days of intake is 1 (DRDINT == 1) and day == 2 (since they don't have any data for this day).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # check
 nhanes3 %>% filter(DRDINT == 1 & day == 2) %>% head()
@@ -1388,7 +1387,7 @@ nhanes4 %>% filter(is.na(fruit_tot_adj) & inAnalysis == "TRUE") %>% head() #good
 #' 
 #' Need to change poultry variable name because it's too long for SAS (this is why SAS is inferior to R - insert poop emoji).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes5 <- nhanes4 %>% 
   rename(poult_tot_adj = pf_poultry_tot_adj)
@@ -1397,7 +1396,7 @@ nhanes5 <- nhanes4 %>%
 #' 
 #' Export to Box. 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 write_csv(nhanes5,
           "data_inputs/DIET/dietary_intake/DATA/clean_data/nhanes_incl_ssb_adj_clean_long.csv",
@@ -1407,7 +1406,7 @@ write_csv(nhanes5,
 #' 
 #' Export to the standard_deviations folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 write_csv(nhanes5,
           "data_inputs/DIET/standard_deviations/DATA/in/nhanes_incl_ssb_adj_clean_long.csv",
@@ -1498,7 +1497,7 @@ write_csv(nhanes5,
 #' 
 #' First, retrieve all the output file names.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=ls())
 
@@ -1514,7 +1513,7 @@ file_list <- list.files(path = directory, pattern = "*.csv", full.names = TRUE)
 #' 
 #' Then, import the files and clean.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # Read each CSV file and store them in a list of data frames
 data_list <- lapply(file_list, read_csv)
@@ -1549,7 +1548,7 @@ intake2 <- intake1 %>%
 #' 
 #' Read in two datasets (food labels and % grocery intake) and merge with intake data.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 # merge with food labels
 labels <- read_csv("data_inputs/OTHER/labels/DATA/dietary_factors_010424_FINAL.csv")
 
@@ -1576,7 +1575,7 @@ intake4 <- intake3 %>%
 #' 
 #' Export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 write_csv(intake4, 
           dated("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod"))

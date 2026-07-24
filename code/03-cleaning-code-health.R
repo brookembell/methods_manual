@@ -1,10 +1,9 @@
-## ----include=FALSE-------------------------------------
+## ----include=FALSE--------------------------------------
 
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 
 #' 
@@ -20,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #' 
 #' First, let's set up our environment. 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list = ls())
 
@@ -37,7 +36,7 @@ getwd()
 #' 
 #' Create a date string that will be appended to all data file names.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 source("code/version_date.R")
 
@@ -49,7 +48,7 @@ source("code/version_date.R")
 #' 
 #' Just need to round the population number the nearest whole number. Then export data to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 pop <- read_xlsx("data_inputs/OTHER/us_population/DATA/NHANES 17 SUBPOPratio_0327.xlsx", sheet = "final")
 
@@ -65,7 +64,7 @@ write_csv(pop1, dated("data_inputs/FINAL/cleaned_raw_data/population_distributio
 #' 
 #' Just select the needed variables then export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 units <- read_csv("data_inputs/OTHER/unit_conversions/DATA/Unit_conversions_1.4.24.csv")
 
@@ -77,7 +76,7 @@ write_csv(units1, dated("data_inputs/FINAL/cleaned_raw_data/unit_conversions"))
 #' 
 #' Clear global environment except for version_date/dated().
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
@@ -89,7 +88,7 @@ rm(list=setdiff(ls(), c("version_date", "dated")))
 #' 
 #' Import the raw cancer data input, clean up the variable names, and calculate the standard error of the cancer counts ('count_se').
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # import cancer data
 cancer <- read_xls("data_inputs/HEALTH/cancer_incidence/DATA/2018CANCERRATE_0327.xls", sheet = "2018pop")
@@ -109,7 +108,7 @@ cancer1 <-
 #' 
 #' Recode the cancer labels as shorter abbreviations.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 cancer2 <- cancer1 %>% mutate(diseases = recode(diseases, 
                                      "All Sites" = "ALL",
@@ -134,7 +133,7 @@ cancer2 <- cancer1 %>% mutate(diseases = recode(diseases,
 #' 
 #' Round the count values to the nearest whole number.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 cancer3 <- cancer2 %>% mutate(population = ceiling(population),
                               count = ceiling(count),
@@ -145,7 +144,7 @@ cancer3 <- cancer2 %>% mutate(population = ceiling(population),
 #' 
 #' Lastly, merge with population subsgroup information and cancer labels.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # import subgroups info
 subgrps <- read_csv("data_inputs/OTHER/labels/DATA/population_subgroups_48_060923_FINAL.csv")
@@ -165,7 +164,7 @@ cancer5 <- left_join(cancer4, dis_labels, by = c("diseases" = "outcome")) %>%
 #' 
 #' If the rate or standard error variable are missing, then replace with 0. Lastly, export the cleaned file to the "FINAL" folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 cancer6 <- cancer5 %>% mutate(crude_rate = ifelse(is.na(crude_rate), 0, crude_rate),
                               crude_se = ifelse(is.na(crude_se), 0, crude_se),
@@ -180,7 +179,7 @@ write_csv(cancer6, dated("data_inputs/FINAL/cleaned_raw_data/cancer_incidence"))
 #' 
 #' Import raw CVD data and tidy.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 cvd <- read_xlsx("data_inputs/HEALTH/cvd_mortality/DATA/CVDmotality2018_11022023.xlsx", sheet = "merge")
 
@@ -201,7 +200,7 @@ cvd2 <- cvd1 %>% mutate(cause = recode(cause,
 #' 
 #' Transform the mean and SE data from long to wide format and then rejoin.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # just mean death values
 cvd_wide_mean <- pivot_wider(cvd2 %>% select(-deaths_se_rounded), 
@@ -221,7 +220,7 @@ cvd_wide <- left_join(cvd_wide_mean, cvd_wide_se, by = "subgroup")
 #' 
 #' Join with population subgroup information.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # get rid of NA row
 cvd_wide1 <- cvd_wide %>% filter(!(is.na(subgroup)))
@@ -234,7 +233,7 @@ cvd_final <- left_join(cvd_wide1, subgrps, by = "subgroup") %>%
 #' 
 #' Create the BMI-mediated and SBP-mediated variables by simply setting them equal to the cvd death values. This is needed for the model code to work properly later.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 cvd_final1 <- cvd_final %>% mutate(
                       
@@ -330,7 +329,7 @@ cvd_final1 <- cvd_final %>% mutate(
 #' 
 #' Export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 write_csv(cvd_final1, dated("data_inputs/FINAL/cleaned_raw_data/cvd_mortality"))
 
@@ -340,7 +339,7 @@ write_csv(cvd_final1, dated("data_inputs/FINAL/cleaned_raw_data/cvd_mortality"))
 #' 
 #' Import other health datsets.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 weight <- read_xls("data_inputs/HEALTH/overweight_prevalence/DATA/overweight1518_48grp_04.10.23.xls")
 
@@ -355,7 +354,7 @@ highSBP <- read_xlsx("data_inputs/HEALTH/systolic_blood_pressure/DATA/highSBP_da
 #' 
 #' Create non-Hipsanic Black (NHB) variables.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 oth_health <- weight %>% mutate(nhb = ifelse(Race_label == "NHB", 1, 0),
                             nhb_se = 0) %>% 
@@ -367,7 +366,7 @@ oth_health <- weight %>% mutate(nhb = ifelse(Race_label == "NHB", 1, 0),
 #' 
 #' The SBP data is at the participant-level so it needs to be summarized at population subgroup level.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 sbp1 <- sbp %>% 
   filter(!(is.na(mean_sbp))) # only include those with non-missing mean_sbp value
@@ -405,7 +404,7 @@ oth_health2 <- left_join(oth_health1, hbp1, by = c("subgroup" = "subgroup_id"))
 #' 
 #' Export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 write_csv(oth_health2, dated("data_inputs/FINAL/cleaned_raw_data/other_health"))
 
@@ -415,7 +414,7 @@ write_csv(oth_health2, dated("data_inputs/FINAL/cleaned_raw_data/other_health"))
 #' 
 #' No changes are needed so just import the file then export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 bmi_effects <- read_csv("data_inputs/HEALTH/effect_sizes_dietfactor_bmi/DATA/food_to_BMI_effects_from_Dari_1.5.24.csv")
 
@@ -427,7 +426,7 @@ write_csv(bmi_effects, dated("data_inputs/FINAL/cleaned_raw_data/food_to_bmi_eff
 #' 
 #' No changes are needed so just import the file then export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 sbp_effects <- read_csv("data_inputs/HEALTH/effect_sizes_dietfactor_sbp/DATA/food_to_sbp_effects_NOT_converted_1.5.24.csv")
 
@@ -439,7 +438,7 @@ write_csv(sbp_effects, dated("data_inputs/FINAL/cleaned_raw_data/food_to_sbp_eff
 #' 
 #' No changes are needed so just import the file then export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 bmi_cancer <- read_csv("data_inputs/HEALTH/rr_bmi_cancer/DATA/RR_BMI_cancer_11.23.22.csv") 
 
@@ -451,7 +450,7 @@ write_csv(bmi_cancer, dated("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cancer"))
 #' 
 #' No changes are needed so just import the file then export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 bmi_cvd <- read_csv("data_inputs/HEALTH/rr_bmi_cvd/DATA/RR_BMI_cvd_3.2.23.csv")
 
@@ -463,7 +462,7 @@ write_csv(bmi_cvd, dated("data_inputs/FINAL/cleaned_raw_data/rr_bmi_cvd"))
 #' 
 #' No changes are needed so just import the file then export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 sbp_cvd <- read_csv("data_inputs/HEALTH/rr_sbp_cvd/DATA/RR_sbp_cvd_2.16.23.csv")
 
@@ -475,7 +474,7 @@ write_csv(sbp_cvd, dated("data_inputs/FINAL/cleaned_raw_data/rr_sbp_cvd"))
 #' 
 #' No changes are needed so just import the file then export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=ls(pattern="^cvd"))
 
@@ -489,7 +488,7 @@ write_csv(cvd, dated("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cvd"))
 #' 
 #' No changes are needed so just import the file then export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=ls(pattern="^cancer"))
 
@@ -503,7 +502,7 @@ write_csv(cancer, dated("data_inputs/FINAL/cleaned_raw_data/logRR_diet_cancer"))
 #' 
 #' Import the TMRED values (in grams). Then, import the conversion units and join with the TMRED data.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 tmred_g <- read_csv("data_inputs/HEALTH/tmred/DATA/TMRED_grams_1.5.24.csv")
 
@@ -517,7 +516,7 @@ tmred_dga <- left_join(tmred_g, conversion, by = c("Risk_factor" = "Food_group")
 #' 
 #' Then, transform the TMRED mean and standard deviation values from grams to "FPED units" (i.e., cups or ounces).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 tmred_dga1 <- tmred_dga %>% mutate(tmred_dga_units = TMRED / Conversion_to_grams,
                      sd_dga_units = SD / Conversion_to_grams)
@@ -535,7 +534,7 @@ tmred_dga2 <- tmred_dga1 %>%
 #' 
 #' Then, export the conversion units in both grams and FPED units to be used later.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # export grams dataset
 write_csv(tmred_g, dated("data_inputs/FINAL/cleaned_raw_data/tmred_grams"))
@@ -547,7 +546,7 @@ write_csv(tmred_dga2, dated("data_inputs/FINAL/cleaned_raw_data/tmred_dga_units"
 #' 
 #' Clear global environment except for version_date/dated().
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
@@ -559,7 +558,7 @@ rm(list=setdiff(ls(), c("version_date", "dated")))
 #' 
 #' Import the NHANES diet intake dataset and clean up.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes <- read_csv("data_inputs/DIET/dietary_intake/DATA/output_data_from_cluster/NHANES_1518_summary_allfoods_adj_bysub_ncimethod_2025-03-10.csv")
 
@@ -577,7 +576,7 @@ nhanes1 <- nhanes %>%
 #' 
 #' Then, convert the sugar sweetened beverage (SSB) mean and standard error from grams to cup (8 fl oz).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 nhanes2 <- nhanes1 %>% 
   # Divide by 240 to go from grams to cup
@@ -591,7 +590,7 @@ nhanes3 <- nhanes2 %>% arrange(Foodgroup, subgroup)
 #' 
 #' Lastly, rename the standard deviation variable and then export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # rename stddev
 nhanes4 <- nhanes3 %>% 
@@ -608,7 +607,7 @@ write_csv(nhanes4, dated("data_inputs/FINAL/cleaned_raw_data/nhanes1518_agesexra
 #' 
 #' No changes are needed so just import the file then export to FINAL folder.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 cf <- read_csv("data_inputs/DIET/counterfactual_intake/DATA/counterfactual_intake_050724.csv")
 
@@ -624,7 +623,7 @@ write_csv(cf, dated("data_inputs/FINAL/cleaned_raw_data/counterfactual_intake"))
 #' 
 #' First, let's set up our environment. 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
@@ -645,7 +644,7 @@ getwd()
 #' 
 #' In the code below, these two datasets get restructured and merged together into one "disease" dataset.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # import cvd mortality dataset
 cvd <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/cvd_mortality"))
@@ -697,7 +696,7 @@ write_csv(cvd_cancer_merged2, dated("data_inputs/FINAL/model_data/cvd_cancer_mer
 #' 
 #' Then, we continue cleaning this merged disease dataset that is later appended to the NHANES dataset.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 raw_file <- cvd_cancer_merged2
 
@@ -785,7 +784,7 @@ write_csv(mort_wide6, dated("data_inputs/FINAL/cleaned_data/disease_incidence"))
 #' 
 #' Clean up the global environment.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
@@ -793,7 +792,7 @@ rm(list=setdiff(ls(), c("version_date", "dated")))
 #' 
 #' First, import the effect sizes for diet and BMI.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 ef <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/food_to_bmi_effects"))
 
@@ -809,7 +808,7 @@ ef <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/food_to_bmi_effects"))
 #' 
 #' The current unit for leg_tot is 1 cup/day, and needs to be transformed to 1 oz/day. So, we will multiple the effects and standard errors by (175/44).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 ef_new <- ef %>% 
   mutate(
@@ -858,7 +857,7 @@ ef_new_sub <- ef_new %>%
 #' 
 #' Now, create the file that is used in the CRA model. Select relevant variables and rename variables.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 ef_model_dat <- ef_new %>% 
   select(food_group,
@@ -880,7 +879,7 @@ write_csv(ef_model_dat, dated("data_inputs/FINAL/model_data/food_to_bmi_effects_
 #' 
 #' Next, import the effect sizes for diet and SBP.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 sbp_ef <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/food_to_sbp_effects"))
 
@@ -890,7 +889,7 @@ sbp_ef <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/food_to_sbp_effects
 #' 
 #' The unit of the sodium-sbp effect size is currently mmHg/(1000mg/day). Therefore, the effect size needs to be divided by 1000 to get the unit mmHg/(1mg/day).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 #divide columns 2-9 by 1000
 idx <- c(2:ncol(sbp_ef))
@@ -908,7 +907,7 @@ write_csv(sbp_ef_model_dat, dated("data_inputs/FINAL/model_data/food_to_sbp_effe
 #' 
 #' No unit conversions need to be made, so we just need to join the files and export.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
@@ -930,11 +929,11 @@ write_csv(bmi_join, dated("data_inputs/FINAL/cleaned_data/rr_bmi_disease"))
 #' 
 #' The goal is to create a mega file that contains all diet and disease combinations (for all 48 subgroups).
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 # Retrieve list of disease outcomes
 disease_dat <- read_csv("data_inputs/OTHER/labels/DATA/disease_outcomes_060923_FINAL.csv")
 disease_outcomes <- c(disease_dat$outcome)
@@ -1068,11 +1067,11 @@ write_csv(join_subset,
 #' 
 #' Now we need to convert the units of the LogRR dataset we just created.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 # Read in diet-disease file
 rr <- read_csv(dated("data_inputs/FINAL/cleaned_data/logRR_diet_disease"),
                col_types = "ddddccddccdc") %>% 
@@ -1298,13 +1297,13 @@ write_csv(rr7, dated("data_inputs/FINAL/cleaned_data/logRR_diet_disease_converte
 #' 
 #' ### (9) RRs for SBP and CVD
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
 #' 
 #' No conversions need to be made to the RRs for SBP and CVD, but we do need to merge and reformat all of the RRs into one file.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 raw.RRs <- read_csv(dated("data_inputs/FINAL/cleaned_data/logRR_diet_disease_converted"))
 
@@ -1423,13 +1422,13 @@ write_csv(allRRs, dated("data_inputs/FINAL/model_data/rr_agesexrace"))
 #' 
 #' The other health dataset does not need to be changed, but it needs to be merged with the NHANES dataset.
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
 
 #' 
-## ----results='hide', warning=FALSE, message=FALSE------
+## ----results='hide', warning=FALSE, message=FALSE-------
 
 # import
 nhanes.dat <- read_csv(dated("data_inputs/FINAL/cleaned_raw_data/nhanes1518_agesexrace"))
@@ -1535,13 +1534,13 @@ write_csv(merged1, dated("data_inputs/FINAL/model_data/nhanes1518_agesexrace_mer
 #' 
 #' This script transforms the NHANES dataset to match the structure of the cost/environment mega dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("version_date", "dated")))
 
 
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # IMPORT NHANES DATA
 

@@ -1,10 +1,9 @@
-## ----include=FALSE-------------------------------------
+## ----include=FALSE--------------------------------------
 
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 
 #' 
@@ -20,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #' 
 #' First, let's set up our environment.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # check working directory
 getwd()
@@ -47,7 +46,7 @@ source("code/version_date.R")
 #' 
 #' Import all of the "day 1" datasets first. 
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import
 day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
@@ -77,7 +76,7 @@ day1_sub1 <- left_join(day1_sub, ssb_1, by = c("seqn" = "SEQN",
 #' 
 #' Then import all of "day 2" datasets.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import
 day2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds")
@@ -106,7 +105,7 @@ day2_sub1 <- left_join(day2_sub, ssb_2, by = c("seqn" = "SEQN",
 #' 
 #' Then, combine the "day 1" and "day 2" datasets to get a "both_days" dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days <- rbind(day1_sub1, day2_sub1) %>% arrange(seqn, dayrec, line)
 
@@ -117,7 +116,7 @@ both_days %>% filter(description == "Meat, NFS") %>% head() #looks good!
 #' 
 #' Lastly, remove the original diet datasets becuase they are very large and we don't need them anymore.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("both_days", "version_date", "dated")))
 
@@ -129,7 +128,7 @@ rm(list=setdiff(ls(), c("both_days", "version_date", "dated")))
 #' 
 #' First, create an empty dataset template that contains all of the foodcodes that exist in the diet dataset (both_days).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 all_foodcodes <- both_days %>% select(foodcode) %>% distinct()
 
@@ -137,7 +136,7 @@ all_foodcodes <- both_days %>% select(foodcode) %>% distinct()
 #' 
 #' Then, import the non-grain food mapping (labeled as "map_a").
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 map_a <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FNDDS_mapping_detailed_04-06-25.csv")
 
@@ -145,7 +144,7 @@ map_a <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FN
 #' 
 #' Then, join the template and the first mapping.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 my_join <- full_join(mutate(all_foodcodes, i=1), 
                      mutate(map_a, i=1)) %>% 
@@ -157,7 +156,7 @@ my_join <- full_join(mutate(all_foodcodes, i=1),
 #' 
 #' Import the grain-only mapping (labeled as "map_b").
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 map_b <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FNDDS_mapping_WHOLE_GRAINS_ONLY_09-05-23.csv")
 
@@ -165,7 +164,7 @@ map_b <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FN
 #' 
 #' Merge my_join with the second mapping.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 my_join1 <- rbind(my_join, map_b) %>% arrange(foodcode)
 
@@ -173,7 +172,7 @@ my_join1 <- rbind(my_join, map_b) %>% arrange(foodcode)
 #' 
 #' Lastly, merge back with both_days.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days1 <- left_join(both_days, my_join1, by = "foodcode")
 
@@ -181,7 +180,7 @@ both_days1 <- left_join(both_days, my_join1, by = "foodcode")
 #' 
 #' Check how many FNDDS codes in the dataset don't have a mapping to a dietary factor (i.e., food group category)
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days1 %>% 
   filter(is.na(Foodgroup)) %>% 
@@ -193,7 +192,7 @@ both_days1 %>%
 #' 
 #' Check SSB by comparing the "ssb" indicator variable and the data when the foodgroup is set to "ssb".
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days1 %>% filter(ssb == 1) %>% head()
 both_days1 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% head()
@@ -205,7 +204,7 @@ both_days1 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% head()
 #' 
 #' We see that, for some of the rows, ssb is labeled incorrectly, so we need to fix it.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days2 <- both_days1 %>% 
   mutate(Foodgroup = ifelse(ssb == 1 & Foodgroup != "ssb", "ssb", Foodgroup)) %>% 
@@ -215,7 +214,7 @@ both_days2 <- both_days1 %>%
 #' 
 #' Check again. Looks good.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days2 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% head()
 both_days2 %>% filter(ssb == 1 & Foodgroup != "ssb") %>% head() # none-good
@@ -226,7 +225,7 @@ both_days2 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% head()
 #' 
 #' Rename variable.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days3 <- both_days2 %>% 
   rename(Foodgroup_FNDDS = Foodgroup)
@@ -235,7 +234,7 @@ both_days3 <- both_days2 %>%
 #' 
 #' Tidy up the global environment and only keep the datasets we currently need.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("both_days3", "version_date", "dated")))
 
@@ -248,7 +247,7 @@ rm(list=setdiff(ls(), c("both_days3", "version_date", "dated")))
 #' 
 #' Import the mapping and join with the both_days dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import 
 map <- read_csv("data_inputs/OTHER/fndds_to_fcid_mapping/DATA/FCID_0118_LASTING.csv")
@@ -274,7 +273,7 @@ both_days5 %>% filter(ssb==1) %>% select(fcid_desc) %>% table()
 #' 
 #' Import the food loss & waste coefficients and join with the both_days dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import losswaste data
 # losswaste <- read_csv("data_inputs/OTHER/food_waste/DATA/losswaste.csv")
@@ -292,7 +291,7 @@ both_days6 <- left_join(both_days5, losswaste_complete, by = "fcidcode")
 #' 
 #' First, we import the original mapping.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import fcid-diet factor mapping
 new_map <- read_xlsx("data_inputs/OTHER/dietfactor_to_fcid_mapping/DATA/FCID_to_dietaryfactor_mapping_01-09-2024_final.xlsx") %>% 
@@ -311,7 +310,7 @@ both_days7 %>% filter(is.na(Foodgroup_FCID)) %>% select(foodcode, description) %
 #' 
 #' But, we can see that there's some missing so our team went and manually updated the mapping, which is imported in the following code chunk.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import updated mapping
 fcids_new <- read_csv("data_inputs/OTHER/dietfactor_to_fcid_mapping/DATA/missing_data/resolved/Missing FCIDS_mapped.csv") %>% 
@@ -329,7 +328,7 @@ both_days8 %>% filter(is.na(fcidcode)) %>% select(foodcode, description, fcidcod
 #' 
 #' There are now fewer missing coefficients, but still some. In some of these cases, the FNDDS foodcode can represent the FCID code (i.e., single ingredient foods). Below, I manually add these waste coefficents for dasheen and corn.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # dasheen
 dash <- losswaste_complete %>% filter(fcidcode == "103139000") %>% 
@@ -361,7 +360,7 @@ both_days9 %>% filter(is.na(waste_coef)) %>% head()
 #' 
 #' Calculate the FCID-level consumed, inedible, and wasted amounts of food.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days10 <- both_days9 %>% 
   mutate(consumed_amt_FCID = grams * (wt / 100),
@@ -372,7 +371,7 @@ both_days10 <- both_days9 %>%
 #' 
 #' Calculate the FNDDS-level consumed, inedible, and wasted amounts of food. This isn't needed for the environmental impact factors, but it is needed for the cost impact factors in the next section.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days11 <-
   both_days10 %>% 
@@ -396,7 +395,7 @@ saveRDS(fndds_flw, "data_inputs/IMPACT_FACTORS/temp_data/fndds_flw.rds")
 #' 
 #' Tidy up the global environment.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("both_days11", "version_date", "dated")))
 
@@ -406,7 +405,7 @@ rm(list=setdiff(ls(), c("both_days11", "version_date", "dated")))
 #' 
 #' There are two environmental datasets that need to be imported. The first dataset contains greenhouse gas (GHG) and cumulative energy demand (CED) impact factors. The second contains water scarcity (WATER) and bluewater use (BLUEWATER) impact factors.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import datafield (non-water)
 datafield <- read_xlsx("data_inputs/ENVIRONMENT/ghg_ced_impacts/DATA/dataFIELDv1.0_LASTING_120723.xlsx",
@@ -444,7 +443,7 @@ both_days12 <- both_days11 %>%
 #' 
 #' Below, we check the dataset for missing impact factors.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days12 %>% filter(is.na(GHG_mn)) %>% head()
 both_days12 %>% filter(is.na(GHG_mn) & ssb == 1) %>% head()
@@ -458,7 +457,7 @@ both_days12 %>% filter(is.na(GHG_mn)) %>% select(Foodgroup_FCID) %>% table()
 #' 
 #' Our team manually assigned proxies for some of these FCID codes with missing environmental impact factors. 
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import proxies for missing enviro data
 ghg_proxies <- read_csv("data_inputs/ENVIRONMENT/ghg_ced_impacts/DATA/missing_data/resolved/Missing environmental impacts_mapped.csv")
@@ -501,7 +500,7 @@ both_days14 %>% filter(is.na(WATER_mn)) %>% select(Foodgroup_FCID) %>% distinct(
 #' 
 #' Tidy up the global environment.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("both_days14", "version_date", "dated")))
 
@@ -511,7 +510,7 @@ rm(list=setdiff(ls(), c("both_days14", "version_date", "dated")))
 #' 
 #' Import the forced labor (FL) risk scores (excluding seafood for now) and join with both_days.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import fl scores
 fl <- read_csv("data_inputs/SOCIAL/forced_labor/DATA/FL_scores_FCID_062124.csv") %>% 
@@ -529,7 +528,7 @@ both_days15 %>% filter(is.na(FL_Score_Value_grams)) %>% select(Foodgroup_FCID) %
 #' 
 #' Now we have to handle the seafood scores. First, look at the rows where either the FNDDS- or FCID-level food group is seafood.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days15 %>% filter(Foodgroup_FNDDS == "pf_seafood") %>% head()
 both_days15 %>% filter(Foodgroup_FCID == "pf_seafood") %>% head()
@@ -539,7 +538,7 @@ both_days15 %>% filter(Foodgroup_FNDDS == "pf_seafood" & Foodgroup_FCID == "pf_s
 #' 
 #' Split both_days into two distinct datasets so that we can work with them separately: one containing all rows where both the FNDDS- and FCID-level food group is seafood, and the second containing the remaining rows.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 seafood <- both_days15 %>% filter(Foodgroup_FNDDS == "pf_seafood" & Foodgroup_FCID == "pf_seafood") %>% 
   select(-c(Weight_Conversion, FL_Score_Value_grams))
@@ -555,7 +554,7 @@ nrow(seafood) + nrow(no_seafood) == nrow(both_days15)
 #' 
 #' Now, import the seafood-specific forced labor scores ("sea_scores") and join with the seafood diet dataset ("seafood").
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 # import seafood scores
 sea_scores <- read_csv("data_inputs/SOCIAL/forced_labor/DATA/seafood_FL_scores_FNDDS_062124.csv") %>% 
   select(FNDDS_Code, FL_Score_Value_grams)
@@ -566,7 +565,7 @@ sea_join <- left_join(seafood, sea_scores, by = c("foodcode" = "FNDDS_Code"))
 #' 
 #' The seafood dish "bouillabaisse" was very complicated to handle, and therefore we had to calculate the FL score for this dish in a separate Excel sheet, which gets read in below.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # missing
 sea_join %>% filter(is.na(FL_Score_Value_grams)) # bouillabaise
@@ -596,7 +595,7 @@ sea_join2 %>% filter(is.na(FL_Score_Value_grams)) #none-woo!
 #' 
 #' Now re-combine the seafood and non-seafood datasets.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 # combine back with no seafood
 both_days12 <- rbind(no_seafood, sea_join2) %>% arrange(seqn, dayrec, line)
 
@@ -617,7 +616,7 @@ both_days12 %>% filter(is.na(FL_Score_Value_grams)) %>% select(fcid_desc) %>% di
 #' 
 #' For the remaining missing FL scores for seafood, we will calculate the median seafood-specific FL score and impute the missing scores.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # create impute median
 both_days12 %>% 
@@ -671,7 +670,7 @@ both_days15 <- both_days14 %>%
 #' 
 #' Then, for all the impact factors, calculate the total amounts of impact for the given amount of consumed food by multiplying the impact factor (per 1 gram of food) by the consumed amount of food (in grams).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 my_enviro_table <- 
   both_days15 %>% 
@@ -695,7 +694,7 @@ my_enviro_table <-
 #' 
 #' Check missing.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # what food groups have missing impact factors?
 my_enviro_table %>% filter(is.na(GHG_impact_per_gram)) %>% 
@@ -712,7 +711,7 @@ my_enviro_table %>% filter(is.na(FL_impact_per_gram)) %>%
 #' 
 #' Then, calculate the total impacts, per day, per person, by adding up the food-level impacts for each person-day combination. Additionally, calculate the consumed, inedible, and wasted amounts of food per day, per person, to be used later in the code.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 enviro_impact <- my_enviro_table %>% 
   group_by(seqn, fcidcode, dayrec) %>% 
@@ -731,7 +730,7 @@ enviro_impact <- my_enviro_table %>%
 #' 
 #' Now, repeat the same steps above specifically for sugar sweetened beverages (this is done by including the "ssb" variable in the "group_by" statement).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # now do ssb
 ssb_impact <- my_enviro_table %>% 
@@ -775,7 +774,7 @@ enviro_impact %>% filter(is.na(fcidcode))
 #' 
 #' Transform dataset to wide format.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 enviro_wide <- pivot_wider(enviro_impact, 
                            names_from = dayrec,
@@ -787,7 +786,7 @@ enviro_wide <- pivot_wider(enviro_impact,
 #' 
 #' To calculate the average, we first need to determine how many days of recall each participant has.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # calculate # days of recall
 both_days15 %>% select(reliable) %>% table()
@@ -807,7 +806,7 @@ enviro_wide1 %>% filter(daysintake == 1 & is.na(consumed_per_day_1)) #good
 #' 
 #' If a participant has 2 days of intake and their corresponding impact (e.g., GHG) for day 1 or day 2 is missing (NA), then we need to replace those NAs with 0s, because in this case, the data aren't "missing", the participant just didn't consume that food on those day.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 enviro_wide2 <- enviro_wide1 %>% 
   mutate(# day 2
@@ -836,7 +835,7 @@ enviro_wide2 <- enviro_wide1 %>%
 #' 
 #' Calculate the **average** total impacts of consumed food at the FCID code-level for each person. This will give us the data we need to calculate the environmental and forced labor impact factors in the next section.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # summarize DAY1 AND DAY2
 enviro_wide3 <- enviro_wide2 %>% 
@@ -858,7 +857,7 @@ enviro_wide3 <- enviro_wide2 %>%
 #' 
 #' Import the FCID-to-dietary-factor mapping and join with enviro_wide so that we can later on summarize the impacts at the dietary factor (i.e., food group) level.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import fcid-diet factor mapping
 new_map <- read_xlsx("data_inputs/OTHER/dietfactor_to_fcid_mapping/DATA/FCID_to_dietaryfactor_mapping_01-09-2024_final.xlsx") %>% 
@@ -880,7 +879,7 @@ enviro_wide4 %>% filter(is.na(fl_impact_avg_Consumed)) #none-good
 #' 
 #' Now add up the impacts per person, by dietary factor (food group).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 enviro_wide5 <- enviro_wide4 %>% 
   group_by(seqn, Foodgroup_FCID) %>% 
@@ -898,7 +897,7 @@ enviro_wide5 <- enviro_wide4 %>%
 #' 
 #' Now, repeat the same steps above specifically for sugar sweetened beverages.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # average day 1 and day 2 impacts 
 ssb_wide <- pivot_wider(ssb_impact1, 
@@ -965,7 +964,7 @@ ssb_wide4 <- ssb_wide3 %>%
 #' 
 #' Combine the food and SSB datasets together, then transform to wide format.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # rbind with rest of data
 enviro_wide6 <- 
@@ -986,7 +985,7 @@ enviro_wide7 %>% select(contains("ssb")) %>% head()
 #' 
 #' Export datasets to the temporary folder, so they can be used to calculate the impact factors in the next section.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 saveRDS(both_days15, "data_inputs/IMPACT_FACTORS/temp_data/both_days15_env.rds")
 saveRDS(enviro_wide7, "data_inputs/IMPACT_FACTORS/temp_data/enviro_input_dat.rds")

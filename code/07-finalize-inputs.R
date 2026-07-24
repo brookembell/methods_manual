@@ -1,10 +1,9 @@
-## ----include=FALSE-------------------------------------
+## ----include=FALSE--------------------------------------
 
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 
 #' 
@@ -14,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #' 
 #' Set up the working environment.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 rm(list = ls())
 
@@ -30,7 +29,7 @@ source("code/version_date.R")
 #' 
 #' Import the diet/health dataset (i.e., mega_costenv).
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 nhanes <- read_csv(dated("data_inputs/FINAL/cleaned_data/mega_costenv_structure_temp"))
 
@@ -38,7 +37,7 @@ nhanes <- read_csv(dated("data_inputs/FINAL/cleaned_data/mega_costenv_structure_
 #' 
 #' Here is where you specify the substitution effects. For the four-pillar paper, we set these to 0. However, if you will take into account substitution effects (Kyra, I mean you), you will need to update these numbers. Please consult Fred and/or Nicole as to what these values should be for your analysis. 
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 # add in substitution effects, currently set to 0
 nhanes1 <- nhanes %>% 
@@ -59,7 +58,7 @@ nhanes1 <- nhanes %>%
 #' 
 #' Import the impact factors.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 enviro_IFs <- read_csv(dated("data_inputs/IMPACT_FACTORS/output_data/Impacts_enviro"))
 cost_IFs <- read_csv(dated("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost"))
@@ -68,7 +67,7 @@ cost_IFs <- read_csv(dated("data_inputs/IMPACT_FACTORS/output_data/Impacts_cost"
 #' 
 #' For the cost impact factors, we made the decision to use the factors for the "non-mixed" dishes, as we thought these were the best representation of the food groups in the DGA (which is what our analysis focused on). Again, you may need to consult Nicole on what the best decision is for your analysis.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 # use the 'non-mixed' dishes for impact factors
 cost_IFs1 <- cost_IFs %>% 
@@ -83,7 +82,7 @@ enviro_IFs1 <- enviro_IFs %>%
 #' 
 #' To match the format of the cost impact factors, we need to duplicate the environmental impact factors three times to account for the different food types (i.e., grocery, non-grocery, and total). We don't have different environmental factors for these different food types, so we just use the exact same values across all three types (hence why we just duplicate).
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 enviro_IFs_tot <- enviro_IFs1 %>% mutate(food_type = "Total")
 enviro_IFs_gro <- enviro_IFs1 %>% mutate(food_type = "Grocery")
@@ -98,7 +97,7 @@ enviro_IFs2 <- rbind(enviro_IFs_tot, enviro_IFs_gro, enviro_IFs_non) %>%
 #' 
 #' Merge the environmental and cost impact factors.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 # compare
 table(cost_IFs1$subgroup, useNA = "always")
@@ -120,7 +119,7 @@ impact_factors <- full_join(cost_IFs1, enviro_IFs2, by = c("subgroup", "food", "
 #' 
 #' We also create the "counterfactual" impact factors, which are just the same. This is mostly redundant, it's just a necessary thing to do based on the way the model code is set up to run.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 impact_factors1 <- impact_factors %>% 
   rename(
@@ -171,7 +170,7 @@ impact_factors1 <- impact_factors %>%
 #' 
 #' Join impact factors with diet/health data.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 comb <- left_join(nhanes1, impact_factors1, by = c("subgroup_id" = "subgroup",
                                                                 "Foodgroup" = "food",
@@ -185,7 +184,7 @@ comb <- left_join(nhanes1, impact_factors1, by = c("subgroup_id" = "subgroup",
 #' 
 #' Lastly, similar to above, the counterfactual versions of the inedible/wasted proportions are set to their non-counterfactual counterparts.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 comb1 <- 
   comb %>% 
@@ -277,7 +276,7 @@ comb1 <-
 #' 
 #' Change some variables names.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 comb2 <- comb1 %>% 
   rename(Population_size = population) %>% 
@@ -288,7 +287,7 @@ comb2 <- comb1 %>%
 #' 
 #' List out the final order your want for the variables.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 final.order <- c(
                "subgroup_id",
                "Age",
@@ -461,14 +460,14 @@ final.order <- c(
 #' 
 #' Apply the final order. 
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 # apply
 final <- comb2[,final.order]
 
 #' 
 #' Filter out diet variables you don't want included in your dataset/analysis.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 final1 <- final %>% filter(!(Foodgroup %in% c("fiber", "kcal", "pf_animal", "pf_leg", "pf_plant",
                                   "pf_soy", "pufa_energy", "sfat_energy", "sea_omega3_fa",
@@ -480,7 +479,7 @@ final1 <- final %>% filter(!(Foodgroup %in% c("fiber", "kcal", "pf_animal", "pf_
 #' 
 #' Below, we replace the cost inedible/wasted proportions with the GHG inedible/wasted proportions when they're not missing. If they're alrady NA, then they remain NA. 
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 final2 <- final1 %>% 
   # renaming with _new to compare old vs. new values
@@ -509,7 +508,7 @@ final3 <- final2 %>%
 #' 
 #' Export to the "FINAL" folder.
 #' 
-## ----message=FALSE, warning=FALSE, results='hide'------
+## ----message=FALSE, warning=FALSE, results='hide'-------
 
 write_csv(final3, dated("data_inputs/FINAL/model_data/input_data"))
 

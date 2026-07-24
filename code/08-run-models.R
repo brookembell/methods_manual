@@ -1,10 +1,9 @@
-## ----include=FALSE-------------------------------------
+## ----include=FALSE--------------------------------------
 
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 
 #' 
@@ -14,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #' 
 #' First, we clean the environment, load necessary R packages, set up pathways for code and input files.
 #' 
-## ----initial_setup-------------------------------------
+## ----initial_setup--------------------------------------
 
 rm(list = ls(all = TRUE)) # remove all data from memory
 
@@ -50,7 +49,7 @@ output_dir <- paste0("outputs/model/output_", Sys.Date(), "/")
 #' 
 #' Start clock so you can get an idea of how long the code takes to run.
 #' 
-## ----start_clock---------------------------------------
+## ----start_clock----------------------------------------
 
 start_time <- Sys.time()
 
@@ -58,7 +57,7 @@ start_time <- Sys.time()
 #' 
 #' Create output folders.
 #' 
-## ----create_dirs---------------------------------------
+## ----create_dirs----------------------------------------
 
 # output from environmental, economic, and social (`envecosoc`) models
 ifelse(!dir.exists(file.path(paste0(output_dir, "envecosoc"))),
@@ -74,7 +73,7 @@ ifelse(!dir.exists(file.path(paste0(output_dir, "CRA"))),
 #' 
 #' `year.vec.string` allows us to include the specified years of interest as part of the output names. Note that this is strictly for naming output files. The code itself only uses input files that correspond to a particular time point. It does not calculate estimates for multiple time points nor should you be feeding it input files with multiple time points. If you are doing analyses for multiple time points, the easiest way to do it is to have input files for each time point of interest, and then the rerunning the code, making sure to change "year.vec" here so that the output file names differ by year. 
 #' 
-## ----year.vec------------------------------------------
+## ----year.vec-------------------------------------------
 
 year.vec <- 2015
 
@@ -92,7 +91,7 @@ if(length(year.vec) > 1) {
 #' 
 #' Set number of simulations to 1,000.
 #' 
-## ----nsims---------------------------------------------
+## ----nsims----------------------------------------------
 
 # Number of simulations
 # Set to 3 for testing
@@ -106,7 +105,7 @@ n.sims <- nsim1
 #' 
 #' For the purposes of this project, let's formalize some of the terms to reduce confusion. "Subgroup" will denote the 48 unique age/sex/race combinations that we divide the population into. The "strata" are the variables used to divide up a data set. For example, the 48 subgroups are a result of dividing up the population using three strata: age, sex, race. Age/sex/race is one example of a "strata combination".
 #' 
-## ----define_subgroups----------------------------------
+## ----define_subgroups-----------------------------------
 
 # Covariates vector
 covar.vec <- c("Age", "Sex", "Race") # Don't mess with the order age, sex, race
@@ -117,7 +116,7 @@ n.covar <- length(covar.vec)
 #' 
 #' Identify all dietary patterns of interest here. Names should match "diet_pattern" column in the input data file (input_data.csv).
 #' 
-## ----diet_patterns-------------------------------------
+## ----diet_patterns--------------------------------------
 
 # Vector of dietary patterns
 diet.vec <- c("US",
@@ -136,7 +135,7 @@ diet.vec <- c("US",
 #' 
 #' Identify all environmental, economic, social pillar outcomes.
 #' 
-## ----envecosoc.outcomes.vec----------------------------
+## ----envecosoc.outcomes.vec-----------------------------
 
 # here is where you specify the outcomes you want to run
 envecosoc.outcomes.vec <- c(
@@ -163,7 +162,7 @@ all.outcomes.vec <- c(
 #' 
 #' Create vectors to store outcomes.
 #' 
-## ----create_outcomes_vec-------------------------------
+## ----create_outcomes_vec--------------------------------
 
 n.envecosoc.outcomes <- length(envecosoc.outcomes.vec)
 envecosoc.outcomes.vec.mn <- paste("Mean", envecosoc.outcomes.vec,  sep = "_")
@@ -184,7 +183,7 @@ envecosoc.outcomes.substitution.vec.se <- paste("SE_substitution", envecosoc.out
 #' 
 #' List dietary factors of interest here. Certain dietary factors are only of interest for environment/social (FCID-level), others only for economic (FNDDS-level). But all dietary factors of interest in those three pillars should be listed here. Names should match what is used in the data input file.
 #' 
-## ----list_dietary_factors------------------------------
+## ----list_dietary_factors-------------------------------
 
 # Dietary factors vector (for env-eco-soc)
 rfvec_envecosoc <- c(# Dairy
@@ -225,7 +224,7 @@ rfvec_envecosoc <- c(# Dairy
 #' 
 #' Import data input file and rename some variables, subset for env-eco-soc analyses.
 #' 
-## ----import_primary_data_file--------------------------
+## ----import_primary_data_file---------------------------
 
 # Import exposure file
 primary_input <- read_csv(file = dated(paste0(file_location, "input_data")))
@@ -246,7 +245,7 @@ primary_input_envecosoc <- subset(primary_input1, Foodgroup %in% rfvec_envecosoc
 #' 
 #' Create lists to store input and locations for output (by diet pattern and grocery/non-grocery). Each element of a list corresponds to a particular dietary pattern and "datatype" (grocery vs non-grocery).  
 #' 
-## ----input_and_outpot_loc_lists------------------------
+## ----input_and_outpot_loc_lists-------------------------
 
 # Create some more vectors
 envecosoc_inputs.vec <- list()
@@ -270,7 +269,7 @@ for (i in 1:length(diet.vec)) {
 #' 
 #' Read in subgroup-specific population numbers.
 #' 
-## ----pop-----------------------------------------------
+## ----pop------------------------------------------------
 
 # Population
 pop <- envecosoc_inputs.vec[[1]] %>% 
@@ -286,7 +285,7 @@ pop <- envecosoc_inputs.vec[[1]] %>%
 #' 
 #' Next, simulate distribution for total population numbers (in our cases, since population standard errors are set to 0, we're just repeating the same pop count for each simulation).
 #' 
-## ----presim_pop----------------------------------------
+## ----presim_pop-----------------------------------------
 
 # pre-simulate total population numbers
 source(paste0(code_location, "source_code/presimulate_pop_draws.r"))
@@ -295,24 +294,24 @@ source(paste0(code_location, "source_code/presimulate_pop_draws.r"))
 #' 
 #' Run the env-eco-soc simulations via a for-loop (for each pair of dietary pattern and grocery/non-grocery combo).
 #' 
-## ----run_model, eval=FALSE-----------------------------
-## 
-## # debug
-## # k=1
-## 
-## for(k in 1:length(envecosoc_inputs.vec)) {
-## 
-##   print(k)
-## 
-##   source(paste0(code_location, "source_code/calculate_change.r"))
-## 
-## }
-## 
+## ----run_model------------------------------------------
+
+# debug
+# k=1
+
+for(k in 1:length(envecosoc_inputs.vec)) {
+
+  print(k)
+
+  source(paste0(code_location, "source_code/calculate_change.r"))
+
+}
+
 
 #' 
 #' Create vectors used to name output files and used to define variable names in summary output files.
 #' 
-## ----output_names--------------------------------------
+## ----output_names---------------------------------------
 
 output.type.vec.sims <- c("envecosoc.sims.granular", 
                           "substitution.envecosoc.sims.granular", 
@@ -517,7 +516,7 @@ SD.name.vec <- c("impact_SD",
 #' 
 #' Create function to revert list structure. 
 #' 
-## ----revert_list_structure-----------------------------
+## ----revert_list_structure------------------------------
 
 revert_list_str_4 <- function(ls) {
   # get sub-elements in same order
@@ -534,85 +533,85 @@ revert_list_str_4 <- function(ls) {
 #' 
 #' Within ll loop, loop through the different output types and extract sims and summary stats. Combine food at home (FAH) and food away from home (FAFH) output and populate the lists. See "combine_FAH_FAFH.r" for details.
 #' 
-## ----fah_fafh, results='hide', eval=FALSE--------------
-## 
-## # debug
-## # ll=1
-## 
-## # start ll loop
-## for(ll in 1:length(diet.vec)) {
-## 
-##   diet <- diet.vec[ll]
-## 
-##   # each element of the list is itself a list containing summaries for all
-##   # strata combos, for output type j
-##   summary.list <- list()
-##   summary.list.percapita <- list()
-## 
-##   # k=1
-##   # start k loop
-##   for(k in 1:length(output.type.vec.sims)) {
-## 
-##     summary.list[[k]] <- list()
-##     summary.list.percapita[[k]] <- list()
-## 
-##     output.type.sims <- output.type.vec.sims[k]
-##     output.type.summary <- output.type.vec.summary[k]
-##     output.type.sims.bystrata <- output.type.vec.sims.bystrata[k]
-##     output.type.summary.bystrata <- output.type.vec.summary.bystrata[k]
-##     LB.name <- LB.name.vec[k]
-##     median.name <- median.name.vec[k]
-##     UB.name <- UB.name.vec[k]
-## 
-##     mean.name <- mean.name.vec[k]
-##     SD.name <- SD.name.vec[k]
-## 
-##     source(paste0(code_location, "source_code/combine_FAH_FAFH.r"))
-## 
-##     }
-## 
-##   summary.list.by.strata.combo <- revert_list_str_4(summary.list)
-##   summary.list.percapita.by.strata.combo <- revert_list_str_4(summary.list.percapita)
-## 
-##   output_location <- paste0(output_dir, "envecosoc/", diet, "_diet_both/")
-## 
-##   print(output_location)
-## 
-##   for(mm in 1:length(names(summary.list[[1]]))) {
-## 
-##     list.names.intersect <-
-##       Reduce(intersect, lapply(summary.list.by.strata.combo[[mm]], colnames))
-## 
-##     merged <-
-##       Reduce(function(...) merge(..., by = list.names.intersect),
-##              summary.list.by.strata.combo[[mm]])
-## 
-##     write_csv(x = merged,
-##               file = paste0(output_location,
-##                           "By_SubGroup/", "summary.output_by_",
-##                           names(summary.list[[1]])[mm], ".envecosoc.csv"))
-## 
-##     list.names.intersect <-
-##       Reduce(intersect, lapply(summary.list.percapita.by.strata.combo[[mm]], colnames))
-## 
-##     merged.percapita <-
-##       Reduce(function(...) merge(..., by = list.names.intersect),
-##              summary.list.percapita.by.strata.combo[[mm]])
-## 
-##     write.csv(x = merged.percapita,
-##               file = paste0(output_location,
-##                           "per_capita/By_SubGroup/", "summary.output_by_",
-##                           names(summary.list[[1]])[mm], ".envecosoc.csv"))
-## 
-##   }
-## 
-## }
-## 
+## ----fah_fafh, results='hide'---------------------------
+
+# debug
+# ll=1
+
+# start ll loop
+for(ll in 1:length(diet.vec)) {
+  
+  diet <- diet.vec[ll]
+
+  # each element of the list is itself a list containing summaries for all 
+  # strata combos, for output type j
+  summary.list <- list()
+  summary.list.percapita <- list()
+  
+  # k=1
+  # start k loop
+  for(k in 1:length(output.type.vec.sims)) {
+    
+    summary.list[[k]] <- list()
+    summary.list.percapita[[k]] <- list()
+    
+    output.type.sims <- output.type.vec.sims[k]
+    output.type.summary <- output.type.vec.summary[k]
+    output.type.sims.bystrata <- output.type.vec.sims.bystrata[k]
+    output.type.summary.bystrata <- output.type.vec.summary.bystrata[k]
+    LB.name <- LB.name.vec[k]
+    median.name <- median.name.vec[k]
+    UB.name <- UB.name.vec[k]
+
+    mean.name <- mean.name.vec[k]
+    SD.name <- SD.name.vec[k]
+
+    source(paste0(code_location, "source_code/combine_FAH_FAFH.r"))
+    
+    }
+  
+  summary.list.by.strata.combo <- revert_list_str_4(summary.list)
+  summary.list.percapita.by.strata.combo <- revert_list_str_4(summary.list.percapita)
+
+  output_location <- paste0(output_dir, "envecosoc/", diet, "_diet_both/")
+  
+  print(output_location)
+
+  for(mm in 1:length(names(summary.list[[1]]))) {
+    
+    list.names.intersect <- 
+      Reduce(intersect, lapply(summary.list.by.strata.combo[[mm]], colnames))
+    
+    merged <- 
+      Reduce(function(...) merge(..., by = list.names.intersect), 
+             summary.list.by.strata.combo[[mm]])
+    
+    write_csv(x = merged, 
+              file = paste0(output_location, 
+                          "By_SubGroup/", "summary.output_by_", 
+                          names(summary.list[[1]])[mm], ".envecosoc.csv"))
+    
+    list.names.intersect <- 
+      Reduce(intersect, lapply(summary.list.percapita.by.strata.combo[[mm]], colnames))
+    
+    merged.percapita <- 
+      Reduce(function(...) merge(..., by = list.names.intersect), 
+             summary.list.percapita.by.strata.combo[[mm]])
+    
+    write.csv(x = merged.percapita, 
+              file = paste0(output_location, 
+                          "per_capita/By_SubGroup/", "summary.output_by_", 
+                          names(summary.list[[1]])[mm], ".envecosoc.csv"))
+    
+  }
+  
+}
+
 
 #' 
 #' Calculate how much time it took run the env-eco-soc portion of the code.
 #' 
-## ----end_time, include=TRUE----------------------------
+## ----end_time, include=TRUE-----------------------------
 
  end_time1 <- Sys.time()
 
@@ -629,7 +628,7 @@ revert_list_str_4 <- function(ls) {
 #' 
 #' *Note* that you must include at least two dietary factors in the CRA analysis in order for the code to run properly.
 #' 
-## ----diet_factors_cra----------------------------------
+## ----diet_factors_cra-----------------------------------
 
 # Dietary factors vector (for CRA)
 rfvec_cra <- c(
@@ -656,7 +655,7 @@ primary_input_cra <- subset(primary_input, Foodgroup %in% rfvec_cra)
 #' 
 #' Also, we wanted to summarize the results in two additional ways: first, by breaking down "CMD" into seven subgroups (IHD, ISTK, HSTK, OSTK, DIAB, HHD, Other_CVD), and second, by breaking down "CMD" into five subgroups (All_HD, All_STK, DIAB, All_HD, Other_CVD). 
 #' 
-## ----disease_vec---------------------------------------
+## ----disease_vec----------------------------------------
 
 # Diseases vector
 diseases.vec <- c(# Cancers
@@ -703,7 +702,7 @@ disease.type3.vec <- c("Cancer", "Cancer", "Cancer", "Cancer", "Cancer", "Cancer
 #' 
 #' Create variable for number of diseases, and create various vectors and matrices for the "expanded" disease list, meaning each disease, but repeated three times for the three pathways: Direct effect, mediated by SBP, and mediated by BMI.  
 #' 
-## ----include_mediation_pathways------------------------
+## ----include_mediation_pathways-------------------------
 
 # Create some vectors
 n.diseases <- length(diseases.vec)
@@ -736,7 +735,7 @@ disease.type3.total.vec <- disease.type3.vec[match(disease.total.vec, disease.ta
 #' 
 #' Set number of exposure files and mediated effects. These should not change unless you are considering adding more mediation effects (You'd have to edit the code to add those effects those, not just this line).
 #' 
-## ----set_ns--------------------------------------------
+## ----set_ns---------------------------------------------
 
 nsim3 <- 1  # number of exposure files
 n.mediated.effects <- 2 # number of mediated effects
@@ -745,7 +744,7 @@ n.mediated.effects <- 2 # number of mediated effects
 #' 
 #' Read in RRs, food to BMI effects, food to SBP effects, and TMREDs, and do a little data processing. (These inputs may also be in the primary data input file for the sake of completeness, but the actual inputs for the code are from the files listed below.
 #' 
-## ----read_inputs---------------------------------------
+## ----read_inputs----------------------------------------
 
 # Import relative risk (RR) data input
 rrtotal <- read_csv(file = dated(paste0(file_location, "rr_agesexrace")))
@@ -771,7 +770,7 @@ theomin <- primary_input_cra %>%
 #' 
 #' Create mortality/incidence simulations.
 #' 
-## ----presim_disease, results='hide'--------------------
+## ----presim_disease, results='hide'---------------------
 
 # pre-simulate mortality/incidence numbers, to be used in CRA simulations, as well for calculating reverse-engineered PAFs
 source(paste0(code_location, "source_code/presimulate_observed_disease_draws.r"))
@@ -780,7 +779,7 @@ source(paste0(code_location, "source_code/presimulate_observed_disease_draws.r")
 #' 
 #' Create new output file path.
 #' 
-## ----cra_output_path-----------------------------------
+## ----cra_output_path------------------------------------
 
 output_location <- paste0(output_dir, "CRA/")
 
@@ -790,7 +789,7 @@ print(output_location)
 #' 
 #' Next, we set up parallel processing so we can run all five diet patterns at the same time.
 #' 
-## ----setup_parallel_processing-------------------------
+## ----setup_parallel_processing--------------------------
 
 # Set up parallel processing
 # Detect system type
@@ -831,7 +830,7 @@ registerDoParallel(cl)
 #' 
 #' Once we have read in everything we need, next is running the model. Part 1 actually calculates the PIFs for all diet-disease pairs of interest for all subgroups, x times depending on what you set nsim to be. The entire simulation results will be saved. Part 2 creates summary results, for all possible subgroup combinations. Part 3 calculates joint PIFs (for all subgroups).
 #' 
-## ----run_cra, results='hide'---------------------------
+## ----run_cra, results='hide'----------------------------
 
 # This is the for loop that runs the CRA analysis for all dietary patterns
 foreach(ss = 1:length(diet.vec), .verbose = TRUE) %dopar% {
@@ -924,7 +923,7 @@ foreach(ss = 1:length(diet.vec), .verbose = TRUE) %dopar% {
 #' 
 #' We're done! End the timer, stop the set up to run simultaneously, and print how much time it took to run the code.
 #' 
-## ----end, include=TRUE---------------------------------
+## ----end, include=TRUE----------------------------------
 
 end_time2 <- Sys.time()
 

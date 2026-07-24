@@ -1,10 +1,9 @@
-## ----include=FALSE-------------------------------------
+## ----include=FALSE--------------------------------------
 
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 
 #' 
@@ -20,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #' 
 #' First, let's set up our environment.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # check working directory
 getwd()
@@ -47,7 +46,7 @@ source("code/version_date.R")
 #' 
 #' Import all of the "day 1" datasets first.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import
 day1 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day1_clean.rds")
@@ -77,7 +76,7 @@ day1_sub1 <- left_join(day1_sub, ssb_1, by = c("seqn" = "SEQN",
 #' 
 #' Then import all of "day 2" datasets.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import
 day2 <- read_rds("data_inputs/DIET/dietary_intake/DATA/clean_data/foods_day2_clean.rds")
@@ -106,7 +105,7 @@ day2_sub1 <- left_join(day2_sub, ssb_2, by = c("seqn" = "SEQN",
 #' 
 #' Then, combine the "day 1" and "day 2" datasets to get a "both_days" dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days <- rbind(day1_sub1, day2_sub1) %>% arrange(seqn, dayrec, line)
 
@@ -117,7 +116,7 @@ both_days %>% filter(description == "Meat, NFS") %>% head() #looks good!
 #' 
 #' Lastly, remove the original diet datasets becuase they are very large and we don't need them anymore.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("both_days", "version_date", "dated")))
 
@@ -129,7 +128,7 @@ rm(list=setdiff(ls(), c("both_days", "version_date", "dated")))
 #' 
 #' First, create an empty dataset template that contains all of the foodcodes that exist in the diet dataset (both_days).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 all_foodcodes <- both_days %>% select(foodcode) %>% distinct()
 
@@ -137,7 +136,7 @@ all_foodcodes <- both_days %>% select(foodcode) %>% distinct()
 #' 
 #' Then, import the non-grain food mapping (labeled as "map_a").
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 map_a <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FNDDS_mapping_detailed_04-06-25.csv")
 
@@ -145,7 +144,7 @@ map_a <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FN
 #' 
 #' Then, join the template and the first mapping.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 my_join <- full_join(mutate(all_foodcodes, i=1), 
                      mutate(map_a, i=1)) %>% 
@@ -157,7 +156,7 @@ my_join <- full_join(mutate(all_foodcodes, i=1),
 #' 
 #' Import the grain-only mapping (labeled as "map_b").
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 map_b <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FNDDS_mapping_WHOLE_GRAINS_ONLY_09-05-23.csv")
 
@@ -165,7 +164,7 @@ map_b <- read_csv("data_inputs/OTHER/dietfactor_to_fndds_mapping/DATA/Food_to_FN
 #' 
 #' Merge my_join with the second mapping.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 my_join1 <- rbind(my_join, map_b) %>% arrange(foodcode)
 
@@ -173,7 +172,7 @@ my_join1 <- rbind(my_join, map_b) %>% arrange(foodcode)
 #' 
 #' Lastly, merge back with both_days.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days1 <- left_join(both_days, my_join1, by = "foodcode")
 
@@ -181,7 +180,7 @@ both_days1 <- left_join(both_days, my_join1, by = "foodcode")
 #' 
 #' Check how many FNDDS codes in the dataset don't have a mapping to a dietary factor (i.e., food group category)
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days1 %>% 
   filter(is.na(Foodgroup)) %>% 
@@ -193,7 +192,7 @@ both_days1 %>%
 #' 
 #' Check SSB by comparing the "ssb" indicator variable and the data when the foodgroup is set to "ssb".
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days1 %>% filter(ssb == 1) %>% head()
 both_days1 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% head()
@@ -205,7 +204,7 @@ both_days1 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% head()
 #' 
 #' We see that, for some of the rows, ssb is labeled incorrectly, so we need to fix it.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days2 <- both_days1 %>% 
   mutate(Foodgroup = ifelse(ssb == 1 & Foodgroup != "ssb", "ssb", Foodgroup)) %>% 
@@ -215,7 +214,7 @@ both_days2 <- both_days1 %>%
 #' 
 #' Check again. Looks good.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days2 %>% filter(ssb == 1 & Foodgroup == "ssb") %>% head()
 both_days2 %>% filter(ssb == 1 & Foodgroup != "ssb") %>% head() # none-good
@@ -226,7 +225,7 @@ both_days2 %>% filter(ssb == 0 & Foodgroup != "ssb") %>% head()
 #' 
 #' Tidy up the global environment and only keep the datasets we currently need.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("both_days2", "version_date", "dated")))
 
@@ -236,7 +235,7 @@ rm(list=setdiff(ls(), c("both_days2", "version_date", "dated")))
 #' 
 #' Import the FAH to FAFH ratios, whcih are later used to calculate the price of food purchased at grocery stores (i.e., food at home) vs. food bought outside of grocery stores (i.e., food away from home).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 # import
 ratios <- read_csv("data_inputs/ECONOMIC/fah_fafh_ratio/DATA/output_data/fafh_fah_ratio_clean_07-06-23.csv") %>% 
   select(Diet_var, ratio_FAFH_FAH)
@@ -250,7 +249,7 @@ ratios1 <- ratios %>%
 #' 
 #' Merge with both_days and then check for any missing values.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # join with both_days
 both_days3 <- left_join(both_days2, ratios1, by = c("Foodgroup" = "Diet_var_new")) %>% ungroup()
@@ -273,7 +272,7 @@ both_days5 <- both_days4 %>%
 #' 
 #' Do a final check.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days5 %>% filter(is.na(ratio_FAFH_FAH)) # none-good
 
@@ -285,7 +284,7 @@ both_days5 %>% filter(is.na(ratio_FAFH_FAH)) # none-good
 #' 
 #' First import and join the two datasets. Then, because the variable "price_100g" represents the food cost per 100 grams of food, we create a new variable that represents the food cost per 1 gram of food (which is what we want to use later on).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import 2015-2016 price data
 cost1516 <- read_xlsx("data_inputs/ECONOMIC/food_prices/DATA/pp_national_average_prices_andi_v.1.30.2023.xlsx",
@@ -307,7 +306,7 @@ price_comb <- rbind(cost1516, cost1718) %>%
 #' 
 #' Then, join with both_days and check for missing values. We also calculate two variables, two_digits and three_digits, that represent the first two and three digits, respectively, of the NHANES FNDDS food code. The beginning digits of the food code correspond with different food categorizations created by the USDA. These variables will be used later.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # create new nhanes cycle variable
 both_days6 <- both_days5 %>%
@@ -332,7 +331,7 @@ both_days7 %>% filter(is.na(price_100gm)) %>%
 #' 
 #' Create a dataset called imputed_price that contains the average prices for each food group x food source combination.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 imputed_price <-
   both_days7 %>% 
@@ -347,7 +346,7 @@ imputed_price <-
 #' 
 #' Then, merge with both_days and calculate a new variable, price_per_gram, that replaces any missing price value with the group median.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # join imputed prices with food data
 both_days8 <- left_join(both_days7, imputed_price, by = c("two_digits", "foodsource"))
@@ -364,7 +363,7 @@ both_days9 %>% filter(is.na(price_per_gram)) #none-good
 #' 
 #' Tidy up the global environment.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("both_days9", "version_date", "dated")))
 
@@ -376,7 +375,7 @@ rm(list=setdiff(ls(), c("both_days9", "version_date", "dated")))
 #' 
 #' To deal with this, we use a dataset that identifies FNDDS food code prefixes that represent "mixed dishes". We use this data to categorize food codes into mixed vs. non-mixed foods, and then later stratify our results by this categorization. See Chapter \@ref(food-cost) to see how these mixed dish codes were determined.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 mixed <- read_csv("data_inputs/DIET/dietary_intake/DATA/raw_data/mixed/mixed_dishes_100923.csv") %>% 
   select(-foodcode_desc)
@@ -385,7 +384,7 @@ mixed <- read_csv("data_inputs/DIET/dietary_intake/DATA/raw_data/mixed/mixed_dis
 #' 
 #' Some of the categorizations are for prefixes with two digits, and some are for prefixes with three digits.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 mixed_2dig <- mixed %>% filter(!(foodcode_prefix %in% c(416, 418, 419, 423)))
 mixed_3dig <- mixed %>% filter(foodcode_prefix %in% c(416, 418, 419, 423)) %>% rename(three_digits = foodcode_prefix)
@@ -394,7 +393,7 @@ mixed_3dig <- mixed %>% filter(foodcode_prefix %in% c(416, 418, 419, 423)) %>% r
 #' 
 #' First, join both_days with the two digits, and then the three digits. Then, create an indicator variable called "mixed_dish" that we can stratify by later.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days10 <- both_days9 %>% 
   left_join(mixed_2dig, by = c("two_digits" = "foodcode_prefix"))
@@ -407,7 +406,7 @@ both_days11 <- both_days10 %>%
 #' 
 #' Check if everything merged correctly.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 both_days11 %>% filter(mixed_dish == 1) %>% select(two_digits) %>% distinct() %>% arrange(two_digits)
 # looks good
@@ -416,7 +415,7 @@ both_days11 %>% filter(mixed_dish == 1) %>% select(two_digits) %>% distinct() %>
 #' 
 #' Lastly, save a copy of this temporary dataset in case we need it for debugging later.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 saveRDS(both_days11, "data_inputs/IMPACT_FACTORS/temp_data/both_days11_cost.rds")
 
@@ -424,7 +423,7 @@ saveRDS(both_days11, "data_inputs/IMPACT_FACTORS/temp_data/both_days11_cost.rds"
 #' 
 #' Tidy up the global environment.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 rm(list=setdiff(ls(), c("both_days11", "version_date", "dated")))
 
@@ -434,7 +433,7 @@ rm(list=setdiff(ls(), c("both_days11", "version_date", "dated")))
 #' 
 #' Now, we will calculate the average food cost per 1 gram for each FNDDS food code. This process includes aggregating and summarizing the diet dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # keep this commented out unless you are starting the script from here
 # both_days11 <- read_rds("data_inputs/IMPACT_FACTORS/temp_data/both_days11_cost.rds")
@@ -444,7 +443,7 @@ rm(list=setdiff(ls(), c("both_days11", "version_date", "dated")))
 #' 
 #' First, select the variables we need to eventually calculate the cost impact factors.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 my_price_table <- both_days11 %>% 
   select(seqn, dayrec, line, foodcode, description, Foodgroup_FNDDS, 
@@ -456,7 +455,7 @@ my_price_table <- both_days11 %>%
 #' 
 #' Then, import the food-level consumed, inedible, and wasted amounts that was calculated in Chapter \@ref(mapping-from-fcid-food-code-to-dietary-factor) and join with my_price table. These values were calculated in the previous chapter because the inedible and wasted coefficients are at the FCID-level, which is the same level that the environmental impacts are at.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # import 
 fndds_flw <- read_rds("data_inputs/IMPACT_FACTORS/temp_data/fndds_flw.rds") %>% 
@@ -474,7 +473,7 @@ my_price_table1 %>% filter(is.na(inedible_amt_FNDDS) | is.na(wasted_amt_FNDDS))
 #' 
 #' We also need to calculate the total price for the amounts of food consumed (price_impact_per_foodcode_Consumed).
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # adjust price for FAFH
 # if food source is 'other', then multiple price by fah/fafh ratio
@@ -487,7 +486,7 @@ my_price_table2 <- my_price_table1 %>% mutate(price_per_gram_adjusted = ifelse(f
 #' 
 #' Now, we want to calculate the total amount of money spent on each FNDDS foodcode, per person, per day. This is necessary because for some participants, they consumed a given FNDDS foodcode multiple times in the same day, and we want to combine these so each FNDDS food code only has one corresponding daily price. For example, if someone had 100 grams of coffee in the morning and then another 75 grams in the afternoon, we want to get the price for 175 grams of coffee consumed that day.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # Calculate total price per day, per person
 price_impact_total <- my_price_table2 %>% 
@@ -501,7 +500,7 @@ price_impact_total <- my_price_table2 %>%
 #' 
 #' Transform dataset to wide format.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 price_wide_total <- pivot_wider(price_impact_total, 
                                 names_from = c(dayrec),
@@ -515,7 +514,7 @@ price_wide_total <- pivot_wider(price_impact_total,
 #' 
 #' To calculate the average, we first need to determine how many days of recall each particpant has.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # calculate # days of recall
 both_days11 %>% select(reliable) %>% table()
@@ -535,7 +534,7 @@ price_wide_total1 %>% filter(daysintake == 1 & is.na(consumed_per_day_1)) %>% he
 #' 
 #' If a participant has 2 days of intake and their corresponding price for day 1 or day 2 is missing (NA), then we need to replace those NAs with 0s, because in this case, the data aren't "missing", the participant just didn't consume/spend money on that food that day.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # add 0s when appropriate
 price_wide_total2 <- price_wide_total1 %>% 
@@ -556,7 +555,7 @@ price_wide_total2 <- price_wide_total1 %>%
 #' 
 #' Calculate the **average** total price of consumed food at the FNDDS foodcode-level for each person. This will give us the data we need to calculate the cost impact factors in the next chapter.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 price_wide_total3 <- price_wide_total2 %>% 
   ungroup() %>% 
@@ -572,7 +571,7 @@ price_wide_total3 <- price_wide_total2 %>%
 #' 
 #' We also want to calculate the same thing as above, but additionally stratified by food source (grocery vs. non-grocery). So we do the same calculations above, but additionally group by "foodsource".
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # STRATIFIED BY FAH VS FAFH
 # Calculate fah and fafh price, per person
@@ -587,7 +586,7 @@ price_impact_split <- my_price_table2 %>%
 #' 
 #' Calculate the average of Day 1 and Day 2 prices for each FNDDS foodcode.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 price_wide_split <- pivot_wider(price_impact_split, 
                                 names_from = c(foodsource, dayrec),
@@ -674,7 +673,7 @@ price_wide_split3 <- price_wide_split2 %>%
 #' 
 #' Join the total price and the split price averages into one dataset.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 # join
 price_wide_comb <- full_join(price_wide_total3, price_wide_split3, by = c("seqn", "foodcode", "mixed_dish"))
@@ -724,7 +723,7 @@ price_wide_comb3 <- price_wide_comb2 %>%
 #' 
 #' Export dataset to the temporary folder, so it can be used to calculate the impact factors in the next chapter.
 #' 
-## ------------------------------------------------------
+## -------------------------------------------------------
 
 write_rds(price_wide_comb3, "data_inputs/IMPACT_FACTORS/temp_data/price_input_dat.rds")
 

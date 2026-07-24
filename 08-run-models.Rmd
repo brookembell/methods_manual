@@ -3,8 +3,7 @@
 knitr::opts_chunk$set(echo = TRUE,
                       results = "hide", 
                       message = FALSE,
-                      warning = FALSE,
-                      eval = FALSE)
+                      warning = FALSE)
 
 ```
 
@@ -295,7 +294,7 @@ source(paste0(code_location, "source_code/presimulate_pop_draws.r"))
 
 Run the env-eco-soc simulations via a for-loop (for each pair of dietary pattern and grocery/non-grocery combo).
 
-```{r run_model, eval=FALSE}
+```{r run_model}
 
 # debug
 # k=1
@@ -534,7 +533,7 @@ First, start the for-loop (through the dietary patterns). For each dietary patte
 
 Within ll loop, loop through the different output types and extract sims and summary stats. Combine food at home (FAH) and food away from home (FAFH) output and populate the lists. See "combine_FAH_FAFH.r" for details.
 
-```{r fah_fafh, results='hide', eval=FALSE}
+```{r fah_fafh, results='hide'}
 
 # debug
 # ll=1

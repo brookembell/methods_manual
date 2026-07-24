@@ -11,6 +11,15 @@ link-citations: yes
 # github-repo: rstudio/bookdown-demo
 ---
 
+```{r book-eval-guard, include=FALSE}
+# Keep the rendered book from EXECUTING pipeline code. This chunk runs first in a
+# full book render and sets eval=FALSE for every chapter, so the manual displays
+# code without running it. It does NOT affect purl of an individual chapter
+# (index.Rmd isn't involved there), so code/*.R still tangles as live, runnable
+# code. Chapters set their other options (echo/results/message/warning) locally.
+knitr::opts_chunk$set(eval = FALSE)
+```
+
 # Introduction {.unnumbered}
 
 This is the comprehensive manual that describes all data inputs and methods used for the LASTING 4-pillar model.
