@@ -1,0 +1,5482 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="142.61mm" height="116.681mm"
+ xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny">
+<title>Absolute change 5</title>
+<desc>Rendered by Tableau</desc>
+<defs>
+</defs>
+<g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
+
+<g >
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="Benton Sans Book" font-size="16" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="0" width="539" height="441"/>
+</g>
+</g>
+
+<g >
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="Benton Sans Book" font-size="16" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="0" width="388" height="440"/>
+</g>
+</g>
+
+<clipPath id ="clip1" >
+<rect x="0" y="0" height="440" width="388" transform="matrix(1,0,0,1,0,0)" />
+</clipPath>
+<g  clip-path="url(#clip1)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Benton Sans Book" font-size="16" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip1)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="34" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Food Group</text>
+</g>
+</g>
+
+<g >
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip2" >
+<rect x="-1" y="-1" height="42" width="242" transform="matrix(1,0,0,1,148,0)" />
+</clipPath>
+<g  clip-path="url(#clip2)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip2)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="88.3438" y="14" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Diet Pattern</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip2)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="16.6719" y="34" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >MED</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip2)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="81.6719" y="34" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >US</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip2)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="137.328" y="34" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >VEG</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip2)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="193" y="34" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >VEGN</text>
+</g>
+</g>
+
+<g >
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip3" >
+<rect x="-1" y="-1" height="402" width="150" transform="matrix(1,0,0,1,0,40)" />
+</clipPath>
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="14" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Added sugar</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="34" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Dairy, cow</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="54" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Dairy, soy</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="74" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Fruit, juice</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="94" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Fruit, whole</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="114" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Grains, refined</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="134" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Grains, whole</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="154" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Oil</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="174" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Protein, eggs</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="194" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Protein, legumes</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="214" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Protein, nuts &amp; seeds</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="234" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Protein, poultry</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="254" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Protein, red meat</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="274" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Protein, seafood</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="294" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Saturated fat</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="314" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Vegetables, dark green</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="334" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Vegetables, other</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="354" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Vegetables, red orange</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="374" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Vegetables, starchy</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="6" y="394" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Total</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#cbcbcb" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="148,0 0,0 " />
+<polyline fill="none" vector-effect="none" points="148,400 0,400 " />
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="148,380 0,380 " />
+</g>
+</g>
+
+<g >
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip3)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip4" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip4)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip5" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip5)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip5)" 
+>
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="0" width="241" height="401"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip5)" 
+>
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="0" width="241" height="401"/>
+</g>
+</g>
+
+<clipPath id ="clip6" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip6)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip6)" 
+>
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="0" width="241" height="401"/>
+</g>
+</g>
+
+<clipPath id ="clip7" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip7)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip8" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip8)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip9" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip9)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip10" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip10)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip10)" 
+>
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="0" width="241" height="401"/>
+</g>
+</g>
+
+<clipPath id ="clip11" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip11)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip12" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip12)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip13" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip13)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip14" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip14)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip15" >
+<rect x="180" y="380" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip15)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip16" >
+<rect x="180" y="360" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip16)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip17" >
+<rect x="180" y="340" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip17)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip18" >
+<rect x="180" y="320" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip18)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip19" >
+<rect x="180" y="300" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip19)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip20" >
+<rect x="180" y="280" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip20)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip21" >
+<rect x="180" y="260" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip21)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip22" >
+<rect x="180" y="240" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip22)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip23" >
+<rect x="180" y="220" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip23)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip24" >
+<rect x="180" y="200" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip24)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip25" >
+<rect x="180" y="180" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip25)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip26" >
+<rect x="180" y="160" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip26)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip27" >
+<rect x="180" y="140" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip27)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip28" >
+<rect x="180" y="120" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip28)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip29" >
+<rect x="180" y="100" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip29)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip30" >
+<rect x="180" y="80" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip30)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip31" >
+<rect x="180" y="60" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip31)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip32" >
+<rect x="180" y="40" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip32)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip33" >
+<rect x="180" y="20" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip33)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip34" >
+<rect x="180" y="0" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip34)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip35" >
+<rect x="120" y="380" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip35)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip36" >
+<rect x="120" y="360" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip36)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip37" >
+<rect x="120" y="340" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip37)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip38" >
+<rect x="120" y="320" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip38)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip39" >
+<rect x="120" y="300" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip39)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip40" >
+<rect x="120" y="280" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip40)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip41" >
+<rect x="120" y="260" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip41)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip42" >
+<rect x="120" y="240" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip42)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip43" >
+<rect x="120" y="220" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip43)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip44" >
+<rect x="120" y="200" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip44)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip45" >
+<rect x="120" y="180" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip45)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip46" >
+<rect x="120" y="160" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip46)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip47" >
+<rect x="120" y="140" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip47)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip48" >
+<rect x="120" y="120" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip48)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip49" >
+<rect x="120" y="100" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip49)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip50" >
+<rect x="120" y="80" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip50)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip51" >
+<rect x="120" y="60" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip51)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip52" >
+<rect x="120" y="40" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip52)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip53" >
+<rect x="120" y="20" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip53)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip54" >
+<rect x="120" y="0" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip54)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip55" >
+<rect x="60" y="380" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip55)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip56" >
+<rect x="60" y="360" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip56)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip57" >
+<rect x="60" y="340" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip57)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip58" >
+<rect x="60" y="320" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip58)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip59" >
+<rect x="60" y="300" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip59)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip60" >
+<rect x="60" y="280" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip60)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip61" >
+<rect x="60" y="260" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip61)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip62" >
+<rect x="60" y="240" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip62)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip63" >
+<rect x="60" y="220" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip63)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip64" >
+<rect x="60" y="200" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip64)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip65" >
+<rect x="60" y="180" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip65)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip66" >
+<rect x="60" y="160" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip66)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip67" >
+<rect x="60" y="140" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip67)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip68" >
+<rect x="60" y="120" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip68)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip69" >
+<rect x="60" y="100" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip69)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip70" >
+<rect x="60" y="80" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip70)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip71" >
+<rect x="60" y="60" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip71)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip72" >
+<rect x="60" y="40" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip72)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip73" >
+<rect x="60" y="20" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip73)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip74" >
+<rect x="60" y="0" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip74)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip75" >
+<rect x="0" y="380" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip75)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip76" >
+<rect x="0" y="360" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip76)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip77" >
+<rect x="0" y="340" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip77)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip78" >
+<rect x="0" y="320" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip78)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip79" >
+<rect x="0" y="300" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip79)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip80" >
+<rect x="0" y="280" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip80)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip81" >
+<rect x="0" y="260" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip81)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip82" >
+<rect x="0" y="240" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip82)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip83" >
+<rect x="0" y="220" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip83)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip84" >
+<rect x="0" y="200" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip84)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip85" >
+<rect x="0" y="180" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip85)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip86" >
+<rect x="0" y="160" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip86)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip87" >
+<rect x="0" y="140" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip87)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip88" >
+<rect x="0" y="120" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip88)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip89" >
+<rect x="0" y="100" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip89)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip90" >
+<rect x="0" y="80" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip90)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip91" >
+<rect x="0" y="60" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip91)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip92" >
+<rect x="0" y="40" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip92)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip93" >
+<rect x="0" y="20" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip93)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip94" >
+<rect x="0" y="0" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip94)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip95" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip95)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip96" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip96)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip97" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip97)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip98" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip98)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip99" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip99)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#ffffff" fill-opacity="0" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="380" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#febc69" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="360" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f9c47f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="340" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#dcd3c4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="320" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e4cfb1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="300" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#96c7e2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="280" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d1d4cc" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="260" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#2b5c8a" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="240" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#5e93c1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="220" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#fcab4e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="200" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f99b3d" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="180" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#91c4e0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="160" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d8d5c9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="140" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f89639" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="120" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#80b6d9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="100" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e46621" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="80" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#fcac4f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="60" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f5c689" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="40" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#7eb4d8" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="20" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#9dcbe4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="180" y="0" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#ffffff" fill-opacity="0" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="380" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#febc69" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="360" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f9c47f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="340" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#dcd3c4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="320" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e4cfb1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="300" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#96c7e2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="280" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d1d4cc" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="260" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#2c5d8b" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="240" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#5e93c1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="220" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#feba65" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="200" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#faa143" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="180" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#b9d0d7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="160" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d8d5c9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="140" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f89639" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="120" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#80b6d9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="100" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e46621" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="80" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#fcac4f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="60" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d9d5c9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="40" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f68f33" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="20" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#9dcbe4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="0" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#ffffff" fill-opacity="0" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="380" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#febc69" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="360" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f9c47f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="340" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#dcd3c3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="320" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e4cfb1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="300" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#95c7e2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="280" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#ded2be" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="260" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#8bc0de" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="240" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#9bcae4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="220" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#a4cde0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="200" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e8cda7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="180" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#c3d2d3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="160" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d8d5c9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="140" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#faa244" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="120" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#80b6d9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="100" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e46621" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="80" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#fcac4f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="60" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d9d5c9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="40" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f68f33" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="20" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#9dcbe4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="0" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#ffffff" fill-opacity="0" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="380" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#febc69" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="360" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f9c47f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="340" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#dcd3c4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="320" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e4cfb1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="300" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#95c7e2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="280" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e6ceab" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="260" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#8bc0de" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="240" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#9bcae4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="220" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#a5cde0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="200" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#e8cda7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="180" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#c3d2d3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="160" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d8d5c9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="140" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#faa244" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="120" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#80b6d9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="100" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#bb4c23" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="80" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#f8993b" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="60" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#d9d5c9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="40" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#feb964" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="20" width="60" height="20"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip99)" 
+>
+<g fill="#9dcbe4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="0" width="60" height="20"/>
+</g>
+</g>
+
+<clipPath id ="clip100" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip100)" 
+>
+<g fill="#9dcbe4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip101" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip101)" 
+>
+<g fill="#9dcbe4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip102" >
+<rect x="180" y="380" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip102)" 
+>
+<g fill="none" stroke="none" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip102)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="207" y="395" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-72.4</text>
+</g>
+</g>
+
+<clipPath id ="clip103" >
+<rect x="180" y="360" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip103)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip103)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="211" y="375" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >12.4</text>
+</g>
+</g>
+
+<clipPath id ="clip104" >
+<rect x="180" y="340" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip104)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip104)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="218" y="355" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >8.3</text>
+</g>
+</g>
+
+<clipPath id ="clip105" >
+<rect x="180" y="320" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip105)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip105)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="218" y="335" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >0.5</text>
+</g>
+</g>
+
+<clipPath id ="clip106" >
+<rect x="180" y="300" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip106)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip106)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="218" y="315" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >2.7</text>
+</g>
+</g>
+
+<clipPath id ="clip107" >
+<rect x="180" y="280" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip107)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip107)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="207" y="295" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-14.5</text>
+</g>
+</g>
+
+<clipPath id ="clip108" >
+<rect x="180" y="260" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip108)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip108)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="214" y="275" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-1.3</text>
+</g>
+</g>
+
+<clipPath id ="clip109" >
+<rect x="180" y="240" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip109)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip109)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="200" y="255" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-108.5</text>
+</g>
+</g>
+
+<clipPath id ="clip110" >
+<rect x="180" y="220" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip110)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip110)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="207" y="235" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-57.3</text>
+</g>
+</g>
+
+<clipPath id ="clip111" >
+<rect x="180" y="200" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip111)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip111)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="211" y="215" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >22.0</text>
+</g>
+</g>
+
+<clipPath id ="clip112" >
+<rect x="180" y="180" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip112)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip112)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="211" y="195" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >30.8</text>
+</g>
+</g>
+
+<clipPath id ="clip113" >
+<rect x="180" y="160" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip113)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip113)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="207" y="175" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-18.4</text>
+</g>
+</g>
+
+<clipPath id ="clip114" >
+<rect x="180" y="140" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip114)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip114)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="214" y="155" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-0.3</text>
+</g>
+</g>
+
+<clipPath id ="clip115" >
+<rect x="180" y="120" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip115)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip115)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="211" y="135" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >33.3</text>
+</g>
+</g>
+
+<clipPath id ="clip116" >
+<rect x="180" y="100" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip116)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip116)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="207" y="115" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-30.1</text>
+</g>
+</g>
+
+<clipPath id ="clip117" >
+<rect x="180" y="80" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip117)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip117)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="211" y="95" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >60.9</text>
+</g>
+</g>
+
+<clipPath id ="clip118" >
+<rect x="180" y="60" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip118)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip118)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="211" y="75" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >21.6</text>
+</g>
+</g>
+
+<clipPath id ="clip119" >
+<rect x="180" y="40" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip119)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip119)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="218" y="55" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >7.2</text>
+</g>
+</g>
+
+<clipPath id ="clip120" >
+<rect x="180" y="20" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip120)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip120)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="207" y="35" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-31.6</text>
+</g>
+</g>
+
+<clipPath id ="clip121" >
+<rect x="180" y="0" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip121)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip121)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="207" y="15" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-10.1</text>
+</g>
+</g>
+
+<clipPath id ="clip122" >
+<rect x="120" y="380" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip122)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip122)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="154" y="395" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-9.6</text>
+</g>
+</g>
+
+<clipPath id ="clip123" >
+<rect x="120" y="360" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip123)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip123)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="151" y="375" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >12.4</text>
+</g>
+</g>
+
+<clipPath id ="clip124" >
+<rect x="120" y="340" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip124)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip124)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="158" y="355" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >8.3</text>
+</g>
+</g>
+
+<clipPath id ="clip125" >
+<rect x="120" y="320" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip125)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip125)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="158" y="335" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >0.5</text>
+</g>
+</g>
+
+<clipPath id ="clip126" >
+<rect x="120" y="300" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip126)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip126)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="158" y="315" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >2.7</text>
+</g>
+</g>
+
+<clipPath id ="clip127" >
+<rect x="120" y="280" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip127)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip127)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="147" y="295" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-14.5</text>
+</g>
+</g>
+
+<clipPath id ="clip128" >
+<rect x="120" y="260" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip128)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip128)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="154" y="275" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-1.3</text>
+</g>
+</g>
+
+<clipPath id ="clip129" >
+<rect x="120" y="240" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip129)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip129)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="140" y="255" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-108.5</text>
+</g>
+</g>
+
+<clipPath id ="clip130" >
+<rect x="120" y="220" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip130)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip130)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="147" y="235" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-57.3</text>
+</g>
+</g>
+
+<clipPath id ="clip131" >
+<rect x="120" y="200" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip131)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip131)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="151" y="215" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >13.6</text>
+</g>
+</g>
+
+<clipPath id ="clip132" >
+<rect x="120" y="180" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip132)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip132)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="151" y="195" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >27.5</text>
+</g>
+</g>
+
+<clipPath id ="clip133" >
+<rect x="120" y="160" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip133)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip133)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="154" y="175" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-5.3</text>
+</g>
+</g>
+
+<clipPath id ="clip134" >
+<rect x="120" y="140" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip134)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip134)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="154" y="155" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-0.3</text>
+</g>
+</g>
+
+<clipPath id ="clip135" >
+<rect x="120" y="120" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip135)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip135)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="151" y="135" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >33.4</text>
+</g>
+</g>
+
+<clipPath id ="clip136" >
+<rect x="120" y="100" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip136)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip136)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="147" y="115" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-30.1</text>
+</g>
+</g>
+
+<clipPath id ="clip137" >
+<rect x="120" y="80" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip137)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip137)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="151" y="95" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >61.0</text>
+</g>
+</g>
+
+<clipPath id ="clip138" >
+<rect x="120" y="60" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip138)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip138)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="151" y="75" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >21.6</text>
+</g>
+</g>
+
+<clipPath id ="clip139" >
+<rect x="120" y="40" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip139)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip139)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="158" y="55" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >0.0</text>
+</g>
+</g>
+
+<clipPath id ="clip140" >
+<rect x="120" y="20" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip140)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip140)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="151" y="35" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >36.9</text>
+</g>
+</g>
+
+<clipPath id ="clip141" >
+<rect x="120" y="0" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip141)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip141)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="147" y="15" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-10.1</text>
+</g>
+</g>
+
+<clipPath id ="clip142" >
+<rect x="60" y="380" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip142)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip142)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="91" y="395" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >73.1</text>
+</g>
+</g>
+
+<clipPath id ="clip143" >
+<rect x="60" y="360" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip143)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip143)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="91" y="375" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >12.4</text>
+</g>
+</g>
+
+<clipPath id ="clip144" >
+<rect x="60" y="340" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip144)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip144)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="98" y="355" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >8.3</text>
+</g>
+</g>
+
+<clipPath id ="clip145" >
+<rect x="60" y="320" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip145)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip145)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="98" y="335" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >0.6</text>
+</g>
+</g>
+
+<clipPath id ="clip146" >
+<rect x="60" y="300" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip146)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip146)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="98" y="315" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >2.7</text>
+</g>
+</g>
+
+<clipPath id ="clip147" >
+<rect x="60" y="280" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip147)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip147)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="87" y="295" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-15.2</text>
+</g>
+</g>
+
+<clipPath id ="clip148" >
+<rect x="60" y="260" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip148)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip148)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="98" y="275" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >1.1</text>
+</g>
+</g>
+
+<clipPath id ="clip149" >
+<rect x="60" y="240" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip149)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip149)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="87" y="255" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-22.2</text>
+</g>
+</g>
+
+<clipPath id ="clip150" >
+<rect x="60" y="220" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip150)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip150)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="87" y="235" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-11.8</text>
+</g>
+</g>
+
+<clipPath id ="clip151" >
+<rect x="60" y="200" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip151)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip151)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="94" y="215" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-8.8</text>
+</g>
+</g>
+
+<clipPath id ="clip152" >
+<rect x="60" y="180" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip152)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip152)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="98" y="195" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >3.7</text>
+</g>
+</g>
+
+<clipPath id ="clip153" >
+<rect x="60" y="160" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip153)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip153)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="94" y="175" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-3.8</text>
+</g>
+</g>
+
+<clipPath id ="clip154" >
+<rect x="60" y="140" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip154)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip154)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="94" y="155" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-0.3</text>
+</g>
+</g>
+
+<clipPath id ="clip155" >
+<rect x="60" y="120" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip155)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip155)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="91" y="135" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >27.0</text>
+</g>
+</g>
+
+<clipPath id ="clip156" >
+<rect x="60" y="100" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip156)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip156)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="87" y="115" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-30.1</text>
+</g>
+</g>
+
+<clipPath id ="clip157" >
+<rect x="60" y="80" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip157)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip157)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="91" y="95" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >61.0</text>
+</g>
+</g>
+
+<clipPath id ="clip158" >
+<rect x="60" y="60" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip158)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip158)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="91" y="75" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >21.6</text>
+</g>
+</g>
+
+<clipPath id ="clip159" >
+<rect x="60" y="40" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip159)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip159)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="98" y="55" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >0.0</text>
+</g>
+</g>
+
+<clipPath id ="clip160" >
+<rect x="60" y="20" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip160)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip160)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="91" y="35" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >36.9</text>
+</g>
+</g>
+
+<clipPath id ="clip161" >
+<rect x="60" y="0" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip161)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip161)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="87" y="15" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-10.2</text>
+</g>
+</g>
+
+<clipPath id ="clip162" >
+<rect x="0" y="380" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip162)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip162)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="31" y="395" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >90.7</text>
+</g>
+</g>
+
+<clipPath id ="clip163" >
+<rect x="0" y="360" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip163)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip163)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="31" y="375" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >12.4</text>
+</g>
+</g>
+
+<clipPath id ="clip164" >
+<rect x="0" y="340" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip164)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip164)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="38" y="355" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >8.3</text>
+</g>
+</g>
+
+<clipPath id ="clip165" >
+<rect x="0" y="320" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip165)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip165)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="38" y="335" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >0.5</text>
+</g>
+</g>
+
+<clipPath id ="clip166" >
+<rect x="0" y="300" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip166)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip166)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="38" y="315" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >2.7</text>
+</g>
+</g>
+
+<clipPath id ="clip167" >
+<rect x="0" y="280" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip167)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip167)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="27" y="295" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-15.2</text>
+</g>
+</g>
+
+<clipPath id ="clip168" >
+<rect x="0" y="260" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip168)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip168)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="38" y="275" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >3.3</text>
+</g>
+</g>
+
+<clipPath id ="clip169" >
+<rect x="0" y="240" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip169)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip169)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="27" y="255" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-22.1</text>
+</g>
+</g>
+
+<clipPath id ="clip170" >
+<rect x="0" y="220" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip170)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip170)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="27" y="235" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-11.8</text>
+</g>
+</g>
+
+<clipPath id ="clip171" >
+<rect x="0" y="200" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip171)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip171)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="34" y="215" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-8.6</text>
+</g>
+</g>
+
+<clipPath id ="clip172" >
+<rect x="0" y="180" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip172)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip172)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="38" y="195" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >3.7</text>
+</g>
+</g>
+
+<clipPath id ="clip173" >
+<rect x="0" y="160" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip173)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip173)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="34" y="175" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-3.7</text>
+</g>
+</g>
+
+<clipPath id ="clip174" >
+<rect x="0" y="140" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip174)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip174)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="34" y="155" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-0.3</text>
+</g>
+</g>
+
+<clipPath id ="clip175" >
+<rect x="0" y="120" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip175)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip175)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="31" y="135" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >27.0</text>
+</g>
+</g>
+
+<clipPath id ="clip176" >
+<rect x="0" y="100" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip176)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip176)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="27" y="115" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-30.1</text>
+</g>
+</g>
+
+<clipPath id ="clip177" >
+<rect x="0" y="80" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip177)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip177)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="31" y="95" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >88.8</text>
+</g>
+</g>
+
+<clipPath id ="clip178" >
+<rect x="0" y="60" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip178)" 
+>
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip178)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="31" y="75" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >31.9</text>
+</g>
+</g>
+
+<clipPath id ="clip179" >
+<rect x="0" y="40" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip179)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip179)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="38" y="55" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >0.0</text>
+</g>
+</g>
+
+<clipPath id ="clip180" >
+<rect x="0" y="20" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip180)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip180)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="31" y="35" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >14.1</text>
+</g>
+</g>
+
+<clipPath id ="clip181" >
+<rect x="0" y="0" height="20" width="60" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip181)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip181)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="27" y="15" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-10.2</text>
+</g>
+</g>
+
+<clipPath id ="clip182" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip182)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip183" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip183)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip184" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip184)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip185" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip185)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip186" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip186)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip187" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip187)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip188" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip188)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip189" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip189)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip190" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip190)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip191" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip191)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip192" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip192)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip193" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip193)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip194" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip194)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip195" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip195)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip196" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip196)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip197" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip197)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip198" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip198)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip199" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip199)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip200" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip200)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip201" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip201)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip202" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip202)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip203" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip203)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip204" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip204)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip205" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip205)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip206" >
+<rect x="0" y="0" height="400" width="240" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip206)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip207" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip207)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip208" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip208)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip209" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip209)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip210" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip210)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip210)" 
+>
+<g fill="none" stroke="#d8d8d8" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0,380 240,380 " />
+</g>
+</g>
+
+<g  clip-path="url(#clip210)" 
+>
+<g fill="none" stroke="#cbcbcb" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0,0 240,0 " />
+<polyline fill="none" vector-effect="none" points="0,400 240,400 " />
+</g>
+</g>
+
+<clipPath id ="clip211" >
+<rect x="0" y="0" height="401" width="241" transform="matrix(1,0,0,1,148,40)" />
+</clipPath>
+<g  clip-path="url(#clip211)" 
+>
+<g fill="none" stroke="#cbcbcb" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g >
+<g fill="none" stroke="#cbcbcb" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,148,40)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<clipPath id ="clip212" >
+<rect x="0" y="0" height="58" width="140" transform="matrix(1,0,0,1,399,0)" />
+</clipPath>
+<g  clip-path="url(#clip212)" 
+>
+<g fill="none" stroke="#cbcbcb" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="0" y="0" width="140" height="58"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="48" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >-108.5</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="111.656" y="48" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >88.8</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="15" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >Liter</text>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#2b5c8a" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="4" y="20" width="3" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#2c5e8c" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="6" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#2d5f8e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="7" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#2e6090" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="8" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#2f6191" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="9" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#2f6393" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="10" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#306495" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="11" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#316596" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="12" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#336798" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="13" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#35689a" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="14" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#376a9c" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="15" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#386c9d" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="16" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#3a6d9f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="17" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#3c6fa1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="18" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#3e71a2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="19" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#4072a3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="20" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#4274a5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="21" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#4476a6" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="22" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#4678a8" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="23" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#487aa9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="24" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#4a7caa" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="25" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#4b7dac" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="26" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#4d7fad" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="27" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#4f81af" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="28" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#5082b0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="29" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#5284b1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="30" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#5486b3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="31" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#5588b5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="32" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#578ab7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="33" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#588bb9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="34" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#598dbb" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="35" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#5b8fbd" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="36" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#5c91bf" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="37" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#5e93c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="38" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#5f94c2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="39" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#6196c3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="40" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#6297c4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="41" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#6499c5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="42" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#659ac7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="43" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#679cc8" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="44" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#699ec9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="45" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#6ba0cb" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="46" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#6da2cc" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="47" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#6fa4ce" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="48" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#71a6cf" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="49" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#73a8d0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="50" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#75aad2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="51" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#77add3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="52" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#79afd4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="53" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#7bb1d6" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="54" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#7db3d7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="55" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#7fb5d9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="56" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#81b7da" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="57" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#84b9db" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="58" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#86bbdc" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="59" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#88bddd" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="60" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#8abfde" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="61" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#8cc1df" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="62" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#8ec2df" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="63" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#91c4e0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="64" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#93c5e1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="65" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#95c7e2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="66" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#98c8e3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="67" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#9ac9e3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="68" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#9ccbe4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="69" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#a2cce1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="70" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#accedd" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="71" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#b5cfd9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="72" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#bed1d5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="73" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#c8d3d1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="74" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#d1d4cc" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="75" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#dad4c7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="76" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#e0d1ba" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="77" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#e6ceac" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="78" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#eccb9f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="79" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f2c891" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="80" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f7c583" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="81" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fdc276" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="82" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#febf6e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="83" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#febc69" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="84" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#feba64" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="85" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fdb760" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="86" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fdb45b" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="87" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fdb256" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="88" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fcaf52" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="89" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fcac4f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="90" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fba94c" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="91" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fba749" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="92" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fba446" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="93" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#faa142" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="94" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#fa9e3f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="95" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f99b3d" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="96" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f8983a" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="97" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f79538" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="98" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f79236" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="99" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f68f33" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="100" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f58c31" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="101" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f4892f" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="102" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f3862d" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="103" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f2832c" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="104" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f1802a" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="105" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#f07d28" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="106" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#ef7a26" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="107" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#ee7725" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="108" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#ed7524" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="109" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#ec7223" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="110" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#ea7022" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="111" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#e96e22" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="112" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#e86b21" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="113" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#e76920" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="114" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#e66721" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="115" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#e36521" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="116" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#e16421" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="117" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#df6221" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="118" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#dd6121" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="119" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#db5f21" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="120" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#d95e21" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="121" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#d65c22" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="122" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#d45b22" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="123" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#d25922" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="124" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#d05822" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="125" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#ce5722" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="126" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#cc5522" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="127" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#c95423" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="128" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#c75323" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="129" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#c55123" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="130" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#c25023" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="131" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#c04f23" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="132" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#be4e23" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="133" y="20" width="2" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="#bb4c23" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="134" y="20" width="1" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="none" stroke="#aca899" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<rect x="4" y="20" width="131" height="15"/>
+</g>
+</g>
+
+<g  clip-path="url(#clip212)" 
+>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="76,33 76,37 " />
+</g>
+</g>
+
+<g >
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(1,0,0,1,399,0)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+</g>
+</svg>
